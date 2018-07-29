@@ -1,0 +1,2883 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ZSN-Interface Test Results</title>
+<style type="text/css">
+				body {
+					font:normal 68% verdana,arial,helvetica;
+					color:#000000;
+				}
+				table tr td, table tr th {
+					font-size: 68%;
+				}
+				table.details tr th{
+				    color: #ffffff;
+					font-weight: bold;
+					text-align:center;
+					background:#2674a6;
+					white-space: nowrap;
+				}
+				table.details tr td{
+					background:#eeeee0;
+				}
+				h1 {
+					margin: 0px 0px 5px; font: 165% verdana,arial,helvetica
+				}
+				h2 {
+					margin-top: 1em; margin-bottom: 0.5em; font: bold 125% verdana,arial,helvetica
+				}
+				h3 {
+					margin-bottom: 0.5em; font: bold 115% verdana,arial,helvetica
+				}
+				.Failure {
+					font-weight:bold; color:red;
+				}
+				
+	
+				img
+				{
+				  border-width: 0px;
+				}
+				
+				.expand_link
+				{
+				   position=absolute;
+				   right: 0px;
+				   width: 27px;
+				   top: 1px;
+				   height: 27px;
+				}
+				
+				.page_details
+				{
+				   display: none;
+				}
+                                
+                                .page_details_expanded
+                                {
+                                    display: block;
+                                    display/* hide this definition from  IE5/6 */: table-row;
+                                }
+
+
+			</style>
+<script language="JavaScript">
+                           function expand(details_id)
+			   {
+			      
+			      document.getElementById(details_id).className = "page_details_expanded";
+			   }
+			   
+			   function collapse(details_id)
+			   {
+			      
+			      document.getElementById(details_id).className = "page_details";
+			   }
+			   
+			   function change(details_id)
+			   {
+			      if(document.getElementById(details_id+"_image").src.match("expand"))
+			      {
+			         document.getElementById(details_id+"_image").src = "collapse.png";
+			         expand(details_id);
+			      }
+			      else
+			      {
+			         document.getElementById(details_id+"_image").src = "expand.png";
+			         collapse(details_id);
+			      } 
+                           }
+			</script>
+</head>
+<body>
+<h1>ZSN-Interface Test Results</h1>
+<table width="100%">
+<tr>
+<td align="left">Date report: 2018/06/12 17:59</td>
+<br>
+<td align="left">RunEnvironment:https://staging.zhishinet.com</td><td align="left">TestAccount:{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td>
+</tr>
+</table>
+<hr size="1">
+<h2>Summary</h2>
+<table width="95%" cellspacing="2" cellpadding="4" border="0" class="details" align="center">
+<tr valign="top">
+<th>Total</th><th>Pass</th><th>Failures</th><th>Success Rate</th>
+</tr>
+<tr valign="top">
+<td align="center">283</td><td align="center">276</td><td align="center">7</td><td align="center">97.53%</td>
+</tr>
+</table>
+<hr align="center" width="95%" size="1">
+<h2>Failure Detail</h2>
+<h3>getCourseSectionList-orderBy为中文<a name="getCourseSectionList-orderBy%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionList?courseId=1318&amp;orderBy=测试</td><td>GET</td><td></td><td>500 - </td><td>{"code":"000000","message":"\n### Error querying database.  Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid column name '测试'.\n### The error may exist in URL [jar:file:/app.jar!/BOOT-INF/classes!/com/hand/zhishinet/curriculum/mapper/HzsCurriculumModuleMapper.xml]\n### The error may involve defaultParameterMap\n### The error occurred while setting parameters\n### SQL: SELECT             cs.CourseSectionId,             cs.SectionName,             cs.DisplayOrder,             cs.CourseId         FROM             UBCourseSection cs         WHERE             cs.IsDeleted = 0         AND cs.courseId = ?                       ORDER BY 测试\n### Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid column name '测试'.\n; bad SQL grammar []; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: Invalid column name '测试'."}</td>
+</tr>
+</table>
+<h3>getCourseSectionList-orderby为英文<a name="getCourseSectionList-orderby%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionList?courseId=1318&amp;orderBy=abc</td><td>GET</td><td></td><td>500 - </td><td>{"code":"000000","message":"\n### Error querying database.  Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid column name 'abc'.\n### The error may exist in URL [jar:file:/app.jar!/BOOT-INF/classes!/com/hand/zhishinet/curriculum/mapper/HzsCurriculumModuleMapper.xml]\n### The error may involve defaultParameterMap\n### The error occurred while setting parameters\n### SQL: SELECT             cs.CourseSectionId,             cs.SectionName,             cs.DisplayOrder,             cs.CourseId         FROM             UBCourseSection cs         WHERE             cs.IsDeleted = 0         AND cs.courseId = ?                       ORDER BY abc\n### Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid column name 'abc'.\n; bad SQL grammar []; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: Invalid column name 'abc'."}</td>
+</tr>
+</table>
+<h3>getCourseSectionList-orderBy为特殊符号<a name="getCourseSectionList-orderBy%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionList?courseId=1318&amp;orderBy=@</td><td>GET</td><td></td><td>500 - </td><td>{"code":"000000","message":"\n### Error querying database.  Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Must declare the scalar variable \"@\".\n### The error may exist in URL [jar:file:/app.jar!/BOOT-INF/classes!/com/hand/zhishinet/curriculum/mapper/HzsCurriculumModuleMapper.xml]\n### The error may involve defaultParameterMap\n### The error occurred while setting parameters\n### SQL: SELECT             cs.CourseSectionId,             cs.SectionName,             cs.DisplayOrder,             cs.CourseId         FROM             UBCourseSection cs         WHERE             cs.IsDeleted = 0         AND cs.courseId = ?                       ORDER BY @\n### Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Must declare the scalar variable \"@\".\n; uncategorized SQLException for SQL []; SQL state [S0002]; error code [137]; Must declare the scalar variable \"@\".; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: Must declare the scalar variable \"@\"."}</td>
+</tr>
+</table>
+<h3>getCourseSectionList-orderBy为数学符号<a name="getCourseSectionList-orderBy%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionList?courseId=1318&amp;orderBy=+</td><td>GET</td><td></td><td>500 - </td><td>{"code":"000000","message":"\n### Error querying database.  Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Incorrect syntax near 'BY'.\n### The error may exist in URL [jar:file:/app.jar!/BOOT-INF/classes!/com/hand/zhishinet/curriculum/mapper/HzsCurriculumModuleMapper.xml]\n### The error may involve defaultParameterMap\n### The error occurred while setting parameters\n### SQL: SELECT             cs.CourseSectionId,             cs.SectionName,             cs.DisplayOrder,             cs.CourseId         FROM             UBCourseSection cs         WHERE             cs.IsDeleted = 0         AND cs.courseId = ?                       ORDER BY\n### Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Incorrect syntax near 'BY'.\n; uncategorized SQLException for SQL []; SQL state [S0001]; error code [102]; Incorrect syntax near 'BY'.; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: Incorrect syntax near 'BY'."}</td>
+</tr>
+</table>
+<h3>getCourseSectionList-orderBy为标点符号<a name="getCourseSectionList-orderBy%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionList?courseId=1318&amp;orderBy=?</td><td>GET</td><td></td><td>500 - </td><td>{"code":"000000","message":"\n### Error querying database.  Cause: com.microsoft.sqlserver.jdbc.SQLServerException: The value is not set for the parameter number 2.\n### The error may exist in URL [jar:file:/app.jar!/BOOT-INF/classes!/com/hand/zhishinet/curriculum/mapper/HzsCurriculumModuleMapper.xml]\n### The error may involve defaultParameterMap\n### The error occurred while setting parameters\n### SQL: SELECT             cs.CourseSectionId,             cs.SectionName,             cs.DisplayOrder,             cs.CourseId         FROM             UBCourseSection cs         WHERE             cs.IsDeleted = 0         AND cs.courseId = ?                       ORDER BY ?\n### Cause: com.microsoft.sqlserver.jdbc.SQLServerException: The value is not set for the parameter number 2.\n; uncategorized SQLException for SQL []; SQL state [null]; error code [0]; The value is not set for the parameter number 2.; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: The value is not set for the parameter number 2."}</td>
+</tr>
+</table>
+<h3>getModuleList-orderBy为特殊符号<a name="getModuleList-orderBy%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=10000065&amp;sectionId=1&amp;orderBy=@&amp;currentPage=1&amp;pageSize=10&amp;sessionId=2624</td><td>GET</td><td></td><td>500 - </td><td>{"code":"000000","message":"\n### Error querying database.  Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Must declare the scalar variable \"@\".\n### The error may exist in URL [jar:file:/app.jar!/BOOT-INF/classes!/com/hand/zhishinet/curriculum/mapper/HzsCurriculumModuleMapper.xml]\n### The error may involve defaultParameterMap\n### The error occurred while setting parameters\n### SQL: select count(0) from (SELECT         cm.ModuleId,         cm.ModuleTitle,         CASE         WHEN ass.TemplateType = 4 THEN         ass.TotalQuestions         ELSE         ass.AssessmentQuestions         END AssessmentQuestions,         ass.IsAdaptiveAssessment,         ass.AssessmentId,         ass.TemplateType,         ass.AllowedAttempts,         cm.CourseSectionId,         cm.CourseId,         cm.ModuleOrder         FROM         UBCourseModules cm,         UBAssessment ass         WHERE         cm.AssessmentId = ass.AssessmentId         AND cm.IsDeleted = 0         AND ass.IsDeleted = 0         AND cm.IsEnabled = 1         AND ass.IsEnabled = 1         AND ass.IsClickerReady = 0                        AND cm.CourseSectionId = ?                                           ORDER BY @) tmp_count\n### Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Must declare the scalar variable \"@\".\n; uncategorized SQLException for SQL []; SQL state [S0002]; error code [137]; Must declare the scalar variable \"@\".; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: Must declare the scalar variable \"@\"."}</td>
+</tr>
+</table>
+<h3>getModuleList-orderBy为数学符号<a name="getModuleList-orderBy%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=10000065&amp;sectionId=1&amp;orderBy=+&amp;currentPage=1&amp;pageSize=10&amp;sessionId=2624</td><td>GET</td><td></td><td>500 - </td><td>{"code":"000000","message":"\n### Error querying database.  Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Incorrect syntax near ')'.\n### The error may exist in URL [jar:file:/app.jar!/BOOT-INF/classes!/com/hand/zhishinet/curriculum/mapper/HzsCurriculumModuleMapper.xml]\n### The error may involve defaultParameterMap\n### The error occurred while setting parameters\n### SQL: select count(0) from (SELECT         cm.ModuleId,         cm.ModuleTitle,         CASE         WHEN ass.TemplateType = 4 THEN         ass.TotalQuestions         ELSE         ass.AssessmentQuestions         END AssessmentQuestions,         ass.IsAdaptiveAssessment,         ass.AssessmentId,         ass.TemplateType,         ass.AllowedAttempts,         cm.CourseSectionId,         cm.CourseId,         cm.ModuleOrder         FROM         UBCourseModules cm,         UBAssessment ass         WHERE         cm.AssessmentId = ass.AssessmentId         AND cm.IsDeleted = 0         AND ass.IsDeleted = 0         AND cm.IsEnabled = 1         AND ass.IsEnabled = 1         AND ass.IsClickerReady = 0                        AND cm.CourseSectionId = ?                                           ORDER BY) tmp_count\n### Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Incorrect syntax near ')'.\n; uncategorized SQLException for SQL []; SQL state [S0001]; error code [102]; Incorrect syntax near ')'.; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: Incorrect syntax near ')'."}</td>
+</tr>
+</table>
+<h2>Success Detail</h2>
+<h3>getToken<a name="getToken"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getSubjectList-正确性验证<a name="getSubjectList-%E6%AD%A3%E7%A1%AE%E6%80%A7%E9%AA%8C%E8%AF%81"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getSubjectList?roleTypeId=1</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getSubjectList-pagesize为空<a name="getSubjectList-pagesize%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getSubjectList?currentPage=&amp;pageSize=&amp;roleTypeId=1</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getSubjectList-pagesize为空格<a name="getSubjectList-pagesize%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getSubjectList?currentPage=&amp;pageSize=       &amp;roleTypeId=1</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 85: https://staging.zhishinet.com/api/course/v1/sec/getSubjectList?currentPage=&amp;pageSize=       &amp;roleTypeId=1</td><td></td>
+</tr>
+</table>
+<h3>getSubjectList-pagesize为中文<a name="getSubjectList-pagesize%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getSubjectList?currentPage=&amp;pageSize=测&amp;roleTypeId=1</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getSubjectList-pagesize为英文<a name="getSubjectList-pagesize%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getSubjectList?currentPage=&amp;pageSize=test&amp;roleTypeId=1</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getSubjectList-pagesize为标点符号<a name="getSubjectList-pagesize%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getSubjectList?currentPage=&amp;pageSize=?&amp;roleTypeId=1</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getSubjectList-pagesize为数学符号<a name="getSubjectList-pagesize%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getSubjectList?currentPage=&amp;pageSize=+&amp;roleTypeId=1</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getSubjectList-pagesize特殊符号<a name="getSubjectList-pagesize%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getSubjectList?pageSize=*&amp;roleTypeId=1</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getSubjectList-roleTypeId为空<a name="getSubjectList-roleTypeId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getSubjectList?currentPage=&amp;pageSize=0&amp;roleTypeId=</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getSubjectList-roleTypeId为空格<a name="getSubjectList-roleTypeId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getSubjectList?currentPage=&amp;pageSize=0&amp;roleTypeId=     </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 98: https://staging.zhishinet.com/api/course/v1/sec/getSubjectList?currentPage=&amp;pageSize=0&amp;roleTypeId=     </td><td></td>
+</tr>
+</table>
+<h3>getSubjectList-roleTypeId为中文<a name="getSubjectList-roleTypeId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getSubjectList?currentPage=&amp;pageSize=0&amp;roleTypeId=测试</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getSubjectList-roleTypeId为英文<a name="getSubjectList-roleTypeId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getSubjectList?currentPage=&amp;pageSize=0&amp;roleTypeId=Test</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getSubjectList-roleTypeId为标点符号<a name="getSubjectList-roleTypeId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getSubjectList?currentPage=&amp;pageSize=0&amp;roleTypeId=？</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getSubjectList-roleTypeId为数学符号<a name="getSubjectList-roleTypeId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getSubjectList?currentPage=&amp;pageSize=0&amp;roleTypeId=+</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getSubjectList-roleTypeId为特殊符号<a name="getSubjectList-roleTypeId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getSubjectList?currentPage=&amp;pageSize=0&amp;roleTypeId=*</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseLastQuery-正确性验证-get<a name="getCourseLastQuery-%E6%AD%A3%E7%A1%AE%E6%80%A7%E9%AA%8C%E8%AF%81-get"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseLastQuery</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseLastQuery-正确性验证-英语<a name="getCourseLastQuery-%E6%AD%A3%E7%A1%AE%E6%80%A7%E9%AA%8C%E8%AF%81-%E8%8B%B1%E8%AF%AD"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseLastQuery?subjectId=2&amp;courseSessionId=2624</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseLastQuery-正确性验证-数学<a name="getCourseLastQuery-%E6%AD%A3%E7%A1%AE%E6%80%A7%E9%AA%8C%E8%AF%81-%E6%95%B0%E5%AD%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseLastQuery?subjectId=1&amp;courseSessionId=</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseLastQuery-正确性验证<a name="getCourseLastQuery-%E6%AD%A3%E7%A1%AE%E6%80%A7%E9%AA%8C%E8%AF%81"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseLastQuery?subjectId=&amp;courseSessionId=2624</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseLastQuery-subjectId为空格<a name="getCourseLastQuery-subjectId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseLastQuery?subjectId=        &amp;courseSessionId=2624</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 77: https://staging.zhishinet.com/api/course/v1/sec/getCourseLastQuery?subjectId=        &amp;courseSessionId=2624</td><td></td>
+</tr>
+</table>
+<h3>getCourseLastQuery-subjectId为特殊符号<a name="getCourseLastQuery-subjectId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseLastQuery?subjectId=&amp;&amp;courseSessionId=2624</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseLastQuery-subjectId为数学符号<a name="getCourseLastQuery-subjectId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseLastQuery?subjectId=+&amp;courseSessionId=2624</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseLastQuery-subjectId为标点符号<a name="getCourseLastQuery-subjectId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseLastQuery?subjectId=？&amp;courseSessionId=2624</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseLastQuery-subjectId为中文<a name="getCourseLastQuery-subjectId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseLastQuery?subjectId=测试&amp;courseSessionId=2624</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseLastQuery-subjectId为英文<a name="getCourseLastQuery-subjectId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseLastQuery?subjectId=test&amp;courseSessionId=2624</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseLastQuery-courseSessionId为英文<a name="getCourseLastQuery-courseSessionId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseLastQuery?subjectId=1&amp;courseSessionId=test</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseLastQuery-courseSessionId为中文<a name="getCourseLastQuery-courseSessionId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseLastQuery?subjectId=1&amp;courseSessionId=测试</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseLastQuery-courseSessionId为特殊符号<a name="getCourseLastQuery-courseSessionId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseLastQuery?subjectId=1&amp;courseSessionId=*</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseLastQuery-courseSessionId为数学符号<a name="getCourseLastQuery-courseSessionId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseLastQuery?subjectId=1&amp;courseSessionId=+</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseLastQuery-courseSessionId为标点符号<a name="getCourseLastQuery-courseSessionId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseLastQuery?subjectId=1&amp;courseSessionId=？</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseLastQuery-courseSessionId为空格<a name="getCourseLastQuery-courseSessionId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseLastQuery?subjectId=1&amp;courseSessionId=       </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 95: https://staging.zhishinet.com/api/course/v1/sec/getCourseLastQuery?subjectId=1&amp;courseSessionId=       </td><td></td>
+</tr>
+</table>
+<h3>getCourseCurriculumList-正确性验证-英语<a name="getCourseCurriculumList-%E6%AD%A3%E7%A1%AE%E6%80%A7%E9%AA%8C%E8%AF%81-%E8%8B%B1%E8%AF%AD"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseCurriculumList?sessionId=123791&amp;subjectId=1&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseCurriculumList-正确性验证-数学<a name="getCourseCurriculumList-%E6%AD%A3%E7%A1%AE%E6%80%A7%E9%AA%8C%E8%AF%81-%E6%95%B0%E5%AD%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseCurriculumList?sessionId=123791&amp;subjectId=2&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseCurriculumList-sessionId为英文<a name="getCourseCurriculumList-sessionId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseCurriculumList?sessionId=test&amp;subjectId=1</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseCurriculumList-sessionId为中文<a name="getCourseCurriculumList-sessionId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseCurriculumList?sessionId=测试&amp;subjectId=1</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseCurriculumList-sessionId为标点符号<a name="getCourseCurriculumList-sessionId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseCurriculumList?sessionId=？&amp;subjectId=1</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseCurriculumList-sessionId为数学符号<a name="getCourseCurriculumList-sessionId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseCurriculumList?sessionId=+&amp;subjectId=1</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseCurriculumList-sessionId为特殊符号<a name="getCourseCurriculumList-sessionId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseCurriculumList?sessionId=&amp;&amp;subjectId=1</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseCurriculumList-sessionId为空<a name="getCourseCurriculumList-sessionId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseCurriculumList?sessionId=&amp;subjectId=1</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseCurriculumList-sessionId为空格<a name="getCourseCurriculumList-sessionId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseCurriculumList?sessionId=     &amp;subjectId=1</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 82: https://staging.zhishinet.com/api/course/v1/sec/getCourseCurriculumList?sessionId=     &amp;subjectId=1</td><td></td>
+</tr>
+</table>
+<h3>getCourseCurriculumList-subjectId为空格<a name="getCourseCurriculumList-subjectId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseCurriculumList?sessionId=     &amp;subjectId=1</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 82: https://staging.zhishinet.com/api/course/v1/sec/getCourseCurriculumList?sessionId=     &amp;subjectId=1</td><td></td>
+</tr>
+</table>
+<h3>getCourseCurriculumList-subjectId为空<a name="getCourseCurriculumList-subjectId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseCurriculumList?sessionId=&amp;subjectId=1</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseCurriculumList-subjectId为中文<a name="getCourseCurriculumList-subjectId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseCurriculumList?sessionId=123791&amp;subjectId=测试</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseCurriculumList-subjectId为英文<a name="getCourseCurriculumList-subjectId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseCurriculumList?sessionId=123791&amp;subjectId=test</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseCurriculumList-subjectId为特殊符号<a name="getCourseCurriculumList-subjectId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseCurriculumList?sessionId=123791&amp;subjectId=*</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseCurriculumList-subjectId为标点符号<a name="getCourseCurriculumList-subjectId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseCurriculumList?sessionId=123791&amp;subjectId=？</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseCurriculumList-subjectId为数学符号<a name="getCourseCurriculumList-subjectId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseCurriculumList?sessionId=123791&amp;subjectId=+</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseList-正确性验证<a name="getCourseList-%E6%AD%A3%E7%A1%AE%E6%80%A7%E9%AA%8C%E8%AF%81"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseList?sessionId=123791&amp;curriculumId=225&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseList-sessionId为英文<a name="getCourseList-sessionId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseList?sessionId=test&amp;curriculumId=225&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseList-sessionId为中文<a name="getCourseList-sessionId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseList?sessionId=测试&amp;curriculumId=225&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseList-sessionId为空格<a name="getCourseList-sessionId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseList?sessionId=   &amp;curriculumId=225&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 72: https://staging.zhishinet.com/api/course/v1/sec/getCourseList?sessionId=   &amp;curriculumId=225&amp;currentPage=1&amp;pageSize=10</td><td></td>
+</tr>
+</table>
+<h3>getCourseList-sessionId为空<a name="getCourseList-sessionId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseList?sessionId=&amp;curriculumId=225&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseList-sessionId为特殊符号<a name="getCourseList-sessionId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseList?sessionId=*&amp;curriculumId=225&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseList-sessionId为标点符号<a name="getCourseList-sessionId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseList?sessionId=？&amp;curriculumId=225&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseList-sessionId为数学符号<a name="getCourseList-sessionId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseList?sessionId=+&amp;curriculumId=225&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseList-curriculumId为数学符号<a name="getCourseList-curriculumId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseList?sessionId=123791&amp;curriculumId=-&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseList-curriculumId为标点符号<a name="getCourseList-curriculumId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseList?sessionId=123791&amp;curriculumId=？&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseList-curriculumId为特殊符号<a name="getCourseList-curriculumId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseList?sessionId=123791&amp;curriculumId=*&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseList-curriculumId为空格<a name="getCourseList-curriculumId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseList?sessionId=123791&amp;curriculumId=    &amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 92: https://staging.zhishinet.com/api/course/v1/sec/getCourseList?sessionId=123791&amp;curriculumId=    &amp;currentPage=1&amp;pageSize=10</td><td></td>
+</tr>
+</table>
+<h3>getCourseList-curriculumId为空<a name="getCourseList-curriculumId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseList?sessionId=123791&amp;curriculumId=&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseList-curriculumId为中文<a name="getCourseList-curriculumId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseList?sessionId=123791&amp;curriculumId=测试&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseList-curriculumId为英文<a name="getCourseList-curriculumId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseList?sessionId=123791&amp;curriculumId=test&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseList-currentPage为英文<a name="getCourseList-currentPage%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseList?sessionId=123791&amp;curriculumId=225&amp;currentPage=TEST&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseList-currentPage为中文<a name="getCourseList-currentPage%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseList?sessionId=123791&amp;curriculumId=225&amp;currentPage=测试&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseList-currentPage为特殊符号<a name="getCourseList-currentPage%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseList?sessionId=123791&amp;curriculumId=225&amp;currentPage=*&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseList-currentPage为标点符号<a name="getCourseList-currentPage%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseList?sessionId=123791&amp;curriculumId=225&amp;currentPage=？&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseList-currentPage为数学符号<a name="getCourseList-currentPage%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseList?sessionId=123791&amp;curriculumId=225&amp;currentPage=-&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseList-currentPage为空格<a name="getCourseList-currentPage%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseList?sessionId=123791&amp;curriculumId=225&amp;currentPage=    &amp;pageSize=10</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 108: https://staging.zhishinet.com/api/course/v1/sec/getCourseList?sessionId=123791&amp;curriculumId=225&amp;currentPage=    &amp;pageSize=10</td><td></td>
+</tr>
+</table>
+<h3>getCourseList-currentPage为空<a name="getCourseList-currentPage%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseList?sessionId=123791&amp;curriculumId=225&amp;currentPage=&amp;pageSize=10</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseList-pageSize为空<a name="getCourseList-pageSize%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseList?sessionId=123791&amp;curriculumId=225&amp;currentPage=1&amp;pageSize=</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseList-pageSize为空格<a name="getCourseList-pageSize%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseList?sessionId=123791&amp;curriculumId=225&amp;currentPage=1&amp;pageSize=    </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 119: https://staging.zhishinet.com/api/course/v1/sec/getCourseList?sessionId=123791&amp;curriculumId=225&amp;currentPage=1&amp;pageSize=    </td><td></td>
+</tr>
+</table>
+<h3>getCourseList-pageSize为中文<a name="getCourseList-pageSize%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseList?sessionId=123791&amp;curriculumId=225&amp;currentPage=1&amp;pageSize=测试</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseList-pageSize为英文<a name="getCourseList-pageSize%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseList?sessionId=123791&amp;curriculumId=225&amp;currentPage=1&amp;pageSize=test</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseList-pageSize为标点符号<a name="getCourseList-pageSize%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseList?sessionId=123791&amp;curriculumId=225&amp;currentPage=1&amp;pageSize=？</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseList-pageSize为特殊符号<a name="getCourseList-pageSize%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseList?sessionId=123791&amp;curriculumId=225&amp;currentPage=1&amp;pageSize=*</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseList-pageSize为数学符号<a name="getCourseList-pageSize%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseList?sessionId=123791&amp;curriculumId=225&amp;currentPage=1&amp;pageSize=-</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAndModuleListt-正确性验证<a name="getCourseSectionAndModuleListt-%E6%AD%A3%E7%A1%AE%E6%80%A7%E9%AA%8C%E8%AF%81"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAndModuleList?courseId=1172&amp;sessionId=123791&amp;userId=10000065&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAndModuleListt-userId为空格<a name="getCourseSectionAndModuleListt-userId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAndModuleList?courseId=1172&amp;sessionId=123791&amp;userId=   &amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 116: https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAndModuleList?courseId=1172&amp;sessionId=123791&amp;userId=   &amp;currentPage=1&amp;pageSize=10</td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAndModuleListt-userId为中文<a name="getCourseSectionAndModuleListt-userId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAndModuleList?courseId=1172&amp;sessionId=123791&amp;userId=测试&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAndModuleListt-userId为特殊字符<a name="getCourseSectionAndModuleListt-userId%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAndModuleList?courseId=1172&amp;sessionId=123791&amp;userId=&amp;&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAndModuleListt-courseId为数学符号<a name="getCourseSectionAndModuleListt-courseId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAndModuleList?courseId=+&amp;sessionId=123791&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAndModuleListt-courseId为标点符号<a name="getCourseSectionAndModuleListt-courseId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAndModuleList?courseId=？&amp;sessionId=123791&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAndModuleListt-courseId为空格<a name="getCourseSectionAndModuleListt-courseId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAndModuleList?courseId=      &amp;sessionId=123791&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 87: https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAndModuleList?courseId=      &amp;sessionId=123791&amp;currentPage=1&amp;pageSize=10</td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAndModuleListt-courseId为中文<a name="getCourseSectionAndModuleListt-courseId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAndModuleList?courseId=测试&amp;sessionId=123791&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAndModuleListt-courseId为英文<a name="getCourseSectionAndModuleListt-courseId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAndModuleList?courseId=test&amp;sessionId=123791&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAndModuleListt-courseId为空<a name="getCourseSectionAndModuleListt-courseId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAndModuleList?courseId=&amp;sessionId=123791&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAndModuleListt-sessionId为空<a name="getCourseSectionAndModuleListt-sessionId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAndModuleList?courseId=1172&amp;sessionId=&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAndModuleListt-sessionId为空格<a name="getCourseSectionAndModuleListt-sessionId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAndModuleList?courseId=1172&amp;sessionId=     &amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 102: https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAndModuleList?courseId=1172&amp;sessionId=     &amp;currentPage=1&amp;pageSize=10</td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAndModuleListt-sessionId为中文<a name="getCourseSectionAndModuleListt-sessionId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAndModuleList?courseId=1172&amp;sessionId=测试&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAndModuleListt-sessionId为英文<a name="getCourseSectionAndModuleListt-sessionId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAndModuleList?courseId=1172&amp;sessionId=test&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAndModuleListt-sessionId为特殊符号<a name="getCourseSectionAndModuleListt-sessionId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAndModuleList?courseId=1172&amp;sessionId=&amp;&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAndModuleListt-sessionId为标点符号<a name="getCourseSectionAndModuleListt-sessionId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAndModuleList?courseId=1172&amp;sessionId=？&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAndModuleListt-sessionId为数学符号<a name="getCourseSectionAndModuleListt-sessionId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAndModuleList?courseId=1172&amp;sessionId=+&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAvgScore-正确性验证<a name="getCourseSectionAvgScore-%E6%AD%A3%E7%A1%AE%E6%80%A7%E9%AA%8C%E8%AF%81"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAvgScore?moduleId=26058&amp;sessionId=2624&amp;courseId=2821</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAvgScore-moduleId为空<a name="getCourseSectionAvgScore-moduleId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAvgScore?moduleId=&amp;sessionId=2624&amp;courseId=2821</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAvgScore-moduleId为空格<a name="getCourseSectionAvgScore-moduleId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAvgScore?moduleId=&amp;sessionId=2624&amp;courseId=2821</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAvgScore-moduleId为中文<a name="getCourseSectionAvgScore-moduleId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAvgScore?moduleId=测试&amp;sessionId=2624&amp;courseId=2821</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAvgScore-moduleId为英文<a name="getCourseSectionAvgScore-moduleId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAvgScore?moduleId=test&amp;sessionId=2624&amp;courseId=2821</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAvgScore-moduleId为标点符号<a name="getCourseSectionAvgScore-moduleId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAvgScore?moduleId=？&amp;sessionId=2624&amp;courseId=2821</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAvgScore-moduleId为特殊符号<a name="getCourseSectionAvgScore-moduleId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAvgScore?moduleId=&amp;&amp;sessionId=2624&amp;courseId=2821</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAvgScore-moduleId为数学符号<a name="getCourseSectionAvgScore-moduleId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAvgScore?moduleId=+&amp;sessionId=2624&amp;courseId=2821</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAvgScore-sessionId为数学符号<a name="getCourseSectionAvgScore-sessionId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAvgScore?moduleId=26058&amp;sessionId=+&amp;courseId=2821</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAvgScore-sessionId为特殊符号<a name="getCourseSectionAvgScore-sessionId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAvgScore?moduleId=26058&amp;sessionId=*&amp;courseId=2821</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAvgScore-sessionId为标点符号<a name="getCourseSectionAvgScore-sessionId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAvgScore?moduleId=26058&amp;sessionId=？&amp;courseId=2821</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAvgScore-sessionId为中文<a name="getCourseSectionAvgScore-sessionId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAvgScore?moduleId=26058&amp;sessionId=测试&amp;courseId=2821</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAvgScore-sessionId为英文<a name="getCourseSectionAvgScore-sessionId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAvgScore?moduleId=26058&amp;sessionId=test&amp;courseId=2821</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAvgScore-sessionId为空格<a name="getCourseSectionAvgScore-sessionId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAvgScore?moduleId=26058&amp;sessionId=   &amp;courseId=2821</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 98: https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAvgScore?moduleId=26058&amp;sessionId=   &amp;courseId=2821</td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAvgScore-sessionId为空<a name="getCourseSectionAvgScore-sessionId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAvgScore?moduleId=26058&amp;sessionId=&amp;courseId=2821</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAvgScore-courseId为中文<a name="getCourseSectionAvgScore-courseId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAvgScore?moduleId=26058&amp;sessionId=2624&amp;courseId=测试</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAvgScore-courseId为英文<a name="getCourseSectionAvgScore-courseId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAvgScore?moduleId=26058&amp;sessionId=2624&amp;courseId=test</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAvgScore-courseId为特殊符号<a name="getCourseSectionAvgScore-courseId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAvgScore?moduleId=26058&amp;sessionId=2624&amp;courseId=&amp;</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAvgScore-courseId为数学符号<a name="getCourseSectionAvgScore-courseId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAvgScore?moduleId=26058&amp;sessionId=2624&amp;courseId=+</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAvgScore-courseId为空格<a name="getCourseSectionAvgScore-courseId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAvgScore?moduleId=26058&amp;sessionId=2624&amp;courseId=   </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 112: https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAvgScore?moduleId=26058&amp;sessionId=2624&amp;courseId=   </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAvgScore-courseId为标点符号<a name="getCourseSectionAvgScore-courseId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAvgScore?moduleId=26058&amp;sessionId=2624&amp;courseId=？</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionAvgScore-courseId为空<a name="getCourseSectionAvgScore-courseId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionAvgScore?moduleId=26058&amp;sessionId=2624&amp;courseId=</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseBookList-正确性验证<a name="getCourseBookList-%E6%AD%A3%E7%A1%AE%E6%80%A7%E9%AA%8C%E8%AF%81"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseBookList?userId=10000065&amp;subjectId=1&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseBookList-userId为空<a name="getCourseBookList-userId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseBookList?userId=&amp;subjectId=1&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseBookList-userId为空格<a name="getCourseBookList-userId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseBookList?userId=    &amp;subjectId=1&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 73: https://staging.zhishinet.com/api/course/v1/sec/getCourseBookList?userId=    &amp;subjectId=1&amp;currentPage=1&amp;pageSize=10</td><td></td>
+</tr>
+</table>
+<h3>getCourseBookList-userId为特殊符号<a name="getCourseBookList-userId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseBookList?userId=&amp;&amp;subjectId=1&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseBookList-userId为标点符号<a name="getCourseBookList-userId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseBookList?userId=？&amp;subjectId=1&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseBookList-userId为数学符号<a name="getCourseBookList-userId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseBookList?userId=+&amp;subjectId=1&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseBookList-userId为中文<a name="getCourseBookList-userId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseBookList?userId=测试&amp;subjectId=1&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseBookList-userId为英文<a name="getCourseBookList-userId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseBookList?userId=test&amp;subjectId=1&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseBookList-subjectId为特殊符号<a name="getCourseBookList-subjectId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseBookList?userId=10000065&amp;subjectId=&amp;&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseBookList-subjectId为标点符号<a name="getCourseBookList-subjectId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseBookList?userId=10000065&amp;subjectId=？&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseBookList-subjectId为数学符号<a name="getCourseBookList-subjectId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseBookList?userId=10000065&amp;subjectId=+&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseBookList-subjectId为空<a name="getCourseBookList-subjectId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseBookList?userId=10000065&amp;subjectId=&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseBookList-subjectId为空格<a name="getCourseBookList-subjectId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseBookList?userId=10000065&amp;subjectId=    &amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 92: https://staging.zhishinet.com/api/course/v1/sec/getCourseBookList?userId=10000065&amp;subjectId=    &amp;currentPage=1&amp;pageSize=10</td><td></td>
+</tr>
+</table>
+<h3>getCourseBookList-subjectId为中文<a name="getCourseBookList-subjectId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseBookList?userId=10000065&amp;subjectId=测试&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseBookList-subjectId为英文<a name="getCourseBookList-subjectId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseBookList?userId=10000065&amp;subjectId=test&amp;currentPage=1&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseBookList-currentPage为标点符号<a name="getCourseBookList-currentPage%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseBookList?userId=10000065&amp;subjectId=1&amp;currentPage=？&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseBookList-currentPage为特殊符号<a name="getCourseBookList-currentPage%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseBookList?userId=10000065&amp;subjectId=1&amp;currentPage=&amp;&amp;pageSize=10</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseBookList-currentPage为数学符号<a name="getCourseBookList-currentPage%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseBookList?userId=10000065&amp;subjectId=1&amp;currentPage=+&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseBookList-currentPage为中文<a name="getCourseBookList-currentPage%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseBookList?userId=10000065&amp;subjectId=1&amp;currentPage=测试&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseBookList-currentPage为英文<a name="getCourseBookList-currentPage%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseBookList?userId=10000065&amp;subjectId=1&amp;currentPage=test&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseBookList-currentPage为空格<a name="getCourseBookList-currentPage%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseBookList?userId=10000065&amp;subjectId=1&amp;currentPage=     &amp;pageSize=10</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 106: https://staging.zhishinet.com/api/course/v1/sec/getCourseBookList?userId=10000065&amp;subjectId=1&amp;currentPage=     &amp;pageSize=10</td><td></td>
+</tr>
+</table>
+<h3>getCourseBookList-currentPage为空<a name="getCourseBookList-currentPage%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseBookList?userId=10000065&amp;subjectId=1&amp;currentPage=&amp;pageSize=10</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseBookList-pageSize为空<a name="getCourseBookList-pageSize%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseBookList?userId=10000065&amp;subjectId=1&amp;currentPage=1&amp;pageSize=</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseBookList-pageSize为中文<a name="getCourseBookList-pageSize%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseBookList?userId=10000065&amp;subjectId=1&amp;currentPage=1&amp;pageSize=测试</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseBookList-pageSize为英文<a name="getCourseBookList-pageSize%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseBookList?userId=10000065&amp;subjectId=1&amp;currentPage=1&amp;pageSize=test</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseBookList-pageSize为特殊符号<a name="getCourseBookList-pageSize%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseBookList?userId=10000065&amp;subjectId=1&amp;currentPage=1&amp;pageSize=*</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseBookList-pageSize为标点符号<a name="getCourseBookList-pageSize%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseBookList?userId=10000065&amp;subjectId=1&amp;currentPage=1&amp;pageSize=？</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseBookList-pageSize为数学符号<a name="getCourseBookList-pageSize%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseBookList?userId=10000065&amp;subjectId=1&amp;currentPage=1&amp;pageSize=+</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseBookList-pageSize为空格<a name="getCourseBookList-pageSize%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseBookList?userId=10000065&amp;subjectId=1&amp;currentPage=1&amp;pageSize=    </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 117: https://staging.zhishinet.com/api/course/v1/sec/getCourseBookList?userId=10000065&amp;subjectId=1&amp;currentPage=1&amp;pageSize=    </td><td></td>
+</tr>
+</table>
+<h3>updateCourseClick-正确性验证<a name="updateCourseClick-%E6%AD%A3%E7%A1%AE%E6%80%A7%E9%AA%8C%E8%AF%81"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/updateCourseClick?courseId=1172&amp;sessionId=123791</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>updateCourseClick-courseId为空格<a name="updateCourseClick-courseId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/updateCourseClick?courseId=          &amp;sessionId=123791</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 75: https://staging.zhishinet.com/api/course/v1/sec/updateCourseClick?courseId=          &amp;sessionId=123791</td><td></td>
+</tr>
+</table>
+<h3>updateCourseClick-courseId为空<a name="updateCourseClick-courseId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/updateCourseClick?courseId=&amp;sessionId=123791</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>updateCourseClick-courseId为特殊符号<a name="updateCourseClick-courseId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/updateCourseClick?courseId=&amp;&amp;sessionId=123791</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>updateCourseClick-courseId为标点符号<a name="updateCourseClick-courseId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/updateCourseClick?courseId=？&amp;sessionId=123791</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>updateCourseClick-courseId为数学符号<a name="updateCourseClick-courseId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/updateCourseClick?courseId=+&amp;sessionId=123791</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>updateCourseClick-courseId为中文<a name="updateCourseClick-courseId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/updateCourseClick?courseId=测试&amp;sessionId=123791</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>updateCourseClick-courseId为英文<a name="updateCourseClick-courseId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/updateCourseClick?courseId=test&amp;sessionId=123791</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>updateCourseClick-sessionId为英文<a name="updateCourseClick-sessionId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/updateCourseClick?courseId=1172&amp;sessionId=test</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>updateCourseClick-sessionId为中文<a name="updateCourseClick-sessionId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/updateCourseClick?courseId=1172&amp;sessionId=测试</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>updateCourseClick-sessionId为空格<a name="updateCourseClick-sessionId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/updateCourseClick?courseId=1172&amp;sessionId=   </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 90: https://staging.zhishinet.com/api/course/v1/sec/updateCourseClick?courseId=1172&amp;sessionId=   </td><td></td>
+</tr>
+</table>
+<h3>updateCourseClick-sessionId为空<a name="updateCourseClick-sessionId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/updateCourseClick?courseId=1172&amp;sessionId=</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>updateCourseClick-sessionId为特殊符号<a name="updateCourseClick-sessionId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/updateCourseClick?courseId=1172&amp;sessionId=*</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>updateCourseClick-sessionId为数学符号<a name="updateCourseClick-sessionId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/updateCourseClick?courseId=1172&amp;sessionId=+</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>updateCourseClick-sessionId为标点符号<a name="updateCourseClick-sessionId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/updateCourseClick?courseId=1172&amp;sessionId=？</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addCourseLastQuery-正确性验证<a name="addCourseLastQuery-%E6%AD%A3%E7%A1%AE%E6%80%A7%E9%AA%8C%E8%AF%81"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=1&amp;courseSessionId=2624&amp;curriculumId=225&amp;courseId=1172&amp;sectionId=123791</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=2&amp;courseSessionId=2624&amp;curriculumId=225&amp;courseId=1172&amp;sectionId=123791</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>addCourseLastQuery-subjectId为空格<a name="addCourseLastQuery-subjectId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=     &amp;courseSessionId=2624&amp;curriculumId=225&amp;courseId=1172&amp;sectionId=123791</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 77: https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=     &amp;courseSessionId=2624&amp;curriculumId=225&amp;courseId=1172&amp;sectionId=123791</td><td></td>
+</tr>
+</table>
+<h3>addCourseLastQuery-subjectId为空<a name="addCourseLastQuery-subjectId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=&amp;courseSessionId=2624&amp;curriculumId=225&amp;courseId=1172&amp;sectionId=123791</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addCourseLastQuery-subjectId为特殊符号<a name="addCourseLastQuery-subjectId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=*&amp;courseSessionId=2624&amp;curriculumId=225&amp;courseId=1172&amp;sectionId=123791</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addCourseLastQuery-subjectId为标点符号<a name="addCourseLastQuery-subjectId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=？&amp;courseSessionId=2624&amp;curriculumId=225&amp;courseId=1172&amp;sectionId=123791</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addCourseLastQuery-subjectId为数学符号<a name="addCourseLastQuery-subjectId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=+&amp;courseSessionId=2624&amp;curriculumId=225&amp;courseId=1172&amp;sectionId=123791</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addCourseLastQuery-subjectId为中文<a name="addCourseLastQuery-subjectId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=测试&amp;courseSessionId=2624&amp;curriculumId=225&amp;courseId=1172&amp;sectionId=123791</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addCourseLastQuery-subjectId为英文<a name="addCourseLastQuery-subjectId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=test&amp;courseSessionId=2624&amp;curriculumId=225&amp;courseId=1172&amp;sectionId=123791</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addCourseLastQuery-courseSessionId为英文<a name="addCourseLastQuery-courseSessionId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=1&amp;courseSessionId=test&amp;curriculumId=225&amp;courseId=1172&amp;sectionId=123791</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addCourseLastQuery-courseSessionId为中文<a name="addCourseLastQuery-courseSessionId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=1&amp;courseSessionId=测试&amp;curriculumId=225&amp;courseId=1172&amp;sectionId=123791</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addCourseLastQuery-courseSessionId为特殊符号<a name="addCourseLastQuery-courseSessionId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=1&amp;courseSessionId=*&amp;curriculumId=225&amp;courseId=1172&amp;sectionId=123791</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addCourseLastQuery-courseSessionId为标点符号<a name="addCourseLastQuery-courseSessionId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=1&amp;courseSessionId=？&amp;curriculumId=225&amp;courseId=1172&amp;sectionId=123791</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addCourseLastQuery-courseSessionId为数学符号<a name="addCourseLastQuery-courseSessionId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=1&amp;courseSessionId=+&amp;curriculumId=225&amp;courseId=1172&amp;sectionId=123791</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addCourseLastQuery-courseSessionId为空格<a name="addCourseLastQuery-courseSessionId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=1&amp;courseSessionId=      &amp;curriculumId=225&amp;courseId=1172&amp;sectionId=123791</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 95: https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=1&amp;courseSessionId=      &amp;curriculumId=225&amp;courseId=1172&amp;sectionId=123791</td><td></td>
+</tr>
+</table>
+<h3>addCourseLastQuery-courseSessionId为空<a name="addCourseLastQuery-courseSessionId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=1&amp;courseSessionId=&amp;curriculumId=225&amp;courseId=1172&amp;sectionId=123791</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addCourseLastQuery-curriculumId为空<a name="addCourseLastQuery-curriculumId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=1&amp;courseSessionId=2624&amp;curriculumId=&amp;courseId=1172&amp;sectionId=123791</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addCourseLastQuery-curriculumId为空格<a name="addCourseLastQuery-curriculumId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=1&amp;courseSessionId=2624&amp;curriculumId=    &amp;courseId=1172&amp;sectionId=123791</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 113: https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=1&amp;courseSessionId=2624&amp;curriculumId=    &amp;courseId=1172&amp;sectionId=123791</td><td></td>
+</tr>
+</table>
+<h3>addCourseLastQuery-curriculumId为中文<a name="addCourseLastQuery-curriculumId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=1&amp;courseSessionId=2624&amp;curriculumId=测试&amp;courseId=1172&amp;sectionId=123791</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addCourseLastQuery-curriculumId为英文<a name="addCourseLastQuery-curriculumId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=1&amp;courseSessionId=2624&amp;curriculumId=test&amp;courseId=1172&amp;sectionId=123791</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addCourseLastQuery-curriculumId为特殊符号<a name="addCourseLastQuery-curriculumId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=1&amp;courseSessionId=2624&amp;curriculumId=*&amp;courseId=1172&amp;sectionId=123791</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addCourseLastQuery-curriculumId为标点符号<a name="addCourseLastQuery-curriculumId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=1&amp;courseSessionId=2624&amp;curriculumId=？&amp;courseId=1172&amp;sectionId=123791</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addCourseLastQuery-curriculumId为数学符号<a name="addCourseLastQuery-curriculumId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=1&amp;courseSessionId=2624&amp;curriculumId=+&amp;courseId=1172&amp;sectionId=123791</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addCourseLastQuery-courseId为数学符号<a name="addCourseLastQuery-courseId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=1&amp;courseSessionId=2624&amp;curriculumId=225&amp;courseId=+&amp;sectionId=123791</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addCourseLastQuery-courseId为特殊符号<a name="addCourseLastQuery-courseId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=1&amp;courseSessionId=2624&amp;curriculumId=225&amp;courseId=*&amp;sectionId=123791</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addCourseLastQuery-courseId为标点符号<a name="addCourseLastQuery-courseId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=1&amp;courseSessionId=2624&amp;curriculumId=225&amp;courseId=？&amp;sectionId=123791</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addCourseLastQuery-courseId为空<a name="addCourseLastQuery-courseId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=1&amp;courseSessionId=2624&amp;curriculumId=225&amp;courseId=&amp;sectionId=123791</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addCourseLastQuery-courseId为空格<a name="addCourseLastQuery-courseId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=1&amp;courseSessionId=2624&amp;curriculumId=225&amp;courseId=    &amp;sectionId=123791</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 126: https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=1&amp;courseSessionId=2624&amp;curriculumId=225&amp;courseId=    &amp;sectionId=123791</td><td></td>
+</tr>
+</table>
+<h3>addCourseLastQuery-courseId为中文<a name="addCourseLastQuery-courseId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=1&amp;courseSessionId=2624&amp;curriculumId=225&amp;courseId=测试&amp;sectionId=123791</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addCourseLastQuery-courseId为英文<a name="addCourseLastQuery-courseId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=1&amp;courseSessionId=2624&amp;curriculumId=225&amp;courseId=test&amp;sectionId=123791</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addCourseLastQuery-sectionId为英文<a name="addCourseLastQuery-sectionId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=1&amp;courseSessionId=2624&amp;curriculumId=225&amp;courseId=1172&amp;sectionId=test</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=1&amp;courseSessionId=2624&amp;curriculumId=225&amp;courseId=1172&amp;sectionId=test</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addCourseLastQuery-sectionId为中文<a name="addCourseLastQuery-sectionId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=1&amp;courseSessionId=2624&amp;curriculumId=225&amp;courseId=1172&amp;sectionId=测试</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=1&amp;courseSessionId=2624&amp;curriculumId=225&amp;courseId=1172&amp;sectionId=测试</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addCourseLastQuery-sectionId为空格<a name="addCourseLastQuery-sectionId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=1&amp;courseSessionId=2624&amp;curriculumId=225&amp;courseId=1172&amp;sectionId=    </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 141: https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=1&amp;courseSessionId=2624&amp;curriculumId=225&amp;courseId=1172&amp;sectionId=    </td><td></td>
+</tr>
+</table>
+<h3>addCourseLastQuery-sectionId为空<a name="addCourseLastQuery-sectionId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=1&amp;courseSessionId=2624&amp;curriculumId=225&amp;courseId=1172&amp;sectionId=</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addCourseLastQuery-sectionId为特殊符号<a name="addCourseLastQuery-sectionId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=1&amp;courseSessionId=2624&amp;curriculumId=225&amp;courseId=1172&amp;sectionId=*</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addCourseLastQuery-sectionId为标点符号<a name="addCourseLastQuery-sectionId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=1&amp;courseSessionId=2624&amp;curriculumId=225&amp;courseId=1172&amp;sectionId=？</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addCourseLastQuery-sectionId为数学符号<a name="addCourseLastQuery-sectionId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/addCourseLastQuery?subjectId=1&amp;courseSessionId=2624&amp;curriculumId=225&amp;courseId=1172&amp;sectionId=+</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseKnowledgeSummary-正确性验证<a name="getCourseKnowledgeSummary-%E6%AD%A3%E7%A1%AE%E6%80%A7%E9%AA%8C%E8%AF%81"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseKnowledgeSummary?courseId=1318&amp;sessionId=123791</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseKnowledgeSummary-courseId为中文<a name="getCourseKnowledgeSummary-courseId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseKnowledgeSummary?courseId=测试&amp;sessionId=123791</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseKnowledgeSummary-courseId为英文<a name="getCourseKnowledgeSummary-courseId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseKnowledgeSummary?courseId=test&amp;sessionId=123791</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseKnowledgeSummary-courseId为空格<a name="getCourseKnowledgeSummary-courseId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseKnowledgeSummary?courseId=     &amp;sessionId=123791</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 83: https://staging.zhishinet.com/api/course/v1/sec/getCourseKnowledgeSummary?courseId=     &amp;sessionId=123791</td><td></td>
+</tr>
+</table>
+<h3>getCourseKnowledgeSummary-courseId为空<a name="getCourseKnowledgeSummary-courseId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseKnowledgeSummary?courseId=&amp;sessionId=123791</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseKnowledgeSummary-courseId为标点符号<a name="getCourseKnowledgeSummary-courseId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseKnowledgeSummary?courseId=？&amp;sessionId=123791</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseKnowledgeSummary-courseId为特殊符号<a name="getCourseKnowledgeSummary-courseId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseKnowledgeSummary?courseId=&amp;&amp;sessionId=123791</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseKnowledgeSummary-courseId为数学符号<a name="getCourseKnowledgeSummary-courseId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseKnowledgeSummary?courseId=+&amp;sessionId=123791</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseKnowledgeSummary-sessionId为数学符号<a name="getCourseKnowledgeSummary-sessionId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseKnowledgeSummary?courseId=1318&amp;sessionId=+</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseKnowledgeSummary-sessionId为标点符号<a name="getCourseKnowledgeSummary-sessionId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseKnowledgeSummary?courseId=1318&amp;sessionId=？</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseKnowledgeSummary-sessionId为特殊符号<a name="getCourseKnowledgeSummary-sessionId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseKnowledgeSummary?courseId=1318&amp;sessionId=*</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseKnowledgeSummary-sessionId为中文<a name="getCourseKnowledgeSummary-sessionId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseKnowledgeSummary?courseId=1318&amp;sessionId=测试</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseKnowledgeSummary-sessionId为英文<a name="getCourseKnowledgeSummary-sessionId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseKnowledgeSummary?courseId=1318&amp;sessionId=test</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseKnowledgeSummary-sessionId为空格<a name="getCourseKnowledgeSummary-sessionId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseKnowledgeSummary?courseId=1318&amp;sessionId=    </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 98: https://staging.zhishinet.com/api/course/v1/sec/getCourseKnowledgeSummary?courseId=1318&amp;sessionId=    </td><td></td>
+</tr>
+</table>
+<h3>getCourseKnowledgeSummary-sessionId为空<a name="getCourseKnowledgeSummary-sessionId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseKnowledgeSummary?courseId=1318&amp;sessionId=</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionList-正确性验证<a name="getCourseSectionList-%E6%AD%A3%E7%A1%AE%E6%80%A7%E9%AA%8C%E8%AF%81"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionList?courseId=1318&amp;orderBy=DisplayOrder</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionList-courseId为中文<a name="getCourseSectionList-courseId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionList?courseId=测试&amp;orderBy=DisplayOrder</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionList-courseId为英文<a name="getCourseSectionList-courseId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionList?courseId=test&amp;orderBy=DisplayOrder</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionList-courseId为数学符号<a name="getCourseSectionList-courseId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionList?courseId=-&amp;orderBy=DisplayOrder</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionList-courseId为特殊符号<a name="getCourseSectionList-courseId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionList?courseId=@&amp;orderBy=DisplayOrder</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionList-courseId为标点符号<a name="getCourseSectionList-courseId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionList?courseId=？&amp;orderBy=DisplayOrder</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionList-courseId为空格<a name="getCourseSectionList-courseId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionList?courseId=     &amp;orderBy=DisplayOrder</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 78: https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionList?courseId=     &amp;orderBy=DisplayOrder</td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionList-courseId为空<a name="getCourseSectionList-courseId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionList?courseId=&amp;orderBy=DisplayOrder</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionList-orderBy为空<a name="getCourseSectionList-orderBy%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionList?courseId=1318&amp;orderBy=</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getCourseSectionList-orderBy为空格<a name="getCourseSectionList-orderBy%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionList?courseId=1318&amp;orderBy=     </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 91: https://staging.zhishinet.com/api/course/v1/sec/getCourseSectionList?courseId=1318&amp;orderBy=     </td><td></td>
+</tr>
+</table>
+<h3>getModuleList-正确性验证<a name="getModuleList-%E6%AD%A3%E7%A1%AE%E6%80%A7%E9%AA%8C%E8%AF%81"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=10000065&amp;sectionId=1&amp;orderBy=ModuleOrder&amp;currentPage=1&amp;pageSize=10&amp;sessionId=2624</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getModuleList-userId为空<a name="getModuleList-userId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=&amp;sectionId=1&amp;orderBy=ModuleOrder&amp;currentPage=1&amp;pageSize=10&amp;sessionId=2624</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getModuleList-userId为空格<a name="getModuleList-userId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=    &amp;sectionId=1&amp;orderBy=ModuleOrder&amp;currentPage=1&amp;pageSize=10&amp;sessionId=2624</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 69: https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=    &amp;sectionId=1&amp;orderBy=ModuleOrder&amp;currentPage=1&amp;pageSize=10&amp;sessionId=2624</td><td></td>
+</tr>
+</table>
+<h3>getModuleList-userId为中文<a name="getModuleList-userId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=测试&amp;sectionId=1&amp;orderBy=ModuleOrder&amp;currentPage=1&amp;pageSize=10&amp;sessionId=2624</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getModuleList-userId为英文<a name="getModuleList-userId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=test&amp;sectionId=1&amp;orderBy=ModuleOrder&amp;currentPage=1&amp;pageSize=10&amp;sessionId=2624</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getModuleList-userId为特殊字符<a name="getModuleList-userId%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=*&amp;sectionId=1&amp;orderBy=ModuleOrder&amp;currentPage=1&amp;pageSize=10&amp;sessionId=2624</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getModuleList-userId为标点符号<a name="getModuleList-userId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=？&amp;sectionId=1&amp;orderBy=ModuleOrder&amp;currentPage=1&amp;pageSize=10&amp;sessionId=2624</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getModuleList-userId为数学符号<a name="getModuleList-userId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=+&amp;sectionId=1&amp;orderBy=ModuleOrder&amp;currentPage=1&amp;pageSize=10&amp;sessionId=2624</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getModuleList-sectionId为数学符号<a name="getModuleList-sectionId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=10000065&amp;sectionId=+&amp;orderBy=ModuleOrder&amp;currentPage=1&amp;pageSize=10&amp;sessionId=2624</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getModuleList-sectionId为标点符号<a name="getModuleList-sectionId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=10000065&amp;sectionId=？&amp;orderBy=ModuleOrder&amp;currentPage=1&amp;pageSize=10&amp;sessionId=2624</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getModuleList-sectionId为特殊符号<a name="getModuleList-sectionId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=10000065&amp;sectionId=*&amp;orderBy=ModuleOrder&amp;currentPage=1&amp;pageSize=10&amp;sessionId=2624</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getModuleList-currentPage为空<a name="getModuleList-currentPage%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=10000065&amp;sectionId=1&amp;orderBy=ModuleOrder&amp;currentPage=&amp;pageSize=10&amp;sessionId=2624</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getModuleList-currentPage为空格<a name="getModuleList-currentPage%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=10000065&amp;sectionId=1&amp;orderBy=ModuleOrder&amp;currentPage=     &amp;pageSize=10&amp;sessionId=2624</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 122: https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=10000065&amp;sectionId=1&amp;orderBy=ModuleOrder&amp;currentPage=     &amp;pageSize=10&amp;sessionId=2624</td><td></td>
+</tr>
+</table>
+<h3>getModuleList-currentPage为中文<a name="getModuleList-currentPage%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=10000065&amp;sectionId=1&amp;orderBy=ModuleOrder&amp;currentPage=测试&amp;pageSize=10&amp;sessionId=2624</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getModuleList-currentPage为英文<a name="getModuleList-currentPage%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=10000065&amp;sectionId=1&amp;orderBy=ModuleOrder&amp;currentPage=test&amp;pageSize=10&amp;sessionId=2624</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getModuleList-currentPage为标点符号<a name="getModuleList-currentPage%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=10000065&amp;sectionId=1&amp;orderBy=ModuleOrder&amp;currentPage=？&amp;pageSize=10&amp;sessionId=2624</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getModuleList-currentPage为特殊符号<a name="getModuleList-currentPage%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=10000065&amp;sectionId=1&amp;orderBy=ModuleOrder&amp;currentPage=&amp;&amp;pageSize=10&amp;sessionId=2624</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getModuleList-currentPage为数学符号<a name="getModuleList-currentPage%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=10000065&amp;sectionId=1&amp;orderBy=ModuleOrder&amp;currentPage=+&amp;pageSize=10&amp;sessionId=2624</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getModuleList-pageSize为特殊符号<a name="getModuleList-pageSize%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=10000065&amp;sectionId=1&amp;orderBy=ModuleOrder&amp;currentPage=1&amp;pageSize=&amp;&amp;sessionId=2624</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getModuleList-pageSize为标点符号<a name="getModuleList-pageSize%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=10000065&amp;sectionId=1&amp;orderBy=ModuleOrder&amp;currentPage=1&amp;pageSize=？&amp;sessionId=2624</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getModuleList-pageSize为数学符号<a name="getModuleList-pageSize%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=10000065&amp;sectionId=1&amp;orderBy=ModuleOrder&amp;currentPage=1&amp;pageSize=+&amp;sessionId=2624</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getModuleList-pageSize为中文<a name="getModuleList-pageSize%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=10000065&amp;sectionId=1&amp;orderBy=ModuleOrder&amp;currentPage=1&amp;pageSize=测试&amp;sessionId=2624</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getModuleList-pageSize为英文<a name="getModuleList-pageSize%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=10000065&amp;sectionId=1&amp;orderBy=ModuleOrder&amp;currentPage=1&amp;pageSize=test&amp;sessionId=2624</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getModuleList-pageSize为空格<a name="getModuleList-pageSize%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=10000065&amp;sectionId=1&amp;orderBy=ModuleOrder&amp;currentPage=1&amp;pageSize=    &amp;sessionId=2624</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 133: https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=10000065&amp;sectionId=1&amp;orderBy=ModuleOrder&amp;currentPage=1&amp;pageSize=    &amp;sessionId=2624</td><td></td>
+</tr>
+</table>
+<h3>getModuleList-pageSize为空<a name="getModuleList-pageSize%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=10000065&amp;sectionId=1&amp;orderBy=ModuleOrder&amp;currentPage=1&amp;pageSize=&amp;sessionId=2624</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getModuleList-sessionId为空<a name="getModuleList-sessionId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=10000065&amp;sectionId=1&amp;orderBy=ModuleOrder&amp;currentPage=1&amp;pageSize=10&amp;sessionId=</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getModuleList-sessionId为空格<a name="getModuleList-sessionId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=10000065&amp;sectionId=1&amp;orderBy=ModuleOrder&amp;currentPage=1&amp;pageSize=10&amp;sessionId=    </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 146: https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=10000065&amp;sectionId=1&amp;orderBy=ModuleOrder&amp;currentPage=1&amp;pageSize=10&amp;sessionId=    </td><td></td>
+</tr>
+</table>
+<h3>getModuleList-sessionId为中文<a name="getModuleList-sessionId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=10000065&amp;sectionId=1&amp;orderBy=ModuleOrder&amp;currentPage=1&amp;pageSize=10&amp;sessionId=测试</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getModuleList-sessionId为英文<a name="getModuleList-sessionId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=10000065&amp;sectionId=1&amp;orderBy=ModuleOrder&amp;currentPage=1&amp;pageSize=10&amp;sessionId=test</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getModuleList-sessionId为数学符号<a name="getModuleList-sessionId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=10000065&amp;sectionId=1&amp;orderBy=ModuleOrder&amp;currentPage=1&amp;pageSize=10&amp;sessionId=+</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getModuleList-sessionId为特殊符号<a name="getModuleList-sessionId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=10000065&amp;sectionId=1&amp;orderBy=ModuleOrder&amp;currentPage=1&amp;pageSize=10&amp;sessionId=&amp;</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getModuleList-sessionId为标点符号<a name="getModuleList-sessionId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleList?userId=10000065&amp;sectionId=1&amp;orderBy=ModuleOrder&amp;currentPage=1&amp;pageSize=10&amp;sessionId=？</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getModuleAndTrackingDetail正确性验证<a name="getModuleAndTrackingDetail%E6%AD%A3%E7%A1%AE%E6%80%A7%E9%AA%8C%E8%AF%81"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleAndTrackingDetail?sessionUserTrackingId=100056117</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getModuleAndTrackingDetail-sessionUserTrackingId为空格<a name="getModuleAndTrackingDetail-sessionUserTrackingId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleAndTrackingDetail?sessionUserTrackingId=    </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 97: https://staging.zhishinet.com/api/course/v1/sec/getModuleAndTrackingDetail?sessionUserTrackingId=    </td><td></td>
+</tr>
+</table>
+<h3>getModuleAndTrackingDetail-sessionUserTrackingId为空<a name="getModuleAndTrackingDetail-sessionUserTrackingId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleAndTrackingDetail?sessionUserTrackingId=</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getModuleAndTrackingDetail-sessionUserTrackingId为特殊符号<a name="getModuleAndTrackingDetail-sessionUserTrackingId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleAndTrackingDetail?sessionUserTrackingId=&amp;</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getModuleAndTrackingDetail-sessionUserTrackingId为数学符号<a name="getModuleAndTrackingDetail-sessionUserTrackingId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleAndTrackingDetail?sessionUserTrackingId=+</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getModuleAndTrackingDetail-sessionUserTrackingId为标点符号<a name="getModuleAndTrackingDetail-sessionUserTrackingId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleAndTrackingDetail?sessionUserTrackingId=？</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getModuleAndTrackingDetail-sessionUserTrackingId为中文<a name="getModuleAndTrackingDetail-sessionUserTrackingId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleAndTrackingDetail?sessionUserTrackingId=测试</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getModuleAndTrackingDetail-sessionUserTrackingId为英文<a name="getModuleAndTrackingDetail-sessionUserTrackingId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/course/v1/sec/getModuleAndTrackingDetail?sessionUserTrackingId=test</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+</body>
+</html>

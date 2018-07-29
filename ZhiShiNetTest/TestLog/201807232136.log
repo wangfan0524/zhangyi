@@ -1,0 +1,73 @@
+2018-07-23 21:36:51,952 INFO o.a.j.u.JMeterUtils: Setting Locale to zh_CN
+2018-07-23 21:36:51,969 INFO o.a.j.JMeter: Loading user properties from: user.properties
+2018-07-23 21:36:51,970 INFO o.a.j.JMeter: Loading system properties from: system.properties
+2018-07-23 21:36:51,971 INFO o.a.j.JMeter: Setting JMeter property: host=test.zhishinet.com
+2018-07-23 21:36:51,975 INFO o.a.j.JMeter: Copyright (c) 1998-2017 The Apache Software Foundation
+2018-07-23 21:36:51,975 INFO o.a.j.JMeter: Version 3.2 r1790748
+2018-07-23 21:36:51,975 INFO o.a.j.JMeter: java.version=1.8.0_144
+2018-07-23 21:36:51,975 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2018-07-23 21:36:51,975 INFO o.a.j.JMeter: os.name=Windows 10
+2018-07-23 21:36:51,976 INFO o.a.j.JMeter: os.arch=amd64
+2018-07-23 21:36:51,976 INFO o.a.j.JMeter: os.version=10.0
+2018-07-23 21:36:51,976 INFO o.a.j.JMeter: file.encoding=GBK
+2018-07-23 21:36:51,976 INFO o.a.j.JMeter: Max memory     =3793747968
+2018-07-23 21:36:51,976 INFO o.a.j.JMeter: Available Processors =4
+2018-07-23 21:36:51,982 INFO o.a.j.JMeter: Default Locale=中文 (中国)
+2018-07-23 21:36:51,983 INFO o.a.j.JMeter: JMeter  Locale=中文 (中国)
+2018-07-23 21:36:51,983 INFO o.a.j.JMeter: JMeterHome=E:\zhishinetWorke\ZHISHIINTERFACE\apache-jmeter-3.2
+2018-07-23 21:36:51,983 INFO o.a.j.JMeter: user.dir  =E:\zhishinetWorke\ZHISHIINTERFACE\apache-jmeter-3.2\bin
+2018-07-23 21:36:51,983 INFO o.a.j.JMeter: PWD       =E:\zhishinetWorke\ZHISHIINTERFACE\apache-jmeter-3.2\bin
+2018-07-23 21:36:52,933 INFO o.a.j.JMeter: IP: 10.205.72.139 Name: G4OZ2NYR23QHW5I FullName: 10.205.72.139
+2018-07-23 21:36:52,937 INFO o.a.j.s.FileServer: Default base='E:\zhishinetWorke\ZHISHIINTERFACE\apache-jmeter-3.2\bin'
+2018-07-23 21:36:52,937 INFO o.a.j.s.FileServer: Set new base='E:\备份A\本地git\test1\ZhiShiNetTest\TestSuite'
+2018-07-23 21:36:53,047 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2018-07-23 21:36:53,063 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2018-07-23 21:36:53,069 INFO o.a.j.s.SaveService: Using SaveService properties version 3.2
+2018-07-23 21:36:53,075 INFO o.a.j.s.SaveService: Loading file: E:\备份A\本地git\test1\ZhiShiNetTest\TestSuite\user-profile_Test.jmx
+2018-07-23 21:36:53,190 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-07-23 21:36:53,190 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-07-23 21:36:53,190 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-07-23 21:36:53,190 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-07-23 21:36:53,190 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2018-07-23 21:36:53,190 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2018-07-23 21:36:53,251 INFO o.a.j.JMeter: Creating summariser <summary>
+2018-07-23 21:36:53,259 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2018-07-23 21:36:53,260 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2018-07-23 21:36:53,260 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2018-07-23 21:36:53,265 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2018-07-23 21:36:53,265 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2018-07-23 21:36:53,684 INFO o.a.j.JMeter: 正在运行的测试 (1532353013684)
+2018-07-23 21:36:53,740 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : cheesecoins/log-获取用户芝士币日志记录
+2018-07-23 21:36:53,740 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group cheesecoins/log-获取用户芝士币日志记录.
+2018-07-23 21:36:53,740 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-07-23 21:36:53,741 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2018-07-23 21:36:53,752 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2018-07-23 21:36:53,752 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: cheesecoins/log-获取用户芝士币日志记录 to finish before starting next group
+2018-07-23 21:36:53,754 INFO o.a.j.t.JMeterThread: Thread started: cheesecoins/log-获取用户芝士币日志记录 1-1
+2018-07-23 21:36:53,783 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = G4OZ2NYR23QHW5I
+2018-07-23 21:36:53,788 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2018-07-23 21:36:53,795 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2018-07-23 21:36:53,795 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to utf-8
+2018-07-23 21:36:53,795 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2018-07-23 21:36:53,795 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2018-07-23 21:36:53,958 INFO o.a.j.p.h.s.LazySchemeSocketFactory: Setting up HTTPS TrustAll Socket Factory
+2018-07-23 21:36:53,967 INFO o.a.j.u.JsseSSLManager: Using default SSL protocol: TLS
+2018-07-23 21:36:53,967 INFO o.a.j.u.JsseSSLManager: SSL session context: per-thread
+2018-07-23 21:36:56,384 INFO o.a.j.u.SSLManager: JmeterKeyStore Location:  type JKS
+2018-07-23 21:36:56,385 INFO o.a.j.u.SSLManager: KeyStore created OK
+2018-07-23 21:36:56,385 WARN o.a.j.u.SSLManager: Keystore file not found, loading empty keystore
+2018-07-23 21:37:00,629 INFO o.a.j.r.Summariser: summary +      2 in 00:00:07 =    0.3/s Avg:  3389 Min:  2688 Max:  4091 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+2018-07-23 21:37:14,395 INFO o.a.j.t.JMeterThread: Thread is done: cheesecoins/log-获取用户芝士币日志记录 1-1
+2018-07-23 21:37:14,396 INFO o.a.j.t.JMeterThread: Thread finished: cheesecoins/log-获取用户芝士币日志记录 1-1
+2018-07-23 21:37:14,401 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 2 : achievement-获取学员成就记录
+2018-07-23 21:37:14,401 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group achievement-获取学员成就记录.
+2018-07-23 21:37:14,402 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-07-23 21:37:14,402 INFO o.a.j.t.ThreadGroup: Starting thread group... number=2 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2018-07-23 21:37:14,424 INFO o.a.j.t.ThreadGroup: Started thread group number 2
+2018-07-23 21:37:14,425 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2018-07-23 21:37:14,431 INFO o.a.j.t.JMeterThread: Thread started: achievement-获取学员成就记录 2-1
+2018-07-23 21:37:27,484 INFO o.a.j.t.JMeterThread: Thread is done: achievement-获取学员成就记录 2-1
+2018-07-23 21:37:27,484 INFO o.a.j.t.JMeterThread: Thread finished: achievement-获取学员成就记录 2-1
+2018-07-23 21:37:27,485 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2018-07-23 21:37:27,486 INFO o.a.j.r.Summariser: summary +     19 in 00:00:27 =    0.7/s Avg:  1404 Min:     2 Max:  3902 Err:     0 (0.00%) Active: 0 Started: 2 Finished: 2
+2018-07-23 21:37:27,486 INFO o.a.j.r.Summariser: summary =     21 in 00:00:34 =    0.6/s Avg:  1593 Min:     2 Max:  4091 Err:     0 (0.00%)

@@ -1,0 +1,3074 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ZSN-Interface Test Results</title>
+<style type="text/css">
+				body {
+					font:normal 68% verdana,arial,helvetica;
+					color:#000000;
+				}
+				table tr td, table tr th {
+					font-size: 68%;
+				}
+				table.details tr th{
+				    color: #ffffff;
+					font-weight: bold;
+					text-align:center;
+					background:#2674a6;
+					white-space: nowrap;
+				}
+				table.details tr td{
+					background:#eeeee0;
+				}
+				h1 {
+					margin: 0px 0px 5px; font: 165% verdana,arial,helvetica
+				}
+				h2 {
+					margin-top: 1em; margin-bottom: 0.5em; font: bold 125% verdana,arial,helvetica
+				}
+				h3 {
+					margin-bottom: 0.5em; font: bold 115% verdana,arial,helvetica
+				}
+				.Failure {
+					font-weight:bold; color:red;
+				}
+				
+	
+				img
+				{
+				  border-width: 0px;
+				}
+				
+				.expand_link
+				{
+				   position=absolute;
+				   right: 0px;
+				   width: 27px;
+				   top: 1px;
+				   height: 27px;
+				}
+				
+				.page_details
+				{
+				   display: none;
+				}
+                                
+                                .page_details_expanded
+                                {
+                                    display: block;
+                                    display/* hide this definition from  IE5/6 */: table-row;
+                                }
+
+
+			</style>
+<script language="JavaScript">
+                           function expand(details_id)
+			   {
+			      
+			      document.getElementById(details_id).className = "page_details_expanded";
+			   }
+			   
+			   function collapse(details_id)
+			   {
+			      
+			      document.getElementById(details_id).className = "page_details";
+			   }
+			   
+			   function change(details_id)
+			   {
+			      if(document.getElementById(details_id+"_image").src.match("expand"))
+			      {
+			         document.getElementById(details_id+"_image").src = "collapse.png";
+			         expand(details_id);
+			      }
+			      else
+			      {
+			         document.getElementById(details_id+"_image").src = "expand.png";
+			         collapse(details_id);
+			      } 
+                           }
+			</script>
+</head>
+<body>
+<h1>ZSN-Interface Test Results</h1>
+<table width="100%">
+<tr>
+<td align="left">Date report: 2017/10/09 14:32</td>
+<br>
+<td align="left">RunEnvironment:https://staging.zhishinet.com</td><td align="left">TestAccount:{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td>
+</tr>
+</table>
+<hr size="1">
+<h2>Summary</h2>
+<table width="95%" cellspacing="2" cellpadding="4" border="0" class="details" align="center">
+<tr valign="top">
+<th>Total</th><th>Pass</th><th>Failures</th><th>Success Rate</th>
+</tr>
+<tr valign="top">
+<td align="center">287</td><td align="center">287</td><td align="center">0</td><td align="center">100.00%</td>
+</tr>
+</table>
+<hr align="center" width="95%" size="1">
+<h2>Success Detail</h2>
+<h3>getToken<a name="getToken"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getuser-获取用户信息<a name="getuser-%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/app-student/v1/sec/users/student</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/app-student/v1/sec/users/student</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>学生学科信息获取<a name="%E5%AD%A6%E7%94%9F%E5%AD%A6%E7%A7%91%E4%BF%A1%E6%81%AF%E8%8E%B7%E5%8F%96"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/subjects?roleTypeId=1</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>学生端个性视频推荐<a name="%E5%AD%A6%E7%94%9F%E7%AB%AF%E4%B8%AA%E6%80%A7%E8%A7%86%E9%A2%91%E6%8E%A8%E8%8D%90"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend?limit=4&amp;subjectId=1&amp;roleTypeId=1</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>videos_获取视频列表1 学生，获取英语视频，知识点默认全部，关键词为空，收藏标识默认全部<a name="videos_%E8%8E%B7%E5%8F%96%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A81 %E5%AD%A6%E7%94%9F%EF%BC%8C%E8%8E%B7%E5%8F%96%E8%8B%B1%E8%AF%AD%E8%A7%86%E9%A2%91%EF%BC%8C%E7%9F%A5%E8%AF%86%E7%82%B9%E9%BB%98%E8%AE%A4%E5%85%A8%E9%83%A8%EF%BC%8C%E5%85%B3%E9%94%AE%E8%AF%8D%E4%B8%BA%E7%A9%BA%EF%BC%8C%E6%94%B6%E8%97%8F%E6%A0%87%E8%AF%86%E9%BB%98%E8%AE%A4%E5%85%A8%E9%83%A8"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;searchText=&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=25</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>学生端收藏视频<a name="%E5%AD%A6%E7%94%9F%E7%AB%AF%E6%94%B6%E8%97%8F%E8%A7%86%E9%A2%91"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection</td><td>POST</td><td>{&#13;
+	"videoId":5678&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>学生端取消收藏视频<a name="%E5%AD%A6%E7%94%9F%E7%AB%AF%E5%8F%96%E6%B6%88%E6%94%B6%E8%97%8F%E8%A7%86%E9%A2%91"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection/5678</td><td>DELETE</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>学生端视频点赞<a name="%E5%AD%A6%E7%94%9F%E7%AB%AF%E8%A7%86%E9%A2%91%E7%82%B9%E8%B5%9E"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment</td><td>POST</td><td>{&#13;
+	"microVideoId":43&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>学生端取消视频点赞<a name="%E5%AD%A6%E7%94%9F%E7%AB%AF%E5%8F%96%E6%B6%88%E8%A7%86%E9%A2%91%E7%82%B9%E8%B5%9E"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment/43</td><td>DELETE</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>videos/comment_视频评价<a name="videos/comment_%E8%A7%86%E9%A2%91%E8%AF%84%E4%BB%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/comment</td><td>POST</td><td>{&#13;
+	"microVideoId":43,&#13;
+	"commentContent":"武晋升自动插入2此评论"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/comment</td><td>POST</td><td>{&#13;
+	"microVideoId":43,&#13;
+	"commentContent":"武晋升自动插入2此评论"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>videos/play_视频播放，播放次数累计增加1<a name="videos/play_%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%EF%BC%8C%E6%92%AD%E6%94%BE%E6%AC%A1%E6%95%B0%E7%B4%AF%E8%AE%A1%E5%A2%9E%E5%8A%A01"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/play/43</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/play/43</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>/videos_视频详情<a name="/videos_%E8%A7%86%E9%A2%91%E8%AF%A6%E6%83%85"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/43</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/43</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>videos/recommend_相关视频推荐<a name="videos/recommend_%E7%9B%B8%E5%85%B3%E8%A7%86%E9%A2%91%E6%8E%A8%E8%8D%90"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend/126/1</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend/126/1</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>videos/publish_发布视频<a name="videos/publish_%E5%8F%91%E5%B8%83%E8%A7%86%E9%A2%91"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec//videos/publish</td><td>POST</td><td>{&#13;
+	"videoId":258	&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec//videos/publish</td><td>POST</td><td>{&#13;
+	"videoId":258	&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>videos/publish_取消视频发布<a name="videos/publish_%E5%8F%96%E6%B6%88%E8%A7%86%E9%A2%91%E5%8F%91%E5%B8%83"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/publish/258</td><td>DELETE</td><td></td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/publish/258</td><td>DELETE</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>技能树绑定<a name="%E6%8A%80%E8%83%BD%E6%A0%91%E7%BB%91%E5%AE%9A"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/taxonomy/bind</td><td>POST</td><td>{"videoId":258,"taxonomyItemIds":[11033,11034,11035,11038,11039,11114,11115,11116,11120,11121,11122,9282,9283,9277,9280,9285]}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/taxonomy/bind</td><td>POST</td><td>{"videoId":258,"taxonomyItemIds":[11033,11034,11035,11038,11039,11114,11115,11116,11120,11121,11122,9282,9283,9277,9280,9285]}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>管理员学科信息获取<a name="%E7%AE%A1%E7%90%86%E5%91%98%E5%AD%A6%E7%A7%91%E4%BF%A1%E6%81%AF%E8%8E%B7%E5%8F%96"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/subjects?roleTypeId=2</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>管理员端个性视频推荐<a name="%E7%AE%A1%E7%90%86%E5%91%98%E7%AB%AF%E4%B8%AA%E6%80%A7%E8%A7%86%E9%A2%91%E6%8E%A8%E8%8D%90"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend?limit=4&amp;subjectId=1&amp;roleTypeId=2</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>videos_获取视频列表1 管理员，获取英语视频，知识点默认全部，关键词为&lsquo;数词&rsquo;<a name="videos_%E8%8E%B7%E5%8F%96%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A81 %E7%AE%A1%E7%90%86%E5%91%98%EF%BC%8C%E8%8E%B7%E5%8F%96%E8%8B%B1%E8%AF%AD%E8%A7%86%E9%A2%91%EF%BC%8C%E7%9F%A5%E8%AF%86%E7%82%B9%E9%BB%98%E8%AE%A4%E5%85%A8%E9%83%A8%EF%BC%8C%E5%85%B3%E9%94%AE%E8%AF%8D%E4%B8%BA%E2%80%98%E6%95%B0%E8%AF%8D%E2%80%99"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=2&amp;subjectId=1&amp;taxonomyId=-1&amp;searchText=数词&amp;collectFlag=-1&amp;orderType=recent&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=25</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>管理员端收藏视频<a name="%E7%AE%A1%E7%90%86%E5%91%98%E7%AB%AF%E6%94%B6%E8%97%8F%E8%A7%86%E9%A2%91"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection</td><td>POST</td><td>{&#13;
+	"videoId":5678&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>管理员端取消收藏视频<a name="%E7%AE%A1%E7%90%86%E5%91%98%E7%AB%AF%E5%8F%96%E6%B6%88%E6%94%B6%E8%97%8F%E8%A7%86%E9%A2%91"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection/5678</td><td>DELETE</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>管理员端视频点赞<a name="%E7%AE%A1%E7%90%86%E5%91%98%E7%AB%AF%E8%A7%86%E9%A2%91%E7%82%B9%E8%B5%9E"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment</td><td>POST</td><td>{&#13;
+	"microVideoId":127&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>管理员端取消视频点赞<a name="%E7%AE%A1%E7%90%86%E5%91%98%E7%AB%AF%E5%8F%96%E6%B6%88%E8%A7%86%E9%A2%91%E7%82%B9%E8%B5%9E"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment/127</td><td>DELETE</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>subjects正确性校验roleTypeId=1(学生)<a name="subjects%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8CroleTypeId=1(%E5%AD%A6%E7%94%9F)"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/subjects?roleTypeId=1</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>subjects正确性校验roleTypeId=2(管理员)<a name="subjects%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8CroleTypeId=2(%E7%AE%A1%E7%90%86%E5%91%98)"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/subjects?roleTypeId=2</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>subjects-roleTypeId为空<a name="subjects-roleTypeId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/subjects?roleTypeId=</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>subjects-roleTypeId为空格<a name="subjects-roleTypeId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/subjects?roleTypeId= </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 72: https://staging.zhishinet.com/api/microvideo/v1/sec/subjects?roleTypeId= </td><td></td>
+</tr>
+</table>
+<h3>subjects-roleTypeId为不存在的值<a name="subjects-roleTypeId%E4%B8%BA%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E5%80%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/subjects?roleTypeId=3</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>subjects-roleTypeId为a-z的字符串<a name="subjects-roleTypeId%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/subjects?roleTypeId=test</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>subjects-roleTypeId为中文<a name="subjects-roleTypeId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/subjects?roleTypeId=测试</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>subjects-roleTypeId为标点符号<a name="subjects-roleTypeId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/subjects?roleTypeId=!</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>subjects-roleTypeId为特殊符号<a name="subjects-roleTypeId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/subjects?roleTypeId=&amp;</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>subjects-roleTypeId为数学符号<a name="subjects-roleTypeId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/subjects?roleTypeId=+</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>admin组合正确性校验subjectId=-1(全部)<a name="admin%E7%BB%84%E5%90%88%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8CsubjectId=-1(%E5%85%A8%E9%83%A8)"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=-1&amp;isPublish=-1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=&amp;pageSize=</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>admin组合正确性校验subjectId=1(英语)<a name="admin%E7%BB%84%E5%90%88%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8CsubjectId=1(%E8%8B%B1%E8%AF%AD)"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=&amp;pageSize=</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>admin组合正确性校验subjectId=2(数学)<a name="admin%E7%BB%84%E5%90%88%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8CsubjectId=2(%E6%95%B0%E5%AD%A6)"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=2&amp;isPublish=0&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=&amp;pageSize=</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>admin-subjectId为空<a name="admin-subjectId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>admin-subjectId为空格<a name="admin-subjectId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId= &amp;isPublish=1&amp;searchText=&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25&amp;orderType=recent</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 75: https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId= &amp;isPublish=1&amp;searchText=&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25&amp;orderType=recent</td><td></td>
+</tr>
+</table>
+<h3>admin-subjectId为a-z的字符串<a name="admin-subjectId%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=aaaa&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>admin-subjectId为中文<a name="admin-subjectId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=测试&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>admin-subjectId为标点符号<a name="admin-subjectId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=,&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>admin-subjectId为特殊符号<a name="admin-subjectId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=&amp;&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>admin-subjectId为数学符号<a name="admin-subjectId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=+&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>admin-isPublish为空<a name="admin-isPublish%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>admin-isPublish为空格<a name="admin-isPublish%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish= &amp;searchText=&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25&amp;orderType=recent</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 87: https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish= &amp;searchText=&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25&amp;orderType=recent</td><td></td>
+</tr>
+</table>
+<h3>admin-isPublish为a-z的字符串<a name="admin-isPublish%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=isp&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>admin-isPublish为中文<a name="admin-isPublish%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=中古&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>admin-isPublish为标点符号<a name="admin-isPublish%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=。&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>admin-isPublish为特殊符号<a name="admin-isPublish%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=@&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>admin-isPublish为数学符号<a name="admin-isPublish%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=-&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>admin-orderType为空<a name="admin-orderType%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>admin-orderType为空格<a name="admin-orderType%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25&amp;orderType= </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 144: https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25&amp;orderType= </td><td></td>
+</tr>
+</table>
+<h3>admin-orderType为a-z的字符串<a name="admin-orderType%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=rece&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>admin-orderType为中文<a name="admin-orderType%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=排序&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>admin-orderType为标点符号<a name="admin-orderType%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=！&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>admin-orderType为特殊符号<a name="admin-orderType%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=*&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>admin-orderType为数学符号<a name="admin-orderType%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=/&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>admin-pageNo为空<a name="admin-pageNo%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=&amp;pageSize=25</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>admin-pageNo为空格<a name="admin-pageNo%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;upOrDown=up&amp;pageNo= &amp;pageSize=25&amp;orderType=recent</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 120: https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;upOrDown=up&amp;pageNo= &amp;pageSize=25&amp;orderType=recent</td><td></td>
+</tr>
+</table>
+<h3>admin-pageNo为a-z的字符串<a name="admin-pageNo%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=page&amp;pageSize=25</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>admin-pageNo为中文<a name="admin-pageNo%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=页码&amp;pageSize=25</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>admin-pageNo为标点符号<a name="admin-pageNo%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=，&amp;pageSize=25</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>admin-pageNo为特殊符号<a name="admin-pageNo%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=@&amp;pageSize=25</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>admin-pageNo为数学符号<a name="admin-pageNo%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=+&amp;pageSize=25</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>admin-pageSize为空<a name="admin-pageSize%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>admin-pageSize为空格<a name="admin-pageSize%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;upOrDown=up&amp;pageNo=1&amp;pageSize= &amp;orderType=recent</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 131: https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;upOrDown=up&amp;pageNo=1&amp;pageSize= &amp;orderType=recent</td><td></td>
+</tr>
+</table>
+<h3>admin-pageSize为a-z的字符串<a name="admin-pageSize%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=size</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>admin-pageSize为中文<a name="admin-pageSize%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=测试</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>admin-pageSize为标点符号<a name="admin-pageSize%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=？</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>admin-pageSize为特殊符号<a name="admin-pageSize%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=*</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>admin-pageSize为数学符号<a name="admin-pageSize%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=-</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>publish正确性校验<a name="publish%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec//videos/publish</td><td>POST</td><td>{&#13;
+    "videoId": 258&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/publish/258</td><td>DELETE</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>publish-videoId为空<a name="publish-videoId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec//videos/publish</td><td>POST</td><td>{&#13;
+    "videoId": ""&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>publish-videoId为空格<a name="publish-videoId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec//videos/publish</td><td>POST</td><td>{&#13;
+    "videoId": " "&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/publish/%20</td><td>DELETE</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>publish-videoId为不存在的值<a name="publish-videoId%E4%B8%BA%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E5%80%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec//videos/publish</td><td>POST</td><td>{&#13;
+    "videoId": 10000000000000&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>publish-videoId为a-z的字符串<a name="publish-videoId%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec//videos/publish</td><td>GET</td><td>{&#13;
+    "videoId": "vide"&#13;
+}</td><td>400 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/publish/test</td><td>DELETE</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>publish-videoId为中文<a name="publish-videoId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec//videos/publish</td><td>POST</td><td>{&#13;
+    "videoId": "视频"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/publish/测试</td><td>DELETE</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>publish-videoId为标点符号<a name="publish-videoId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec//videos/publish</td><td>POST</td><td>{&#13;
+    "videoId": ","&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>publish-videoId为特殊符号<a name="publish-videoId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec//videos/publish</td><td>POST</td><td>{&#13;
+    "videoId": "*"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/publish/@</td><td>DELETE</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>publish-videoId为数学符号<a name="publish-videoId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec//videos/publish</td><td>POST</td><td>{&#13;
+    "videoId": "+"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/publish/+</td><td>DELETE</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>publish-videoId 为标点符号<a name="publish-videoId %E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/publish/。</td><td>DELETE</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>tree正确性校验<a name="tree%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/258/taxonomy/tree?taxonomyItemId=-1&amp;level=-1</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>tree-taxonomyItemId为空<a name="tree-taxonomyItemId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/258/taxonomy/tree?taxonomyItemId=&amp;level=-1</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>tree-taxonomyItemId为空格<a name="tree-taxonomyItemId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/258/taxonomy/tree?taxonomyItemId= &amp;level=-1</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 92: https://staging.zhishinet.com/api/microvideo/v1/sec/videos/258/taxonomy/tree?taxonomyItemId= &amp;level=-1</td><td></td>
+</tr>
+</table>
+<h3>tree-taxonomyItemId为a-z的字符串<a name="tree-taxonomyItemId%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/258/taxonomy/tree?taxonomyItemId=taxo&amp;level=-1</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>tree-taxonomyItemId为中文<a name="tree-taxonomyItemId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/258/taxonomy/tree?taxonomyItemId=技能头结点&amp;level=-1</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>tree-taxonomyItemId为标点符号<a name="tree-taxonomyItemId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/258/taxonomy/tree?taxonomyItemId=,&amp;level=-1</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>tree-roleTypeId为特殊符号<a name="tree-roleTypeId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/258/taxonomy/tree?taxonomyItemId=*&amp;level=-1</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>tree-taxonomyItemId为数学符号<a name="tree-taxonomyItemId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/258/taxonomy/tree?taxonomyItemId=-&amp;level=-1</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>tree-level为空<a name="tree-level%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/258/taxonomy/tree?taxonomyItemId=-1&amp;level=</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>tree-level为空格<a name="tree-level%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/258/taxonomy/tree?taxonomyItemId=-1&amp;level= </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 101: https://staging.zhishinet.com/api/microvideo/v1/sec/videos/258/taxonomy/tree?taxonomyItemId=-1&amp;level= </td><td></td>
+</tr>
+</table>
+<h3>tree-level为不存在的值<a name="tree-level%E4%B8%BA%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E5%80%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/258/taxonomy/tree?taxonomyItemId=-1&amp;level=-2</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>tree-level为a-z的字符串<a name="tree-level%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/258/taxonomy/tree?taxonomyItemId=-1&amp;level=test</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>tree-level为中文<a name="tree-level%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/258/taxonomy/tree?taxonomyItemId=-1&amp;level=测试</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>tree-level为标点符号<a name="tree-level%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/258/taxonomy/tree?taxonomyItemId=-1&amp;level=！</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>tree-level为特殊符号<a name="tree-level%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/258/taxonomy/tree?taxonomyItemId=-1&amp;level=@</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>tree-level为数学符号<a name="tree-level%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/258/taxonomy/tree?taxonomyItemId=-1&amp;level=/</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>bind正确性校验<a name="bind%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/taxonomy/bind</td><td>POST</td><td>{&#13;
+    "videoId": 258,&#13;
+    "taxonomyItemIds": [&#13;
+        11033,&#13;
+        11034,&#13;
+        11035,&#13;
+        11038,&#13;
+        11039,&#13;
+        11114,&#13;
+        11115,&#13;
+        11116,&#13;
+        11120,&#13;
+        11121,&#13;
+        11122,&#13;
+        9282,&#13;
+        9283,&#13;
+        9277,&#13;
+        9280,&#13;
+        9285&#13;
+    ]&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>bind-videoId为空<a name="bind-videoId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/taxonomy/bind</td><td>POST</td><td>{&#13;
+    "videoId": "",&#13;
+    "taxonomyItemIds": [&#13;
+        11033,&#13;
+        11034,&#13;
+        11035,&#13;
+        11038,&#13;
+        11039,&#13;
+        11114,&#13;
+        11115,&#13;
+        11116,&#13;
+        11120,&#13;
+        11121,&#13;
+        11122,&#13;
+        9282,&#13;
+        9283,&#13;
+        9277,&#13;
+        9280,&#13;
+        9285&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>bind-videoId为空格<a name="bind-videoId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/taxonomy/bind</td><td>POST</td><td>{&#13;
+    "videoId": " ",&#13;
+    "taxonomyItemIds": [&#13;
+        11033,&#13;
+        11034,&#13;
+        11035,&#13;
+        11038,&#13;
+        11039,&#13;
+        11114,&#13;
+        11115,&#13;
+        11116,&#13;
+        11120,&#13;
+        11121,&#13;
+        11122,&#13;
+        9282,&#13;
+        9283,&#13;
+        9277,&#13;
+        9280,&#13;
+        9285&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>bind-videoId为a-z的字符串<a name="bind-videoId%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/taxonomy/bind</td><td>POST</td><td>{&#13;
+    "videoId": "vide",&#13;
+    "taxonomyItemIds": [&#13;
+        11033,&#13;
+        11034,&#13;
+        11035,&#13;
+        11038,&#13;
+        11039,&#13;
+        11114,&#13;
+        11115,&#13;
+        11116,&#13;
+        11120,&#13;
+        11121,&#13;
+        11122,&#13;
+        9282,&#13;
+        9283,&#13;
+        9277,&#13;
+        9280,&#13;
+        9285&#13;
+    ]&#13;
+}</td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>bind-videoId为中文<a name="bind-videoId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/taxonomy/bind</td><td>POST</td><td>{&#13;
+    "videoId": "视频",&#13;
+    "taxonomyItemIds": [&#13;
+        11033,&#13;
+        11034,&#13;
+        11035,&#13;
+        11038,&#13;
+        11039,&#13;
+        11114,&#13;
+        11115,&#13;
+        11116,&#13;
+        11120,&#13;
+        11121,&#13;
+        11122,&#13;
+        9282,&#13;
+        9283,&#13;
+        9277,&#13;
+        9280,&#13;
+        9285&#13;
+    ]&#13;
+}</td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>bind-videoId为标点符号<a name="bind-videoId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/taxonomy/bind</td><td>POST</td><td>{&#13;
+    "videoId": "?",&#13;
+    "taxonomyItemIds": [&#13;
+        11033,&#13;
+        11034,&#13;
+        11035,&#13;
+        11038,&#13;
+        11039,&#13;
+        11114,&#13;
+        11115,&#13;
+        11116,&#13;
+        11120,&#13;
+        11121,&#13;
+        11122,&#13;
+        9282,&#13;
+        9283,&#13;
+        9277,&#13;
+        9280,&#13;
+        9285&#13;
+    ]&#13;
+}</td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>bind-videoId为特殊符号<a name="bind-videoId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/taxonomy/bind</td><td>POST</td><td>{&#13;
+    "videoId": "*",&#13;
+    "taxonomyItemIds": [&#13;
+        11033,&#13;
+        11034,&#13;
+        11035,&#13;
+        11038,&#13;
+        11039,&#13;
+        11114,&#13;
+        11115,&#13;
+        11116,&#13;
+        11120,&#13;
+        11121,&#13;
+        11122,&#13;
+        9282,&#13;
+        9283,&#13;
+        9277,&#13;
+        9280,&#13;
+        9285&#13;
+    ]&#13;
+}</td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>bind-videoId为数学符号<a name="bind-videoId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/taxonomy/bind</td><td>POST</td><td>{&#13;
+    "videoId": "-",&#13;
+    "taxonomyItemIds": [&#13;
+        11033,&#13;
+        11034,&#13;
+        11035,&#13;
+        11038,&#13;
+        11039,&#13;
+        11114,&#13;
+        11115,&#13;
+        11116,&#13;
+        11120,&#13;
+        11121,&#13;
+        11122,&#13;
+        9282,&#13;
+        9283,&#13;
+        9277,&#13;
+        9280,&#13;
+        9285&#13;
+    ]&#13;
+}</td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>bind-taxonomyItemIds为空<a name="bind-taxonomyItemIds%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/taxonomy/bind</td><td>POST</td><td>{&#13;
+    "videoId": 258,&#13;
+    "taxonomyItemIds": [&#13;
+      ""&#13;
+    ]&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>bind-taxonomyItemIds为空格<a name="bind-taxonomyItemIds%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/taxonomy/bind</td><td>POST</td><td>{&#13;
+    "videoId": 258,&#13;
+    "taxonomyItemIds": [&#13;
+      " "&#13;
+    ]&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>bind-taxonomyItemIds为不存在的值<a name="bind-taxonomyItemIds%E4%B8%BA%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E5%80%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/taxonomy/bind</td><td>POST</td><td>{&#13;
+    "videoId": 258,&#13;
+    "taxonomyItemIds": [&#13;
+        100000000000000&#13;
+    ]&#13;
+}</td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>bind-taxonomyItemIds为a-z的字符串<a name="bind-taxonomyItemIds%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/taxonomy/bind</td><td>POST</td><td>{&#13;
+    "videoId": 258,&#13;
+    "taxonomyItemIds": [&#13;
+     "taxo"&#13;
+    ]&#13;
+}</td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>bind-taxonomyItemIds为中文<a name="bind-taxonomyItemIds%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/taxonomy/bind</td><td>POST</td><td>{&#13;
+    "videoId": 258,&#13;
+    "taxonomyItemIds": [&#13;
+        "测试"&#13;
+    ]&#13;
+}</td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>bind-taxonomyItemIds为标点符号<a name="bind-taxonomyItemIds%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/taxonomy/bind</td><td>POST</td><td>{&#13;
+    "videoId": 258,&#13;
+    "taxonomyItemIds": [&#13;
+        ","&#13;
+    ]&#13;
+}</td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>bind-taxonomyItemIds为特殊符号<a name="bind-taxonomyItemIds%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/taxonomy/bind</td><td>POST</td><td>{&#13;
+    "videoId": 258,&#13;
+    "taxonomyItemIds": [&#13;
+        "#"&#13;
+    ]&#13;
+}</td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>bind-taxonomyItemIds为数学符号<a name="bind-taxonomyItemIds%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/taxonomy/bind</td><td>POST</td><td>{&#13;
+    "videoId": 258,&#13;
+    "taxonomyItemIds": [&#13;
+        "+"&#13;
+    ]&#13;
+}</td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>compliment正确性校验<a name="compliment%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment</td><td>POST</td><td>{&#13;
+    "microVideoId": 179&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment/179</td><td>DELETE</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>compliment-microVideoId为空<a name="compliment-microVideoId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment</td><td>POST</td><td>{&#13;
+    "microVideoId": ""&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>compliment-microVideoId为空格<a name="compliment-microVideoId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment</td><td>POST</td><td>{&#13;
+    "microVideoId": " "&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment/%20</td><td>DELETE</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>compliment-microVideoId为a-z的字符串<a name="compliment-microVideoId%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment</td><td>POST</td><td>{&#13;
+    "microVideoId": "micr"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment/test</td><td>DELETE</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>compliment-microVideoId为中文<a name="compliment-microVideoId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment</td><td>POST</td><td>{&#13;
+    "microVideoId": "测试"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment/视频</td><td>DELETE</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>compliment-microVideoId为标点符号<a name="compliment-microVideoId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment</td><td>POST</td><td>{&#13;
+    "microVideoId": "，"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment/+</td><td>DELETE</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>compliment-microVideoId为特殊符号<a name="compliment-microVideoId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment</td><td>POST</td><td>{&#13;
+    "microVideoId": "#"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment/*</td><td>DELETE</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>compliment-microVideoId为数学符号<a name="compliment-microVideoId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment</td><td>POST</td><td>{&#13;
+    "microVideoId": "-"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment/+</td><td>DELETE</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>collection-收藏-正确性校验<a name="collection-%E6%94%B6%E8%97%8F-%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection</td><td>POST</td><td>{&#13;
+	"videoId":"5678"&#13;
+&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>collection-收藏-videoId为空<a name="collection-%E6%94%B6%E8%97%8F-videoId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection</td><td>POST</td><td>{&#13;
+	"videoId":""&#13;
+&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>collection-收藏-videoId为空格<a name="collection-%E6%94%B6%E8%97%8F-videoId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection</td><td>POST</td><td>{&#13;
+	"videoId":"  "&#13;
+&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>collection-收藏-videoId为中文<a name="collection-%E6%94%B6%E8%97%8F-videoId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection</td><td>POST</td><td>{&#13;
+	"videoId":"测试"&#13;
+&#13;
+}</td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>collection-收藏-videoId为英文<a name="collection-%E6%94%B6%E8%97%8F-videoId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection</td><td>POST</td><td>{&#13;
+	"videoId":"test"&#13;
+&#13;
+}</td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>collection-收藏-videoId为标点符号<a name="collection-%E6%94%B6%E8%97%8F-videoId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection</td><td>POST</td><td>{&#13;
+	"videoId":"？"&#13;
+&#13;
+}</td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>collection-收藏-videoId为特殊符号<a name="collection-%E6%94%B6%E8%97%8F-videoId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection</td><td>POST</td><td>{&#13;
+	"videoId":"*"&#13;
+&#13;
+}</td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>collection-收藏-videoId为数学符号<a name="collection-%E6%94%B6%E8%97%8F-videoId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection</td><td>POST</td><td>{&#13;
+	"videoId":"+"&#13;
+&#13;
+}</td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>collection-收藏-videoId为负数<a name="collection-%E6%94%B6%E8%97%8F-videoId%E4%B8%BA%E8%B4%9F%E6%95%B0"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection</td><td>POST</td><td>{&#13;
+	"videoId":"-1"&#13;
+&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>collection-取消收藏-正确性校验<a name="collection-%E5%8F%96%E6%B6%88%E6%94%B6%E8%97%8F-%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection/5678</td><td>DELETE</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>collection-取消收藏-videoId为特殊符号<a name="collection-%E5%8F%96%E6%B6%88%E6%94%B6%E8%97%8F-videoId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection/&amp;</td><td>DELETE</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>collection-取消收藏-videoId为标点符号<a name="collection-%E5%8F%96%E6%B6%88%E6%94%B6%E8%97%8F-videoId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection/？</td><td>DELETE</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>collection-取消收藏-videoId为数学符号<a name="collection-%E5%8F%96%E6%B6%88%E6%94%B6%E8%97%8F-videoId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection/+</td><td>DELETE</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>collection-取消收藏-videoId为中文<a name="collection-%E5%8F%96%E6%B6%88%E6%94%B6%E8%97%8F-videoId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection/测试</td><td>DELETE</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>collection-取消收藏-videoId为英文<a name="collection-%E5%8F%96%E6%B6%88%E6%94%B6%E8%97%8F-videoId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection/Test</td><td>DELETE</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>videosOpting-客户端视频列表-正确性校验<a name="videosOpting-%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20&amp;searchText=ce</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-roleTypeId为管理员<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-roleTypeId%E4%B8%BA%E7%AE%A1%E7%90%86%E5%91%98"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=2&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20&amp;searchText=ce</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-roleTypeId为空<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-roleTypeId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20&amp;searchText=ce</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-roleTypeId为不存在的值<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-roleTypeId%E4%B8%BA%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E5%80%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=5&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20&amp;searchText=ce</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-roleTypeId为数学符号<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-roleTypeId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=+&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20&amp;searchText=ce</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-roleTypeId为标点符号<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-roleTypeId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=？&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20&amp;searchText=ce</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-roleTypeId为特殊符号<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-roleTypeId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=&amp;&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20&amp;searchText=ce</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-roleTypeId为中文<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-roleTypeId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=测试&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20&amp;searchText=ces</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-roleTypeId为英文<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-roleTypeId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=test&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20&amp;searchText=ces</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-subjectId为数学<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-subjectId%E4%B8%BA%E6%95%B0%E5%AD%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=2&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20&amp;searchText=cews</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-subjectId为空<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-subjectId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20&amp;searchText=ces</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-subjectId为中文<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-subjectId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=测试&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-subjectId为英文<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-subjectId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=test&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-subjectId为数学符号<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-subjectId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=+&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-subjectId为标点符号<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-subjectId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=？&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-subjectId为特殊符号<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-subjectId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=&amp;&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-taxonomyId为特殊符号<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-taxonomyId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=&amp;&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-taxonomyId为标点符号<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-taxonomyId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=？&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-taxonomyId为数学符号<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-taxonomyId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=+&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-taxonomyId为中文<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-taxonomyId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=测试&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-taxonomyId为英文<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-taxonomyId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=Test&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-taxonomyId为空<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-taxonomyId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-collectFlag为空<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-collectFlag%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-collectFlag为特殊字符<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-collectFlag%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=*&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-collectFlag为数学符号<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-collectFlag%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=+&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-collectFlag为标点符号<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-collectFlag%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=？&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-collectFlag为英文<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-collectFlag%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=test&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-collectFlag为中文<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-collectFlag%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=测试&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-orderType为中文<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-orderType%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=测试&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-orderType为英文<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-orderType%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=test&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-orderType为空<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-orderType%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-orderType为特殊字符<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-orderType%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=&amp;&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-orderType为标点符号<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-orderType%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=？&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-orderType为数学符号<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-orderType%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=+&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-upOrDown为数学符号<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-upOrDown%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=+&amp;pageNo=1&amp;pageSize=20</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-upOrDown为标点符号<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-upOrDown%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=？&amp;pageNo=1&amp;pageSize=20</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-upOrDown为特殊符号<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-upOrDown%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=&amp;&amp;pageNo=1&amp;pageSize=20</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-upOrDown为空<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-upOrDown%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=&amp;pageNo=1&amp;pageSize=20</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-upOrDown为down<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-upOrDown%E4%B8%BAdown"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-upOrDown为中文<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-upOrDown%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=测试&amp;pageNo=1&amp;pageSize=20</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-upOrDown为英文<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-upOrDown%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=testhuhj&amp;pageNo=1&amp;pageSize=20</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-pageNo为英文<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-pageNo%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=up&amp;pageNo=test&amp;pageSize=20</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-pageNo为中文<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-pageNo%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=up&amp;pageNo=测试&amp;pageSize=20</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-pageNo为标点符号<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-pageNo%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=up&amp;pageNo=？&amp;pageSize=20</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-pageNo为数学符号<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-pageNo%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=up&amp;pageNo=+&amp;pageSize=20</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-pageNo为特殊符号<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-pageNo%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=up&amp;pageNo=*&amp;pageSize=20</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-pageSize为特殊符号<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-pageSize%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=&amp;</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-pageSize为标点符号<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-pageSize%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=？</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-pageSize为数学符号<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-pageSize%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=+</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-pageSize为中文<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-pageSize%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=测试</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-pageSize为英文<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-pageSize%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=test</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-searchText为空<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-searchText%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=test&amp;searchText=</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-searchText为特殊符号<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-searchText%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=test&amp;searchText=*</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>客户端视频列表-searchText为数学符号<a name="%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8-searchText%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=test&amp;searchText=+</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>taxonomys-视频知识点信息-正确性校验<a name="taxonomys-%E8%A7%86%E9%A2%91%E7%9F%A5%E8%AF%86%E7%82%B9%E4%BF%A1%E6%81%AF-%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/taxonomys?roleTypeId=1&amp;subjectId=1</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>视频知识点信息-roleTypeId为空<a name="%E8%A7%86%E9%A2%91%E7%9F%A5%E8%AF%86%E7%82%B9%E4%BF%A1%E6%81%AF-roleTypeId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/taxonomys?roleTypeId=&amp;subjectId=1</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>视频知识点信息-roleTypeId为标点符号<a name="%E8%A7%86%E9%A2%91%E7%9F%A5%E8%AF%86%E7%82%B9%E4%BF%A1%E6%81%AF-roleTypeId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/taxonomys?roleTypeId=？&amp;subjectId=1</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>视频知识点信息-roleTypeId为特殊符号<a name="%E8%A7%86%E9%A2%91%E7%9F%A5%E8%AF%86%E7%82%B9%E4%BF%A1%E6%81%AF-roleTypeId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/taxonomys?roleTypeId=&amp;&amp;subjectId=1</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>视频知识点信息-roleTypeId为管理员<a name="%E8%A7%86%E9%A2%91%E7%9F%A5%E8%AF%86%E7%82%B9%E4%BF%A1%E6%81%AF-roleTypeId%E4%B8%BA%E7%AE%A1%E7%90%86%E5%91%98"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/taxonomys?roleTypeId=2&amp;subjectId=1</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>视频知识点信息-roleTypeId为数学符号<a name="%E8%A7%86%E9%A2%91%E7%9F%A5%E8%AF%86%E7%82%B9%E4%BF%A1%E6%81%AF-roleTypeId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/taxonomys?roleTypeId=+&amp;subjectId=1</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>视频知识点信息-roleTypeId为不存在的值<a name="%E8%A7%86%E9%A2%91%E7%9F%A5%E8%AF%86%E7%82%B9%E4%BF%A1%E6%81%AF-roleTypeId%E4%B8%BA%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E5%80%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/taxonomys?roleTypeId=5&amp;subjectId=1</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>视频知识点信息-subjectId为空<a name="%E8%A7%86%E9%A2%91%E7%9F%A5%E8%AF%86%E7%82%B9%E4%BF%A1%E6%81%AF-subjectId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/taxonomys?roleTypeId=1&amp;subjectId=</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>视频知识点信息-subjectId为中文<a name="%E8%A7%86%E9%A2%91%E7%9F%A5%E8%AF%86%E7%82%B9%E4%BF%A1%E6%81%AF-subjectId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/taxonomys?roleTypeId=1&amp;subjectId=测试</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>视频知识点信息-subjectId为英文<a name="%E8%A7%86%E9%A2%91%E7%9F%A5%E8%AF%86%E7%82%B9%E4%BF%A1%E6%81%AF-subjectId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/taxonomys?roleTypeId=1&amp;subjectId=Test</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>视频知识点信息-subjectId为标点符号<a name="%E8%A7%86%E9%A2%91%E7%9F%A5%E8%AF%86%E7%82%B9%E4%BF%A1%E6%81%AF-subjectId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/taxonomys?roleTypeId=1&amp;subjectId=？</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>视频知识点信息-subjectId为特殊符号<a name="%E8%A7%86%E9%A2%91%E7%9F%A5%E8%AF%86%E7%82%B9%E4%BF%A1%E6%81%AF-subjectId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/taxonomys?roleTypeId=1&amp;subjectId=*</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>视频知识点信息-subjectId为数学符号<a name="%E8%A7%86%E9%A2%91%E7%9F%A5%E8%AF%86%E7%82%B9%E4%BF%A1%E6%81%AF-subjectId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/taxonomys?roleTypeId=1&amp;subjectId=+</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>recommend-视频推荐-正确性验证<a name="recommend-%E8%A7%86%E9%A2%91%E6%8E%A8%E8%8D%90-%E6%AD%A3%E7%A1%AE%E6%80%A7%E9%AA%8C%E8%AF%81"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend?subjectId=1&amp;limit=4</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend?subjectId=2&amp;limit=4</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>recommend-视频推荐-subjectId为空<a name="recommend-%E8%A7%86%E9%A2%91%E6%8E%A8%E8%8D%90-subjectId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend?subjectId=&amp;limit=4</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>recommend-视频推荐-subjectId为特殊符号<a name="recommend-%E8%A7%86%E9%A2%91%E6%8E%A8%E8%8D%90-subjectId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend?subjectId=*&amp;limit=4</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>recommend-视频推荐-subjectId为数学符号<a name="recommend-%E8%A7%86%E9%A2%91%E6%8E%A8%E8%8D%90-subjectId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend?subjectId=+&amp;limit=4</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>recommend-视频推荐-subjectId为标点符号<a name="recommend-%E8%A7%86%E9%A2%91%E6%8E%A8%E8%8D%90-subjectId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend?subjectId=？&amp;limit=4</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>recommend-视频推荐-subjectId为中文<a name="recommend-%E8%A7%86%E9%A2%91%E6%8E%A8%E8%8D%90-subjectId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend?subjectId=测试&amp;limit=4</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>recommend-视频推荐-subjectId为英文<a name="recommend-%E8%A7%86%E9%A2%91%E6%8E%A8%E8%8D%90-subjectId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend?subjectId=Test&amp;limit=4</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>recommend-视频推荐-subjectId为不存在的值<a name="recommend-%E8%A7%86%E9%A2%91%E6%8E%A8%E8%8D%90-subjectId%E4%B8%BA%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E5%80%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend?subjectId=5&amp;limit=4</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>recommend-视频推荐-limit为空<a name="recommend-%E8%A7%86%E9%A2%91%E6%8E%A8%E8%8D%90-limit%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend?subjectId=1&amp;limit=</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>recommend-视频推荐-limit为数学符号<a name="recommend-%E8%A7%86%E9%A2%91%E6%8E%A8%E8%8D%90-limit%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend?subjectId=1&amp;limit=+</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>recommend-视频推荐-limit为标点符号<a name="recommend-%E8%A7%86%E9%A2%91%E6%8E%A8%E8%8D%90-limit%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend?subjectId=1&amp;limit=？</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>recommend-视频推荐-limit为特殊符号<a name="recommend-%E8%A7%86%E9%A2%91%E6%8E%A8%E8%8D%90-limit%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend?subjectId=1&amp;limit=&amp;</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>recommend-视频推荐-limit为中文<a name="recommend-%E8%A7%86%E9%A2%91%E6%8E%A8%E8%8D%90-limit%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend?subjectId=1&amp;limit=测试</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>recommend-视频推荐-limit为英文<a name="recommend-%E8%A7%86%E9%A2%91%E6%8E%A8%E8%8D%90-limit%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend?subjectId=1&amp;limit=test</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>videos-视频播放-正确性验证<a name="videos-%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE-%E6%AD%A3%E7%A1%AE%E6%80%A7%E9%AA%8C%E8%AF%81"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/play/22</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>videos-视频播放-microVideoId为空<a name="videos-%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE-microVideoId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/play/</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>videos-视频播放-microVideoId为特殊符号<a name="videos-%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE-microVideoId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/play/*</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>videos-视频播放-microVideoId为标点符号<a name="videos-%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE-microVideoId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/play/？</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>videos-视频播放-microVideoId为数学符号<a name="videos-%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE-microVideoId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/play/+</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>videos-视频播放-microVideoId为中文<a name="videos-%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE-microVideoId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/play/测试</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>videos-视频播放-microVideoId为英文<a name="videos-%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE-microVideoId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/play/test</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>comment-微视频评论-正确性验证<a name="comment-%E5%BE%AE%E8%A7%86%E9%A2%91%E8%AF%84%E8%AE%BA-%E6%AD%A3%E7%A1%AE%E6%80%A7%E9%AA%8C%E8%AF%81"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/comment</td><td>POST</td><td>{&#13;
+	"microVideoId":22,&#13;
+	"commentContent":"yuerhf" &#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>comment-微视频评论-microVideoId为空<a name="comment-%E5%BE%AE%E8%A7%86%E9%A2%91%E8%AF%84%E8%AE%BA-microVideoId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/comment</td><td>POST</td><td>{&#13;
+	"microVideoId":"",&#13;
+	"commentContent":"yuerhf" &#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>comment-微视频评论-microVideoId为空格<a name="comment-%E5%BE%AE%E8%A7%86%E9%A2%91%E8%AF%84%E8%AE%BA-microVideoId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/comment</td><td>POST</td><td>{&#13;
+	"microVideoId":"  ",&#13;
+	"commentContent":"yuerhf" &#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>comment-微视频评论-microVideoId为中文<a name="comment-%E5%BE%AE%E8%A7%86%E9%A2%91%E8%AF%84%E8%AE%BA-microVideoId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/comment</td><td>POST</td><td>{&#13;
+	"microVideoId":"测试",&#13;
+	"commentContent":"yuerhf" &#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>comment-微视频评论-microVideoId为英文<a name="comment-%E5%BE%AE%E8%A7%86%E9%A2%91%E8%AF%84%E8%AE%BA-microVideoId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/comment</td><td>POST</td><td>{&#13;
+	"microVideoId":"test",&#13;
+	"commentContent":"yuerhf" &#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>comment-微视频评论-microVideoId为特殊符号<a name="comment-%E5%BE%AE%E8%A7%86%E9%A2%91%E8%AF%84%E8%AE%BA-microVideoId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/comment</td><td>POST</td><td>{&#13;
+	"microVideoId":"*",&#13;
+	"commentContent":"yuerhf" &#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>comment-微视频评论-microVideoId为标点符号<a name="comment-%E5%BE%AE%E8%A7%86%E9%A2%91%E8%AF%84%E8%AE%BA-microVideoId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/comment</td><td>POST</td><td>{&#13;
+	"microVideoId":"？",&#13;
+	"commentContent":"yuerhf" &#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>comment-微视频评论-microVideoId为数学符号<a name="comment-%E5%BE%AE%E8%A7%86%E9%A2%91%E8%AF%84%E8%AE%BA-microVideoId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/comment</td><td>POST</td><td>{&#13;
+	"microVideoId":"+",&#13;
+	"commentContent":"yuerhf" &#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>comment-微视频评论-commentContent为空<a name="comment-%E5%BE%AE%E8%A7%86%E9%A2%91%E8%AF%84%E8%AE%BA-commentContent%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/comment</td><td>POST</td><td>{&#13;
+	"microVideoId":22,&#13;
+	"commentContent":"" &#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>comment-微视频评论-commentContent为特殊字符<a name="comment-%E5%BE%AE%E8%A7%86%E9%A2%91%E8%AF%84%E8%AE%BA-commentContent%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/comment</td><td>POST</td><td>{&#13;
+	"microVideoId":22,&#13;
+	"commentContent":"&amp;" &#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>comment-微视频评论-commentContent为空格<a name="comment-%E5%BE%AE%E8%A7%86%E9%A2%91%E8%AF%84%E8%AE%BA-commentContent%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/comment</td><td>POST</td><td>{&#13;
+	"microVideoId":22,&#13;
+	"commentContent":"   " &#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>recommend-相关视频-正确性验证<a name="recommend-%E7%9B%B8%E5%85%B3%E8%A7%86%E9%A2%91-%E6%AD%A3%E7%A1%AE%E6%80%A7%E9%AA%8C%E8%AF%81"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend/?microVideoId=20&amp;subjectId=1</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend/?microVideoId=20&amp;subjectId=2</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>recommend-相关视频-microVideoId为中文<a name="recommend-%E7%9B%B8%E5%85%B3%E8%A7%86%E9%A2%91-microVideoId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend/?microVideoId=测试&amp;subjectId=2</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>recommend-相关视频-microVideoId为英文<a name="recommend-%E7%9B%B8%E5%85%B3%E8%A7%86%E9%A2%91-microVideoId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend/?microVideoId=test&amp;subjectId=2</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>recommend-相关视频-microVideoId为特殊符号<a name="recommend-%E7%9B%B8%E5%85%B3%E8%A7%86%E9%A2%91-microVideoId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend/?microVideoId=*&amp;subjectId=2</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>recommend-相关视频-microVideoId为数学符号<a name="recommend-%E7%9B%B8%E5%85%B3%E8%A7%86%E9%A2%91-microVideoId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend/?microVideoId=+&amp;subjectId=2</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>recommend-相关视频-microVideoId为标点符号<a name="recommend-%E7%9B%B8%E5%85%B3%E8%A7%86%E9%A2%91-microVideoId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend/?microVideoId=？&amp;subjectId=2</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>recommend-相关视频-subjectId为空<a name="recommend-%E7%9B%B8%E5%85%B3%E8%A7%86%E9%A2%91-subjectId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend/?microVideoId=22&amp;subjectId=</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>recommend-相关视频-subjectId为中文<a name="recommend-%E7%9B%B8%E5%85%B3%E8%A7%86%E9%A2%91-subjectId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend/?microVideoId=22&amp;subjectId=测试</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>recommend-相关视频-subjectId为英文<a name="recommend-%E7%9B%B8%E5%85%B3%E8%A7%86%E9%A2%91-subjectId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend/?microVideoId=22&amp;subjectId=test</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>recommend-相关视频-subjectId为数学符号<a name="recommend-%E7%9B%B8%E5%85%B3%E8%A7%86%E9%A2%91-subjectId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend/?microVideoId=22&amp;subjectId=+</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>recommend-相关视频-subjectId为标点符号<a name="recommend-%E7%9B%B8%E5%85%B3%E8%A7%86%E9%A2%91-subjectId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend/?microVideoId=22&amp;subjectId=？</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>recommend-相关视频-subjectId为特殊符号<a name="recommend-%E7%9B%B8%E5%85%B3%E8%A7%86%E9%A2%91-subjectId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend/?microVideoId=22&amp;subjectId=&amp;</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+</body>
+</html>

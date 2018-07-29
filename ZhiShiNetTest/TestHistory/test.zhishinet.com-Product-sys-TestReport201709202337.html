@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ZSN-Interface Test Results</title>
+<style type="text/css">
+				body {
+					font:normal 68% verdana,arial,helvetica;
+					color:#000000;
+				}
+				table tr td, table tr th {
+					font-size: 68%;
+				}
+				table.details tr th{
+				    color: #ffffff;
+					font-weight: bold;
+					text-align:center;
+					background:#2674a6;
+					white-space: nowrap;
+				}
+				table.details tr td{
+					background:#eeeee0;
+				}
+				h1 {
+					margin: 0px 0px 5px; font: 165% verdana,arial,helvetica
+				}
+				h2 {
+					margin-top: 1em; margin-bottom: 0.5em; font: bold 125% verdana,arial,helvetica
+				}
+				h3 {
+					margin-bottom: 0.5em; font: bold 115% verdana,arial,helvetica
+				}
+				.Failure {
+					font-weight:bold; color:red;
+				}
+				
+	
+				img
+				{
+				  border-width: 0px;
+				}
+				
+				.expand_link
+				{
+				   position=absolute;
+				   right: 0px;
+				   width: 27px;
+				   top: 1px;
+				   height: 27px;
+				}
+				
+				.page_details
+				{
+				   display: none;
+				}
+                                
+                                .page_details_expanded
+                                {
+                                    display: block;
+                                    display/* hide this definition from  IE5/6 */: table-row;
+                                }
+
+
+			</style>
+<script language="JavaScript">
+                           function expand(details_id)
+			   {
+			      
+			      document.getElementById(details_id).className = "page_details_expanded";
+			   }
+			   
+			   function collapse(details_id)
+			   {
+			      
+			      document.getElementById(details_id).className = "page_details";
+			   }
+			   
+			   function change(details_id)
+			   {
+			      if(document.getElementById(details_id+"_image").src.match("expand"))
+			      {
+			         document.getElementById(details_id+"_image").src = "collapse.png";
+			         expand(details_id);
+			      }
+			      else
+			      {
+			         document.getElementById(details_id+"_image").src = "expand.png";
+			         collapse(details_id);
+			      } 
+                           }
+			</script>
+</head>
+<body>
+<h1>ZSN-Interface Test Results</h1>
+<table width="100%">
+<tr>
+<td align="left">Date report: 2017/09/20 23:37</td>
+<br>
+<td align="left">RunEnvironment:https://test.zhishinet.com</td><td align="left">TestAccount:{&#13;
+	"username": "TECH0002",&#13;
+	"password": "welcome123"&#13;
+}</td>
+</tr>
+</table>
+<hr size="1">
+<h2>Summary</h2>
+<table width="95%" cellspacing="2" cellpadding="4" border="0" class="details" align="center">
+<tr valign="top">
+<th>Total</th><th>Pass</th><th>Failures</th><th>Success Rate</th>
+</tr>
+<tr valign="top">
+<td align="center">6</td><td align="center">0</td><td align="center">6</td><td align="center">0.00%</td>
+</tr>
+</table>
+<hr align="center" width="95%" size="1">
+<h2>Failure Detail</h2>
+<h3>getToken<a name="getToken"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://test.zhishinet.com/api/zauth/v1/token/access%20</td><td>POST</td><td>{&#13;
+	"username": "TECH0002",&#13;
+	"password": "welcome123"&#13;
+}</td><td>403 - Forbidden</td><td>&lt;html&gt;&#13;
+&lt;head&gt;&lt;title&gt;403 Forbidden&lt;/title&gt;&lt;/head&gt;&#13;
+&lt;body bgcolor="white"&gt;&#13;
+&lt;center&gt;&lt;h1&gt;403 Forbidden&lt;/h1&gt;&lt;/center&gt;&#13;
+&lt;hr&gt;&lt;center&gt;nginx/1.10.3&lt;/center&gt;&#13;
+&lt;/body&gt;&#13;
+&lt;/html&gt;&#13;
+</td>
+</tr>
+</table>
+<h3>getProvince-获取所有省份信息<a name="getProvince-%E8%8E%B7%E5%8F%96%E6%89%80%E6%9C%89%E7%9C%81%E4%BB%BD%E4%BF%A1%E6%81%AF"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://test.zhishinet.com/api/sys/v1/sec/getProvince</td><td>GET</td><td></td><td>403 - Forbidden</td><td>&lt;html&gt;&#13;
+&lt;head&gt;&lt;title&gt;403 Forbidden&lt;/title&gt;&lt;/head&gt;&#13;
+&lt;body bgcolor="white"&gt;&#13;
+&lt;center&gt;&lt;h1&gt;403 Forbidden&lt;/h1&gt;&lt;/center&gt;&#13;
+&lt;hr&gt;&lt;center&gt;nginx/1.10.3&lt;/center&gt;&#13;
+&lt;/body&gt;&#13;
+&lt;/html&gt;&#13;
+</td>
+</tr>
+</table>
+<h3>getCity-获取市信息<a name="getCity-%E8%8E%B7%E5%8F%96%E5%B8%82%E4%BF%A1%E6%81%AF"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://test.zhishinet.com/api/sys/v1/sec/getCity?provinceId=20</td><td>GET</td><td></td><td>403 - Forbidden</td><td>&lt;html&gt;&#13;
+&lt;head&gt;&lt;title&gt;403 Forbidden&lt;/title&gt;&lt;/head&gt;&#13;
+&lt;body bgcolor="white"&gt;&#13;
+&lt;center&gt;&lt;h1&gt;403 Forbidden&lt;/h1&gt;&lt;/center&gt;&#13;
+&lt;hr&gt;&lt;center&gt;nginx/1.10.3&lt;/center&gt;&#13;
+&lt;/body&gt;&#13;
+&lt;/html&gt;&#13;
+</td>
+</tr>
+</table>
+<h3>getDistrict-获取县/区信息<a name="getDistrict-%E8%8E%B7%E5%8F%96%E5%8E%BF/%E5%8C%BA%E4%BF%A1%E6%81%AF"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://test.zhishinet.com/api/sys/v1/sec/getDistrict?cityId=21</td><td>GET</td><td></td><td>403 - Forbidden</td><td>&lt;html&gt;&#13;
+&lt;head&gt;&lt;title&gt;403 Forbidden&lt;/title&gt;&lt;/head&gt;&#13;
+&lt;body bgcolor="white"&gt;&#13;
+&lt;center&gt;&lt;h1&gt;403 Forbidden&lt;/h1&gt;&lt;/center&gt;&#13;
+&lt;hr&gt;&lt;center&gt;nginx/1.10.3&lt;/center&gt;&#13;
+&lt;/body&gt;&#13;
+&lt;/html&gt;&#13;
+</td>
+</tr>
+</table>
+<h3>getSchoolCampus-获取学校校区信息<a name="getSchoolCampus-%E8%8E%B7%E5%8F%96%E5%AD%A6%E6%A0%A1%E6%A0%A1%E5%8C%BA%E4%BF%A1%E6%81%AF"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://test.zhishinet.com/api/sys/v1/sec/getSchoolCampus?cityId=37&amp;districtId=38&amp;provinceId=20</td><td>GET</td><td></td><td>403 - Forbidden</td><td>&lt;html&gt;&#13;
+&lt;head&gt;&lt;title&gt;403 Forbidden&lt;/title&gt;&lt;/head&gt;&#13;
+&lt;body bgcolor="white"&gt;&#13;
+&lt;center&gt;&lt;h1&gt;403 Forbidden&lt;/h1&gt;&lt;/center&gt;&#13;
+&lt;hr&gt;&lt;center&gt;nginx/1.10.3&lt;/center&gt;&#13;
+&lt;/body&gt;&#13;
+&lt;/html&gt;&#13;
+</td>
+</tr>
+</table>
+<h3>getClass-获取班级信息<a name="getClass-%E8%8E%B7%E5%8F%96%E7%8F%AD%E7%BA%A7%E4%BF%A1%E6%81%AF"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://test.zhishinet.com/api/sys/v1/sec/getClass?campusId=1</td><td>GET</td><td></td><td>403 - Forbidden</td><td>&lt;html&gt;&#13;
+&lt;head&gt;&lt;title&gt;403 Forbidden&lt;/title&gt;&lt;/head&gt;&#13;
+&lt;body bgcolor="white"&gt;&#13;
+&lt;center&gt;&lt;h1&gt;403 Forbidden&lt;/h1&gt;&lt;/center&gt;&#13;
+&lt;hr&gt;&lt;center&gt;nginx/1.10.3&lt;/center&gt;&#13;
+&lt;/body&gt;&#13;
+&lt;/html&gt;&#13;
+</td>
+</tr>
+</table>
+</body>
+</html>

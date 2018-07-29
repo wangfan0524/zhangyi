@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="2252" it="0" lt="2245" ts="1528721541518" s="true" lb="getToken" rc="200" rm="" tn="classScore班级成绩 1-1" dt="text" by="1560" sby="293" ng="1" na="1">
+  <sample t="1" it="0" lt="0" ts="1528721543770" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="classScore班级成绩 1-1" dt="text" by="1196" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="326" it="0" lt="326" ts="1528721543789" s="true" lb="classScore-正确性校验" rc="200" rm="" tn="classScore班级成绩 1-1" dt="" by="1563" sby="275" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1528721544115" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="classScore班级成绩 1-1" dt="text" by="1383" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/app-student/v2/classScore?courseId=2104&amp;sessionId=2624</java.net.URL>
+</httpSample>
+<httpSample t="51" it="0" lt="51" ts="1528721544121" s="true" lb="classScore-courseId为空" rc="500" rm="" tn="classScore班级成绩 1-1" dt="text" by="1663" sby="271" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1528721544172" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="classScore班级成绩 1-1" dt="text" by="1381" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/app-student/v2/classScore?courseId=&amp;sessionId=2624</java.net.URL>
+</httpSample>
+<httpSample t="1" it="0" lt="0" ts="1528721544175" s="true" lb="classScore-courseId为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 69: https://staging.zhishinet.com/api/app-student/v2/classScore?courseId=  &amp;sessionId=2624" tn="classScore班级成绩 1-1" dt="text" by="2474" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1528721544175" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="classScore班级成绩 1-1" dt="text" by="1385" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/app-student/v2/classScore?courseId=  &amp;sessionId=2624</java.net.URL>
+</httpSample>
+<httpSample t="49" it="0" lt="49" ts="1528721544179" s="true" lb="classScore-courseId为a-z的字符串" rc="500" rm="" tn="classScore班级成绩 1-1" dt="text" by="1824" sby="275" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1528721544228" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="classScore班级成绩 1-1" dt="text" by="1394" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/app-student/v2/classScore?courseId=test&amp;sessionId=2624</java.net.URL>
+</httpSample>
+<httpSample t="47" it="0" lt="47" ts="1528721544230" s="true" lb="classScore-courseId为中文" rc="500" rm="" tn="classScore班级成绩 1-1" dt="text" by="1819" sby="289" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1528721544277" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="classScore班级成绩 1-1" dt="text" by="1387" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/app-student/v2/classScore?courseId=课程&amp;sessionId=2624</java.net.URL>
+</httpSample>
+<httpSample t="56" it="0" lt="56" ts="1528721544280" s="true" lb="classScore-courseId为特殊符号" rc="500" rm="" tn="classScore班级成绩 1-1" dt="text" by="1670" sby="272" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1528721544336" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="classScore班级成绩 1-1" dt="text" by="1388" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/app-student/v2/classScore?courseId=&amp;&amp;sessionId=2624</java.net.URL>
+</httpSample>
+<httpSample t="56" it="0" lt="55" ts="1528721544338" s="true" lb="classScore-courseId为数学符号" rc="500" rm="" tn="classScore班级成绩 1-1" dt="text" by="1671" sby="273" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1528721544393" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="classScore班级成绩 1-1" dt="text" by="1389" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/app-student/v2/classScore?courseId=++&amp;sessionId=2624</java.net.URL>
+</httpSample>
+<httpSample t="51" it="0" lt="49" ts="1528721544400" s="true" lb="classScore-courseId为标点符号" rc="500" rm="" tn="classScore班级成绩 1-1" dt="text" by="1818" sby="280" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1528721544451" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="classScore班级成绩 1-1" dt="text" by="1389" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/app-student/v2/classScore?courseId=？&amp;sessionId=2624</java.net.URL>
+</httpSample>
+<httpSample t="47" it="0" lt="46" ts="1528721544456" s="true" lb="classScore-sessionId为空" rc="500" rm="" tn="classScore班级成绩 1-1" dt="text" by="1665" sby="271" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1528721544503" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="classScore班级成绩 1-1" dt="text" by="1382" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/app-student/v2/classScore?courseId=2104&amp;sessionId=</java.net.URL>
+</httpSample>
+<httpSample t="1" it="0" lt="0" ts="1528721544507" s="true" lb="classScore-sessionId为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 84: https://staging.zhishinet.com/api/app-student/v2/classScore?courseId=2104&amp;sessionId=  " tn="classScore班级成绩 1-1" dt="text" by="2475" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1528721544508" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="classScore班级成绩 1-1" dt="text" by="1386" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/app-student/v2/classScore?courseId=2104&amp;sessionId=  </java.net.URL>
+</httpSample>
+<httpSample t="47" it="0" lt="46" ts="1528721544514" s="true" lb="classScore-sessionId为a-z的字符串" rc="500" rm="" tn="classScore班级成绩 1-1" dt="text" by="1825" sby="275" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1528721544561" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="classScore班级成绩 1-1" dt="text" by="1395" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/app-student/v2/classScore?courseId=2104&amp;sessionId=test</java.net.URL>
+</httpSample>
+<httpSample t="52" it="0" lt="52" ts="1528721544564" s="true" lb="classScore-sessionId为中文" rc="500" rm="" tn="classScore班级成绩 1-1" dt="text" by="1820" sby="289" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1528721544616" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="classScore班级成绩 1-1" dt="text" by="1388" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/app-student/v2/classScore?courseId=2104&amp;sessionId=班级</java.net.URL>
+</httpSample>
+<httpSample t="45" it="0" lt="45" ts="1528721544618" s="true" lb="classScore-sessionId为特殊符号" rc="500" rm="" tn="classScore班级成绩 1-1" dt="text" by="1672" sby="272" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1528721544663" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="classScore班级成绩 1-1" dt="text" by="1389" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/app-student/v2/classScore?courseId=2104&amp;sessionId=&amp;</java.net.URL>
+</httpSample>
+<httpSample t="47" it="0" lt="47" ts="1528721544666" s="true" lb="classScore-sessionId为数学符号" rc="500" rm="" tn="classScore班级成绩 1-1" dt="text" by="1818" sby="273" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1528721544713" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="classScore班级成绩 1-1" dt="text" by="1390" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/app-student/v2/classScore?courseId=2104&amp;sessionId=--</java.net.URL>
+</httpSample>
+<httpSample t="58" it="0" lt="57" ts="1528721544718" s="true" lb="classScore-sessionId为标点符号" rc="500" rm="" tn="classScore班级成绩 1-1" dt="text" by="1819" sby="280" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1528721544775" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="classScore班级成绩 1-1" dt="text" by="1390" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/app-student/v2/classScore?courseId=2104&amp;sessionId=；</java.net.URL>
+</httpSample>
+<httpSample t="540" it="0" lt="539" ts="1528721544787" s="true" lb="getToken" rc="200" rm="" tn="courseDetail学科信息 2-1" dt="text" by="1562" sby="293" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1528721545327" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="courseDetail学科信息 2-1" dt="text" by="1198" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="363" it="0" lt="362" ts="1528721545330" s="true" lb="courseDetail正确性校验" rc="200" rm="" tn="courseDetail学科信息 2-1" dt="" by="1624" sby="266" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1528721545693" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="courseDetail学科信息 2-1" dt="text" by="1375" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/app-student/v2/sec/courseDetail?courseId=2104</java.net.URL>
+</httpSample>
+<httpSample t="163" it="0" lt="162" ts="1528721545701" s="true" lb="courseDetail-courseId为空" rc="500" rm="" tn="courseDetail学科信息 2-1" dt="text" by="1725" sby="262" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1528721545864" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="courseDetail学科信息 2-1" dt="text" by="1374" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/app-student/v2/sec/courseDetail?courseId=</java.net.URL>
+</httpSample>
+<httpSample t="3" it="0" lt="0" ts="1528721545874" s="true" lb="courseDetail-courseId为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 75: https://staging.zhishinet.com/api/app-student/v2/sec/courseDetail?courseId=  " tn="courseDetail学科信息 2-1" dt="text" by="2458" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1528721545876" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="courseDetail学科信息 2-1" dt="text" by="1378" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/app-student/v2/sec/courseDetail?courseId=  </java.net.URL>
+</httpSample>
+<httpSample t="162" it="0" lt="161" ts="1528721545883" s="true" lb="courseDetail-courseId为a-z的字符串" rc="500" rm="" tn="courseDetail学科信息 2-1" dt="text" by="1889" sby="268" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1528721546044" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="courseDetail学科信息 2-1" dt="text" by="1388" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/app-student/v2/sec/courseDetail?courseId=course</java.net.URL>
+</httpSample>
+<httpSample t="144" it="0" lt="143" ts="1528721546049" s="true" lb="courseDetail-courseId为中文" rc="500" rm="" tn="courseDetail学科信息 2-1" dt="text" by="1881" sby="280" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1528721546192" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="courseDetail学科信息 2-1" dt="text" by="1380" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/app-student/v2/sec/courseDetail?courseId=课程</java.net.URL>
+</httpSample>
+<httpSample t="200" it="0" lt="200" ts="1528721546202" s="true" lb="courseDetail-courseId为特殊符号" rc="500" rm="" tn="courseDetail学科信息 2-1" dt="text" by="1877" sby="263" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1528721546402" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="courseDetail学科信息 2-1" dt="text" by="1381" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/app-student/v2/sec/courseDetail?courseId=@</java.net.URL>
+</httpSample>
+<httpSample t="140" it="0" lt="138" ts="1528721546406" s="true" lb="courseDetail-courseId为数学符号" rc="500" rm="" tn="courseDetail学科信息 2-1" dt="text" by="1877" sby="263" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1528721546545" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="courseDetail学科信息 2-1" dt="text" by="1381" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/app-student/v2/sec/courseDetail?courseId=*</java.net.URL>
+</httpSample>
+<httpSample t="165" it="0" lt="165" ts="1528721546555" s="true" lb="courseDetail-courseId为标点符号" rc="500" rm="" tn="courseDetail学科信息 2-1" dt="text" by="1880" sby="271" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1528721546720" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="courseDetail学科信息 2-1" dt="text" by="1382" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/app-student/v2/sec/courseDetail?courseId=，</java.net.URL>
+</httpSample>
+
+</testResults>

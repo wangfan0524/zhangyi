@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ZSN-Interface Test Results</title>
+<style type="text/css">
+				body {
+					font:normal 68% verdana,arial,helvetica;
+					color:#000000;
+				}
+				table tr td, table tr th {
+					font-size: 68%;
+				}
+				table.details tr th{
+				    color: #ffffff;
+					font-weight: bold;
+					text-align:center;
+					background:#2674a6;
+					white-space: nowrap;
+				}
+				table.details tr td{
+					background:#eeeee0;
+				}
+				h1 {
+					margin: 0px 0px 5px; font: 165% verdana,arial,helvetica
+				}
+				h2 {
+					margin-top: 1em; margin-bottom: 0.5em; font: bold 125% verdana,arial,helvetica
+				}
+				h3 {
+					margin-bottom: 0.5em; font: bold 115% verdana,arial,helvetica
+				}
+				.Failure {
+					font-weight:bold; color:red;
+				}
+				
+	
+				img
+				{
+				  border-width: 0px;
+				}
+				
+				.expand_link
+				{
+				   position=absolute;
+				   right: 0px;
+				   width: 27px;
+				   top: 1px;
+				   height: 27px;
+				}
+				
+				.page_details
+				{
+				   display: none;
+				}
+                                
+                                .page_details_expanded
+                                {
+                                    display: block;
+                                    display/* hide this definition from  IE5/6 */: table-row;
+                                }
+
+
+			</style>
+<script language="JavaScript">
+                           function expand(details_id)
+			   {
+			      
+			      document.getElementById(details_id).className = "page_details_expanded";
+			   }
+			   
+			   function collapse(details_id)
+			   {
+			      
+			      document.getElementById(details_id).className = "page_details";
+			   }
+			   
+			   function change(details_id)
+			   {
+			      if(document.getElementById(details_id+"_image").src.match("expand"))
+			      {
+			         document.getElementById(details_id+"_image").src = "collapse.png";
+			         expand(details_id);
+			      }
+			      else
+			      {
+			         document.getElementById(details_id+"_image").src = "expand.png";
+			         collapse(details_id);
+			      } 
+                           }
+			</script>
+</head>
+<body>
+<h1>ZSN-Interface Test Results</h1>
+<table width="100%">
+<tr>
+<td align="left">Date report: 2017/10/25 09:22</td>
+<br>
+<td align="left">RunEnvironment:https://www.zhishinet.com</td><td align="left">TestAccount:{&#13;
+	"username": "TECH0002",&#13;
+	"password": "welcome123"&#13;
+}</td>
+</tr>
+</table>
+<hr size="1">
+<h2>Summary</h2>
+<table width="95%" cellspacing="2" cellpadding="4" border="0" class="details" align="center">
+<tr valign="top">
+<th>Total</th><th>Pass</th><th>Failures</th><th>Success Rate</th>
+</tr>
+<tr valign="top">
+<td align="center">7</td><td align="center">1</td><td align="center">6</td><td align="center">14.29%</td>
+</tr>
+</table>
+<hr align="center" width="95%" size="1">
+<h2>Failure Detail</h2>
+<h3>logs知识币获取消费情况明细列表 正确性校验<a name="logs%E7%9F%A5%E8%AF%86%E5%B8%81%E8%8E%B7%E5%8F%96%E6%B6%88%E8%B4%B9%E6%83%85%E5%86%B5%E6%98%8E%E7%BB%86%E5%88%97%E8%A1%A8 %E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://www.zhishinet.com/app/PersonalCenter-service/rest/v1/sec/users/learner/cheesecoins/logs?pageNo=1&amp;pageSize=20</td><td>GET</td><td></td><td>504 - Gateway Time-out</td><td>&lt;html&gt;&#13;
+&lt;head&gt;&lt;title&gt;504 Gateway Time-out&lt;/title&gt;&lt;/head&gt;&#13;
+&lt;body bgcolor="white"&gt;&#13;
+&lt;center&gt;&lt;h1&gt;504 Gateway Time-out&lt;/h1&gt;&lt;/center&gt;&#13;
+&lt;hr&gt;&lt;center&gt;nginx/1.11.10&lt;/center&gt;&#13;
+&lt;/body&gt;&#13;
+&lt;/html&gt;&#13;
+</td>
+</tr>
+</table>
+<h3>achievements学员勋章列表 正确性校验<a name="achievements%E5%AD%A6%E5%91%98%E5%8B%8B%E7%AB%A0%E5%88%97%E8%A1%A8 %E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://www.zhishinet.com/app/PersonalCenter-service/rest/v1/sec/users/achievements?pageNo=1&amp;pageSize=20</td><td>GET</td><td></td><td>502 - Bad Gateway</td><td>&lt;html&gt;&#13;
+&lt;head&gt;&lt;title&gt;502 Bad Gateway&lt;/title&gt;&lt;/head&gt;&#13;
+&lt;body bgcolor="white"&gt;&#13;
+&lt;center&gt;&lt;h1&gt;502 Bad Gateway&lt;/h1&gt;&lt;/center&gt;&#13;
+&lt;hr&gt;&lt;center&gt;nginx/1.11.10&lt;/center&gt;&#13;
+&lt;/body&gt;&#13;
+&lt;/html&gt;&#13;
+</td>
+</tr>
+</table>
+<h3>tasks学生任务列表 正确性校验<a name="tasks%E5%AD%A6%E7%94%9F%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8 %E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://www.zhishinet.com/app/PersonalCenter-service/rest/v1/sec/users/tasks?taskType=1</td><td>GET</td><td></td><td>504 - Gateway Time-out</td><td>&lt;html&gt;&#13;
+&lt;head&gt;&lt;title&gt;504 Gateway Time-out&lt;/title&gt;&lt;/head&gt;&#13;
+&lt;body bgcolor="white"&gt;&#13;
+&lt;center&gt;&lt;h1&gt;504 Gateway Time-out&lt;/h1&gt;&lt;/center&gt;&#13;
+&lt;hr&gt;&lt;center&gt;nginx/1.11.10&lt;/center&gt;&#13;
+&lt;/body&gt;&#13;
+&lt;/html&gt;&#13;
+</td>
+</tr>
+</table>
+<h3>globalsessions学生班级列表 正确性校验<a name="globalsessions%E5%AD%A6%E7%94%9F%E7%8F%AD%E7%BA%A7%E5%88%97%E8%A1%A8 %E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://www.zhishinet.com/app/PersonalCenter-service/rest/v1/sec/users/globalsessions</td><td>GET</td><td></td><td>502 - Bad Gateway</td><td>&lt;html&gt;&#13;
+&lt;head&gt;&lt;title&gt;502 Bad Gateway&lt;/title&gt;&lt;/head&gt;&#13;
+&lt;body bgcolor="white"&gt;&#13;
+&lt;center&gt;&lt;h1&gt;502 Bad Gateway&lt;/h1&gt;&lt;/center&gt;&#13;
+&lt;hr&gt;&lt;center&gt;nginx/1.11.10&lt;/center&gt;&#13;
+&lt;/body&gt;&#13;
+&lt;/html&gt;&#13;
+</td>
+</tr>
+</table>
+<h3>experience/rank经验值排行榜 正确性校验<a name="experience/rank%E7%BB%8F%E9%AA%8C%E5%80%BC%E6%8E%92%E8%A1%8C%E6%A6%9C %E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://www.zhishinet.com/app/PersonalCenter-service/rest/v1/sec/experience/rank?globalSessionId=2624</td><td>GET</td><td></td><td>504 - Gateway Time-out</td><td>&lt;html&gt;&#13;
+&lt;head&gt;&lt;title&gt;504 Gateway Time-out&lt;/title&gt;&lt;/head&gt;&#13;
+&lt;body bgcolor="white"&gt;&#13;
+&lt;center&gt;&lt;h1&gt;504 Gateway Time-out&lt;/h1&gt;&lt;/center&gt;&#13;
+&lt;hr&gt;&lt;center&gt;nginx/1.11.10&lt;/center&gt;&#13;
+&lt;/body&gt;&#13;
+&lt;/html&gt;&#13;
+</td>
+</tr>
+</table>
+<h3>awardinfos获取用户奖励信息 正确性校验<a name="awardinfos%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E5%A5%96%E5%8A%B1%E4%BF%A1%E6%81%AF %E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://www.zhishinet.com/app/PersonalCenter-service/rest/v1/sec/users/awardinfos</td><td>GET</td><td></td><td>502 - Bad Gateway</td><td>&lt;html&gt;&#13;
+&lt;head&gt;&lt;title&gt;502 Bad Gateway&lt;/title&gt;&lt;/head&gt;&#13;
+&lt;body bgcolor="white"&gt;&#13;
+&lt;center&gt;&lt;h1&gt;502 Bad Gateway&lt;/h1&gt;&lt;/center&gt;&#13;
+&lt;hr&gt;&lt;center&gt;nginx/1.11.10&lt;/center&gt;&#13;
+&lt;/body&gt;&#13;
+&lt;/html&gt;&#13;
+</td>
+</tr>
+</table>
+<h2>Success Detail</h2>
+<h3>getToken<a name="getToken"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://www.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "TECH0002",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+</body>
+</html>

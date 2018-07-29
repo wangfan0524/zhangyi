@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="2327" it="0" lt="2289" ts="1509461661762" s="true" lb="getToken" rc="200" rm="" tn="个人中心 1-1" dt="text" by="1774" sby="289" ng="1" na="1">
+  <sample t="2" it="0" lt="0" ts="1509461664088" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="个人中心 1-1" dt="text" by="1411" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;TECH0002&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://www.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="2520" it="0" lt="2520" ts="1509461664099" s="false" lb="logs知识币获取消费情况明细列表 正确性校验" rc="504" rm="Gateway Time-out" tn="个人中心 1-1" dt="text" by="345" sby="303" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[504]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">&lt;html&gt;&#xd;
+&lt;head&gt;&lt;title&gt;504 Gateway Time-out&lt;/title&gt;&lt;/head&gt;&#xd;
+&lt;body bgcolor=&quot;white&quot;&gt;&#xd;
+&lt;center&gt;&lt;h1&gt;504 Gateway Time-out&lt;/h1&gt;&lt;/center&gt;&#xd;
+&lt;hr&gt;&lt;center&gt;nginx/1.13.1&lt;/center&gt;&#xd;
+&lt;/body&gt;&#xd;
+&lt;/html&gt;&#xd;
+</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/app/PersonalCenter-service/rest/v1/sec/users/learner/cheesecoins/logs?pageNo=1&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="1076" it="0" lt="1076" ts="1509461666623" s="false" lb="achievements学员勋章列表 正确性校验" rc="502" rm="Bad Gateway" tn="个人中心 1-1" dt="text" by="330" sby="291" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[502]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">&lt;html&gt;&#xd;
+&lt;head&gt;&lt;title&gt;502 Bad Gateway&lt;/title&gt;&lt;/head&gt;&#xd;
+&lt;body bgcolor=&quot;white&quot;&gt;&#xd;
+&lt;center&gt;&lt;h1&gt;502 Bad Gateway&lt;/h1&gt;&lt;/center&gt;&#xd;
+&lt;hr&gt;&lt;center&gt;nginx/1.13.1&lt;/center&gt;&#xd;
+&lt;/body&gt;&#xd;
+&lt;/html&gt;&#xd;
+</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/app/PersonalCenter-service/rest/v1/sec/users/achievements?pageNo=1&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="2045" it="0" lt="2045" ts="1509461667700" s="false" lb="tasks学生任务列表 正确性校验" rc="504" rm="Gateway Time-out" tn="个人中心 1-1" dt="text" by="345" sby="274" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[504]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">&lt;html&gt;&#xd;
+&lt;head&gt;&lt;title&gt;504 Gateway Time-out&lt;/title&gt;&lt;/head&gt;&#xd;
+&lt;body bgcolor=&quot;white&quot;&gt;&#xd;
+&lt;center&gt;&lt;h1&gt;504 Gateway Time-out&lt;/h1&gt;&lt;/center&gt;&#xd;
+&lt;hr&gt;&lt;center&gt;nginx/1.13.1&lt;/center&gt;&#xd;
+&lt;/body&gt;&#xd;
+&lt;/html&gt;&#xd;
+</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/app/PersonalCenter-service/rest/v1/sec/users/tasks?taskType=1</java.net.URL>
+</httpSample>
+<httpSample t="1089" it="0" lt="1089" ts="1509461669753" s="false" lb="globalsessions学生班级列表 正确性校验" rc="502" rm="Bad Gateway" tn="个人中心 1-1" dt="text" by="330" sby="272" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[502]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">&lt;html&gt;&#xd;
+&lt;head&gt;&lt;title&gt;502 Bad Gateway&lt;/title&gt;&lt;/head&gt;&#xd;
+&lt;body bgcolor=&quot;white&quot;&gt;&#xd;
+&lt;center&gt;&lt;h1&gt;502 Bad Gateway&lt;/h1&gt;&lt;/center&gt;&#xd;
+&lt;hr&gt;&lt;center&gt;nginx/1.13.1&lt;/center&gt;&#xd;
+&lt;/body&gt;&#xd;
+&lt;/html&gt;&#xd;
+</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/app/PersonalCenter-service/rest/v1/sec/users/globalsessions</java.net.URL>
+</httpSample>
+<httpSample t="2315" it="0" lt="2315" ts="1509461670849" s="false" lb="experience/rank经验值排行榜 正确性校验" rc="504" rm="Gateway Time-out" tn="个人中心 1-1" dt="text" by="345" sby="288" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[504]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">&lt;html&gt;&#xd;
+&lt;head&gt;&lt;title&gt;504 Gateway Time-out&lt;/title&gt;&lt;/head&gt;&#xd;
+&lt;body bgcolor=&quot;white&quot;&gt;&#xd;
+&lt;center&gt;&lt;h1&gt;504 Gateway Time-out&lt;/h1&gt;&lt;/center&gt;&#xd;
+&lt;hr&gt;&lt;center&gt;nginx/1.13.1&lt;/center&gt;&#xd;
+&lt;/body&gt;&#xd;
+&lt;/html&gt;&#xd;
+</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/app/PersonalCenter-service/rest/v1/sec/experience/rank?globalSessionId=2624</java.net.URL>
+</httpSample>
+<httpSample t="1062" it="0" lt="1062" ts="1509461673165" s="false" lb="awardinfos获取用户奖励信息 正确性校验" rc="502" rm="Bad Gateway" tn="个人中心 1-1" dt="text" by="330" sby="268" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[502]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">&lt;html&gt;&#xd;
+&lt;head&gt;&lt;title&gt;502 Bad Gateway&lt;/title&gt;&lt;/head&gt;&#xd;
+&lt;body bgcolor=&quot;white&quot;&gt;&#xd;
+&lt;center&gt;&lt;h1&gt;502 Bad Gateway&lt;/h1&gt;&lt;/center&gt;&#xd;
+&lt;hr&gt;&lt;center&gt;nginx/1.13.1&lt;/center&gt;&#xd;
+&lt;/body&gt;&#xd;
+&lt;/html&gt;&#xd;
+</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/app/PersonalCenter-service/rest/v1/sec/users/awardinfos</java.net.URL>
+</httpSample>
+
+</testResults>

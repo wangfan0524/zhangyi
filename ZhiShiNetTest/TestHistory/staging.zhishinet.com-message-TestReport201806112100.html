@@ -1,0 +1,1929 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ZSN-Interface Test Results</title>
+<style type="text/css">
+				body {
+					font:normal 68% verdana,arial,helvetica;
+					color:#000000;
+				}
+				table tr td, table tr th {
+					font-size: 68%;
+				}
+				table.details tr th{
+				    color: #ffffff;
+					font-weight: bold;
+					text-align:center;
+					background:#2674a6;
+					white-space: nowrap;
+				}
+				table.details tr td{
+					background:#eeeee0;
+				}
+				h1 {
+					margin: 0px 0px 5px; font: 165% verdana,arial,helvetica
+				}
+				h2 {
+					margin-top: 1em; margin-bottom: 0.5em; font: bold 125% verdana,arial,helvetica
+				}
+				h3 {
+					margin-bottom: 0.5em; font: bold 115% verdana,arial,helvetica
+				}
+				.Failure {
+					font-weight:bold; color:red;
+				}
+				
+	
+				img
+				{
+				  border-width: 0px;
+				}
+				
+				.expand_link
+				{
+				   position=absolute;
+				   right: 0px;
+				   width: 27px;
+				   top: 1px;
+				   height: 27px;
+				}
+				
+				.page_details
+				{
+				   display: none;
+				}
+                                
+                                .page_details_expanded
+                                {
+                                    display: block;
+                                    display/* hide this definition from  IE5/6 */: table-row;
+                                }
+
+
+			</style>
+<script language="JavaScript">
+                           function expand(details_id)
+			   {
+			      
+			      document.getElementById(details_id).className = "page_details_expanded";
+			   }
+			   
+			   function collapse(details_id)
+			   {
+			      
+			      document.getElementById(details_id).className = "page_details";
+			   }
+			   
+			   function change(details_id)
+			   {
+			      if(document.getElementById(details_id+"_image").src.match("expand"))
+			      {
+			         document.getElementById(details_id+"_image").src = "collapse.png";
+			         expand(details_id);
+			      }
+			      else
+			      {
+			         document.getElementById(details_id+"_image").src = "expand.png";
+			         collapse(details_id);
+			      } 
+                           }
+			</script>
+</head>
+<body>
+<h1>ZSN-Interface Test Results</h1>
+<table width="100%">
+<tr>
+<td align="left">Date report: 2018/06/11 21:01</td>
+<br>
+<td align="left">RunEnvironment:https://staging.zhishinet.com</td><td align="left">TestAccount:{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td>
+</tr>
+</table>
+<hr size="1">
+<h2>Summary</h2>
+<table width="95%" cellspacing="2" cellpadding="4" border="0" class="details" align="center">
+<tr valign="top">
+<th>Total</th><th>Pass</th><th>Failures</th><th>Success Rate</th>
+</tr>
+<tr valign="top">
+<td align="center">144</td><td align="center">144</td><td align="center">0</td><td align="center">100.00%</td>
+</tr>
+</table>
+<hr align="center" width="95%" size="1">
+<h2>Success Detail</h2>
+<h3>getToken<a name="getToken"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>messages正确性校验<a name="messages%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/messages?pageNo=1&amp;pageSize=5&amp;messageStatus=1</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>messages-pageNo为空<a name="messages-pageNo%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/messages?pageNo=&amp;pageSize=5&amp;messageStatus=1</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>messages-pageNo为空格<a name="messages-pageNo%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/messages?pageNo=    &amp;pageSize=5&amp;messageStatus=1</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 65: https://staging.zhishinet.com/api/message/v1/sec/messages?pageNo=    &amp;pageSize=5&amp;messageStatus=1</td><td></td>
+</tr>
+</table>
+<h3>messages-pageNo为a-z的字符串<a name="messages-pageNo%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/messages?pageNo=page&amp;pageSize=5&amp;messageStatus=1</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>messages-pageNo为中文<a name="messages-pageNo%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/messages?pageNo=测试&amp;pageSize=5&amp;messageStatus=1</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>messages-pageNo为特殊符号<a name="messages-pageNo%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/messages?pageNo=@&amp;pageSize=5&amp;messageStatus=1</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>messages-pageNo为数学符号<a name="messages-pageNo%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/messages?pageNo=/&amp;pageSize=5&amp;messageStatus=1</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>messages-pageNo为标点符号<a name="messages-pageNo%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/messages?pageNo=?&amp;pageSize=5&amp;messageStatus=1</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>messages-pageSize为空<a name="messages-pageSize%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/messages?pageNo=1&amp;pageSize=&amp;messageStatus=1</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>messages-pageSize为空格<a name="messages-pageSize%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/messages?pageNo=1&amp;pageSize=      &amp;messageStatus=1</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 76: https://staging.zhishinet.com/api/message/v1/sec/messages?pageNo=1&amp;pageSize=      &amp;messageStatus=1</td><td></td>
+</tr>
+</table>
+<h3>messages-pageSize为a-z的字符串<a name="messages-pageSize%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/messages?pageNo=1&amp;pageSize=test&amp;messageStatus=1</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>messages-pageSize为中文<a name="messages-pageSize%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/messages?pageNo=1&amp;pageSize=页码&amp;messageStatus=1</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>messages-pageSize为特殊符号<a name="messages-pageSize%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/messages?pageNo=1&amp;pageSize=&amp;&amp;messageStatus=1</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>messages-pageSize为数学符号<a name="messages-pageSize%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/messages?pageNo=1&amp;pageSize=+&amp;messageStatus=1</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>messages-pageSize为标点符号<a name="messages-pageSize%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/messages?pageNo=1&amp;pageSize=!&amp;messageStatus=1</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>messages-messageStatus为空<a name="messages-messageStatus%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/messages?pageNo=1&amp;pageSize=5&amp;messageStatus=</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>messages-messageStatus为空格<a name="messages-messageStatus%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/messages?pageNo=1&amp;pageSize=5&amp;messageStatus=     </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 92: https://staging.zhishinet.com/api/message/v1/sec/messages?pageNo=1&amp;pageSize=5&amp;messageStatus=     </td><td></td>
+</tr>
+</table>
+<h3>messages-messageStatus为a-z的字符串<a name="messages-messageStatus%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/messages?pageNo=1&amp;pageSize=5&amp;messageStatus=mess</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>messages-messageStatus为中文<a name="messages-messageStatus%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/messages?pageNo=1&amp;pageSize=5&amp;messageStatus=消息状态</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>messages-messageStatus为特殊符号<a name="messages-messageStatus%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/messages?pageNo=1&amp;pageSize=5&amp;messageStatus=@</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>messages-messageStatus为数学符号<a name="messages-messageStatus%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/messages?pageNo=1&amp;pageSize=5&amp;messageStatus=+</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>messages-messageStatus为标点符号<a name="messages-messageStatus%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/messages?pageNo=1&amp;pageSize=5&amp;messageStatus=?</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getBannerByCategoryId正确性校验<a name="getBannerByCategoryId%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/getBannerByCategoryId?categoryId=0b00be05-a08a-4207-aa9e-5ca2b0a94024</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getBannerByCategoryId-categoryId为空<a name="getBannerByCategoryId-categoryId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/getBannerByCategoryId?categoryId=</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>getBannerByCategoryId-categoryId为空格<a name="getBannerByCategoryId-categoryId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/getBannerByCategoryId?categoryId= </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 82: https://staging.zhishinet.com/api/message/v1/sec/getBannerByCategoryId?categoryId= </td><td></td>
+</tr>
+</table>
+<h3>getBannerByCategoryId-categoryId为a-z的字符串<a name="getBannerByCategoryId-categoryId%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/getBannerByCategoryId?categoryId=asdfghjkl</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getBannerByCategoryId-categoryId为中文<a name="getBannerByCategoryId-categoryId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/getBannerByCategoryId?categoryId=标号</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getBannerByCategoryId-categoryId为特殊符号<a name="getBannerByCategoryId-categoryId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/getBannerByCategoryId?categoryId=#</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>getBannerByCategoryId-categoryId为数学符号<a name="getBannerByCategoryId-categoryId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/getBannerByCategoryId?categoryId=/</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getBannerByCategoryId-categoryId为标点符号<a name="getBannerByCategoryId-categoryId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/getBannerByCategoryId?categoryId=、</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>category正确性校验<a name="category%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category?pageNo=1&amp;pageSize=5&amp;platform=1,2&amp;productSide=1,2</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category</td><td>POST</td><td>{&#13;
+ "categoryName":"zhishinet_IT_20170724_sn9578027  ",&#13;
+ "platform":"1",&#13;
+ "productSide":"1"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>category-pageNo为空<a name="category-pageNo%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category?pageNo=&amp;pageSize=5&amp;platform=1,2&amp;productSide=1,2</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>category-pageNo为空格<a name="category-pageNo%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category?pageNo= &amp;pageSize=5&amp;platform=1,2&amp;productSide=1,2</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 65: https://staging.zhishinet.com/api/message/v1/sec/category?pageNo= &amp;pageSize=5&amp;platform=1,2&amp;productSide=1,2</td><td></td>
+</tr>
+</table>
+<h3>category-pageNo为a-z的字符串<a name="category-pageNo%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category?pageNo=sdfghj&amp;pageSize=5&amp;platform=1,2&amp;productSide=1,2</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>category-pageNo为中文<a name="category-pageNo%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category?pageNo=标号&amp;pageSize=5&amp;platform=1,2&amp;productSide=1,2</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>category-pageNo为特殊符号<a name="category-pageNo%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category?pageNo=&amp;&amp;pageSize=5&amp;platform=1,2&amp;productSide=1,2</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>category-pageNo为数学符号<a name="category-pageNo%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category?pageNo=+&amp;pageSize=5&amp;platform=1,2&amp;productSide=1,2</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>category-pageNo为标点符号<a name="category-pageNo%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category?pageNo=、&amp;pageSize=5&amp;platform=1,2&amp;productSide=1,2</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>category-pageSize为空<a name="category-pageSize%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category?pageNo=1&amp;pageSize=&amp;platform=1,2&amp;productSide=1,2</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>category-pageSize为空格<a name="category-pageSize%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category?pageNo=1&amp;pageSize= &amp;platform=1,2&amp;productSide=1,2</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 76: https://staging.zhishinet.com/api/message/v1/sec/category?pageNo=1&amp;pageSize= &amp;platform=1,2&amp;productSide=1,2</td><td></td>
+</tr>
+</table>
+<h3>category-pageSize为a-z的字符串<a name="category-pageSize%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category?pageNo=1&amp;pageSize=asdfghjkl&amp;platform=1,2&amp;productSide=1,2</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>category-pageSize为中文<a name="category-pageSize%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category?pageNo=1&amp;pageSize=标号&amp;platform=1,2&amp;productSide=1,2</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>category-pageSize为特殊符号<a name="category-pageSize%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category?pageNo=1&amp;pageSize=&amp;&amp;platform=1,2&amp;productSide=1,2</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>category-pageSize为数学符号<a name="category-pageSize%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category?pageNo=1&amp;pageSize=+&amp;platform=1,2&amp;productSide=1,2</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>category-pageSize为标点符号<a name="category-pageSize%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category?pageNo=1&amp;pageSize=、&amp;platform=1,2&amp;productSide=1,2</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>category-platform为空<a name="category-platform%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category?pageNo=1&amp;pageSize=5&amp;platform=&amp;productSide=1,2</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category</td><td>POST</td><td>{&#13;
+ "categoryName":"zhishinet_IT_20170724_sn9578027  ",&#13;
+ "platform":"",&#13;
+ "productSide":"1"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>category-platform为空格<a name="category-platform%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category?pageNo=1&amp;pageSize=5&amp;platform= &amp;productSide=1,2</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 87: https://staging.zhishinet.com/api/message/v1/sec/category?pageNo=1&amp;pageSize=5&amp;platform= &amp;productSide=1,2</td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category</td><td>POST</td><td>{&#13;
+ "categoryName":"zhishinet_IT_20170724_sn9578027  ",&#13;
+ "platform":" ",&#13;
+ "productSide":"1"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>category-platform为a-z的字符串<a name="category-platform%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category?pageNo=1&amp;pageSize=5&amp;platform=dfghjk&amp;productSide=1,2</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category</td><td>POST</td><td>{&#13;
+ "categoryName":"zhishinet_IT_20170724_sn9578027  ",&#13;
+ "platform":"sdfgh",&#13;
+ "productSide":"1"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>category-platform为中文<a name="category-platform%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category?pageNo=1&amp;pageSize=5&amp;platform=标号&amp;productSide=1,2</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category</td><td>POST</td><td>{&#13;
+ "categoryName":"zhishinet_IT_20170724_sn9578027  ",&#13;
+ "platform":"学生平台",&#13;
+ "productSide":"1"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>category-platform为特殊符号<a name="category-platform%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category?pageNo=1&amp;pageSize=5&amp;platform=&amp;&amp;productSide=1,2</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category</td><td>POST</td><td>{&#13;
+ "categoryName":"zhishinet_IT_20170724_sn9578027  ",&#13;
+ "platform":"&amp;",&#13;
+ "productSide":"1"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>category-platform为数学符号<a name="category-platform%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category?pageNo=1&amp;pageSize=5&amp;platform=+&amp;productSide=1,2</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category</td><td>POST</td><td>{&#13;
+ "categoryName":"zhishinet_IT_20170724_sn9578027  ",&#13;
+ "platform":"+-",&#13;
+ "productSide":"1"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>category-platform为标点符号<a name="category-platform%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category?pageNo=1&amp;pageSize=5&amp;platform=、&amp;productSide=1,2</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category</td><td>POST</td><td>{&#13;
+ "categoryName":"zhishinet_IT_20170724_sn9578027  ",&#13;
+ "platform":"，",&#13;
+ "productSide":"1"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>category-productSide为空<a name="category-productSide%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category?pageNo=1&amp;pageSize=5&amp;platform=1,2&amp;productSide=</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category</td><td>POST</td><td>{&#13;
+ "categoryName":"zhishinet_IT_20170724_sn9578027  ",&#13;
+ "platform":"1",&#13;
+ "productSide":""&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>category-productSide为空格<a name="category-productSide%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category?pageNo=1&amp;pageSize=5&amp;platform=1,2&amp;productSide= </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 103: https://staging.zhishinet.com/api/message/v1/sec/category?pageNo=1&amp;pageSize=5&amp;platform=1,2&amp;productSide= </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category</td><td>POST</td><td>{&#13;
+ "categoryName":"zhishinet_IT_20170724_sn9578027  ",&#13;
+ "platform":"1",&#13;
+ "productSide":" "&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>category-productSide为a-z的字符串<a name="category-productSide%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category?pageNo=1&amp;pageSize=5&amp;platform=1,2&amp;productSide=asdfghjkl</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category</td><td>POST</td><td>{&#13;
+ "categoryName":"zhishinet_IT_20170724_sn9578027  ",&#13;
+ "platform":"1",&#13;
+ "productSide":"qwert"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>category-productSide为中文<a name="category-productSide%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category?pageNo=1&amp;pageSize=5&amp;platform=1,2&amp;productSide=标号</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category</td><td>POST</td><td>{&#13;
+ "categoryName":"zhishinet_IT_20170724_sn9578027  ",&#13;
+ "platform":"1",&#13;
+ "productSide":"产品端"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>category-productSide为特殊符号<a name="category-productSide%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category?pageNo=1&amp;pageSize=5&amp;platform=1,2&amp;productSide=&amp;</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category</td><td>POST</td><td>{&#13;
+ "categoryName":"zhishinet_IT_20170724_sn9578027  ",&#13;
+ "platform":"1",&#13;
+ "productSide":"&amp;"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>category-productSide为数学符号<a name="category-productSide%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category?pageNo=1&amp;pageSize=5&amp;platform=1,2&amp;productSide=+</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category</td><td>POST</td><td>{&#13;
+ "categoryName":"zhishinet_IT_20170724_sn9578027  ",&#13;
+ "platform":"1",&#13;
+ "productSide":"+"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>category-productSide为标点符号<a name="category-productSide%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category?pageNo=1&amp;pageSize=5&amp;platform=1,2&amp;productSide=、</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category</td><td>POST</td><td>{&#13;
+ "categoryName":"zhishinet_IT_20170724_sn9578027  ",&#13;
+ "platform":"1",&#13;
+ "productSide":"？"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>category/{categoryId}删除广告位正确性校验<a name="category/{categoryId}%E5%88%A0%E9%99%A4%E5%B9%BF%E5%91%8A%E4%BD%8D%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category/3463566c-f331-420d-9589-933e03c1847b</td><td>DELETE</td><td></td><td>204 - </td><td></td>
+</tr>
+</table>
+<h3>category-categoryName为空<a name="category-categoryName%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category</td><td>POST</td><td>{&#13;
+ "categoryName":"",&#13;
+ "platform":"1",&#13;
+ "productSide":"1"&#13;
+}</td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>category-categoryName为空格<a name="category-categoryName%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category</td><td>POST</td><td>{&#13;
+ "categoryName":" ",&#13;
+ "platform":"1",&#13;
+ "productSide":"1"&#13;
+}</td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>category-categoryName为a-z的字符串<a name="category-categoryName%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category</td><td>POST</td><td>{&#13;
+ "categoryName":"testtest",&#13;
+ "platform":"1",&#13;
+ "productSide":"1"&#13;
+}</td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>category/{categoryName}删除广告位-英文<a name="category/{categoryName}%E5%88%A0%E9%99%A4%E5%B9%BF%E5%91%8A%E4%BD%8D-%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category/advd</td><td>DELETE</td><td></td><td>404 - </td><td></td>
+</tr>
+</table>
+<h3>category-categoryName为中文<a name="category-categoryName%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category</td><td>POST</td><td>{&#13;
+ "categoryName":"消息中心接口",&#13;
+ "platform":"1",&#13;
+ "productSide":"1"&#13;
+}</td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>category/{categoryName}删除广告位-中文<a name="category/{categoryName}%E5%88%A0%E9%99%A4%E5%B9%BF%E5%91%8A%E4%BD%8D-%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category/测试</td><td>DELETE</td><td></td><td>404 - </td><td></td>
+</tr>
+</table>
+<h3>category/{categoryName}删除广告位-特殊符号<a name="category/{categoryName}%E5%88%A0%E9%99%A4%E5%B9%BF%E5%91%8A%E4%BD%8D-%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category/3463566c-f331-420d-9589-933e03c1847b&amp;</td><td>DELETE</td><td></td><td>404 - </td><td></td>
+</tr>
+</table>
+<h3>category-categoryName为数学符号<a name="category-categoryName%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category</td><td>POST</td><td>{&#13;
+ "categoryName":"=",&#13;
+ "platform":"1",&#13;
+ "productSide":"1"&#13;
+}</td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>category/{categoryName}删除广告位-数学符号<a name="category/{categoryName}%E5%88%A0%E9%99%A4%E5%B9%BF%E5%91%8A%E4%BD%8D-%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category/3463566c-f331-420d-9589-933e03c1847b+</td><td>DELETE</td><td></td><td>404 - </td><td></td>
+</tr>
+</table>
+<h3>category-categoryName为标点符号<a name="category-categoryName%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category</td><td>POST</td><td>{&#13;
+ "categoryName":"，？",&#13;
+ "platform":"1",&#13;
+ "productSide":"1"&#13;
+}</td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>category/{categoryName}删除广告位-标点符号<a name="category/{categoryName}%E5%88%A0%E9%99%A4%E5%B9%BF%E5%91%8A%E4%BD%8D-%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category/3463566c-f331-420d-9589-933e03c1847b,?</td><td>DELETE</td><td></td><td>404 - </td><td></td>
+</tr>
+</table>
+<h3>category删除广告位-platform为空<a name="category%E5%88%A0%E9%99%A4%E5%B9%BF%E5%91%8A%E4%BD%8D-platform%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category/2245d053-3a5d-4f26-98f0-6ae074cce225</td><td>DELETE</td><td></td><td>204 - </td><td></td>
+</tr>
+</table>
+<h3>category删除广告位-platform为空格<a name="category%E5%88%A0%E9%99%A4%E5%B9%BF%E5%91%8A%E4%BD%8D-platform%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category/f1a5f721-128d-41d4-b355-75555314f3ce</td><td>DELETE</td><td></td><td>204 - </td><td></td>
+</tr>
+</table>
+<h3>category删除广告位-productSide为空<a name="category%E5%88%A0%E9%99%A4%E5%B9%BF%E5%91%8A%E4%BD%8D-productSide%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category/17bf09cb-d3a7-45af-a038-fa444ee4ad1a</td><td>DELETE</td><td></td><td>204 - </td><td></td>
+</tr>
+</table>
+<h3>category删除广告位-productSide为空格<a name="category%E5%88%A0%E9%99%A4%E5%B9%BF%E5%91%8A%E4%BD%8D-productSide%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category/da402ca4-7a3f-41cf-8e06-de3b47a7e77c</td><td>DELETE</td><td></td><td>204 - </td><td></td>
+</tr>
+</table>
+<h3>category/{categoryId}-categoryId为a-z的字符串<a name="category/{categoryId}-categoryId%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category/testtest</td><td>DELETE</td><td></td><td>404 - </td><td></td>
+</tr>
+</table>
+<h3>category/{categoryId}-categoryId为中文<a name="category/{categoryId}-categoryId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category/消息中心接口</td><td>DELETE</td><td></td><td>404 - </td><td></td>
+</tr>
+</table>
+<h3>category/{categoryId}-categoryId为特殊符号<a name="category/{categoryId}-categoryId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category/&amp;</td><td>DELETE</td><td></td><td>404 - </td><td></td>
+</tr>
+</table>
+<h3>category/{categoryId}-categoryId为数学符号<a name="category/{categoryId}-categoryId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category/+</td><td>DELETE</td><td></td><td>404 - </td><td></td>
+</tr>
+</table>
+<h3>category/{categoryId}-categoryId为标点符号<a name="category/{categoryId}-categoryId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category/？</td><td>DELETE</td><td></td><td>404 - </td><td></td>
+</tr>
+</table>
+<h3>category创建广告位<a name="category%E5%88%9B%E5%BB%BA%E5%B9%BF%E5%91%8A%E4%BD%8D"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category</td><td>POST</td><td>{&#13;
+ "categoryName":"zhishinet_IT_20170724_sn9578027  ",&#13;
+ "platform":"1",&#13;
+ "productSide":"1"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>bannerMessages正确性校验<a name="bannerMessages%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/bannerMessages</td><td>POST</td><td>{&#13;
+    "categoryId": "b413c19f-40fe-4a58-b4e2-e9a7d55fa8b3",&#13;
+    "messageType": 2,&#13;
+    "sendObj": 2,&#13;
+    "messages": [&#13;
+        {&#13;
+            "messagePushType": 2,&#13;
+            "bannerMessages": [&#13;
+                {&#13;
+                    "image": "af855a8e-ade1-465a-a69e-0e3935bed907",&#13;
+                    "linkAddress": "https://hahaha.com",&#13;
+                    "sorting": "1",&#13;
+                    "bannerShowStartTime": "2017-10-20 12:30",&#13;
+                    "bannerShowEndTime": "2017-10-20 12:50"&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>category/{categoryId}/{imageId}删除图片正确性校验<a name="category/{categoryId}/{imageId}%E5%88%A0%E9%99%A4%E5%9B%BE%E7%89%87%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category/b413c19f-40fe-4a58-b4e2-e9a7d55fa8b3/af855a8e-ade1-465a-a69e-0e3935bed907</td><td>DELETE</td><td></td><td>204 - </td><td></td>
+</tr>
+</table>
+<h3>category/{categoryId}删除广告位<a name="category/{categoryId}%E5%88%A0%E9%99%A4%E5%B9%BF%E5%91%8A%E4%BD%8D"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category/b413c19f-40fe-4a58-b4e2-e9a7d55fa8b3</td><td>DELETE</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>bannerMessages-categoryId为a-z的字符串<a name="bannerMessages-categoryId%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/bannerMessages</td><td>POST</td><td>{&#13;
+    "categoryId": "testtest",&#13;
+    "messageType": 2,&#13;
+    "sendObj": 2,&#13;
+    "messages": [&#13;
+        {&#13;
+            "messagePushType": 2,&#13;
+            "bannerMessages": [&#13;
+                {&#13;
+                    "image": "af855a8e-ade1-465a-a69e-0e3935bed907",&#13;
+                    "linkAddress": "https://hahaha.com",&#13;
+                    "sorting": "1",&#13;
+                    "bannerShowStartTime": "2017-10-20 12:30",&#13;
+                    "bannerShowEndTime": "2017-10-20 12:50"&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>bannerMessages-categoryId为中文<a name="bannerMessages-categoryId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/bannerMessages</td><td>POST</td><td>{&#13;
+    "categoryId": "消息中心接口",&#13;
+    "messageType": 2,&#13;
+    "sendObj": 2,&#13;
+    "messages": [&#13;
+        {&#13;
+            "messagePushType": 2,&#13;
+            "bannerMessages": [&#13;
+                {&#13;
+                    "image": "af855a8e-ade1-465a-a69e-0e3935bed907",&#13;
+                    "linkAddress": "https://hahaha.com",&#13;
+                    "sorting": "1",&#13;
+                    "bannerShowStartTime": "2017-10-20 12:30",&#13;
+                    "bannerShowEndTime": "2017-10-20 12:50"&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>bannerMessages-categoryId为特殊符号<a name="bannerMessages-categoryId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/bannerMessages</td><td>POST</td><td>{&#13;
+    "categoryId": "&amp;",&#13;
+    "messageType": 2,&#13;
+    "sendObj": 2,&#13;
+    "messages": [&#13;
+        {&#13;
+            "messagePushType": 2,&#13;
+            "bannerMessages": [&#13;
+                {&#13;
+                    "image": "af855a8e-ade1-465a-a69e-0e3935bed907",&#13;
+                    "linkAddress": "https://hahaha.com",&#13;
+                    "sorting": "1",&#13;
+                    "bannerShowStartTime": "2017-10-20 12:30",&#13;
+                    "bannerShowEndTime": "2017-10-20 12:50"&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>bannerMessages-categoryId为数学符号<a name="bannerMessages-categoryId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/bannerMessages</td><td>POST</td><td>{&#13;
+    "categoryId": "+",&#13;
+    "messageType": 2,&#13;
+    "sendObj": 2,&#13;
+    "messages": [&#13;
+        {&#13;
+            "messagePushType": 2,&#13;
+            "bannerMessages": [&#13;
+                {&#13;
+                    "image": "af855a8e-ade1-465a-a69e-0e3935bed907",&#13;
+                    "linkAddress": "https://hahaha.com",&#13;
+                    "sorting": "1",&#13;
+                    "bannerShowStartTime": "2017-10-20 12:30",&#13;
+                    "bannerShowEndTime": "2017-10-20 12:50"&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>bannerMessages-categoryId为标点符号<a name="bannerMessages-categoryId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/bannerMessages</td><td>POST</td><td>{&#13;
+    "categoryId": "？",&#13;
+    "messageType": 2,&#13;
+    "sendObj": 2,&#13;
+    "messages": [&#13;
+        {&#13;
+            "messagePushType": 2,&#13;
+            "bannerMessages": [&#13;
+                {&#13;
+                    "image": "af855a8e-ade1-465a-a69e-0e3935bed907",&#13;
+                    "linkAddress": "https://hahaha.com",&#13;
+                    "sorting": "1",&#13;
+                    "bannerShowStartTime": "2017-10-20 12:30",&#13;
+                    "bannerShowEndTime": "2017-10-20 12:50"&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>bannerMessages-messageType为空<a name="bannerMessages-messageType%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/bannerMessages</td><td>POST</td><td>{&#13;
+    "categoryId": "b413c19f-40fe-4a58-b4e2-e9a7d55fa8b3",&#13;
+    "messageType": ,&#13;
+    "sendObj": 2,&#13;
+    "messages": [&#13;
+        {&#13;
+            "messagePushType": 2,&#13;
+            "bannerMessages": [&#13;
+                {&#13;
+                    "image": "af855a8e-ade1-465a-a69e-0e3935bed907",&#13;
+                    "linkAddress": "https://hahaha.com",&#13;
+                    "sorting": 1,&#13;
+                    "bannerShowStartTime": "2017-10-20 12:30",&#13;
+                    "bannerShowEndTime": "2017-10-20 12:50"&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>bannerMessages-messageType为空格<a name="bannerMessages-messageType%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/bannerMessages</td><td>POST</td><td>{&#13;
+    "categoryId": "b413c19f-40fe-4a58-b4e2-e9a7d55fa8b3",&#13;
+    "messageType":  ,&#13;
+    "sendObj": 2,&#13;
+    "messages": [&#13;
+        {&#13;
+            "messagePushType": 2,&#13;
+            "bannerMessages": [&#13;
+                {&#13;
+                    "image": "af855a8e-ade1-465a-a69e-0e3935bed907",&#13;
+                    "linkAddress": "https://hahaha.com",&#13;
+                    "sorting": 1,&#13;
+                    "bannerShowStartTime": "2017-10-20 12:30",&#13;
+                    "bannerShowEndTime": "2017-10-20 12:50"&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>bannerMessages-messageType为a-z的字符串<a name="bannerMessages-messageType%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/bannerMessages</td><td>POST</td><td>{&#13;
+    "categoryId": "b413c19f-40fe-4a58-b4e2-e9a7d55fa8b3",&#13;
+    "messageType": testtest,&#13;
+    "sendObj": 2,&#13;
+    "messages": [&#13;
+        {&#13;
+            "messagePushType": 2,&#13;
+            "bannerMessages": [&#13;
+                {&#13;
+                    "image": "af855a8e-ade1-465a-a69e-0e3935bed907",&#13;
+                    "linkAddress": "https://hahaha.com",&#13;
+                    "sorting": 1,&#13;
+                    "bannerShowStartTime": "2017-10-20 12:30",&#13;
+                    "bannerShowEndTime": "2017-10-20 12:50"&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>bannerMessages-messageType为中文<a name="bannerMessages-messageType%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/bannerMessages</td><td>POST</td><td>{&#13;
+    "categoryId": "b413c19f-40fe-4a58-b4e2-e9a7d55fa8b3",&#13;
+    "messageType": 消息中心接口,&#13;
+    "sendObj": 2,&#13;
+    "messages": [&#13;
+        {&#13;
+            "messagePushType": 2,&#13;
+            "bannerMessages": [&#13;
+                {&#13;
+                    "image": "af855a8e-ade1-465a-a69e-0e3935bed907",&#13;
+                    "linkAddress": "https://hahaha.com",&#13;
+                    "sorting": 1,&#13;
+                    "bannerShowStartTime": "2017-10-20 12:30",&#13;
+                    "bannerShowEndTime": "2017-10-20 12:50"&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>bannerMessages-messageType为特殊符号<a name="bannerMessages-messageType%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/bannerMessages</td><td>POST</td><td>{&#13;
+    "categoryId": "b413c19f-40fe-4a58-b4e2-e9a7d55fa8b3",&#13;
+    "messageType": &amp;,&#13;
+    "sendObj": 2,&#13;
+    "messages": [&#13;
+        {&#13;
+            "messagePushType": 2,&#13;
+            "bannerMessages": [&#13;
+                {&#13;
+                    "image": "af855a8e-ade1-465a-a69e-0e3935bed907",&#13;
+                    "linkAddress": "https://hahaha.com",&#13;
+                    "sorting": 1,&#13;
+                    "bannerShowStartTime": "2017-10-20 12:30",&#13;
+                    "bannerShowEndTime": "2017-10-20 12:50"&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>bannerMessages-messageType为数学符号<a name="bannerMessages-messageType%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/bannerMessages</td><td>POST</td><td>{&#13;
+    "categoryId": "b413c19f-40fe-4a58-b4e2-e9a7d55fa8b3",&#13;
+    "messageType": +,&#13;
+    "sendObj": 2,&#13;
+    "messages": [&#13;
+        {&#13;
+            "messagePushType": 2,&#13;
+            "bannerMessages": [&#13;
+                {&#13;
+                    "image": "af855a8e-ade1-465a-a69e-0e3935bed907",&#13;
+                    "linkAddress": "https://hahaha.com",&#13;
+                    "sorting": 1,&#13;
+                    "bannerShowStartTime": "2017-10-20 12:30",&#13;
+                    "bannerShowEndTime": "2017-10-20 12:50"&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>bannerMessages-messageType为标点符号<a name="bannerMessages-messageType%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/bannerMessages</td><td>POST</td><td>{&#13;
+    "categoryId": "b413c19f-40fe-4a58-b4e2-e9a7d55fa8b3",&#13;
+    "messageType": ？,&#13;
+    "sendObj": 2,&#13;
+    "messages": [&#13;
+        {&#13;
+            "messagePushType": 2,&#13;
+            "bannerMessages": [&#13;
+                {&#13;
+                    "image": "af855a8e-ade1-465a-a69e-0e3935bed907",&#13;
+                    "linkAddress": "https://hahaha.com",&#13;
+                    "sorting": 1,&#13;
+                    "bannerShowStartTime": "2017-10-20 12:30",&#13;
+                    "bannerShowEndTime": "2017-10-20 12:50"&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>bannerMessages-sendObj为空<a name="bannerMessages-sendObj%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/bannerMessages</td><td>POST</td><td>{&#13;
+    "categoryId": "b413c19f-40fe-4a58-b4e2-e9a7d55fa8b3",&#13;
+    "messageType": 2,&#13;
+    "sendObj": ,&#13;
+    "messages": [&#13;
+        {&#13;
+            "messagePushType": 2,&#13;
+            "bannerMessages": [&#13;
+                {&#13;
+                    "image": "af855a8e-ade1-465a-a69e-0e3935bed907",&#13;
+                    "linkAddress": "https://hahaha.com",&#13;
+                    "sorting": 1,&#13;
+                    "bannerShowStartTime": "2017-10-20 12:30",&#13;
+                    "bannerShowEndTime": "2017-10-20 12:50"&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>bannerMessages-sendObj为空格<a name="bannerMessages-sendObj%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/bannerMessages</td><td>POST</td><td>{&#13;
+    "categoryId": "b413c19f-40fe-4a58-b4e2-e9a7d55fa8b3",&#13;
+    "messageType": 2,&#13;
+    "sendObj":  ,&#13;
+    "messages": [&#13;
+        {&#13;
+            "messagePushType": 2,&#13;
+            "bannerMessages": [&#13;
+                {&#13;
+                    "image": "af855a8e-ade1-465a-a69e-0e3935bed907",&#13;
+                    "linkAddress": "https://hahaha.com",&#13;
+                    "sorting": 1,&#13;
+                    "bannerShowStartTime": "2017-10-20 12:30",&#13;
+                    "bannerShowEndTime": "2017-10-20 12:50"&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>bannerMessages-sendObj为a-z的字符串<a name="bannerMessages-sendObj%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/bannerMessages</td><td>POST</td><td>{&#13;
+    "categoryId": "b413c19f-40fe-4a58-b4e2-e9a7d55fa8b3",&#13;
+    "messageType": 2,&#13;
+    "sendObj": testtest,&#13;
+    "messages": [&#13;
+        {&#13;
+            "messagePushType": 2,&#13;
+            "bannerMessages": [&#13;
+                {&#13;
+                    "image": "af855a8e-ade1-465a-a69e-0e3935bed907",&#13;
+                    "linkAddress": "https://hahaha.com",&#13;
+                    "sorting": 1,&#13;
+                    "bannerShowStartTime": "2017-10-20 12:30",&#13;
+                    "bannerShowEndTime": "2017-10-20 12:50"&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>bannerMessages-sendObj为中文<a name="bannerMessages-sendObj%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/bannerMessages</td><td>POST</td><td>{&#13;
+    "categoryId": "b413c19f-40fe-4a58-b4e2-e9a7d55fa8b3",&#13;
+    "messageType": 2,&#13;
+    "sendObj": 消息中心接口,&#13;
+    "messages": [&#13;
+        {&#13;
+            "messagePushType": 2,&#13;
+            "bannerMessages": [&#13;
+                {&#13;
+                    "image": "af855a8e-ade1-465a-a69e-0e3935bed907",&#13;
+                    "linkAddress": "https://hahaha.com",&#13;
+                    "sorting": 1,&#13;
+                    "bannerShowStartTime": "2017-10-20 12:30",&#13;
+                    "bannerShowEndTime": "2017-10-20 12:50"&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>bannerMessages-sendObj为特殊符号<a name="bannerMessages-sendObj%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/bannerMessages</td><td>POST</td><td>{&#13;
+    "categoryId": "b413c19f-40fe-4a58-b4e2-e9a7d55fa8b3",&#13;
+    "messageType": 2,&#13;
+    "sendObj": &amp;,&#13;
+    "messages": [&#13;
+        {&#13;
+            "messagePushType": 2,&#13;
+            "bannerMessages": [&#13;
+                {&#13;
+                    "image": "af855a8e-ade1-465a-a69e-0e3935bed907",&#13;
+                    "linkAddress": "https://hahaha.com",&#13;
+                    "sorting": 1,&#13;
+                    "bannerShowStartTime": "2017-10-20 12:30",&#13;
+                    "bannerShowEndTime": "2017-10-20 12:50"&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>bannerMessages-sendObj为数学符号<a name="bannerMessages-sendObj%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/bannerMessages</td><td>POST</td><td>{&#13;
+    "categoryId": "b413c19f-40fe-4a58-b4e2-e9a7d55fa8b3",&#13;
+    "messageType": 2,&#13;
+    "sendObj": +,&#13;
+    "messages": [&#13;
+        {&#13;
+            "messagePushType": 2,&#13;
+            "bannerMessages": [&#13;
+                {&#13;
+                    "image": "af855a8e-ade1-465a-a69e-0e3935bed907",&#13;
+                    "linkAddress": "https://hahaha.com",&#13;
+                    "sorting": 1,&#13;
+                    "bannerShowStartTime": "2017-10-20 12:30",&#13;
+                    "bannerShowEndTime": "2017-10-20 12:50"&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>bannerMessages-sendObj为标点符号<a name="bannerMessages-sendObj%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/bannerMessages</td><td>POST</td><td>{&#13;
+    "categoryId": "b413c19f-40fe-4a58-b4e2-e9a7d55fa8b3",&#13;
+    "messageType": 2,&#13;
+    "sendObj": ？,&#13;
+    "messages": [&#13;
+        {&#13;
+            "messagePushType": 2,&#13;
+            "bannerMessages": [&#13;
+                {&#13;
+                    "image": "af855a8e-ade1-465a-a69e-0e3935bed907",&#13;
+                    "linkAddress": "https://hahaha.com",&#13;
+                    "sorting": 1,&#13;
+                    "bannerShowStartTime": "2017-10-20 12:30",&#13;
+                    "bannerShowEndTime": "2017-10-20 12:50"&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>bannerMessages-messages为空<a name="bannerMessages-messages%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/bannerMessages</td><td>POST</td><td>{&#13;
+    "categoryId": "b413c19f-40fe-4a58-b4e2-e9a7d55fa8b3",&#13;
+    "messageType": 2,&#13;
+    "sendObj": 2,&#13;
+    "messages": [&#13;
+        ""&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>bannerMessages-messages为空格<a name="bannerMessages-messages%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/bannerMessages</td><td>POST</td><td>{&#13;
+    "categoryId": "b413c19f-40fe-4a58-b4e2-e9a7d55fa8b3",&#13;
+    "messageType": 2,&#13;
+    "sendObj": 2,&#13;
+    "messages": [&#13;
+        "    "&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>bannerMessages-messages为a-z的字符串<a name="bannerMessages-messages%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/bannerMessages</td><td>POST</td><td>{&#13;
+    "categoryId": "b413c19f-40fe-4a58-b4e2-e9a7d55fa8b3",&#13;
+    "messageType": 2,&#13;
+    "sendObj": 2,&#13;
+    "messages": [&#13;
+        "testtest"&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>bannerMessages-messages为中文<a name="bannerMessages-messages%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/bannerMessages</td><td>POST</td><td>{&#13;
+    "categoryId": "b413c19f-40fe-4a58-b4e2-e9a7d55fa8b3",&#13;
+    "messageType": 2,&#13;
+    "sendObj": 2,&#13;
+    "messages": [&#13;
+        "消息中心接口"&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>bannerMessages-messages为特殊符号<a name="bannerMessages-messages%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/bannerMessages</td><td>POST</td><td>{&#13;
+    "categoryId": "b413c19f-40fe-4a58-b4e2-e9a7d55fa8b3",&#13;
+    "messageType": 2,&#13;
+    "sendObj": 2,&#13;
+    "messages": [&#13;
+        "&amp;"&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>bannerMessages-messages为数学符号<a name="bannerMessages-messages%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/bannerMessages</td><td>POST</td><td>{&#13;
+    "categoryId": "b413c19f-40fe-4a58-b4e2-e9a7d55fa8b3",&#13;
+    "messageType": 2,&#13;
+    "sendObj": 2,&#13;
+    "messages": [&#13;
+        "+"&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>bannerMessages-messages为标点符号<a name="bannerMessages-messages%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/bannerMessages</td><td>POST</td><td>{&#13;
+    "categoryId": "b413c19f-40fe-4a58-b4e2-e9a7d55fa8b3",&#13;
+    "messageType": 2,&#13;
+    "sendObj": 2,&#13;
+    "messages": [&#13;
+        "？"&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>category/{categoryId}/{imageId}-categoryId为空格<a name="category/{categoryId}/{imageId}-categoryId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category/%20/aad30074-400d-4fae-b75b-2ba0eedd5681</td><td>DELETE</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>category/{categoryId}/{imageId}-categoryId为a-z的字符串<a name="category/{categoryId}/{imageId}-categoryId%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category/dfghjk/aad30074-400d-4fae-b75b-2ba0eedd5681</td><td>DELETE</td><td></td><td>204 - </td><td></td>
+</tr>
+</table>
+<h3>category/{categoryId}/{imageId}-categoryId为中文<a name="category/{categoryId}/{imageId}-categoryId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category/广告位编号/aad30074-400d-4fae-b75b-2ba0eedd5681</td><td>DELETE</td><td></td><td>204 - </td><td></td>
+</tr>
+</table>
+<h3>category/{categoryId}/{imageId}-categoryId为特殊符号<a name="category/{categoryId}/{imageId}-categoryId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category/&amp;/aad30074-400d-4fae-b75b-2ba0eedd5681</td><td>DELETE</td><td></td><td>204 - </td><td></td>
+</tr>
+</table>
+<h3>category/{categoryId}/{imageId}-categoryId为数学符号<a name="category/{categoryId}/{imageId}-categoryId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category/+/aad30074-400d-4fae-b75b-2ba0eedd5681</td><td>DELETE</td><td></td><td>204 - </td><td></td>
+</tr>
+</table>
+<h3>category/{categoryId}/{imageId}-categoryId为标点符号<a name="category/{categoryId}/{imageId}-categoryId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category/、/aad30074-400d-4fae-b75b-2ba0eedd5681</td><td>DELETE</td><td></td><td>204 - </td><td></td>
+</tr>
+</table>
+<h3>category/{categoryId}/{imageId}-imageId为空格<a name="category/{categoryId}/{imageId}-imageId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category/54dfbca9-26b0-4cbb-806e-92c9154ec021/%20</td><td>DELETE</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>category/{categoryId}/{imageId}-imageId为a-z的字符串<a name="category/{categoryId}/{imageId}-imageId%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category/54dfbca9-26b0-4cbb-806e-92c9154ec021/rtyuio</td><td>DELETE</td><td></td><td>204 - </td><td></td>
+</tr>
+</table>
+<h3>category/{categoryId}/{imageId}-imageId为中文<a name="category/{categoryId}/{imageId}-imageId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category/54dfbca9-26b0-4cbb-806e-92c9154ec021/图片编号</td><td>DELETE</td><td></td><td>204 - </td><td></td>
+</tr>
+</table>
+<h3>category/{categoryId}/{imageId}-imageId为特殊符号<a name="category/{categoryId}/{imageId}-imageId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category/54dfbca9-26b0-4cbb-806e-92c9154ec021/&amp;</td><td>DELETE</td><td></td><td>204 - </td><td></td>
+</tr>
+</table>
+<h3>category/{categoryId}/{imageId}-imageId为数学符号<a name="category/{categoryId}/{imageId}-imageId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category/54dfbca9-26b0-4cbb-806e-92c9154ec021/+</td><td>DELETE</td><td></td><td>204 - </td><td></td>
+</tr>
+</table>
+<h3>category/{categoryId}/{imageId}-imageId为标点符号<a name="category/{categoryId}/{imageId}-imageId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/message/v1/sec/category/54dfbca9-26b0-4cbb-806e-92c9154ec021/，</td><td>DELETE</td><td></td><td>204 - </td><td></td>
+</tr>
+</table>
+</body>
+</html>

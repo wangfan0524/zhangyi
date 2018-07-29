@@ -1,0 +1,172 @@
+2018-06-11 20:00:34,803 INFO o.a.j.u.JMeterUtils: Setting Locale to zh_CN
+2018-06-11 20:00:34,823 INFO o.a.j.JMeter: Loading user properties from: user.properties
+2018-06-11 20:00:34,824 INFO o.a.j.JMeter: Loading system properties from: system.properties
+2018-06-11 20:00:34,824 INFO o.a.j.JMeter: Setting JMeter property: host=staging.zhishinet.com
+2018-06-11 20:00:34,829 INFO o.a.j.JMeter: Copyright (c) 1998-2017 The Apache Software Foundation
+2018-06-11 20:00:34,829 INFO o.a.j.JMeter: Version 3.2 r1790748
+2018-06-11 20:00:34,829 INFO o.a.j.JMeter: java.version=1.8.0_144
+2018-06-11 20:00:34,829 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2018-06-11 20:00:34,829 INFO o.a.j.JMeter: os.name=Windows 10
+2018-06-11 20:00:34,829 INFO o.a.j.JMeter: os.arch=amd64
+2018-06-11 20:00:34,830 INFO o.a.j.JMeter: os.version=10.0
+2018-06-11 20:00:34,830 INFO o.a.j.JMeter: file.encoding=GBK
+2018-06-11 20:00:34,830 INFO o.a.j.JMeter: Max memory     =3793747968
+2018-06-11 20:00:34,830 INFO o.a.j.JMeter: Available Processors =4
+2018-06-11 20:00:34,836 INFO o.a.j.JMeter: Default Locale=中文 (中国)
+2018-06-11 20:00:34,837 INFO o.a.j.JMeter: JMeter  Locale=中文 (中国)
+2018-06-11 20:00:34,837 INFO o.a.j.JMeter: JMeterHome=E:\zhishinetWorke\ZHISHIINTERFACE\apache-jmeter-3.2
+2018-06-11 20:00:34,837 INFO o.a.j.JMeter: user.dir  =E:\zhishinetWorke\ZHISHIINTERFACE\apache-jmeter-3.2\bin
+2018-06-11 20:00:34,837 INFO o.a.j.JMeter: PWD       =E:\zhishinetWorke\ZHISHIINTERFACE\apache-jmeter-3.2\bin
+2018-06-11 20:00:34,882 INFO o.a.j.JMeter: IP: 10.205.72.139 Name: G4OZ2NYR23QHW5I FullName: 10.205.72.139
+2018-06-11 20:00:34,885 INFO o.a.j.s.FileServer: Default base='E:\zhishinetWorke\ZHISHIINTERFACE\apache-jmeter-3.2\bin'
+2018-06-11 20:00:34,886 INFO o.a.j.s.FileServer: Set new base='E:\zhishinetWorke\git\InterfaceTest\ZhiShiNetTest\TestSuite'
+2018-06-11 20:00:34,999 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2018-06-11 20:00:35,013 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2018-06-11 20:00:35,020 INFO o.a.j.s.SaveService: Using SaveService properties version 3.2
+2018-06-11 20:00:35,027 INFO o.a.j.s.SaveService: Loading file: E:\zhishinetWorke\git\InterfaceTest\ZhiShiNetTest\TestSuite\teacher_Test.jmx
+2018-06-11 20:00:35,148 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-06-11 20:00:35,148 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-06-11 20:00:35,148 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-06-11 20:00:35,148 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-06-11 20:00:35,148 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2018-06-11 20:00:35,149 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2018-06-11 20:00:35,337 INFO o.a.j.JMeter: Creating summariser <summary>
+2018-06-11 20:00:35,343 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2018-06-11 20:00:35,344 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2018-06-11 20:00:35,344 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2018-06-11 20:00:35,350 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2018-06-11 20:00:35,350 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2018-06-11 20:00:35,801 INFO o.a.j.JMeter: 正在运行的测试 (1528718435801)
+2018-06-11 20:00:35,871 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : getSuitsOfSuitSeriesTextbook-查询套题册对应课本下的套题
+2018-06-11 20:00:35,871 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group getSuitsOfSuitSeriesTextbook-查询套题册对应课本下的套题.
+2018-06-11 20:00:35,872 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-06-11 20:00:35,872 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2018-06-11 20:00:35,883 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2018-06-11 20:00:35,883 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: getSuitsOfSuitSeriesTextbook-查询套题册对应课本下的套题 to finish before starting next group
+2018-06-11 20:00:35,885 INFO o.a.j.t.JMeterThread: Thread started: getSuitsOfSuitSeriesTextbook-查询套题册对应课本下的套题 1-1
+2018-06-11 20:00:35,916 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = G4OZ2NYR23QHW5I
+2018-06-11 20:00:35,922 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2018-06-11 20:00:35,930 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2018-06-11 20:00:35,931 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to utf-8
+2018-06-11 20:00:35,931 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2018-06-11 20:00:35,931 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2018-06-11 20:00:36,009 INFO o.a.j.p.h.s.LazySchemeSocketFactory: Setting up HTTPS TrustAll Socket Factory
+2018-06-11 20:00:36,016 INFO o.a.j.u.JsseSSLManager: Using default SSL protocol: TLS
+2018-06-11 20:00:36,017 INFO o.a.j.u.JsseSSLManager: SSL session context: per-thread
+2018-06-11 20:00:37,477 INFO o.a.j.u.SSLManager: JmeterKeyStore Location:  type JKS
+2018-06-11 20:00:37,477 INFO o.a.j.u.SSLManager: KeyStore created OK
+2018-06-11 20:00:37,478 WARN o.a.j.u.SSLManager: Keystore file not found, loading empty keystore
+2018-06-11 20:00:42,665 INFO o.a.j.t.JMeterThread: Thread is done: getSuitsOfSuitSeriesTextbook-查询套题册对应课本下的套题 1-1
+2018-06-11 20:00:42,666 INFO o.a.j.t.JMeterThread: Thread finished: getSuitsOfSuitSeriesTextbook-查询套题册对应课本下的套题 1-1
+2018-06-11 20:00:42,667 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 2 : addHomeworkSuitRelSeries-增加套题册关联套题
+2018-06-11 20:00:42,667 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group addHomeworkSuitRelSeries-增加套题册关联套题.
+2018-06-11 20:00:42,667 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-06-11 20:00:42,668 INFO o.a.j.t.ThreadGroup: Starting thread group... number=2 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2018-06-11 20:00:42,683 INFO o.a.j.t.ThreadGroup: Started thread group number 2
+2018-06-11 20:00:42,683 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: addHomeworkSuitRelSeries-增加套题册关联套题 to finish before starting next group
+2018-06-11 20:00:42,695 INFO o.a.j.t.JMeterThread: Thread started: addHomeworkSuitRelSeries-增加套题册关联套题 2-1
+2018-06-11 20:01:37,122 INFO o.a.j.t.JMeterThread: Thread is done: addHomeworkSuitRelSeries-增加套题册关联套题 2-1
+2018-06-11 20:01:37,122 INFO o.a.j.t.JMeterThread: Thread finished: addHomeworkSuitRelSeries-增加套题册关联套题 2-1
+2018-06-11 20:01:37,123 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 3 : getSuitSeriesByBookId-根据课本查询套题册
+2018-06-11 20:01:37,123 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group getSuitSeriesByBookId-根据课本查询套题册.
+2018-06-11 20:01:37,123 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-06-11 20:01:37,123 INFO o.a.j.t.ThreadGroup: Starting thread group... number=3 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2018-06-11 20:01:37,130 INFO o.a.j.t.ThreadGroup: Started thread group number 3
+2018-06-11 20:01:37,130 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: getSuitSeriesByBookId-根据课本查询套题册 to finish before starting next group
+2018-06-11 20:01:37,132 INFO o.a.j.t.JMeterThread: Thread started: getSuitSeriesByBookId-根据课本查询套题册 3-1
+2018-06-11 20:01:42,647 INFO o.a.j.t.JMeterThread: Thread is done: getSuitSeriesByBookId-根据课本查询套题册 3-1
+2018-06-11 20:01:42,648 INFO o.a.j.t.JMeterThread: Thread finished: getSuitSeriesByBookId-根据课本查询套题册 3-1
+2018-06-11 20:01:42,649 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 4 : getTeacherSuitList布置作业-套题列表查询
+2018-06-11 20:01:42,649 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group getTeacherSuitList布置作业-套题列表查询.
+2018-06-11 20:01:42,649 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-06-11 20:01:42,649 INFO o.a.j.t.ThreadGroup: Starting thread group... number=4 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2018-06-11 20:01:42,657 INFO o.a.j.t.ThreadGroup: Started thread group number 4
+2018-06-11 20:01:42,657 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: getTeacherSuitList布置作业-套题列表查询 to finish before starting next group
+2018-06-11 20:01:42,660 INFO o.a.j.t.JMeterThread: Thread started: getTeacherSuitList布置作业-套题列表查询 4-1
+2018-06-11 20:01:50,237 INFO o.a.j.t.JMeterThread: Thread is done: getTeacherSuitList布置作业-套题列表查询 4-1
+2018-06-11 20:01:50,238 INFO o.a.j.t.JMeterThread: Thread finished: getTeacherSuitList布置作业-套题列表查询 4-1
+2018-06-11 20:01:50,238 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 5 : getHomeworkTextbookSeries套题-套题列表查询 教材过滤条件-管理端
+2018-06-11 20:01:50,238 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group getHomeworkTextbookSeries套题-套题列表查询 教材过滤条件-管理端.
+2018-06-11 20:01:50,238 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-06-11 20:01:50,239 INFO o.a.j.t.ThreadGroup: Starting thread group... number=5 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2018-06-11 20:01:50,247 INFO o.a.j.t.ThreadGroup: Started thread group number 5
+2018-06-11 20:01:50,247 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: getHomeworkTextbookSeries套题-套题列表查询 教材过滤条件-管理端 to finish before starting next group
+2018-06-11 20:01:50,248 INFO o.a.j.t.JMeterThread: Thread started: getHomeworkTextbookSeries套题-套题列表查询 教材过滤条件-管理端 5-1
+2018-06-11 20:01:53,173 INFO o.a.j.t.JMeterThread: Thread is done: getHomeworkTextbookSeries套题-套题列表查询 教材过滤条件-管理端 5-1
+2018-06-11 20:01:53,173 INFO o.a.j.t.JMeterThread: Thread finished: getHomeworkTextbookSeries套题-套题列表查询 教材过滤条件-管理端 5-1
+2018-06-11 20:01:53,174 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 6 : getLookUpValue套题册-添加班级-查询学段
+2018-06-11 20:01:53,174 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group getLookUpValue套题册-添加班级-查询学段.
+2018-06-11 20:01:53,174 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-06-11 20:01:53,174 INFO o.a.j.t.ThreadGroup: Starting thread group... number=6 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2018-06-11 20:01:53,179 INFO o.a.j.t.ThreadGroup: Started thread group number 6
+2018-06-11 20:01:53,179 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: getLookUpValue套题册-添加班级-查询学段 to finish before starting next group
+2018-06-11 20:01:53,180 INFO o.a.j.t.JMeterThread: Thread started: getLookUpValue套题册-添加班级-查询学段 6-1
+2018-06-11 20:01:55,319 INFO o.a.j.t.JMeterThread: Thread is done: getLookUpValue套题册-添加班级-查询学段 6-1
+2018-06-11 20:01:55,319 INFO o.a.j.t.JMeterThread: Thread finished: getLookUpValue套题册-添加班级-查询学段 6-1
+2018-06-11 20:01:55,321 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 7 : getLookUpValue套题册-添加班级-查询年级
+2018-06-11 20:01:55,322 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group getLookUpValue套题册-添加班级-查询年级.
+2018-06-11 20:01:55,322 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-06-11 20:01:55,322 INFO o.a.j.t.ThreadGroup: Starting thread group... number=7 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2018-06-11 20:01:55,351 INFO o.a.j.t.ThreadGroup: Started thread group number 7
+2018-06-11 20:01:55,352 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: getLookUpValue套题册-添加班级-查询年级 to finish before starting next group
+2018-06-11 20:01:55,353 INFO o.a.j.t.JMeterThread: Thread started: getLookUpValue套题册-添加班级-查询年级 7-1
+2018-06-11 20:01:57,805 INFO o.a.j.t.JMeterThread: Thread is done: getLookUpValue套题册-添加班级-查询年级 7-1
+2018-06-11 20:01:57,805 INFO o.a.j.t.JMeterThread: Thread finished: getLookUpValue套题册-添加班级-查询年级 7-1
+2018-06-11 20:01:57,807 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 8 : getLastSelectedUnitInfo保存当前教师的上一次选择的单元
+2018-06-11 20:01:57,808 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group getLastSelectedUnitInfo保存当前教师的上一次选择的单元.
+2018-06-11 20:01:57,808 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-06-11 20:01:57,808 INFO o.a.j.t.ThreadGroup: Starting thread group... number=8 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2018-06-11 20:01:57,839 INFO o.a.j.t.ThreadGroup: Started thread group number 8
+2018-06-11 20:01:57,839 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: getLastSelectedUnitInfo保存当前教师的上一次选择的单元 to finish before starting next group
+2018-06-11 20:01:57,843 INFO o.a.j.t.JMeterThread: Thread started: getLastSelectedUnitInfo保存当前教师的上一次选择的单元 8-1
+2018-06-11 20:02:00,294 INFO o.a.j.r.Summariser: summary +    124 in 00:01:24 =    1.5/s Avg:   671 Min:     0 Max: 50268 Err:     1 (0.81%) Active: 1 Started: 8 Finished: 7
+2018-06-11 20:02:00,732 INFO o.a.j.t.JMeterThread: Thread is done: getLastSelectedUnitInfo保存当前教师的上一次选择的单元 8-1
+2018-06-11 20:02:00,732 INFO o.a.j.t.JMeterThread: Thread finished: getLastSelectedUnitInfo保存当前教师的上一次选择的单元 8-1
+2018-06-11 20:02:00,734 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 9 : getTeacherSuitList根据单元查询套题列表
+2018-06-11 20:02:00,735 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group getTeacherSuitList根据单元查询套题列表.
+2018-06-11 20:02:00,735 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-06-11 20:02:00,735 INFO o.a.j.t.ThreadGroup: Starting thread group... number=9 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2018-06-11 20:02:00,755 INFO o.a.j.t.ThreadGroup: Started thread group number 9
+2018-06-11 20:02:00,755 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: getTeacherSuitList根据单元查询套题列表 to finish before starting next group
+2018-06-11 20:02:00,760 INFO o.a.j.t.JMeterThread: Thread started: getTeacherSuitList根据单元查询套题列表 9-1
+2018-06-11 20:02:06,754 INFO o.a.j.t.JMeterThread: Thread is done: getTeacherSuitList根据单元查询套题列表 9-1
+2018-06-11 20:02:06,755 INFO o.a.j.t.JMeterThread: Thread finished: getTeacherSuitList根据单元查询套题列表 9-1
+2018-06-11 20:02:06,759 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 10 : suitExport套题册导出
+2018-06-11 20:02:06,759 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group suitExport套题册导出.
+2018-06-11 20:02:06,760 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-06-11 20:02:06,760 INFO o.a.j.t.ThreadGroup: Starting thread group... number=10 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2018-06-11 20:02:06,793 INFO o.a.j.t.ThreadGroup: Started thread group number 10
+2018-06-11 20:02:06,793 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: suitExport套题册导出 to finish before starting next group
+2018-06-11 20:02:06,794 INFO o.a.j.t.JMeterThread: Thread started: suitExport套题册导出 10-1
+2018-06-11 20:02:08,426 INFO o.a.j.t.JMeterThread: Thread is done: suitExport套题册导出 10-1
+2018-06-11 20:02:08,426 INFO o.a.j.t.JMeterThread: Thread finished: suitExport套题册导出 10-1
+2018-06-11 20:02:08,429 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 11 : getHomeworkAssessmentDetailsOrder查询作业题目详情
+2018-06-11 20:02:08,430 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group getHomeworkAssessmentDetailsOrder查询作业题目详情.
+2018-06-11 20:02:08,430 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-06-11 20:02:08,430 INFO o.a.j.t.ThreadGroup: Starting thread group... number=11 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2018-06-11 20:02:08,454 INFO o.a.j.t.ThreadGroup: Started thread group number 11
+2018-06-11 20:02:08,455 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: getHomeworkAssessmentDetailsOrder查询作业题目详情 to finish before starting next group
+2018-06-11 20:02:08,456 INFO o.a.j.t.JMeterThread: Thread started: getHomeworkAssessmentDetailsOrder查询作业题目详情 11-1
+2018-06-11 20:02:12,568 INFO o.a.j.t.JMeterThread: Thread is done: getHomeworkAssessmentDetailsOrder查询作业题目详情 11-1
+2018-06-11 20:02:12,569 INFO o.a.j.t.JMeterThread: Thread finished: getHomeworkAssessmentDetailsOrder查询作业题目详情 11-1
+2018-06-11 20:02:12,570 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 12 : getHomeworkScoreNew -   查看作业成绩
+2018-06-11 20:02:12,571 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group getHomeworkScoreNew -   查看作业成绩.
+2018-06-11 20:02:12,571 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-06-11 20:02:12,571 INFO o.a.j.t.ThreadGroup: Starting thread group... number=12 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2018-06-11 20:02:12,592 INFO o.a.j.t.ThreadGroup: Started thread group number 12
+2018-06-11 20:02:12,593 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: getHomeworkScoreNew -   查看作业成绩 to finish before starting next group
+2018-06-11 20:02:12,595 INFO o.a.j.t.JMeterThread: Thread started: getHomeworkScoreNew -   查看作业成绩 12-1
+2018-06-11 20:02:16,276 INFO o.a.j.t.JMeterThread: Thread is done: getHomeworkScoreNew -   查看作业成绩 12-1
+2018-06-11 20:02:16,276 INFO o.a.j.t.JMeterThread: Thread finished: getHomeworkScoreNew -   查看作业成绩 12-1
+2018-06-11 20:02:16,277 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 13 : saveShareScoreNew - 作业成绩 微信分享 数据保存 新接口  
+2018-06-11 20:02:16,277 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group saveShareScoreNew - 作业成绩 微信分享 数据保存 新接口  .
+2018-06-11 20:02:16,277 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-06-11 20:02:16,277 INFO o.a.j.t.ThreadGroup: Starting thread group... number=13 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2018-06-11 20:02:16,287 INFO o.a.j.t.ThreadGroup: Started thread group number 13
+2018-06-11 20:02:16,287 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2018-06-11 20:02:16,288 INFO o.a.j.t.JMeterThread: Thread started: saveShareScoreNew - 作业成绩 微信分享 数据保存 新接口   13-1
+2018-06-11 20:02:24,598 INFO o.a.j.t.JMeterThread: Thread is done: saveShareScoreNew - 作业成绩 微信分享 数据保存 新接口   13-1
+2018-06-11 20:02:24,598 INFO o.a.j.t.JMeterThread: Thread finished: saveShareScoreNew - 作业成绩 微信分享 数据保存 新接口   13-1
+2018-06-11 20:02:24,598 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2018-06-11 20:02:24,599 INFO o.a.j.r.Summariser: summary +     74 in 00:00:24 =    3.0/s Avg:   282 Min:     0 Max:  1395 Err:     0 (0.00%) Active: 0 Started: 13 Finished: 13
+2018-06-11 20:02:24,600 INFO o.a.j.r.Summariser: summary =    198 in 00:01:49 =    1.8/s Avg:   525 Min:     0 Max: 50268 Err:     1 (0.51%)

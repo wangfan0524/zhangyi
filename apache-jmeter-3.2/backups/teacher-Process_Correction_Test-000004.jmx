@@ -1,0 +1,2073 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="3.2" jmeter="3.2 r1790748">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="测试计划" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">true</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="host" elementType="Argument">
+            <stringProp name="Argument.name">host</stringProp>
+            <stringProp name="Argument.value">${__P(host,test.zhishinet.com)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="port" elementType="Argument">
+            <stringProp name="Argument.name">port</stringProp>
+            <stringProp name="Argument.value">443</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="protocol" elementType="Argument">
+            <stringProp name="Argument.name">protocol</stringProp>
+            <stringProp name="Argument.value">https</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="basepath_teacher" elementType="Argument">
+            <stringProp name="Argument.name">basepath_teacher</stringProp>
+            <stringProp name="Argument.value">api/teacher/v1/sec</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="randomdata" elementType="Argument">
+            <stringProp name="Argument.name">randomdata</stringProp>
+            <stringProp name="Argument.value">${__Random(0,9999999,randomdata)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Authorization</stringProp>
+            <stringProp name="Header.value">${__V(${type} ${token})}</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">content-Type</stringProp>
+            <stringProp name="Header.value">application/json</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="BeanShell PreProcessor" enabled="true">
+        <boolProp name="resetInterpreter">false</boolProp>
+        <stringProp name="parameters"></stringProp>
+        <stringProp name="filename"></stringProp>
+        <stringProp name="script">var host = &quot;${host}&quot;;
+if (host == &quot;test.zhishinet.com&quot;){ 
+vars.put(&quot;username&quot;, &quot;sh000124&quot;);
+vars.put(&quot;passwd&quot;, &quot;welcome3&quot;);}
+else if (host == &quot;dev.zhishinet.com&quot;){
+vars.put(&quot;username&quot;, &quot;sh000124&quot;);
+vars.put(&quot;passwd&quot;, &quot;welcome3&quot;);
+}else if (host == &quot;dev2.zhishinet.com&quot;){
+vars.put(&quot;username&quot;,&quot;sh000124&quot;);
+vars.put(&quot;passwd&quot;, &quot;welcome3&quot;);
+}else if (host == &quot;staging.zhishinet.com&quot;){
+vars.put(&quot;username&quot;, &quot;sh000124&quot;);
+vars.put(&quot;passwd&quot;, &quot;welcome123&quot;);
+}
+</stringProp>
+      </BeanShellPreProcessor>
+      <hashTree/>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>true</samplerData>
+            <xml>true</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>true</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="getToken" enabled="true"/>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="getToken" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+	&quot;username&quot;: &quot;${username}&quot;,&#xd;
+	&quot;password&quot;: &quot;${passwd}&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.port">${port}</stringProp>
+          <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">api/zauth/v1/token/access</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="type" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">type</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;token_type&quot;:&quot;(.*?)&quot;}</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default"></stringProp>
+            <stringProp name="RegexExtractor.match_number">0</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="token" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">token</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;access_token&quot;:&quot;(.*?)&quot;,</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default"></stringProp>
+            <stringProp name="RegexExtractor.match_number">0</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+          <DebugPostProcessor guiclass="TestBeanGUI" testclass="DebugPostProcessor" testname="Debug PostProcessor" enabled="true">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySamplerProperties">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugPostProcessor>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="首页" enabled="true"/>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="teacher" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.port">${port}</stringProp>
+          <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">api/user-profile/v1/sec/users/teacher</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="getTeacherGlobalSessions" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.port">${port}</stringProp>
+          <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">api/teacher/v1/sec/getTeacherGlobalSessions</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="homeworkList作业列表" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="subjectId" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">subjectId</stringProp>
+              </elementProp>
+              <elementProp name="sessionId" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">123787</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">sessionId</stringProp>
+              </elementProp>
+              <elementProp name="page" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">page</stringProp>
+              </elementProp>
+              <elementProp name="pageSize" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">1000</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">pageSize</stringProp>
+              </elementProp>
+              <elementProp name="isEnd" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">false</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">isEnd</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.port">${port}</stringProp>
+          <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">${basepath_teacher}/teacher/homeworkList</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="getLastSelectedUnitInfo-查询上次一选中教材、课本" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="subjectId" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">subjectId</stringProp>
+              </elementProp>
+              <elementProp name="page" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">0</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">page</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.port">${port}</stringProp>
+          <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">${basepath_teacher}/getLastSelectedUnitInfo</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="正则表达式提取器" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">subjectId</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;subjectId&quot;:(.+?),</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default"></stringProp>
+            <stringProp name="RegexExtractor.match_number">0</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="getHomeworkTextbookSeries-教材查询-英语" enabled="true"/>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="getHomeworkTextbookSeries-教材查询" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="subjectId" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">subjectId</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.port">${port}</stringProp>
+          <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">${basepath_teacher}/getHomeworkTextbookSeries</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="正则表达式提取器" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">homeworkTextbookSeriesId</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;homeworkTextbookSeriesId&quot;:(.+?),</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default"></stringProp>
+            <stringProp name="RegexExtractor.match_number">0</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="getHomeworkTextbookSeries-教材查询-数学" enabled="true"/>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="getHomeworkTextbookSeries-教材查询" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="subjectId" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">2</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">subjectId</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.port">${port}</stringProp>
+          <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">${basepath_teacher}/getHomeworkTextbookSeries</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="正则表达式提取器" enabled="true">
+          <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+          <stringProp name="RegexExtractor.refname">homeworkTextbookSeriesId</stringProp>
+          <stringProp name="RegexExtractor.regex">&quot;homeworkTextbookSeriesId&quot;:(.+?),</stringProp>
+          <stringProp name="RegexExtractor.template">$1$</stringProp>
+          <stringProp name="RegexExtractor.default"></stringProp>
+          <stringProp name="RegexExtractor.match_number">0</stringProp>
+        </RegexExtractor>
+        <hashTree/>
+      </hashTree>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="getHomeworkTextbook-课本查询" enabled="true"/>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="getHomeworkTextbook-课本查询" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="homeworkTextbookSeriesId" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">homeworkTextbookSeriesId</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.port">${port}</stringProp>
+          <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">${basepath_teacher}/getHomeworkTextbook</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="getHomeworkUnit-单元查询" enabled="true"/>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="getHomeworkUnit-单元查询" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="homeworkTextbookId" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">2</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">homeworkTextbookId</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.port">${port}</stringProp>
+          <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">${basepath_teacher}/getHomeworkUnit</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="getHomeworkKnowledgePoint-查询知识点、主题、视频名称-英语" enabled="true"/>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="getHomeworkKnowledgePoint-查询知识点、主题、视频名称" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+	&quot;subjectId&quot;: 1, &#xd;
+	&quot;textbookId&quot;: 2, &#xd;
+	&quot;unitNos&quot;: [5,1]&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.port">${port}</stringProp>
+          <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">${basepath_teacher}/getHomeworkKnowledgePoint</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="getHomeworkKnowledgePoint-查询知识点、主题、视频名称-数学" enabled="true"/>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="getHomeworkKnowledgePoint-查询知识点、主题、视频名称" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+	&quot;subjectId&quot;:2, &#xd;
+	&quot;textbookId&quot;: 27, &#xd;
+	&quot;unitNos&quot;: [1]&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.port">${port}</stringProp>
+          <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">${basepath_teacher}/getHomeworkKnowledgePoint</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="正则表达式提取器" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">questionMaxCount</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;questionMaxCount&quot;:(.+?),</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default"></stringProp>
+            <stringProp name="RegexExtractor.match_number">0</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="getVocabularyQuestions-词汇语法随机抽题" enabled="true"/>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="getVocabularyQuestions-词汇语法随机抽题" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+	&quot;sessionId&quot;: [123787], &#xd;
+	&quot;taxonomyIds&quot;: [3590], &#xd;
+	 &quot;type&quot;: 0&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.port">${port}</stringProp>
+          <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">${basepath_teacher}/getVocabularyQuestions</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="正则表达式提取器" enabled="true">
+          <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+          <stringProp name="RegexExtractor.refname">questionId</stringProp>
+          <stringProp name="RegexExtractor.regex">&quot;questionId&quot;:(.+?),</stringProp>
+          <stringProp name="RegexExtractor.template">$1$</stringProp>
+          <stringProp name="RegexExtractor.default"></stringProp>
+          <stringProp name="RegexExtractor.match_number">0</stringProp>
+        </RegexExtractor>
+        <hashTree/>
+      </hashTree>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="publishAssessment-作业布置（直接布置作业）-英语" enabled="true"/>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="publishAssessment--英语布置作业" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+	&quot;assessmentBuilderType&quot;: 2,&#xd;
+	&quot;title&quot;: &quot;${hs_suitName}&quot;,&#xd;
+	&quot;beginDate&quot;: 1528438020,&#xd;
+	&quot;endDate&quot;: 4463187427,&#xd;
+	&quot;isOptionRandom&quot;: true,&#xd;
+	&quot;disableFeedback&quot;: false,&#xd;
+	&quot;showSubTitle&quot;: false,&#xd;
+	&quot;isTimerOn&quot;: true,&#xd;
+	&quot;duration&quot;: 1200,&#xd;
+	&quot;subjectId&quot;: 1,&#xd;
+	&quot;assessmentSessionList&quot;: [{&#xd;
+		&quot;sessionId&quot;: 2624,&#xd;
+		&quot;globalSessionTitle&quot;: &quot;2015级QAclass&quot;,&#xd;
+		&quot;checkFlag&quot;: false,&#xd;
+		&quot;code&quot;: &quot;10002197&quot;,&#xd;
+		&quot;title&quot;: &quot;芝士网皇家学院 本部 初中 2015级QA class&quot;,&#xd;
+		&quot;appTitle&quot;: &quot;芝士网皇家学院&quot;,&#xd;
+		&quot;isAllow&quot;: 1,&#xd;
+		&quot;classType&quot;: &quot;Express&quot;,&#xd;
+		&quot;classTypeTitle&quot;: &quot;体验班&quot;,&#xd;
+		&quot;isGroupEnable&quot;: 1,&#xd;
+		&quot;sessItemId&quot;: 0,&#xd;
+		&quot;isRequire&quot;: true,&#xd;
+		&quot;isRequiredEmend&quot;: true,&#xd;
+		&quot;isChecked&quot;: true,&#xd;
+		&quot;emendTypeCode&quot;: &quot;ERROR_INTENSIFY_QUESTIONS&quot;,&#xd;
+		&quot;selectAsk&quot;: [{&#xd;
+			&quot;sessionId&quot;: 2624,&#xd;
+			&quot;isRequire&quot;: true&#xd;
+		}, {&#xd;
+			&quot;sessionId&quot;: 2624,&#xd;
+			&quot;isRequiredEmend&quot;: true,&#xd;
+			&quot;emendTypeCode&quot;: &quot;ERROR_INTENSIFY_QUESTIONS&quot;&#xd;
+		}]&#xd;
+	}],&#xd;
+	&quot;combineQuestions&quot;: {&#xd;
+		&quot;vocabularyQuestionsList&quot;: [{&#xd;
+			&quot;duration&quot;: 60,&#xd;
+			&quot;questionTypeId&quot;: 1,&#xd;
+			&quot;questionTypeTitle&quot;: &quot;读音选词&quot;,&#xd;
+			&quot;assessmentQuestions&quot;: [{&#xd;
+				&quot;questionId&quot;: 339590,&#xd;
+				&quot;questionTypeId&quot;: 1,&#xd;
+				&quot;questionTypeTitle&quot;: &quot;读音选词&quot;,&#xd;
+				&quot;questionText&quot;: &quot;Miss Smith is ________/g?d/ with little kids.&quot;,&#xd;
+				&quot;homeworkQuestionTypeId&quot;: 38,&#xd;
+				&quot;title&quot;: null,&#xd;
+				&quot;taxonomyId&quot;: 4104,&#xd;
+				&quot;taxonomyTitle&quot;: &quot;good&quot;,&#xd;
+				&quot;categoryId&quot;: null,&#xd;
+				&quot;subCategoryId&quot;: null,&#xd;
+				&quot;masteryId&quot;: null,&#xd;
+				&quot;subMasteryId&quot;: null,&#xd;
+				&quot;difficultyLevel&quot;: 2,&#xd;
+				&quot;questionOptions&quot;: [{&#xd;
+					&quot;optionId&quot;: 814145,&#xd;
+					&quot;optionText&quot;: &quot;god&quot;,&#xd;
+					&quot;isCorrect&quot;: 0,&#xd;
+					&quot;sortOrder&quot;: 1,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: null,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 814146,&#xd;
+					&quot;optionText&quot;: &quot;grade&quot;,&#xd;
+					&quot;isCorrect&quot;: 0,&#xd;
+					&quot;sortOrder&quot;: 2,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: null,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 814147,&#xd;
+					&quot;optionText&quot;: &quot;gold&quot;,&#xd;
+					&quot;isCorrect&quot;: 0,&#xd;
+					&quot;sortOrder&quot;: 3,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: null,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 814148,&#xd;
+					&quot;optionText&quot;: &quot;good&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 4,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: null,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}],&#xd;
+				&quot;articleId&quot;: null,&#xd;
+				&quot;blankId&quot;: null,&#xd;
+				&quot;inputTypes&quot;: null,&#xd;
+				&quot;correctFeedback&quot;: &quot;god /g?d/ n. 上帝；grade /gre?d/ n. 年级；gold /g??ld/ n. 金子；good /g?d/ adj. 好的。&lt;br&gt;句意：Smith小姐与小孩子相处得很好。&quot;,&#xd;
+				&quot;inCorrectFeedback&quot;: &quot;god /g?d/ n. 上帝；grade /gre?d/ n. 年级；gold /g??ld/ n. 金子；good /g?d/ adj. 好的。&lt;br&gt;句意：Smith小姐与小孩子相处得很好。&quot;,&#xd;
+				&quot;inCorrectPercent&quot;: null,&#xd;
+				&quot;userResponse&quot;: null,&#xd;
+				&quot;correctResponse&quot;: null,&#xd;
+				&quot;inCorrectCount&quot;: null,&#xd;
+				&quot;subjectId&quot;: null,&#xd;
+				&quot;tagLines&quot;: [],&#xd;
+				&quot;orderCode&quot;: &quot;02001000120&quot;,&#xd;
+				&quot;questionAnswerDetails&quot;: null,&#xd;
+				&quot;addCart&quot;: false,&#xd;
+				&quot;assign&quot;: false,&#xd;
+				&quot;correct&quot;: null&#xd;
+			}],&#xd;
+			&quot;orderCode&quot;: &quot;02001000120&quot;,&#xd;
+			&quot;questionId&quot;: 339590&#xd;
+		}, {&#xd;
+			&quot;duration&quot;: 35,&#xd;
+			&quot;questionTypeId&quot;: 1,&#xd;
+			&quot;questionTypeTitle&quot;: &quot;单选题&quot;,&#xd;
+			&quot;assessmentQuestions&quot;: [{&#xd;
+				&quot;questionId&quot;: 259078,&#xd;
+				&quot;questionTypeId&quot;: 1,&#xd;
+				&quot;questionTypeTitle&quot;: &quot;单选题&quot;,&#xd;
+				&quot;questionText&quot;: &quot;Bob is a ________ student. All the teachers like him.&quot;,&#xd;
+				&quot;homeworkQuestionTypeId&quot;: 1,&#xd;
+				&quot;title&quot;: null,&#xd;
+				&quot;taxonomyId&quot;: 4104,&#xd;
+				&quot;taxonomyTitle&quot;: &quot;good&quot;,&#xd;
+				&quot;categoryId&quot;: null,&#xd;
+				&quot;subCategoryId&quot;: null,&#xd;
+				&quot;masteryId&quot;: null,&#xd;
+				&quot;subMasteryId&quot;: null,&#xd;
+				&quot;difficultyLevel&quot;: 2,&#xd;
+				&quot;questionOptions&quot;: [{&#xd;
+					&quot;optionId&quot;: 639107,&#xd;
+					&quot;optionText&quot;: &quot;bad&quot;,&#xd;
+					&quot;isCorrect&quot;: 0,&#xd;
+					&quot;sortOrder&quot;: 1,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: null,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 639108,&#xd;
+					&quot;optionText&quot;: &quot;good&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 2,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: null,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 639109,&#xd;
+					&quot;optionText&quot;: &quot;happy&quot;,&#xd;
+					&quot;isCorrect&quot;: 0,&#xd;
+					&quot;sortOrder&quot;: 3,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: null,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 639110,&#xd;
+					&quot;optionText&quot;: &quot;sad&quot;,&#xd;
+					&quot;isCorrect&quot;: 0,&#xd;
+					&quot;sortOrder&quot;: 4,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: null,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}],&#xd;
+				&quot;articleId&quot;: null,&#xd;
+				&quot;blankId&quot;: null,&#xd;
+				&quot;inputTypes&quot;: null,&#xd;
+				&quot;correctFeedback&quot;: &quot;good 乖巧的；bad 坏的；sad 难过的；happy 快乐的。句意：Bob是一个乖巧的学生。所有的老师都喜欢他。&quot;,&#xd;
+				&quot;inCorrectFeedback&quot;: &quot;good 乖巧的；bad 坏的；sad 难过的；happy 快乐的。句意：Bob是一个乖巧的学生。所有的老师都喜欢他。&quot;,&#xd;
+				&quot;inCorrectPercent&quot;: null,&#xd;
+				&quot;userResponse&quot;: null,&#xd;
+				&quot;correctResponse&quot;: null,&#xd;
+				&quot;inCorrectCount&quot;: null,&#xd;
+				&quot;subjectId&quot;: null,&#xd;
+				&quot;tagLines&quot;: [],&#xd;
+				&quot;orderCode&quot;: &quot;02001000130&quot;,&#xd;
+				&quot;questionAnswerDetails&quot;: null,&#xd;
+				&quot;addCart&quot;: false,&#xd;
+				&quot;assign&quot;: false,&#xd;
+				&quot;correct&quot;: null&#xd;
+			}],&#xd;
+			&quot;orderCode&quot;: null,&#xd;
+			&quot;questionId&quot;: null&#xd;
+		}, {&#xd;
+			&quot;duration&quot;: 35,&#xd;
+			&quot;questionTypeId&quot;: 1,&#xd;
+			&quot;questionTypeTitle&quot;: &quot;单选题&quot;,&#xd;
+			&quot;assessmentQuestions&quot;: [{&#xd;
+				&quot;questionId&quot;: 305530,&#xd;
+				&quot;questionTypeId&quot;: 1,&#xd;
+				&quot;questionTypeTitle&quot;: &quot;单选题&quot;,&#xd;
+				&quot;questionText&quot;: &quot;--See you next week. Have a nice weekend.\n&lt;br&gt;&lt;br&gt;--________.&quot;,&#xd;
+				&quot;homeworkQuestionTypeId&quot;: 1,&#xd;
+				&quot;title&quot;: null,&#xd;
+				&quot;taxonomyId&quot;: 6740,&#xd;
+				&quot;taxonomyTitle&quot;: &quot;问候与祝愿&quot;,&#xd;
+				&quot;categoryId&quot;: null,&#xd;
+				&quot;subCategoryId&quot;: null,&#xd;
+				&quot;masteryId&quot;: null,&#xd;
+				&quot;subMasteryId&quot;: null,&#xd;
+				&quot;difficultyLevel&quot;: 2,&#xd;
+				&quot;questionOptions&quot;: [{&#xd;
+					&quot;optionId&quot;: 741929,&#xd;
+					&quot;optionText&quot;: &quot;Yes, please&quot;,&#xd;
+					&quot;isCorrect&quot;: 0,&#xd;
+					&quot;sortOrder&quot;: 1,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: null,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 741930,&#xd;
+					&quot;optionText&quot;: &quot;Thank you&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 2,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: null,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 741931,&#xd;
+					&quot;optionText&quot;: &quot;I&apos;m sorry to hear that&quot;,&#xd;
+					&quot;isCorrect&quot;: 0,&#xd;
+					&quot;sortOrder&quot;: 3,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: null,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 741932,&#xd;
+					&quot;optionText&quot;: &quot;You&apos;re welcome&quot;,&#xd;
+					&quot;isCorrect&quot;: 0,&#xd;
+					&quot;sortOrder&quot;: 4,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: null,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}],&#xd;
+				&quot;articleId&quot;: null,&#xd;
+				&quot;blankId&quot;: null,&#xd;
+				&quot;inputTypes&quot;: null,&#xd;
+				&quot;correctFeedback&quot;: &quot;句意：--下周见，祝你周末愉快。对于别人的祝福，要表示感谢，答案选Thank you。&quot;,&#xd;
+				&quot;inCorrectFeedback&quot;: &quot;句意：--下周见，祝你周末愉快。对于别人的祝福，要表示感谢，答案选Thank you。&quot;,&#xd;
+				&quot;inCorrectPercent&quot;: null,&#xd;
+				&quot;userResponse&quot;: null,&#xd;
+				&quot;correctResponse&quot;: null,&#xd;
+				&quot;inCorrectCount&quot;: null,&#xd;
+				&quot;subjectId&quot;: null,&#xd;
+				&quot;tagLines&quot;: [],&#xd;
+				&quot;orderCode&quot;: &quot;02001000130&quot;,&#xd;
+				&quot;questionAnswerDetails&quot;: null,&#xd;
+				&quot;addCart&quot;: false,&#xd;
+				&quot;assign&quot;: false,&#xd;
+				&quot;correct&quot;: null&#xd;
+			}],&#xd;
+			&quot;orderCode&quot;: null,&#xd;
+			&quot;questionId&quot;: null&#xd;
+		}],&#xd;
+		&quot;vocabularyQuestionsFIDList&quot;: [],&#xd;
+		&quot;vocabularyArticleQuestionsList&quot;: [],&#xd;
+		&quot;readingList&quot;: [],&#xd;
+		&quot;videoQuestions&quot;: [],&#xd;
+		&quot;oralReadSentenceList&quot;: [],&#xd;
+		&quot;oralGuessWordList&quot;: [],&#xd;
+		&quot;oralReadWordList&quot;: [],&#xd;
+		&quot;oralTopicDescribeList&quot;: []&#xd;
+	},&#xd;
+	&quot;suitList&quot;: []&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.port">${port}</stringProp>
+          <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/teacher/v1/sec/publishAssessment</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="用户参数" enabled="true">
+            <collectionProp name="UserParameters.names">
+              <stringProp name="-798995476">hs_suitName</stringProp>
+            </collectionProp>
+            <collectionProp name="UserParameters.thread_values">
+              <collectionProp name="1200808725">
+                <stringProp name="-244669501">English-zhishi${randomdata}</stringProp>
+              </collectionProp>
+            </collectionProp>
+            <boolProp name="UserParameters.per_iteration">false</boolProp>
+          </UserParameters>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">assessmentId</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.assessmentIds[0]</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <DebugPostProcessor guiclass="TestBeanGUI" testclass="DebugPostProcessor" testname="Debug PostProcessor" enabled="true">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySamplerProperties">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugPostProcessor>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="publishAssessment-作业布置（直接布置作业）-数学" enabled="true"/>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="publishAssessment-数学作业布置" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+	&quot;assessmentBuilderType&quot;: 2,&#xd;
+	&quot;title&quot;: &quot;${hs_suitName}&quot;,&#xd;
+	&quot;beginDate&quot;: 1528448640,&#xd;
+	&quot;endDate&quot;: 1530374340,&#xd;
+	&quot;isOptionRandom&quot;: true,&#xd;
+	&quot;disableFeedback&quot;: false,&#xd;
+	&quot;showSubTitle&quot;: false,&#xd;
+	&quot;isTimerOn&quot;: true,&#xd;
+	&quot;duration&quot;: 600,&#xd;
+	&quot;subjectId&quot;: 2,&#xd;
+	&quot;assessmentSessionList&quot;: [{&#xd;
+		&quot;sessionId&quot;: 2624,&#xd;
+		&quot;globalSessionTitle&quot;: &quot;2015级QAclass&quot;,&#xd;
+		&quot;checkFlag&quot;: false,&#xd;
+		&quot;code&quot;: &quot;10002197&quot;,&#xd;
+		&quot;title&quot;: &quot;芝士网皇家学院 本部 初中 2015级QA class&quot;,&#xd;
+		&quot;appTitle&quot;: &quot;芝士网皇家学院&quot;,&#xd;
+		&quot;isAllow&quot;: 1,&#xd;
+		&quot;classType&quot;: &quot;Express&quot;,&#xd;
+		&quot;classTypeTitle&quot;: &quot;体验班&quot;,&#xd;
+		&quot;isGroupEnable&quot;: 1,&#xd;
+		&quot;sessItemId&quot;: 0,&#xd;
+		&quot;isRequire&quot;: true,&#xd;
+		&quot;isRequiredEmend&quot;: true,&#xd;
+		&quot;isChecked&quot;: true,&#xd;
+		&quot;emendTypeCode&quot;: &quot;NO_NEED&quot;,&#xd;
+		&quot;selectAsk&quot;: [{&#xd;
+			&quot;sessionId&quot;: 2624,&#xd;
+			&quot;isRequire&quot;: true&#xd;
+		}, {&#xd;
+			&quot;sessionId&quot;: 2624,&#xd;
+			&quot;isRequiredEmend&quot;: true,&#xd;
+			&quot;emendTypeCode&quot;: &quot;NO_NEED&quot;&#xd;
+		}]&#xd;
+	}],&#xd;
+	&quot;combineQuestions&quot;: {&#xd;
+		&quot;vocabularyQuestionsList&quot;: [],&#xd;
+		&quot;vocabularyQuestionsFIDList&quot;: [{&#xd;
+			&quot;duration&quot;: 60,&#xd;
+			&quot;questionTypeId&quot;: 3,&#xd;
+			&quot;questionTypeTitle&quot;: &quot;填空题&quot;,&#xd;
+			&quot;assessmentQuestions&quot;: [{&#xd;
+				&quot;questionId&quot;: 306610,&#xd;
+				&quot;questionTypeId&quot;: 3,&#xd;
+				&quot;questionTypeTitle&quot;: &quot;填空题&quot;,&#xd;
+				&quot;questionText&quot;: &quot;在平面内，将一个图形上的所有点绕一个定点按照某个方向转动一个角度，这样的运动叫做图形的[BLANK]，这个定点叫做[BLANK]， 转动的角度叫做[BLANK]&quot;,&#xd;
+				&quot;homeworkQuestionTypeId&quot;: 34,&#xd;
+				&quot;title&quot;: &quot;填空题（数学）&quot;,&#xd;
+				&quot;taxonomyId&quot;: 9247,&#xd;
+				&quot;taxonomyTitle&quot;: &quot;数学&quot;,&#xd;
+				&quot;categoryId&quot;: 9244,&#xd;
+				&quot;subCategoryId&quot;: 9245,&#xd;
+				&quot;masteryId&quot;: 9246,&#xd;
+				&quot;subMasteryId&quot;: 9247,&#xd;
+				&quot;difficultyLevel&quot;: 2,&#xd;
+				&quot;questionOptions&quot;: [{&#xd;
+					&quot;optionId&quot;: 744369,&#xd;
+					&quot;optionText&quot;: &quot;1&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 1,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: &quot;text&quot;,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 744370,&#xd;
+					&quot;optionText&quot;: &quot;3&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 2,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: &quot;text&quot;,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 744371,&#xd;
+					&quot;optionText&quot;: &quot;5&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 3,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: &quot;text&quot;,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}],&#xd;
+				&quot;articleId&quot;: null,&#xd;
+				&quot;blankId&quot;: null,&#xd;
+				&quot;inputTypes&quot;: &quot;Text&quot;,&#xd;
+				&quot;correctFeedback&quot;: &quot;在平面内，将一个图形上的所有点绕一个定点按照某个方向转动一个角度，这样的运动叫做图形的旋转，这个定点叫做旋转中心， 转动的角度叫做旋转角&quot;,&#xd;
+				&quot;inCorrectFeedback&quot;: null,&#xd;
+				&quot;inCorrectPercent&quot;: null,&#xd;
+				&quot;userResponse&quot;: null,&#xd;
+				&quot;correctResponse&quot;: null,&#xd;
+				&quot;inCorrectCount&quot;: null,&#xd;
+				&quot;subjectId&quot;: 2,&#xd;
+				&quot;tagLines&quot;: [],&#xd;
+				&quot;orderCode&quot;: &quot;02003001010&quot;,&#xd;
+				&quot;questionAnswerDetails&quot;: null,&#xd;
+				&quot;assign&quot;: null,&#xd;
+				&quot;addCart&quot;: null,&#xd;
+				&quot;correct&quot;: null&#xd;
+			}],&#xd;
+			&quot;orderCode&quot;: &quot;02003001010&quot;,&#xd;
+			&quot;questionId&quot;: 306610&#xd;
+		}, {&#xd;
+			&quot;duration&quot;: 60,&#xd;
+			&quot;questionTypeId&quot;: 3,&#xd;
+			&quot;questionTypeTitle&quot;: &quot;填空题&quot;,&#xd;
+			&quot;assessmentQuestions&quot;: [{&#xd;
+				&quot;questionId&quot;: 306611,&#xd;
+				&quot;questionTypeId&quot;: 3,&#xd;
+				&quot;questionTypeTitle&quot;: &quot;填空题&quot;,&#xd;
+				&quot;questionText&quot;: &quot;在平面内，将一个图形上的所有点绕一个定点按照某个方向转动一个角度，这样的运动叫做图形的[BLANK]，这个定点叫做[BLANK]， 转动的角度叫做[BLANK]&quot;,&#xd;
+				&quot;homeworkQuestionTypeId&quot;: 34,&#xd;
+				&quot;title&quot;: &quot;填空题（数学）&quot;,&#xd;
+				&quot;taxonomyId&quot;: 9247,&#xd;
+				&quot;taxonomyTitle&quot;: &quot;数学&quot;,&#xd;
+				&quot;categoryId&quot;: 9244,&#xd;
+				&quot;subCategoryId&quot;: 9245,&#xd;
+				&quot;masteryId&quot;: 9246,&#xd;
+				&quot;subMasteryId&quot;: 9247,&#xd;
+				&quot;difficultyLevel&quot;: 2,&#xd;
+				&quot;questionOptions&quot;: [{&#xd;
+					&quot;optionId&quot;: 744372,&#xd;
+					&quot;optionText&quot;: &quot;1&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 1,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: &quot;text&quot;,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 744373,&#xd;
+					&quot;optionText&quot;: &quot;3&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 2,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: &quot;text&quot;,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 744374,&#xd;
+					&quot;optionText&quot;: &quot;5&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 3,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: &quot;text&quot;,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}],&#xd;
+				&quot;articleId&quot;: null,&#xd;
+				&quot;blankId&quot;: null,&#xd;
+				&quot;inputTypes&quot;: &quot;Text&quot;,&#xd;
+				&quot;correctFeedback&quot;: &quot;在平面内，将一个图形上的所有点绕一个定点按照某个方向转动一个角度，这样的运动叫做图形的旋转，这个定点叫做旋转中心， 转动的角度叫做旋转角&quot;,&#xd;
+				&quot;inCorrectFeedback&quot;: null,&#xd;
+				&quot;inCorrectPercent&quot;: null,&#xd;
+				&quot;userResponse&quot;: null,&#xd;
+				&quot;correctResponse&quot;: null,&#xd;
+				&quot;inCorrectCount&quot;: null,&#xd;
+				&quot;subjectId&quot;: 2,&#xd;
+				&quot;tagLines&quot;: [],&#xd;
+				&quot;orderCode&quot;: &quot;02003001010&quot;,&#xd;
+				&quot;questionAnswerDetails&quot;: null,&#xd;
+				&quot;assign&quot;: null,&#xd;
+				&quot;addCart&quot;: null,&#xd;
+				&quot;correct&quot;: null&#xd;
+			}],&#xd;
+			&quot;orderCode&quot;: &quot;02003001010&quot;,&#xd;
+			&quot;questionId&quot;: 306611&#xd;
+		}, {&#xd;
+			&quot;duration&quot;: 60,&#xd;
+			&quot;questionTypeId&quot;: 3,&#xd;
+			&quot;questionTypeTitle&quot;: &quot;填空题&quot;,&#xd;
+			&quot;assessmentQuestions&quot;: [{&#xd;
+				&quot;questionId&quot;: 306612,&#xd;
+				&quot;questionTypeId&quot;: 3,&#xd;
+				&quot;questionTypeTitle&quot;: &quot;填空题&quot;,&#xd;
+				&quot;questionText&quot;: &quot;在平面内，将一个图形上的所有点绕一个定点按照某个方向转动一个角度，这样的运动叫做图形的[BLANK]，这个定点叫做[BLANK]， 转动的角度叫做[BLANK]&quot;,&#xd;
+				&quot;homeworkQuestionTypeId&quot;: 34,&#xd;
+				&quot;title&quot;: &quot;填空题（数学）&quot;,&#xd;
+				&quot;taxonomyId&quot;: 9247,&#xd;
+				&quot;taxonomyTitle&quot;: &quot;数学&quot;,&#xd;
+				&quot;categoryId&quot;: 9244,&#xd;
+				&quot;subCategoryId&quot;: 9245,&#xd;
+				&quot;masteryId&quot;: 9246,&#xd;
+				&quot;subMasteryId&quot;: 9247,&#xd;
+				&quot;difficultyLevel&quot;: 2,&#xd;
+				&quot;questionOptions&quot;: [{&#xd;
+					&quot;optionId&quot;: 744375,&#xd;
+					&quot;optionText&quot;: &quot;1&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 1,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: &quot;text&quot;,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 744376,&#xd;
+					&quot;optionText&quot;: &quot;3&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 2,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: &quot;text&quot;,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 744377,&#xd;
+					&quot;optionText&quot;: &quot;5&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 3,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: &quot;text&quot;,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}],&#xd;
+				&quot;articleId&quot;: null,&#xd;
+				&quot;blankId&quot;: null,&#xd;
+				&quot;inputTypes&quot;: &quot;Text&quot;,&#xd;
+				&quot;correctFeedback&quot;: &quot;在平面内，将一个图形上的所有点绕一个定点按照某个方向转动一个角度，这样的运动叫做图形的旋转，这个定点叫做旋转中心， 转动的角度叫做旋转角&quot;,&#xd;
+				&quot;inCorrectFeedback&quot;: null,&#xd;
+				&quot;inCorrectPercent&quot;: null,&#xd;
+				&quot;userResponse&quot;: null,&#xd;
+				&quot;correctResponse&quot;: null,&#xd;
+				&quot;inCorrectCount&quot;: null,&#xd;
+				&quot;subjectId&quot;: 2,&#xd;
+				&quot;tagLines&quot;: [],&#xd;
+				&quot;orderCode&quot;: &quot;02003001010&quot;,&#xd;
+				&quot;questionAnswerDetails&quot;: null,&#xd;
+				&quot;assign&quot;: null,&#xd;
+				&quot;addCart&quot;: null,&#xd;
+				&quot;correct&quot;: null&#xd;
+			}],&#xd;
+			&quot;orderCode&quot;: &quot;02003001010&quot;,&#xd;
+			&quot;questionId&quot;: 306612&#xd;
+		}, {&#xd;
+			&quot;duration&quot;: 60,&#xd;
+			&quot;questionTypeId&quot;: 3,&#xd;
+			&quot;questionTypeTitle&quot;: &quot;填空题&quot;,&#xd;
+			&quot;assessmentQuestions&quot;: [{&#xd;
+				&quot;questionId&quot;: 306613,&#xd;
+				&quot;questionTypeId&quot;: 3,&#xd;
+				&quot;questionTypeTitle&quot;: &quot;填空题&quot;,&#xd;
+				&quot;questionText&quot;: &quot;在平面内，将一个图形上的所有点绕一个定点按照某个方向转动一个角度，这样的运动叫做图形的[BLANK]，这个定点叫做[BLANK]， 转动的角度叫做[BLANK]&quot;,&#xd;
+				&quot;homeworkQuestionTypeId&quot;: 34,&#xd;
+				&quot;title&quot;: &quot;填空题（数学）&quot;,&#xd;
+				&quot;taxonomyId&quot;: 9247,&#xd;
+				&quot;taxonomyTitle&quot;: &quot;数学&quot;,&#xd;
+				&quot;categoryId&quot;: 9244,&#xd;
+				&quot;subCategoryId&quot;: 9245,&#xd;
+				&quot;masteryId&quot;: 9246,&#xd;
+				&quot;subMasteryId&quot;: 9247,&#xd;
+				&quot;difficultyLevel&quot;: 2,&#xd;
+				&quot;questionOptions&quot;: [{&#xd;
+					&quot;optionId&quot;: 744378,&#xd;
+					&quot;optionText&quot;: &quot;1&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 1,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: &quot;text&quot;,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 744379,&#xd;
+					&quot;optionText&quot;: &quot;3&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 2,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: &quot;text&quot;,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 744380,&#xd;
+					&quot;optionText&quot;: &quot;5&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 3,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: &quot;text&quot;,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}],&#xd;
+				&quot;articleId&quot;: null,&#xd;
+				&quot;blankId&quot;: null,&#xd;
+				&quot;inputTypes&quot;: &quot;Text&quot;,&#xd;
+				&quot;correctFeedback&quot;: &quot;在平面内，将一个图形上的所有点绕一个定点按照某个方向转动一个角度，这样的运动叫做图形的旋转，这个定点叫做旋转中心， 转动的角度叫做旋转角&quot;,&#xd;
+				&quot;inCorrectFeedback&quot;: null,&#xd;
+				&quot;inCorrectPercent&quot;: null,&#xd;
+				&quot;userResponse&quot;: null,&#xd;
+				&quot;correctResponse&quot;: null,&#xd;
+				&quot;inCorrectCount&quot;: null,&#xd;
+				&quot;subjectId&quot;: 2,&#xd;
+				&quot;tagLines&quot;: [],&#xd;
+				&quot;orderCode&quot;: &quot;02003001010&quot;,&#xd;
+				&quot;questionAnswerDetails&quot;: null,&#xd;
+				&quot;assign&quot;: null,&#xd;
+				&quot;addCart&quot;: null,&#xd;
+				&quot;correct&quot;: null&#xd;
+			}],&#xd;
+			&quot;orderCode&quot;: &quot;02003001010&quot;,&#xd;
+			&quot;questionId&quot;: 306613&#xd;
+		}, {&#xd;
+			&quot;duration&quot;: 60,&#xd;
+			&quot;questionTypeId&quot;: 3,&#xd;
+			&quot;questionTypeTitle&quot;: &quot;填空题&quot;,&#xd;
+			&quot;assessmentQuestions&quot;: [{&#xd;
+				&quot;questionId&quot;: 306614,&#xd;
+				&quot;questionTypeId&quot;: 3,&#xd;
+				&quot;questionTypeTitle&quot;: &quot;填空题&quot;,&#xd;
+				&quot;questionText&quot;: &quot;在平面内，将一个图形上的所有点绕一个定点按照某个方向转动一个角度，这样的运动叫做图形的[BLANK]，这个定点叫做[BLANK]， 转动的角度叫做[BLANK]&quot;,&#xd;
+				&quot;homeworkQuestionTypeId&quot;: 34,&#xd;
+				&quot;title&quot;: &quot;填空题（数学）&quot;,&#xd;
+				&quot;taxonomyId&quot;: 9247,&#xd;
+				&quot;taxonomyTitle&quot;: &quot;数学&quot;,&#xd;
+				&quot;categoryId&quot;: 9244,&#xd;
+				&quot;subCategoryId&quot;: 9245,&#xd;
+				&quot;masteryId&quot;: 9246,&#xd;
+				&quot;subMasteryId&quot;: 9247,&#xd;
+				&quot;difficultyLevel&quot;: 2,&#xd;
+				&quot;questionOptions&quot;: [{&#xd;
+					&quot;optionId&quot;: 744381,&#xd;
+					&quot;optionText&quot;: &quot;1&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 1,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: &quot;text&quot;,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 744382,&#xd;
+					&quot;optionText&quot;: &quot;3&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 2,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: &quot;text&quot;,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 744383,&#xd;
+					&quot;optionText&quot;: &quot;5&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 3,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: &quot;text&quot;,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}],&#xd;
+				&quot;articleId&quot;: null,&#xd;
+				&quot;blankId&quot;: null,&#xd;
+				&quot;inputTypes&quot;: &quot;Text&quot;,&#xd;
+				&quot;correctFeedback&quot;: &quot;在平面内，将一个图形上的所有点绕一个定点按照某个方向转动一个角度，这样的运动叫做图形的旋转，这个定点叫做旋转中心， 转动的角度叫做旋转角&quot;,&#xd;
+				&quot;inCorrectFeedback&quot;: null,&#xd;
+				&quot;inCorrectPercent&quot;: null,&#xd;
+				&quot;userResponse&quot;: null,&#xd;
+				&quot;correctResponse&quot;: null,&#xd;
+				&quot;inCorrectCount&quot;: null,&#xd;
+				&quot;subjectId&quot;: 2,&#xd;
+				&quot;tagLines&quot;: [],&#xd;
+				&quot;orderCode&quot;: &quot;02003001010&quot;,&#xd;
+				&quot;questionAnswerDetails&quot;: null,&#xd;
+				&quot;assign&quot;: null,&#xd;
+				&quot;addCart&quot;: null,&#xd;
+				&quot;correct&quot;: null&#xd;
+			}],&#xd;
+			&quot;orderCode&quot;: &quot;02003001010&quot;,&#xd;
+			&quot;questionId&quot;: 306614&#xd;
+		}, {&#xd;
+			&quot;duration&quot;: 60,&#xd;
+			&quot;questionTypeId&quot;: 3,&#xd;
+			&quot;questionTypeTitle&quot;: &quot;填空题&quot;,&#xd;
+			&quot;assessmentQuestions&quot;: [{&#xd;
+				&quot;questionId&quot;: 306655,&#xd;
+				&quot;questionTypeId&quot;: 3,&#xd;
+				&quot;questionTypeTitle&quot;: &quot;填空题&quot;,&#xd;
+				&quot;questionText&quot;: &quot;在平面内，将一个图形上的所有点绕一个定点按照某个方向转动一个角度，这样的运动叫做图形的[BLANK]，这个定点叫做[BLANK]， 转动的角度叫做[BLANK]&quot;,&#xd;
+				&quot;homeworkQuestionTypeId&quot;: 34,&#xd;
+				&quot;title&quot;: &quot;填空题（数学）&quot;,&#xd;
+				&quot;taxonomyId&quot;: 9247,&#xd;
+				&quot;taxonomyTitle&quot;: &quot;数学&quot;,&#xd;
+				&quot;categoryId&quot;: 9244,&#xd;
+				&quot;subCategoryId&quot;: 9245,&#xd;
+				&quot;masteryId&quot;: 9246,&#xd;
+				&quot;subMasteryId&quot;: 9247,&#xd;
+				&quot;difficultyLevel&quot;: 2,&#xd;
+				&quot;questionOptions&quot;: [{&#xd;
+					&quot;optionId&quot;: 744536,&#xd;
+					&quot;optionText&quot;: &quot;1&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 1,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: &quot;math20&quot;,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 744537,&#xd;
+					&quot;optionText&quot;: &quot;3&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 2,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: &quot;text&quot;,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 744538,&#xd;
+					&quot;optionText&quot;: &quot;5&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 3,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: &quot;math21&quot;,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}],&#xd;
+				&quot;articleId&quot;: null,&#xd;
+				&quot;blankId&quot;: null,&#xd;
+				&quot;inputTypes&quot;: &quot;Math20,text,Math21&quot;,&#xd;
+				&quot;correctFeedback&quot;: &quot;在平面内，将一个图形上的所有点绕一个定点按照某个方向转动一个角度，这样的运动叫做图形的旋转，这个定点叫做旋转中心， 转动的角度叫做旋转角&quot;,&#xd;
+				&quot;inCorrectFeedback&quot;: null,&#xd;
+				&quot;inCorrectPercent&quot;: null,&#xd;
+				&quot;userResponse&quot;: null,&#xd;
+				&quot;correctResponse&quot;: null,&#xd;
+				&quot;inCorrectCount&quot;: null,&#xd;
+				&quot;subjectId&quot;: 2,&#xd;
+				&quot;tagLines&quot;: [],&#xd;
+				&quot;orderCode&quot;: &quot;02003001010&quot;,&#xd;
+				&quot;questionAnswerDetails&quot;: null,&#xd;
+				&quot;assign&quot;: null,&#xd;
+				&quot;addCart&quot;: null,&#xd;
+				&quot;correct&quot;: null&#xd;
+			}],&#xd;
+			&quot;orderCode&quot;: &quot;02003001010&quot;,&#xd;
+			&quot;questionId&quot;: 306655&#xd;
+		}, {&#xd;
+			&quot;duration&quot;: 60,&#xd;
+			&quot;questionTypeId&quot;: 3,&#xd;
+			&quot;questionTypeTitle&quot;: &quot;填空题&quot;,&#xd;
+			&quot;assessmentQuestions&quot;: [{&#xd;
+				&quot;questionId&quot;: 306656,&#xd;
+				&quot;questionTypeId&quot;: 3,&#xd;
+				&quot;questionTypeTitle&quot;: &quot;填空题&quot;,&#xd;
+				&quot;questionText&quot;: &quot;在平面内，将一个图形上的所有点绕一个定点按照某个方向转动一个角度，这样的运动叫做图形的[BLANK]，这个定点叫做[BLANK]， 转动的角度叫做[BLANK]&quot;,&#xd;
+				&quot;homeworkQuestionTypeId&quot;: 34,&#xd;
+				&quot;title&quot;: &quot;填空题（数学）&quot;,&#xd;
+				&quot;taxonomyId&quot;: 9247,&#xd;
+				&quot;taxonomyTitle&quot;: &quot;数学&quot;,&#xd;
+				&quot;categoryId&quot;: 9244,&#xd;
+				&quot;subCategoryId&quot;: 9245,&#xd;
+				&quot;masteryId&quot;: 9246,&#xd;
+				&quot;subMasteryId&quot;: 9247,&#xd;
+				&quot;difficultyLevel&quot;: 2,&#xd;
+				&quot;questionOptions&quot;: [{&#xd;
+					&quot;optionId&quot;: 744539,&#xd;
+					&quot;optionText&quot;: &quot;1&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 1,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: &quot;math20&quot;,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 744540,&#xd;
+					&quot;optionText&quot;: &quot;3&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 2,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: &quot;math20&quot;,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 744541,&#xd;
+					&quot;optionText&quot;: &quot;5&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 3,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: &quot;math20&quot;,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}],&#xd;
+				&quot;articleId&quot;: null,&#xd;
+				&quot;blankId&quot;: null,&#xd;
+				&quot;inputTypes&quot;: &quot;Math20&quot;,&#xd;
+				&quot;correctFeedback&quot;: &quot;在平面内，将一个图形上的所有点绕一个定点按照某个方向转动一个角度，这样的运动叫做图形的旋转，这个定点叫做旋转中心， 转动的角度叫做旋转角&quot;,&#xd;
+				&quot;inCorrectFeedback&quot;: null,&#xd;
+				&quot;inCorrectPercent&quot;: null,&#xd;
+				&quot;userResponse&quot;: null,&#xd;
+				&quot;correctResponse&quot;: null,&#xd;
+				&quot;inCorrectCount&quot;: null,&#xd;
+				&quot;subjectId&quot;: 2,&#xd;
+				&quot;tagLines&quot;: [],&#xd;
+				&quot;orderCode&quot;: &quot;02003001010&quot;,&#xd;
+				&quot;questionAnswerDetails&quot;: null,&#xd;
+				&quot;assign&quot;: null,&#xd;
+				&quot;addCart&quot;: null,&#xd;
+				&quot;correct&quot;: null&#xd;
+			}],&#xd;
+			&quot;orderCode&quot;: &quot;02003001010&quot;,&#xd;
+			&quot;questionId&quot;: 306656&#xd;
+		}, {&#xd;
+			&quot;duration&quot;: 60,&#xd;
+			&quot;questionTypeId&quot;: 3,&#xd;
+			&quot;questionTypeTitle&quot;: &quot;填空题&quot;,&#xd;
+			&quot;assessmentQuestions&quot;: [{&#xd;
+				&quot;questionId&quot;: 306657,&#xd;
+				&quot;questionTypeId&quot;: 3,&#xd;
+				&quot;questionTypeTitle&quot;: &quot;填空题&quot;,&#xd;
+				&quot;questionText&quot;: &quot;在平面内，将一个图形上的所有点绕一个定点按照某个方向转动一个角度，这样的运动叫做图形的[BLANK]，这个定点叫做[BLANK]， 转动的角度叫做[BLANK]&quot;,&#xd;
+				&quot;homeworkQuestionTypeId&quot;: 34,&#xd;
+				&quot;title&quot;: &quot;填空题（数学）&quot;,&#xd;
+				&quot;taxonomyId&quot;: 9247,&#xd;
+				&quot;taxonomyTitle&quot;: &quot;数学&quot;,&#xd;
+				&quot;categoryId&quot;: 9244,&#xd;
+				&quot;subCategoryId&quot;: 9245,&#xd;
+				&quot;masteryId&quot;: 9246,&#xd;
+				&quot;subMasteryId&quot;: 9247,&#xd;
+				&quot;difficultyLevel&quot;: 2,&#xd;
+				&quot;questionOptions&quot;: [{&#xd;
+					&quot;optionId&quot;: 744542,&#xd;
+					&quot;optionText&quot;: &quot;1&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 1,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: &quot;math20&quot;,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 744543,&#xd;
+					&quot;optionText&quot;: &quot;3&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 2,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: &quot;math21&quot;,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 744544,&#xd;
+					&quot;optionText&quot;: &quot;5&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 3,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: &quot;math20&quot;,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}],&#xd;
+				&quot;articleId&quot;: null,&#xd;
+				&quot;blankId&quot;: null,&#xd;
+				&quot;inputTypes&quot;: &quot;Math20,Math21&quot;,&#xd;
+				&quot;correctFeedback&quot;: &quot;在平面内，将一个图形上的所有点绕一个定点按照某个方向转动一个角度，这样的运动叫做图形的旋转，这个定点叫做旋转中心， 转动的角度叫做旋转角&quot;,&#xd;
+				&quot;inCorrectFeedback&quot;: null,&#xd;
+				&quot;inCorrectPercent&quot;: null,&#xd;
+				&quot;userResponse&quot;: null,&#xd;
+				&quot;correctResponse&quot;: null,&#xd;
+				&quot;inCorrectCount&quot;: null,&#xd;
+				&quot;subjectId&quot;: 2,&#xd;
+				&quot;tagLines&quot;: [],&#xd;
+				&quot;orderCode&quot;: &quot;02003001010&quot;,&#xd;
+				&quot;questionAnswerDetails&quot;: null,&#xd;
+				&quot;assign&quot;: null,&#xd;
+				&quot;addCart&quot;: null,&#xd;
+				&quot;correct&quot;: null&#xd;
+			}],&#xd;
+			&quot;orderCode&quot;: &quot;02003001010&quot;,&#xd;
+			&quot;questionId&quot;: 306657&#xd;
+		}, {&#xd;
+			&quot;duration&quot;: 60,&#xd;
+			&quot;questionTypeId&quot;: 3,&#xd;
+			&quot;questionTypeTitle&quot;: &quot;填空题&quot;,&#xd;
+			&quot;assessmentQuestions&quot;: [{&#xd;
+				&quot;questionId&quot;: 306658,&#xd;
+				&quot;questionTypeId&quot;: 3,&#xd;
+				&quot;questionTypeTitle&quot;: &quot;填空题&quot;,&#xd;
+				&quot;questionText&quot;: &quot;在平面内，将一个图形上的所有点绕一个定点按照某个方向转动一个角度，这样的运动叫做图形的[BLANK]，这个定点叫做[BLANK]， 转动的角度叫做[BLANK]&quot;,&#xd;
+				&quot;homeworkQuestionTypeId&quot;: 34,&#xd;
+				&quot;title&quot;: &quot;填空题（数学）&quot;,&#xd;
+				&quot;taxonomyId&quot;: 9247,&#xd;
+				&quot;taxonomyTitle&quot;: &quot;数学&quot;,&#xd;
+				&quot;categoryId&quot;: 9244,&#xd;
+				&quot;subCategoryId&quot;: 9245,&#xd;
+				&quot;masteryId&quot;: 9246,&#xd;
+				&quot;subMasteryId&quot;: 9247,&#xd;
+				&quot;difficultyLevel&quot;: 2,&#xd;
+				&quot;questionOptions&quot;: [{&#xd;
+					&quot;optionId&quot;: 744545,&#xd;
+					&quot;optionText&quot;: &quot;1&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 1,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: &quot;text&quot;,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 744546,&#xd;
+					&quot;optionText&quot;: &quot;3&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 2,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: &quot;math21&quot;,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 744547,&#xd;
+					&quot;optionText&quot;: &quot;5&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 3,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: &quot;text&quot;,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}],&#xd;
+				&quot;articleId&quot;: null,&#xd;
+				&quot;blankId&quot;: null,&#xd;
+				&quot;inputTypes&quot;: &quot;text,Math21&quot;,&#xd;
+				&quot;correctFeedback&quot;: &quot;在平面内，将一个图形上的所有点绕一个定点按照某个方向转动一个角度，这样的运动叫做图形的旋转，这个定点叫做旋转中心， 转动的角度叫做旋转角&quot;,&#xd;
+				&quot;inCorrectFeedback&quot;: null,&#xd;
+				&quot;inCorrectPercent&quot;: null,&#xd;
+				&quot;userResponse&quot;: null,&#xd;
+				&quot;correctResponse&quot;: null,&#xd;
+				&quot;inCorrectCount&quot;: null,&#xd;
+				&quot;subjectId&quot;: 2,&#xd;
+				&quot;tagLines&quot;: [],&#xd;
+				&quot;orderCode&quot;: &quot;02003001010&quot;,&#xd;
+				&quot;questionAnswerDetails&quot;: null,&#xd;
+				&quot;assign&quot;: null,&#xd;
+				&quot;addCart&quot;: null,&#xd;
+				&quot;correct&quot;: null&#xd;
+			}],&#xd;
+			&quot;orderCode&quot;: &quot;02003001010&quot;,&#xd;
+			&quot;questionId&quot;: 306658&#xd;
+		}, {&#xd;
+			&quot;duration&quot;: 60,&#xd;
+			&quot;questionTypeId&quot;: 3,&#xd;
+			&quot;questionTypeTitle&quot;: &quot;填空题&quot;,&#xd;
+			&quot;assessmentQuestions&quot;: [{&#xd;
+				&quot;questionId&quot;: 306659,&#xd;
+				&quot;questionTypeId&quot;: 3,&#xd;
+				&quot;questionTypeTitle&quot;: &quot;填空题&quot;,&#xd;
+				&quot;questionText&quot;: &quot;在平面内，将一个图形上的所有点绕一个定点按照某个方向转动一个角度，这样的运动叫做图形的[BLANK]，这个定点叫做[BLANK]， 转动的角度叫做[BLANK]&quot;,&#xd;
+				&quot;homeworkQuestionTypeId&quot;: 34,&#xd;
+				&quot;title&quot;: &quot;填空题（数学）&quot;,&#xd;
+				&quot;taxonomyId&quot;: 9247,&#xd;
+				&quot;taxonomyTitle&quot;: &quot;数学&quot;,&#xd;
+				&quot;categoryId&quot;: 9244,&#xd;
+				&quot;subCategoryId&quot;: 9245,&#xd;
+				&quot;masteryId&quot;: 9246,&#xd;
+				&quot;subMasteryId&quot;: 9247,&#xd;
+				&quot;difficultyLevel&quot;: 2,&#xd;
+				&quot;questionOptions&quot;: [{&#xd;
+					&quot;optionId&quot;: 744548,&#xd;
+					&quot;optionText&quot;: &quot;1&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 1,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: &quot;text&quot;,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 744549,&#xd;
+					&quot;optionText&quot;: &quot;3&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 2,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: &quot;text&quot;,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 744550,&#xd;
+					&quot;optionText&quot;: &quot;5&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 3,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: &quot;text&quot;,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}],&#xd;
+				&quot;articleId&quot;: null,&#xd;
+				&quot;blankId&quot;: null,&#xd;
+				&quot;inputTypes&quot;: &quot;text&quot;,&#xd;
+				&quot;correctFeedback&quot;: &quot;在平面内，将一个图形上的所有点绕一个定点按照某个方向转动一个角度，这样的运动叫做图形的旋转，这个定点叫做旋转中心， 转动的角度叫做旋转角&quot;,&#xd;
+				&quot;inCorrectFeedback&quot;: null,&#xd;
+				&quot;inCorrectPercent&quot;: null,&#xd;
+				&quot;userResponse&quot;: null,&#xd;
+				&quot;correctResponse&quot;: null,&#xd;
+				&quot;inCorrectCount&quot;: null,&#xd;
+				&quot;subjectId&quot;: 2,&#xd;
+				&quot;tagLines&quot;: [],&#xd;
+				&quot;orderCode&quot;: &quot;02003001010&quot;,&#xd;
+				&quot;questionAnswerDetails&quot;: null,&#xd;
+				&quot;assign&quot;: null,&#xd;
+				&quot;addCart&quot;: null,&#xd;
+				&quot;correct&quot;: null&#xd;
+			}],&#xd;
+			&quot;orderCode&quot;: &quot;02003001010&quot;,&#xd;
+			&quot;questionId&quot;: 306659&#xd;
+		}],&#xd;
+		&quot;vocabularyArticleQuestionsList&quot;: [],&#xd;
+		&quot;readingList&quot;: [],&#xd;
+		&quot;videoQuestions&quot;: [],&#xd;
+		&quot;oralReadSentenceList&quot;: [],&#xd;
+		&quot;oralGuessWordList&quot;: [],&#xd;
+		&quot;oralReadWordList&quot;: [],&#xd;
+		&quot;oralTopicDescribeList&quot;: []&#xd;
+	},&#xd;
+	&quot;suitList&quot;: []&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.port">${port}</stringProp>
+          <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">${basepath_teacher}/publishAssessment</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="用户参数" enabled="true">
+            <collectionProp name="UserParameters.names">
+              <stringProp name="-798995476">hs_suitName</stringProp>
+            </collectionProp>
+            <collectionProp name="UserParameters.thread_values">
+              <collectionProp name="-1286739692">
+                <stringProp name="881397915">Math-zhishi${randomdata}</stringProp>
+              </collectionProp>
+            </collectionProp>
+            <boolProp name="UserParameters.per_iteration">false</boolProp>
+          </UserParameters>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">assessmentId</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.assessmentIds[0]</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <DebugPostProcessor guiclass="TestBeanGUI" testclass="DebugPostProcessor" testname="Debug PostProcessor" enabled="true">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySamplerProperties">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugPostProcessor>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="saveShareData-分享链接 数据保存" enabled="true"/>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="saveShareData-分享链接 数据保存" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="assessmentIds" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${assessmentId}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">assessmentIds</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.port">${port}</stringProp>
+          <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/api/teacher/v1/sec/saveShareData</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="TestPlan.comments">14735</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
+            <stringProp name="ConstantTimer.delay">6000</stringProp>
+          </ConstantTimer>
+          <hashTree/>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="提取链接_id" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">_id</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;_id&quot;:&quot;(.+?)&quot;,</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default"></stringProp>
+            <stringProp name="RegexExtractor.match_number">0</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+          <DebugPostProcessor guiclass="TestBeanGUI" testclass="DebugPostProcessor" testname="Debug PostProcessor" enabled="true">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySamplerProperties">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugPostProcessor>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="deleteShareData-分享链接 数据删除" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="objectId" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${_id}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">objectId</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/api/teacher/v1/sec/deleteShareData</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="deleteHomeworkScoreNew-删除assessmenId" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;assessmentId&quot;: &quot;${assessmentId}&quot;,&#xd;
+    &quot;sessionId&quot;: 2624&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/api/teacher/v1/sec/teacher/deleteHomework</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="TestPlan.comments">${assessmentId}</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="sethomework-English" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1503583554000</longProp>
+        <longProp name="ThreadGroup.end_time">1503583554000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="getToken" enabled="true">
+          <collectionProp name="ModuleController.node_path">
+            <stringProp name="23750841">工作台</stringProp>
+            <stringProp name="869052411">测试计划</stringProp>
+            <stringProp name="1966366787">getToken</stringProp>
+          </collectionProp>
+        </ModuleController>
+        <hashTree/>
+        <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="首页" enabled="true">
+          <collectionProp name="ModuleController.node_path">
+            <stringProp name="23750841">工作台</stringProp>
+            <stringProp name="869052411">测试计划</stringProp>
+            <stringProp name="1257887">首页</stringProp>
+          </collectionProp>
+        </ModuleController>
+        <hashTree/>
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="如果学科为英语，则进入教材查询" enabled="true">
+          <stringProp name="IfController.condition">${subjectId} == 1</stringProp>
+          <boolProp name="IfController.evaluateAll">false</boolProp>
+        </IfController>
+        <hashTree>
+          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="getHomeworkTextbookSeries-教材查询" enabled="true">
+            <collectionProp name="ModuleController.node_path">
+              <stringProp name="23750841">工作台</stringProp>
+              <stringProp name="869052411">测试计划</stringProp>
+              <stringProp name="-2059325701">getHomeworkTextbookSeries-教材查询-英语</stringProp>
+            </collectionProp>
+          </ModuleController>
+          <hashTree/>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="如获取到课本ID，则进入课本查询" enabled="true">
+            <stringProp name="IfController.condition">${homeworkTextbookSeriesId} !=&quot;&quot;</stringProp>
+            <boolProp name="IfController.evaluateAll">false</boolProp>
+          </IfController>
+          <hashTree>
+            <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="getHomeworkTextbook-课本查询" enabled="true">
+              <collectionProp name="ModuleController.node_path">
+                <stringProp name="23750841">工作台</stringProp>
+                <stringProp name="869052411">测试计划</stringProp>
+                <stringProp name="-265320036">getHomeworkTextbook-课本查询</stringProp>
+              </collectionProp>
+            </ModuleController>
+            <hashTree/>
+            <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="getHomeworkUnit-单元查询" enabled="true">
+              <collectionProp name="ModuleController.node_path">
+                <stringProp name="23750841">工作台</stringProp>
+                <stringProp name="869052411">测试计划</stringProp>
+                <stringProp name="1649387790">getHomeworkUnit-单元查询</stringProp>
+              </collectionProp>
+            </ModuleController>
+            <hashTree/>
+            <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="getHomeworkKnowledgePoint-查询知识点、主题、视频名称" enabled="true">
+              <collectionProp name="ModuleController.node_path">
+                <stringProp name="23750841">工作台</stringProp>
+                <stringProp name="869052411">测试计划</stringProp>
+                <stringProp name="2094707154">getHomeworkKnowledgePoint-查询知识点、主题、视频名称-英语</stringProp>
+              </collectionProp>
+            </ModuleController>
+            <hashTree/>
+            <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="getVocabularyQuestions-词汇语法随机抽题" enabled="true">
+              <collectionProp name="ModuleController.node_path">
+                <stringProp name="23750841">工作台</stringProp>
+                <stringProp name="869052411">测试计划</stringProp>
+                <stringProp name="899522788">getVocabularyQuestions-词汇语法随机抽题</stringProp>
+              </collectionProp>
+            </ModuleController>
+            <hashTree/>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="如果（If）控制器" enabled="true">
+              <stringProp name="IfController.condition">${questionId} !=&quot;&quot;</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="publishAssessment-作业布置（直接布置作业）" enabled="true">
+                <collectionProp name="ModuleController.node_path">
+                  <stringProp name="23750841">工作台</stringProp>
+                  <stringProp name="869052411">测试计划</stringProp>
+                  <stringProp name="-444755043">publishAssessment-作业布置（直接布置作业）-英语</stringProp>
+                </collectionProp>
+              </ModuleController>
+              <hashTree/>
+              <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="saveShareData-分享链接 数据保存" enabled="true">
+                <collectionProp name="ModuleController.node_path">
+                  <stringProp name="23750841">工作台</stringProp>
+                  <stringProp name="869052411">测试计划</stringProp>
+                  <stringProp name="-353161396">saveShareData-分享链接 数据保存</stringProp>
+                </collectionProp>
+              </ModuleController>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="sethomework-math" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1503583554000</longProp>
+        <longProp name="ThreadGroup.end_time">1503583554000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="getToken" enabled="true">
+          <collectionProp name="ModuleController.node_path">
+            <stringProp name="23750841">工作台</stringProp>
+            <stringProp name="869052411">测试计划</stringProp>
+            <stringProp name="1966366787">getToken</stringProp>
+          </collectionProp>
+        </ModuleController>
+        <hashTree/>
+        <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="首页" enabled="true">
+          <collectionProp name="ModuleController.node_path">
+            <stringProp name="23750841">工作台</stringProp>
+            <stringProp name="869052411">测试计划</stringProp>
+            <stringProp name="1257887">首页</stringProp>
+          </collectionProp>
+        </ModuleController>
+        <hashTree/>
+        <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="getHomeworkTextbookSeries-教材查询" enabled="true">
+          <collectionProp name="ModuleController.node_path">
+            <stringProp name="23750841">工作台</stringProp>
+            <stringProp name="869052411">测试计划</stringProp>
+            <stringProp name="-2059572267">getHomeworkTextbookSeries-教材查询-数学</stringProp>
+          </collectionProp>
+        </ModuleController>
+        <hashTree/>
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="如获取到课本ID，则进入课本查询" enabled="true">
+          <stringProp name="IfController.condition">${homeworkTextbookSeriesId} !=&quot;&quot;</stringProp>
+          <boolProp name="IfController.evaluateAll">false</boolProp>
+        </IfController>
+        <hashTree>
+          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="getHomeworkTextbook-课本查询" enabled="true">
+            <collectionProp name="ModuleController.node_path">
+              <stringProp name="23750841">工作台</stringProp>
+              <stringProp name="869052411">测试计划</stringProp>
+              <stringProp name="-265320036">getHomeworkTextbook-课本查询</stringProp>
+            </collectionProp>
+          </ModuleController>
+          <hashTree/>
+          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="getHomeworkUnit-单元查询" enabled="true">
+            <collectionProp name="ModuleController.node_path">
+              <stringProp name="23750841">工作台</stringProp>
+              <stringProp name="869052411">测试计划</stringProp>
+              <stringProp name="1649387790">getHomeworkUnit-单元查询</stringProp>
+            </collectionProp>
+          </ModuleController>
+          <hashTree/>
+          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="getHomeworkKnowledgePoint-查询知识点、主题、视频名称" enabled="true">
+            <collectionProp name="ModuleController.node_path">
+              <stringProp name="23750841">工作台</stringProp>
+              <stringProp name="869052411">测试计划</stringProp>
+              <stringProp name="2094460588">getHomeworkKnowledgePoint-查询知识点、主题、视频名称-数学</stringProp>
+            </collectionProp>
+          </ModuleController>
+          <hashTree/>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="如果（If）控制器" enabled="true">
+            <stringProp name="IfController.condition">${questionMaxCount} &gt;0</stringProp>
+            <boolProp name="IfController.evaluateAll">false</boolProp>
+          </IfController>
+          <hashTree>
+            <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="publishAssessment-作业布置（直接布置作业）" enabled="true">
+              <collectionProp name="ModuleController.node_path">
+                <stringProp name="23750841">工作台</stringProp>
+                <stringProp name="869052411">测试计划</stringProp>
+                <stringProp name="-445001609">publishAssessment-作业布置（直接布置作业）-数学</stringProp>
+              </collectionProp>
+            </ModuleController>
+            <hashTree/>
+            <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="saveShareData-分享链接 数据保存" enabled="true">
+              <collectionProp name="ModuleController.node_path">
+                <stringProp name="23750841">工作台</stringProp>
+                <stringProp name="869052411">测试计划</stringProp>
+                <stringProp name="-353161396">saveShareData-分享链接 数据保存</stringProp>
+              </collectionProp>
+            </ModuleController>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+    <WorkBench guiclass="WorkBenchGui" testclass="WorkBench" testname="工作台" enabled="true">
+      <boolProp name="WorkBench.save">true</boolProp>
+    </WorkBench>
+    <hashTree/>
+  </hashTree>
+</jmeterTestPlan>

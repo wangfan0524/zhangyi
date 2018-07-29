@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="979" it="0" lt="961" ts="1505921874125" s="false" lb="getToken" rc="403" rm="Forbidden" tn="用户 1-1" dt="text" by="1505" sby="293" ng="1" na="1">
+  <sample t="2" it="0" lt="0" ts="1505921875102" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="用户 1-1" dt="text" by="1181" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">&lt;html&gt;&#xd;
+&lt;head&gt;&lt;title&gt;403 Forbidden&lt;/title&gt;&lt;/head&gt;&#xd;
+&lt;body bgcolor=&quot;white&quot;&gt;&#xd;
+&lt;center&gt;&lt;h1&gt;403 Forbidden&lt;/h1&gt;&lt;/center&gt;&#xd;
+&lt;hr&gt;&lt;center&gt;nginx/1.10.3&lt;/center&gt;&#xd;
+&lt;/body&gt;&#xd;
+&lt;/html&gt;&#xd;
+</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;TECH0002&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://test.zhishinet.com/api/zauth/v1/token/access%20</java.net.URL>
+</httpSample>
+<httpSample t="53" it="0" lt="52" ts="1505921875118" s="false" lb="getProvince-获取所有省份信息" rc="403" rm="Forbidden" tn="用户 1-1" dt="text" by="1434" sby="213" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[403]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1505921875170" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="用户 1-1" dt="text" by="1110" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">&lt;html&gt;&#xd;
+&lt;head&gt;&lt;title&gt;403 Forbidden&lt;/title&gt;&lt;/head&gt;&#xd;
+&lt;body bgcolor=&quot;white&quot;&gt;&#xd;
+&lt;center&gt;&lt;h1&gt;403 Forbidden&lt;/h1&gt;&lt;/center&gt;&#xd;
+&lt;hr&gt;&lt;center&gt;nginx/1.10.3&lt;/center&gt;&#xd;
+&lt;/body&gt;&#xd;
+&lt;/html&gt;&#xd;
+</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test.zhishinet.com/api/sys/v1/sec/getProvince</java.net.URL>
+</httpSample>
+<httpSample t="57" it="0" lt="57" ts="1505921875175" s="false" lb="getCity-获取市信息" rc="403" rm="Forbidden" tn="用户 1-1" dt="text" by="1435" sby="223" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[403]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1505921875232" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="用户 1-1" dt="text" by="1111" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">&lt;html&gt;&#xd;
+&lt;head&gt;&lt;title&gt;403 Forbidden&lt;/title&gt;&lt;/head&gt;&#xd;
+&lt;body bgcolor=&quot;white&quot;&gt;&#xd;
+&lt;center&gt;&lt;h1&gt;403 Forbidden&lt;/h1&gt;&lt;/center&gt;&#xd;
+&lt;hr&gt;&lt;center&gt;nginx/1.10.3&lt;/center&gt;&#xd;
+&lt;/body&gt;&#xd;
+&lt;/html&gt;&#xd;
+</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test.zhishinet.com/api/sys/v1/sec/getCity?provinceId=20</java.net.URL>
+</httpSample>
+<httpSample t="60" it="0" lt="59" ts="1505921875233" s="false" lb="getDistrict-获取县/区信息" rc="403" rm="Forbidden" tn="用户 1-1" dt="text" by="1443" sby="223" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[403]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1505921875293" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="用户 1-1" dt="text" by="1119" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">&lt;html&gt;&#xd;
+&lt;head&gt;&lt;title&gt;403 Forbidden&lt;/title&gt;&lt;/head&gt;&#xd;
+&lt;body bgcolor=&quot;white&quot;&gt;&#xd;
+&lt;center&gt;&lt;h1&gt;403 Forbidden&lt;/h1&gt;&lt;/center&gt;&#xd;
+&lt;hr&gt;&lt;center&gt;nginx/1.10.3&lt;/center&gt;&#xd;
+&lt;/body&gt;&#xd;
+&lt;/html&gt;&#xd;
+</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test.zhishinet.com/api/sys/v1/sec/getDistrict?cityId=21</java.net.URL>
+</httpSample>
+<httpSample t="55" it="0" lt="54" ts="1505921875294" s="false" lb="getSchoolCampus-获取学校校区信息" rc="403" rm="Forbidden" tn="用户 1-1" dt="text" by="1486" sby="255" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[403]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1505921875348" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="用户 1-1" dt="text" by="1162" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">&lt;html&gt;&#xd;
+&lt;head&gt;&lt;title&gt;403 Forbidden&lt;/title&gt;&lt;/head&gt;&#xd;
+&lt;body bgcolor=&quot;white&quot;&gt;&#xd;
+&lt;center&gt;&lt;h1&gt;403 Forbidden&lt;/h1&gt;&lt;/center&gt;&#xd;
+&lt;hr&gt;&lt;center&gt;nginx/1.10.3&lt;/center&gt;&#xd;
+&lt;/body&gt;&#xd;
+&lt;/html&gt;&#xd;
+</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test.zhishinet.com/api/sys/v1/sec/getSchoolCampus?cityId=37&amp;districtId=38&amp;provinceId=20</java.net.URL>
+</httpSample>
+<httpSample t="53" it="0" lt="52" ts="1505921875349" s="false" lb="getClass-获取班级信息" rc="403" rm="Forbidden" tn="用户 1-1" dt="text" by="1436" sby="221" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[403]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1505921875401" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="用户 1-1" dt="text" by="1112" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">&lt;html&gt;&#xd;
+&lt;head&gt;&lt;title&gt;403 Forbidden&lt;/title&gt;&lt;/head&gt;&#xd;
+&lt;body bgcolor=&quot;white&quot;&gt;&#xd;
+&lt;center&gt;&lt;h1&gt;403 Forbidden&lt;/h1&gt;&lt;/center&gt;&#xd;
+&lt;hr&gt;&lt;center&gt;nginx/1.10.3&lt;/center&gt;&#xd;
+&lt;/body&gt;&#xd;
+&lt;/html&gt;&#xd;
+</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test.zhishinet.com/api/sys/v1/sec/getClass?campusId=1</java.net.URL>
+</httpSample>
+
+</testResults>

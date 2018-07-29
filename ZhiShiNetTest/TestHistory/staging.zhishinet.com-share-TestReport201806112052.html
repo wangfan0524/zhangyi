@@ -1,0 +1,367 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ZSN-Interface Test Results</title>
+<style type="text/css">
+				body {
+					font:normal 68% verdana,arial,helvetica;
+					color:#000000;
+				}
+				table tr td, table tr th {
+					font-size: 68%;
+				}
+				table.details tr th{
+				    color: #ffffff;
+					font-weight: bold;
+					text-align:center;
+					background:#2674a6;
+					white-space: nowrap;
+				}
+				table.details tr td{
+					background:#eeeee0;
+				}
+				h1 {
+					margin: 0px 0px 5px; font: 165% verdana,arial,helvetica
+				}
+				h2 {
+					margin-top: 1em; margin-bottom: 0.5em; font: bold 125% verdana,arial,helvetica
+				}
+				h3 {
+					margin-bottom: 0.5em; font: bold 115% verdana,arial,helvetica
+				}
+				.Failure {
+					font-weight:bold; color:red;
+				}
+				
+	
+				img
+				{
+				  border-width: 0px;
+				}
+				
+				.expand_link
+				{
+				   position=absolute;
+				   right: 0px;
+				   width: 27px;
+				   top: 1px;
+				   height: 27px;
+				}
+				
+				.page_details
+				{
+				   display: none;
+				}
+                                
+                                .page_details_expanded
+                                {
+                                    display: block;
+                                    display/* hide this definition from  IE5/6 */: table-row;
+                                }
+
+
+			</style>
+<script language="JavaScript">
+                           function expand(details_id)
+			   {
+			      
+			      document.getElementById(details_id).className = "page_details_expanded";
+			   }
+			   
+			   function collapse(details_id)
+			   {
+			      
+			      document.getElementById(details_id).className = "page_details";
+			   }
+			   
+			   function change(details_id)
+			   {
+			      if(document.getElementById(details_id+"_image").src.match("expand"))
+			      {
+			         document.getElementById(details_id+"_image").src = "collapse.png";
+			         expand(details_id);
+			      }
+			      else
+			      {
+			         document.getElementById(details_id+"_image").src = "expand.png";
+			         collapse(details_id);
+			      } 
+                           }
+			</script>
+</head>
+<body>
+<h1>ZSN-Interface Test Results</h1>
+<table width="100%">
+<tr>
+<td align="left">Date report: 2018/06/11 20:52</td>
+<br>
+<td align="left">RunEnvironment:https://staging.zhishinet.com</td><td align="left">TestAccount:{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td>
+</tr>
+</table>
+<hr size="1">
+<h2>Summary</h2>
+<table width="95%" cellspacing="2" cellpadding="4" border="0" class="details" align="center">
+<tr valign="top">
+<th>Total</th><th>Pass</th><th>Failures</th><th>Success Rate</th>
+</tr>
+<tr valign="top">
+<td align="center">25</td><td align="center">25</td><td align="center">0</td><td align="center">100.00%</td>
+</tr>
+</table>
+<hr align="center" width="95%" size="1">
+<h2>Success Detail</h2>
+<h3>getToken<a name="getToken"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>classScore-正确性校验<a name="classScore-%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/app-student/v2/classScore?courseId=2104&amp;sessionId=2624</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>classScore-courseId为空<a name="classScore-courseId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/app-student/v2/classScore?courseId=&amp;sessionId=2624</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>classScore-courseId为空格<a name="classScore-courseId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/app-student/v2/classScore?courseId=  &amp;sessionId=2624</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 69: https://staging.zhishinet.com/api/app-student/v2/classScore?courseId=  &amp;sessionId=2624</td><td></td>
+</tr>
+</table>
+<h3>classScore-courseId为a-z的字符串<a name="classScore-courseId%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/app-student/v2/classScore?courseId=test&amp;sessionId=2624</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>classScore-courseId为中文<a name="classScore-courseId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/app-student/v2/classScore?courseId=课程&amp;sessionId=2624</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>classScore-courseId为特殊符号<a name="classScore-courseId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/app-student/v2/classScore?courseId=&amp;&amp;sessionId=2624</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>classScore-courseId为数学符号<a name="classScore-courseId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/app-student/v2/classScore?courseId=++&amp;sessionId=2624</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>classScore-courseId为标点符号<a name="classScore-courseId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/app-student/v2/classScore?courseId=？&amp;sessionId=2624</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>classScore-sessionId为空<a name="classScore-sessionId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/app-student/v2/classScore?courseId=2104&amp;sessionId=</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>classScore-sessionId为空格<a name="classScore-sessionId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/app-student/v2/classScore?courseId=2104&amp;sessionId=  </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 84: https://staging.zhishinet.com/api/app-student/v2/classScore?courseId=2104&amp;sessionId=  </td><td></td>
+</tr>
+</table>
+<h3>classScore-sessionId为a-z的字符串<a name="classScore-sessionId%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/app-student/v2/classScore?courseId=2104&amp;sessionId=test</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>classScore-sessionId为中文<a name="classScore-sessionId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/app-student/v2/classScore?courseId=2104&amp;sessionId=班级</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>classScore-sessionId为特殊符号<a name="classScore-sessionId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/app-student/v2/classScore?courseId=2104&amp;sessionId=&amp;</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>classScore-sessionId为数学符号<a name="classScore-sessionId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/app-student/v2/classScore?courseId=2104&amp;sessionId=--</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>classScore-sessionId为标点符号<a name="classScore-sessionId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/app-student/v2/classScore?courseId=2104&amp;sessionId=；</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>courseDetail正确性校验<a name="courseDetail%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/app-student/v2/sec/courseDetail?courseId=2104</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>courseDetail-courseId为空<a name="courseDetail-courseId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/app-student/v2/sec/courseDetail?courseId=</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>courseDetail-courseId为空格<a name="courseDetail-courseId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/app-student/v2/sec/courseDetail?courseId=  </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 75: https://staging.zhishinet.com/api/app-student/v2/sec/courseDetail?courseId=  </td><td></td>
+</tr>
+</table>
+<h3>courseDetail-courseId为a-z的字符串<a name="courseDetail-courseId%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/app-student/v2/sec/courseDetail?courseId=course</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>courseDetail-courseId为中文<a name="courseDetail-courseId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/app-student/v2/sec/courseDetail?courseId=课程</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>courseDetail-courseId为特殊符号<a name="courseDetail-courseId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/app-student/v2/sec/courseDetail?courseId=@</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>courseDetail-courseId为数学符号<a name="courseDetail-courseId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/app-student/v2/sec/courseDetail?courseId=*</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>courseDetail-courseId为标点符号<a name="courseDetail-courseId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/app-student/v2/sec/courseDetail?courseId=，</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+</body>
+</html>

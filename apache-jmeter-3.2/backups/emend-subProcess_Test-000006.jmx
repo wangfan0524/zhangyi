@@ -1,0 +1,2225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="3.2" jmeter="3.2 r1790748">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="测试计划" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">true</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="host" elementType="Argument">
+            <stringProp name="Argument.name">host</stringProp>
+            <stringProp name="Argument.value">${__P(host,test.zhishinet.com)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="port" elementType="Argument">
+            <stringProp name="Argument.name">port</stringProp>
+            <stringProp name="Argument.value">${__P(prot,443)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="protocol" elementType="Argument">
+            <stringProp name="Argument.name">protocol</stringProp>
+            <stringProp name="Argument.value">${__P(protocol,https)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="username" elementType="Argument">
+            <stringProp name="Argument.name">username</stringProp>
+            <stringProp name="Argument.value">${__P(username,sh000012)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="passwd" elementType="Argument">
+            <stringProp name="Argument.name">passwd</stringProp>
+            <stringProp name="Argument.value">${__P(password,welcome3)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Authorization</stringProp>
+            <stringProp name="Header.value">${__V(${type} ${token})}</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">content-Type</stringProp>
+            <stringProp name="Header.value">application/json</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <BSFPreProcessor guiclass="TestBeanGUI" testclass="BSFPreProcessor" testname="配置登录信息" enabled="true">
+        <stringProp name="scriptLanguage">javascript</stringProp>
+        <stringProp name="parameters"></stringProp>
+        <stringProp name="filename"></stringProp>
+        <stringProp name="script">var host = &quot;${host}&quot;;
+if (host == &quot;test.zhishinet.com&quot;){ 
+vars.put(&quot;username&quot;, &quot;sh000012&quot;);
+vars.put(&quot;password&quot;, &quot;welcome123&quot;);}
+else if (host == &quot;dev.zhishinet.com&quot;){
+vars.put(&quot;username&quot;, &quot;sh000124&quot;);
+vars.put(&quot;password&quot;, &quot;welcome123&quot;);
+}
+</stringProp>
+      </BSFPreProcessor>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="port" elementType="Argument">
+            <stringProp name="Argument.name">port</stringProp>
+            <stringProp name="Argument.value">443</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="protocol" elementType="Argument">
+            <stringProp name="Argument.name">protocol</stringProp>
+            <stringProp name="Argument.value">https</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="num" elementType="Argument">
+            <stringProp name="Argument.name">num</stringProp>
+            <stringProp name="Argument.value">${__Random(1,99999999,num)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="getToken" enabled="true"/>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="getToken" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+	&quot;username&quot;: &quot;${username}&quot;,&#xd;
+	&quot;password&quot;: &quot;${passwd}&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.port">${port}</stringProp>
+          <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/api/zauth/v1/token/access</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="type" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">type</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;token_type&quot;:&quot;(.+?)&quot;</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default"></stringProp>
+            <stringProp name="RegexExtractor.match_number">0</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="token" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">token</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;access_token&quot;:&quot;(.+?)&quot;,</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default"></stringProp>
+            <stringProp name="RegexExtractor.match_number">0</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+          <DebugPostProcessor guiclass="TestBeanGUI" testclass="DebugPostProcessor" testname="Debug PostProcessor" enabled="true">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySamplerProperties">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugPostProcessor>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="布置作业-打开作业-保存-订正launch-订正save-强化launch-强化save-报告页" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1519903893000</longProp>
+        <longProp name="ThreadGroup.end_time">1519903893000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="getToken" enabled="true">
+          <collectionProp name="ModuleController.node_path">
+            <stringProp name="23750841">工作台</stringProp>
+            <stringProp name="869052411">测试计划</stringProp>
+            <stringProp name="1966366787">getToken</stringProp>
+          </collectionProp>
+        </ModuleController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="getuser-获取用户信息" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${host}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">api/app-student/v2/sec/users/student</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <BSFPostProcessor guiclass="TestBeanGUI" testclass="BSFPostProcessor" testname="获取userId" enabled="true">
+              <stringProp name="scriptLanguage">javascript</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="script">try{
+	var jsonString = prev.getResponseDataAsString();
+	var response = JSON.parse(jsonString);
+}catch(err){
+	AssertionResult.setFailureMessage(&quot;cannot parse json object from response&quot;);
+	AssertionResult.setFailure(true);
+}
+
+//获取默认课本Id
+if(response.ubuserId != &quot;&quot;){
+	var userId = response.ubuserId;
+	log.info(&quot;用户Id为：&quot; + userId)
+	vars.put(&quot;userId&quot;, userId);
+}
+</stringProp>
+            </BSFPostProcessor>
+            <hashTree/>
+            <BSFAssertion guiclass="TestBeanGUI" testclass="BSFAssertion" testname="BSF Assertion(code或数据异常)" enabled="true">
+              <stringProp name="scriptLanguage">javascript</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="script">try{
+	var jsonString = prev.getResponseDataAsString();
+	var response = JSON.parse(jsonString);
+}catch(err){
+	AssertionResult.setFailureMessage(&quot;cannot parse json object from response&quot;);
+	AssertionResult.setFailure(true);
+}
+
+if(response.ubuserId != &quot;&quot;){
+//	log.info(&quot;获取题目详情_id:&quot;+response.QuestionCategorys.length);
+	AssertionResult.setFailure(false);
+}else{
+	AssertionResult.setFailureMessage(&quot;the parameter is empty&quot;);	
+	AssertionResult.setFailure(true);
+}</stringProp>
+            </BSFAssertion>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="getuser-获取用户信息" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">api/app-student/v2/sec/users/student</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <BSFPostProcessor guiclass="TestBeanGUI" testclass="BSFPostProcessor" testname="获取userId" enabled="true">
+            <stringProp name="scriptLanguage">javascript</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="script">try{
+	var jsonString = prev.getResponseDataAsString();
+	var response = JSON.parse(jsonString);
+}catch(err){
+	AssertionResult.setFailureMessage(&quot;cannot parse json object from response&quot;);
+	AssertionResult.setFailure(true);
+}
+
+//获取默认课本Id
+if(response.ubuserId != &quot;&quot;){
+	var userId = response.ubuserId;
+	log.info(&quot;用户Id为：&quot; + userId)
+	vars.put(&quot;userId&quot;, userId);
+}
+</stringProp>
+          </BSFPostProcessor>
+          <hashTree/>
+          <BSFAssertion guiclass="TestBeanGUI" testclass="BSFAssertion" testname="BSF Assertion(code或数据异常)" enabled="true">
+            <stringProp name="scriptLanguage">javascript</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="script">try{
+	var jsonString = prev.getResponseDataAsString();
+	var response = JSON.parse(jsonString);
+}catch(err){
+	AssertionResult.setFailureMessage(&quot;cannot parse json object from response&quot;);
+	AssertionResult.setFailure(true);
+}
+
+if(response.ubuserId != &quot;&quot;){
+//	log.info(&quot;获取题目详情_id:&quot;+response.QuestionCategorys.length);
+	AssertionResult.setFailure(false);
+}else{
+	AssertionResult.setFailureMessage(&quot;the parameter is empty&quot;);	
+	AssertionResult.setFailure(true);
+}</stringProp>
+          </BSFAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="publishAssessment布置作业" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+	&quot;assessmentBuilderType&quot;: 2,&#xd;
+	&quot;title&quot;: &quot;词汇语法测试${num}&quot;,&#xd;
+	&quot;beginDate&quot;: 1528360020,&#xd;
+	&quot;endDate&quot;: 2222672050,&#xd;
+	&quot;isOptionRandom&quot;: true,&#xd;
+	&quot;disableFeedback&quot;: false,&#xd;
+	&quot;showSubTitle&quot;: false,&#xd;
+	&quot;isTimerOn&quot;: true,&#xd;
+	&quot;duration&quot;: 1800,&#xd;
+	&quot;subjectId&quot;: 1,&#xd;
+	&quot;assessmentSessionList&quot;: [{&#xd;
+		&quot;sessionId&quot;: 2624,&#xd;
+		&quot;globalSessionTitle&quot;: &quot;2015级QAclass&quot;,&#xd;
+		&quot;checkFlag&quot;: false,&#xd;
+		&quot;code&quot;: &quot;10002197&quot;,&#xd;
+		&quot;title&quot;: &quot;芝士网皇家学院 本部 初中 2015级QA class&quot;,&#xd;
+		&quot;appTitle&quot;: &quot;芝士网皇家学院&quot;,&#xd;
+		&quot;isAllow&quot;: 0,&#xd;
+		&quot;classType&quot;: &quot;Express&quot;,&#xd;
+		&quot;classTypeTitle&quot;: &quot;体验班&quot;,&#xd;
+		&quot;isGroupEnable&quot;: 1,&#xd;
+		&quot;sessItemId&quot;: 0,&#xd;
+		&quot;isRequire&quot;: true,&#xd;
+		&quot;isRequiredEmend&quot;: true,&#xd;
+		&quot;isChecked&quot;: true,&#xd;
+		&quot;selectAsk&quot;: [{&#xd;
+			&quot;sessionId&quot;: 2624,&#xd;
+			&quot;isRequire&quot;: true&#xd;
+		}, {&#xd;
+			&quot;sessionId&quot;: 2624,&#xd;
+			&quot;isRequiredEmend&quot;: true,&#xd;
+			&quot;emendTypeCode&quot;: &quot;ERROR_INTENSIFY_QUESTIONS&quot;&#xd;
+		}]&#xd;
+	}],&#xd;
+	&quot;combineQuestions&quot;: {&#xd;
+		&quot;vocabularyQuestionsList&quot;: [{&#xd;
+			&quot;duration&quot;: 60,&#xd;
+			&quot;questionTypeId&quot;: 1,&#xd;
+			&quot;questionTypeTitle&quot;: &quot;读音选词&quot;,&#xd;
+			&quot;assessmentQuestions&quot;: [{&#xd;
+				&quot;questionId&quot;: 176552,&#xd;
+				&quot;questionTypeId&quot;: 1,&#xd;
+				&quot;questionTypeTitle&quot;: &quot;读音选词&quot;,&#xd;
+				&quot;questionText&quot;: &quot;Miss Smith is ________/gʊd/ with little kids.&quot;,&#xd;
+				&quot;homeworkQuestionTypeId&quot;: 38,&#xd;
+				&quot;title&quot;: null,&#xd;
+				&quot;taxonomyId&quot;: 4104,&#xd;
+				&quot;taxonomyTitle&quot;: &quot;good&quot;,&#xd;
+				&quot;categoryId&quot;: null,&#xd;
+				&quot;subCategoryId&quot;: null,&#xd;
+				&quot;masteryId&quot;: null,&#xd;
+				&quot;subMasteryId&quot;: null,&#xd;
+				&quot;difficultyLevel&quot;: 2,&#xd;
+				&quot;questionOptions&quot;: [{&#xd;
+					&quot;optionId&quot;: 477637,&#xd;
+					&quot;optionText&quot;: &quot;god&quot;,&#xd;
+					&quot;isCorrect&quot;: 0,&#xd;
+					&quot;sortOrder&quot;: 1,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: null,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 477638,&#xd;
+					&quot;optionText&quot;: &quot;grade&quot;,&#xd;
+					&quot;isCorrect&quot;: 0,&#xd;
+					&quot;sortOrder&quot;: 2,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: null,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 477639,&#xd;
+					&quot;optionText&quot;: &quot;gold&quot;,&#xd;
+					&quot;isCorrect&quot;: 0,&#xd;
+					&quot;sortOrder&quot;: 3,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: null,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 477640,&#xd;
+					&quot;optionText&quot;: &quot;good&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 4,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: null,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}],&#xd;
+				&quot;articleId&quot;: null,&#xd;
+				&quot;blankId&quot;: null,&#xd;
+				&quot;inputTypes&quot;: null,&#xd;
+				&quot;correctFeedback&quot;: &quot;god /gɒd/ n. 上帝；grade /greɪd/ n. 年级；gold /gəʊld/ n. 金子；good /gʊd/ adj. 好的。&lt;br&gt;句意：Smith小姐与小孩子相处得很好。&quot;,&#xd;
+				&quot;inCorrectFeedback&quot;: &quot;god /gɒd/ n. 上帝；grade /greɪd/ n. 年级；gold /gəʊld/ n. 金子；good /gʊd/ adj. 好的。&lt;br&gt;句意：Smith小姐与小孩子相处得很好。&quot;,&#xd;
+				&quot;inCorrectPercent&quot;: null,&#xd;
+				&quot;userResponse&quot;: null,&#xd;
+				&quot;correctResponse&quot;: null,&#xd;
+				&quot;inCorrectCount&quot;: null,&#xd;
+				&quot;subjectId&quot;: null,&#xd;
+				&quot;tagLines&quot;: [],&#xd;
+				&quot;orderCode&quot;: &quot;02001000120&quot;,&#xd;
+				&quot;questionAnswerDetails&quot;: null,&#xd;
+				&quot;correct&quot;: null,&#xd;
+				&quot;addCart&quot;: false,&#xd;
+				&quot;assign&quot;: false&#xd;
+			}],&#xd;
+			&quot;orderCode&quot;: &quot;02001000120&quot;,&#xd;
+			&quot;questionId&quot;: 176552&#xd;
+		}, {&#xd;
+			&quot;duration&quot;: 35,&#xd;
+			&quot;questionTypeId&quot;: 1,&#xd;
+			&quot;questionTypeTitle&quot;: &quot;单选题&quot;,&#xd;
+			&quot;assessmentQuestions&quot;: [{&#xd;
+				&quot;questionId&quot;: 191848,&#xd;
+				&quot;questionTypeId&quot;: 1,&#xd;
+				&quot;questionTypeTitle&quot;: &quot;单选题&quot;,&#xd;
+				&quot;questionText&quot;: &quot;-- I&apos;m going to take my driving test tomorrow.&lt;br&gt;&lt;br&gt;-- ______&quot;,&#xd;
+				&quot;homeworkQuestionTypeId&quot;: 1,&#xd;
+				&quot;title&quot;: null,&#xd;
+				&quot;taxonomyId&quot;: 6740,&#xd;
+				&quot;taxonomyTitle&quot;: &quot;问候与祝愿&quot;,&#xd;
+				&quot;categoryId&quot;: null,&#xd;
+				&quot;subCategoryId&quot;: null,&#xd;
+				&quot;masteryId&quot;: null,&#xd;
+				&quot;subMasteryId&quot;: null,&#xd;
+				&quot;difficultyLevel&quot;: 2,&#xd;
+				&quot;questionOptions&quot;: [{&#xd;
+					&quot;optionId&quot;: 507041,&#xd;
+					&quot;optionText&quot;: &quot;Good luck!&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 1,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: null,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 507042,&#xd;
+					&quot;optionText&quot;: &quot;Cheers!&quot;,&#xd;
+					&quot;isCorrect&quot;: 0,&#xd;
+					&quot;sortOrder&quot;: 2,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: null,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 507043,&#xd;
+					&quot;optionText&quot;: &quot;Come on!&quot;,&#xd;
+					&quot;isCorrect&quot;: 0,&#xd;
+					&quot;sortOrder&quot;: 3,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: null,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 507044,&#xd;
+					&quot;optionText&quot;: &quot;Congratulations!&quot;,&#xd;
+					&quot;isCorrect&quot;: 0,&#xd;
+					&quot;sortOrder&quot;: 4,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: null,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}],&#xd;
+				&quot;articleId&quot;: null,&#xd;
+				&quot;blankId&quot;: null,&#xd;
+				&quot;inputTypes&quot;: null,&#xd;
+				&quot;correctFeedback&quot;: &quot;Good luck! 祝你好运！ Cheers! 干杯！Come on! 来吧！ Congratulations! 祝贺！&lt;br&gt;&lt;br&gt;第一句话的意思为\&quot;我明天考驾照\&quot;，所以选择\&quot;Good luck!\&quot;来表示祝愿。&quot;,&#xd;
+				&quot;inCorrectFeedback&quot;: &quot;Good luck! 祝你好运！ Cheers! 干杯！Come on! 来吧！ Congratulations! 祝贺！&lt;br&gt;&lt;br&gt;第一句话的意思为\&quot;我明天考驾照\&quot;，所以选择\&quot;Good luck!\&quot;来表示祝愿。&quot;,&#xd;
+				&quot;inCorrectPercent&quot;: null,&#xd;
+				&quot;userResponse&quot;: null,&#xd;
+				&quot;correctResponse&quot;: null,&#xd;
+				&quot;inCorrectCount&quot;: null,&#xd;
+				&quot;subjectId&quot;: null,&#xd;
+				&quot;tagLines&quot;: [],&#xd;
+				&quot;orderCode&quot;: &quot;02001000130&quot;,&#xd;
+				&quot;questionAnswerDetails&quot;: null,&#xd;
+				&quot;correct&quot;: null,&#xd;
+				&quot;addCart&quot;: false,&#xd;
+				&quot;assign&quot;: false&#xd;
+			}],&#xd;
+			&quot;orderCode&quot;: null,&#xd;
+			&quot;questionId&quot;: null&#xd;
+		}, {&#xd;
+			&quot;duration&quot;: 60,&#xd;
+			&quot;questionTypeId&quot;: 1,&#xd;
+			&quot;questionTypeTitle&quot;: &quot;读音选词&quot;,&#xd;
+			&quot;assessmentQuestions&quot;: [{&#xd;
+				&quot;questionId&quot;: 339590,&#xd;
+				&quot;questionTypeId&quot;: 1,&#xd;
+				&quot;questionTypeTitle&quot;: &quot;读音选词&quot;,&#xd;
+				&quot;questionText&quot;: &quot;Miss Smith is ________/gʊd/ with little kids.&quot;,&#xd;
+				&quot;homeworkQuestionTypeId&quot;: 38,&#xd;
+				&quot;title&quot;: null,&#xd;
+				&quot;taxonomyId&quot;: 4104,&#xd;
+				&quot;taxonomyTitle&quot;: &quot;good&quot;,&#xd;
+				&quot;categoryId&quot;: null,&#xd;
+				&quot;subCategoryId&quot;: null,&#xd;
+				&quot;masteryId&quot;: null,&#xd;
+				&quot;subMasteryId&quot;: null,&#xd;
+				&quot;difficultyLevel&quot;: 2,&#xd;
+				&quot;questionOptions&quot;: [{&#xd;
+					&quot;optionId&quot;: 814145,&#xd;
+					&quot;optionText&quot;: &quot;god&quot;,&#xd;
+					&quot;isCorrect&quot;: 0,&#xd;
+					&quot;sortOrder&quot;: 1,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: null,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 814146,&#xd;
+					&quot;optionText&quot;: &quot;grade&quot;,&#xd;
+					&quot;isCorrect&quot;: 0,&#xd;
+					&quot;sortOrder&quot;: 2,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: null,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 814147,&#xd;
+					&quot;optionText&quot;: &quot;gold&quot;,&#xd;
+					&quot;isCorrect&quot;: 0,&#xd;
+					&quot;sortOrder&quot;: 3,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: null,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 814148,&#xd;
+					&quot;optionText&quot;: &quot;good&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 4,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: null,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}],&#xd;
+				&quot;articleId&quot;: null,&#xd;
+				&quot;blankId&quot;: null,&#xd;
+				&quot;inputTypes&quot;: null,&#xd;
+				&quot;correctFeedback&quot;: &quot;god /gɒd/ n. 上帝；grade /greɪd/ n. 年级；gold /gəʊld/ n. 金子；good /gʊd/ adj. 好的。&lt;br&gt;句意：Smith小姐与小孩子相处得很好。&quot;,&#xd;
+				&quot;inCorrectFeedback&quot;: &quot;god /gɒd/ n. 上帝；grade /greɪd/ n. 年级；gold /gəʊld/ n. 金子；good /gʊd/ adj. 好的。&lt;br&gt;句意：Smith小姐与小孩子相处得很好。&quot;,&#xd;
+				&quot;inCorrectPercent&quot;: null,&#xd;
+				&quot;userResponse&quot;: null,&#xd;
+				&quot;correctResponse&quot;: null,&#xd;
+				&quot;inCorrectCount&quot;: null,&#xd;
+				&quot;subjectId&quot;: null,&#xd;
+				&quot;tagLines&quot;: [],&#xd;
+				&quot;orderCode&quot;: &quot;02001000120&quot;,&#xd;
+				&quot;questionAnswerDetails&quot;: null,&#xd;
+				&quot;correct&quot;: null,&#xd;
+				&quot;addCart&quot;: false,&#xd;
+				&quot;assign&quot;: false&#xd;
+			}],&#xd;
+			&quot;orderCode&quot;: null,&#xd;
+			&quot;questionId&quot;: null&#xd;
+		}, {&#xd;
+			&quot;duration&quot;: 35,&#xd;
+			&quot;questionTypeId&quot;: 1,&#xd;
+			&quot;questionTypeTitle&quot;: &quot;单选题&quot;,&#xd;
+			&quot;assessmentQuestions&quot;: [{&#xd;
+				&quot;questionId&quot;: 226635,&#xd;
+				&quot;questionTypeId&quot;: 1,&#xd;
+				&quot;questionTypeTitle&quot;: &quot;单选题&quot;,&#xd;
+				&quot;questionText&quot;: &quot;You ______ beautiful(美丽的).&quot;,&#xd;
+				&quot;homeworkQuestionTypeId&quot;: 1,&#xd;
+				&quot;title&quot;: null,&#xd;
+				&quot;taxonomyId&quot;: 7226,&#xd;
+				&quot;taxonomyTitle&quot;: &quot;are&quot;,&#xd;
+				&quot;categoryId&quot;: null,&#xd;
+				&quot;subCategoryId&quot;: null,&#xd;
+				&quot;masteryId&quot;: null,&#xd;
+				&quot;subMasteryId&quot;: null,&#xd;
+				&quot;difficultyLevel&quot;: 2,&#xd;
+				&quot;questionOptions&quot;: [{&#xd;
+					&quot;optionId&quot;: 572600,&#xd;
+					&quot;optionText&quot;: &quot;am&quot;,&#xd;
+					&quot;isCorrect&quot;: 0,&#xd;
+					&quot;sortOrder&quot;: 1,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: null,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 572601,&#xd;
+					&quot;optionText&quot;: &quot;is&quot;,&#xd;
+					&quot;isCorrect&quot;: 0,&#xd;
+					&quot;sortOrder&quot;: 2,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: null,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 572602,&#xd;
+					&quot;optionText&quot;: &quot;are&quot;,&#xd;
+					&quot;isCorrect&quot;: 1,&#xd;
+					&quot;sortOrder&quot;: 3,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: null,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}, {&#xd;
+					&quot;optionId&quot;: 572603,&#xd;
+					&quot;optionText&quot;: &quot;was&quot;,&#xd;
+					&quot;isCorrect&quot;: 0,&#xd;
+					&quot;sortOrder&quot;: 4,&#xd;
+					&quot;questionId&quot;: null,&#xd;
+					&quot;inputType&quot;: null,&#xd;
+					&quot;questionTypeId&quot;: null&#xd;
+				}],&#xd;
+				&quot;articleId&quot;: null,&#xd;
+				&quot;blankId&quot;: null,&#xd;
+				&quot;inputTypes&quot;: null,&#xd;
+				&quot;correctFeedback&quot;: &quot;当主语是you时，be动词用are。&quot;,&#xd;
+				&quot;inCorrectFeedback&quot;: &quot;当主语是you时，be动词用are。&quot;,&#xd;
+				&quot;inCorrectPercent&quot;: null,&#xd;
+				&quot;userResponse&quot;: null,&#xd;
+				&quot;correctResponse&quot;: null,&#xd;
+				&quot;inCorrectCount&quot;: null,&#xd;
+				&quot;subjectId&quot;: null,&#xd;
+				&quot;tagLines&quot;: [],&#xd;
+				&quot;orderCode&quot;: &quot;02001000130&quot;,&#xd;
+				&quot;questionAnswerDetails&quot;: null,&#xd;
+				&quot;correct&quot;: null,&#xd;
+				&quot;addCart&quot;: false,&#xd;
+				&quot;assign&quot;: false&#xd;
+			}],&#xd;
+			&quot;orderCode&quot;: null,&#xd;
+			&quot;questionId&quot;: null&#xd;
+		}],&#xd;
+		&quot;vocabularyQuestionsFIDList&quot;: [],&#xd;
+		&quot;vocabularyArticleQuestionsList&quot;: [],&#xd;
+		&quot;readingList&quot;: [],&#xd;
+		&quot;videoQuestions&quot;: [],&#xd;
+		&quot;oralReadSentenceList&quot;: [],&#xd;
+		&quot;oralGuessWordList&quot;: [],&#xd;
+		&quot;oralReadWordList&quot;: [],&#xd;
+		&quot;oralTopicDescribeList&quot;: []&#xd;
+	},&#xd;
+	&quot;suitList&quot;: []&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.port">${port}</stringProp>
+          <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/api/teacher/v1/sec/publishAssessment</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">assessmentId</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.assessmentIds[0]</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <DebugPostProcessor guiclass="TestBeanGUI" testclass="DebugPostProcessor" testname="Debug PostProcessor" enabled="true">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySamplerProperties">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="如果（If）控制器" enabled="true">
+          <stringProp name="IfController.condition">&quot;assessmentId&quot; != &quot;&quot; || &quot;assessmentId&quot; != undefined</stringProp>
+          <boolProp name="IfController.evaluateAll">false</boolProp>
+        </IfController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="getHomeworkInfo" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="assessmentId" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">${assessmentId}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">assessmentId</stringProp>
+                </elementProp>
+                <elementProp name="sessionId" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">2624</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">sessionId</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${host}</stringProp>
+            <stringProp name="HTTPSampler.port">${port}</stringProp>
+            <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+            <stringProp name="HTTPSampler.path">/api/teacher/v1/sec/getHomeworkInfo</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="49586">200</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="获取sessionUserTrackingId" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">sessionUserTrackingId</stringProp>
+              <stringProp name="RegexExtractor.regex">&quot;userId&quot;:5866,&quot;sessionUserTrackingId&quot;:(.*?),&quot;fullName&quot;:&quot;朴明春&quot;,</stringProp>
+              <stringProp name="RegexExtractor.template"></stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <stringProp name="RegexExtractor.match_number">0</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <DebugPostProcessor guiclass="TestBeanGUI" testclass="DebugPostProcessor" testname="Debug PostProcessor" enabled="true">
+              <boolProp name="displayJMeterProperties">false</boolProp>
+              <boolProp name="displayJMeterVariables">true</boolProp>
+              <boolProp name="displaySamplerProperties">true</boolProp>
+              <boolProp name="displaySystemProperties">false</boolProp>
+            </DebugPostProcessor>
+            <hashTree/>
+            <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell PostProcessor" enabled="true">
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <boolProp name="resetInterpreter">false</boolProp>
+              <stringProp name="script">prev.setDataEncoding(&quot;UTF-8&quot;);</stringProp>
+            </BeanShellPostProcessor>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="getHomeworkScoreNew(获取sessionUserTrackingId)" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="assessmentId" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">${assessmentId}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">assessmentId</stringProp>
+                </elementProp>
+                <elementProp name="sessionId" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">2624</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">sessionId</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${host}</stringProp>
+            <stringProp name="HTTPSampler.port">${port}</stringProp>
+            <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/api/teacher/v1/sec/getHomeworkScoreNew</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="49586">200</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="sessionUserTrackingId" enabled="true">
+              <stringProp name="JSONPostProcessor.referenceNames">sessionUserTrackingId</stringProp>
+              <stringProp name="JSONPostProcessor.jsonPathExprs">$..[?(@.fullName==&quot;朴明春&quot;)].sessionUserTrackingId</stringProp>
+              <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            </JSONPostProcessor>
+            <hashTree/>
+            <DebugPostProcessor guiclass="TestBeanGUI" testclass="DebugPostProcessor" testname="Debug PostProcessor" enabled="true">
+              <boolProp name="displayJMeterProperties">false</boolProp>
+              <boolProp name="displayJMeterVariables">true</boolProp>
+              <boolProp name="displaySamplerProperties">true</boolProp>
+              <boolProp name="displaySystemProperties">false</boolProp>
+            </DebugPostProcessor>
+            <hashTree/>
+          </hashTree>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="如果（If）控制器" enabled="true">
+            <stringProp name="IfController.condition">&quot;sessionUserTrackingId&quot;!= &quot;&quot; || &quot;sessionUserTrackingId&quot; != undefined</stringProp>
+            <boolProp name="IfController.evaluateAll">false</boolProp>
+          </IfController>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="launchTheAssessmentHomework-打开作业" enabled="true">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="assessmentId" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">${assessmentId}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">assessmentId</stringProp>
+                  </elementProp>
+                  <elementProp name="sessionUserTrackingId" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">${sessionUserTrackingId}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">sessionUserTrackingId</stringProp>
+                  </elementProp>
+                  <elementProp name="randomNum" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">0.4781015824927144</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">randomNum</stringProp>
+                  </elementProp>
+                  <elementProp name="sessionid" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">2624</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">sessionid</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${host}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/api/app-student/v2/sec/launchTheAssessmentHomework</stringProp>
+              <stringProp name="HTTPSampler.method">GET</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="49586">200</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">8</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="saveTheAssessmentHomework-保存" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+	&quot;AssessmentType&quot;: 2,&#xd;
+	&quot;AssessmentId&quot;: ${assessmentId},&#xd;
+	&quot;SessionUserTrackingId&quot;: ${sessionUserTrackingId},&#xd;
+	&quot;UserId&quot;: ${userId},&#xd;
+	&quot;LanguageId&quot;: 3,&#xd;
+	&quot;IsPreview&quot;: false,&#xd;
+	&quot;CategoryIndex&quot;: 0,&#xd;
+	&quot;GroupIndex&quot;: 0,&#xd;
+	&quot;QuestionIndex&quot;: 0,&#xd;
+	&quot;ActiveIndex&quot;: 0,&#xd;
+	&quot;IsAssessmentCompleted&quot;: true,&#xd;
+	&quot;QuestionCategorys&quot;: [{&#xd;
+		&quot;CategoryId&quot;: 2,&#xd;
+		&quot;CategoryTitle&quot;: &quot;词汇语法&quot;,&#xd;
+		&quot;QuestionGroups&quot;: [{&#xd;
+			&quot;GroupType&quot;: 1,&#xd;
+			&quot;UserTimeSpent&quot;: 21,&#xd;
+			&quot;Questions&quot;: [{&#xd;
+				&quot;ArticleId&quot;: -1,&#xd;
+				&quot;QuestionId&quot;: 176552,&#xd;
+				&quot;IsQuestionCorrect&quot;: 0,&#xd;
+				&quot;UserResponse&quot;: [],&#xd;
+				&quot;InputTypes&quot;: [&quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;],&#xd;
+				&quot;BlankAnswers&quot;: [&quot;&quot;],&#xd;
+				&quot;traceBlankAnswers&quot;: [&quot;&quot;]&#xd;
+			}],&#xd;
+			&quot;FeedbackViewed&quot;: false&#xd;
+		}, {&#xd;
+			&quot;GroupType&quot;: 1,&#xd;
+			&quot;UserTimeSpent&quot;: 0,&#xd;
+			&quot;Questions&quot;: [{&#xd;
+				&quot;ArticleId&quot;: -1,&#xd;
+				&quot;QuestionId&quot;: 339590,&#xd;
+				&quot;IsQuestionCorrect&quot;: 0,&#xd;
+				&quot;UserResponse&quot;: [],&#xd;
+				&quot;InputTypes&quot;: [&quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;],&#xd;
+				&quot;BlankAnswers&quot;: [&quot;&quot;],&#xd;
+				&quot;traceBlankAnswers&quot;: [&quot;&quot;]&#xd;
+			}],&#xd;
+			&quot;FeedbackViewed&quot;: false&#xd;
+		}, {&#xd;
+			&quot;GroupType&quot;: 1,&#xd;
+			&quot;UserTimeSpent&quot;: 0,&#xd;
+			&quot;Questions&quot;: [{&#xd;
+				&quot;ArticleId&quot;: -1,&#xd;
+				&quot;QuestionId&quot;: 191848,&#xd;
+				&quot;IsQuestionCorrect&quot;: 0,&#xd;
+				&quot;UserResponse&quot;: [],&#xd;
+				&quot;InputTypes&quot;: [&quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;],&#xd;
+				&quot;BlankAnswers&quot;: [&quot;&quot;],&#xd;
+				&quot;traceBlankAnswers&quot;: [&quot;&quot;]&#xd;
+			}],&#xd;
+			&quot;FeedbackViewed&quot;: false&#xd;
+		}, {&#xd;
+			&quot;GroupType&quot;: 1,&#xd;
+			&quot;UserTimeSpent&quot;: 0,&#xd;
+			&quot;Questions&quot;: [{&#xd;
+				&quot;ArticleId&quot;: -1,&#xd;
+				&quot;QuestionId&quot;: 226635,&#xd;
+				&quot;IsQuestionCorrect&quot;: 0,&#xd;
+				&quot;UserResponse&quot;: [],&#xd;
+				&quot;InputTypes&quot;: [&quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;],&#xd;
+				&quot;BlankAnswers&quot;: [&quot;&quot;],&#xd;
+				&quot;traceBlankAnswers&quot;: [&quot;&quot;]&#xd;
+			}],&#xd;
+			&quot;FeedbackViewed&quot;: false&#xd;
+		}]&#xd;
+	}],&#xd;
+	&quot;SessionId&quot;: 2624,&#xd;
+	&quot;requiredEmend&quot;: true,&#xd;
+	&quot;emendTypeCode&quot;: &quot;NO_NEED&quot;&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${host}</stringProp>
+              <stringProp name="HTTPSampler.port">${port}</stringProp>
+              <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/api/app-student/v2/sec/saveTheAssessmentHomework</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              <stringProp name="TestPlan.comments">${assessmentId}    ${sessionUserTrackingId_g1}</stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="49586">200</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="launch-订正launch" enabled="true">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="homeworkAssessmentId" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">${assessmentId}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">homeworkAssessmentId</stringProp>
+                  </elementProp>
+                  <elementProp name="sessionUserTrackingId" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">${sessionUserTrackingId}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">sessionUserTrackingId</stringProp>
+                  </elementProp>
+                  <elementProp name="subjectId" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">1</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">subjectId</stringProp>
+                  </elementProp>
+                  <elementProp name="sessionId" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">2624</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">sessionId</stringProp>
+                  </elementProp>
+                  <elementProp name="attemptNo" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">1</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">attemptNo</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${host}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/api/emend/v1/sec/homework/launch</stringProp>
+              <stringProp name="HTTPSampler.method">GET</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="49586">200</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">8</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="save-订正save" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+    &quot;AssessmentType&quot;: 2,&#xd;
+    &quot;AssessmentId&quot;: ${assessmentId},&#xd;
+    &quot;SessionUserTrackingId&quot;: ${sessionUserTrackingId},&#xd;
+    &quot;UserId&quot;: 5866,&#xd;
+    &quot;LanguageId&quot;: 3,&#xd;
+    &quot;IsPreview&quot;: false,&#xd;
+    &quot;CategoryIndex&quot;: 0,&#xd;
+    &quot;GroupIndex&quot;: 0,&#xd;
+    &quot;QuestionIndex&quot;: 0,&#xd;
+    &quot;ActiveIndex&quot;: 0,&#xd;
+    &quot;IsAssessmentCompleted&quot;: true,&#xd;
+    &quot;QuestionCategorys&quot;: [&#xd;
+        {&#xd;
+            &quot;CategoryId&quot;: 2,&#xd;
+            &quot;CategoryTitle&quot;: &quot;词汇语法&quot;,&#xd;
+            &quot;QuestionGroups&quot;: [&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 63375,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                null&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 144613,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                null&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 245692,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                null&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 127649,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                null,&#xd;
+                                null&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 85611,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                null,&#xd;
+                                null,&#xd;
+                                null,&#xd;
+                                null,&#xd;
+                                null,&#xd;
+                                null,&#xd;
+                                null&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 175665,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                null&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 201368,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                null&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 85616,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                null,&#xd;
+                                null,&#xd;
+                                null,&#xd;
+                                null,&#xd;
+                                null,&#xd;
+                                null&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 188525,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                null&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 94018,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                null&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 109069,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                null&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 297879,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                &quot;&quot;,&#xd;
+                                &quot;&quot;,&#xd;
+                                &quot;&quot;,&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 134332,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                null,&#xd;
+                                null,&#xd;
+                                null,&#xd;
+                                null&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 258045,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                &quot;&quot;,&#xd;
+                                &quot;&quot;,&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 94154,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                null&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                }&#xd;
+            ]&#xd;
+        },&#xd;
+        {&#xd;
+            &quot;CategoryId&quot;: 3,&#xd;
+            &quot;CategoryTitle&quot;: &quot;阅读理解&quot;,&#xd;
+            &quot;QuestionGroups&quot;: [&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 2,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: 43,&#xd;
+                            &quot;QuestionId&quot;: 65578,&#xd;
+                            &quot;UserResponse&quot;: [],&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        },&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: 43,&#xd;
+                            &quot;QuestionId&quot;: 65575,&#xd;
+                            &quot;UserResponse&quot;: [],&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        },&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: 43,&#xd;
+                            &quot;QuestionId&quot;: 65576,&#xd;
+                            &quot;UserResponse&quot;: [],&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        },&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: 43,&#xd;
+                            &quot;QuestionId&quot;: 65573,&#xd;
+                            &quot;UserResponse&quot;: [],&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        },&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: 43,&#xd;
+                            &quot;QuestionId&quot;: 65577,&#xd;
+                            &quot;UserResponse&quot;: [],&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                }&#xd;
+            ]&#xd;
+        }&#xd;
+    ],&#xd;
+    &quot;AttemptNo&quot;: 1,&#xd;
+    &quot;SessionId&quot;: 2624,&#xd;
+    &quot;isErrorCorrection&quot;: true,&#xd;
+    &quot;errorCorrectionType&quot;: &quot;emend&quot;,&#xd;
+    &quot;SubjectId&quot;: 1,&#xd;
+    &quot;emendTypeCode&quot;: &quot;ERROR_INTENSIFY_QUESTIONS&quot;&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${host}</stringProp>
+              <stringProp name="HTTPSampler.port">${port}</stringProp>
+              <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/api/emend/v1/sec/homework/save</stringProp>
+              <stringProp name="HTTPSampler.method">PUT</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              <stringProp name="TestPlan.comments">${assessmentId}     ${sessionUserTrackingId_g1}</stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="49590">204</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="launch/intensifyEmend-强化launch" enabled="true">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="homeworkAssessmentId" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">${assessmentId}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">homeworkAssessmentId</stringProp>
+                  </elementProp>
+                  <elementProp name="sessionUserTrackingId" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">${sessionUserTrackingId}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">sessionUserTrackingId</stringProp>
+                  </elementProp>
+                  <elementProp name="subjectId" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">1</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">subjectId</stringProp>
+                  </elementProp>
+                  <elementProp name="sessionId" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">2624</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">sessionId</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${host}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/api/emend/v1/sec/homework/launch/intensifyEmend</stringProp>
+              <stringProp name="HTTPSampler.method">GET</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="49586">200</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">8</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="save/intensifyEmend-强化save" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+    &quot;AssessmentType&quot;: 2,&#xd;
+    &quot;AssessmentId&quot;: ${assessmentId},&#xd;
+    &quot;SessionUserTrackingId&quot;: ${sessionUserTrackingId},&#xd;
+    &quot;UserId&quot;: 5866,&#xd;
+    &quot;LanguageId&quot;: 3,&#xd;
+    &quot;IsPreview&quot;: false,&#xd;
+    &quot;CategoryIndex&quot;: 0,&#xd;
+    &quot;GroupIndex&quot;: 0,&#xd;
+    &quot;QuestionIndex&quot;: 0,&#xd;
+    &quot;ActiveIndex&quot;: 0,&#xd;
+    &quot;IsAssessmentCompleted&quot;: true,&#xd;
+    &quot;QuestionCategorys&quot;: [&#xd;
+        {&#xd;
+            &quot;CategoryId&quot;: 2,&#xd;
+            &quot;CategoryTitle&quot;: &quot;词汇语法&quot;,&#xd;
+            &quot;QuestionGroups&quot;: [&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 281641,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                null&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 116437,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                &quot;&quot;,&#xd;
+                                &quot;&quot;,&#xd;
+                                &quot;&quot;,&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 93748,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                null&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 91195,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                &quot;&quot;,&#xd;
+                                &quot;&quot;,&#xd;
+                                &quot;&quot;,&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 109199,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                &quot;&quot;,&#xd;
+                                &quot;&quot;,&#xd;
+                                &quot;&quot;,&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 228678,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                &quot;&quot;,&#xd;
+                                &quot;&quot;,&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 255999,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                null&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 94220,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                null&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 129988,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                null&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 63613,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                null&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 102683,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                &quot;&quot;,&#xd;
+                                &quot;&quot;,&#xd;
+                                &quot;&quot;,&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 100004,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                null,&#xd;
+                                null,&#xd;
+                                null&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 201751,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                null&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                },&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 201745,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                null&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                }&#xd;
+            ]&#xd;
+        }&#xd;
+    ],&#xd;
+    &quot;AttemptNo&quot;: 1,&#xd;
+    &quot;SessionId&quot;: 2624,&#xd;
+    &quot;isErrorCorrection&quot;: true,&#xd;
+    &quot;errorCorrectionType&quot;: &quot;intensifyEmend&quot;,&#xd;
+    &quot;SubjectId&quot;: 1,&#xd;
+    &quot;emendTypeCode&quot;: &quot;ERROR_INTENSIFY_QUESTIONS&quot;&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${host}</stringProp>
+              <stringProp name="HTTPSampler.port">${port}</stringProp>
+              <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+              <stringProp name="HTTPSampler.path">/api/emend/v1/sec/homework/save/intensifyEmend</stringProp>
+              <stringProp name="HTTPSampler.method">PUT</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              <stringProp name="TestPlan.comments">${assessmentId}    ${sessionUserTrackingId_g1}</stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="49590">204</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+              <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell PostProcessor" enabled="true">
+                <boolProp name="resetInterpreter">false</boolProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="script"></stringProp>
+              </BeanShellPostProcessor>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="type" enabled="true">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="sessionUserTrackingId" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">${sessionUserTrackingId}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">sessionUserTrackingId</stringProp>
+                  </elementProp>
+                  <elementProp name="subjectId" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">1</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">subjectId</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${host}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/api/emend/v1/sec/homework/type</stringProp>
+              <stringProp name="HTTPSampler.method">GET</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="49586">200</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">8</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="report" enabled="true">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="homeworkAssessmentId" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">${assessmentId}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">homeworkAssessmentId</stringProp>
+                  </elementProp>
+                  <elementProp name="sessionUserTrackingId" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">${sessionUserTrackingId}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">sessionUserTrackingId</stringProp>
+                  </elementProp>
+                  <elementProp name="subjectId" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">1</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">subjectId</stringProp>
+                  </elementProp>
+                  <elementProp name="sessionId" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">2624</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">sessionId</stringProp>
+                  </elementProp>
+                  <elementProp name="attemptNo" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">1</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">attemptNo</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${host}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/api/emend/v1/sec/homework/report</stringProp>
+              <stringProp name="HTTPSampler.method">GET</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="49586">200</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">8</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="report/intensifyEmend" enabled="true">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="homeworkAssessmentId" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">${assessmentId}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">homeworkAssessmentId</stringProp>
+                  </elementProp>
+                  <elementProp name="sessionUserTrackingId" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">${sessionUserTrackingId}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">sessionUserTrackingId</stringProp>
+                  </elementProp>
+                  <elementProp name="subjectId" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">1</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">subjectId</stringProp>
+                  </elementProp>
+                  <elementProp name="sessionId" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">2624</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">sessionId</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${host}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/api/emend/v1/sec/homework/report/intensifyEmend</stringProp>
+              <stringProp name="HTTPSampler.method">GET</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="49586">200</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">8</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="deleteHomework" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+    &quot;assessmentId&quot;: &quot;${assessmentId}&quot;,&#xd;
+    &quot;sessionId&quot;: 2624&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${host}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/api/teacher/v1/sec/teacher/deleteHomework</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              <stringProp name="TestPlan.comments">${assessmentId</stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="49586">200</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">8</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+    <WorkBench guiclass="WorkBenchGui" testclass="WorkBench" testname="工作台" enabled="true">
+      <boolProp name="WorkBench.save">true</boolProp>
+    </WorkBench>
+    <hashTree/>
+  </hashTree>
+</jmeterTestPlan>

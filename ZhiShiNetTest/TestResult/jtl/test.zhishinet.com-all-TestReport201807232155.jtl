@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="3773" it="0" lt="3764" ts="1532354125374" s="true" lb="getToken" rc="200" rm="" tn="getTotalCoinsAndExp-获取芝士币 1-1" dt="text" by="1559" sby="290" ng="1" na="1">
+  <sample t="2" it="0" lt="0" ts="1532354129145" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getTotalCoinsAndExp-获取芝士币 1-1" dt="text" by="1196" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://test.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="691" it="0" lt="690" ts="1532354129169" s="true" lb="getTotalCoinsAndExp正确校验" rc="200" rm="" tn="getTotalCoinsAndExp-获取芝士币 1-1" dt="text" by="1738" sby="256" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532354129860" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getTotalCoinsAndExp-获取芝士币 1-1" dt="text" by="1369" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test.zhishinet.com/api/app-student/v2/sec/getTotalCoinsAndExp</java.net.URL>
+</httpSample>
+<httpSample t="964" it="0" lt="964" ts="1532354129902" s="true" lb="getToken" rc="200" rm="" tn="getusers获取用户信息 2-1" dt="text" by="1549" sby="290" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1532354130866" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getusers获取用户信息 2-1" dt="text" by="1186" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://test.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="396" it="0" lt="395" ts="1532354130871" s="true" lb="/users/student-学生信息正确性校验" rc="200" rm="" tn="getusers获取用户信息 2-1" dt="text" by="3850" sby="250" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532354131267" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getusers获取用户信息 2-1" dt="text" by="1359" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test.zhishinet.com/api/app-student/v2/sec/users/student</java.net.URL>
+</httpSample>
+<httpSample t="381" it="0" lt="380" ts="1532354131275" s="true" lb="getusers教师信息正确性校验" rc="200" rm="" tn="getusers获取用户信息 2-1" dt="text" by="3513" sby="250" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532354131656" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getusers获取用户信息 2-1" dt="text" by="1352" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test.zhishinet.com/api/app-student/v2/sec/users/teacher</java.net.URL>
+</httpSample>
+<httpSample t="260" it="0" lt="260" ts="1532354131664" s="true" lb="getusers为空" rc="404" rm="" tn="getusers获取用户信息 2-1" dt="text" by="1802" sby="243" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532354131924" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getusers获取用户信息 2-1" dt="text" by="1331" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test.zhishinet.com/api/app-student/v2/sec/users/</java.net.URL>
+</httpSample>
+<httpSample t="664" it="0" lt="662" ts="1532354131929" s="true" lb="getusers为数学符号" rc="200" rm="" tn="getusers获取用户信息 2-1" dt="text" by="1639" sby="244" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1532354132592" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getusers获取用户信息 2-1" dt="text" by="1338" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test.zhishinet.com/api/app-student/v2/sec/users/+</java.net.URL>
+</httpSample>
+<httpSample t="263" it="0" lt="261" ts="1532354132605" s="true" lb="getusers为特殊字符" rc="200" rm="" tn="getusers获取用户信息 2-1" dt="text" by="1639" sby="244" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532354132868" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getusers获取用户信息 2-1" dt="text" by="1338" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test.zhishinet.com/api/app-student/v2/sec/users/&amp;</java.net.URL>
+</httpSample>
+<httpSample t="257" it="0" lt="257" ts="1532354132872" s="true" lb="getusers为标点符号" rc="200" rm="" tn="getusers获取用户信息 2-1" dt="text" by="1640" sby="252" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532354133129" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getusers获取用户信息 2-1" dt="text" by="1339" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test.zhishinet.com/api/app-student/v2/sec/users/？</java.net.URL>
+</httpSample>
+<httpSample t="986" it="0" lt="985" ts="1532354133157" s="true" lb="getToken" rc="200" rm="" tn="getTotalCoinsAndExp获取用户芝士币、经验 3-1" dt="text" by="1568" sby="290" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1532354134143" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getTotalCoinsAndExp获取用户芝士币、经验 3-1" dt="text" by="1205" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://test.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="374" it="0" lt="374" ts="1532354134152" s="true" lb="getTotalCoinsAndExp正确性校验" rc="200" rm="" tn="getTotalCoinsAndExp获取用户芝士币、经验 3-1" dt="text" by="1749" sby="256" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532354134526" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getTotalCoinsAndExp获取用户芝士币、经验 3-1" dt="text" by="1380" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test.zhishinet.com/api/app-student/v2/sec/getTotalCoinsAndExp</java.net.URL>
+</httpSample>
+
+<httpSample t="3682" it="0" lt="3672" ts="1532354137006" s="true" lb="getToken" rc="200" rm="" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="1556" sby="290" ng="1" na="1">
+  <sample t="2" it="0" lt="0" ts="1532354140687" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="1193" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://test.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="1035" it="0" lt="1033" ts="1532354140713" s="true" lb="cheesecoins/log正确校验identity为student" rc="200" rm="" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="2048" sby="296" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1532354141747" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="1426" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test.zhishinet.com/api/user-profile/v1/sec/users/cheesecoins/log?identity=student&amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="270" it="0" lt="269" ts="1532354141766" s="true" lb="cheesecoins/log正确校验identity为teacher" rc="200" rm="" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="2019" sby="296" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532354142036" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="1426" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test.zhishinet.com/api/user-profile/v1/sec/users/cheesecoins/log?identity=teacher&amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="250" it="0" lt="250" ts="1532354142047" s="true" lb="cheesecoins/log-identity为不存在的值" rc="400" rm="" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="1904" sby="296" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532354142297" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="1422" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test.zhishinet.com/api/user-profile/v1/sec/users/cheesecoins/log?identity=manager&amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="566" it="0" lt="566" ts="1532354142300" s="true" lb="cheesecoins/log-identity为空" rc="200" rm="" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="2029" sby="289" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532354142866" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="1407" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test.zhishinet.com/api/user-profile/v1/sec/users/cheesecoins/log?identity=&amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="2" it="0" lt="0" ts="1532354142872" s="true" lb="cheesecoins/log-identity为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 82: https://test.zhishinet.com/api/user-profile/v1/sec/users/cheesecoins/log?identity= &amp;pageNo=1&amp;pageSize=1" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="2516" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532354142874" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="1410" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test.zhishinet.com/api/user-profile/v1/sec/users/cheesecoins/log?identity= &amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="594" it="0" lt="593" ts="1532354142879" s="true" lb="cheesecoins/log-identity为中文" rc="400" rm="" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="1895" sby="307" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532354143473" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="1413" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test.zhishinet.com/api/user-profile/v1/sec/users/cheesecoins/log?identity=学生&amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="257" it="0" lt="256" ts="1532354143481" s="true" lb="cheesecoins/log-identity为数学符号" rc="400" rm="" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="1895" sby="290" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1532354143737" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="1413" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test.zhishinet.com/api/user-profile/v1/sec/users/cheesecoins/log?identity=-&amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="254" it="0" lt="253" ts="1532354143744" s="true" lb="cheesecoins/log-identity为特殊符号" rc="400" rm="" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="1895" sby="290" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1532354143997" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="1413" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test.zhishinet.com/api/user-profile/v1/sec/users/cheesecoins/log?identity=*&amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="288" it="0" lt="286" ts="1532354144001" s="true" lb="cheesecoins/log-identity为标点符号" rc="400" rm="" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="1897" sby="298" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1532354144288" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="1415" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test.zhishinet.com/api/user-profile/v1/sec/users/cheesecoins/log?identity=，&amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="1004" it="0" lt="1003" ts="1532354144331" s="true" lb="getToken" rc="200" rm="" tn="achievement-获取学员成就记录 2-1" dt="text" by="1547" sby="290" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1532354145335" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="achievement-获取学员成就记录 2-1" dt="text" by="1184" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://test.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="267" it="0" lt="266" ts="1532354145352" s="true" lb="achievement正确性验证type=1" rc="200" rm="" tn="achievement-获取学员成就记录 2-1" dt="text" by="2186" sby="282" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1532354145618" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="achievement-获取学员成就记录 2-1" dt="text" by="1388" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test.zhishinet.com/api/user-profile/v1/sec/users/achievement?type=1&amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="317" it="0" lt="316" ts="1532354145624" s="true" lb="achievement正确性验证type=2" rc="200" rm="" tn="achievement-获取学员成就记录 2-1" dt="text" by="2151" sby="282" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532354145941" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="achievement-获取学员成就记录 2-1" dt="text" by="1388" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test.zhishinet.com/api/user-profile/v1/sec/users/achievement?type=2&amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="369" it="0" lt="368" ts="1532354145950" s="true" lb="achievement-type为不存在的值" rc="200" rm="" tn="achievement-获取学员成就记录 2-1" dt="text" by="2153" sby="283" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1532354146318" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="achievement-获取学员成就记录 2-1" dt="text" by="1390" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test.zhishinet.com/api/user-profile/v1/sec/users/achievement?type=-1&amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="594" it="0" lt="593" ts="1532354146332" s="true" lb="achievement-type为空" rc="200" rm="" tn="achievement-获取学员成就记录 2-1" dt="text" by="2177" sby="281" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532354146926" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="achievement-获取学员成就记录 2-1" dt="text" by="1379" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test.zhishinet.com/api/user-profile/v1/sec/users/achievement?type=&amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="8" it="0" lt="0" ts="1532354146946" s="true" lb="achievement-type为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 74: https://test.zhishinet.com/api/user-profile/v1/sec/users/achievement?type= &amp;pageNo=1&amp;pageSize=1" tn="achievement-获取学员成就记录 2-1" dt="text" by="2481" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1532354146953" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="achievement-获取学员成就记录 2-1" dt="text" by="1383" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test.zhishinet.com/api/user-profile/v1/sec/users/achievement?type= &amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="332" it="0" lt="331" ts="1532354146959" s="true" lb="achievement-type为a-z的字符串" rc="500" rm="" tn="achievement-获取学员成就记录 2-1" dt="text" by="12991" sby="285" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532354147291" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="achievement-获取学员成就记录 2-1" dt="text" by="1393" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test.zhishinet.com/api/user-profile/v1/sec/users/achievement?type=type&amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="342" it="0" lt="341" ts="1532354147299" s="true" lb="achievement-type为中文" rc="500" rm="" tn="achievement-获取学员成就记录 2-1" dt="text" by="12988" sby="299" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532354147641" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="achievement-获取学员成就记录 2-1" dt="text" by="1386" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test.zhishinet.com/api/user-profile/v1/sec/users/achievement?type=类型&amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="331" it="0" lt="330" ts="1532354147649" s="true" lb="achievement-type为数学符号" rc="500" rm="" tn="achievement-获取学员成就记录 2-1" dt="text" by="12978" sby="282" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1532354147979" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="achievement-获取学员成就记录 2-1" dt="text" by="1386" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test.zhishinet.com/api/user-profile/v1/sec/users/achievement?type=-&amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="392" it="0" lt="391" ts="1532354147983" s="true" lb="achievement-type为特殊符号" rc="500" rm="" tn="achievement-获取学员成就记录 2-1" dt="text" by="12972" sby="282" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1532354148374" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="achievement-获取学员成就记录 2-1" dt="text" by="1387" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test.zhishinet.com/api/user-profile/v1/sec/users/achievement?type=*&amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="820" it="0" lt="819" ts="1532354148380" s="true" lb="achievement-type为标点符号" rc="500" rm="" tn="achievement-获取学员成就记录 2-1" dt="text" by="12977" sby="290" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532354149200" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="achievement-获取学员成就记录 2-1" dt="text" by="1388" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test.zhishinet.com/api/user-profile/v1/sec/users/achievement?type=。&amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+
+</testResults>

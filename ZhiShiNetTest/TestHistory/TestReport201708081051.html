@@ -1,0 +1,354 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ZSN-Interface Test Results</title>
+<style type="text/css">
+				body {
+					font:normal 68% verdana,arial,helvetica;
+					color:#000000;
+				}
+				table tr td, table tr th {
+					font-size: 68%;
+				}
+				table.details tr th{
+				    color: #ffffff;
+					font-weight: bold;
+					text-align:center;
+					background:#2674a6;
+					white-space: nowrap;
+				}
+				table.details tr td{
+					background:#eeeee0;
+				}
+				h1 {
+					margin: 0px 0px 5px; font: 165% verdana,arial,helvetica
+				}
+				h2 {
+					margin-top: 1em; margin-bottom: 0.5em; font: bold 125% verdana,arial,helvetica
+				}
+				h3 {
+					margin-bottom: 0.5em; font: bold 115% verdana,arial,helvetica
+				}
+				.Failure {
+					font-weight:bold; color:red;
+				}
+				
+	
+				img
+				{
+				  border-width: 0px;
+				}
+				
+				.expand_link
+				{
+				   position=absolute;
+				   right: 0px;
+				   width: 27px;
+				   top: 1px;
+				   height: 27px;
+				}
+				
+				.page_details
+				{
+				   display: none;
+				}
+                                
+                                .page_details_expanded
+                                {
+                                    display: block;
+                                    display/* hide this definition from  IE5/6 */: table-row;
+                                }
+
+
+			</style>
+<script language="JavaScript">
+                           function expand(details_id)
+			   {
+			      
+			      document.getElementById(details_id).className = "page_details_expanded";
+			   }
+			   
+			   function collapse(details_id)
+			   {
+			      
+			      document.getElementById(details_id).className = "page_details";
+			   }
+			   
+			   function change(details_id)
+			   {
+			      if(document.getElementById(details_id+"_image").src.match("expand"))
+			      {
+			         document.getElementById(details_id+"_image").src = "collapse.png";
+			         expand(details_id);
+			      }
+			      else
+			      {
+			         document.getElementById(details_id+"_image").src = "expand.png";
+			         collapse(details_id);
+			      } 
+                           }
+			</script>
+</head>
+<body>
+<h1>ZSN-Interface Test Results</h1>
+<table width="100%">
+<tr>
+<td align="left">Date report: 2017/08/08 10:54</td>
+<br>
+<td align="left">RunEnvironment:https://test.zhishinet.com</td><td align="left">TestAccount:{&#13;
+	"username": XFWL001,&#13;
+	"password": welcome123&#13;
+}</td>
+</tr>
+</table>
+<hr size="1">
+<h2>Summary</h2>
+<table width="95%" cellspacing="2" cellpadding="4" border="0" class="details" align="center">
+<tr valign="top">
+<th>Total</th><th>Pass</th><th>Failures</th><th>Success Rate</th>
+</tr>
+<tr valign="top">
+<td align="center">359</td><td align="center">351</td><td align="center">8</td><td align="center">97.77%</td>
+</tr>
+</table>
+<hr align="center" width="95%" size="1">
+<h2>Failure Detail</h2>
+<h3>getErrorTextbook-进入错题本<a name="getErrorTextbook-%E8%BF%9B%E5%85%A5%E9%94%99%E9%A2%98%E6%9C%AC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://test.zhishinet.com/api/emendbook/v1/sec/getErrorTextbook?subjectId=2</td><td>GET</td><td></td><td>200 - </td><td>[]</td>
+</tr>
+</table>
+<h3>getErrorBookList-subjectId=空<a name="getErrorBookList-subjectId=%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://test.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=</td><td>GET</td><td></td><td>500 - </td><td>{"code":"000000","message":"学科Id不能为空"}</td>
+</tr>
+</table>
+<h3>getErrorHomepageCount-subjectId为特殊字符&amp;<a name="getErrorHomepageCount-subjectId%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6&amp;"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://test.zhishinet.com/api/emendbook/v1/sec/getErrorHomepageCount?subjectId=&amp;</td><td>GET</td><td></td><td>500 - </td><td>{"code":"000000","message":"学科Id不能为空"}</td>
+</tr>
+</table>
+<h3>getErrorHomepageCount-subjectId为空<a name="getErrorHomepageCount-subjectId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://test.zhishinet.com/api/emendbook/v1/sec/getErrorHomepageCount?subjectId=</td><td>GET</td><td></td><td>500 - </td><td>{"code":"000000","message":"学科Id不能为空"}</td>
+</tr>
+</table>
+<h3>saveEmendbook正确性校验--subjectId为1（英语） <a name="saveEmendbook%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C--subjectId%E4%B8%BA1%EF%BC%88%E8%8B%B1%E8%AF%AD%EF%BC%89 "></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://test.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</td><td>POST</td><td>{&#13;
+    "PracticeId": 1789,&#13;
+    "SubjectId": 1,&#13;
+    "UserId": 53474,&#13;
+    "IsAssessmentCompleted": false,&#13;
+    "CategoryIndex": 0,&#13;
+    "GroupIndex": 0,&#13;
+    "QuestionIndex": 0,&#13;
+    "ActiveIndex": 0,&#13;
+    "QuestionCategorys": [&#13;
+        {&#13;
+            "CategoryId": 2,&#13;
+            "CategoryTitle": "词汇语法",&#13;
+            "QuestionGroups": [&#13;
+                {&#13;
+                    "GroupType": 1,&#13;
+                    "UserTimeSpent": 0,&#13;
+                    "Questions": [&#13;
+                        {&#13;
+                            "ArticleId": -1,&#13;
+                            "QuestionId": 146268,&#13;
+                            "IsQuestionCorrect": 0,&#13;
+                            "UserResponse": [""],&#13;
+                            "InputTypes": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "BlankAnswers": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "traceBlankAnswers": [&#13;
+                                ""&#13;
+                            ]&#13;
+                        }&#13;
+                    ],&#13;
+                    "FeedbackViewed": false&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td>{"code":"000000","message":"this is not the user`s saveContent ,userId is confilectiong ！"}</td>
+</tr>
+</table>
+<h3>saveEmendbook正确性校验--subjectId为2（数学） <a name="saveEmendbook%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C--subjectId%E4%B8%BA2%EF%BC%88%E6%95%B0%E5%AD%A6%EF%BC%89 "></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://test.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</td><td>POST</td><td>{&#13;
+    "PracticeId": 5977,&#13;
+    "SubjectId": 2,&#13;
+    "UserId": 53474,&#13;
+    "IsAssessmentCompleted": false,&#13;
+    "CategoryIndex": 0,&#13;
+    "GroupIndex": 0,&#13;
+    "QuestionIndex": 0,&#13;
+    "ActiveIndex": 0,&#13;
+    "QuestionCategorys": [&#13;
+        {&#13;
+            "CategoryId": 4,&#13;
+            "CategoryTitle": "选择题",&#13;
+            "QuestionGroups": [&#13;
+                {&#13;
+                    "GroupType": 1,&#13;
+                    "UserTimeSpent": 0,&#13;
+                    "Questions": [&#13;
+                        {&#13;
+                            "ArticleId": -1,&#13;
+                            "QuestionId": 229250,&#13;
+                            "IsQuestionCorrect": -1,&#13;
+                            "UserResponse": [""],&#13;
+                            "InputTypes": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "BlankAnswers": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "traceBlankAnswers": [&#13;
+                                ""&#13;
+                            ]&#13;
+                        }&#13;
+                    ],&#13;
+                    "FeedbackViewed": false&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td>{"code":"000000","message":"this is not the user`s saveContent ,userId is confilectiong ！"}</td>
+</tr>
+</table>
+<h3>saveEmendbook-practiceId为不存在的值<a name="saveEmendbook-practiceId%E4%B8%BA%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E5%80%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://test.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</td><td>POST</td><td>{&#13;
+    "PracticeId": 0,&#13;
+    "SubjectId": 1,&#13;
+    "UserId": 53474,&#13;
+    "IsAssessmentCompleted": false,&#13;
+    "CategoryIndex": 0,&#13;
+    "GroupIndex": 0,&#13;
+    "QuestionIndex": 0,&#13;
+    "ActiveIndex": 0,&#13;
+    "QuestionCategorys": [&#13;
+        {&#13;
+            "CategoryId": 2,&#13;
+            "CategoryTitle": "词汇语法",&#13;
+            "QuestionGroups": [&#13;
+                {&#13;
+                    "GroupType": 1,&#13;
+                    "UserTimeSpent": 0,&#13;
+                    "Questions": [&#13;
+                        {&#13;
+                            "ArticleId": -1,&#13;
+                            "QuestionId": 146268,&#13;
+                            "IsQuestionCorrect": 0,&#13;
+                            "UserResponse": [""],&#13;
+                            "InputTypes": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "BlankAnswers": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "traceBlankAnswers": [&#13;
+                                ""&#13;
+                            ]&#13;
+                        }&#13;
+                    ],&#13;
+                    "FeedbackViewed": false&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td>{"code":"000000","message":"this is not the user`s saveContent ,userId is confilectiong ！"}</td>
+</tr>
+</table>
+<h3>saveEmendbook-subjectId为空格<a name="saveEmendbook-subjectId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://test.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</td><td>POST</td><td>{&#13;
+    "PracticeId": 5977,&#13;
+    "SubjectId": 2,&#13;
+    "UserId": 53474,&#13;
+    "IsAssessmentCompleted": false,&#13;
+    "CategoryIndex": 0,&#13;
+    "GroupIndex": 0,&#13;
+    "QuestionIndex": 0,&#13;
+    "ActiveIndex": 0,&#13;
+    "QuestionCategorys": [&#13;
+        {&#13;
+            "CategoryId": 4,&#13;
+            "CategoryTitle": "选择题",&#13;
+            "QuestionGroups": [&#13;
+                {&#13;
+                    "GroupType": 1,&#13;
+                    "UserTimeSpent": 0,&#13;
+                    "Questions": [&#13;
+                        {&#13;
+                            "ArticleId": -1,&#13;
+                            "QuestionId": 229250,&#13;
+                            "IsQuestionCorrect": -1,&#13;
+                            "UserResponse": [""],&#13;
+                            "InputTypes": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "BlankAnswers": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "traceBlankAnswers": [&#13;
+                                ""&#13;
+                            ]&#13;
+                        }&#13;
+                    ],&#13;
+                    "FeedbackViewed": false&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td>{"code":"000000","message":"this is not the user`s saveContent ,userId is confilectiong ！"}</td>
+</tr>
+</table>
+</body>
+</html>

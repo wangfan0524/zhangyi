@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="2138" it="0" lt="2101" ts="1509461607477" s="true" lb="getToken" rc="200" rm="" tn="teacher 1-1" dt="text" by="1809" sby="289" ng="1" na="1">
+  <sample t="1" it="0" lt="0" ts="1509461609614" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="teacher 1-1" dt="text" by="1446" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;TECH0002&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://www.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="559" it="0" lt="559" ts="1509461609620" s="true" lb="allAbleArchiveHomeworks教师端查看可以归档的所有作业" rc="200" rm="" tn="teacher 1-1" dt="text" by="301" sby="275" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/teacher/allAbleArchiveHomeworks?subjectId=2</java.net.URL>
+</httpSample>
+<httpSample t="651" it="0" lt="622" ts="1509461610185" s="true" lb="homeworkList教师端查看作业完成情况" rc="200" rm="" tn="teacher 1-1" dt="text" by="24789" sby="283" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1509461610835" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="teacher 1-1" dt="text" by="1529" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/teacher/homeworkList?subjectId=1&amp;page=4&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="418" it="0" lt="418" ts="1509461610836" s="true" lb="archiveFile教师端作业档案查询" rc="200" rm="" tn="teacher 1-1" dt="text" by="4628" sby="304" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/teacher/archiveFile?title=&amp;sessionId=2624&amp;subjectId=1&amp;page=1&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="204" it="0" lt="204" ts="1509461611255" s="true" lb="preArchiveHomeworkMessage教师端作业归档前芝士币信息获取" rc="200" rm="" tn="teacher 1-1" dt="text" by="751" sby="360" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">&#xd;
+{&#xd;
+  	&quot;assessmentId&quot;:24824,&#xd;
+ 	&quot;sessionId&quot;:2624,&#xd;
+ 	 &quot;subjectId&quot;: 1&#xd;
+}&#xd;
+</queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/teacher/preArchiveHomeworkMessage</java.net.URL>
+</httpSample>
+<httpSample t="186" it="0" lt="186" ts="1509461611460" s="true" lb="batchPreArchiveHomeworkMessage教师端作业批量归档前芝士币信息获取" rc="200" rm="" tn="teacher 1-1" dt="text" by="749" sby="375" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">[&#xd;
+{&#xd;
+    &quot;assessmentId&quot;:24820,&#xd;
+    &quot;sessionId&quot;:2624,&#xd;
+    &quot;subjectId&quot;: 1&#xd;
+  }&#xd;
+]&#xd;
+</queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/teacher/batchPreArchiveHomeworkMessage</java.net.URL>
+</httpSample>
+<httpSample t="307" it="0" lt="307" ts="1509461611647" s="true" lb="getHomeworkAnswerDetails正确性校验" rc="200" rm="" tn="teacher 1-1" dt="text" by="434" sby="308" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/getHomeworkAnswerDetails?assessmentId=15054&amp;sessionId=2624&amp;questionId=228660</java.net.URL>
+</httpSample>
+<httpSample t="775" it="0" lt="599" ts="1509461611955" s="true" lb="getHomeworkAssessmentDetailsOrder正确性校验" rc="200" rm="" tn="teacher 1-1" dt="text" by="82345" sby="299" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/getHomeworkAssessmentDetailsOrder?assessmentId=15380&amp;sessionId=2624</java.net.URL>
+</httpSample>
+<httpSample t="190" it="0" lt="190" ts="1509461612732" s="true" lb="getHomeworkScore正确性校验" rc="200" rm="" tn="teacher 1-1" dt="text" by="783" sby="282" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/getHomeworkScore?assessmentId=15054&amp;sessionId=2624</java.net.URL>
+</httpSample>
+<httpSample t="482" it="0" lt="482" ts="1509461612923" s="true" lb="getHomeworkFirstTimeLogin-英语" rc="200" rm="" tn="teacher 1-1" dt="text" by="304" sby="269" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/getHomeworkFirstTimeLogin?subjectId=1</java.net.URL>
+</httpSample>
+<httpSample t="161" it="0" lt="161" ts="1509461613405" s="true" lb="getHomeworkTypePreference-英语" rc="200" rm="" tn="teacher 1-1" dt="text" by="1145" sby="269" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/getHomeworkTypePreference?subjectId=1</java.net.URL>
+</httpSample>
+<httpSample t="141" it="0" lt="140" ts="1509461613567" s="true" lb="getHomeworkFirstTimeLogin-数学" rc="200" rm="" tn="teacher 1-1" dt="text" by="304" sby="269" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/getHomeworkFirstTimeLogin?subjectId=2</java.net.URL>
+</httpSample>
+<httpSample t="405" it="0" lt="405" ts="1509461613708" s="true" lb="getHomeworkTypePreference-数学" rc="200" rm="" tn="teacher 1-1" dt="text" by="911" sby="269" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/getHomeworkTypePreference?subjectId=2</java.net.URL>
+</httpSample>
+<httpSample t="175" it="0" lt="175" ts="1509461614120" s="true" lb="getQuestionTypePreference-教师偏好设置-查询题型作业标签-英语" rc="200" rm="" tn="teacher 1-1" dt="text" by="1556" sby="269" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/getQuestionTypePreference?subjectId=1</java.net.URL>
+</httpSample>
+<httpSample t="157" it="0" lt="157" ts="1509461614296" s="true" lb="getHomeworkTextbookSeries-布置作业-教材查询-英语" rc="200" rm="" tn="teacher 1-1" dt="text" by="902" sby="269" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/getHomeworkTextbookSeries?subjectId=1</java.net.URL>
+</httpSample>
+<httpSample t="140" it="0" lt="140" ts="1509461614454" s="true" lb="getHomeworkTextbook-布置作业-课本查询-homeworkTextbookSeriesId为正确的值" rc="200" rm="" tn="teacher 1-1" dt="text" by="825" sby="278" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/getHomeworkTextbook?homeworkTextbookSeriesId=1</java.net.URL>
+</httpSample>
+<httpSample t="271" it="0" lt="271" ts="1509461614595" s="true" lb="getHomeworkUnit-布置作业-单元查询-homeworkTextbookId为正确的值" rc="200" rm="" tn="teacher 1-1" dt="text" by="1606" sby="268" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/getHomeworkUnit?homeworkTextbookId=1</java.net.URL>
+</httpSample>
+<httpSample t="445" it="0" lt="445" ts="1509461614867" s="true" lb="getLastSelectedUnitInfo-查询上次一选中教材、课本-英语" rc="200" rm="" tn="teacher 1-1" dt="text" by="622" sby="267" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/getLastSelectedUnitInfo?subjectId=1</java.net.URL>
+</httpSample>
+<httpSample t="162" it="0" lt="162" ts="1509461615313" s="true" lb="getTeacherGlobalSessions-布置作业-教师管理班级查询-正确性" rc="200" rm="" tn="teacher 1-1" dt="text" by="533" sby="256" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/getTeacherGlobalSessions</java.net.URL>
+</httpSample>
+<httpSample t="172" it="0" lt="171" ts="1509461615476" s="true" lb="getLastSelectedUnitInfo-查询上次一选中教材、课本-数学" rc="200" rm="" tn="teacher 1-1" dt="text" by="572" sby="267" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/getLastSelectedUnitInfo?subjectId=2</java.net.URL>
+</httpSample>
+<httpSample t="180" it="0" lt="180" ts="1509461615648" s="true" lb="getSuitListByUnitId-布置作业-套题列表查询-正确性" rc="200" rm="" tn="teacher 1-1" dt="text" by="321" sby="280" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/getSuitListByUnitId?unitId=368&amp;page=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="513" it="0" lt="475" ts="1509461615829" s="true" lb="getVocabularyKnowledgePointWithLevel-获取词汇语法知识点 区分考纲与非考纲-正确性查询-level为全部" rc="200" rm="" tn="teacher 1-1" dt="text" by="17309" sby="306" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/getVocabularyKnowledgePointWithLevel?textbookId=1&amp;unitNos=1,2,3,4&amp;level=-1</java.net.URL>
+</httpSample>
+<httpSample t="484" it="0" lt="484" ts="1509461616342" s="true" lb="getVocabularyKnowledgePointWithLevel-获取词汇语法知识点 区分考纲与非考纲-正确性查询-level为非考纲" rc="200" rm="" tn="teacher 1-1" dt="text" by="14347" sby="305" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/getVocabularyKnowledgePointWithLevel?textbookId=1&amp;unitNos=1,2,3,4&amp;level=0</java.net.URL>
+</httpSample>
+<httpSample t="309" it="0" lt="309" ts="1509461616827" s="true" lb="getVocabularyKnowledgePointWithLevel-获取词汇语法知识点 区分考纲与非考纲-正确性查询-level为考纲" rc="200" rm="" tn="teacher 1-1" dt="text" by="3264" sby="305" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/getVocabularyKnowledgePointWithLevel?textbookId=1&amp;unitNos=1,2,3,4&amp;level=1</java.net.URL>
+</httpSample>
+<httpSample t="155" it="0" lt="155" ts="1509461617137" s="true" lb="getQuestionTypeAndCount-布置作业-阅读理解-查询题型和题量-正确性查询" rc="200" rm="" tn="teacher 1-1" dt="text" by="914" sby="269" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/getQuestionTypeAndCount?articleId=383</java.net.URL>
+</httpSample>
+<httpSample t="216" it="0" lt="216" ts="1509461617292" s="true" lb="getVideoQuestion-布置作业-听力理解-查询听力列表-正确性查询" rc="200" rm="" tn="teacher 1-1" dt="text" by="10288" sby="277" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/getVideoQuestion?videoIds=1,2&amp;sessionIds=2426</java.net.URL>
+</httpSample>
+<httpSample t="547" it="0" lt="504" ts="1509461617509" s="true" lb="getHomeworkKnowledgePoint-查询知识点、主题、视频名称-英语" rc="200" rm="" tn="teacher 1-1" dt="text" by="28009" sby="336" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;textbookId&quot;:13,&#xd;
+	&quot;unitNos&quot;:[1,2],&#xd;
+	&quot;subjectId&quot;:1&#xd;
+}</queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/getHomeworkKnowledgePoint</java.net.URL>
+</httpSample>
+<httpSample t="733" it="0" lt="697" ts="1509461618057" s="true" lb="getHomeworkKnowledgePoint-查询知识点、主题、视频名称-数学" rc="200" rm="" tn="teacher 1-1" dt="text" by="22540" sby="336" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;textbookId&quot;:13,&#xd;
+	&quot;unitNos&quot;:[1,2],&#xd;
+	&quot;subjectId&quot;:2&#xd;
+}</queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/getHomeworkKnowledgePoint</java.net.URL>
+</httpSample>
+<httpSample t="190" it="0" lt="190" ts="1509461618795" s="true" lb="getAllNotPublishHomeworkAssessmentBuilders-布置作业-作业草稿查询-英语-单页1个-显示首页" rc="200" rm="" tn="teacher 1-1" dt="text" by="321" sby="304" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/getAllNotPublishHomeworkAssessmentBuilders?page=1&amp;pageSize=1&amp;subjectId=1</java.net.URL>
+</httpSample>
+<httpSample t="143" it="0" lt="143" ts="1509461618990" s="true" lb="getAllNotPublishHomeworkAssessmentBuilders-布置作业-作业草稿查询-英语-单页1个-显示第10页" rc="200" rm="" tn="teacher 1-1" dt="text" by="321" sby="305" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/getAllNotPublishHomeworkAssessmentBuilders?page=10&amp;pageSize=1&amp;subjectId=1</java.net.URL>
+</httpSample>
+<httpSample t="172" it="0" lt="172" ts="1509461619133" s="true" lb="getAllNotPublishHomeworkAssessmentBuilders-布置作业-作业草稿查询-英语-单页10个-显示尾页" rc="200" rm="" tn="teacher 1-1" dt="text" by="321" sby="305" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/getAllNotPublishHomeworkAssessmentBuilders?page=8&amp;pageSize=10&amp;subjectId=1</java.net.URL>
+</httpSample>
+<httpSample t="180" it="0" lt="180" ts="1509461619306" s="true" lb="getAllNotPublishHomeworkAssessmentBuilders-布置作业-作业草稿查询-数学-单页1个-显示首页" rc="200" rm="" tn="teacher 1-1" dt="text" by="321" sby="304" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/getAllNotPublishHomeworkAssessmentBuilders?page=1&amp;pageSize=1&amp;subjectId=2</java.net.URL>
+</httpSample>
+<httpSample t="174" it="0" lt="174" ts="1509461619487" s="true" lb="getHomeworkAssignHistory-获取布置作业历史记录" rc="200" rm="" tn="teacher 1-1" dt="text" by="471" sby="524" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">[&#xd;
+  {&#xd;
+    &quot;assHistoryId&quot;: 10001,&#xd;
+    &quot;sourceCode&quot;: &quot;ARTICLE&quot;,&#xd;
+    &quot;sourceId1&quot;: 1,&#xd;
+    &quot;sourceId2&quot;: 1024,&#xd;
+    &quot;sourceId3&quot;: 5,&#xd;
+    &quot;sourceId4&quot;: null,&#xd;
+    &quot;sourceId5&quot;: null,&#xd;
+    &quot;assessmentCount&quot;: null,&#xd;
+    &quot;objectVersionNumber&quot;: 4&#xd;
+  }&#xd;
+]</queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/getHomeworkAssignHistory</java.net.URL>
+</httpSample>
+<httpSample t="223" it="0" lt="223" ts="1509461619661" s="true" lb="getVideoQuestions-听力获取详情" rc="200" rm="" tn="teacher 1-1" dt="text" by="4735" sby="314" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;videoId&quot;:[135],&#xd;
+	&quot;sessionId&quot;:[2624]&#xd;
+}</queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/getVideoQuestions</java.net.URL>
+</httpSample>
+<httpSample t="185" it="0" lt="185" ts="1509461619885" s="true" lb="selectTrainerAutoArchivedAssessments-自动归档查询" rc="200" rm="" tn="teacher 1-1" dt="text" by="321" sby="286" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/selectTrainerAutoArchivedAssessments?page=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="555" it="0" lt="555" ts="1509461620071" s="true" lb="getReadKnowledgePointWithLevel-获取推荐阅读理解主题" rc="200" rm="" tn="teacher 1-1" dt="text" by="4941" sby="298" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/getReadKnowledgePointWithLevel?textbookId=13&amp;unitNos=1,2,3&amp;level=1</java.net.URL>
+</httpSample>
+<httpSample t="301" it="0" lt="301" ts="1509461620627" s="true" lb="getDraftCombineAssignQuestions-布置作业-作业草稿预览" rc="200" rm="" tn="teacher 1-1" dt="text" by="1284" sby="342" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+  &quot;assessmentBuilderId&quot;:13399, &#xd;
+  &quot;classIds&quot;:[2624] &#xd;
+}</queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/getDraftCombineAssignQuestions</java.net.URL>
+</httpSample>
+<httpSample t="273" it="0" lt="272" ts="1509461620929" s="true" lb="getDraftCombineAssignQuestions-布置作业-作业草稿预览" rc="200" rm="" tn="teacher 1-1" dt="text" by="1284" sby="342" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+  &quot;assessmentBuilderId&quot;:13399, &#xd;
+  &quot;classIds&quot;:[2624] &#xd;
+}</queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/getDraftCombineAssignQuestions</java.net.URL>
+</httpSample>
+<httpSample t="246" it="0" lt="246" ts="1509461621202" s="true" lb="gethomeworkAssessmentBuilderDetails-查看草稿信息" rc="200" rm="" tn="teacher 1-1" dt="text" by="1285" sby="293" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/gethomeworkAssessmentBuilderDetails?assessmentBuilderId=13399</java.net.URL>
+</httpSample>
+<httpSample t="181" it="0" lt="181" ts="1509461621448" s="true" lb="getSubjectsBySessionId-一个班级包含英语和数学" rc="200" rm="" tn="teacher 1-1" dt="text" by="367" sby="301" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;sessionId&quot;: [2624]&#xd;
+}</queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/getSubjectsBySessionId</java.net.URL>
+</httpSample>
+<httpSample t="165" it="0" lt="165" ts="1509461621630" s="true" lb="reviewTrainerAutoArchivedAssessments-查阅已归档的作业" rc="200" rm="" tn="teacher 1-1" dt="" by="248" sby="268" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/reviewTrainerAutoArchivedAssessments</java.net.URL>
+</httpSample>
+<httpSample t="221" it="0" lt="221" ts="1509461621796" s="true" lb="getSuitsOfSuitSeriesTextbook-查询套题册对应课本下的套题-正确性校验" rc="200" rm="" tn="teacher 1-1" dt="text" by="1161" sby="298" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/homework/v1/sec/getSuitsOfSuitSeriesTextbook?suitSeriesId=10084&amp;page=1&amp;pageSize=5</java.net.URL>
+</httpSample>
+<httpSample t="168" it="0" lt="167" ts="1509461622017" s="true" lb="getHomeworkTextbook-套题列表查询 课本过滤条件-管理端-正确性校验" rc="200" rm="" tn="teacher 1-1" dt="text" by="604" sby="271" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/homework/v1/sec/getHomeworkTextbook?textbookSeriesId=1</java.net.URL>
+</httpSample>
+<httpSample t="317" it="0" lt="317" ts="1509461622185" s="true" lb="getSuitSeriesByBookId-根据课本查询套题册-正确性校验" rc="200" rm="" tn="teacher 1-1" dt="text" by="771" sby="286" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/getSuitSeriesByBookId?homeworkTextbookId=1&amp;subjectId=1</java.net.URL>
+</httpSample>
+<httpSample t="178" it="0" lt="178" ts="1509461622502" s="true" lb="getTeacherSuitList-布置作业-套题列表查询-正确性校验" rc="200" rm="" tn="teacher 1-1" dt="text" by="321" sby="309" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/teacher/v1/sec/getTeacherSuitList?unitId=1&amp;page=1&amp;pageSize=1&amp;suitSeriesId=10074&amp;orderBy=desc</java.net.URL>
+</httpSample>
+<httpSample t="200" it="0" lt="200" ts="1509461622681" s="true" lb="getHomeworkTextbookSeries-套题列表查询 教材过滤条件-管理端-正确性校验subjectId=1" rc="200" rm="" tn="teacher 1-1" dt="text" by="483" sby="270" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/homework/v1/sec/getHomeworkTextbookSeries?subjectId=1</java.net.URL>
+</httpSample>
+<httpSample t="145" it="0" lt="145" ts="1509461622881" s="true" lb="getHomeworkTextbookSeries-套题列表查询 教材过滤条件-管理端-正确性校验subjectId=2" rc="200" rm="" tn="teacher 1-1" dt="text" by="344" sby="270" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/homework/v1/sec/getHomeworkTextbookSeries?subjectId=2</java.net.URL>
+</httpSample>
+<httpSample t="1182" it="0" lt="1075" ts="1509461623026" s="true" lb="preview-套题-预览-正确性校验" rc="200" rm="" tn="teacher 1-1" dt="text" by="55281" sby="259" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/homework//v1/sec/suit/preview?suitId=10863</java.net.URL>
+</httpSample>
+<httpSample t="409" it="0" lt="408" ts="1509461624209" s="true" lb="getLookUpValue-添加班级-查询学段正确性校验" rc="200" rm="" tn="teacher 1-1" dt="text" by="301" sby="254" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/sys/v1/sec/getLookUpValue?lookUpType=</java.net.URL>
+</httpSample>
+<httpSample t="188" it="0" lt="188" ts="1509461624618" s="true" lb="getLookUpValue套题册-添加班级-查询年级-正确性校验" rc="200" rm="" tn="teacher 1-1" dt="text" by="1087" sby="277" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/sys/v1/sec/getLookUpValue?lookUpType=HomeworkTypePreference1</java.net.URL>
+</httpSample>
+
+</testResults>

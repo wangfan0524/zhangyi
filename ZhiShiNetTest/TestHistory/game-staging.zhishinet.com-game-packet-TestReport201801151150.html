@@ -1,0 +1,1797 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ZSN-Interface Test Results</title>
+<style type="text/css">
+				body {
+					font:normal 68% verdana,arial,helvetica;
+					color:#000000;
+				}
+				table tr td, table tr th {
+					font-size: 68%;
+				}
+				table.details tr th{
+				    color: #ffffff;
+					font-weight: bold;
+					text-align:center;
+					background:#2674a6;
+					white-space: nowrap;
+				}
+				table.details tr td{
+					background:#eeeee0;
+				}
+				h1 {
+					margin: 0px 0px 5px; font: 165% verdana,arial,helvetica
+				}
+				h2 {
+					margin-top: 1em; margin-bottom: 0.5em; font: bold 125% verdana,arial,helvetica
+				}
+				h3 {
+					margin-bottom: 0.5em; font: bold 115% verdana,arial,helvetica
+				}
+				.Failure {
+					font-weight:bold; color:red;
+				}
+				
+	
+				img
+				{
+				  border-width: 0px;
+				}
+				
+				.expand_link
+				{
+				   position=absolute;
+				   right: 0px;
+				   width: 27px;
+				   top: 1px;
+				   height: 27px;
+				}
+				
+				.page_details
+				{
+				   display: none;
+				}
+                                
+                                .page_details_expanded
+                                {
+                                    display: block;
+                                    display/* hide this definition from  IE5/6 */: table-row;
+                                }
+
+
+			</style>
+<script language="JavaScript">
+                           function expand(details_id)
+			   {
+			      
+			      document.getElementById(details_id).className = "page_details_expanded";
+			   }
+			   
+			   function collapse(details_id)
+			   {
+			      
+			      document.getElementById(details_id).className = "page_details";
+			   }
+			   
+			   function change(details_id)
+			   {
+			      if(document.getElementById(details_id+"_image").src.match("expand"))
+			      {
+			         document.getElementById(details_id+"_image").src = "collapse.png";
+			         expand(details_id);
+			      }
+			      else
+			      {
+			         document.getElementById(details_id+"_image").src = "expand.png";
+			         collapse(details_id);
+			      } 
+                           }
+			</script>
+</head>
+<body>
+<h1>ZSN-Interface Test Results</h1>
+<table width="100%">
+<tr>
+<td align="left">Date report: 2018/01/15 11:50</td>
+<br>
+<td align="left">RunEnvironment:https://game-staging.zhishinet.com</td><td align="left">TestAccount:{&#13;
+	"username": "XXB00001",&#13;
+	"password": "asdf1234"&#13;
+}</td>
+</tr>
+</table>
+<hr size="1">
+<h2>Summary</h2>
+<table width="95%" cellspacing="2" cellpadding="4" border="0" class="details" align="center">
+<tr valign="top">
+<th>Total</th><th>Pass</th><th>Failures</th><th>Success Rate</th>
+</tr>
+<tr valign="top">
+<td align="center">140</td><td align="center">12</td><td align="center">128</td><td align="center">8.57%</td>
+</tr>
+</table>
+<hr align="center" width="95%" size="1">
+<h2>Failure Detail</h2>
+<h3>getToken<a name="getToken"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "XXB00001",&#13;
+	"password": "asdf1234"&#13;
+}</td><td>404 - </td><td>{"timestamp":1515988223528,"status":404,"error":"Not Found","message":"No message available","path":"/api/zauth/dispatchToGame/api/zauth/v1/token/access"}</td>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "XXB00001",&#13;
+	"password": "asdf1234"&#13;
+}</td><td>404 - </td><td>{"timestamp":1515988224850,"status":404,"error":"Not Found","message":"No message available","path":"/api/zauth/dispatchToGame/api/zauth/v1/token/access"}</td>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "XXB00001",&#13;
+	"password": "asdf1234"&#13;
+}</td><td>404 - </td><td>{"timestamp":1515988225821,"status":404,"error":"Not Found","message":"No message available","path":"/api/zauth/dispatchToGame/api/zauth/v1/token/access"}</td>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "XXB00001",&#13;
+	"password": "asdf1234"&#13;
+}</td><td>404 - </td><td>{"timestamp":1515988227307,"status":404,"error":"Not Found","message":"No message available","path":"/api/zauth/dispatchToGame/api/zauth/v1/token/access"}</td>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "XXB00001",&#13;
+	"password": "asdf1234"&#13;
+}</td><td>404 - </td><td>{"timestamp":1515988228140,"status":404,"error":"Not Found","message":"No message available","path":"/api/zauth/dispatchToGame/api/zauth/v1/token/access"}</td>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "XXB00001",&#13;
+	"password": "asdf1234"&#13;
+}</td><td>404 - </td><td>{"timestamp":1515988229197,"status":404,"error":"Not Found","message":"No message available","path":"/api/zauth/dispatchToGame/api/zauth/v1/token/access"}</td>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "XXB00001",&#13;
+	"password": "asdf1234"&#13;
+}</td><td>404 - </td><td>{"timestamp":1515988229660,"status":404,"error":"Not Found","message":"No message available","path":"/api/zauth/dispatchToGame/api/zauth/v1/token/access"}</td>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "XXB00001",&#13;
+	"password": "asdf1234"&#13;
+}</td><td>404 - </td><td>{"timestamp":1515988230368,"status":404,"error":"Not Found","message":"No message available","path":"/api/zauth/dispatchToGame/api/zauth/v1/token/access"}</td>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "XXB00001",&#13;
+	"password": "asdf1234"&#13;
+}</td><td>404 - </td><td>{"timestamp":1515988230804,"status":404,"error":"Not Found","message":"No message available","path":"/api/zauth/dispatchToGame/api/zauth/v1/token/access"}</td>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "XXB00001",&#13;
+	"password": "asdf1234"&#13;
+}</td><td>404 - </td><td>{"timestamp":1515988231241,"status":404,"error":"Not Found","message":"No message available","path":"/api/zauth/dispatchToGame/api/zauth/v1/token/access"}</td>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "XXB00001",&#13;
+	"password": "asdf1234"&#13;
+}</td><td>404 - </td><td>{"timestamp":1515988231658,"status":404,"error":"Not Found","message":"No message available","path":"/api/zauth/dispatchToGame/api/zauth/v1/token/access"}</td>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "XXB00001",&#13;
+	"password": "asdf1234"&#13;
+}</td><td>404 - </td><td>{"timestamp":1515988232665,"status":404,"error":"Not Found","message":"No message available","path":"/api/zauth/dispatchToGame/api/zauth/v1/token/access"}</td>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "XXB00001",&#13;
+	"password": "asdf1234"&#13;
+}</td><td>404 - </td><td>{"timestamp":1515988233785,"status":404,"error":"Not Found","message":"No message available","path":"/api/zauth/dispatchToGame/api/zauth/v1/token/access"}</td>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "XXB00001",&#13;
+	"password": "asdf1234"&#13;
+}</td><td>404 - </td><td>{"timestamp":1515988234864,"status":404,"error":"Not Found","message":"No message available","path":"/api/zauth/dispatchToGame/api/zauth/v1/token/access"}</td>
+</tr>
+</table>
+<h3>getClassmateCircle -   查询班级圈信息 -正确性验证<a name="getClassmateCircle -   %E6%9F%A5%E8%AF%A2%E7%8F%AD%E7%BA%A7%E5%9C%88%E4%BF%A1%E6%81%AF -%E6%AD%A3%E7%A1%AE%E6%80%A7%E9%AA%8C%E8%AF%81"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getClassmateCircle?page=1&amp;pageSize=5</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>getClassmateCircle -   查询班级圈信息 -不传参<a name="getClassmateCircle -   %E6%9F%A5%E8%AF%A2%E7%8F%AD%E7%BA%A7%E5%9C%88%E4%BF%A1%E6%81%AF -%E4%B8%8D%E4%BC%A0%E5%8F%82"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getClassmateCircle</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>getClassmateCircle -   查询班级圈信息 -page为特殊字符<a name="getClassmateCircle -   %E6%9F%A5%E8%AF%A2%E7%8F%AD%E7%BA%A7%E5%9C%88%E4%BF%A1%E6%81%AF -page%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getClassmateCircle?page=*&amp;pageSize=5</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>getClassmateCircle -   查询班级圈信息 -page为数学字符<a name="getClassmateCircle -   %E6%9F%A5%E8%AF%A2%E7%8F%AD%E7%BA%A7%E5%9C%88%E4%BF%A1%E6%81%AF -page%E4%B8%BA%E6%95%B0%E5%AD%A6%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getClassmateCircle?page=+&amp;pageSize=5</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>getClassmateCircle -   查询班级圈信息 -page为中文<a name="getClassmateCircle -   %E6%9F%A5%E8%AF%A2%E7%8F%AD%E7%BA%A7%E5%9C%88%E4%BF%A1%E6%81%AF -page%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getClassmateCircle?page=自动化&amp;pageSize=5</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>getClassmateCircle -   查询班级圈信息 -page为英文<a name="getClassmateCircle -   %E6%9F%A5%E8%AF%A2%E7%8F%AD%E7%BA%A7%E5%9C%88%E4%BF%A1%E6%81%AF -page%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getClassmateCircle?page=dfd&amp;pageSize=5</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>getClassmateCircle -   查询班级圈信息 -pageSize为英文<a name="getClassmateCircle -   %E6%9F%A5%E8%AF%A2%E7%8F%AD%E7%BA%A7%E5%9C%88%E4%BF%A1%E6%81%AF -pageSize%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getClassmateCircle?page=1&amp;pageSize=bvd</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>getClassmateCircle -   查询班级圈信息 -pageSize为中文<a name="getClassmateCircle -   %E6%9F%A5%E8%AF%A2%E7%8F%AD%E7%BA%A7%E5%9C%88%E4%BF%A1%E6%81%AF -pageSize%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getClassmateCircle?page=1&amp;pageSize=就看见</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>getClassmateCircle -   查询班级圈信息 -pageSize为特殊字符<a name="getClassmateCircle -   %E6%9F%A5%E8%AF%A2%E7%8F%AD%E7%BA%A7%E5%9C%88%E4%BF%A1%E6%81%AF -pageSize%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getClassmateCircle?page=1&amp;pageSize=*</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>getClassmateCircle -   查询班级圈信息 -pageSize为数学字符<a name="getClassmateCircle -   %E6%9F%A5%E8%AF%A2%E7%8F%AD%E7%BA%A7%E5%9C%88%E4%BF%A1%E6%81%AF -pageSize%E4%B8%BA%E6%95%B0%E5%AD%A6%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getClassmateCircle?page=1&amp;pageSize=-</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>getClassmateCircle -   查询班级圈信息 -pageSize为空<a name="getClassmateCircle -   %E6%9F%A5%E8%AF%A2%E7%8F%AD%E7%BA%A7%E5%9C%88%E4%BF%A1%E6%81%AF -pageSize%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getClassmateCircle?page=1&amp;pageSize=</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>getUserStarsBillBoard  -     查询排行榜信息   -正确性验证<a name="getUserStarsBillBoard  -     %E6%9F%A5%E8%AF%A2%E6%8E%92%E8%A1%8C%E6%A6%9C%E4%BF%A1%E6%81%AF   -%E6%AD%A3%E7%A1%AE%E6%80%A7%E9%AA%8C%E8%AF%81"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getUserStarsBillBoard?count=10</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>getUserStarsBillBoard  -  count为空<a name="getUserStarsBillBoard  -  count%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getUserStarsBillBoard?count=</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>getUserStarsBillBoard  -  count为特殊字符<a name="getUserStarsBillBoard  -  count%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getUserStarsBillBoard?count=*</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>getUserStarsBillBoard  -  count为数学字符<a name="getUserStarsBillBoard  -  count%E4%B8%BA%E6%95%B0%E5%AD%A6%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getUserStarsBillBoard?count==</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>getUserStarsBillBoard  -  count为标点符号<a name="getUserStarsBillBoard  -  count%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getUserStarsBillBoard?count=，</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>getUserStarsBillBoard  -  count为中文<a name="getUserStarsBillBoard  -  count%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getUserStarsBillBoard?count=回顾</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>getUserStarsBillBoard  -  count为英文<a name="getUserStarsBillBoard  -  count%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getUserStarsBillBoard?count=ghns</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>burypoint  -数据埋点  -正确性验证<a name="burypoint  -%E6%95%B0%E6%8D%AE%E5%9F%8B%E7%82%B9  -%E6%AD%A3%E7%A1%AE%E6%80%A7%E9%AA%8C%E8%AF%81"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</td><td>POST</td><td>{&#13;
+    "userName": "测试",&#13;
+    "fullName": "测试",&#13;
+    "school": "芝士网",&#13;
+    "clazz": "QA",&#13;
+    "action": "trg",&#13;
+    "level": "1",&#13;
+    "game": "1",&#13;
+    "note": "1"&#13;
+}</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>burypoint  -userName  为空<a name="burypoint  -userName  %E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</td><td>POST</td><td>{&#13;
+    "userName": "",&#13;
+    "fullName": "测试",&#13;
+    "school": "芝士网",&#13;
+    "clazz": "QA",&#13;
+    "action": "sgv",&#13;
+    "level": "1",&#13;
+    "game": "1",&#13;
+    "note": "1"&#13;
+}</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>burypoint  -userName  为空格<a name="burypoint  -userName  %E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</td><td>POST</td><td>{&#13;
+    "userName": "  ",&#13;
+    "fullName": "测试",&#13;
+    "school": "芝士网",&#13;
+    "clazz": "QA",&#13;
+    "action": "sdv",&#13;
+    "level": "1",&#13;
+    "game": "1",&#13;
+    "note": "1"&#13;
+}</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>burypoint  -userName  为数字<a name="burypoint  -userName  %E4%B8%BA%E6%95%B0%E5%AD%97"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</td><td>POST</td><td>{&#13;
+    "userName": "123",&#13;
+    "fullName": "测试",&#13;
+    "school": "芝士网",&#13;
+    "clazz": "QA",&#13;
+    "action": "dv",&#13;
+    "level": "1",&#13;
+    "game": "1",&#13;
+    "note": "1"&#13;
+}</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>burypoint  -userName  为特殊字符<a name="burypoint  -userName  %E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</td><td>POST</td><td>{&#13;
+    "userName": "&amp;",&#13;
+    "fullName": "测试",&#13;
+    "school": "芝士网",&#13;
+    "clazz": "QA",&#13;
+    "action": "sdcd",&#13;
+    "level": "1",&#13;
+    "game": "1",&#13;
+    "note": "1"&#13;
+}</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>burypoint  -fullName  为空<a name="burypoint  -fullName  %E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</td><td>POST</td><td>{&#13;
+    "userName": "关闭",&#13;
+    "fullName": "",&#13;
+    "school": "芝士网",&#13;
+    "clazz": "QA",&#13;
+    "action": "sd",&#13;
+    "level": "1",&#13;
+    "game": "1",&#13;
+    "note": "1"&#13;
+}</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>burypoint  -fullName  为特殊字符<a name="burypoint  -fullName  %E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</td><td>POST</td><td>{&#13;
+    "userName": "关闭",&#13;
+    "fullName": "*",&#13;
+    "school": "芝士网",&#13;
+    "clazz": "QA",&#13;
+    "action": "sd",&#13;
+    "level": "1",&#13;
+    "game": "1",&#13;
+    "note": "1"&#13;
+}</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>burypoint  -fullName  为数学字符<a name="burypoint  -fullName  %E4%B8%BA%E6%95%B0%E5%AD%A6%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</td><td>POST</td><td>{&#13;
+    "userName": "关闭",&#13;
+    "fullName": "+",&#13;
+    "school": "芝士网",&#13;
+    "clazz": "QA",&#13;
+    "action": "sd",&#13;
+    "level": "1",&#13;
+    "game": "1",&#13;
+    "note": "1"&#13;
+}</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>burypoint  -fullName  为数字<a name="burypoint  -fullName  %E4%B8%BA%E6%95%B0%E5%AD%97"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</td><td>POST</td><td>{&#13;
+    "userName": "关闭",&#13;
+    "fullName": "1",&#13;
+    "school": "芝士网",&#13;
+    "clazz": "QA",&#13;
+    "action": "sd",&#13;
+    "level": "1",&#13;
+    "game": "1",&#13;
+    "note": "1"&#13;
+}</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>burypoint  -fullName  为空格<a name="burypoint  -fullName  %E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</td><td>POST</td><td>{&#13;
+    "userName": "关闭",&#13;
+    "fullName": "dfv",&#13;
+    "school": "芝士网",&#13;
+    "clazz": "QA",&#13;
+    "action": "zdv",&#13;
+    "level": "1",&#13;
+    "game": "1",&#13;
+    "note": "1"&#13;
+}</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>burypoint  -action  为空<a name="burypoint  -action  %E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</td><td>POST</td><td>{&#13;
+    "userName": "关闭",&#13;
+    "fullName": "测试",&#13;
+    "school": "芝士网",&#13;
+    "clazz": "QA",&#13;
+    "action": "",&#13;
+    "level": "1",&#13;
+    "game": "1",&#13;
+    "note": "1"&#13;
+}</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>burypoint  -action  为空格<a name="burypoint  -action  %E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</td><td>POST</td><td>{&#13;
+    "userName": "关闭",&#13;
+    "fullName": "测试",&#13;
+    "school": "芝士网",&#13;
+    "clazz": "QA",&#13;
+    "action": "  ",&#13;
+    "level": "1",&#13;
+    "game": "1",&#13;
+    "note": "1"&#13;
+}</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>burypoint  -action  为特殊字符<a name="burypoint  -action  %E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</td><td>POST</td><td>{&#13;
+    "userName": "关闭",&#13;
+    "fullName": "测试",&#13;
+    "school": "芝士网",&#13;
+    "clazz": "QA",&#13;
+    "action": "*",&#13;
+    "level": "1",&#13;
+    "game": "1",&#13;
+    "note": "1"&#13;
+}</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>burypoint  -action  为数学字符<a name="burypoint  -action  %E4%B8%BA%E6%95%B0%E5%AD%A6%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</td><td>POST</td><td>{&#13;
+    "userName": "关闭",&#13;
+    "fullName": "测试",&#13;
+    "school": "芝士网",&#13;
+    "clazz": "QA",&#13;
+    "action": "+",&#13;
+    "level": "1",&#13;
+    "game": "1",&#13;
+    "note": "1"&#13;
+}</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>burypoint  -action  为中文<a name="burypoint  -action  %E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</td><td>POST</td><td>{&#13;
+    "userName": "关闭",&#13;
+    "fullName": "测试",&#13;
+    "school": "芝士网",&#13;
+    "clazz": "QA",&#13;
+    "action": "法人",&#13;
+    "level": "1",&#13;
+    "game": "1",&#13;
+    "note": "1"&#13;
+}</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>burypoint  -school为空<a name="burypoint  -school%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</td><td>POST</td><td>{&#13;
+    "userName": "关闭",&#13;
+    "fullName": "多个",&#13;
+    "school": "",&#13;
+    "clazz": "QA",&#13;
+    "action": "法人",&#13;
+    "level": "1",&#13;
+    "game": "1",&#13;
+    "note": "1"&#13;
+}</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>burypoint  -school为空格<a name="burypoint  -school%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</td><td>POST</td><td>{&#13;
+    "userName": "关闭",&#13;
+    "fullName": "多个",&#13;
+    "school": " ",&#13;
+    "clazz": "QA",&#13;
+    "action": "法人",&#13;
+    "level": "1",&#13;
+    "game": "1",&#13;
+    "note": "1"&#13;
+}</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>burypoint  -school为特殊字符<a name="burypoint  -school%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</td><td>POST</td><td>{&#13;
+    "userName": "关闭",&#13;
+    "fullName": "多个",&#13;
+    "school": "#",&#13;
+    "clazz": "QA",&#13;
+    "action": "法人",&#13;
+    "level": "1",&#13;
+    "game": "1",&#13;
+    "note": "1"&#13;
+}</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>burypoint  -school为数学字符<a name="burypoint  -school%E4%B8%BA%E6%95%B0%E5%AD%A6%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</td><td>POST</td><td>{&#13;
+    "userName": "关闭",&#13;
+    "fullName": "多个",&#13;
+    "school": "=",&#13;
+    "clazz": "QA",&#13;
+    "action": "法人",&#13;
+    "level": "1",&#13;
+    "game": "1",&#13;
+    "note": "1"&#13;
+}</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>burypoint  -school为数字<a name="burypoint  -school%E4%B8%BA%E6%95%B0%E5%AD%97"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</td><td>POST</td><td>{&#13;
+    "userName": "关闭",&#13;
+    "fullName": "多个",&#13;
+    "school": "2",&#13;
+    "clazz": "QA",&#13;
+    "action": "法人",&#13;
+    "level": "1",&#13;
+    "game": "1",&#13;
+    "note": "1"&#13;
+}</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>burypoint  -clazz为空<a name="burypoint  -clazz%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</td><td>POST</td><td>{&#13;
+    "userName": "关闭",&#13;
+    "fullName": "多个",&#13;
+    "school": "大概",&#13;
+    "clazz": "",&#13;
+    "action": "法人",&#13;
+    "level": "1",&#13;
+    "game": "1",&#13;
+    "note": "1"&#13;
+}</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>burypoint  -clazz为空格 <a name="burypoint  -clazz%E4%B8%BA%E7%A9%BA%E6%A0%BC "></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</td><td>POST</td><td>{&#13;
+    "userName": "关闭",&#13;
+    "fullName": "多个",&#13;
+    "school": "大概",&#13;
+    "clazz": "  ",&#13;
+    "action": "法人",&#13;
+    "level": "1",&#13;
+    "game": "1",&#13;
+    "note": "1"&#13;
+}</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>burypoint  -clazz为特殊字符<a name="burypoint  -clazz%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</td><td>POST</td><td>{&#13;
+    "userName": "关闭",&#13;
+    "fullName": "多个",&#13;
+    "school": "大概",&#13;
+    "clazz": "#",&#13;
+    "action": "法人",&#13;
+    "level": "1",&#13;
+    "game": "1",&#13;
+    "note": "1"&#13;
+}</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>burypoint  -clazz为数学字符<a name="burypoint  -clazz%E4%B8%BA%E6%95%B0%E5%AD%A6%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</td><td>POST</td><td>{&#13;
+    "userName": "关闭",&#13;
+    "fullName": "多个",&#13;
+    "school": "大概",&#13;
+    "clazz": "+",&#13;
+    "action": "法人",&#13;
+    "level": "1",&#13;
+    "game": "1",&#13;
+    "note": "1"&#13;
+}</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>gameLevelHistory/query  -查询关卡历史记录<a name="gameLevelHistory/query  -%E6%9F%A5%E8%AF%A2%E5%85%B3%E5%8D%A1%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelHistory/query?levelNum=1</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>gameLevelHistory/query  -levelNum为空<a name="gameLevelHistory/query  -levelNum%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelHistory/query?levelNum=</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>gameLevelHistory/query  -不传参<a name="gameLevelHistory/query  -%E4%B8%8D%E4%BC%A0%E5%8F%82"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelHistory/query</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>gameLevelHistory/query  -levelNum为特殊字符<a name="gameLevelHistory/query  -levelNum%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelHistory/query?levelNum=&amp;</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>gameLevelHistory/query  -levelNum为数学字符<a name="gameLevelHistory/query  -levelNum%E4%B8%BA%E6%95%B0%E5%AD%A6%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelHistory/query?levelNum=+</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>gameLevelHistory/query  -levelNum为中文<a name="gameLevelHistory/query  -levelNum%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelHistory/query?levelNum=你们</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>gameLevelHistory/query  -levelNum为英文<a name="gameLevelHistory/query  -levelNum%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelHistory/query?levelNum=vVB</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>gameLevelHistory/query  -levelNum为不存在的数据<a name="gameLevelHistory/query  -levelNum%E4%B8%BA%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E6%95%B0%E6%8D%AE"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelHistory/query?levelNum=00</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>/gameLevelRanking/query-查询关卡排行<a name="/gameLevelRanking/query-%E6%9F%A5%E8%AF%A2%E5%85%B3%E5%8D%A1%E6%8E%92%E8%A1%8C"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelRanking/query?levelNum=1&amp;count=10</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>gameLevelRanking/query  -levelNum为空<a name="gameLevelRanking/query  -levelNum%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelRanking/query?levelNum=&amp;count=10</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>gameLevelRanking/query  -levelNum为特殊字符<a name="gameLevelRanking/query  -levelNum%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelRanking/query?levelNum=&amp;&amp;count=10</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>gameLevelRanking/query  -levelNum为数学字符<a name="gameLevelRanking/query  -levelNum%E4%B8%BA%E6%95%B0%E5%AD%A6%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelRanking/query?levelNum=+&amp;count=10</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>gameLevelRanking/query  -levelNum为中文<a name="gameLevelRanking/query  -levelNum%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelRanking/query?levelNum=记录&amp;count=10</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>gameLevelRanking/query  -levelNum为英文<a name="gameLevelRanking/query  -levelNum%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelRanking/query?levelNum=VB&amp;count=10</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>gameLevelRanking/query  -count为空<a name="gameLevelRanking/query  -count%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelRanking/query?levelNum=1&amp;count=</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>gameLevelRanking/query  -count为特殊字符<a name="gameLevelRanking/query  -count%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelRanking/query?levelNum=1&amp;count=*</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>gameLevelRanking/query  -count为数学字符<a name="gameLevelRanking/query  -count%E4%B8%BA%E6%95%B0%E5%AD%A6%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelRanking/query?levelNum=1&amp;count=+</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>gameLevelRanking/query  -count为中文<a name="gameLevelRanking/query  -count%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelRanking/query?levelNum=1&amp;count=即可</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>gameLevelRanking/query  -count为英文<a name="gameLevelRanking/query  -count%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelRanking/query?levelNum=1&amp;count=hu</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>gameLevelRanking/query  -不传参<a name="gameLevelRanking/query  -%E4%B8%8D%E4%BC%A0%E5%8F%82"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelRanking/query</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>gameUserLevelStatus/query -查询用户关卡信息，关卡列表-故事本<a name="gameUserLevelStatus/query -%E6%9F%A5%E8%AF%A2%E7%94%A8%E6%88%B7%E5%85%B3%E5%8D%A1%E4%BF%A1%E6%81%AF%EF%BC%8C%E5%85%B3%E5%8D%A1%E5%88%97%E8%A1%A8-%E6%95%85%E4%BA%8B%E6%9C%AC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameUserLevelStatus/query</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>selectSession -查询会话记录<a name="selectSession -%E6%9F%A5%E8%AF%A2%E4%BC%9A%E8%AF%9D%E8%AE%B0%E5%BD%95"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/selectSession?levelNum=1</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>selectSession -levelNum为空<a name="selectSession -levelNum%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/selectSession?levelNum=</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>selectSession -levelNum为特殊字符<a name="selectSession -levelNum%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/selectSession?levelNum=#</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>selectSession -levelNum为数学字符<a name="selectSession -levelNum%E4%B8%BA%E6%95%B0%E5%AD%A6%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/selectSession?levelNum=+</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>selectSession -levelNum为中文<a name="selectSession -levelNum%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/selectSession?levelNum=自动化</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>selectSession -levelNum为英文<a name="selectSession -levelNum%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/selectSession?levelNum=dfg</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>gameUserCardStatus/query -查询集卡册状态<a name="gameUserCardStatus/query -%E6%9F%A5%E8%AF%A2%E9%9B%86%E5%8D%A1%E5%86%8C%E7%8A%B6%E6%80%81"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameUserCardStatus/query</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>hasAuthority-查询用户是否拥有权限<a name="hasAuthority-%E6%9F%A5%E8%AF%A2%E7%94%A8%E6%88%B7%E6%98%AF%E5%90%A6%E6%8B%A5%E6%9C%89%E6%9D%83%E9%99%90"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/hasAuthority</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>onlyLearner-查询用户是否只有学生角色<a name="onlyLearner-%E6%9F%A5%E8%AF%A2%E7%94%A8%E6%88%B7%E6%98%AF%E5%90%A6%E5%8F%AA%E6%9C%89%E5%AD%A6%E7%94%9F%E8%A7%92%E8%89%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/onlyLearner</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>getContent-指定关卡指定游戏的内容使用记录<a name="getContent-%E6%8C%87%E5%AE%9A%E5%85%B3%E5%8D%A1%E6%8C%87%E5%AE%9A%E6%B8%B8%E6%88%8F%E7%9A%84%E5%86%85%E5%AE%B9%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getContent?levelNum=1&amp;gameNum=1</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>getContent-指定关卡指定游戏的内容使用记录-levelNum为空<a name="getContent-%E6%8C%87%E5%AE%9A%E5%85%B3%E5%8D%A1%E6%8C%87%E5%AE%9A%E6%B8%B8%E6%88%8F%E7%9A%84%E5%86%85%E5%AE%B9%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95-levelNum%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getContent?levelNum=&amp;gameNum=1</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>getContent-指定关卡指定游戏的内容使用记录-levelNum为特殊字符<a name="getContent-%E6%8C%87%E5%AE%9A%E5%85%B3%E5%8D%A1%E6%8C%87%E5%AE%9A%E6%B8%B8%E6%88%8F%E7%9A%84%E5%86%85%E5%AE%B9%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95-levelNum%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getContent?levelNum=@&amp;gameNum=1</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>getContent-指定关卡指定游戏的内容使用记录-levelNum为数学字符<a name="getContent-%E6%8C%87%E5%AE%9A%E5%85%B3%E5%8D%A1%E6%8C%87%E5%AE%9A%E6%B8%B8%E6%88%8F%E7%9A%84%E5%86%85%E5%AE%B9%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95-levelNum%E4%B8%BA%E6%95%B0%E5%AD%A6%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getContent?levelNum=+&amp;gameNum=1</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>getContent-指定关卡指定游戏的内容使用记录-levelNum为中文<a name="getContent-%E6%8C%87%E5%AE%9A%E5%85%B3%E5%8D%A1%E6%8C%87%E5%AE%9A%E6%B8%B8%E6%88%8F%E7%9A%84%E5%86%85%E5%AE%B9%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95-levelNum%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getContent?levelNum=哪个&amp;gameNum=1</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>getContent-指定关卡指定游戏的内容使用记录-levelNum为英文<a name="getContent-%E6%8C%87%E5%AE%9A%E5%85%B3%E5%8D%A1%E6%8C%87%E5%AE%9A%E6%B8%B8%E6%88%8F%E7%9A%84%E5%86%85%E5%AE%B9%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95-levelNum%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getContent?levelNum=fg&amp;gameNum=1</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>getContent-指定关卡指定游戏的内容使用记录-gameNum为空<a name="getContent-%E6%8C%87%E5%AE%9A%E5%85%B3%E5%8D%A1%E6%8C%87%E5%AE%9A%E6%B8%B8%E6%88%8F%E7%9A%84%E5%86%85%E5%AE%B9%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95-gameNum%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getContent?levelNum=1&amp;gameNum=</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>getContent-指定关卡指定游戏的内容使用记录-gameNum为特殊字符<a name="getContent-%E6%8C%87%E5%AE%9A%E5%85%B3%E5%8D%A1%E6%8C%87%E5%AE%9A%E6%B8%B8%E6%88%8F%E7%9A%84%E5%86%85%E5%AE%B9%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95-gameNum%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getContent?levelNum=1&amp;gameNum=@</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>getContent-指定关卡指定游戏的内容使用记录-gameNum为数学字符<a name="getContent-%E6%8C%87%E5%AE%9A%E5%85%B3%E5%8D%A1%E6%8C%87%E5%AE%9A%E6%B8%B8%E6%88%8F%E7%9A%84%E5%86%85%E5%AE%B9%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95-gameNum%E4%B8%BA%E6%95%B0%E5%AD%A6%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getContent?levelNum=1&amp;gameNum=+</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>getContent-指定关卡指定游戏的内容使用记录-gameNum为中文<a name="getContent-%E6%8C%87%E5%AE%9A%E5%85%B3%E5%8D%A1%E6%8C%87%E5%AE%9A%E6%B8%B8%E6%88%8F%E7%9A%84%E5%86%85%E5%AE%B9%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95-gameNum%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getContent?levelNum=1&amp;gameNum=火狐</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>getContent-指定关卡指定游戏的内容使用记录-gameNum为英文<a name="getContent-%E6%8C%87%E5%AE%9A%E5%85%B3%E5%8D%A1%E6%8C%87%E5%AE%9A%E6%B8%B8%E6%88%8F%E7%9A%84%E5%86%85%E5%AE%B9%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95-gameNum%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getContent?levelNum=1&amp;gameNum=vbn</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>randomGame  -随机单个游戏内容<a name="randomGame  -%E9%9A%8F%E6%9C%BA%E5%8D%95%E4%B8%AA%E6%B8%B8%E6%88%8F%E5%86%85%E5%AE%B9"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=2&amp;contentNum=1&amp;levelNum=1</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>randomGame  -随机单个游戏内容-gameNum为空<a name="randomGame  -%E9%9A%8F%E6%9C%BA%E5%8D%95%E4%B8%AA%E6%B8%B8%E6%88%8F%E5%86%85%E5%AE%B9-gameNum%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=&amp;contentNum=1&amp;levelNum=1</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>randomGame  -随机单个游戏内容-gameNum为特殊字符<a name="randomGame  -%E9%9A%8F%E6%9C%BA%E5%8D%95%E4%B8%AA%E6%B8%B8%E6%88%8F%E5%86%85%E5%AE%B9-gameNum%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=*&amp;contentNum=1&amp;levelNum=1</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>randomGame  -随机单个游戏内容-gameNum为数学字符<a name="randomGame  -%E9%9A%8F%E6%9C%BA%E5%8D%95%E4%B8%AA%E6%B8%B8%E6%88%8F%E5%86%85%E5%AE%B9-gameNum%E4%B8%BA%E6%95%B0%E5%AD%A6%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=+&amp;contentNum=1&amp;levelNum=1</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>randomGame  -随机单个游戏内容-gameNum为中文<a name="randomGame  -%E9%9A%8F%E6%9C%BA%E5%8D%95%E4%B8%AA%E6%B8%B8%E6%88%8F%E5%86%85%E5%AE%B9-gameNum%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=测试&amp;contentNum=1&amp;levelNum=1</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>randomGame  -随机单个游戏内容-gameNum为英文<a name="randomGame  -%E9%9A%8F%E6%9C%BA%E5%8D%95%E4%B8%AA%E6%B8%B8%E6%88%8F%E5%86%85%E5%AE%B9-gameNum%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=gfhb&amp;contentNum=1&amp;levelNum=1</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>randomGame  -随机单个游戏内容-contentNum为空<a name="randomGame  -%E9%9A%8F%E6%9C%BA%E5%8D%95%E4%B8%AA%E6%B8%B8%E6%88%8F%E5%86%85%E5%AE%B9-contentNum%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=2&amp;contentNum=&amp;levelNum=1</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>randomGame  -随机单个游戏内容-contentNum为特殊字符<a name="randomGame  -%E9%9A%8F%E6%9C%BA%E5%8D%95%E4%B8%AA%E6%B8%B8%E6%88%8F%E5%86%85%E5%AE%B9-contentNum%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=2&amp;contentNum=&amp;&amp;levelNum=1</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>randomGame  -随机单个游戏内容-contentNum为数学字符<a name="randomGame  -%E9%9A%8F%E6%9C%BA%E5%8D%95%E4%B8%AA%E6%B8%B8%E6%88%8F%E5%86%85%E5%AE%B9-contentNum%E4%B8%BA%E6%95%B0%E5%AD%A6%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=2&amp;contentNum==&amp;levelNum=1</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>randomGame  -随机单个游戏内容-contentNum为中文<a name="randomGame  -%E9%9A%8F%E6%9C%BA%E5%8D%95%E4%B8%AA%E6%B8%B8%E6%88%8F%E5%86%85%E5%AE%B9-contentNum%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=2&amp;contentNum=测&amp;levelNum=1</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>randomGame  -随机单个游戏内容-contentNum为英文<a name="randomGame  -%E9%9A%8F%E6%9C%BA%E5%8D%95%E4%B8%AA%E6%B8%B8%E6%88%8F%E5%86%85%E5%AE%B9-contentNum%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=2&amp;contentNum=cb&amp;levelNum=1</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>randomGame  -随机单个游戏内容-levelNum为英文<a name="randomGame  -%E9%9A%8F%E6%9C%BA%E5%8D%95%E4%B8%AA%E6%B8%B8%E6%88%8F%E5%86%85%E5%AE%B9-levelNum%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=2&amp;contentNum=1&amp;levelNum=hhg</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>randomGame  -随机单个游戏内容-levelNum为中文<a name="randomGame  -%E9%9A%8F%E6%9C%BA%E5%8D%95%E4%B8%AA%E6%B8%B8%E6%88%8F%E5%86%85%E5%AE%B9-levelNum%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=2&amp;contentNum=1&amp;levelNum=接口</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>randomGame  -随机单个游戏内容-levelNum为特殊字符<a name="randomGame  -%E9%9A%8F%E6%9C%BA%E5%8D%95%E4%B8%AA%E6%B8%B8%E6%88%8F%E5%86%85%E5%AE%B9-levelNum%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=2&amp;contentNum=1&amp;levelNum=*</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>randomGame  -随机单个游戏内容-levelNum为数学字符<a name="randomGame  -%E9%9A%8F%E6%9C%BA%E5%8D%95%E4%B8%AA%E6%B8%B8%E6%88%8F%E5%86%85%E5%AE%B9-levelNum%E4%B8%BA%E6%95%B0%E5%AD%A6%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=2&amp;contentNum=1&amp;levelNum=+</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>randomGame  -随机单个游戏内容-levelNum为空<a name="randomGame  -%E9%9A%8F%E6%9C%BA%E5%8D%95%E4%B8%AA%E6%B8%B8%E6%88%8F%E5%86%85%E5%AE%B9-levelNum%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=2&amp;contentNum=1&amp;levelNum=</td><td>GET</td><td></td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>submitSession -保存会话记录（存Mongo）<a name="submitSession -%E4%BF%9D%E5%AD%98%E4%BC%9A%E8%AF%9D%E8%AE%B0%E5%BD%95%EF%BC%88%E5%AD%98Mongo%EF%BC%89"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/submitSession</td><td>POST</td><td>{&#13;
+  "userId": 246331,&#13;
+  "levelNum": 1,&#13;
+  "levelStatus": 4,&#13;
+  "levelValue": "已学习，未开始再次学习",&#13;
+  "content": []&#13;
+}&#13;
+</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>submitSession -相同参数，保存会话记录（存Mongo）<a name="submitSession -%E7%9B%B8%E5%90%8C%E5%8F%82%E6%95%B0%EF%BC%8C%E4%BF%9D%E5%AD%98%E4%BC%9A%E8%AF%9D%E8%AE%B0%E5%BD%95%EF%BC%88%E5%AD%98Mongo%EF%BC%89"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/submitSession</td><td>POST</td><td>{&#13;
+  "userId": 246331,&#13;
+  "levelNum": 1,&#13;
+  "levelStatus": 4,&#13;
+  "levelValue": "已学习，未开始再次学习",&#13;
+  "content": []&#13;
+}&#13;
+</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>submitSession -保存会话记录（存Mongo）-userId为空<a name="submitSession -%E4%BF%9D%E5%AD%98%E4%BC%9A%E8%AF%9D%E8%AE%B0%E5%BD%95%EF%BC%88%E5%AD%98Mongo%EF%BC%89-userId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/submitSession</td><td>POST</td><td>{&#13;
+  "userId": "",&#13;
+  "levelNum": 1,&#13;
+  "levelStatus": 4,&#13;
+  "levelValue": "已学习，未开始再次学习",&#13;
+  "content": []&#13;
+}&#13;
+</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>submitSession -保存会话记录（存Mongo）-userId为空格<a name="submitSession -%E4%BF%9D%E5%AD%98%E4%BC%9A%E8%AF%9D%E8%AE%B0%E5%BD%95%EF%BC%88%E5%AD%98Mongo%EF%BC%89-userId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/submitSession</td><td>POST</td><td>{&#13;
+  "userId": "  ",&#13;
+  "levelNum": 1,&#13;
+  "levelStatus": 4,&#13;
+  "levelValue": "已学习，未开始再次学习",&#13;
+  "content": []&#13;
+}&#13;
+</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>submitSession -保存会话记录（存Mongo）-userId为特殊字符<a name="submitSession -%E4%BF%9D%E5%AD%98%E4%BC%9A%E8%AF%9D%E8%AE%B0%E5%BD%95%EF%BC%88%E5%AD%98Mongo%EF%BC%89-userId%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/submitSession</td><td>POST</td><td>{&#13;
+  "userId": "&amp;",&#13;
+  "levelNum": 1,&#13;
+  "levelStatus": 4,&#13;
+  "levelValue": "已学习，未开始再次学习",&#13;
+  "content": []&#13;
+}&#13;
+</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>submitSession -保存会话记录（存Mongo）-userId为数学字符<a name="submitSession -%E4%BF%9D%E5%AD%98%E4%BC%9A%E8%AF%9D%E8%AE%B0%E5%BD%95%EF%BC%88%E5%AD%98Mongo%EF%BC%89-userId%E4%B8%BA%E6%95%B0%E5%AD%A6%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/submitSession</td><td>POST</td><td>{&#13;
+  "userId": "+",&#13;
+  "levelNum": 1,&#13;
+  "levelStatus": 4,&#13;
+  "levelValue": "已学习，未开始再次学习",&#13;
+  "content": []&#13;
+}&#13;
+</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>submitSession -保存会话记录（存Mongo）-userId为中文<a name="submitSession -%E4%BF%9D%E5%AD%98%E4%BC%9A%E8%AF%9D%E8%AE%B0%E5%BD%95%EF%BC%88%E5%AD%98Mongo%EF%BC%89-userId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/submitSession</td><td>POST</td><td>{&#13;
+  "userId": "打分表",&#13;
+  "levelNum": 1,&#13;
+  "levelStatus": 4,&#13;
+  "levelValue": "已学习，未开始再次学习",&#13;
+  "content": []&#13;
+}&#13;
+</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>submitSession -保存会话记录（存Mongo）-userId为英文<a name="submitSession -%E4%BF%9D%E5%AD%98%E4%BC%9A%E8%AF%9D%E8%AE%B0%E5%BD%95%EF%BC%88%E5%AD%98Mongo%EF%BC%89-userId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/submitSession</td><td>POST</td><td>{&#13;
+  "userId": "fb",&#13;
+  "levelNum": 1,&#13;
+  "levelStatus": 4,&#13;
+  "levelValue": "已学习，未开始再次学习",&#13;
+  "content": []&#13;
+}&#13;
+</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>submitSession -保存会话记录（存Mongo）-levelNum为英文<a name="submitSession -%E4%BF%9D%E5%AD%98%E4%BC%9A%E8%AF%9D%E8%AE%B0%E5%BD%95%EF%BC%88%E5%AD%98Mongo%EF%BC%89-levelNum%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/submitSession</td><td>POST</td><td>{&#13;
+  "userId":246331,&#13;
+  "levelNum": "df",&#13;
+  "levelStatus": 4,&#13;
+  "levelValue": "已学习，未开始再次学习",&#13;
+  "content": []&#13;
+}&#13;
+</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>submitSession -保存会话记录（存Mongo）-levelNum为中文<a name="submitSession -%E4%BF%9D%E5%AD%98%E4%BC%9A%E8%AF%9D%E8%AE%B0%E5%BD%95%EF%BC%88%E5%AD%98Mongo%EF%BC%89-levelNum%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/submitSession</td><td>POST</td><td>{&#13;
+  "userId": 246331,&#13;
+  "levelNum": "发",&#13;
+  "levelStatus": 4,&#13;
+  "levelValue": "已学习，未开始再次学习",&#13;
+  "content": []&#13;
+}&#13;
+</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>submitSession -保存会话记录（存Mongo）-levelNum为特殊字符<a name="submitSession -%E4%BF%9D%E5%AD%98%E4%BC%9A%E8%AF%9D%E8%AE%B0%E5%BD%95%EF%BC%88%E5%AD%98Mongo%EF%BC%89-levelNum%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/submitSession</td><td>POST</td><td>{&#13;
+  "userId": 246331,&#13;
+  "levelNum": "*",&#13;
+  "levelStatus": 4,&#13;
+  "levelValue": "已学习，未开始再次学习",&#13;
+  "content": []&#13;
+}&#13;
+</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>submitSession -保存会话记录（存Mongo）-levelNum为数学字符<a name="submitSession -%E4%BF%9D%E5%AD%98%E4%BC%9A%E8%AF%9D%E8%AE%B0%E5%BD%95%EF%BC%88%E5%AD%98Mongo%EF%BC%89-levelNum%E4%B8%BA%E6%95%B0%E5%AD%A6%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/submitSession</td><td>POST</td><td>{&#13;
+  "userId": 246331,&#13;
+  "levelNum": "+",&#13;
+  "levelStatus": 4,&#13;
+  "levelValue": "已学习，未开始再次学习",&#13;
+  "content": []&#13;
+}&#13;
+</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>submitSession -保存会话记录（存Mongo）-levelNum为空格<a name="submitSession -%E4%BF%9D%E5%AD%98%E4%BC%9A%E8%AF%9D%E8%AE%B0%E5%BD%95%EF%BC%88%E5%AD%98Mongo%EF%BC%89-levelNum%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/submitSession</td><td>POST</td><td>{&#13;
+  "userId": 246331,&#13;
+  "levelNum": "  ",&#13;
+  "levelStatus": 4,&#13;
+  "levelValue": "已学习，未开始再次学习",&#13;
+  "content": []&#13;
+}&#13;
+</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>submitSession -保存会话记录（存Mongo）-levelNum为空<a name="submitSession -%E4%BF%9D%E5%AD%98%E4%BC%9A%E8%AF%9D%E8%AE%B0%E5%BD%95%EF%BC%88%E5%AD%98Mongo%EF%BC%89-levelNum%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/submitSession</td><td>POST</td><td>{&#13;
+  "userId": 246331,&#13;
+  "levelNum": "",&#13;
+  "levelStatus": 4,&#13;
+  "levelValue": "已学习，未开始再次学习",&#13;
+  "content": []&#13;
+}&#13;
+</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h3>submitLevel-提交关卡<a name="submitLevel-%E6%8F%90%E4%BA%A4%E5%85%B3%E5%8D%A1"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/submitLevel</td><td>POST</td><td>{&#13;
+    "levelNum": 1,&#13;
+    "score": 71,&#13;
+    "gameContentList": [&#13;
+        {&#13;
+            "gameNum": 3,&#13;
+            "contentNum": 3&#13;
+        },&#13;
+        {&#13;
+            "gameNum": 4,&#13;
+            "contentNum": 3&#13;
+        }&#13;
+    ]&#13;
+}</td><td>401 - </td><td>{"code":"UNAUTHORIZED","message":"Request without authorization header.","success":false,"total":0}</td>
+</tr>
+</table>
+<h2>Success Detail</h2>
+<h3>getClassmateCircle -   查询班级圈信息 -page为空格<a name="getClassmateCircle -   %E6%9F%A5%E8%AF%A2%E7%8F%AD%E7%BA%A7%E5%9C%88%E4%BF%A1%E6%81%AF -page%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getClassmateCircle?page=   &amp;pageSize=5</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 82: https://game-staging.zhishinet.com/api/game-packet/v1/sec/getClassmateCircle?page=   &amp;pageSize=5</td><td></td>
+</tr>
+</table>
+<h3>getClassmateCircle -   查询班级圈信息 -pageSize为空格<a name="getClassmateCircle -   %E6%9F%A5%E8%AF%A2%E7%8F%AD%E7%BA%A7%E5%9C%88%E4%BF%A1%E6%81%AF -pageSize%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getClassmateCircle?page=1&amp;pageSize=   </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 93: https://game-staging.zhishinet.com/api/game-packet/v1/sec/getClassmateCircle?page=1&amp;pageSize=   </td><td></td>
+</tr>
+</table>
+<h3>getUserStarsBillBoard  -  count为空格<a name="getUserStarsBillBoard  -  count%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getUserStarsBillBoard?count=   </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 86: https://game-staging.zhishinet.com/api/game-packet/v1/sec/getUserStarsBillBoard?count=   </td><td></td>
+</tr>
+</table>
+<h3>gameLevelHistory/query  -levelNum为空格<a name="gameLevelHistory/query  -levelNum%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelHistory/query?levelNum=  </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 90: https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelHistory/query?levelNum=  </td><td></td>
+</tr>
+</table>
+<h3>gameLevelRanking/query  -levelNum为空格<a name="gameLevelRanking/query  -levelNum%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelRanking/query?levelNum=   &amp;count=10</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 90: https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelRanking/query?levelNum=   &amp;count=10</td><td></td>
+</tr>
+</table>
+<h3>gameLevelRanking/query  -count为空格<a name="gameLevelRanking/query  -count%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelRanking/query?levelNum=1&amp;count=  </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 98: https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelRanking/query?levelNum=1&amp;count=  </td><td></td>
+</tr>
+</table>
+<h3>selectSession -levelNum为空格<a name="selectSession -levelNum%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/selectSession?levelNum=   </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 81: https://game-staging.zhishinet.com/api/game-packet/v1/sec/selectSession?levelNum=   </td><td></td>
+</tr>
+</table>
+<h3>getContent-指定关卡指定游戏的内容使用记录-levelNum为空格<a name="getContent-%E6%8C%87%E5%AE%9A%E5%85%B3%E5%8D%A1%E6%8C%87%E5%AE%9A%E6%B8%B8%E6%88%8F%E7%9A%84%E5%86%85%E5%AE%B9%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95-levelNum%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getContent?levelNum=    &amp;gameNum=1</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 78: https://game-staging.zhishinet.com/api/game-packet/v1/sec/getContent?levelNum=    &amp;gameNum=1</td><td></td>
+</tr>
+</table>
+<h3>getContent-指定关卡指定游戏的内容使用记录-gameNum为空格<a name="getContent-%E6%8C%87%E5%AE%9A%E5%85%B3%E5%8D%A1%E6%8C%87%E5%AE%9A%E6%B8%B8%E6%88%8F%E7%9A%84%E5%86%85%E5%AE%B9%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95-gameNum%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getContent?levelNum=1&amp;gameNum=   </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 88: https://game-staging.zhishinet.com/api/game-packet/v1/sec/getContent?levelNum=1&amp;gameNum=   </td><td></td>
+</tr>
+</table>
+<h3>randomGame  -随机单个游戏内容-gameNum为空格<a name="randomGame  -%E9%9A%8F%E6%9C%BA%E5%8D%95%E4%B8%AA%E6%B8%B8%E6%88%8F%E5%86%85%E5%AE%B9-gameNum%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=    &amp;contentNum=1&amp;levelNum=1</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 77: https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=    &amp;contentNum=1&amp;levelNum=1</td><td></td>
+</tr>
+</table>
+<h3>randomGame  -随机单个游戏内容-contentNum为空格<a name="randomGame  -%E9%9A%8F%E6%9C%BA%E5%8D%95%E4%B8%AA%E6%B8%B8%E6%88%8F%E5%86%85%E5%AE%B9-contentNum%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=2&amp;contentNum=   &amp;levelNum=1</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 90: https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=2&amp;contentNum=   &amp;levelNum=1</td><td></td>
+</tr>
+</table>
+<h3>randomGame  -随机单个游戏内容-levelNum为空格<a name="randomGame  -%E9%9A%8F%E6%9C%BA%E5%8D%95%E4%B8%AA%E6%B8%B8%E6%88%8F%E5%86%85%E5%AE%B9-levelNum%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=2&amp;contentNum=1&amp;levelNum=   </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 101: https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=2&amp;contentNum=1&amp;levelNum=   </td><td></td>
+</tr>
+</table>
+</body>
+</html>

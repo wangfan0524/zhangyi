@@ -1,0 +1,462 @@
+2017-11-13 14:54:14,366 INFO o.a.j.u.JMeterUtils: Setting Locale to zh_CN
+2017-11-13 14:54:14,381 INFO o.a.j.JMeter: Loading user properties from: user.properties
+2017-11-13 14:54:14,382 INFO o.a.j.JMeter: Loading system properties from: system.properties
+2017-11-13 14:54:14,382 INFO o.a.j.JMeter: Setting JMeter property: host=test.zhishinet.com
+2017-11-13 14:54:14,386 INFO o.a.j.JMeter: Copyright (c) 1998-2017 The Apache Software Foundation
+2017-11-13 14:54:14,387 INFO o.a.j.JMeter: Version 3.2 r1790748
+2017-11-13 14:54:14,387 INFO o.a.j.JMeter: java.version=1.8.0_131
+2017-11-13 14:54:14,387 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2017-11-13 14:54:14,387 INFO o.a.j.JMeter: os.name=Windows 10
+2017-11-13 14:54:14,387 INFO o.a.j.JMeter: os.arch=amd64
+2017-11-13 14:54:14,387 INFO o.a.j.JMeter: os.version=10.0
+2017-11-13 14:54:14,387 INFO o.a.j.JMeter: file.encoding=GBK
+2017-11-13 14:54:14,388 INFO o.a.j.JMeter: Max memory     =3793747968
+2017-11-13 14:54:14,388 INFO o.a.j.JMeter: Available Processors =4
+2017-11-13 14:54:14,394 INFO o.a.j.JMeter: Default Locale=中文 (中国)
+2017-11-13 14:54:14,394 INFO o.a.j.JMeter: JMeter  Locale=中文 (中国)
+2017-11-13 14:54:14,395 INFO o.a.j.JMeter: JMeterHome=G:\项目\InterfaceTest\apache-jmeter-3.2
+2017-11-13 14:54:14,395 INFO o.a.j.JMeter: user.dir  =G:\项目\InterfaceTest\apache-jmeter-3.2\bin
+2017-11-13 14:54:14,395 INFO o.a.j.JMeter: PWD       =G:\项目\InterfaceTest\apache-jmeter-3.2\bin
+2017-11-13 14:54:14,397 INFO o.a.j.JMeter: IP: 192.168.60.42 Name: LAPTOP-JVHP31N1 FullName: LAPTOP-JVHP31N1
+2017-11-13 14:54:14,401 INFO o.a.j.s.FileServer: Default base='G:\项目\InterfaceTest\apache-jmeter-3.2\bin'
+2017-11-13 14:54:14,401 INFO o.a.j.s.FileServer: Set new base='G:\项目\InterfaceTest\ZhiShiNetTest\TestSuite'
+2017-11-13 14:54:14,511 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2017-11-13 14:54:14,524 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2017-11-13 14:54:14,529 INFO o.a.j.s.SaveService: Using SaveService properties version 3.2
+2017-11-13 14:54:14,536 INFO o.a.j.s.SaveService: Loading file: G:\项目\InterfaceTest\ZhiShiNetTest\TestSuite\tag_Test.jmx
+2017-11-13 14:54:14,611 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2017-11-13 14:54:14,611 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2017-11-13 14:54:14,611 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2017-11-13 14:54:14,611 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2017-11-13 14:54:14,611 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2017-11-13 14:54:14,611 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2017-11-13 14:54:14,933 INFO o.a.j.JMeter: Creating summariser <summary>
+2017-11-13 14:54:14,942 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2017-11-13 14:54:14,942 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2017-11-13 14:54:14,943 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2017-11-13 14:54:14,948 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2017-11-13 14:54:14,948 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2017-11-13 14:54:15,410 INFO o.a.j.JMeter: 正在运行的测试 (1510556055410)
+2017-11-13 14:54:15,492 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : queryArticle查询文章素材
+2017-11-13 14:54:15,492 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group queryArticle查询文章素材.
+2017-11-13 14:54:15,492 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-11-13 14:54:15,493 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-11-13 14:54:15,504 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2017-11-13 14:54:15,504 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: queryArticle查询文章素材 to finish before starting next group
+2017-11-13 14:54:15,513 INFO o.a.j.t.JMeterThread: Thread started: queryArticle查询文章素材 1-1
+2017-11-13 14:54:15,538 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = LAPTOP-JVHP31N1
+2017-11-13 14:54:15,543 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2017-11-13 14:54:15,551 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2017-11-13 14:54:15,551 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2017-11-13 14:54:15,551 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2017-11-13 14:54:15,551 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2017-11-13 14:54:15,613 INFO o.a.j.p.h.s.LazySchemeSocketFactory: Setting up HTTPS TrustAll Socket Factory
+2017-11-13 14:54:15,623 INFO o.a.j.u.JsseSSLManager: Using default SSL protocol: TLS
+2017-11-13 14:54:15,623 INFO o.a.j.u.JsseSSLManager: SSL session context: per-thread
+2017-11-13 14:54:16,118 INFO o.a.j.u.SSLManager: JmeterKeyStore Location:  type JKS
+2017-11-13 14:54:16,120 INFO o.a.j.u.SSLManager: KeyStore created OK
+2017-11-13 14:54:16,120 WARN o.a.j.u.SSLManager: Keystore file not found, loading empty keystore
+2017-11-13 14:56:01,248 INFO o.a.j.r.Summariser: summary +      6 in 00:01:46 =    0.1/s Avg: 17604 Min:     1 Max: 21603 Err:     5 (83.33%) Active: 1 Started: 1 Finished: 0
+2017-11-13 14:57:04,275 INFO o.a.j.r.Summariser: summary +      3 in 00:01:03 =    0.0/s Avg: 21005 Min: 21005 Max: 21005 Err:     3 (100.00%) Active: 1 Started: 1 Finished: 0
+2017-11-13 14:57:04,276 INFO o.a.j.r.Summariser: summary =      9 in 00:02:49 =    0.1/s Avg: 18737 Min:     1 Max: 21603 Err:     8 (88.89%)
+2017-11-13 14:59:31,357 INFO o.a.j.r.Summariser: summary +      8 in 00:02:27 =    0.1/s Avg: 18381 Min:     1 Max: 21009 Err:     7 (87.50%) Active: 1 Started: 1 Finished: 0
+2017-11-13 14:59:31,358 INFO o.a.j.r.Summariser: summary =     17 in 00:05:16 =    0.1/s Avg: 18569 Min:     1 Max: 21603 Err:    15 (88.24%)
+2017-11-13 15:00:34,397 INFO o.a.j.r.Summariser: summary +      4 in 00:01:03 =    0.1/s Avg: 15754 Min:     1 Max: 21007 Err:     3 (75.00%) Active: 1 Started: 1 Finished: 0
+2017-11-13 15:00:34,398 INFO o.a.j.r.Summariser: summary =     21 in 00:06:19 =    0.1/s Avg: 18033 Min:     1 Max: 21603 Err:    18 (85.71%)
+2017-11-13 15:03:01,469 INFO o.a.j.r.Summariser: summary +      8 in 00:02:27 =    0.1/s Avg: 18381 Min:     1 Max: 21008 Err:     7 (87.50%) Active: 1 Started: 1 Finished: 0
+2017-11-13 15:03:01,470 INFO o.a.j.r.Summariser: summary =     29 in 00:08:46 =    0.1/s Avg: 18129 Min:     1 Max: 21603 Err:    25 (86.21%)
+2017-11-13 15:04:04,495 INFO o.a.j.r.Summariser: summary +      3 in 00:01:03 =    0.0/s Avg: 21005 Min: 21005 Max: 21007 Err:     3 (100.00%) Active: 1 Started: 1 Finished: 0
+2017-11-13 15:04:04,496 INFO o.a.j.r.Summariser: summary =     32 in 00:09:49 =    0.1/s Avg: 18399 Min:     1 Max: 21603 Err:    28 (87.50%)
+2017-11-13 15:06:31,567 INFO o.a.j.r.Summariser: summary +      9 in 00:02:27 =    0.1/s Avg: 16338 Min:     0 Max: 21011 Err:     7 (77.78%) Active: 1 Started: 1 Finished: 0
+2017-11-13 15:06:31,568 INFO o.a.j.r.Summariser: summary =     41 in 00:12:16 =    0.1/s Avg: 17946 Min:     0 Max: 21603 Err:    35 (85.37%)
+2017-11-13 15:07:34,593 INFO o.a.j.r.Summariser: summary +      3 in 00:01:03 =    0.0/s Avg: 21005 Min: 21004 Max: 21006 Err:     3 (100.00%) Active: 1 Started: 1 Finished: 0
+2017-11-13 15:07:34,594 INFO o.a.j.r.Summariser: summary =     44 in 00:13:19 =    0.1/s Avg: 18155 Min:     0 Max: 21603 Err:    38 (86.36%)
+2017-11-13 15:07:55,603 INFO o.a.j.t.JMeterThread: Thread is done: queryArticle查询文章素材 1-1
+2017-11-13 15:07:55,603 INFO o.a.j.t.JMeterThread: Thread finished: queryArticle查询文章素材 1-1
+2017-11-13 15:07:55,605 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 2 : exportArticle导出文章列表
+2017-11-13 15:07:55,605 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group exportArticle导出文章列表.
+2017-11-13 15:07:55,605 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-11-13 15:07:55,606 INFO o.a.j.t.ThreadGroup: Starting thread group... number=2 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-11-13 15:07:55,636 INFO o.a.j.t.ThreadGroup: Started thread group number 2
+2017-11-13 15:07:55,636 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: exportArticle导出文章列表 to finish before starting next group
+2017-11-13 15:07:55,650 INFO o.a.j.t.JMeterThread: Thread started: exportArticle导出文章列表 2-1
+2017-11-13 15:08:37,697 ERROR o.a.j.u.BeanShellInterpreter: Error invoking bsh method: eval	Sourced file: inline evaluation of: ``prev.setDataEncoding(UTF-8);'' : illegal use of undefined variable, class, or 'void' literal
+2017-11-13 15:08:37,698 WARN o.a.j.e.BeanShellPostProcessor: Problem in BeanShell script: org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval	Sourced file: inline evaluation of: ``prev.setDataEncoding(UTF-8);'' : illegal use of undefined variable, class, or 'void' literal
+2017-11-13 15:10:01,739 INFO o.a.j.r.Summariser: summary +      8 in 00:02:27 =    0.1/s Avg: 18381 Min:     1 Max: 21015 Err:     7 (87.50%) Active: 1 Started: 2 Finished: 1
+2017-11-13 15:10:01,740 INFO o.a.j.r.Summariser: summary =     52 in 00:15:46 =    0.1/s Avg: 18190 Min:     0 Max: 21603 Err:    45 (86.54%)
+2017-11-13 15:11:04,764 INFO o.a.j.r.Summariser: summary +      3 in 00:01:03 =    0.0/s Avg: 21005 Min: 21004 Max: 21007 Err:     3 (100.00%) Active: 1 Started: 2 Finished: 1
+2017-11-13 15:11:04,765 INFO o.a.j.r.Summariser: summary =     55 in 00:16:49 =    0.1/s Avg: 18343 Min:     0 Max: 21603 Err:    48 (87.27%)
+2017-11-13 15:13:31,826 INFO o.a.j.r.Summariser: summary +      8 in 00:02:27 =    0.1/s Avg: 18380 Min:     1 Max: 21009 Err:     7 (87.50%) Active: 1 Started: 2 Finished: 1
+2017-11-13 15:13:31,826 INFO o.a.j.r.Summariser: summary =     63 in 00:19:16 =    0.1/s Avg: 18348 Min:     0 Max: 21603 Err:    55 (87.30%)
+2017-11-13 15:14:34,863 INFO o.a.j.r.Summariser: summary +      4 in 00:01:03 =    0.1/s Avg: 15756 Min:     1 Max: 21014 Err:     3 (75.00%) Active: 1 Started: 2 Finished: 1
+2017-11-13 15:14:34,865 INFO o.a.j.r.Summariser: summary =     67 in 00:20:19 =    0.1/s Avg: 18193 Min:     0 Max: 21603 Err:    58 (86.57%)
+2017-11-13 15:17:01,948 INFO o.a.j.r.Summariser: summary +      8 in 00:02:27 =    0.1/s Avg: 18382 Min:     2 Max: 21010 Err:     7 (87.50%) Active: 1 Started: 2 Finished: 1
+2017-11-13 15:17:01,949 INFO o.a.j.r.Summariser: summary =     75 in 00:22:47 =    0.1/s Avg: 18213 Min:     0 Max: 21603 Err:    65 (86.67%)
+2017-11-13 15:17:22,961 INFO o.a.j.t.JMeterThread: Thread is done: exportArticle导出文章列表 2-1
+2017-11-13 15:17:22,961 INFO o.a.j.t.JMeterThread: Thread finished: exportArticle导出文章列表 2-1
+2017-11-13 15:17:22,962 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 3 : query查询单个素材标签
+2017-11-13 15:17:22,963 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group query查询单个素材标签.
+2017-11-13 15:17:22,963 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-11-13 15:17:22,964 INFO o.a.j.t.ThreadGroup: Starting thread group... number=3 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-11-13 15:17:22,974 INFO o.a.j.t.ThreadGroup: Started thread group number 3
+2017-11-13 15:17:22,974 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: query查询单个素材标签 to finish before starting next group
+2017-11-13 15:17:22,988 INFO o.a.j.t.JMeterThread: Thread started: query查询单个素材标签 3-1
+2017-11-13 15:18:05,027 INFO o.a.j.r.Summariser: summary +      3 in 00:01:03 =    0.0/s Avg: 21011 Min: 21008 Max: 21019 Err:     3 (100.00%) Active: 1 Started: 3 Finished: 2
+2017-11-13 15:18:05,028 INFO o.a.j.r.Summariser: summary =     78 in 00:23:50 =    0.1/s Avg: 18321 Min:     0 Max: 21603 Err:    68 (87.18%)
+2017-11-13 15:20:32,121 INFO o.a.j.r.Summariser: summary +      8 in 00:02:27 =    0.1/s Avg: 18383 Min:     1 Max: 21013 Err:     7 (87.50%) Active: 1 Started: 3 Finished: 2
+2017-11-13 15:20:32,123 INFO o.a.j.r.Summariser: summary =     86 in 00:26:17 =    0.1/s Avg: 18327 Min:     0 Max: 21603 Err:    75 (87.21%)
+2017-11-13 15:21:35,161 INFO o.a.j.r.Summariser: summary +      4 in 00:01:03 =    0.1/s Avg: 15756 Min:     1 Max: 21009 Err:     3 (75.00%) Active: 1 Started: 3 Finished: 2
+2017-11-13 15:21:35,164 INFO o.a.j.r.Summariser: summary =     90 in 00:27:20 =    0.1/s Avg: 18212 Min:     0 Max: 21603 Err:    78 (86.67%)
+2017-11-13 15:22:17,191 INFO o.a.j.t.JMeterThread: Thread is done: query查询单个素材标签 3-1
+2017-11-13 15:22:17,191 INFO o.a.j.t.JMeterThread: Thread finished: query查询单个素材标签 3-1
+2017-11-13 15:22:17,194 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 4 : save保存标签
+2017-11-13 15:22:17,194 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group save保存标签.
+2017-11-13 15:22:17,196 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-11-13 15:22:17,197 INFO o.a.j.t.ThreadGroup: Starting thread group... number=4 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-11-13 15:22:17,201 INFO o.a.j.t.ThreadGroup: Started thread group number 4
+2017-11-13 15:22:17,202 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: save保存标签 to finish before starting next group
+2017-11-13 15:22:17,215 INFO o.a.j.t.JMeterThread: Thread started: save保存标签 4-1
+2017-11-13 15:24:02,291 INFO o.a.j.r.Summariser: summary +      7 in 00:02:27 =    0.0/s Avg: 21010 Min: 21005 Max: 21025 Err:     7 (100.00%) Active: 1 Started: 4 Finished: 3
+2017-11-13 15:24:02,292 INFO o.a.j.r.Summariser: summary =     97 in 00:29:47 =    0.1/s Avg: 18414 Min:     0 Max: 21603 Err:    85 (87.63%)
+2017-11-13 15:25:05,326 INFO o.a.j.r.Summariser: summary +      3 in 00:01:03 =    0.0/s Avg: 21007 Min: 21007 Max: 21008 Err:     3 (100.00%) Active: 1 Started: 4 Finished: 3
+2017-11-13 15:25:05,327 INFO o.a.j.r.Summariser: summary =    100 in 00:30:50 =    0.1/s Avg: 18492 Min:     0 Max: 21603 Err:    88 (88.00%)
+2017-11-13 15:27:32,406 INFO o.a.j.r.Summariser: summary +      7 in 00:02:27 =    0.0/s Avg: 21008 Min: 21006 Max: 21010 Err:     7 (100.00%) Active: 1 Started: 4 Finished: 3
+2017-11-13 15:27:32,409 INFO o.a.j.r.Summariser: summary =    107 in 00:33:17 =    0.1/s Avg: 18657 Min:     0 Max: 21603 Err:    95 (88.79%)
+2017-11-13 15:27:53,423 INFO o.a.j.t.JMeterThread: Thread is done: save保存标签 4-1
+2017-11-13 15:27:53,423 INFO o.a.j.t.JMeterThread: Thread finished: save保存标签 4-1
+2017-11-13 15:27:53,426 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 5 : exportQuestionsWithTag-标签批量导出
+2017-11-13 15:27:53,426 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group exportQuestionsWithTag-标签批量导出.
+2017-11-13 15:27:53,427 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-11-13 15:27:53,427 INFO o.a.j.t.ThreadGroup: Starting thread group... number=5 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-11-13 15:27:53,433 INFO o.a.j.t.ThreadGroup: Started thread group number 5
+2017-11-13 15:27:53,433 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: exportQuestionsWithTag-标签批量导出 to finish before starting next group
+2017-11-13 15:27:53,447 INFO o.a.j.t.JMeterThread: Thread started: exportQuestionsWithTag-标签批量导出 5-1
+2017-11-13 15:28:35,477 INFO o.a.j.r.Summariser: summary +      3 in 00:01:03 =    0.0/s Avg: 21010 Min: 21007 Max: 21014 Err:     3 (100.00%) Active: 1 Started: 5 Finished: 4
+2017-11-13 15:28:35,478 INFO o.a.j.r.Summariser: summary =    110 in 00:34:20 =    0.1/s Avg: 18721 Min:     0 Max: 21603 Err:    98 (89.09%)
+2017-11-13 15:30:32,244 INFO o.a.j.r.Summariser: summary +      4 in 00:01:57 =    0.0/s Avg: 29191 Min: 21003 Max: 53755 Err:     4 (100.00%) Active: 1 Started: 5 Finished: 4
+2017-11-13 15:30:32,245 INFO o.a.j.r.Summariser: summary =    114 in 00:36:17 =    0.1/s Avg: 19088 Min:     0 Max: 53755 Err:   102 (89.47%)
+2017-11-13 15:31:35,268 INFO o.a.j.r.Summariser: summary +      3 in 00:01:03 =    0.0/s Avg: 21004 Min: 21003 Max: 21006 Err:     3 (100.00%) Active: 1 Started: 5 Finished: 4
+2017-11-13 15:31:35,274 INFO o.a.j.r.Summariser: summary =    117 in 00:37:20 =    0.1/s Avg: 19137 Min:     0 Max: 53755 Err:   105 (89.74%)
+2017-11-13 15:34:02,354 INFO o.a.j.r.Summariser: summary +      7 in 00:02:27 =    0.0/s Avg: 21008 Min: 21005 Max: 21012 Err:     7 (100.00%) Active: 1 Started: 5 Finished: 4
+2017-11-13 15:34:02,356 INFO o.a.j.r.Summariser: summary =    124 in 00:39:47 =    0.1/s Avg: 19243 Min:     0 Max: 53755 Err:   112 (90.32%)
+2017-11-13 15:34:02,357 INFO o.a.j.t.JMeterThread: Thread is done: exportQuestionsWithTag-标签批量导出 5-1
+2017-11-13 15:34:02,357 INFO o.a.j.t.JMeterThread: Thread finished: exportQuestionsWithTag-标签批量导出 5-1
+2017-11-13 15:34:02,358 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 6 : questionCategory 题目类别
+2017-11-13 15:34:02,359 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group questionCategory 题目类别.
+2017-11-13 15:34:02,359 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-11-13 15:34:02,359 INFO o.a.j.t.ThreadGroup: Starting thread group... number=6 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-11-13 15:34:02,367 INFO o.a.j.t.ThreadGroup: Started thread group number 6
+2017-11-13 15:34:02,368 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: questionCategory 题目类别 to finish before starting next group
+2017-11-13 15:34:02,376 INFO o.a.j.t.JMeterThread: Thread started: questionCategory 题目类别 6-1
+2017-11-13 15:35:05,426 INFO o.a.j.r.Summariser: summary +      3 in 00:01:03 =    0.0/s Avg: 21010 Min: 21006 Max: 21016 Err:     3 (100.00%) Active: 1 Started: 6 Finished: 5
+2017-11-13 15:35:05,427 INFO o.a.j.r.Summariser: summary =    127 in 00:40:50 =    0.1/s Avg: 19285 Min:     0 Max: 53755 Err:   115 (90.55%)
+2017-11-13 15:36:30,079 INFO o.a.j.r.Summariser: summary +      5 in 00:01:25 =    0.1/s Avg: 16805 Min:     0 Max: 21010 Err:     4 (80.00%) Active: 1 Started: 6 Finished: 5
+2017-11-13 15:36:30,079 INFO o.a.j.r.Summariser: summary =    132 in 00:42:15 =    0.1/s Avg: 19191 Min:     0 Max: 53755 Err:   119 (90.15%)
+2017-11-13 15:37:33,268 INFO o.a.j.r.Summariser: summary +      3 in 00:01:03 =    0.0/s Avg: 21005 Min: 21004 Max: 21007 Err:     3 (100.00%) Active: 1 Started: 6 Finished: 5
+2017-11-13 15:37:33,268 INFO o.a.j.r.Summariser: summary =    135 in 00:43:18 =    0.1/s Avg: 19231 Min:     0 Max: 53755 Err:   122 (90.37%)
+2017-11-13 15:37:33,269 INFO o.a.j.t.JMeterThread: Thread is done: questionCategory 题目类别 6-1
+2017-11-13 15:37:33,269 INFO o.a.j.t.JMeterThread: Thread finished: questionCategory 题目类别 6-1
+2017-11-13 15:37:33,269 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 7 : questionKnowledgePoints问题知识点
+2017-11-13 15:37:33,269 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group questionKnowledgePoints问题知识点.
+2017-11-13 15:37:33,269 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-11-13 15:37:33,269 INFO o.a.j.t.ThreadGroup: Starting thread group... number=7 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-11-13 15:37:33,270 INFO o.a.j.t.ThreadGroup: Started thread group number 7
+2017-11-13 15:37:33,270 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: questionKnowledgePoints问题知识点 to finish before starting next group
+2017-11-13 15:37:33,272 INFO o.a.j.t.JMeterThread: Thread started: questionKnowledgePoints问题知识点 7-1
+2017-11-13 15:40:00,377 INFO o.a.j.r.Summariser: summary +      8 in 00:02:27 =    0.1/s Avg: 18378 Min:     1 Max: 21006 Err:     7 (87.50%) Active: 1 Started: 7 Finished: 6
+2017-11-13 15:40:00,377 INFO o.a.j.r.Summariser: summary =    143 in 00:45:45 =    0.1/s Avg: 19183 Min:     0 Max: 53755 Err:   129 (90.21%)
+2017-11-13 15:40:42,417 INFO o.a.j.t.JMeterThread: Thread is done: questionKnowledgePoints问题知识点 7-1
+2017-11-13 15:40:42,417 INFO o.a.j.t.JMeterThread: Thread finished: questionKnowledgePoints问题知识点 7-1
+2017-11-13 15:40:42,417 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 8 : questionTags单题打标签！
+2017-11-13 15:40:42,418 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group questionTags单题打标签！.
+2017-11-13 15:40:42,418 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-11-13 15:40:42,418 INFO o.a.j.t.ThreadGroup: Starting thread group... number=8 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-11-13 15:40:42,419 INFO o.a.j.t.ThreadGroup: Started thread group number 8
+2017-11-13 15:40:42,419 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: questionTags单题打标签！ to finish before starting next group
+2017-11-13 15:40:42,422 INFO o.a.j.t.JMeterThread: Thread started: questionTags单题打标签！ 8-1
+2017-11-13 15:41:03,433 INFO o.a.j.r.Summariser: summary +      3 in 00:01:03 =    0.0/s Avg: 21003 Min: 21002 Max: 21006 Err:     3 (100.00%) Active: 1 Started: 8 Finished: 7
+2017-11-13 15:41:03,434 INFO o.a.j.r.Summariser: summary =    146 in 00:46:48 =    0.1/s Avg: 19221 Min:     0 Max: 53755 Err:   132 (90.41%)
+2017-11-13 15:43:30,467 INFO o.a.j.r.Summariser: summary +      7 in 00:02:27 =    0.0/s Avg: 21003 Min: 21002 Max: 21005 Err:     7 (100.00%) Active: 1 Started: 8 Finished: 7
+2017-11-13 15:43:30,467 INFO o.a.j.r.Summariser: summary =    153 in 00:49:15 =    0.1/s Avg: 19302 Min:     0 Max: 53755 Err:   139 (90.85%)
+2017-11-13 15:44:33,494 INFO o.a.j.r.Summariser: summary +      3 in 00:01:03 =    0.0/s Avg: 21006 Min: 21004 Max: 21011 Err:     3 (100.00%) Active: 1 Started: 8 Finished: 7
+2017-11-13 15:44:33,496 INFO o.a.j.r.Summariser: summary =    156 in 00:50:18 =    0.1/s Avg: 19335 Min:     0 Max: 53755 Err:   142 (91.03%)
+2017-11-13 15:47:00,556 INFO o.a.j.r.Summariser: summary +      7 in 00:02:27 =    0.0/s Avg: 21006 Min: 21004 Max: 21009 Err:     7 (100.00%) Active: 1 Started: 8 Finished: 7
+2017-11-13 15:47:00,559 INFO o.a.j.r.Summariser: summary =    163 in 00:52:45 =    0.1/s Avg: 19407 Min:     0 Max: 53755 Err:   149 (91.41%)
+2017-11-13 15:48:03,577 INFO o.a.j.r.Summariser: summary +      3 in 00:01:03 =    0.0/s Avg: 21004 Min: 21004 Max: 21006 Err:     3 (100.00%) Active: 1 Started: 8 Finished: 7
+2017-11-13 15:48:03,577 INFO o.a.j.r.Summariser: summary =    166 in 00:53:48 =    0.1/s Avg: 19436 Min:     0 Max: 53755 Err:   152 (91.57%)
+2017-11-13 15:48:24,592 INFO o.a.j.t.JMeterThread: Thread is done: questionTags单题打标签！ 8-1
+2017-11-13 15:48:24,592 INFO o.a.j.t.JMeterThread: Thread finished: questionTags单题打标签！ 8-1
+2017-11-13 15:48:24,592 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 9 : questionType题型分类
+2017-11-13 15:48:24,593 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group questionType题型分类.
+2017-11-13 15:48:24,593 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-11-13 15:48:24,593 INFO o.a.j.t.ThreadGroup: Starting thread group... number=9 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-11-13 15:48:24,594 INFO o.a.j.t.ThreadGroup: Started thread group number 9
+2017-11-13 15:48:24,594 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: questionType题型分类 to finish before starting next group
+2017-11-13 15:48:24,599 INFO o.a.j.t.JMeterThread: Thread started: questionType题型分类 9-1
+2017-11-13 15:50:30,683 INFO o.a.j.r.Summariser: summary +      8 in 00:02:27 =    0.1/s Avg: 18379 Min:     0 Max: 21013 Err:     7 (87.50%) Active: 1 Started: 9 Finished: 8
+2017-11-13 15:50:30,683 INFO o.a.j.r.Summariser: summary =    174 in 00:56:15 =    0.1/s Avg: 19387 Min:     0 Max: 53755 Err:   159 (91.38%)
+2017-11-13 15:51:33,842 INFO o.a.j.r.Summariser: summary +      3 in 00:01:03 =    0.0/s Avg: 21004 Min: 21002 Max: 21006 Err:     3 (100.00%) Active: 1 Started: 9 Finished: 8
+2017-11-13 15:51:33,844 INFO o.a.j.r.Summariser: summary =    177 in 00:57:18 =    0.1/s Avg: 19414 Min:     0 Max: 53755 Err:   162 (91.53%)
+2017-11-13 15:54:01,146 INFO o.a.j.r.Summariser: summary +      8 in 00:02:27 =    0.1/s Avg: 18379 Min:     2 Max: 21006 Err:     7 (87.50%) Active: 1 Started: 9 Finished: 8
+2017-11-13 15:54:01,147 INFO o.a.j.r.Summariser: summary =    185 in 00:59:46 =    0.1/s Avg: 19370 Min:     0 Max: 53755 Err:   169 (91.35%)
+2017-11-13 15:54:22,169 INFO o.a.j.t.JMeterThread: Thread is done: questionType题型分类 9-1
+2017-11-13 15:54:22,170 INFO o.a.j.t.JMeterThread: Thread finished: questionType题型分类 9-1
+2017-11-13 15:54:22,170 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 10 : questions试题筛选
+2017-11-13 15:54:22,170 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group questions试题筛选.
+2017-11-13 15:54:22,170 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-11-13 15:54:22,170 INFO o.a.j.t.ThreadGroup: Starting thread group... number=10 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-11-13 15:54:22,172 INFO o.a.j.t.ThreadGroup: Started thread group number 10
+2017-11-13 15:54:22,172 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: questions试题筛选 to finish before starting next group
+2017-11-13 15:54:22,173 INFO o.a.j.t.JMeterThread: Thread started: questions试题筛选 10-1
+2017-11-13 15:55:04,188 INFO o.a.j.r.Summariser: summary +      3 in 00:01:03 =    0.0/s Avg: 21005 Min: 21005 Max: 21005 Err:     3 (100.00%) Active: 1 Started: 10 Finished: 9
+2017-11-13 15:55:04,190 INFO o.a.j.r.Summariser: summary =    188 in 01:00:49 =    0.1/s Avg: 19396 Min:     0 Max: 53755 Err:   172 (91.49%)
+2017-11-13 15:57:31,241 INFO o.a.j.r.Summariser: summary +      7 in 00:02:27 =    0.0/s Avg: 21004 Min: 21004 Max: 21006 Err:     7 (100.00%) Active: 1 Started: 10 Finished: 9
+2017-11-13 15:57:31,243 INFO o.a.j.r.Summariser: summary =    195 in 01:03:16 =    0.1/s Avg: 19453 Min:     0 Max: 53755 Err:   179 (91.79%)
+2017-11-13 15:57:52,250 INFO o.a.j.t.JMeterThread: Thread is done: questions试题筛选 10-1
+2017-11-13 15:57:52,250 INFO o.a.j.t.JMeterThread: Thread finished: questions试题筛选 10-1
+2017-11-13 15:57:52,250 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 11 : listTagHeader标签分类列表
+2017-11-13 15:57:52,252 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group listTagHeader标签分类列表.
+2017-11-13 15:57:52,252 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-11-13 15:57:52,253 INFO o.a.j.t.ThreadGroup: Starting thread group... number=11 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-11-13 15:57:52,256 INFO o.a.j.t.ThreadGroup: Started thread group number 11
+2017-11-13 15:57:52,256 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: listTagHeader标签分类列表 to finish before starting next group
+2017-11-13 15:57:52,260 INFO o.a.j.t.JMeterThread: Thread started: listTagHeader标签分类列表 11-1
+2017-11-13 15:58:34,279 INFO o.a.j.r.Summariser: summary +      3 in 00:01:03 =    0.0/s Avg: 21005 Min: 21004 Max: 21007 Err:     3 (100.00%) Active: 1 Started: 11 Finished: 10
+2017-11-13 15:58:34,280 INFO o.a.j.r.Summariser: summary =    198 in 01:04:19 =    0.1/s Avg: 19477 Min:     0 Max: 53755 Err:   182 (91.92%)
+2017-11-13 16:01:01,336 INFO o.a.j.r.Summariser: summary +      8 in 00:02:27 =    0.1/s Avg: 18379 Min:     0 Max: 21010 Err:     7 (87.50%) Active: 1 Started: 11 Finished: 10
+2017-11-13 16:01:01,337 INFO o.a.j.r.Summariser: summary =    206 in 01:06:46 =    0.1/s Avg: 19434 Min:     0 Max: 53755 Err:   189 (91.75%)
+2017-11-13 16:02:04,364 INFO o.a.j.r.Summariser: summary +      4 in 00:01:03 =    0.1/s Avg: 15755 Min:     1 Max: 21008 Err:     3 (75.00%) Active: 1 Started: 11 Finished: 10
+2017-11-13 16:02:04,365 INFO o.a.j.r.Summariser: summary =    210 in 01:07:49 =    0.1/s Avg: 19364 Min:     0 Max: 53755 Err:   192 (91.43%)
+2017-11-13 16:03:28,395 INFO o.a.j.t.JMeterThread: Thread is done: listTagHeader标签分类列表 11-1
+2017-11-13 16:03:28,395 INFO o.a.j.t.JMeterThread: Thread finished: listTagHeader标签分类列表 11-1
+2017-11-13 16:03:28,396 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 12 : createTagHeader新增标签分类！
+2017-11-13 16:03:28,396 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group createTagHeader新增标签分类！.
+2017-11-13 16:03:28,396 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-11-13 16:03:28,396 INFO o.a.j.t.ThreadGroup: Starting thread group... number=12 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-11-13 16:03:28,398 INFO o.a.j.t.ThreadGroup: Started thread group number 12
+2017-11-13 16:03:28,398 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: createTagHeader新增标签分类！ to finish before starting next group
+2017-11-13 16:03:28,404 INFO o.a.j.t.JMeterThread: Thread started: createTagHeader新增标签分类！ 12-1
+2017-11-13 16:04:31,435 INFO o.a.j.r.Summariser: summary +      7 in 00:02:27 =    0.0/s Avg: 21006 Min: 21002 Max: 21017 Err:     7 (100.00%) Active: 1 Started: 12 Finished: 11
+2017-11-13 16:04:31,436 INFO o.a.j.r.Summariser: summary =    217 in 01:10:16 =    0.1/s Avg: 19417 Min:     0 Max: 53755 Err:   199 (91.71%)
+2017-11-13 16:05:34,457 INFO o.a.j.r.Summariser: summary +      3 in 00:01:03 =    0.0/s Avg: 21004 Min: 21003 Max: 21005 Err:     3 (100.00%) Active: 1 Started: 12 Finished: 11
+2017-11-13 16:05:34,458 INFO o.a.j.r.Summariser: summary =    220 in 01:11:19 =    0.1/s Avg: 19439 Min:     0 Max: 53755 Err:   202 (91.82%)
+2017-11-13 16:08:01,506 INFO o.a.j.r.Summariser: summary +      7 in 00:02:27 =    0.0/s Avg: 21005 Min: 21003 Max: 21008 Err:     7 (100.00%) Active: 1 Started: 12 Finished: 11
+2017-11-13 16:08:01,507 INFO o.a.j.r.Summariser: summary =    227 in 01:13:46 =    0.1/s Avg: 19487 Min:     0 Max: 53755 Err:   209 (92.07%)
+2017-11-13 16:08:43,534 INFO o.a.j.t.JMeterThread: Thread is done: createTagHeader新增标签分类！ 12-1
+2017-11-13 16:08:43,535 INFO o.a.j.t.JMeterThread: Thread finished: createTagHeader新增标签分类！ 12-1
+2017-11-13 16:08:43,536 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 13 : deleteTagHeader删除标签分类
+2017-11-13 16:08:43,536 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group deleteTagHeader删除标签分类.
+2017-11-13 16:08:43,536 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-11-13 16:08:43,536 INFO o.a.j.t.ThreadGroup: Starting thread group... number=13 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-11-13 16:08:43,538 INFO o.a.j.t.ThreadGroup: Started thread group number 13
+2017-11-13 16:08:43,538 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: deleteTagHeader删除标签分类 to finish before starting next group
+2017-11-13 16:08:43,544 INFO o.a.j.t.JMeterThread: Thread started: deleteTagHeader删除标签分类 13-1
+2017-11-13 16:09:04,559 INFO o.a.j.r.Summariser: summary +      3 in 00:01:03 =    0.0/s Avg: 21011 Min: 21009 Max: 21014 Err:     3 (100.00%) Active: 1 Started: 13 Finished: 12
+2017-11-13 16:09:04,560 INFO o.a.j.r.Summariser: summary =    230 in 01:14:49 =    0.1/s Avg: 19507 Min:     0 Max: 53755 Err:   212 (92.17%)
+2017-11-13 16:11:31,610 INFO o.a.j.r.Summariser: summary +      9 in 00:02:27 =    0.1/s Avg: 16337 Min:     0 Max: 21007 Err:     8 (88.89%) Active: 1 Started: 13 Finished: 12
+2017-11-13 16:11:31,612 INFO o.a.j.r.Summariser: summary =    239 in 01:17:16 =    0.1/s Avg: 19388 Min:     0 Max: 53755 Err:   220 (92.05%)
+2017-11-13 16:11:31,612 INFO o.a.j.t.JMeterThread: Thread is done: deleteTagHeader删除标签分类 13-1
+2017-11-13 16:11:31,613 INFO o.a.j.t.JMeterThread: Thread finished: deleteTagHeader删除标签分类 13-1
+2017-11-13 16:11:31,613 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 14 : subTagLineCount-获取标签分类下标签总数
+2017-11-13 16:11:31,614 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group subTagLineCount-获取标签分类下标签总数.
+2017-11-13 16:11:31,614 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-11-13 16:11:31,614 INFO o.a.j.t.ThreadGroup: Starting thread group... number=14 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-11-13 16:11:31,615 INFO o.a.j.t.ThreadGroup: Started thread group number 14
+2017-11-13 16:11:31,615 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: subTagLineCount-获取标签分类下标签总数 to finish before starting next group
+2017-11-13 16:11:31,620 INFO o.a.j.t.JMeterThread: Thread started: subTagLineCount-获取标签分类下标签总数 14-1
+2017-11-13 16:12:34,652 INFO o.a.j.r.Summariser: summary +      3 in 00:01:03 =    0.0/s Avg: 21008 Min: 21005 Max: 21014 Err:     3 (100.00%) Active: 1 Started: 14 Finished: 13
+2017-11-13 16:12:34,654 INFO o.a.j.r.Summariser: summary =    242 in 01:18:19 =    0.1/s Avg: 19408 Min:     0 Max: 53755 Err:   223 (92.15%)
+2017-11-13 16:14:19,692 INFO o.a.j.t.JMeterThread: Thread is done: subTagLineCount-获取标签分类下标签总数 14-1
+2017-11-13 16:14:19,693 INFO o.a.j.t.JMeterThread: Thread finished: subTagLineCount-获取标签分类下标签总数 14-1
+2017-11-13 16:14:19,694 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 15 : updateTagHeader-更新标签分类！
+2017-11-13 16:14:19,694 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group updateTagHeader-更新标签分类！.
+2017-11-13 16:14:19,694 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-11-13 16:14:19,695 INFO o.a.j.t.ThreadGroup: Starting thread group... number=15 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-11-13 16:14:19,697 INFO o.a.j.t.ThreadGroup: Started thread group number 15
+2017-11-13 16:14:19,697 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: updateTagHeader-更新标签分类！ to finish before starting next group
+2017-11-13 16:14:19,703 INFO o.a.j.t.JMeterThread: Thread started: updateTagHeader-更新标签分类！ 15-1
+2017-11-13 16:15:01,730 INFO o.a.j.r.Summariser: summary +      8 in 00:02:27 =    0.1/s Avg: 18380 Min:     0 Max: 21012 Err:     7 (87.50%) Active: 1 Started: 15 Finished: 14
+2017-11-13 16:15:01,731 INFO o.a.j.r.Summariser: summary =    250 in 01:20:46 =    0.1/s Avg: 19375 Min:     0 Max: 53755 Err:   230 (92.00%)
+2017-11-13 16:16:04,754 INFO o.a.j.r.Summariser: summary +      3 in 00:01:03 =    0.0/s Avg: 21005 Min: 21005 Max: 21006 Err:     3 (100.00%) Active: 1 Started: 15 Finished: 14
+2017-11-13 16:16:04,755 INFO o.a.j.r.Summariser: summary =    253 in 01:21:49 =    0.1/s Avg: 19394 Min:     0 Max: 53755 Err:   233 (92.09%)
+2017-11-13 16:18:31,809 INFO o.a.j.r.Summariser: summary +      7 in 00:02:27 =    0.0/s Avg: 21005 Min: 21003 Max: 21008 Err:     7 (100.00%) Active: 1 Started: 15 Finished: 14
+2017-11-13 16:18:31,810 INFO o.a.j.r.Summariser: summary =    260 in 01:24:16 =    0.1/s Avg: 19438 Min:     0 Max: 53755 Err:   240 (92.31%)
+2017-11-13 16:18:31,811 INFO o.a.j.t.JMeterThread: Thread is done: updateTagHeader-更新标签分类！ 15-1
+2017-11-13 16:18:31,811 INFO o.a.j.t.JMeterThread: Thread finished: updateTagHeader-更新标签分类！ 15-1
+2017-11-13 16:18:31,811 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 16 : createTagLine-新增标签
+2017-11-13 16:18:31,811 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group createTagLine-新增标签.
+2017-11-13 16:18:31,811 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-11-13 16:18:31,811 INFO o.a.j.t.ThreadGroup: Starting thread group... number=16 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-11-13 16:18:31,813 INFO o.a.j.t.ThreadGroup: Started thread group number 16
+2017-11-13 16:18:31,813 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: createTagLine-新增标签 to finish before starting next group
+2017-11-13 16:18:31,821 INFO o.a.j.t.JMeterThread: Thread started: createTagLine-新增标签 16-1
+2017-11-13 16:19:34,852 INFO o.a.j.r.Summariser: summary +      3 in 00:01:03 =    0.0/s Avg: 21008 Min: 21005 Max: 21013 Err:     3 (100.00%) Active: 1 Started: 16 Finished: 15
+2017-11-13 16:19:34,853 INFO o.a.j.r.Summariser: summary =    263 in 01:25:19 =    0.1/s Avg: 19455 Min:     0 Max: 53755 Err:   243 (92.40%)
+2017-11-13 16:22:01,900 INFO o.a.j.r.Summariser: summary +      7 in 00:02:27 =    0.0/s Avg: 21005 Min: 21003 Max: 21006 Err:     7 (100.00%) Active: 1 Started: 16 Finished: 15
+2017-11-13 16:22:01,902 INFO o.a.j.r.Summariser: summary =    270 in 01:27:46 =    0.1/s Avg: 19496 Min:     0 Max: 53755 Err:   250 (92.59%)
+2017-11-13 16:23:04,938 INFO o.a.j.r.Summariser: summary +      3 in 00:01:03 =    0.0/s Avg: 21010 Min: 21003 Max: 21022 Err:     3 (100.00%) Active: 1 Started: 16 Finished: 15
+2017-11-13 16:23:04,939 INFO o.a.j.r.Summariser: summary =    273 in 01:28:50 =    0.1/s Avg: 19512 Min:     0 Max: 53755 Err:   253 (92.67%)
+2017-11-13 16:25:31,992 INFO o.a.j.r.Summariser: summary +      7 in 00:02:27 =    0.0/s Avg: 21006 Min: 21004 Max: 21011 Err:     7 (100.00%) Active: 1 Started: 16 Finished: 15
+2017-11-13 16:25:31,994 INFO o.a.j.r.Summariser: summary =    280 in 01:31:17 =    0.1/s Avg: 19550 Min:     0 Max: 53755 Err:   260 (92.86%)
+2017-11-13 16:26:35,015 INFO o.a.j.r.Summariser: summary +      3 in 00:01:03 =    0.0/s Avg: 21005 Min: 21004 Max: 21007 Err:     3 (100.00%) Active: 1 Started: 16 Finished: 15
+2017-11-13 16:26:35,017 INFO o.a.j.r.Summariser: summary =    283 in 01:32:20 =    0.1/s Avg: 19565 Min:     0 Max: 53755 Err:   263 (92.93%)
+2017-11-13 16:28:41,064 INFO o.a.j.t.JMeterThread: Thread is done: createTagLine-新增标签 16-1
+2017-11-13 16:28:41,064 INFO o.a.j.t.JMeterThread: Thread finished: createTagLine-新增标签 16-1
+2017-11-13 16:28:41,065 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 17 : deleteTagLine-删除标签
+2017-11-13 16:28:41,065 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group deleteTagLine-删除标签.
+2017-11-13 16:28:41,065 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-11-13 16:28:41,066 INFO o.a.j.t.ThreadGroup: Starting thread group... number=17 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-11-13 16:28:41,067 INFO o.a.j.t.ThreadGroup: Started thread group number 17
+2017-11-13 16:28:41,067 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: deleteTagLine-删除标签 to finish before starting next group
+2017-11-13 16:28:41,072 INFO o.a.j.t.JMeterThread: Thread started: deleteTagLine-删除标签 17-1
+2017-11-13 16:29:02,084 INFO o.a.j.r.Summariser: summary +      7 in 00:02:27 =    0.0/s Avg: 21006 Min: 21005 Max: 21008 Err:     7 (100.00%) Active: 1 Started: 17 Finished: 16
+2017-11-13 16:29:02,085 INFO o.a.j.r.Summariser: summary =    290 in 01:34:47 =    0.1/s Avg: 19600 Min:     0 Max: 53755 Err:   270 (93.10%)
+2017-11-13 16:30:05,111 INFO o.a.j.r.Summariser: summary +      5 in 00:01:03 =    0.1/s Avg: 12603 Min:     0 Max: 21006 Err:     4 (80.00%) Active: 1 Started: 17 Finished: 16
+2017-11-13 16:30:05,113 INFO o.a.j.r.Summariser: summary =    295 in 01:35:50 =    0.1/s Avg: 19481 Min:     0 Max: 53755 Err:   274 (92.88%)
+2017-11-13 16:31:08,136 INFO o.a.j.t.JMeterThread: Thread is done: deleteTagLine-删除标签 17-1
+2017-11-13 16:31:08,137 INFO o.a.j.t.JMeterThread: Thread finished: deleteTagLine-删除标签 17-1
+2017-11-13 16:31:08,137 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 18 : listTagLine获取标签分类下的标签列表
+2017-11-13 16:31:08,138 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group listTagLine获取标签分类下的标签列表.
+2017-11-13 16:31:08,138 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-11-13 16:31:08,138 INFO o.a.j.t.ThreadGroup: Starting thread group... number=18 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-11-13 16:31:08,146 INFO o.a.j.t.ThreadGroup: Started thread group number 18
+2017-11-13 16:31:08,147 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: listTagLine获取标签分类下的标签列表 to finish before starting next group
+2017-11-13 16:31:08,153 INFO o.a.j.t.JMeterThread: Thread started: listTagLine获取标签分类下的标签列表 18-1
+2017-11-13 16:32:32,199 INFO o.a.j.r.Summariser: summary +      8 in 00:02:27 =    0.1/s Avg: 18381 Min:     1 Max: 21021 Err:     7 (87.50%) Active: 1 Started: 18 Finished: 17
+2017-11-13 16:32:32,200 INFO o.a.j.r.Summariser: summary =    303 in 01:38:17 =    0.1/s Avg: 19452 Min:     0 Max: 53755 Err:   281 (92.74%)
+2017-11-13 16:33:35,229 INFO o.a.j.r.Summariser: summary +      3 in 00:01:03 =    0.0/s Avg: 21007 Min: 21006 Max: 21009 Err:     3 (100.00%) Active: 1 Started: 18 Finished: 17
+2017-11-13 16:33:35,230 INFO o.a.j.r.Summariser: summary =    306 in 01:39:20 =    0.1/s Avg: 19467 Min:     0 Max: 53755 Err:   284 (92.81%)
+2017-11-13 16:36:02,275 INFO o.a.j.r.Summariser: summary +      8 in 00:02:27 =    0.1/s Avg: 18379 Min:     0 Max: 21007 Err:     7 (87.50%) Active: 1 Started: 18 Finished: 17
+2017-11-13 16:36:02,276 INFO o.a.j.r.Summariser: summary =    314 in 01:41:47 =    0.1/s Avg: 19440 Min:     0 Max: 53755 Err:   291 (92.68%)
+2017-11-13 16:37:05,298 INFO o.a.j.r.Summariser: summary +      3 in 00:01:03 =    0.0/s Avg: 21005 Min: 21005 Max: 21006 Err:     3 (100.00%) Active: 1 Started: 18 Finished: 17
+2017-11-13 16:37:05,299 INFO o.a.j.r.Summariser: summary =    317 in 01:42:50 =    0.1/s Avg: 19454 Min:     0 Max: 53755 Err:   294 (92.74%)
+2017-11-13 16:39:11,344 INFO o.a.j.t.JMeterThread: Thread is done: listTagLine获取标签分类下的标签列表 18-1
+2017-11-13 16:39:11,344 INFO o.a.j.t.JMeterThread: Thread finished: listTagLine获取标签分类下的标签列表 18-1
+2017-11-13 16:39:11,345 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 19 : relQuestionCount 获取标签关联题量
+2017-11-13 16:39:11,346 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group relQuestionCount 获取标签关联题量.
+2017-11-13 16:39:11,346 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-11-13 16:39:11,346 INFO o.a.j.t.ThreadGroup: Starting thread group... number=19 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-11-13 16:39:11,348 INFO o.a.j.t.ThreadGroup: Started thread group number 19
+2017-11-13 16:39:11,348 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: relQuestionCount 获取标签关联题量 to finish before starting next group
+2017-11-13 16:39:11,352 INFO o.a.j.t.JMeterThread: Thread started: relQuestionCount 获取标签关联题量 19-1
+2017-11-13 16:39:32,366 INFO o.a.j.r.Summariser: summary +      8 in 00:02:27 =    0.1/s Avg: 18380 Min:     1 Max: 21008 Err:     7 (87.50%) Active: 1 Started: 19 Finished: 18
+2017-11-13 16:39:32,367 INFO o.a.j.r.Summariser: summary =    325 in 01:45:17 =    0.1/s Avg: 19428 Min:     0 Max: 53755 Err:   301 (92.62%)
+2017-11-13 16:40:35,388 INFO o.a.j.r.Summariser: summary +      4 in 00:01:03 =    0.1/s Avg: 15753 Min:     0 Max: 21007 Err:     3 (75.00%) Active: 1 Started: 19 Finished: 18
+2017-11-13 16:40:35,390 INFO o.a.j.r.Summariser: summary =    329 in 01:46:20 =    0.1/s Avg: 19383 Min:     0 Max: 53755 Err:   304 (92.40%)
+2017-11-13 16:41:59,412 INFO o.a.j.t.JMeterThread: Thread is done: relQuestionCount 获取标签关联题量 19-1
+2017-11-13 16:41:59,413 INFO o.a.j.t.JMeterThread: Thread finished: relQuestionCount 获取标签关联题量 19-1
+2017-11-13 16:41:59,413 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 20 : updateTagLine 更新标签
+2017-11-13 16:41:59,413 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group updateTagLine 更新标签.
+2017-11-13 16:41:59,413 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-11-13 16:41:59,414 INFO o.a.j.t.ThreadGroup: Starting thread group... number=20 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-11-13 16:41:59,417 INFO o.a.j.t.ThreadGroup: Started thread group number 20
+2017-11-13 16:41:59,417 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: updateTagLine 更新标签 to finish before starting next group
+2017-11-13 16:41:59,427 INFO o.a.j.t.JMeterThread: Thread started: updateTagLine 更新标签 20-1
+2017-11-13 16:43:02,455 INFO o.a.j.r.Summariser: summary +      7 in 00:02:27 =    0.0/s Avg: 21005 Min: 21002 Max: 21011 Err:     7 (100.00%) Active: 1 Started: 20 Finished: 19
+2017-11-13 16:43:02,456 INFO o.a.j.r.Summariser: summary =    336 in 01:48:47 =    0.1/s Avg: 19417 Min:     0 Max: 53755 Err:   311 (92.56%)
+2017-11-13 16:44:05,475 INFO o.a.j.r.Summariser: summary +      3 in 00:01:03 =    0.0/s Avg: 21005 Min: 21003 Max: 21008 Err:     3 (100.00%) Active: 1 Started: 20 Finished: 19
+2017-11-13 16:44:05,477 INFO o.a.j.r.Summariser: summary =    339 in 01:49:50 =    0.1/s Avg: 19431 Min:     0 Max: 53755 Err:   314 (92.63%)
+2017-11-13 16:46:32,533 INFO o.a.j.r.Summariser: summary +      7 in 00:02:27 =    0.0/s Avg: 21005 Min: 21004 Max: 21011 Err:     7 (100.00%) Active: 1 Started: 20 Finished: 19
+2017-11-13 16:46:32,534 INFO o.a.j.r.Summariser: summary =    346 in 01:52:17 =    0.1/s Avg: 19463 Min:     0 Max: 53755 Err:   321 (92.77%)
+2017-11-13 16:47:35,558 INFO o.a.j.r.Summariser: summary +      3 in 00:01:03 =    0.0/s Avg: 21006 Min: 21005 Max: 21008 Err:     3 (100.00%) Active: 1 Started: 20 Finished: 19
+2017-11-13 16:47:35,559 INFO o.a.j.r.Summariser: summary =    349 in 01:53:20 =    0.1/s Avg: 19476 Min:     0 Max: 53755 Err:   324 (92.84%)
+2017-11-13 16:50:02,601 INFO o.a.j.r.Summariser: summary +      7 in 00:02:27 =    0.0/s Avg: 21004 Min: 21003 Max: 21007 Err:     7 (100.00%) Active: 1 Started: 20 Finished: 19
+2017-11-13 16:50:02,602 INFO o.a.j.r.Summariser: summary =    356 in 01:55:47 =    0.1/s Avg: 19506 Min:     0 Max: 53755 Err:   331 (92.98%)
+2017-11-13 16:51:05,622 INFO o.a.j.r.Summariser: summary +      3 in 00:01:03 =    0.0/s Avg: 21005 Min: 21003 Max: 21006 Err:     3 (100.00%) Active: 1 Started: 20 Finished: 19
+2017-11-13 16:51:05,623 INFO o.a.j.r.Summariser: summary =    359 in 01:56:50 =    0.1/s Avg: 19519 Min:     0 Max: 53755 Err:   334 (93.04%)
+2017-11-13 16:53:32,690 INFO o.a.j.r.Summariser: summary +      7 in 00:02:27 =    0.0/s Avg: 21008 Min: 21005 Max: 21018 Err:     7 (100.00%) Active: 1 Started: 20 Finished: 19
+2017-11-13 16:53:32,690 INFO o.a.j.r.Summariser: summary =    366 in 01:59:17 =    0.1/s Avg: 19547 Min:     0 Max: 53755 Err:   341 (93.17%)
+2017-11-13 16:54:35,712 INFO o.a.j.r.Summariser: summary +      3 in 00:01:03 =    0.0/s Avg: 21006 Min: 21003 Max: 21008 Err:     3 (100.00%) Active: 1 Started: 20 Finished: 19
+2017-11-13 16:54:35,713 INFO o.a.j.r.Summariser: summary =    369 in 02:00:20 =    0.1/s Avg: 19559 Min:     0 Max: 53755 Err:   344 (93.22%)
+2017-11-13 16:54:35,714 INFO o.a.j.t.JMeterThread: Thread is done: updateTagLine 更新标签 20-1
+2017-11-13 16:54:35,714 INFO o.a.j.t.JMeterThread: Thread finished: updateTagLine 更新标签 20-1
+2017-11-13 16:54:35,715 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 21 : exportVideo导出听力视频
+2017-11-13 16:54:35,715 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group exportVideo导出听力视频.
+2017-11-13 16:54:35,715 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-11-13 16:54:35,715 INFO o.a.j.t.ThreadGroup: Starting thread group... number=21 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-11-13 16:54:35,716 INFO o.a.j.t.ThreadGroup: Started thread group number 21
+2017-11-13 16:54:35,716 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: exportVideo导出听力视频 to finish before starting next group
+2017-11-13 16:54:35,722 INFO o.a.j.t.JMeterThread: Thread started: exportVideo导出听力视频 21-1
+2017-11-13 16:57:02,790 INFO o.a.j.r.Summariser: summary +      8 in 00:02:27 =    0.1/s Avg: 18381 Min:     1 Max: 21013 Err:     7 (87.50%) Active: 1 Started: 21 Finished: 20
+2017-11-13 16:57:02,791 INFO o.a.j.r.Summariser: summary =    377 in 02:02:47 =    0.1/s Avg: 19534 Min:     0 Max: 53755 Err:   351 (93.10%)
+2017-11-13 16:57:23,799 INFO o.a.j.t.JMeterThread: Thread is done: exportVideo导出听力视频 21-1
+2017-11-13 16:57:23,799 INFO o.a.j.t.JMeterThread: Thread finished: exportVideo导出听力视频 21-1
+2017-11-13 16:57:23,801 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 22 : queryVideo查询听力视频素材
+2017-11-13 16:57:23,801 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group queryVideo查询听力视频素材.
+2017-11-13 16:57:23,801 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-11-13 16:57:23,802 INFO o.a.j.t.ThreadGroup: Starting thread group... number=22 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-11-13 16:57:23,805 INFO o.a.j.t.ThreadGroup: Started thread group number 22
+2017-11-13 16:57:23,805 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: queryVideo查询听力视频素材 to finish before starting next group
+2017-11-13 16:57:23,810 INFO o.a.j.t.JMeterThread: Thread started: queryVideo查询听力视频素材 22-1
+2017-11-13 16:58:05,832 INFO o.a.j.r.Summariser: summary +      3 in 00:01:03 =    0.0/s Avg: 21008 Min: 21005 Max: 21010 Err:     3 (100.00%) Active: 1 Started: 22 Finished: 21
+2017-11-13 16:58:05,833 INFO o.a.j.r.Summariser: summary =    380 in 02:03:50 =    0.1/s Avg: 19546 Min:     0 Max: 53755 Err:   354 (93.16%)
+2017-11-13 17:00:32,892 INFO o.a.j.r.Summariser: summary +      8 in 00:02:27 =    0.1/s Avg: 18379 Min:     0 Max: 21008 Err:     7 (87.50%) Active: 1 Started: 22 Finished: 21
+2017-11-13 17:00:32,893 INFO o.a.j.r.Summariser: summary =    388 in 02:06:17 =    0.1/s Avg: 19522 Min:     0 Max: 53755 Err:   361 (93.04%)
+2017-11-13 17:01:35,912 INFO o.a.j.r.Summariser: summary +      4 in 00:01:03 =    0.1/s Avg: 15753 Min:     1 Max: 21005 Err:     3 (75.00%) Active: 1 Started: 22 Finished: 21
+2017-11-13 17:01:35,913 INFO o.a.j.r.Summariser: summary =    392 in 02:07:21 =    0.1/s Avg: 19483 Min:     0 Max: 53755 Err:   364 (92.86%)
+2017-11-13 17:04:02,962 INFO o.a.j.r.Summariser: summary +      8 in 00:02:27 =    0.1/s Avg: 18379 Min:     0 Max: 21007 Err:     7 (87.50%) Active: 1 Started: 22 Finished: 21
+2017-11-13 17:04:02,965 INFO o.a.j.r.Summariser: summary =    400 in 02:09:48 =    0.1/s Avg: 19461 Min:     0 Max: 53755 Err:   371 (92.75%)
+2017-11-13 17:05:05,986 INFO o.a.j.r.Summariser: summary +      3 in 00:01:03 =    0.0/s Avg: 21005 Min: 21004 Max: 21006 Err:     3 (100.00%) Active: 1 Started: 22 Finished: 21
+2017-11-13 17:05:05,988 INFO o.a.j.r.Summariser: summary =    403 in 02:10:51 =    0.1/s Avg: 19473 Min:     0 Max: 53755 Err:   374 (92.80%)
+2017-11-13 17:05:26,995 INFO o.a.j.t.JMeterThread: Thread is done: queryVideo查询听力视频素材 22-1
+2017-11-13 17:05:26,995 INFO o.a.j.t.JMeterThread: Thread finished: queryVideo查询听力视频素材 22-1
+2017-11-13 17:05:26,996 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 23 : exportDistrictQuestionType-地域题型
+2017-11-13 17:05:26,996 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group exportDistrictQuestionType-地域题型.
+2017-11-13 17:05:26,997 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-11-13 17:05:26,997 INFO o.a.j.t.ThreadGroup: Starting thread group... number=23 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-11-13 17:05:26,999 INFO o.a.j.t.ThreadGroup: Started thread group number 23
+2017-11-13 17:05:27,000 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: exportDistrictQuestionType-地域题型 to finish before starting next group
+2017-11-13 17:05:27,011 INFO o.a.j.t.JMeterThread: Thread started: exportDistrictQuestionType-地域题型 23-1
+2017-11-13 17:06:30,042 INFO o.a.j.r.Summariser: summary +      4 in 00:01:24 =    0.0/s Avg: 21007 Min: 21004 Max: 21014 Err:     4 (100.00%) Active: 1 Started: 23 Finished: 22
+2017-11-13 17:06:30,043 INFO o.a.j.r.Summariser: summary =    407 in 02:12:15 =    0.1/s Avg: 19488 Min:     0 Max: 53755 Err:   378 (92.87%)
+2017-11-13 17:07:33,063 INFO o.a.j.r.Summariser: summary +      4 in 00:01:03 =    0.1/s Avg: 15752 Min:     0 Max: 21004 Err:     3 (75.00%) Active: 1 Started: 23 Finished: 22
+2017-11-13 17:07:33,064 INFO o.a.j.r.Summariser: summary =    411 in 02:13:18 =    0.1/s Avg: 19451 Min:     0 Max: 53755 Err:   381 (92.70%)
+2017-11-13 17:10:00,120 INFO o.a.j.r.Summariser: summary +      8 in 00:02:27 =    0.1/s Avg: 18380 Min:     1 Max: 21010 Err:     7 (87.50%) Active: 1 Started: 23 Finished: 22
+2017-11-13 17:10:00,121 INFO o.a.j.r.Summariser: summary =    419 in 02:15:45 =    0.1/s Avg: 19431 Min:     0 Max: 53755 Err:   388 (92.60%)
+2017-11-13 17:10:21,128 INFO o.a.j.t.JMeterThread: Thread is done: exportDistrictQuestionType-地域题型 23-1
+2017-11-13 17:10:21,128 INFO o.a.j.t.JMeterThread: Thread finished: exportDistrictQuestionType-地域题型 23-1
+2017-11-13 17:10:21,128 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 24 : queryDistrictCity-查询市
+2017-11-13 17:10:21,129 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group queryDistrictCity-查询市.
+2017-11-13 17:10:21,129 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-11-13 17:10:21,129 INFO o.a.j.t.ThreadGroup: Starting thread group... number=24 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-11-13 17:10:21,129 INFO o.a.j.t.ThreadGroup: Started thread group number 24
+2017-11-13 17:10:21,129 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: queryDistrictCity-查询市 to finish before starting next group
+2017-11-13 17:10:21,133 INFO o.a.j.t.JMeterThread: Thread started: queryDistrictCity-查询市 24-1
+2017-11-13 17:11:03,164 INFO o.a.j.r.Summariser: summary +      3 in 00:01:03 =    0.0/s Avg: 21011 Min: 21003 Max: 21027 Err:     3 (100.00%) Active: 1 Started: 24 Finished: 23
+2017-11-13 17:11:03,165 INFO o.a.j.r.Summariser: summary =    422 in 02:16:48 =    0.1/s Avg: 19442 Min:     0 Max: 53755 Err:   391 (92.65%)
+2017-11-13 17:13:09,205 INFO o.a.j.t.JMeterThread: Thread is done: queryDistrictCity-查询市 24-1
+2017-11-13 17:13:09,206 INFO o.a.j.t.JMeterThread: Thread finished: queryDistrictCity-查询市 24-1
+2017-11-13 17:13:09,208 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 25 : queryDistrictQuestionType-查询市下面的题型
+2017-11-13 17:13:09,208 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group queryDistrictQuestionType-查询市下面的题型.
+2017-11-13 17:13:09,208 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-11-13 17:13:09,209 INFO o.a.j.t.ThreadGroup: Starting thread group... number=25 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-11-13 17:13:09,211 INFO o.a.j.t.ThreadGroup: Started thread group number 25
+2017-11-13 17:13:09,211 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: queryDistrictQuestionType-查询市下面的题型 to finish before starting next group
+2017-11-13 17:13:09,215 INFO o.a.j.t.JMeterThread: Thread started: queryDistrictQuestionType-查询市下面的题型 25-1
+2017-11-13 17:13:30,232 INFO o.a.j.r.Summariser: summary +      8 in 00:02:27 =    0.1/s Avg: 18380 Min:     1 Max: 21013 Err:     7 (87.50%) Active: 1 Started: 25 Finished: 24
+2017-11-13 17:13:30,233 INFO o.a.j.r.Summariser: summary =    430 in 02:19:15 =    0.1/s Avg: 19422 Min:     0 Max: 53755 Err:   398 (92.56%)
+2017-11-13 17:14:33,252 INFO o.a.j.r.Summariser: summary +      4 in 00:01:03 =    0.1/s Avg: 15753 Min:     0 Max: 21006 Err:     3 (75.00%) Active: 1 Started: 25 Finished: 24
+2017-11-13 17:14:33,253 INFO o.a.j.r.Summariser: summary =    434 in 02:20:18 =    0.1/s Avg: 19389 Min:     0 Max: 53755 Err:   401 (92.40%)
+2017-11-13 17:15:57,279 INFO o.a.j.t.JMeterThread: Thread is done: queryDistrictQuestionType-查询市下面的题型 25-1
+2017-11-13 17:15:57,279 INFO o.a.j.t.JMeterThread: Thread finished: queryDistrictQuestionType-查询市下面的题型 25-1
+2017-11-13 17:15:57,279 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 26 : saveDistrictQuestionType-保存题型
+2017-11-13 17:15:57,280 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group saveDistrictQuestionType-保存题型.
+2017-11-13 17:15:57,280 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-11-13 17:15:57,280 INFO o.a.j.t.ThreadGroup: Starting thread group... number=26 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-11-13 17:15:57,281 INFO o.a.j.t.ThreadGroup: Started thread group number 26
+2017-11-13 17:15:57,281 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2017-11-13 17:15:57,287 INFO o.a.j.t.JMeterThread: Thread started: saveDistrictQuestionType-保存题型 26-1
+2017-11-13 17:17:00,317 INFO o.a.j.r.Summariser: summary +      7 in 00:02:27 =    0.0/s Avg: 21005 Min: 21003 Max: 21011 Err:     7 (100.00%) Active: 1 Started: 26 Finished: 25
+2017-11-13 17:17:00,318 INFO o.a.j.r.Summariser: summary =    441 in 02:22:45 =    0.1/s Avg: 19414 Min:     0 Max: 53755 Err:   408 (92.52%)
+2017-11-13 17:18:03,340 INFO o.a.j.r.Summariser: summary +      3 in 00:01:03 =    0.0/s Avg: 21005 Min: 21004 Max: 21006 Err:     3 (100.00%) Active: 1 Started: 26 Finished: 25
+2017-11-13 17:18:03,340 INFO o.a.j.r.Summariser: summary =    444 in 02:23:48 =    0.1/s Avg: 19425 Min:     0 Max: 53755 Err:   411 (92.57%)
+2017-11-13 17:20:30,387 INFO o.a.j.r.Summariser: summary +      7 in 00:02:27 =    0.0/s Avg: 21005 Min: 21003 Max: 21007 Err:     7 (100.00%) Active: 1 Started: 26 Finished: 25
+2017-11-13 17:20:30,388 INFO o.a.j.r.Summariser: summary =    451 in 02:26:15 =    0.1/s Avg: 19450 Min:     0 Max: 53755 Err:   418 (92.68%)
+2017-11-13 17:21:33,410 INFO o.a.j.r.Summariser: summary +      3 in 00:01:03 =    0.0/s Avg: 21005 Min: 21005 Max: 21006 Err:     3 (100.00%) Active: 1 Started: 26 Finished: 25
+2017-11-13 17:21:33,411 INFO o.a.j.r.Summariser: summary =    454 in 02:27:18 =    0.1/s Avg: 19460 Min:     0 Max: 53755 Err:   421 (92.73%)
+2017-11-13 17:24:00,457 INFO o.a.j.r.Summariser: summary +      7 in 00:02:27 =    0.0/s Avg: 21005 Min: 21003 Max: 21007 Err:     7 (100.00%) Active: 1 Started: 26 Finished: 25
+2017-11-13 17:24:00,458 INFO o.a.j.r.Summariser: summary =    461 in 02:29:45 =    0.1/s Avg: 19483 Min:     0 Max: 53755 Err:   428 (92.84%)
+2017-11-13 17:24:00,459 INFO o.a.j.t.JMeterThread: Thread is done: saveDistrictQuestionType-保存题型 26-1
+2017-11-13 17:24:00,459 INFO o.a.j.t.JMeterThread: Thread finished: saveDistrictQuestionType-保存题型 26-1
+2017-11-13 17:24:00,460 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2017-11-13 17:24:00,462 INFO o.a.j.r.Summariser: summary =    461 in 02:29:45 =    0.1/s Avg: 19483 Min:     0 Max: 53755 Err:   428 (92.84%)

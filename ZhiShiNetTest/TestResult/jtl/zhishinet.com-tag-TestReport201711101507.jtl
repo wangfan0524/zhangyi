@@ -1,0 +1,1508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="1788" it="0" lt="1776" ts="1510297682048" s="true" lb="getToken" rc="200" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="1570" sby="285" ng="1" na="1">
+  <sample t="1" it="0" lt="0" ts="1510297683835" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1206" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="484" it="0" lt="483" ts="1510297683856" s="false" lb="queryArticle正确性校验（type=Reading阅读）" rc="500" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="3270" sby="331" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/</failureMessage>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1510297684339" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1488" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;000000&quot;,&quot;message&quot;:&quot;\n### Error querying database.  Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n### The error may exist in URL [jar:file:/app.jar!/BOOT-INF/classes!/com/hand/zhishinet/management/tag/mapper/HzsTagMaterialMapper.xml]\n### The error may involve defaultParameterMap\n### The error occurred while setting parameters\n### SQL: SELECT count(0) FROM (SELECT DISTINCT UBArticle.ArticleId, UBArticle.ArticleTypeCode AS \&quot;type\&quot;, UBArticle.Title AS title, UBArticle.WordRangeId AS wordRangeId, UBArticleLanguage.ArticleContent AS content, UnitId AS theme, DifficultyId AS difficulty, WordCount AS wordCount, UBUser.FullName AS createUser FROM UBArticle INNER JOIN UBArticleLanguage ON UBArticle.articleId = UBArticleLanguage.articleId AND UBArticleLanguage.languageId = 3 LEFT JOIN UBUser ON UBArticle.CreatedBy = UBUser.UBUserID INNER JOIN HzsQuestionTag ON HzsQuestionTag.SourceId = UBArticle.ArticleId AND HzsQuestionTag.sourceTypeId = 2 AND HzsQuestionTag.isDeleted = 0 WHERE UBArticle.TenantId = 13 AND UBArticle.IsDeleted = 0 AND UBArticle.WordRangeId = ? AND UBArticle.ArticleTypeCode = ? AND UnitId = ? AND DifficultyId = ? AND HzsQuestionTag.TagLineId IN (10007)) table_count\n### Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n; bad SQL grammar []; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.&quot;}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Reading&amp;theme=1&amp;difficulty=1&amp;tags=10007&amp;page=1&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="588" it="0" lt="587" ts="1510297684350" s="false" lb="queryArticle正确性校验（type=Listening听力）" rc="500" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="3275" sby="333" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/</failureMessage>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297684938" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1493" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;000000&quot;,&quot;message&quot;:&quot;\n### Error querying database.  Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n### The error may exist in URL [jar:file:/app.jar!/BOOT-INF/classes!/com/hand/zhishinet/management/tag/mapper/HzsTagMaterialMapper.xml]\n### The error may involve defaultParameterMap\n### The error occurred while setting parameters\n### SQL: SELECT count(0) FROM (SELECT DISTINCT UBArticle.ArticleId, UBArticle.ArticleTypeCode AS \&quot;type\&quot;, UBArticle.Title AS title, UBArticle.WordRangeId AS wordRangeId, UBArticleLanguage.ArticleContent AS content, UnitId AS theme, DifficultyId AS difficulty, WordCount AS wordCount, UBUser.FullName AS createUser FROM UBArticle INNER JOIN UBArticleLanguage ON UBArticle.articleId = UBArticleLanguage.articleId AND UBArticleLanguage.languageId = 3 LEFT JOIN UBUser ON UBArticle.CreatedBy = UBUser.UBUserID INNER JOIN HzsQuestionTag ON HzsQuestionTag.SourceId = UBArticle.ArticleId AND HzsQuestionTag.sourceTypeId = 2 AND HzsQuestionTag.isDeleted = 0 WHERE UBArticle.TenantId = 13 AND UBArticle.IsDeleted = 0 AND UBArticle.WordRangeId = ? AND UBArticle.ArticleTypeCode = ? AND UnitId = ? AND DifficultyId = ? AND HzsQuestionTag.TagLineId IN (10007)) table_count\n### Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n; bad SQL grammar []; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.&quot;}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=10007&amp;page=1&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="172" it="0" lt="171" ts="1510297684940" s="false" lb="queryArticle-wordRange为空" rc="500" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="3226" sby="332" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/</failureMessage>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297685112" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1474" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;000000&quot;,&quot;message&quot;:&quot;\n### Error querying database.  Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n### The error may exist in URL [jar:file:/app.jar!/BOOT-INF/classes!/com/hand/zhishinet/management/tag/mapper/HzsTagMaterialMapper.xml]\n### The error may involve defaultParameterMap\n### The error occurred while setting parameters\n### SQL: SELECT count(0) FROM (SELECT DISTINCT UBArticle.ArticleId, UBArticle.ArticleTypeCode AS \&quot;type\&quot;, UBArticle.Title AS title, UBArticle.WordRangeId AS wordRangeId, UBArticleLanguage.ArticleContent AS content, UnitId AS theme, DifficultyId AS difficulty, WordCount AS wordCount, UBUser.FullName AS createUser FROM UBArticle INNER JOIN UBArticleLanguage ON UBArticle.articleId = UBArticleLanguage.articleId AND UBArticleLanguage.languageId = 3 LEFT JOIN UBUser ON UBArticle.CreatedBy = UBUser.UBUserID INNER JOIN HzsQuestionTag ON HzsQuestionTag.SourceId = UBArticle.ArticleId AND HzsQuestionTag.sourceTypeId = 2 AND HzsQuestionTag.isDeleted = 0 WHERE UBArticle.TenantId = 13 AND UBArticle.IsDeleted = 0 AND UBArticle.ArticleTypeCode = ? AND UnitId = ? AND DifficultyId = ? AND HzsQuestionTag.TagLineId IN (10007)) table_count\n### Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n; bad SQL grammar []; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.&quot;}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=10007&amp;page=1&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="0" ts="1510297685116" s="true" lb="queryArticle-wordRange为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 79: https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=              &amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=10007&amp;page=1&amp;pageSize=10" tn="queryArticle查询文章素材 1-1" dt="text" by="2659" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1510297685119" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1490" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=              &amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=10007&amp;page=1&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="171" it="0" lt="170" ts="1510297685126" s="true" lb="queryArticle-wordRange为a-z的字符串" rc="500" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="1985" sby="336" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1510297685296" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1486" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=word&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=10007&amp;page=1&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="154" it="0" lt="153" ts="1510297685300" s="true" lb="queryArticle-wordRange为中文" rc="500" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="1990" sby="368" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1510297685453" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1483" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=字数区间&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=10007&amp;page=1&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="244" it="0" lt="243" ts="1510297685456" s="false" lb="queryArticle-wordRange为特殊符号" rc="500" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="3232" sby="333" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/</failureMessage>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1510297685699" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1480" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;000000&quot;,&quot;message&quot;:&quot;\n### Error querying database.  Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n### The error may exist in URL [jar:file:/app.jar!/BOOT-INF/classes!/com/hand/zhishinet/management/tag/mapper/HzsTagMaterialMapper.xml]\n### The error may involve defaultParameterMap\n### The error occurred while setting parameters\n### SQL: SELECT count(0) FROM (SELECT DISTINCT UBArticle.ArticleId, UBArticle.ArticleTypeCode AS \&quot;type\&quot;, UBArticle.Title AS title, UBArticle.WordRangeId AS wordRangeId, UBArticleLanguage.ArticleContent AS content, UnitId AS theme, DifficultyId AS difficulty, WordCount AS wordCount, UBUser.FullName AS createUser FROM UBArticle INNER JOIN UBArticleLanguage ON UBArticle.articleId = UBArticleLanguage.articleId AND UBArticleLanguage.languageId = 3 LEFT JOIN UBUser ON UBArticle.CreatedBy = UBUser.UBUserID INNER JOIN HzsQuestionTag ON HzsQuestionTag.SourceId = UBArticle.ArticleId AND HzsQuestionTag.sourceTypeId = 2 AND HzsQuestionTag.isDeleted = 0 WHERE UBArticle.TenantId = 13 AND UBArticle.IsDeleted = 0 AND UBArticle.ArticleTypeCode = ? AND UnitId = ? AND DifficultyId = ? AND HzsQuestionTag.TagLineId IN (10007)) table_count\n### Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n; bad SQL grammar []; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.&quot;}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=&amp;&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=10007&amp;page=1&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="247" it="0" lt="246" ts="1510297685703" s="false" lb="queryArticle-wordRange为数学符号" rc="500" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="3233" sby="333" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/</failureMessage>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297685950" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1481" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;000000&quot;,&quot;message&quot;:&quot;\n### Error querying database.  Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n### The error may exist in URL [jar:file:/app.jar!/BOOT-INF/classes!/com/hand/zhishinet/management/tag/mapper/HzsTagMaterialMapper.xml]\n### The error may involve defaultParameterMap\n### The error occurred while setting parameters\n### SQL: SELECT count(0) FROM (SELECT DISTINCT UBArticle.ArticleId, UBArticle.ArticleTypeCode AS \&quot;type\&quot;, UBArticle.Title AS title, UBArticle.WordRangeId AS wordRangeId, UBArticleLanguage.ArticleContent AS content, UnitId AS theme, DifficultyId AS difficulty, WordCount AS wordCount, UBUser.FullName AS createUser FROM UBArticle INNER JOIN UBArticleLanguage ON UBArticle.articleId = UBArticleLanguage.articleId AND UBArticleLanguage.languageId = 3 LEFT JOIN UBUser ON UBArticle.CreatedBy = UBUser.UBUserID INNER JOIN HzsQuestionTag ON HzsQuestionTag.SourceId = UBArticle.ArticleId AND HzsQuestionTag.sourceTypeId = 2 AND HzsQuestionTag.isDeleted = 0 WHERE UBArticle.TenantId = 13 AND UBArticle.IsDeleted = 0 AND UBArticle.ArticleTypeCode = ? AND UnitId = ? AND DifficultyId = ? AND HzsQuestionTag.TagLineId IN (10007)) table_count\n### Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n; bad SQL grammar []; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.&quot;}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=+&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=10007&amp;page=1&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="174" it="0" lt="174" ts="1510297685952" s="true" lb="queryArticle-wordRange为标点符号" rc="500" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="1977" sby="333" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297686126" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1481" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=,&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=10007&amp;page=1&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="246" it="0" lt="245" ts="1510297686127" s="false" lb="queryArticle-theme为空" rc="500" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="3236" sby="332" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/</failureMessage>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297686373" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1469" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;000000&quot;,&quot;message&quot;:&quot;\n### Error querying database.  Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n### The error may exist in URL [jar:file:/app.jar!/BOOT-INF/classes!/com/hand/zhishinet/management/tag/mapper/HzsTagMaterialMapper.xml]\n### The error may involve defaultParameterMap\n### The error occurred while setting parameters\n### SQL: SELECT count(0) FROM (SELECT DISTINCT UBArticle.ArticleId, UBArticle.ArticleTypeCode AS \&quot;type\&quot;, UBArticle.Title AS title, UBArticle.WordRangeId AS wordRangeId, UBArticleLanguage.ArticleContent AS content, UnitId AS theme, DifficultyId AS difficulty, WordCount AS wordCount, UBUser.FullName AS createUser FROM UBArticle INNER JOIN UBArticleLanguage ON UBArticle.articleId = UBArticleLanguage.articleId AND UBArticleLanguage.languageId = 3 LEFT JOIN UBUser ON UBArticle.CreatedBy = UBUser.UBUserID INNER JOIN HzsQuestionTag ON HzsQuestionTag.SourceId = UBArticle.ArticleId AND HzsQuestionTag.sourceTypeId = 2 AND HzsQuestionTag.isDeleted = 0 WHERE UBArticle.TenantId = 13 AND UBArticle.IsDeleted = 0 AND UBArticle.WordRangeId = ? AND UBArticle.ArticleTypeCode = ? AND DifficultyId = ? AND HzsQuestionTag.TagLineId IN (10007)) table_count\n### Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n; bad SQL grammar []; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.&quot;}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=&amp;difficulty=1&amp;tags=10007&amp;page=1&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="1" it="0" lt="0" ts="1510297686375" s="true" lb="queryArticle-theme为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 102: https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=      &amp;difficulty=1&amp;tags=10007&amp;page=1&amp;pageSize=10" tn="queryArticle查询文章素材 1-1" dt="text" by="2640" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297686376" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1478" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=      &amp;difficulty=1&amp;tags=10007&amp;page=1&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="265" it="0" lt="265" ts="1510297686378" s="true" lb="queryArticle-theme为a-z的字符串" rc="500" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="1981" sby="336" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297686643" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1482" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=aaaa&amp;difficulty=1&amp;tags=10007&amp;page=1&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="172" it="0" lt="172" ts="1510297686644" s="true" lb="queryArticle-theme为中文" rc="500" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="1975" sby="350" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297686816" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1474" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=主题&amp;difficulty=1&amp;tags=10007&amp;page=1&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="163" it="0" lt="163" ts="1510297686818" s="true" lb="queryArticle-theme为特殊符号" rc="500" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="1972" sby="333" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297686981" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1476" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=@&amp;difficulty=1&amp;tags=10007&amp;page=1&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="238" it="0" lt="234" ts="1510297686983" s="false" lb="queryArticle-theme为数学符号" rc="500" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="3243" sby="333" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to contain /200/</failureMessage>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1510297687220" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1476" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;000000&quot;,&quot;message&quot;:&quot;\n### Error querying database.  Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n### The error may exist in URL [jar:file:/app.jar!/BOOT-INF/classes!/com/hand/zhishinet/management/tag/mapper/HzsTagMaterialMapper.xml]\n### The error may involve defaultParameterMap\n### The error occurred while setting parameters\n### SQL: SELECT count(0) FROM (SELECT DISTINCT UBArticle.ArticleId, UBArticle.ArticleTypeCode AS \&quot;type\&quot;, UBArticle.Title AS title, UBArticle.WordRangeId AS wordRangeId, UBArticleLanguage.ArticleContent AS content, UnitId AS theme, DifficultyId AS difficulty, WordCount AS wordCount, UBUser.FullName AS createUser FROM UBArticle INNER JOIN UBArticleLanguage ON UBArticle.articleId = UBArticleLanguage.articleId AND UBArticleLanguage.languageId = 3 LEFT JOIN UBUser ON UBArticle.CreatedBy = UBUser.UBUserID INNER JOIN HzsQuestionTag ON HzsQuestionTag.SourceId = UBArticle.ArticleId AND HzsQuestionTag.sourceTypeId = 2 AND HzsQuestionTag.isDeleted = 0 WHERE UBArticle.TenantId = 13 AND UBArticle.IsDeleted = 0 AND UBArticle.WordRangeId = ? AND UBArticle.ArticleTypeCode = ? AND DifficultyId = ? AND HzsQuestionTag.TagLineId IN (10007)) table_count\n### Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n; bad SQL grammar []; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.&quot;}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=+&amp;difficulty=1&amp;tags=10007&amp;page=1&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="153" it="0" lt="152" ts="1510297687223" s="true" lb="queryArticle-theme为标点符号" rc="500" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="1973" sby="333" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1510297687375" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1477" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=,&amp;difficulty=1&amp;tags=10007&amp;page=1&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="235" it="0" lt="234" ts="1510297687378" s="false" lb="queryArticle-difficulty为空" rc="500" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="3235" sby="332" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/</failureMessage>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1510297687612" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1474" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;000000&quot;,&quot;message&quot;:&quot;\n### Error querying database.  Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n### The error may exist in URL [jar:file:/app.jar!/BOOT-INF/classes!/com/hand/zhishinet/management/tag/mapper/HzsTagMaterialMapper.xml]\n### The error may involve defaultParameterMap\n### The error occurred while setting parameters\n### SQL: SELECT count(0) FROM (SELECT DISTINCT UBArticle.ArticleId, UBArticle.ArticleTypeCode AS \&quot;type\&quot;, UBArticle.Title AS title, UBArticle.WordRangeId AS wordRangeId, UBArticleLanguage.ArticleContent AS content, UnitId AS theme, DifficultyId AS difficulty, WordCount AS wordCount, UBUser.FullName AS createUser FROM UBArticle INNER JOIN UBArticleLanguage ON UBArticle.articleId = UBArticleLanguage.articleId AND UBArticleLanguage.languageId = 3 LEFT JOIN UBUser ON UBArticle.CreatedBy = UBUser.UBUserID INNER JOIN HzsQuestionTag ON HzsQuestionTag.SourceId = UBArticle.ArticleId AND HzsQuestionTag.sourceTypeId = 2 AND HzsQuestionTag.isDeleted = 0 WHERE UBArticle.TenantId = 13 AND UBArticle.IsDeleted = 0 AND UBArticle.WordRangeId = ? AND UBArticle.ArticleTypeCode = ? AND UnitId = ? AND HzsQuestionTag.TagLineId IN (10007)) table_count\n### Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n; bad SQL grammar []; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.&quot;}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=&amp;tags=10007&amp;page=1&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="2" it="0" lt="0" ts="1510297687618" s="true" lb="queryArticle-difficulty为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 115: https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=            &amp;tags=10007&amp;page=1&amp;pageSize=10" tn="queryArticle查询文章素材 1-1" dt="text" by="2656" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297687620" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1488" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=            &amp;tags=10007&amp;page=1&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="181" it="0" lt="180" ts="1510297687625" s="true" lb="queryArticle-difficulty为a-z的字符串" rc="500" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="1986" sby="336" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1510297687805" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1487" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=diff&amp;tags=10007&amp;page=1&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="179" it="0" lt="179" ts="1510297687807" s="true" lb="queryArticle-difficulty为中文" rc="500" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="1981" sby="350" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297687986" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1480" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=难度&amp;tags=10007&amp;page=1&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="193" it="0" lt="192" ts="1510297687987" s="true" lb="queryArticle-difficulty为特殊符号" rc="500" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="1977" sby="333" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297688180" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1481" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=*&amp;tags=10007&amp;page=1&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="170" it="0" lt="169" ts="1510297688181" s="true" lb="queryArticle-difficulty为数学符号" rc="500" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="1977" sby="333" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1510297688350" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1481" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=-&amp;tags=10007&amp;page=1&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="154" it="0" lt="153" ts="1510297688354" s="true" lb="queryArticle-difficulty为标点符号" rc="500" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="1977" sby="333" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297688508" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1481" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=!&amp;tags=10007&amp;page=1&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="401" it="0" lt="400" ts="1510297688509" s="true" lb="queryArticle-tags为空" rc="200" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="2604" sby="328" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1510297688909" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1464" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=&amp;page=1&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="1" it="0" lt="0" ts="1510297688910" s="true" lb="queryArticle-tags为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 122: https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=      &amp;page=1&amp;pageSize=10" tn="queryArticle查询文章素材 1-1" dt="text" by="2630" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297688911" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1472" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=      &amp;page=1&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="170" it="0" lt="169" ts="1510297688912" s="true" lb="queryArticle-tags为a-z的字符串" rc="500" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="1834" sby="332" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1510297689081" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1477" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=tags&amp;page=1&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="155" it="0" lt="154" ts="1510297689083" s="true" lb="queryArticle-tags为中文" rc="500" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="1829" sby="346" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297689238" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1470" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=年份&amp;page=1&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="157" it="0" lt="157" ts="1510297689241" s="true" lb="queryArticle-tags为特殊符号" rc="500" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="1828" sby="337" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297689398" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1472" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=￥&amp;page=1&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="188" it="0" lt="187" ts="1510297689400" s="true" lb="queryArticle-tags为数学符号" rc="500" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="1825" sby="329" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1510297689587" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1471" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=+&amp;page=1&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="180" it="0" lt="180" ts="1510297689589" s="true" lb="queryArticle-tags为标点符号" rc="200" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="2611" sby="329" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297689769" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1471" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=,&amp;page=1&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="340" it="0" lt="340" ts="1510297689770" s="false" lb="queryArticle-page为空" rc="500" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="3250" sby="332" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/</failureMessage>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297690110" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1468" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;000000&quot;,&quot;message&quot;:&quot;\n### Error querying database.  Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n### The error may exist in URL [jar:file:/app.jar!/BOOT-INF/classes!/com/hand/zhishinet/management/tag/mapper/HzsTagMaterialMapper.xml]\n### The error may involve defaultParameterMap\n### The error occurred while setting parameters\n### SQL: SELECT count(0) FROM (SELECT DISTINCT UBArticle.ArticleId, UBArticle.ArticleTypeCode AS \&quot;type\&quot;, UBArticle.Title AS title, UBArticle.WordRangeId AS wordRangeId, UBArticleLanguage.ArticleContent AS content, UnitId AS theme, DifficultyId AS difficulty, WordCount AS wordCount, UBUser.FullName AS createUser FROM UBArticle INNER JOIN UBArticleLanguage ON UBArticle.articleId = UBArticleLanguage.articleId AND UBArticleLanguage.languageId = 3 LEFT JOIN UBUser ON UBArticle.CreatedBy = UBUser.UBUserID INNER JOIN HzsQuestionTag ON HzsQuestionTag.SourceId = UBArticle.ArticleId AND HzsQuestionTag.sourceTypeId = 2 AND HzsQuestionTag.isDeleted = 0 WHERE UBArticle.TenantId = 13 AND UBArticle.IsDeleted = 0 AND UBArticle.WordRangeId = ? AND UBArticle.ArticleTypeCode = ? AND UnitId = ? AND DifficultyId = ? AND HzsQuestionTag.TagLineId IN (10007)) table_count\n### Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n; bad SQL grammar []; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.&quot;}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=10007&amp;page=&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="1" it="0" lt="0" ts="1510297690111" s="true" lb="queryArticle-page为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 133: https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=10007&amp;page=    &amp;pageSize=10" tn="queryArticle查询文章素材 1-1" dt="text" by="2635" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297690112" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1475" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=10007&amp;page=    &amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="160" it="0" lt="160" ts="1510297690112" s="true" lb="queryArticle-page为a-z的字符串" rc="500" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="1965" sby="336" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297690272" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1480" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=10007&amp;page=page&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="153" it="0" lt="153" ts="1510297690273" s="true" lb="queryArticle-page为中文" rc="500" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="1961" sby="350" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297690426" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1474" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=10007&amp;page=页数&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="155" it="0" lt="154" ts="1510297690427" s="true" lb="queryArticle-page为特殊符号" rc="500" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="1957" sby="333" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297690582" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1475" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=10007&amp;page=@&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="399" it="0" lt="399" ts="1510297690582" s="true" lb="queryArticle-page为数学符号" rc="500" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="1956" sby="333" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297690981" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1475" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=10007&amp;page=+&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="168" it="0" lt="168" ts="1510297690982" s="true" lb="queryArticle-page为标点符号" rc="500" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="1957" sby="333" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297691150" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1475" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=10007&amp;page=?&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="258" it="0" lt="257" ts="1510297691151" s="false" lb="queryArticle-pageSize为空" rc="500" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="3253" sby="331" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/</failureMessage>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297691409" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1471" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;000000&quot;,&quot;message&quot;:&quot;\n### Error querying database.  Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n### The error may exist in URL [jar:file:/app.jar!/BOOT-INF/classes!/com/hand/zhishinet/management/tag/mapper/HzsTagMaterialMapper.xml]\n### The error may involve defaultParameterMap\n### The error occurred while setting parameters\n### SQL: SELECT count(0) FROM (SELECT DISTINCT UBArticle.ArticleId, UBArticle.ArticleTypeCode AS \&quot;type\&quot;, UBArticle.Title AS title, UBArticle.WordRangeId AS wordRangeId, UBArticleLanguage.ArticleContent AS content, UnitId AS theme, DifficultyId AS difficulty, WordCount AS wordCount, UBUser.FullName AS createUser FROM UBArticle INNER JOIN UBArticleLanguage ON UBArticle.articleId = UBArticleLanguage.articleId AND UBArticleLanguage.languageId = 3 LEFT JOIN UBUser ON UBArticle.CreatedBy = UBUser.UBUserID INNER JOIN HzsQuestionTag ON HzsQuestionTag.SourceId = UBArticle.ArticleId AND HzsQuestionTag.sourceTypeId = 2 AND HzsQuestionTag.isDeleted = 0 WHERE UBArticle.TenantId = 13 AND UBArticle.IsDeleted = 0 AND UBArticle.WordRangeId = ? AND UBArticle.ArticleTypeCode = ? AND UnitId = ? AND DifficultyId = ? AND HzsQuestionTag.TagLineId IN (10007)) table_count\n### Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n; bad SQL grammar []; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.&quot;}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=10007&amp;page=1&amp;pageSize=</java.net.URL>
+</httpSample>
+<httpSample t="1" it="0" lt="0" ts="1510297691409" s="true" lb="queryArticle-pageSize为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 144: https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=10007&amp;page=1&amp;pageSize=     " tn="queryArticle查询文章素材 1-1" dt="text" by="2639" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1510297691409" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1479" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=10007&amp;page=1&amp;pageSize=     </java.net.URL>
+</httpSample>
+<httpSample t="141" it="0" lt="141" ts="1510297691410" s="true" lb="queryArticle-pageSize为a-z的字符串" rc="500" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="1969" sby="335" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297691551" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1484" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=10007&amp;page=1&amp;pageSize=test</java.net.URL>
+</httpSample>
+<httpSample t="157" it="0" lt="156" ts="1510297691552" s="true" lb="queryArticle-pageSize为中文" rc="500" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="1964" sby="349" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297691709" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1477" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=10007&amp;page=1&amp;pageSize=页码</java.net.URL>
+</httpSample>
+<httpSample t="328" it="0" lt="328" ts="1510297691709" s="false" lb="queryArticle-pageSize为特殊符号" rc="500" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="3260" sby="332" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to contain /200/</failureMessage>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297692037" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1478" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;000000&quot;,&quot;message&quot;:&quot;\n### Error querying database.  Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n### The error may exist in URL [jar:file:/app.jar!/BOOT-INF/classes!/com/hand/zhishinet/management/tag/mapper/HzsTagMaterialMapper.xml]\n### The error may involve defaultParameterMap\n### The error occurred while setting parameters\n### SQL: SELECT count(0) FROM (SELECT DISTINCT UBArticle.ArticleId, UBArticle.ArticleTypeCode AS \&quot;type\&quot;, UBArticle.Title AS title, UBArticle.WordRangeId AS wordRangeId, UBArticleLanguage.ArticleContent AS content, UnitId AS theme, DifficultyId AS difficulty, WordCount AS wordCount, UBUser.FullName AS createUser FROM UBArticle INNER JOIN UBArticleLanguage ON UBArticle.articleId = UBArticleLanguage.articleId AND UBArticleLanguage.languageId = 3 LEFT JOIN UBUser ON UBArticle.CreatedBy = UBUser.UBUserID INNER JOIN HzsQuestionTag ON HzsQuestionTag.SourceId = UBArticle.ArticleId AND HzsQuestionTag.sourceTypeId = 2 AND HzsQuestionTag.isDeleted = 0 WHERE UBArticle.TenantId = 13 AND UBArticle.IsDeleted = 0 AND UBArticle.WordRangeId = ? AND UBArticle.ArticleTypeCode = ? AND UnitId = ? AND DifficultyId = ? AND HzsQuestionTag.TagLineId IN (10007)) table_count\n### Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n; bad SQL grammar []; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.&quot;}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=10007&amp;page=1&amp;pageSize=&amp;</java.net.URL>
+</httpSample>
+<httpSample t="145" it="0" lt="145" ts="1510297692038" s="true" lb="queryArticle-pageSize为数学符号" rc="500" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="1960" sby="332" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297692183" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1478" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=10007&amp;page=1&amp;pageSize=/</java.net.URL>
+</httpSample>
+<httpSample t="148" it="0" lt="148" ts="1510297692184" s="true" lb="queryArticle-pageSize为标点符号" rc="500" rm="" tn="queryArticle查询文章素材 1-1" dt="text" by="1960" sby="332" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297692332" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="queryArticle查询文章素材 1-1" dt="text" by="1478" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/queryArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=10007&amp;page=1&amp;pageSize=?</java.net.URL>
+</httpSample>
+<httpSample t="926" it="0" lt="926" ts="1510297692345" s="true" lb="getToken" rc="200" rm="" tn="exportArticle导出文章列表 2-1" dt="text" by="1571" sby="285" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1510297693271" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exportArticle导出文章列表 2-1" dt="text" by="1207" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="296" it="0" lt="295" ts="1510297693273" s="false" lb="exportArticle正确性校验（type=Reading阅读）" rc="500" rm="" tn="exportArticle导出文章列表 2-1" dt="text" by="3461" sby="313" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/</failureMessage>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1510297693568" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exportArticle导出文章列表 2-1" dt="text" by="1468" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;000000&quot;,&quot;message&quot;:&quot;\n### Error querying database.  Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n### The error may exist in URL [jar:file:/app.jar!/BOOT-INF/classes!/com/hand/zhishinet/management/tag/mapper/HzsTagMaterialMapper.xml]\n### The error may involve defaultParameterMap\n### The error occurred while setting parameters\n### SQL: SELECT DISTINCT     UBArticle.ArticleId,     UBArticle.ArticleTypeCode AS \&quot;type\&quot;,     UBArticle.Title AS title,     UBArticle.WordRangeId AS wordRangeId,     UBArticleLanguage.ArticleContent AS content,     UnitId AS theme,     DifficultyId AS difficulty,     WordCount AS wordCount,     UBUser.FullName AS createUser     FROM     UBArticle     INNER JOIN UBArticleLanguage ON UBArticle.articleId = UBArticleLanguage.articleId     AND UBArticleLanguage.languageId = 3     LEFT JOIN UBUser ON UBArticle.CreatedBy = UBUser.UBUserID               INNER JOIN HzsQuestionTag ON HzsQuestionTag.SourceId = UBArticle.ArticleId AND HzsQuestionTag.sourceTypeId = 2 AND HzsQuestionTag.isDeleted = 0           WHERE     UBArticle.TenantId = 13     AND UBArticle.IsDeleted = 0                     AND UBArticle.WordRangeId = ?                     AND UBArticle.ArticleTypeCode = ?                     AND UnitId = ?                     AND DifficultyId = ?                     AND HzsQuestionTag.TagLineId IN  (  10007 )\n### Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n; bad SQL grammar []; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.&quot;}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/exportArticle?wordRange=1&amp;type=Reading&amp;theme=1&amp;difficulty=1&amp;tags=10007</java.net.URL>
+</httpSample>
+<httpSample t="251" it="0" lt="251" ts="1510297693582" s="false" lb="exportArticle正确性校验（type=Listening阅读）" rc="500" rm="" tn="exportArticle导出文章列表 2-1" dt="text" by="3466" sby="315" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/</failureMessage>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297693833" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exportArticle导出文章列表 2-1" dt="text" by="1473" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;000000&quot;,&quot;message&quot;:&quot;\n### Error querying database.  Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n### The error may exist in URL [jar:file:/app.jar!/BOOT-INF/classes!/com/hand/zhishinet/management/tag/mapper/HzsTagMaterialMapper.xml]\n### The error may involve defaultParameterMap\n### The error occurred while setting parameters\n### SQL: SELECT DISTINCT     UBArticle.ArticleId,     UBArticle.ArticleTypeCode AS \&quot;type\&quot;,     UBArticle.Title AS title,     UBArticle.WordRangeId AS wordRangeId,     UBArticleLanguage.ArticleContent AS content,     UnitId AS theme,     DifficultyId AS difficulty,     WordCount AS wordCount,     UBUser.FullName AS createUser     FROM     UBArticle     INNER JOIN UBArticleLanguage ON UBArticle.articleId = UBArticleLanguage.articleId     AND UBArticleLanguage.languageId = 3     LEFT JOIN UBUser ON UBArticle.CreatedBy = UBUser.UBUserID               INNER JOIN HzsQuestionTag ON HzsQuestionTag.SourceId = UBArticle.ArticleId AND HzsQuestionTag.sourceTypeId = 2 AND HzsQuestionTag.isDeleted = 0           WHERE     UBArticle.TenantId = 13     AND UBArticle.IsDeleted = 0                     AND UBArticle.WordRangeId = ?                     AND UBArticle.ArticleTypeCode = ?                     AND UnitId = ?                     AND DifficultyId = ?                     AND HzsQuestionTag.TagLineId IN  (  10007 )\n### Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n; bad SQL grammar []; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.&quot;}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/exportArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=10007</java.net.URL>
+</httpSample>
+<httpSample t="246" it="0" lt="245" ts="1510297693834" s="false" lb="exportArticle-wordRange为空" rc="500" rm="" tn="exportArticle导出文章列表 2-1" dt="text" by="3403" sby="314" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/</failureMessage>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297694080" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exportArticle导出文章列表 2-1" dt="text" by="1454" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;000000&quot;,&quot;message&quot;:&quot;\n### Error querying database.  Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n### The error may exist in URL [jar:file:/app.jar!/BOOT-INF/classes!/com/hand/zhishinet/management/tag/mapper/HzsTagMaterialMapper.xml]\n### The error may involve defaultParameterMap\n### The error occurred while setting parameters\n### SQL: SELECT DISTINCT     UBArticle.ArticleId,     UBArticle.ArticleTypeCode AS \&quot;type\&quot;,     UBArticle.Title AS title,     UBArticle.WordRangeId AS wordRangeId,     UBArticleLanguage.ArticleContent AS content,     UnitId AS theme,     DifficultyId AS difficulty,     WordCount AS wordCount,     UBUser.FullName AS createUser     FROM     UBArticle     INNER JOIN UBArticleLanguage ON UBArticle.articleId = UBArticleLanguage.articleId     AND UBArticleLanguage.languageId = 3     LEFT JOIN UBUser ON UBArticle.CreatedBy = UBUser.UBUserID               INNER JOIN HzsQuestionTag ON HzsQuestionTag.SourceId = UBArticle.ArticleId AND HzsQuestionTag.sourceTypeId = 2 AND HzsQuestionTag.isDeleted = 0           WHERE     UBArticle.TenantId = 13     AND UBArticle.IsDeleted = 0                           AND UBArticle.ArticleTypeCode = ?                     AND UnitId = ?                     AND DifficultyId = ?                     AND HzsQuestionTag.TagLineId IN  (  10007 )\n### Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n; bad SQL grammar []; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.&quot;}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/exportArticle?wordRange=&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=10007</java.net.URL>
+</httpSample>
+<httpSample t="1" it="0" lt="0" ts="1510297694082" s="true" lb="exportArticle-wordRange为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 80: https://zhishinet.com/api/management-console/v1/sec/tag/exportArticle?wordRange=              &amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=10007" tn="exportArticle导出文章列表 2-1" dt="text" by="2621" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1510297694082" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exportArticle导出文章列表 2-1" dt="text" by="1470" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/exportArticle?wordRange=              &amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=10007</java.net.URL>
+</httpSample>
+<httpSample t="149" it="0" lt="148" ts="1510297694084" s="true" lb="exportArticle-wordRange为a-z的字符串" rc="500" rm="" tn="exportArticle导出文章列表 2-1" dt="text" by="1965" sby="318" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297694233" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exportArticle导出文章列表 2-1" dt="text" by="1466" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/exportArticle?wordRange=word&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=10007</java.net.URL>
+</httpSample>
+<httpSample t="153" it="0" lt="152" ts="1510297694235" s="true" lb="exportArticle-wordRange为中文" rc="500" rm="" tn="exportArticle导出文章列表 2-1" dt="text" by="1970" sby="350" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1510297694387" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exportArticle导出文章列表 2-1" dt="text" by="1463" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/exportArticle?wordRange=字数区间&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=10007</java.net.URL>
+</httpSample>
+<httpSample t="544" it="0" lt="543" ts="1510297694389" s="false" lb="exportArticle-wordRange为特殊符号" rc="500" rm="" tn="exportArticle导出文章列表 2-1" dt="text" by="3409" sby="315" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/</failureMessage>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1510297694932" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exportArticle导出文章列表 2-1" dt="text" by="1460" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;000000&quot;,&quot;message&quot;:&quot;\n### Error querying database.  Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n### The error may exist in URL [jar:file:/app.jar!/BOOT-INF/classes!/com/hand/zhishinet/management/tag/mapper/HzsTagMaterialMapper.xml]\n### The error may involve defaultParameterMap\n### The error occurred while setting parameters\n### SQL: SELECT DISTINCT     UBArticle.ArticleId,     UBArticle.ArticleTypeCode AS \&quot;type\&quot;,     UBArticle.Title AS title,     UBArticle.WordRangeId AS wordRangeId,     UBArticleLanguage.ArticleContent AS content,     UnitId AS theme,     DifficultyId AS difficulty,     WordCount AS wordCount,     UBUser.FullName AS createUser     FROM     UBArticle     INNER JOIN UBArticleLanguage ON UBArticle.articleId = UBArticleLanguage.articleId     AND UBArticleLanguage.languageId = 3     LEFT JOIN UBUser ON UBArticle.CreatedBy = UBUser.UBUserID               INNER JOIN HzsQuestionTag ON HzsQuestionTag.SourceId = UBArticle.ArticleId AND HzsQuestionTag.sourceTypeId = 2 AND HzsQuestionTag.isDeleted = 0           WHERE     UBArticle.TenantId = 13     AND UBArticle.IsDeleted = 0                           AND UBArticle.ArticleTypeCode = ?                     AND UnitId = ?                     AND DifficultyId = ?                     AND HzsQuestionTag.TagLineId IN  (  10007 )\n### Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n; bad SQL grammar []; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.&quot;}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/exportArticle?wordRange=&amp;&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=10007</java.net.URL>
+</httpSample>
+<httpSample t="172" it="0" lt="171" ts="1510297694934" s="false" lb="exportArticle-wordRange为数学符号" rc="500" rm="" tn="exportArticle导出文章列表 2-1" dt="text" by="3410" sby="315" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/</failureMessage>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297695106" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exportArticle导出文章列表 2-1" dt="text" by="1461" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;000000&quot;,&quot;message&quot;:&quot;\n### Error querying database.  Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n### The error may exist in URL [jar:file:/app.jar!/BOOT-INF/classes!/com/hand/zhishinet/management/tag/mapper/HzsTagMaterialMapper.xml]\n### The error may involve defaultParameterMap\n### The error occurred while setting parameters\n### SQL: SELECT DISTINCT     UBArticle.ArticleId,     UBArticle.ArticleTypeCode AS \&quot;type\&quot;,     UBArticle.Title AS title,     UBArticle.WordRangeId AS wordRangeId,     UBArticleLanguage.ArticleContent AS content,     UnitId AS theme,     DifficultyId AS difficulty,     WordCount AS wordCount,     UBUser.FullName AS createUser     FROM     UBArticle     INNER JOIN UBArticleLanguage ON UBArticle.articleId = UBArticleLanguage.articleId     AND UBArticleLanguage.languageId = 3     LEFT JOIN UBUser ON UBArticle.CreatedBy = UBUser.UBUserID               INNER JOIN HzsQuestionTag ON HzsQuestionTag.SourceId = UBArticle.ArticleId AND HzsQuestionTag.sourceTypeId = 2 AND HzsQuestionTag.isDeleted = 0           WHERE     UBArticle.TenantId = 13     AND UBArticle.IsDeleted = 0                           AND UBArticle.ArticleTypeCode = ?                     AND UnitId = ?                     AND DifficultyId = ?                     AND HzsQuestionTag.TagLineId IN  (  10007 )\n### Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n; bad SQL grammar []; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.&quot;}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/exportArticle?wordRange=+&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=10007</java.net.URL>
+</httpSample>
+<httpSample t="168" it="0" lt="168" ts="1510297695108" s="true" lb="exportArticle-wordRange为标点符号" rc="500" rm="" tn="exportArticle导出文章列表 2-1" dt="text" by="1957" sby="315" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297695276" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exportArticle导出文章列表 2-1" dt="text" by="1461" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/exportArticle?wordRange=,&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=10007</java.net.URL>
+</httpSample>
+<httpSample t="267" it="0" lt="266" ts="1510297695278" s="false" lb="exportArticle-theme为空" rc="500" rm="" tn="exportArticle导出文章列表 2-1" dt="text" by="3413" sby="314" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/</failureMessage>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1510297695544" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exportArticle导出文章列表 2-1" dt="text" by="1449" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;000000&quot;,&quot;message&quot;:&quot;\n### Error querying database.  Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n### The error may exist in URL [jar:file:/app.jar!/BOOT-INF/classes!/com/hand/zhishinet/management/tag/mapper/HzsTagMaterialMapper.xml]\n### The error may involve defaultParameterMap\n### The error occurred while setting parameters\n### SQL: SELECT DISTINCT     UBArticle.ArticleId,     UBArticle.ArticleTypeCode AS \&quot;type\&quot;,     UBArticle.Title AS title,     UBArticle.WordRangeId AS wordRangeId,     UBArticleLanguage.ArticleContent AS content,     UnitId AS theme,     DifficultyId AS difficulty,     WordCount AS wordCount,     UBUser.FullName AS createUser     FROM     UBArticle     INNER JOIN UBArticleLanguage ON UBArticle.articleId = UBArticleLanguage.articleId     AND UBArticleLanguage.languageId = 3     LEFT JOIN UBUser ON UBArticle.CreatedBy = UBUser.UBUserID               INNER JOIN HzsQuestionTag ON HzsQuestionTag.SourceId = UBArticle.ArticleId AND HzsQuestionTag.sourceTypeId = 2 AND HzsQuestionTag.isDeleted = 0           WHERE     UBArticle.TenantId = 13     AND UBArticle.IsDeleted = 0                     AND UBArticle.WordRangeId = ?                     AND UBArticle.ArticleTypeCode = ?                           AND DifficultyId = ?                     AND HzsQuestionTag.TagLineId IN  (  10007 )\n### Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n; bad SQL grammar []; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.&quot;}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/exportArticle?wordRange=1&amp;type=Listening&amp;theme=&amp;difficulty=1&amp;tags=10007</java.net.URL>
+</httpSample>
+<httpSample t="1" it="0" lt="0" ts="1510297695546" s="true" lb="exportArticle-theme为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 103: https://zhishinet.com/api/management-console/v1/sec/tag/exportArticle?wordRange=1&amp;type=Listening&amp;theme=      &amp;difficulty=1&amp;tags=10007" tn="exportArticle导出文章列表 2-1" dt="text" by="2602" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297695547" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exportArticle导出文章列表 2-1" dt="text" by="1458" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/exportArticle?wordRange=1&amp;type=Listening&amp;theme=      &amp;difficulty=1&amp;tags=10007</java.net.URL>
+</httpSample>
+<httpSample t="166" it="0" lt="166" ts="1510297695549" s="true" lb="exportArticle-theme为a-z的字符串" rc="500" rm="" tn="exportArticle导出文章列表 2-1" dt="text" by="1961" sby="318" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297695715" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exportArticle导出文章列表 2-1" dt="text" by="1462" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/exportArticle?wordRange=1&amp;type=Listening&amp;theme=aaaa&amp;difficulty=1&amp;tags=10007</java.net.URL>
+</httpSample>
+<httpSample t="157" it="0" lt="157" ts="1510297695716" s="true" lb="exportArticle-theme为中文" rc="500" rm="" tn="exportArticle导出文章列表 2-1" dt="text" by="1956" sby="332" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297695873" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exportArticle导出文章列表 2-1" dt="text" by="1455" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/exportArticle?wordRange=1&amp;type=Listening&amp;theme=主题&amp;difficulty=1&amp;tags=10007</java.net.URL>
+</httpSample>
+<httpSample t="153" it="0" lt="152" ts="1510297695874" s="true" lb="exportArticle-theme为特殊符号" rc="500" rm="" tn="exportArticle导出文章列表 2-1" dt="text" by="1952" sby="315" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1510297696026" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exportArticle导出文章列表 2-1" dt="text" by="1456" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/exportArticle?wordRange=1&amp;type=Listening&amp;theme=@&amp;difficulty=1&amp;tags=10007</java.net.URL>
+</httpSample>
+<httpSample t="258" it="0" lt="257" ts="1510297696027" s="false" lb="exportArticle-theme为数学符号" rc="500" rm="" tn="exportArticle导出文章列表 2-1" dt="text" by="3420" sby="315" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to contain /200/</failureMessage>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297696285" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exportArticle导出文章列表 2-1" dt="text" by="1456" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;000000&quot;,&quot;message&quot;:&quot;\n### Error querying database.  Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n### The error may exist in URL [jar:file:/app.jar!/BOOT-INF/classes!/com/hand/zhishinet/management/tag/mapper/HzsTagMaterialMapper.xml]\n### The error may involve defaultParameterMap\n### The error occurred while setting parameters\n### SQL: SELECT DISTINCT     UBArticle.ArticleId,     UBArticle.ArticleTypeCode AS \&quot;type\&quot;,     UBArticle.Title AS title,     UBArticle.WordRangeId AS wordRangeId,     UBArticleLanguage.ArticleContent AS content,     UnitId AS theme,     DifficultyId AS difficulty,     WordCount AS wordCount,     UBUser.FullName AS createUser     FROM     UBArticle     INNER JOIN UBArticleLanguage ON UBArticle.articleId = UBArticleLanguage.articleId     AND UBArticleLanguage.languageId = 3     LEFT JOIN UBUser ON UBArticle.CreatedBy = UBUser.UBUserID               INNER JOIN HzsQuestionTag ON HzsQuestionTag.SourceId = UBArticle.ArticleId AND HzsQuestionTag.sourceTypeId = 2 AND HzsQuestionTag.isDeleted = 0           WHERE     UBArticle.TenantId = 13     AND UBArticle.IsDeleted = 0                     AND UBArticle.WordRangeId = ?                     AND UBArticle.ArticleTypeCode = ?                           AND DifficultyId = ?                     AND HzsQuestionTag.TagLineId IN  (  10007 )\n### Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n; bad SQL grammar []; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.&quot;}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/exportArticle?wordRange=1&amp;type=Listening&amp;theme=+&amp;difficulty=1&amp;tags=10007</java.net.URL>
+</httpSample>
+<httpSample t="166" it="0" lt="165" ts="1510297696286" s="true" lb="exportArticle-theme为标点符号" rc="500" rm="" tn="exportArticle导出文章列表 2-1" dt="text" by="1953" sby="315" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297696452" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exportArticle导出文章列表 2-1" dt="text" by="1457" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/exportArticle?wordRange=1&amp;type=Listening&amp;theme=,&amp;difficulty=1&amp;tags=10007</java.net.URL>
+</httpSample>
+<httpSample t="351" it="0" lt="350" ts="1510297696452" s="false" lb="exportArticle-difficulty为空" rc="500" rm="" tn="exportArticle导出文章列表 2-1" dt="text" by="3412" sby="314" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/</failureMessage>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1510297696802" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exportArticle导出文章列表 2-1" dt="text" by="1454" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;000000&quot;,&quot;message&quot;:&quot;\n### Error querying database.  Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n### The error may exist in URL [jar:file:/app.jar!/BOOT-INF/classes!/com/hand/zhishinet/management/tag/mapper/HzsTagMaterialMapper.xml]\n### The error may involve defaultParameterMap\n### The error occurred while setting parameters\n### SQL: SELECT DISTINCT     UBArticle.ArticleId,     UBArticle.ArticleTypeCode AS \&quot;type\&quot;,     UBArticle.Title AS title,     UBArticle.WordRangeId AS wordRangeId,     UBArticleLanguage.ArticleContent AS content,     UnitId AS theme,     DifficultyId AS difficulty,     WordCount AS wordCount,     UBUser.FullName AS createUser     FROM     UBArticle     INNER JOIN UBArticleLanguage ON UBArticle.articleId = UBArticleLanguage.articleId     AND UBArticleLanguage.languageId = 3     LEFT JOIN UBUser ON UBArticle.CreatedBy = UBUser.UBUserID               INNER JOIN HzsQuestionTag ON HzsQuestionTag.SourceId = UBArticle.ArticleId AND HzsQuestionTag.sourceTypeId = 2 AND HzsQuestionTag.isDeleted = 0           WHERE     UBArticle.TenantId = 13     AND UBArticle.IsDeleted = 0                     AND UBArticle.WordRangeId = ?                     AND UBArticle.ArticleTypeCode = ?                     AND UnitId = ?                           AND HzsQuestionTag.TagLineId IN  (  10007 )\n### Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n; bad SQL grammar []; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.&quot;}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/exportArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=&amp;tags=10007</java.net.URL>
+</httpSample>
+<httpSample t="1" it="0" lt="0" ts="1510297696803" s="true" lb="exportArticle-difficulty为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 116: https://zhishinet.com/api/management-console/v1/sec/tag/exportArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=            &amp;tags=10007" tn="exportArticle导出文章列表 2-1" dt="text" by="2618" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297696804" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exportArticle导出文章列表 2-1" dt="text" by="1468" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/exportArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=            &amp;tags=10007</java.net.URL>
+</httpSample>
+<httpSample t="177" it="0" lt="177" ts="1510297696805" s="true" lb="exportArticle-difficulty为a-z的字符串" rc="500" rm="" tn="exportArticle导出文章列表 2-1" dt="text" by="1966" sby="318" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297696982" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exportArticle导出文章列表 2-1" dt="text" by="1467" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/exportArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=diff&amp;tags=10007</java.net.URL>
+</httpSample>
+<httpSample t="142" it="0" lt="142" ts="1510297696983" s="true" lb="exportArticle-difficulty为中文" rc="500" rm="" tn="exportArticle导出文章列表 2-1" dt="text" by="1961" sby="332" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297697126" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exportArticle导出文章列表 2-1" dt="text" by="1460" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/exportArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=难度&amp;tags=10007</java.net.URL>
+</httpSample>
+<httpSample t="259" it="0" lt="259" ts="1510297697127" s="true" lb="exportArticle-difficulty为特殊符号" rc="500" rm="" tn="exportArticle导出文章列表 2-1" dt="text" by="1956" sby="315" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297697386" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exportArticle导出文章列表 2-1" dt="text" by="1460" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/exportArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=*&amp;tags=10007</java.net.URL>
+</httpSample>
+<httpSample t="175" it="0" lt="174" ts="1510297697388" s="true" lb="exportArticle-difficulty为数学符号" rc="500" rm="" tn="exportArticle导出文章列表 2-1" dt="text" by="1957" sby="315" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1510297697562" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exportArticle导出文章列表 2-1" dt="text" by="1461" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/exportArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=-&amp;tags=10007</java.net.URL>
+</httpSample>
+<httpSample t="151" it="0" lt="150" ts="1510297697565" s="true" lb="exportArticle-difficulty为标点符号" rc="500" rm="" tn="exportArticle导出文章列表 2-1" dt="text" by="1957" sby="315" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297697716" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exportArticle导出文章列表 2-1" dt="text" by="1461" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/exportArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=!&amp;tags=10007</java.net.URL>
+</httpSample>
+<httpSample t="232" it="0" lt="232" ts="1510297697717" s="false" lb="exportArticle-tags为空" rc="500" rm="" tn="exportArticle导出文章列表 2-1" dt="text" by="2900" sby="310" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/</failureMessage>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297697949" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exportArticle导出文章列表 2-1" dt="text" by="1444" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;000000&quot;,&quot;message&quot;:&quot;\n### Error querying database.  Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n### The error may exist in URL [jar:file:/app.jar!/BOOT-INF/classes!/com/hand/zhishinet/management/tag/mapper/HzsTagMaterialMapper.xml]\n### The error may involve defaultParameterMap\n### The error occurred while setting parameters\n### SQL: SELECT             HzsQuestionTag.tagLineId,             HzsQuestionTag.tagHeaderId,             HzsQuestionTag.sourceId,             HzsQuestionTag.SourceTypeId,             HzsTagLine.tagName         FROM             HzsQuestionTag             INNER JOIN HzsTagLine ON HzsTagLine.TagLineId = HzsQuestionTag.TagLineId             AND HzsQuestionTag.IsDeleted = 0         WHERE             HzsQuestionTag.SourceTypeId = ?             AND HzsQuestionTag.SourceId IN  (  ? )\n### Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n; bad SQL grammar []; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.&quot;}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/exportArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=</java.net.URL>
+</httpSample>
+<httpSample t="1" it="0" lt="0" ts="1510297697950" s="true" lb="exportArticle-tags为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 123: https://zhishinet.com/api/management-console/v1/sec/tag/exportArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=      " tn="exportArticle导出文章列表 2-1" dt="text" by="2593" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297697951" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exportArticle导出文章列表 2-1" dt="text" by="1453" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/exportArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=      </java.net.URL>
+</httpSample>
+<httpSample t="152" it="0" lt="152" ts="1510297697952" s="true" lb="exportArticle-tags为a-z的字符串" rc="500" rm="" tn="exportArticle导出文章列表 2-1" dt="text" by="1814" sby="314" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297698104" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exportArticle导出文章列表 2-1" dt="text" by="1457" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/exportArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=tags</java.net.URL>
+</httpSample>
+<httpSample t="173" it="0" lt="172" ts="1510297698105" s="true" lb="exportArticle-tags为中文" rc="500" rm="" tn="exportArticle导出文章列表 2-1" dt="text" by="1809" sby="328" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297698278" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exportArticle导出文章列表 2-1" dt="text" by="1450" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/exportArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=上海</java.net.URL>
+</httpSample>
+<httpSample t="163" it="0" lt="162" ts="1510297698279" s="true" lb="exportArticle-tags为特殊符号" rc="500" rm="" tn="exportArticle导出文章列表 2-1" dt="text" by="1808" sby="319" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297698442" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exportArticle导出文章列表 2-1" dt="text" by="1452" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/exportArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=￥</java.net.URL>
+</httpSample>
+<httpSample t="159" it="0" lt="158" ts="1510297698443" s="true" lb="exportArticle-tags为数学符号" rc="500" rm="" tn="exportArticle导出文章列表 2-1" dt="text" by="1805" sby="311" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1510297698601" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exportArticle导出文章列表 2-1" dt="text" by="1451" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/exportArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=+</java.net.URL>
+</httpSample>
+<httpSample t="541" it="0" lt="540" ts="1510297698605" s="false" lb="exportArticle-tags为标点符号" rc="500" rm="" tn="exportArticle导出文章列表 2-1" dt="text" by="2907" sby="311" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to contain /200/</failureMessage>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297699146" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exportArticle导出文章列表 2-1" dt="text" by="1451" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;000000&quot;,&quot;message&quot;:&quot;\n### Error querying database.  Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n### The error may exist in URL [jar:file:/app.jar!/BOOT-INF/classes!/com/hand/zhishinet/management/tag/mapper/HzsTagMaterialMapper.xml]\n### The error may involve defaultParameterMap\n### The error occurred while setting parameters\n### SQL: SELECT             HzsQuestionTag.tagLineId,             HzsQuestionTag.tagHeaderId,             HzsQuestionTag.sourceId,             HzsQuestionTag.SourceTypeId,             HzsTagLine.tagName         FROM             HzsQuestionTag             INNER JOIN HzsTagLine ON HzsTagLine.TagLineId = HzsQuestionTag.TagLineId             AND HzsQuestionTag.IsDeleted = 0         WHERE             HzsQuestionTag.SourceTypeId = ?             AND HzsQuestionTag.SourceId IN  (  ? )\n### Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n; bad SQL grammar []; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.&quot;}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/exportArticle?wordRange=1&amp;type=Listening&amp;theme=1&amp;difficulty=1&amp;tags=,</java.net.URL>
+</httpSample>
+<httpSample t="878" it="0" lt="877" ts="1510297699176" s="true" lb="getToken" rc="200" rm="" tn="query查询单个素材标签 3-1" dt="text" by="1567" sby="285" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1510297700054" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="query查询单个素材标签 3-1" dt="text" by="1203" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="225" it="0" lt="224" ts="1510297700055" s="false" lb="query正确性校验" rc="500" rm="" tn="query查询单个素材标签 3-1" dt="text" by="2780" sby="274" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/</failureMessage>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297700280" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="query查询单个素材标签 3-1" dt="text" by="1425" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;000000&quot;,&quot;message&quot;:&quot;\n### Error querying database.  Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n### The error may exist in URL [jar:file:/app.jar!/BOOT-INF/lib/common-1.6.3-Release.jar!/com/hand/zhishinet/common/mybatis/mapper/commonMapper.xml]\n### The error may involve defaultParameterMap\n### The error occurred while setting parameters\n### SQL: SELECT         sourceId,modifiedOn,isDeleted,createdBy,deletedOn,tagLineId,modifiedBy,tagHeaderId,questionTagId,createdOn,deletedBy,sourceTypeId         FROM         HzsQuestionTag                    WHERE sourceId =                                  ?             AND                 sourceTypeId =                                  ?             AND                 isDeleted =                                  ?\n### Cause: com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.\n; bad SQL grammar []; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name &apos;HzsQuestionTag&apos;.&quot;}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/query?sourceId=3&amp;sourceTypeId=2</java.net.URL>
+</httpSample>
+<httpSample t="251" it="0" lt="251" ts="1510297700281" s="true" lb="query-sourceId为空" rc="500" rm="" tn="query查询单个素材标签 3-1" dt="text" by="1875" sby="273" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297700532" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="query查询单个素材标签 3-1" dt="text" by="1394" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/query?sourceId=&amp;sourceTypeId=2</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1510297700533" s="true" lb="query-sourceId为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 71: https://zhishinet.com/api/management-console/v1/sec/tag/query?sourceId= &amp;sourceTypeId=2" tn="query查询单个素材标签 3-1" dt="text" by="2493" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297700533" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="query查询单个素材标签 3-1" dt="text" by="1396" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/query?sourceId= &amp;sourceTypeId=2</java.net.URL>
+</httpSample>
+<httpSample t="157" it="0" lt="157" ts="1510297700534" s="true" lb="query-sourceId为a-z的字符串" rc="500" rm="" tn="query查询单个素材标签 3-1" dt="text" by="1891" sby="277" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297700691" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="query查询单个素材标签 3-1" dt="text" by="1406" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/query?sourceId=test&amp;sourceTypeId=2</java.net.URL>
+</httpSample>
+<httpSample t="153" it="0" lt="153" ts="1510297700692" s="true" lb="query-sourceId为中文" rc="500" rm="" tn="query查询单个素材标签 3-1" dt="text" by="1886" sby="291" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297700845" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="query查询单个素材标签 3-1" dt="text" by="1399" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/query?sourceId=测试&amp;sourceTypeId=2</java.net.URL>
+</httpSample>
+<httpSample t="144" it="0" lt="144" ts="1510297700846" s="true" lb="query-sourceId为特殊符号" rc="500" rm="" tn="query查询单个素材标签 3-1" dt="text" by="1881" sby="274" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297700990" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="query查询单个素材标签 3-1" dt="text" by="1400" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/query?sourceId=&amp;&amp;sourceTypeId=2</java.net.URL>
+</httpSample>
+<httpSample t="161" it="0" lt="160" ts="1510297700991" s="true" lb="query-sourceId为数学符号" rc="500" rm="" tn="query查询单个素材标签 3-1" dt="text" by="1881" sby="274" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297701152" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="query查询单个素材标签 3-1" dt="text" by="1400" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/query?sourceId=+&amp;sourceTypeId=2</java.net.URL>
+</httpSample>
+<httpSample t="164" it="0" lt="164" ts="1510297701152" s="true" lb="query-sourceId为标点符号" rc="500" rm="" tn="query查询单个素材标签 3-1" dt="text" by="1885" sby="282" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1510297701316" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="query查询单个素材标签 3-1" dt="text" by="1401" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://zhishinet.com/api/management-console/v1/sec/tag/query?sourceId=；&amp;sourceTypeId=2</java.net.URL>
+</httpSample>

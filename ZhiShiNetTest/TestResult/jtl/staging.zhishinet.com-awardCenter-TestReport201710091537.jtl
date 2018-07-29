@@ -1,0 +1,2927 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="1158" it="0" lt="1136" ts="1507534634422" s="true" lb="getToken" rc="200" rm="" tn="学员奖品中心 1-1" dt="text" by="1787" sby="293" ng="1" na="1">
+  <sample t="1" it="0" lt="0" ts="1507534635580" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="学员奖品中心 1-1" dt="text" by="1422" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="329" it="0" lt="329" ts="1507534635589" s="true" lb="getuser-获取用户信息" rc="200" rm="" tn="学员奖品中心 1-1" dt="text" by="1093" sby="253" ng="1" na="1">
+  <assertionResult>
+    <name>BSF Assertion(code或数据异常)</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/app-student/v1/sec/users/student</java.net.URL>
+</httpSample>
+<httpSample t="124" it="0" lt="124" ts="1507534636278" s="true" lb="获取学员奖品列表" rc="200" rm="" tn="学员奖品中心 1-1" dt="text" by="5855" sby="310" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/awardsList?orderType=default&amp;upOrDown=up&amp;page=1&amp;pageSize=10&amp;roleType=learner</java.net.URL>
+</httpSample>
+<httpSample t="117" it="0" lt="117" ts="1507534636431" s="true" lb="学员获取奖品详情" rc="200" rm="" tn="学员奖品中心 1-1" dt="text" by="1275" sby="264" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/awards?id=136&amp;roleType=learner</java.net.URL>
+</httpSample>
+<httpSample t="225" it="0" lt="225" ts="1507534636550" s="true" lb="学生奖品加入心愿单" rc="200" rm="" tn="学员奖品中心 1-1" dt="" by="250" sby="355" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;roleType&quot;:&quot;learner&quot;,&#xd;
+	&quot;prizeId&quot;:&quot;15&quot;,&#xd;
+	&quot;consumeCount&quot;:1,&#xd;
+	&quot;userContactInfo&quot;:&quot;123&quot;&#xd;
+	}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/addWish</java.net.URL>
+</httpSample>
+<httpSample t="118" it="0" lt="118" ts="1507534636777" s="true" lb="学生心愿单列表" rc="200" rm="" tn="学员奖品中心 1-1" dt="text" by="4728" sby="269" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/getUserWishLists?page=1&amp;pagesize=10</java.net.URL>
+</httpSample>
+<httpSample t="346" it="0" lt="345" ts="1507534636898" s="true" lb="获取学员当前芝士币" rc="200" rm="" tn="学员奖品中心 1-1" dt="text" by="600" sby="299" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/user-profile/v1/sec/users/cheesecoins/log?identity=student&amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="396" it="0" lt="395" ts="1507534637294" s="true" lb="getToken" rc="200" rm="" tn="教师奖品中心 2-1" dt="text" by="1787" sby="293" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1507534637690" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="教师奖品中心 2-1" dt="text" by="1422" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="104" it="0" lt="104" ts="1507534637692" s="true" lb="getuser-获取用户信息" rc="200" rm="" tn="教师奖品中心 2-1" dt="text" by="1093" sby="253" ng="1" na="1">
+  <assertionResult>
+    <name>BSF Assertion(code或数据异常)</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/app-student/v1/sec/users/student</java.net.URL>
+</httpSample>
+<httpSample t="116" it="0" lt="116" ts="1507534637855" s="true" lb="获取教师奖品列表" rc="200" rm="" tn="教师奖品中心 2-1" dt="text" by="6125" sby="310" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/awardsList?orderType=default&amp;upOrDown=up&amp;page=1&amp;pageSize=10&amp;roleType=trainer</java.net.URL>
+</httpSample>
+<httpSample t="96" it="0" lt="96" ts="1507534637990" s="true" lb="教师奖品详情" rc="200" rm="" tn="教师奖品中心 2-1" dt="text" by="930" sby="263" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/awards?id=18&amp;roleType=trainer</java.net.URL>
+</httpSample>
+<httpSample t="100" it="0" lt="100" ts="1507534638089" s="true" lb="教师奖品加入心愿单" rc="200" rm="" tn="教师奖品中心 2-1" dt="" by="250" sby="356" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;roleType&quot;:&quot;learner&quot;,&#xd;
+	&quot;prizeId&quot;:&quot;136&quot;,&#xd;
+	&quot;consumeCount&quot;:1,&#xd;
+	&quot;userContactInfo&quot;:&quot;123&quot;&#xd;
+	}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/addWish</java.net.URL>
+</httpSample>
+<httpSample t="125" it="0" lt="125" ts="1507534638192" s="true" lb="教师心愿单列表" rc="200" rm="" tn="教师奖品中心 2-1" dt="text" by="4728" sby="269" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/getUserWishLists?page=1&amp;pagesize=10</java.net.URL>
+</httpSample>
+<httpSample t="128" it="0" lt="128" ts="1507534638322" s="true" lb="获取教师当前芝士币" rc="200" rm="" tn="教师奖品中心 2-1" dt="text" by="594" sby="299" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/user-profile/v1/sec/users/cheesecoins/log?identity=teacher&amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+
+<httpSample t="1072" it="0" lt="1039" ts="1507534640789" s="true" lb="getToken" rc="200" rm="" tn="exchange讲师奖品兑换 1-1" dt="text" by="1568" sby="293" ng="1" na="1">
+  <sample t="2" it="0" lt="0" ts="1507534641859" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange讲师奖品兑换 1-1" dt="text" by="1203" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="148" it="0" lt="147" ts="1507534641879" s="true" lb="exchange正确性校验" rc="200" rm="" tn="exchange讲师奖品兑换 1-1" dt="" by="1773" sby="402" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534642026" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange讲师奖品兑换 1-1" dt="text" by="1523" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot;trainer&quot;,	&#xd;
+    &quot;prizeId&quot;: 136,		     &#xd;
+    &quot;consumeCount&quot;: 1,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}&#xd;
+</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="100" it="0" lt="100" ts="1507534642030" s="true" lb="exchange-roleType为learner" rc="500" rm="" tn="exchange讲师奖品兑换 1-1" dt="text" by="2035" sby="400" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534642130" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange讲师奖品兑换 1-1" dt="text" by="1529" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot;learner&quot;,	&#xd;
+    &quot;prizeId&quot;: 136,		     &#xd;
+    &quot;consumeCount&quot;: 1,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="98" it="0" lt="97" ts="1507534642132" s="true" lb="exchange-roleType为空" rc="500" rm="" tn="exchange讲师奖品兑换 1-1" dt="text" by="2023" sby="393" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534642229" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange讲师奖品兑换 1-1" dt="text" by="1517" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot;&quot;,	&#xd;
+    &quot;prizeId&quot;: 136,		     &#xd;
+    &quot;consumeCount&quot;: 1,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="102" it="0" lt="102" ts="1507534642231" s="true" lb="exchange-roleType为空格" rc="500" rm="" tn="exchange讲师奖品兑换 1-1" dt="text" by="2026" sby="394" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534642333" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange讲师奖品兑换 1-1" dt="text" by="1520" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot; &quot;,	&#xd;
+    &quot;prizeId&quot;: 136,		     &#xd;
+    &quot;consumeCount&quot;: 1,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="97" it="0" lt="97" ts="1507534642334" s="true" lb="exchange-roleType为中文" rc="500" rm="" tn="exchange讲师奖品兑换 1-1" dt="text" by="2029" sby="395" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534642431" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange讲师奖品兑换 1-1" dt="text" by="1523" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot;教师&quot;,	&#xd;
+    &quot;prizeId&quot;: 136,		     &#xd;
+    &quot;consumeCount&quot;: 1,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="105" it="0" lt="104" ts="1507534642432" s="true" lb="exchange-roleType为英文" rc="500" rm="" tn="exchange讲师奖品兑换 1-1" dt="text" by="2029" sby="397" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534642536" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange讲师奖品兑换 1-1" dt="text" by="1523" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot;role&quot;,	&#xd;
+    &quot;prizeId&quot;: 136,		     &#xd;
+    &quot;consumeCount&quot;: 1,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="99" it="0" lt="96" ts="1507534642537" s="true" lb="exchange-roleType为标点符号" rc="500" rm="" tn="exchange讲师奖品兑换 1-1" dt="text" by="2030" sby="394" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534642635" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange讲师奖品兑换 1-1" dt="text" by="1524" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot;,&quot;,	&#xd;
+    &quot;prizeId&quot;: 136,		     &#xd;
+    &quot;consumeCount&quot;: 1,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="100" it="0" lt="99" ts="1507534642638" s="true" lb="exchange-roleType为数学符号" rc="500" rm="" tn="exchange讲师奖品兑换 1-1" dt="text" by="2030" sby="394" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534642738" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange讲师奖品兑换 1-1" dt="text" by="1524" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot;+&quot;,	&#xd;
+    &quot;prizeId&quot;: 136,		     &#xd;
+    &quot;consumeCount&quot;: 1,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="99" it="0" lt="98" ts="1507534642740" s="true" lb="exchange-roleType为特殊符号" rc="500" rm="" tn="exchange讲师奖品兑换 1-1" dt="text" by="2030" sby="394" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534642838" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange讲师奖品兑换 1-1" dt="text" by="1524" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot;*&quot;,	&#xd;
+    &quot;prizeId&quot;: 136,		     &#xd;
+    &quot;consumeCount&quot;: 1,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="219" it="0" lt="218" ts="1507534642841" s="true" lb="exchange-prizeId为空" rc="500" rm="" tn="exchange讲师奖品兑换 1-1" dt="text" by="2041" sby="399" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534643059" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange讲师奖品兑换 1-1" dt="text" by="1522" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot;trainer&quot;,	&#xd;
+    &quot;prizeId&quot;: &quot;&quot;,		     &#xd;
+    &quot;consumeCount&quot;: 1,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="112" it="0" lt="112" ts="1507534643062" s="true" lb="exchange-prizeId为空格" rc="500" rm="" tn="exchange讲师奖品兑换 1-1" dt="text" by="2043" sby="400" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534643174" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange讲师奖品兑换 1-1" dt="text" by="1524" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot;trainer&quot;,	&#xd;
+    &quot;prizeId&quot;: &quot; &quot;,		     &#xd;
+    &quot;consumeCount&quot;: 1,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="100" it="0" lt="98" ts="1507534643177" s="true" lb="exchange-prizeId为中文" rc="400" rm="" tn="exchange讲师奖品兑换 1-1" dt="text" by="2687" sby="403" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534643276" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange讲师奖品兑换 1-1" dt="text" by="1530" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot;trainer&quot;,	&#xd;
+    &quot;prizeId&quot;: &quot;奖品Id&quot;,		     &#xd;
+    &quot;consumeCount&quot;: 1,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="100" it="0" lt="99" ts="1507534643280" s="true" lb="exchange-prizeId为英文" rc="400" rm="" tn="exchange讲师奖品兑换 1-1" dt="text" by="2688" sby="404" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534643379" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange讲师奖品兑换 1-1" dt="text" by="1529" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot;trainer&quot;,	&#xd;
+    &quot;prizeId&quot;: &quot;prize&quot;,		     &#xd;
+    &quot;consumeCount&quot;: 1,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="105" it="0" lt="104" ts="1507534643382" s="true" lb="exchange-prizeId为标点符号" rc="400" rm="" tn="exchange讲师奖品兑换 1-1" dt="text" by="2678" sby="400" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534643487" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange讲师奖品兑换 1-1" dt="text" by="1529" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot;trainer&quot;,	&#xd;
+    &quot;prizeId&quot;: &quot;.&quot;,		     &#xd;
+    &quot;consumeCount&quot;: 1,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="110" it="0" lt="106" ts="1507534643491" s="true" lb="exchange-prizeId为数学符号" rc="400" rm="" tn="exchange讲师奖品兑换 1-1" dt="text" by="2678" sby="400" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534643601" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange讲师奖品兑换 1-1" dt="text" by="1529" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot;trainer&quot;,	&#xd;
+    &quot;prizeId&quot;: &quot;-&quot;,		     &#xd;
+    &quot;consumeCount&quot;: 1,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="101" it="0" lt="100" ts="1507534643603" s="true" lb="exchange-prizeId为特殊符号" rc="400" rm="" tn="exchange讲师奖品兑换 1-1" dt="text" by="2680" sby="400" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534643704" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange讲师奖品兑换 1-1" dt="text" by="1529" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot;trainer&quot;,	&#xd;
+    &quot;prizeId&quot;: &quot;$&quot;,		     &#xd;
+    &quot;consumeCount&quot;: 1,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="95" it="0" lt="94" ts="1507534643707" s="true" lb="exchange-consumeCount为空" rc="500" rm="" tn="exchange讲师奖品兑换 1-1" dt="text" by="2048" sby="401" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534643802" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange讲师奖品兑换 1-1" dt="text" by="1529" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot;trainer&quot;,	&#xd;
+    &quot;prizeId&quot;: 136,		     &#xd;
+    &quot;consumeCount&quot;: &quot;&quot;,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="95" it="0" lt="95" ts="1507534643804" s="true" lb="exchange-consumeCount为空格" rc="500" rm="" tn="exchange讲师奖品兑换 1-1" dt="text" by="2051" sby="402" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534643899" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange讲师奖品兑换 1-1" dt="text" by="1532" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot;trainer&quot;,	&#xd;
+    &quot;prizeId&quot;: 136,		     &#xd;
+    &quot;consumeCount&quot;: &quot; &quot;,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="98" it="0" lt="98" ts="1507534643901" s="true" lb="exchange-consumeCount为中文" rc="400" rm="" tn="exchange讲师奖品兑换 1-1" dt="text" by="2698" sby="403" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534643999" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange讲师奖品兑换 1-1" dt="text" by="1535" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot;trainer&quot;,	&#xd;
+    &quot;prizeId&quot;: 136,		     &#xd;
+    &quot;consumeCount&quot;: &quot;数量&quot;,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="94" it="0" lt="94" ts="1507534644003" s="true" lb="exchange-consumeCount为英文" rc="400" rm="" tn="exchange讲师奖品兑换 1-1" dt="text" by="2703" sby="406" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534644097" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange讲师奖品兑换 1-1" dt="text" by="1536" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot;trainer&quot;,	&#xd;
+    &quot;prizeId&quot;: 136,		     &#xd;
+    &quot;consumeCount&quot;: &quot;count&quot;,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="106" it="0" lt="105" ts="1507534644100" s="true" lb="exchange-consumeCount为标点符号" rc="400" rm="" tn="exchange讲师奖品兑换 1-1" dt="text" by="2697" sby="402" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534644206" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange讲师奖品兑换 1-1" dt="text" by="1536" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot;trainer&quot;,	&#xd;
+    &quot;prizeId&quot;: 136,		     &#xd;
+    &quot;consumeCount&quot;: &quot;?&quot;,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="109" it="0" lt="108" ts="1507534644208" s="true" lb="exchange-consumeCount为数学符号" rc="400" rm="" tn="exchange讲师奖品兑换 1-1" dt="text" by="2697" sby="402" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534644316" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange讲师奖品兑换 1-1" dt="text" by="1536" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot;trainer&quot;,	&#xd;
+    &quot;prizeId&quot;: 136,		     &#xd;
+    &quot;consumeCount&quot;: &quot;/&quot;,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="108" it="0" lt="107" ts="1507534644319" s="true" lb="exchange-consumeCount为特殊符号" rc="400" rm="" tn="exchange讲师奖品兑换 1-1" dt="text" by="2695" sby="402" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534644426" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange讲师奖品兑换 1-1" dt="text" by="1536" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot;trainer&quot;,	&#xd;
+    &quot;prizeId&quot;: 136,		     &#xd;
+    &quot;consumeCount&quot;: &quot;&amp;&quot;,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="404" it="0" lt="403" ts="1507534644451" s="true" lb="getToken" rc="200" rm="" tn="learner/awards学生端已兑换奖品列表 2-1" dt="text" by="1582" sby="293" ng="1" na="1">
+  <sample t="1" it="0" lt="0" ts="1507534644854" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="learner/awards学生端已兑换奖品列表 2-1" dt="text" by="1217" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="111" it="0" lt="111" ts="1507534644858" s="true" lb="learner/awards正确性校验" rc="200" rm="" tn="learner/awards学生端已兑换奖品列表 2-1" dt="text" by="2189" sby="277" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534644969" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="learner/awards学生端已兑换奖品列表 2-1" dt="text" by="1409" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/exchanged/awards?page=1&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="100" it="0" lt="99" ts="1507534644972" s="true" lb="learner/awards-page为空" rc="200" rm="" tn="learner/awards学生端已兑换奖品列表 2-1" dt="text" by="2188" sby="276" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534645071" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="learner/awards学生端已兑换奖品列表 2-1" dt="text" by="1408" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/exchanged/awards?page=&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="3" it="0" lt="0" ts="1507534645074" s="true" lb="learner/awards-page为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 77: https://staging.zhishinet.com/api/award/v1/sec/learner/exchanged/awards?page= &amp;pageSize=10" tn="learner/awards学生端已兑换奖品列表 2-1" dt="text" by="2511" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534645077" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="learner/awards学生端已兑换奖品列表 2-1" dt="text" by="1411" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/exchanged/awards?page= &amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="100" it="0" lt="99" ts="1507534645080" s="true" lb="learner/awards-page为a-z的字符串" rc="400" rm="" tn="learner/awards学生端已兑换奖品列表 2-1" dt="text" by="2094" sby="280" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534645179" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="learner/awards学生端已兑换奖品列表 2-1" dt="text" by="1421" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/exchanged/awards?page=page&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="93" it="0" lt="92" ts="1507534645182" s="true" lb="learner/awards-page为中文" rc="400" rm="" tn="learner/awards学生端已兑换奖品列表 2-1" dt="text" by="2089" sby="294" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534645275" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="learner/awards学生端已兑换奖品列表 2-1" dt="text" by="1414" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/exchanged/awards?page=页码&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="101" it="0" lt="101" ts="1507534645277" s="true" lb="learner/awards-page为数学符号" rc="400" rm="" tn="learner/awards学生端已兑换奖品列表 2-1" dt="text" by="2085" sby="277" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534645378" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="learner/awards学生端已兑换奖品列表 2-1" dt="text" by="1415" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/exchanged/awards?page=-&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="95" it="0" lt="94" ts="1507534645382" s="true" lb="learner/awards-page为特殊符号" rc="400" rm="" tn="learner/awards学生端已兑换奖品列表 2-1" dt="text" by="2085" sby="277" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534645477" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="learner/awards学生端已兑换奖品列表 2-1" dt="text" by="1415" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/exchanged/awards?page=*&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="95" it="0" lt="94" ts="1507534645479" s="true" lb="learner/awards-page为标点符号" rc="400" rm="" tn="learner/awards学生端已兑换奖品列表 2-1" dt="text" by="2085" sby="277" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534645573" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="learner/awards学生端已兑换奖品列表 2-1" dt="text" by="1415" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/exchanged/awards?page=?&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="119" it="0" lt="118" ts="1507534645576" s="true" lb="learner/awards-pageSize为空" rc="200" rm="" tn="learner/awards学生端已兑换奖品列表 2-1" dt="text" by="2191" sby="275" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534645695" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="learner/awards学生端已兑换奖品列表 2-1" dt="text" by="1411" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/exchanged/awards?page=1&amp;pageSize=</java.net.URL>
+</httpSample>
+<httpSample t="2" it="0" lt="0" ts="1507534645697" s="true" lb="learner/awards-pageSize为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 88: https://staging.zhishinet.com/api/award/v1/sec/learner/exchanged/awards?page=1&amp;pageSize= " tn="learner/awards学生端已兑换奖品列表 2-1" dt="text" by="2513" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534645698" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="learner/awards学生端已兑换奖品列表 2-1" dt="text" by="1414" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/exchanged/awards?page=1&amp;pageSize= </java.net.URL>
+</httpSample>
+<httpSample t="95" it="0" lt="94" ts="1507534645701" s="true" lb="learner/awards-pageSize为a-z的字符串" rc="400" rm="" tn="learner/awards学生端已兑换奖品列表 2-1" dt="text" by="2097" sby="279" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534645796" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="learner/awards学生端已兑换奖品列表 2-1" dt="text" by="1424" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/exchanged/awards?page=1&amp;pageSize=test</java.net.URL>
+</httpSample>
+<httpSample t="91" it="0" lt="90" ts="1507534645798" s="true" lb="learner/awards-pageSize为中文" rc="400" rm="" tn="learner/awards学生端已兑换奖品列表 2-1" dt="text" by="2091" sby="293" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534645890" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="learner/awards学生端已兑换奖品列表 2-1" dt="text" by="1416" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/exchanged/awards?page=1&amp;pageSize=页数</java.net.URL>
+</httpSample>
+<httpSample t="91" it="0" lt="90" ts="1507534645892" s="true" lb="learner/awards-pageSize为数学符号" rc="400" rm="" tn="learner/awards学生端已兑换奖品列表 2-1" dt="text" by="2088" sby="276" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534645982" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="learner/awards学生端已兑换奖品列表 2-1" dt="text" by="1418" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/exchanged/awards?page=1&amp;pageSize=-</java.net.URL>
+</httpSample>
+<httpSample t="92" it="0" lt="91" ts="1507534645985" s="true" lb="learner/awards-pageSize为特殊符号" rc="400" rm="" tn="learner/awards学生端已兑换奖品列表 2-1" dt="text" by="2088" sby="276" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534646076" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="learner/awards学生端已兑换奖品列表 2-1" dt="text" by="1418" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/exchanged/awards?page=1&amp;pageSize=*</java.net.URL>
+</httpSample>
+<httpSample t="95" it="0" lt="94" ts="1507534646079" s="true" lb="learner/awards-pageSize为标点符号" rc="400" rm="" tn="learner/awards学生端已兑换奖品列表 2-1" dt="text" by="2088" sby="276" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534646174" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="learner/awards学生端已兑换奖品列表 2-1" dt="text" by="1418" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/exchanged/awards?page=1&amp;pageSize=!</java.net.URL>
+</httpSample>
+<httpSample t="425" it="0" lt="424" ts="1507534646198" s="true" lb="getToken" rc="200" rm="" tn="trainer/awards讲师奖品已兑换列表 3-1" dt="text" by="1580" sby="293" ng="1" na="1">
+  <sample t="1" it="0" lt="0" ts="1507534646622" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="trainer/awards讲师奖品已兑换列表 3-1" dt="text" by="1215" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="114" it="0" lt="114" ts="1507534646625" s="true" lb="trainer/awards正确性校验" rc="200" rm="" tn="trainer/awards讲师奖品已兑换列表 3-1" dt="text" by="2561" sby="277" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534646739" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="trainer/awards讲师奖品已兑换列表 3-1" dt="text" by="1408" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/exchanged/awards?page=1&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="113" it="0" lt="112" ts="1507534646741" s="true" lb="trainer/awards-page为空" rc="200" rm="" tn="trainer/awards讲师奖品已兑换列表 3-1" dt="text" by="2559" sby="276" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534646854" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="trainer/awards讲师奖品已兑换列表 3-1" dt="text" by="1406" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/exchanged/awards?page=&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="2" it="0" lt="0" ts="1507534646856" s="true" lb="trainer/awards-page为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 77: https://staging.zhishinet.com/api/award/v1/sec/trainer/exchanged/awards?page= &amp;pageSize=10" tn="trainer/awards讲师奖品已兑换列表 3-1" dt="text" by="2509" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534646857" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="trainer/awards讲师奖品已兑换列表 3-1" dt="text" by="1409" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/exchanged/awards?page= &amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="106" it="0" lt="105" ts="1507534646860" s="true" lb="trainer/awards-page为a-z的字符串" rc="400" rm="" tn="trainer/awards讲师奖品已兑换列表 3-1" dt="text" by="2092" sby="280" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534646966" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="trainer/awards讲师奖品已兑换列表 3-1" dt="text" by="1419" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/exchanged/awards?page=test&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="99" it="0" lt="98" ts="1507534646968" s="true" lb="trainer/awards-page为中文" rc="400" rm="" tn="trainer/awards讲师奖品已兑换列表 3-1" dt="text" by="2087" sby="294" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534647067" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="trainer/awards讲师奖品已兑换列表 3-1" dt="text" by="1412" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/exchanged/awards?page=测试&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="99" it="0" lt="98" ts="1507534647069" s="true" lb="trainer/awards-page为数学符号" rc="400" rm="" tn="trainer/awards讲师奖品已兑换列表 3-1" dt="text" by="2082" sby="277" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534647167" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="trainer/awards讲师奖品已兑换列表 3-1" dt="text" by="1413" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/exchanged/awards?page=+&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="118" it="0" lt="117" ts="1507534647168" s="true" lb="trainer/awards-page为特殊符号" rc="200" rm="" tn="trainer/awards讲师奖品已兑换列表 3-1" dt="text" by="2566" sby="277" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534647286" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="trainer/awards讲师奖品已兑换列表 3-1" dt="text" by="1413" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/exchanged/awards?page=&amp;&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="95" it="0" lt="94" ts="1507534647288" s="true" lb="trainer/awards-page为标点符号" rc="400" rm="" tn="trainer/awards讲师奖品已兑换列表 3-1" dt="text" by="2083" sby="277" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534647382" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="trainer/awards讲师奖品已兑换列表 3-1" dt="text" by="1413" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/exchanged/awards?page=,&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="102" it="0" lt="102" ts="1507534647384" s="true" lb="trainer/awards-pageSize为空" rc="200" rm="" tn="trainer/awards讲师奖品已兑换列表 3-1" dt="text" by="2562" sby="275" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534647486" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="trainer/awards讲师奖品已兑换列表 3-1" dt="text" by="1409" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/exchanged/awards?page=1&amp;pageSize=</java.net.URL>
+</httpSample>
+<httpSample t="2" it="0" lt="0" ts="1507534647488" s="true" lb="trainer/awards-pageSize为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 88: https://staging.zhishinet.com/api/award/v1/sec/trainer/exchanged/awards?page=1&amp;pageSize= " tn="trainer/awards讲师奖品已兑换列表 3-1" dt="text" by="2511" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534647489" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="trainer/awards讲师奖品已兑换列表 3-1" dt="text" by="1412" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/exchanged/awards?page=1&amp;pageSize= </java.net.URL>
+</httpSample>
+<httpSample t="95" it="0" lt="94" ts="1507534647492" s="true" lb="trainer/awards-pageSize为a-z的字符串" rc="400" rm="" tn="trainer/awards讲师奖品已兑换列表 3-1" dt="text" by="2095" sby="279" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534647586" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="trainer/awards讲师奖品已兑换列表 3-1" dt="text" by="1422" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/exchanged/awards?page=1&amp;pageSize=test</java.net.URL>
+</httpSample>
+<httpSample t="103" it="0" lt="103" ts="1507534647589" s="true" lb="trainer/awards-pageSize为中文" rc="400" rm="" tn="trainer/awards讲师奖品已兑换列表 3-1" dt="text" by="2090" sby="293" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534647692" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="trainer/awards讲师奖品已兑换列表 3-1" dt="text" by="1415" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/exchanged/awards?page=1&amp;pageSize=页数</java.net.URL>
+</httpSample>
+<httpSample t="104" it="0" lt="103" ts="1507534647694" s="true" lb="trainer/awards-pageSize为数学符号" rc="400" rm="" tn="trainer/awards讲师奖品已兑换列表 3-1" dt="text" by="2086" sby="276" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534647797" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="trainer/awards讲师奖品已兑换列表 3-1" dt="text" by="1416" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/exchanged/awards?page=1&amp;pageSize=-</java.net.URL>
+</httpSample>
+<httpSample t="96" it="0" lt="96" ts="1507534647799" s="true" lb="trainer/awards-pageSize为特殊符号" rc="400" rm="" tn="trainer/awards讲师奖品已兑换列表 3-1" dt="text" by="2086" sby="276" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534647895" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="trainer/awards讲师奖品已兑换列表 3-1" dt="text" by="1416" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/exchanged/awards?page=1&amp;pageSize=*</java.net.URL>
+</httpSample>
+<httpSample t="101" it="0" lt="100" ts="1507534647897" s="true" lb="trainer/awards-pageSize为标点符号" rc="400" rm="" tn="trainer/awards讲师奖品已兑换列表 3-1" dt="text" by="2086" sby="276" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534647998" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="trainer/awards讲师奖品已兑换列表 3-1" dt="text" by="1416" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/trainer/exchanged/awards?page=1&amp;pageSize=!</java.net.URL>
+</httpSample>
+<httpSample t="404" it="0" lt="403" ts="1507534648010" s="true" lb="getToken" rc="200" rm="" tn="getUserWishLists-用户心愿单 4-1" dt="text" by="1575" sby="293" ng="1" na="1">
+  <sample t="1" it="0" lt="0" ts="1507534648413" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getUserWishLists-用户心愿单 4-1" dt="text" by="1210" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="113" it="0" lt="112" ts="1507534648415" s="true" lb="getUserWishLists-用户心愿单-组合正确性验证" rc="200" rm="" tn="getUserWishLists-用户心愿单 4-1" dt="text" by="6141" sby="269" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534648527" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getUserWishLists-用户心愿单 4-1" dt="text" by="1413" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/getUserWishLists?page=1&amp;pagesize=10</java.net.URL>
+</httpSample>
+<httpSample t="112" it="0" lt="111" ts="1507534648531" s="true" lb="getUserWishLists-用户心愿单-page为空" rc="200" rm="" tn="getUserWishLists-用户心愿单 4-1" dt="text" by="6174" sby="268" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534648642" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getUserWishLists-用户心愿单 4-1" dt="text" by="1446" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/getUserWishLists?page=&amp;pagesize=10</java.net.URL>
+</httpSample>
+<httpSample t="95" it="0" lt="94" ts="1507534648644" s="true" lb="getUserWishLists-用户心愿单-page为英文" rc="400" rm="" tn="getUserWishLists-用户心愿单 4-1" dt="text" by="2116" sby="272" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534648739" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getUserWishLists-用户心愿单 4-1" dt="text" by="1451" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/getUserWishLists?page=test&amp;pagesize=10</java.net.URL>
+</httpSample>
+<httpSample t="115" it="0" lt="114" ts="1507534648740" s="true" lb="getUserWishLists-用户心愿单-page为中文" rc="400" rm="" tn="getUserWishLists-用户心愿单 4-1" dt="text" by="2119" sby="286" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534648854" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getUserWishLists-用户心愿单 4-1" dt="text" by="1452" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/getUserWishLists?page=测试&amp;pagesize=10</java.net.URL>
+</httpSample>
+<httpSample t="94" it="0" lt="94" ts="1507534648856" s="true" lb="getUserWishLists-用户心愿单-page为特殊字符" rc="400" rm="" tn="getUserWishLists-用户心愿单 4-1" dt="text" by="2114" sby="269" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534648950" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getUserWishLists-用户心愿单 4-1" dt="text" by="1452" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/getUserWishLists?page=*&amp;pagesize=10</java.net.URL>
+</httpSample>
+<httpSample t="98" it="0" lt="97" ts="1507534648952" s="true" lb="getUserWishLists-用户心愿单-page为数学符号" rc="400" rm="" tn="getUserWishLists-用户心愿单 4-1" dt="text" by="2114" sby="269" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534649050" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getUserWishLists-用户心愿单 4-1" dt="text" by="1453" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/getUserWishLists?page=+&amp;pagesize=10</java.net.URL>
+</httpSample>
+<httpSample t="98" it="0" lt="96" ts="1507534649051" s="true" lb="getUserWishLists-用户心愿单-page为标点符号" rc="400" rm="" tn="getUserWishLists-用户心愿单 4-1" dt="text" by="2118" sby="277" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534649148" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getUserWishLists-用户心愿单 4-1" dt="text" by="1454" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/getUserWishLists?page=？&amp;pagesize=10</java.net.URL>
+</httpSample>
+<httpSample t="131" it="0" lt="130" ts="1507534649150" s="true" lb="getUserWishLists-用户心愿单-pagesize为标点符号" rc="200" rm="" tn="getUserWishLists-用户心愿单 4-1" dt="text" by="6185" sby="276" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534649281" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getUserWishLists-用户心愿单 4-1" dt="text" by="1457" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/getUserWishLists?page=1&amp;pagesize=？</java.net.URL>
+</httpSample>
+<httpSample t="120" it="0" lt="119" ts="1507534649283" s="true" lb="getUserWishLists-用户心愿单-pagesize为特殊符号" rc="200" rm="" tn="getUserWishLists-用户心愿单 4-1" dt="text" by="6184" sby="268" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534649403" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getUserWishLists-用户心愿单 4-1" dt="text" by="1456" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/getUserWishLists?page=1&amp;pagesize=*</java.net.URL>
+</httpSample>
+<httpSample t="111" it="0" lt="110" ts="1507534649405" s="true" lb="getUserWishLists-用户心愿单-pagesize为数学符号" rc="200" rm="" tn="getUserWishLists-用户心愿单 4-1" dt="text" by="6184" sby="268" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534649516" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getUserWishLists-用户心愿单 4-1" dt="text" by="1456" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/getUserWishLists?page=1&amp;pagesize=+</java.net.URL>
+</httpSample>
+<httpSample t="106" it="0" lt="106" ts="1507534649517" s="true" lb="getUserWishLists-用户心愿单-pagesize为空" rc="200" rm="" tn="getUserWishLists-用户心愿单 4-1" dt="text" by="6182" sby="267" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534649623" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getUserWishLists-用户心愿单 4-1" dt="text" by="1448" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/getUserWishLists?page=1&amp;pagesize=</java.net.URL>
+</httpSample>
+<httpSample t="114" it="0" lt="114" ts="1507534649625" s="true" lb="getUserWishLists-用户心愿单-pagesize为中文" rc="200" rm="" tn="getUserWishLists-用户心愿单 4-1" dt="text" by="6183" sby="285" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534649739" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getUserWishLists-用户心愿单 4-1" dt="text" by="1455" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/getUserWishLists?page=1&amp;pagesize=测试</java.net.URL>
+</httpSample>
+<httpSample t="108" it="0" lt="108" ts="1507534649740" s="true" lb="getUserWishLists-用户心愿单-pagesize为英文" rc="200" rm="" tn="getUserWishLists-用户心愿单 4-1" dt="text" by="6183" sby="271" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534649848" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getUserWishLists-用户心愿单 4-1" dt="text" by="1455" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/getUserWishLists?page=1&amp;pagesize=test</java.net.URL>
+</httpSample>
+<httpSample t="432" it="0" lt="431" ts="1507534649861" s="true" lb="getToken" rc="200" rm="" tn="addWish-奖品加入心愿单 5-1" dt="text" by="1570" sby="293" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1507534650293" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="addWish-奖品加入心愿单 5-1" dt="text" by="1205" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="107" it="0" lt="106" ts="1507534650303" s="true" lb="addWish-奖品加入心愿单-组合正确性验证" rc="200" rm="" tn="addWish-奖品加入心愿单 5-1" dt="" by="1749" sby="356" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534650409" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="addWish-奖品加入心愿单 5-1" dt="text" by="1499" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;roleType&quot;:&quot;learner&quot;,&#xd;
+	&quot;prizeId&quot;:&quot;136&quot;,&#xd;
+	&quot;consumeCount&quot;:1,&#xd;
+	&quot;userContactInfo&quot;:&quot;123&quot;&#xd;
+	}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/addWish</java.net.URL>
+</httpSample>
+<httpSample t="100" it="0" lt="99" ts="1507534650411" s="true" lb="addWish-奖品加入心愿单-roleType为空" rc="200" rm="" tn="addWish-奖品加入心愿单 5-1" dt="" by="1739" sby="349" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534650511" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="addWish-奖品加入心愿单 5-1" dt="text" by="1489" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;roleType&quot;:&quot;&quot;,&#xd;
+	&quot;prizeId&quot;:&quot;136&quot;,&#xd;
+	&quot;consumeCount&quot;:1,&#xd;
+	&quot;userContactInfo&quot;:&quot;123&quot;&#xd;
+	}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/addWish</java.net.URL>
+</httpSample>
+<httpSample t="101" it="0" lt="100" ts="1507534650513" s="true" lb="addWish-奖品加入心愿单-roleType为中文" rc="200" rm="" tn="addWish-奖品加入心愿单 5-1" dt="" by="1746" sby="351" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534650613" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="addWish-奖品加入心愿单 5-1" dt="text" by="1496" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;roleType&quot;:&quot;测试&quot;,&#xd;
+	&quot;prizeId&quot;:&quot;136&quot;,&#xd;
+	&quot;consumeCount&quot;:1,&#xd;
+	&quot;userContactInfo&quot;:&quot;123&quot;&#xd;
+	}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/addWish</java.net.URL>
+</httpSample>
+<httpSample t="106" it="0" lt="106" ts="1507534650615" s="true" lb="addWish-奖品加入心愿单-roleType为特殊符号" rc="200" rm="" tn="addWish-奖品加入心愿单 5-1" dt="" by="1745" sby="350" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534650721" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="addWish-奖品加入心愿单 5-1" dt="text" by="1495" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;roleType&quot;:&quot;&amp;&quot;,&#xd;
+	&quot;prizeId&quot;:&quot;136&quot;,&#xd;
+	&quot;consumeCount&quot;:1,&#xd;
+	&quot;userContactInfo&quot;:&quot;123&quot;&#xd;
+	}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/addWish</java.net.URL>
+</httpSample>
+<httpSample t="98" it="0" lt="97" ts="1507534650723" s="true" lb="addWish-奖品加入心愿单-prizeId为特殊符号" rc="400" rm="" tn="addWish-奖品加入心愿单 5-1" dt="text" by="2635" sby="354" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534650821" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="addWish-奖品加入心愿单 5-1" dt="text" by="1500" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;roleType&quot;:&quot;learner&quot;,&#xd;
+	&quot;prizeId&quot;:&quot;&amp;&quot;,&#xd;
+	&quot;consumeCount&quot;:1,&#xd;
+	&quot;userContactInfo&quot;:&quot;123&quot;&#xd;
+	}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/addWish</java.net.URL>
+</httpSample>
+<httpSample t="100" it="0" lt="99" ts="1507534650823" s="true" lb="addWish-奖品加入心愿单-prizeId为数学符号" rc="400" rm="" tn="addWish-奖品加入心愿单 5-1" dt="text" by="2635" sby="354" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534650923" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="addWish-奖品加入心愿单 5-1" dt="text" by="1500" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;roleType&quot;:&quot;learner&quot;,&#xd;
+	&quot;prizeId&quot;:&quot;+&quot;,&#xd;
+	&quot;consumeCount&quot;:1,&#xd;
+	&quot;userContactInfo&quot;:&quot;123&quot;&#xd;
+	}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/addWish</java.net.URL>
+</httpSample>
+<httpSample t="108" it="0" lt="108" ts="1507534650925" s="true" lb="addWish-奖品加入心愿单-prizeId为标点符号" rc="400" rm="" tn="addWish-奖品加入心愿单 5-1" dt="text" by="2636" sby="354" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534651033" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="addWish-奖品加入心愿单 5-1" dt="text" by="1501" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;roleType&quot;:&quot;learner&quot;,&#xd;
+	&quot;prizeId&quot;:&quot;？&quot;,&#xd;
+	&quot;consumeCount&quot;:1,&#xd;
+	&quot;userContactInfo&quot;:&quot;123&quot;&#xd;
+	}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/addWish</java.net.URL>
+</httpSample>
+<httpSample t="96" it="0" lt="95" ts="1507534651035" s="true" lb="addWish-奖品加入心愿单-prizeId为中文" rc="400" rm="" tn="addWish-奖品加入心愿单 5-1" dt="text" by="2636" sby="355" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534651131" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="addWish-奖品加入心愿单 5-1" dt="text" by="1499" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;roleType&quot;:&quot;learner&quot;,&#xd;
+	&quot;prizeId&quot;:&quot;测试&quot;,&#xd;
+	&quot;consumeCount&quot;:1,&#xd;
+	&quot;userContactInfo&quot;:&quot;123&quot;&#xd;
+	}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/addWish</java.net.URL>
+</httpSample>
+<httpSample t="450" it="0" lt="450" ts="1507534651132" s="true" lb="addWish-奖品加入心愿单-prizeId为英文" rc="400" rm="" tn="addWish-奖品加入心愿单 5-1" dt="text" by="2640" sby="357" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534651582" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="addWish-奖品加入心愿单 5-1" dt="text" by="1499" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;roleType&quot;:&quot;learner&quot;,&#xd;
+	&quot;prizeId&quot;:&quot;test&quot;,&#xd;
+	&quot;consumeCount&quot;:1,&#xd;
+	&quot;userContactInfo&quot;:&quot;123&quot;&#xd;
+	}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/addWish</java.net.URL>
+</httpSample>
+<httpSample t="104" it="0" lt="103" ts="1507534651584" s="true" lb="addWish-奖品加入心愿单-prizeId为空" rc="500" rm="" tn="addWish-奖品加入心愿单 5-1" dt="text" by="1997" sby="353" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534651688" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="addWish-奖品加入心愿单 5-1" dt="text" by="1493" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;roleType&quot;:&quot;learner&quot;,&#xd;
+	&quot;prizeId&quot;:&quot;&quot;,&#xd;
+	&quot;consumeCount&quot;:1,&#xd;
+	&quot;userContactInfo&quot;:&quot;123&quot;&#xd;
+	}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/addWish</java.net.URL>
+</httpSample>
+<httpSample t="109" it="0" lt="109" ts="1507534651690" s="true" lb="addWish-奖品加入心愿单-consumeCount为空" rc="200" rm="" tn="addWish-奖品加入心愿单 5-1" dt="" by="1751" sby="356" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534651799" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="addWish-奖品加入心愿单 5-1" dt="text" by="1501" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;roleType&quot;:&quot;learner&quot;,&#xd;
+	&quot;prizeId&quot;:&quot;136&quot;,&#xd;
+	&quot;consumeCount&quot;:1,&#xd;
+	&quot;userContactInfo&quot;:&quot;123&quot;&#xd;
+	}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/addWish</java.net.URL>
+</httpSample>
+<httpSample t="104" it="0" lt="104" ts="1507534651800" s="true" lb="addWish-奖品加入心愿单-consumeCount为特殊字符" rc="400" rm="" tn="addWish-奖品加入心愿单 5-1" dt="text" by="2654" sby="360" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534651904" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="addWish-奖品加入心愿单 5-1" dt="text" by="1511" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;roleType&quot;:&quot;learner&quot;,&#xd;
+	&quot;prizeId&quot;:&quot;136&quot;,&#xd;
+	&quot;consumeCount&quot;:&quot;&amp;&quot;,  &#xd;
+	&quot;userContactInfo&quot;:&quot;123&quot;&#xd;
+	}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/addWish</java.net.URL>
+</httpSample>
+<httpSample t="219" it="0" lt="218" ts="1507534651906" s="true" lb="addWish-奖品加入心愿单-consumeCount为数学符号" rc="400" rm="" tn="addWish-奖品加入心愿单 5-1" dt="text" by="2654" sby="360" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534652125" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="addWish-奖品加入心愿单 5-1" dt="text" by="1509" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;roleType&quot;:&quot;learner&quot;,&#xd;
+	&quot;prizeId&quot;:&quot;136&quot;,&#xd;
+	&quot;consumeCount&quot;:&quot;+&quot;,  &#xd;
+	&quot;userContactInfo&quot;:&quot;123&quot;&#xd;
+	}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/addWish</java.net.URL>
+</httpSample>
+<httpSample t="98" it="0" lt="98" ts="1507534652126" s="true" lb="addWish-奖品加入心愿单-consumeCount为标点符号" rc="400" rm="" tn="addWish-奖品加入心愿单 5-1" dt="text" by="2655" sby="360" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534652224" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="addWish-奖品加入心愿单 5-1" dt="text" by="1512" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;roleType&quot;:&quot;learner&quot;,&#xd;
+	&quot;prizeId&quot;:&quot;136&quot;,&#xd;
+	&quot;consumeCount&quot;:&quot;？&quot;,  &#xd;
+	&quot;userContactInfo&quot;:&quot;123&quot;&#xd;
+	}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/addWish</java.net.URL>
+</httpSample>
+<httpSample t="98" it="0" lt="97" ts="1507534652226" s="true" lb="addWish-奖品加入心愿单-consumeCount为英文" rc="400" rm="" tn="addWish-奖品加入心愿单 5-1" dt="text" by="2661" sby="364" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534652323" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="addWish-奖品加入心愿单 5-1" dt="text" by="1510" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;roleType&quot;:&quot;learner&quot;,&#xd;
+	&quot;prizeId&quot;:&quot;136&quot;,&#xd;
+	&quot;consumeCount&quot;:&quot;test&quot;,  &#xd;
+	&quot;userContactInfo&quot;:&quot;123&quot;&#xd;
+	}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/addWish</java.net.URL>
+</httpSample>
+<httpSample t="103" it="0" lt="102" ts="1507534652325" s="true" lb="addWish-奖品加入心愿单-consumeCount为中文" rc="400" rm="" tn="addWish-奖品加入心愿单 5-1" dt="text" by="2657" sby="361" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534652427" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="addWish-奖品加入心愿单 5-1" dt="text" by="1510" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;roleType&quot;:&quot;learner&quot;,&#xd;
+	&quot;prizeId&quot;:&quot;136&quot;,&#xd;
+	&quot;consumeCount&quot;:&quot;测试&quot;,  &#xd;
+	&quot;userContactInfo&quot;:&quot;123&quot;&#xd;
+	}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/addWish</java.net.URL>
+</httpSample>
+<httpSample t="101" it="0" lt="101" ts="1507534652429" s="true" lb="addWish-奖品加入心愿单-userContactInfo为空" rc="200" rm="" tn="addWish-奖品加入心愿单 5-1" dt="" by="1753" sby="355" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534652530" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="addWish-奖品加入心愿单 5-1" dt="text" by="1503" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;roleType&quot;:&quot;learner&quot;,&#xd;
+	&quot;prizeId&quot;:&quot;136&quot;,&#xd;
+	&quot;consumeCount&quot;:1,  &#xd;
+	&quot;userContactInfo&quot;:&quot;&quot;&#xd;
+	}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/addWish</java.net.URL>
+</httpSample>
+<httpSample t="109" it="0" lt="109" ts="1507534652532" s="true" lb="addWish-奖品加入心愿单-userContactInfo为英文" rc="200" rm="" tn="addWish-奖品加入心愿单 5-1" dt="" by="1759" sby="359" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534652641" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="addWish-奖品加入心愿单 5-1" dt="text" by="1509" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;roleType&quot;:&quot;learner&quot;,&#xd;
+	&quot;prizeId&quot;:&quot;136&quot;,&#xd;
+	&quot;consumeCount&quot;:1,  &#xd;
+	&quot;userContactInfo&quot;:&quot;test&quot;&#xd;
+	}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/addWish</java.net.URL>
+</httpSample>
+<httpSample t="102" it="0" lt="101" ts="1507534652642" s="true" lb="addWish-奖品加入心愿单-userContactInfo为中文" rc="200" rm="" tn="addWish-奖品加入心愿单 5-1" dt="" by="1759" sby="357" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534652744" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="addWish-奖品加入心愿单 5-1" dt="text" by="1509" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;roleType&quot;:&quot;learner&quot;,&#xd;
+	&quot;prizeId&quot;:&quot;136&quot;,&#xd;
+	&quot;consumeCount&quot;:1,  &#xd;
+	&quot;userContactInfo&quot;:&quot;测试&quot;&#xd;
+	}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/addWish</java.net.URL>
+</httpSample>
+<httpSample t="105" it="0" lt="104" ts="1507534652745" s="true" lb="addWish-奖品加入心愿单-userContactInfo为标点符号" rc="200" rm="" tn="addWish-奖品加入心愿单 5-1" dt="" by="1761" sby="356" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534652850" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="addWish-奖品加入心愿单 5-1" dt="text" by="1511" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;roleType&quot;:&quot;learner&quot;,&#xd;
+	&quot;prizeId&quot;:&quot;136&quot;,&#xd;
+	&quot;consumeCount&quot;:1,  &#xd;
+	&quot;userContactInfo&quot;:&quot;？&quot;&#xd;
+	}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/addWish</java.net.URL>
+</httpSample>
+<httpSample t="99" it="0" lt="99" ts="1507534652851" s="true" lb="addWish-奖品加入心愿单-userContactInfo为特殊符号" rc="200" rm="" tn="addWish-奖品加入心愿单 5-1" dt="" by="1760" sby="356" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534652950" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="addWish-奖品加入心愿单 5-1" dt="text" by="1510" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;roleType&quot;:&quot;learner&quot;,&#xd;
+	&quot;prizeId&quot;:&quot;136&quot;,&#xd;
+	&quot;consumeCount&quot;:1,  &#xd;
+	&quot;userContactInfo&quot;:&quot;*&quot;&#xd;
+	}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/addWish</java.net.URL>
+</httpSample>
+<httpSample t="472" it="0" lt="471" ts="1507534652951" s="true" lb="addWish-奖品加入心愿单-userContactInfo为数学符号" rc="200" rm="" tn="addWish-奖品加入心愿单 5-1" dt="" by="1760" sby="356" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534653422" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="addWish-奖品加入心愿单 5-1" dt="text" by="1510" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;roleType&quot;:&quot;learner&quot;,&#xd;
+	&quot;prizeId&quot;:&quot;136&quot;,&#xd;
+	&quot;consumeCount&quot;:1,  &#xd;
+	&quot;userContactInfo&quot;:&quot;+&quot;&#xd;
+	}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/addWish</java.net.URL>
+</httpSample>
+<httpSample t="399" it="0" lt="398" ts="1507534653433" s="true" lb="getToken" rc="200" rm="" tn="wishlists-移除心愿单中某奖品 6-1" dt="text" by="1576" sby="293" ng="1" na="1">
+  <sample t="1" it="0" lt="0" ts="1507534653831" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="wishlists-移除心愿单中某奖品 6-1" dt="text" by="1211" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="99" it="0" lt="98" ts="1507534653833" s="true" lb="wishlists组合正确性验证" rc="200" rm="" tn="wishlists-移除心愿单中某奖品 6-1" dt="" by="1623" sby="268" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534653931" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="wishlists-移除心愿单中某奖品 6-1" dt="text" by="1373" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">DELETE</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/wishlists/58</java.net.URL>
+</httpSample>
+<httpSample t="98" it="0" lt="97" ts="1507534653933" s="true" lb="wishlists-prizeId为空格" rc="500" rm="" tn="wishlists-移除心愿单中某奖品 6-1" dt="text" by="1912" sby="269" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534654031" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="wishlists-移除心愿单中某奖品 6-1" dt="text" by="1402" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">DELETE</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/wishlists/%20</java.net.URL>
+</httpSample>
+<httpSample t="93" it="0" lt="93" ts="1507534654033" s="true" lb="wishlists-prizeId为英文" rc="400" rm="" tn="wishlists-移除心愿单中某奖品 6-1" dt="text" by="2089" sby="272" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534654126" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="wishlists-移除心愿单中某奖品 6-1" dt="text" by="1408" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">DELETE</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/wishlists/prized</java.net.URL>
+</httpSample>
+<httpSample t="99" it="0" lt="98" ts="1507534654128" s="true" lb="wishlists-prizeId为中文" rc="400" rm="" tn="wishlists-移除心愿单中某奖品 6-1" dt="text" by="2099" sby="284" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534654227" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="wishlists-移除心愿单中某奖品 6-1" dt="text" by="1406" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">DELETE</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/wishlists/奖品</java.net.URL>
+</httpSample>
+<httpSample t="101" it="0" lt="101" ts="1507534654228" s="true" lb="wishlists-prizeId为特殊符号" rc="400" rm="" tn="wishlists-移除心愿单中某奖品 6-1" dt="text" by="2078" sby="267" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534654329" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="wishlists-移除心愿单中某奖品 6-1" dt="text" by="1407" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">DELETE</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/wishlists/&amp;</java.net.URL>
+</httpSample>
+<httpSample t="108" it="0" lt="107" ts="1507534654331" s="true" lb="wishlists-prizeId为数学符号" rc="400" rm="" tn="wishlists-移除心愿单中某奖品 6-1" dt="text" by="2098" sby="288" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534654439" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="wishlists-移除心愿单中某奖品 6-1" dt="text" by="1427" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">DELETE</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;prizeId&quot;:58&#xd;
+	}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/wishlists/+</java.net.URL>
+</httpSample>
+<httpSample t="90" it="0" lt="89" ts="1507534654440" s="true" lb="wishlists-prizeId为标点符号" rc="400" rm="" tn="wishlists-移除心愿单中某奖品 6-1" dt="text" by="2078" sby="267" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534654529" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="wishlists-移除心愿单中某奖品 6-1" dt="text" by="1407" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">DELETE</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/wishlists/,</java.net.URL>
+</httpSample>
+<httpSample t="396" it="0" lt="395" ts="1507534654545" s="true" lb="getToken" rc="200" rm="" tn="awardsList-获取奖品列表 7-1" dt="text" by="1571" sby="293" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1507534654941" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="awardsList-获取奖品列表 7-1" dt="text" by="1206" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="109" it="0" lt="109" ts="1507534654942" s="true" lb="awardsList-获取奖品列表-组合正确性验证" rc="200" rm="" tn="awardsList-获取奖品列表 7-1" dt="text" by="7307" sby="310" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534655051" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="awardsList-获取奖品列表 7-1" dt="text" by="1452" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/awardsList?orderType=default&amp;upOrDown=up&amp;page=1&amp;pageSize=10&amp;roleType=learner</java.net.URL>
+</httpSample>
+<httpSample t="117" it="0" lt="117" ts="1507534655053" s="true" lb="awardsList-获取奖品列表-orderType为特殊字符" rc="200" rm="" tn="awardsList-获取奖品列表 7-1" dt="text" by="7306" sby="304" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534655170" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="awardsList-获取奖品列表 7-1" dt="text" by="1451" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/awardsList?orderType=&amp;&amp;upOrDown=up&amp;page=1&amp;pageSize=10&amp;roleType=learner</java.net.URL>
+</httpSample>
+<httpSample t="109" it="0" lt="108" ts="1507534655172" s="true" lb="awardsList-获取奖品列表-orderType为数学符号" rc="200" rm="" tn="awardsList-获取奖品列表 7-1" dt="text" by="7312" sby="304" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534655280" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="awardsList-获取奖品列表 7-1" dt="text" by="1451" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/awardsList?orderType=+&amp;upOrDown=up&amp;page=1&amp;pageSize=10&amp;roleType=learner</java.net.URL>
+</httpSample>
+<httpSample t="108" it="0" lt="107" ts="1507534655282" s="true" lb="awardsList-获取奖品列表-orderType为标点符号" rc="200" rm="" tn="awardsList-获取奖品列表 7-1" dt="text" by="7306" sby="312" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534655390" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="awardsList-获取奖品列表 7-1" dt="text" by="1451" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/awardsList?orderType=？&amp;upOrDown=up&amp;page=1&amp;pageSize=10&amp;roleType=learner</java.net.URL>
+</httpSample>
+<httpSample t="110" it="0" lt="110" ts="1507534655391" s="true" lb="awardsList-获取奖品列表-orderType为中文" rc="200" rm="" tn="awardsList-获取奖品列表 7-1" dt="text" by="7305" sby="321" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534655501" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="awardsList-获取奖品列表 7-1" dt="text" by="1450" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/awardsList?orderType=测试&amp;upOrDown=up&amp;page=1&amp;pageSize=10&amp;roleType=learner</java.net.URL>
+</httpSample>
+<httpSample t="101" it="0" lt="101" ts="1507534655502" s="true" lb="awardsList-获取奖品列表-page为中文" rc="400" rm="" tn="awardsList-获取奖品列表 7-1" dt="text" by="2112" sby="327" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534655603" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="awardsList-获取奖品列表 7-1" dt="text" by="1451" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/awardsList?orderType=default&amp;upOrDown=up&amp;page=测试&amp;pageSize=10&amp;roleType=learner</java.net.URL>
+</httpSample>
+<httpSample t="91" it="0" lt="91" ts="1507534655604" s="true" lb="awardsList-获取奖品列表-page为英文" rc="400" rm="" tn="awardsList-获取奖品列表 7-1" dt="text" by="2110" sby="313" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534655695" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="awardsList-获取奖品列表 7-1" dt="text" by="1451" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/awardsList?orderType=default&amp;upOrDown=up&amp;page=test&amp;pageSize=10&amp;roleType=learner</java.net.URL>
+</httpSample>
+<httpSample t="93" it="0" lt="93" ts="1507534655697" s="true" lb="awardsList-获取奖品列表-page为特殊字符" rc="400" rm="" tn="awardsList-获取奖品列表 7-1" dt="text" by="2108" sby="310" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534655790" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="awardsList-获取奖品列表 7-1" dt="text" by="1452" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/awardsList?orderType=default&amp;upOrDown=up&amp;page=*&amp;pageSize=10&amp;roleType=learner</java.net.URL>
+</httpSample>
+<httpSample t="90" it="0" lt="89" ts="1507534655792" s="true" lb="awardsList-获取奖品列表-page为数学符号" rc="400" rm="" tn="awardsList-获取奖品列表 7-1" dt="text" by="2107" sby="310" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534655881" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="awardsList-获取奖品列表 7-1" dt="text" by="1452" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/awardsList?orderType=default&amp;upOrDown=up&amp;page=+&amp;pageSize=10&amp;roleType=learner</java.net.URL>
+</httpSample>
+<httpSample t="98" it="0" lt="97" ts="1507534655883" s="true" lb="awardsList-获取奖品列表-page为标点符号" rc="400" rm="" tn="awardsList-获取奖品列表 7-1" dt="text" by="2111" sby="318" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534655980" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="awardsList-获取奖品列表 7-1" dt="text" by="1453" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/awardsList?orderType=default&amp;upOrDown=up&amp;page=？&amp;pageSize=10&amp;roleType=learner</java.net.URL>
+</httpSample>
+<httpSample t="109" it="0" lt="108" ts="1507534655982" s="true" lb="awardsList-获取奖品列表-pageSize为标点符号" rc="400" rm="" tn="awardsList-获取奖品列表 7-1" dt="text" by="2114" sby="317" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534656090" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="awardsList-获取奖品列表 7-1" dt="text" by="1456" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/awardsList?orderType=default&amp;upOrDown=up&amp;page=1&amp;pageSize=？&amp;roleType=learner</java.net.URL>
+</httpSample>
+<httpSample t="106" it="0" lt="106" ts="1507534656092" s="true" lb="awardsList-获取奖品列表-pageSize为特殊符号" rc="400" rm="" tn="awardsList-获取奖品列表 7-1" dt="text" by="2111" sby="309" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534656198" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="awardsList-获取奖品列表 7-1" dt="text" by="1455" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/awardsList?orderType=default&amp;upOrDown=up&amp;page=1&amp;pageSize=*&amp;roleType=learner</java.net.URL>
+</httpSample>
+<httpSample t="96" it="0" lt="96" ts="1507534656200" s="true" lb="awardsList-获取奖品列表-pageSize为数学符号" rc="400" rm="" tn="awardsList-获取奖品列表 7-1" dt="text" by="2110" sby="309" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534656296" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="awardsList-获取奖品列表 7-1" dt="text" by="1455" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/awardsList?orderType=default&amp;upOrDown=up&amp;page=1&amp;pageSize=+&amp;roleType=learner</java.net.URL>
+</httpSample>
+<httpSample t="90" it="0" lt="90" ts="1507534656298" s="true" lb="awardsList-获取奖品列表-pageSize为英文" rc="400" rm="" tn="awardsList-获取奖品列表 7-1" dt="text" by="2113" sby="312" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534656388" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="awardsList-获取奖品列表 7-1" dt="text" by="1454" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/awardsList?orderType=default&amp;upOrDown=up&amp;page=1&amp;pageSize=test&amp;roleType=learner</java.net.URL>
+</httpSample>
+<httpSample t="107" it="0" lt="106" ts="1507534656390" s="true" lb="awardsList-获取奖品列表-pageSize为中文" rc="400" rm="" tn="awardsList-获取奖品列表 7-1" dt="text" by="2114" sby="326" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534656496" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="awardsList-获取奖品列表 7-1" dt="text" by="1453" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/awardsList?orderType=default&amp;upOrDown=up&amp;page=1&amp;pageSize=测试&amp;roleType=learner</java.net.URL>
+</httpSample>
+<httpSample t="422" it="0" lt="422" ts="1507534656510" s="true" lb="getToken" rc="200" rm="" tn="awards-获取奖品详情 8-1" dt="text" by="1567" sby="293" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1507534656932" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="awards-获取奖品详情 8-1" dt="text" by="1202" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="126" it="0" lt="126" ts="1507534656933" s="true" lb="awards-获取奖品详情-组合正确性验证" rc="200" rm="" tn="awards-获取奖品详情 8-1" dt="text" by="2667" sby="264" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534657059" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="awards-获取奖品详情 8-1" dt="text" by="1392" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/awards?id=136&amp;roleType=learner</java.net.URL>
+</httpSample>
+<httpSample t="105" it="0" lt="104" ts="1507534657060" s="true" lb="awards-获取奖品详情-id为空" rc="200" rm="" tn="awards-获取奖品详情 8-1" dt="" by="1631" sby="261" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534657164" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="awards-获取奖品详情 8-1" dt="text" by="1381" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/awards?id=&amp;roleType=learner</java.net.URL>
+</httpSample>
+<httpSample t="102" it="0" lt="102" ts="1507534657166" s="true" lb="awards-获取奖品详情-id为中文" rc="400" rm="" tn="awards-获取奖品详情 8-1" dt="text" by="2058" sby="279" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534657268" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="awards-获取奖品详情 8-1" dt="text" by="1387" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/awards?id=测试&amp;roleType=learner</java.net.URL>
+</httpSample>
+<httpSample t="97" it="0" lt="96" ts="1507534657270" s="true" lb="awards-获取奖品详情-id为英文" rc="400" rm="" tn="awards-获取奖品详情 8-1" dt="text" by="2056" sby="265" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534657367" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="awards-获取奖品详情 8-1" dt="text" by="1387" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/awards?id=test&amp;roleType=learner</java.net.URL>
+</httpSample>
+<httpSample t="105" it="0" lt="104" ts="1507534657368" s="true" lb="awards-获取奖品详情-id为特殊字符" rc="200" rm="" tn="awards-获取奖品详情 8-1" dt="" by="1637" sby="262" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534657473" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="awards-获取奖品详情 8-1" dt="text" by="1387" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/awards?id=&amp;&amp;roleType=learner</java.net.URL>
+</httpSample>
+<httpSample t="103" it="0" lt="102" ts="1507534657474" s="true" lb="awards-获取奖品详情-id为数学符号" rc="200" rm="" tn="awards-获取奖品详情 8-1" dt="" by="1638" sby="262" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534657577" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="awards-获取奖品详情 8-1" dt="text" by="1388" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/awards?id=+&amp;roleType=learner</java.net.URL>
+</httpSample>
+<httpSample t="96" it="0" lt="96" ts="1507534657578" s="true" lb="awards-获取奖品详情-id为标点符号" rc="400" rm="" tn="awards-获取奖品详情 8-1" dt="text" by="2057" sby="270" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534657674" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="awards-获取奖品详情 8-1" dt="text" by="1389" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/awards?id=？&amp;roleType=learner</java.net.URL>
+</httpSample>
+<httpSample t="112" it="0" lt="111" ts="1507534657676" s="true" lb="awards-获取奖品详情-roleType为标点符号" rc="200" rm="" tn="awards-获取奖品详情 8-1" dt="text" by="2666" sby="266" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534657787" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="awards-获取奖品详情 8-1" dt="text" by="1391" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/awards?id=136&amp;roleType=？</java.net.URL>
+</httpSample>
+<httpSample t="108" it="0" lt="107" ts="1507534657789" s="true" lb="awards-获取奖品详情-roleType为特殊符号" rc="200" rm="" tn="awards-获取奖品详情 8-1" dt="text" by="2665" sby="258" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534657896" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="awards-获取奖品详情 8-1" dt="text" by="1390" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/awards?id=136&amp;roleType=*</java.net.URL>
+</httpSample>
+<httpSample t="108" it="0" lt="107" ts="1507534657899" s="true" lb="awards-获取奖品详情-roleType为数学符号" rc="200" rm="" tn="awards-获取奖品详情 8-1" dt="text" by="2665" sby="258" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534658006" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="awards-获取奖品详情 8-1" dt="text" by="1390" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/awards?id=136&amp;roleType=+</java.net.URL>
+</httpSample>
+<httpSample t="104" it="0" lt="104" ts="1507534658008" s="true" lb="awards-获取奖品详情-roleType为英文" rc="200" rm="" tn="awards-获取奖品详情 8-1" dt="text" by="2666" sby="263" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534658112" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="awards-获取奖品详情 8-1" dt="text" by="1391" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/awards?id=136&amp;roleType=iuerhf</java.net.URL>
+</httpSample>
+<httpSample t="104" it="0" lt="104" ts="1507534658113" s="true" lb="awards-获取奖品详情-roleType为中文" rc="200" rm="" tn="awards-获取奖品详情 8-1" dt="text" by="2664" sby="275" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534658217" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="awards-获取奖品详情 8-1" dt="text" by="1389" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/awards?id=136&amp;roleType=测试</java.net.URL>
+</httpSample>
+<httpSample t="421" it="0" lt="420" ts="1507534658241" s="true" lb="getToken" rc="200" rm="" tn="exchange-学生奖品兑换 9-1" dt="text" by="1569" sby="293" ng="1" na="1">
+  <sample t="1" it="0" lt="0" ts="1507534658661" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange-学生奖品兑换 9-1" dt="text" by="1204" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="117" it="0" lt="116" ts="1507534658663" s="true" lb="exchange正确性验证" rc="500" rm="" tn="exchange-学生奖品兑换 9-1" dt="text" by="2040" sby="374" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534658780" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange-学生奖品兑换 9-1" dt="text" by="1496" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;roleType&quot;:&quot;learner&quot;,&#xd;
+	&quot;prizeId&quot;:58,&#xd;
+	&quot;consumeCount&quot;:1,&#xd;
+	&quot;userContactInfo&quot;:&quot;13589342345&quot;}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="109" it="0" lt="109" ts="1507534658781" s="true" lb="exchange-roleType为trainer" rc="500" rm="" tn="exchange-学生奖品兑换 9-1" dt="text" by="2035" sby="400" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534658890" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange-学生奖品兑换 9-1" dt="text" by="1529" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot;trainer&quot;,	&#xd;
+    &quot;prizeId&quot;: 136,		     &#xd;
+    &quot;consumeCount&quot;: 1,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="106" it="0" lt="105" ts="1507534658892" s="true" lb="exchange-roleType为特殊字符" rc="500" rm="" tn="exchange-学生奖品兑换 9-1" dt="text" by="2010" sby="372" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534658997" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange-学生奖品兑换 9-1" dt="text" by="1504" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;roleType&quot;:&quot;&amp;&quot;,&#xd;
+	&quot;prizeId&quot;:136,&#xd;
+	&quot;consumeCount&quot;:1,&#xd;
+	&quot;userContactInfo&quot;:&quot;13589342345&quot;&#xd;
+	}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="98" it="0" lt="98" ts="1507534658999" s="true" lb="exchange-roleType为标点符号" rc="500" rm="" tn="exchange-学生奖品兑换 9-1" dt="text" by="2011" sby="372" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534659097" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange-学生奖品兑换 9-1" dt="text" by="1505" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;roleType&quot;:&quot;？&quot;,&#xd;
+	&quot;prizeId&quot;:136,&#xd;
+	&quot;consumeCount&quot;:1,&#xd;
+	&quot;userContactInfo&quot;:&quot;13589342345&quot;&#xd;
+	}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="96" it="0" lt="96" ts="1507534659099" s="true" lb="exchange-roleType为数学符号" rc="500" rm="" tn="exchange-学生奖品兑换 9-1" dt="text" by="2010" sby="372" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534659195" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange-学生奖品兑换 9-1" dt="text" by="1504" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;roleType&quot;:&quot;+&quot;,&#xd;
+	&quot;prizeId&quot;:136,&#xd;
+	&quot;consumeCount&quot;:1,&#xd;
+	&quot;userContactInfo&quot;:&quot;13589342345&quot;&#xd;
+	}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="97" it="0" lt="96" ts="1507534659196" s="true" lb="exchange-roleType为中文" rc="500" rm="" tn="exchange-学生奖品兑换 9-1" dt="text" by="2009" sby="373" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534659293" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange-学生奖品兑换 9-1" dt="text" by="1503" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;roleType&quot;:&quot;测试&quot;,&#xd;
+	&quot;prizeId&quot;:136,&#xd;
+	&quot;consumeCount&quot;:1,&#xd;
+	&quot;userContactInfo&quot;:&quot;13589342345&quot;&#xd;
+	}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="96" it="0" lt="96" ts="1507534659294" s="true" lb="exchange-roleType为a-z的字符串" rc="500" rm="" tn="exchange-学生奖品兑换 9-1" dt="text" by="2017" sby="376" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534659390" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange-学生奖品兑换 9-1" dt="text" by="1511" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;roleType&quot;:&quot;wefcx&quot;,&#xd;
+	&quot;prizeId&quot;:136,&#xd;
+	&quot;consumeCount&quot;:1,&#xd;
+	&quot;userContactInfo&quot;:&quot;13589342345&quot;&#xd;
+	}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="97" it="0" lt="96" ts="1507534659392" s="true" lb="exchange-roleType为空格" rc="500" rm="" tn="exchange-学生奖品兑换 9-1" dt="text" by="2007" sby="373" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534659489" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange-学生奖品兑换 9-1" dt="text" by="1501" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;roleType&quot;:&quot;  &quot;,&#xd;
+	&quot;prizeId&quot;:136,&#xd;
+	&quot;consumeCount&quot;:1,&#xd;
+	&quot;userContactInfo&quot;:&quot;13589342345&quot;&#xd;
+	}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="115" it="0" lt="114" ts="1507534659491" s="true" lb="exchange-prizeId为空" rc="500" rm="" tn="exchange-学生奖品兑换 9-1" dt="text" by="2021" sby="377" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534659605" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange-学生奖品兑换 9-1" dt="text" by="1502" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;roleType&quot;:&quot;learner&quot;,&#xd;
+	&quot;prizeId&quot;:&quot;&quot;,&#xd;
+	&quot;consumeCount&quot;:1,&#xd;
+	&quot;userContactInfo&quot;:&quot;13589342345&quot;&#xd;
+	}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="95" it="0" lt="94" ts="1507534659607" s="true" lb="exchange-prizeId为空格" rc="500" rm="" tn="exchange-学生奖品兑换 9-1" dt="text" by="2045" sby="400" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534659702" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange-学生奖品兑换 9-1" dt="text" by="1526" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot;learner&quot;,	&#xd;
+    &quot;prizeId&quot;: &quot; &quot;,		     &#xd;
+    &quot;consumeCount&quot;: 1,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="94" it="0" lt="93" ts="1507534659703" s="true" lb="exchange-prizeId为中文" rc="400" rm="" tn="exchange-学生奖品兑换 9-1" dt="text" by="2681" sby="401" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534659797" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange-学生奖品兑换 9-1" dt="text" by="1528" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot;learner&quot;,	&#xd;
+    &quot;prizeId&quot;: &quot;奖品&quot;,		     &#xd;
+    &quot;consumeCount&quot;: 1,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="104" it="0" lt="104" ts="1507534659798" s="true" lb="exchange-prizeId为英文" rc="400" rm="" tn="exchange-学生奖品兑换 9-1" dt="text" by="2686" sby="403" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534659902" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange-学生奖品兑换 9-1" dt="text" by="1529" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot;learner&quot;,	&#xd;
+    &quot;prizeId&quot;: &quot;priz&quot;,		     &#xd;
+    &quot;consumeCount&quot;: 1,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="97" it="0" lt="96" ts="1507534659903" s="true" lb="exchange-prizeId为标点符号" rc="400" rm="" tn="exchange-学生奖品兑换 9-1" dt="text" by="2679" sby="400" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534659999" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange-学生奖品兑换 9-1" dt="text" by="1530" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot;learner&quot;,	&#xd;
+    &quot;prizeId&quot;: &quot;。&quot;,		     &#xd;
+    &quot;consumeCount&quot;: 1,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="94" it="0" lt="93" ts="1507534660001" s="true" lb="exchange-prizeId为数学符号" rc="400" rm="" tn="exchange-学生奖品兑换 9-1" dt="text" by="2681" sby="400" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534660094" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange-学生奖品兑换 9-1" dt="text" by="1530" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot;learner&quot;,	&#xd;
+    &quot;prizeId&quot;: &quot;/&quot;,		     &#xd;
+    &quot;consumeCount&quot;: 1,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="99" it="0" lt="99" ts="1507534660096" s="true" lb="exchange-prizeId为特殊符号" rc="400" rm="" tn="exchange-学生奖品兑换 9-1" dt="text" by="2681" sby="400" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534660195" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange-学生奖品兑换 9-1" dt="text" by="1530" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot;learner&quot;,	&#xd;
+    &quot;prizeId&quot;: &quot;$&quot;,		     &#xd;
+    &quot;consumeCount&quot;: 1,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="97" it="0" lt="96" ts="1507534660196" s="true" lb="exchange-consumeCount为空" rc="500" rm="" tn="exchange-学生奖品兑换 9-1" dt="text" by="2049" sby="401" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534660293" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange-学生奖品兑换 9-1" dt="text" by="1530" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot;learner&quot;,	&#xd;
+    &quot;prizeId&quot;: 136,		     &#xd;
+    &quot;consumeCount&quot;: &quot;&quot;,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="201" it="0" lt="200" ts="1507534660294" s="true" lb="exchange-consumeCount为空格" rc="500" rm="" tn="exchange-学生奖品兑换 9-1" dt="text" by="2052" sby="402" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1507534660494" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange-学生奖品兑换 9-1" dt="text" by="1533" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot;learner&quot;,	&#xd;
+    &quot;prizeId&quot;: 136,		     &#xd;
+    &quot;consumeCount&quot;: &quot; &quot;,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="92" it="0" lt="92" ts="1507534660496" s="true" lb="exchange-consumeCount为中文" rc="400" rm="" tn="exchange-学生奖品兑换 9-1" dt="text" by="2695" sby="402" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534660588" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange-学生奖品兑换 9-1" dt="text" by="1534" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot;learner&quot;,	&#xd;
+    &quot;prizeId&quot;: 136,		     &#xd;
+    &quot;consumeCount&quot;: &quot;数&quot;,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="95" it="0" lt="94" ts="1507534660589" s="true" lb="exchange-consumeCount为a-z的字符串" rc="400" rm="" tn="exchange-学生奖品兑换 9-1" dt="text" by="2710" sby="405" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534660684" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange-学生奖品兑换 9-1" dt="text" by="1543" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot;learner&quot;,	&#xd;
+    &quot;prizeId&quot;: 136,		     &#xd;
+    &quot;consumeCount&quot;: &quot;cons&quot;,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="100" it="0" lt="100" ts="1507534660685" s="true" lb="exchange-consumeCount为标点符号" rc="400" rm="" tn="exchange-学生奖品兑换 9-1" dt="text" by="2698" sby="402" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534660785" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange-学生奖品兑换 9-1" dt="text" by="1537" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot;learner&quot;,	&#xd;
+    &quot;prizeId&quot;: 136,		     &#xd;
+    &quot;consumeCount&quot;: &quot;!&quot;,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="92" it="0" lt="92" ts="1507534660786" s="true" lb="exchange-consumeCount为数学符号" rc="400" rm="" tn="exchange-学生奖品兑换 9-1" dt="text" by="2698" sby="402" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534660879" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange-学生奖品兑换 9-1" dt="text" by="1537" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot;learner&quot;,	&#xd;
+    &quot;prizeId&quot;: 136,		     &#xd;
+    &quot;consumeCount&quot;: &quot;+&quot;,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</java.net.URL>
+</httpSample>
+<httpSample t="91" it="0" lt="90" ts="1507534660880" s="true" lb="exchange-consumeCount为特殊符号" rc="400" rm="" tn="exchange-学生奖品兑换 9-1" dt="text" by="2698" sby="402" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1507534660971" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="exchange-学生奖品兑换 9-1" dt="text" by="1537" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;roleType&quot;: &quot;learner&quot;,	&#xd;
+    &quot;prizeId&quot;: 136,		     &#xd;
+    &quot;consumeCount&quot;: &quot;#&quot;,	     &#xd;
+    &quot;userContactInfo&quot;: &quot;123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</java.net.URL>
+</httpSample>
+
+</testResults>

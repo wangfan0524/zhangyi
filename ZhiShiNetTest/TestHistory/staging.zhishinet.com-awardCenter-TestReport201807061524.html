@@ -1,0 +1,1837 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ZSN-Interface Test Results</title>
+<style type="text/css">
+				body {
+					font:normal 68% verdana,arial,helvetica;
+					color:#000000;
+				}
+				table tr td, table tr th {
+					font-size: 68%;
+				}
+				table.details tr th{
+				    color: #ffffff;
+					font-weight: bold;
+					text-align:center;
+					background:#2674a6;
+					white-space: nowrap;
+				}
+				table.details tr td{
+					background:#eeeee0;
+				}
+				h1 {
+					margin: 0px 0px 5px; font: 165% verdana,arial,helvetica
+				}
+				h2 {
+					margin-top: 1em; margin-bottom: 0.5em; font: bold 125% verdana,arial,helvetica
+				}
+				h3 {
+					margin-bottom: 0.5em; font: bold 115% verdana,arial,helvetica
+				}
+				.Failure {
+					font-weight:bold; color:red;
+				}
+				
+	
+				img
+				{
+				  border-width: 0px;
+				}
+				
+				.expand_link
+				{
+				   position=absolute;
+				   right: 0px;
+				   width: 27px;
+				   top: 1px;
+				   height: 27px;
+				}
+				
+				.page_details
+				{
+				   display: none;
+				}
+                                
+                                .page_details_expanded
+                                {
+                                    display: block;
+                                    display/* hide this definition from  IE5/6 */: table-row;
+                                }
+
+
+			</style>
+<script language="JavaScript">
+                           function expand(details_id)
+			   {
+			      
+			      document.getElementById(details_id).className = "page_details_expanded";
+			   }
+			   
+			   function collapse(details_id)
+			   {
+			      
+			      document.getElementById(details_id).className = "page_details";
+			   }
+			   
+			   function change(details_id)
+			   {
+			      if(document.getElementById(details_id+"_image").src.match("expand"))
+			      {
+			         document.getElementById(details_id+"_image").src = "collapse.png";
+			         expand(details_id);
+			      }
+			      else
+			      {
+			         document.getElementById(details_id+"_image").src = "expand.png";
+			         collapse(details_id);
+			      } 
+                           }
+			</script>
+</head>
+<body>
+<h1>ZSN-Interface Test Results</h1>
+<table width="100%">
+<tr>
+<td align="left">Date report: 2018/07/06 15:26</td>
+<br>
+<td align="left">RunEnvironment:https://staging.zhishinet.com</td><td align="left">TestAccount:{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td>
+</tr>
+</table>
+<hr size="1">
+<h2>Summary</h2>
+<table width="95%" cellspacing="2" cellpadding="4" border="0" class="details" align="center">
+<tr valign="top">
+<th>Total</th><th>Pass</th><th>Failures</th><th>Success Rate</th>
+</tr>
+<tr valign="top">
+<td align="center">153</td><td align="center">153</td><td align="center">0</td><td align="center">100.00%</td>
+</tr>
+</table>
+<hr align="center" width="95%" size="1">
+<h2>Success Detail</h2>
+<h3>getToken<a name="getToken"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>exchange正确性校验<a name="exchange%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": "trainer",	&#13;
+    "prizeId": 136,		     &#13;
+    "consumeCount": 1,	     &#13;
+    "userContactInfo": "123"&#13;
+}&#13;
+</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>exchange-roleType为learner<a name="exchange-roleType%E4%B8%BAlearner"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": "learner",	&#13;
+    "prizeId": 136,		     &#13;
+    "consumeCount": 1,	     &#13;
+    "userContactInfo": "123"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>exchange-roleType为空<a name="exchange-roleType%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": "",	&#13;
+    "prizeId": 136,		     &#13;
+    "consumeCount": 1,	     &#13;
+    "userContactInfo": "123"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>exchange-roleType为空格<a name="exchange-roleType%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": " ",	&#13;
+    "prizeId": 136,		     &#13;
+    "consumeCount": 1,	     &#13;
+    "userContactInfo": "123"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</td><td>POST</td><td>{&#13;
+	"roleType":"  ",&#13;
+	"prizeId":136,&#13;
+	"consumeCount":1,&#13;
+	"userContactInfo":"13589342345"&#13;
+	}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>exchange-roleType为中文<a name="exchange-roleType%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": "教师",	&#13;
+    "prizeId": 136,		     &#13;
+    "consumeCount": 1,	     &#13;
+    "userContactInfo": "123"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</td><td>POST</td><td>{&#13;
+	"roleType":"测试",&#13;
+	"prizeId":136,&#13;
+	"consumeCount":1,&#13;
+	"userContactInfo":"13589342345"&#13;
+	}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>exchange-roleType为英文<a name="exchange-roleType%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": "role",	&#13;
+    "prizeId": 136,		     &#13;
+    "consumeCount": 1,	     &#13;
+    "userContactInfo": "123"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>exchange-roleType为标点符号<a name="exchange-roleType%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": ",",	&#13;
+    "prizeId": 136,		     &#13;
+    "consumeCount": 1,	     &#13;
+    "userContactInfo": "123"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</td><td>POST</td><td>{&#13;
+	"roleType":"？",&#13;
+	"prizeId":136,&#13;
+	"consumeCount":1,&#13;
+	"userContactInfo":"13589342345"&#13;
+	}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>exchange-roleType为数学符号<a name="exchange-roleType%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": "+",	&#13;
+    "prizeId": 136,		     &#13;
+    "consumeCount": 1,	     &#13;
+    "userContactInfo": "123"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</td><td>POST</td><td>{&#13;
+	"roleType":"+",&#13;
+	"prizeId":136,&#13;
+	"consumeCount":1,&#13;
+	"userContactInfo":"13589342345"&#13;
+	}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>exchange-roleType为特殊符号<a name="exchange-roleType%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": "*",	&#13;
+    "prizeId": 136,		     &#13;
+    "consumeCount": 1,	     &#13;
+    "userContactInfo": "123"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>exchange-prizeId为空<a name="exchange-prizeId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": "trainer",	&#13;
+    "prizeId": "",		     &#13;
+    "consumeCount": 1,	     &#13;
+    "userContactInfo": "123"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</td><td>POST</td><td>{&#13;
+	"roleType":"learner",&#13;
+	"prizeId":"",&#13;
+	"consumeCount":1,&#13;
+	"userContactInfo":"13589342345"&#13;
+	}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>exchange-prizeId为空格<a name="exchange-prizeId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": "trainer",	&#13;
+    "prizeId": " ",		     &#13;
+    "consumeCount": 1,	     &#13;
+    "userContactInfo": "123"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": "learner",	&#13;
+    "prizeId": " ",		     &#13;
+    "consumeCount": 1,	     &#13;
+    "userContactInfo": "123"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>exchange-prizeId为中文<a name="exchange-prizeId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": "trainer",	&#13;
+    "prizeId": "奖品Id",		     &#13;
+    "consumeCount": 1,	     &#13;
+    "userContactInfo": "123"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": "learner",	&#13;
+    "prizeId": "奖品",		     &#13;
+    "consumeCount": 1,	     &#13;
+    "userContactInfo": "123"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>exchange-prizeId为英文<a name="exchange-prizeId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": "trainer",	&#13;
+    "prizeId": "prize",		     &#13;
+    "consumeCount": 1,	     &#13;
+    "userContactInfo": "123"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": "learner",	&#13;
+    "prizeId": "priz",		     &#13;
+    "consumeCount": 1,	     &#13;
+    "userContactInfo": "123"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>exchange-prizeId为标点符号<a name="exchange-prizeId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": "trainer",	&#13;
+    "prizeId": ".",		     &#13;
+    "consumeCount": 1,	     &#13;
+    "userContactInfo": "123"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": "learner",	&#13;
+    "prizeId": "。",		     &#13;
+    "consumeCount": 1,	     &#13;
+    "userContactInfo": "123"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>exchange-prizeId为数学符号<a name="exchange-prizeId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": "trainer",	&#13;
+    "prizeId": "-",		     &#13;
+    "consumeCount": 1,	     &#13;
+    "userContactInfo": "123"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": "learner",	&#13;
+    "prizeId": "/",		     &#13;
+    "consumeCount": 1,	     &#13;
+    "userContactInfo": "123"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>exchange-prizeId为特殊符号<a name="exchange-prizeId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": "trainer",	&#13;
+    "prizeId": "$",		     &#13;
+    "consumeCount": 1,	     &#13;
+    "userContactInfo": "123"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": "learner",	&#13;
+    "prizeId": "$",		     &#13;
+    "consumeCount": 1,	     &#13;
+    "userContactInfo": "123"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>exchange-consumeCount为空<a name="exchange-consumeCount%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": "trainer",	&#13;
+    "prizeId": 136,		     &#13;
+    "consumeCount": "",	     &#13;
+    "userContactInfo": "123"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": "learner",	&#13;
+    "prizeId": 136,		     &#13;
+    "consumeCount": "",	     &#13;
+    "userContactInfo": "123"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>exchange-consumeCount为空格<a name="exchange-consumeCount%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": "trainer",	&#13;
+    "prizeId": 136,		     &#13;
+    "consumeCount": " ",	     &#13;
+    "userContactInfo": "123"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": "learner",	&#13;
+    "prizeId": 136,		     &#13;
+    "consumeCount": " ",	     &#13;
+    "userContactInfo": "123"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>exchange-consumeCount为中文<a name="exchange-consumeCount%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": "trainer",	&#13;
+    "prizeId": 136,		     &#13;
+    "consumeCount": "数量",	     &#13;
+    "userContactInfo": "123"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": "learner",	&#13;
+    "prizeId": 136,		     &#13;
+    "consumeCount": "数",	     &#13;
+    "userContactInfo": "123"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>exchange-consumeCount为英文<a name="exchange-consumeCount%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": "trainer",	&#13;
+    "prizeId": 136,		     &#13;
+    "consumeCount": "count",	     &#13;
+    "userContactInfo": "123"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>exchange-consumeCount为标点符号<a name="exchange-consumeCount%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": "trainer",	&#13;
+    "prizeId": 136,		     &#13;
+    "consumeCount": "?",	     &#13;
+    "userContactInfo": "123"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": "learner",	&#13;
+    "prizeId": 136,		     &#13;
+    "consumeCount": "!",	     &#13;
+    "userContactInfo": "123"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>exchange-consumeCount为数学符号<a name="exchange-consumeCount%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": "trainer",	&#13;
+    "prizeId": 136,		     &#13;
+    "consumeCount": "/",	     &#13;
+    "userContactInfo": "123"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": "learner",	&#13;
+    "prizeId": 136,		     &#13;
+    "consumeCount": "+",	     &#13;
+    "userContactInfo": "123"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>exchange-consumeCount为特殊符号<a name="exchange-consumeCount%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": "trainer",	&#13;
+    "prizeId": 136,		     &#13;
+    "consumeCount": "&amp;",	     &#13;
+    "userContactInfo": "123"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": "learner",	&#13;
+    "prizeId": 136,		     &#13;
+    "consumeCount": "#",	     &#13;
+    "userContactInfo": "123"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>learner/awards正确性校验<a name="learner/awards%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/exchanged/awards?page=1&amp;pageSize=10</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>learner/awards-page为空<a name="learner/awards-page%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/exchanged/awards?page=&amp;pageSize=10</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>learner/awards-page为空格<a name="learner/awards-page%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/exchanged/awards?page= &amp;pageSize=10</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 77: https://staging.zhishinet.com/api/award/v1/sec/learner/exchanged/awards?page= &amp;pageSize=10</td><td></td>
+</tr>
+</table>
+<h3>learner/awards-page为a-z的字符串<a name="learner/awards-page%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/exchanged/awards?page=page&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>learner/awards-page为中文<a name="learner/awards-page%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/exchanged/awards?page=页码&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>learner/awards-page为数学符号<a name="learner/awards-page%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/exchanged/awards?page=-&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>learner/awards-page为特殊符号<a name="learner/awards-page%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/exchanged/awards?page=*&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>learner/awards-page为标点符号<a name="learner/awards-page%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/exchanged/awards?page=?&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>learner/awards-pageSize为空<a name="learner/awards-pageSize%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/exchanged/awards?page=1&amp;pageSize=</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>learner/awards-pageSize为空格<a name="learner/awards-pageSize%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/exchanged/awards?page=1&amp;pageSize= </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 88: https://staging.zhishinet.com/api/award/v1/sec/learner/exchanged/awards?page=1&amp;pageSize= </td><td></td>
+</tr>
+</table>
+<h3>learner/awards-pageSize为a-z的字符串<a name="learner/awards-pageSize%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/exchanged/awards?page=1&amp;pageSize=test</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>learner/awards-pageSize为中文<a name="learner/awards-pageSize%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/exchanged/awards?page=1&amp;pageSize=页数</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>learner/awards-pageSize为数学符号<a name="learner/awards-pageSize%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/exchanged/awards?page=1&amp;pageSize=-</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>learner/awards-pageSize为特殊符号<a name="learner/awards-pageSize%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/exchanged/awards?page=1&amp;pageSize=*</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>learner/awards-pageSize为标点符号<a name="learner/awards-pageSize%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/exchanged/awards?page=1&amp;pageSize=!</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>trainer/awards正确性校验<a name="trainer/awards%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/exchanged/awards?page=1&amp;pageSize=10</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>trainer/awards-page为空<a name="trainer/awards-page%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/exchanged/awards?page=&amp;pageSize=10</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>trainer/awards-page为空格<a name="trainer/awards-page%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/exchanged/awards?page= &amp;pageSize=10</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 77: https://staging.zhishinet.com/api/award/v1/sec/trainer/exchanged/awards?page= &amp;pageSize=10</td><td></td>
+</tr>
+</table>
+<h3>trainer/awards-page为a-z的字符串<a name="trainer/awards-page%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/exchanged/awards?page=test&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>trainer/awards-page为中文<a name="trainer/awards-page%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/exchanged/awards?page=测试&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>trainer/awards-page为数学符号<a name="trainer/awards-page%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/exchanged/awards?page=+&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>trainer/awards-page为特殊符号<a name="trainer/awards-page%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/exchanged/awards?page=&amp;&amp;pageSize=10</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>trainer/awards-page为标点符号<a name="trainer/awards-page%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/exchanged/awards?page=,&amp;pageSize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>trainer/awards-pageSize为空<a name="trainer/awards-pageSize%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/exchanged/awards?page=1&amp;pageSize=</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>trainer/awards-pageSize为空格<a name="trainer/awards-pageSize%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/exchanged/awards?page=1&amp;pageSize= </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 88: https://staging.zhishinet.com/api/award/v1/sec/trainer/exchanged/awards?page=1&amp;pageSize= </td><td></td>
+</tr>
+</table>
+<h3>trainer/awards-pageSize为a-z的字符串<a name="trainer/awards-pageSize%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/exchanged/awards?page=1&amp;pageSize=test</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>trainer/awards-pageSize为中文<a name="trainer/awards-pageSize%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/exchanged/awards?page=1&amp;pageSize=页数</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>trainer/awards-pageSize为数学符号<a name="trainer/awards-pageSize%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/exchanged/awards?page=1&amp;pageSize=-</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>trainer/awards-pageSize为特殊符号<a name="trainer/awards-pageSize%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/exchanged/awards?page=1&amp;pageSize=*</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>trainer/awards-pageSize为标点符号<a name="trainer/awards-pageSize%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/trainer/exchanged/awards?page=1&amp;pageSize=!</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getUserWishLists-用户心愿单-组合正确性验证<a name="getUserWishLists-%E7%94%A8%E6%88%B7%E5%BF%83%E6%84%BF%E5%8D%95-%E7%BB%84%E5%90%88%E6%AD%A3%E7%A1%AE%E6%80%A7%E9%AA%8C%E8%AF%81"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/getUserWishLists?page=1&amp;pagesize=10</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getUserWishLists-用户心愿单-page为空<a name="getUserWishLists-%E7%94%A8%E6%88%B7%E5%BF%83%E6%84%BF%E5%8D%95-page%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/getUserWishLists?page=&amp;pagesize=10</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getUserWishLists-用户心愿单-page为英文<a name="getUserWishLists-%E7%94%A8%E6%88%B7%E5%BF%83%E6%84%BF%E5%8D%95-page%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/getUserWishLists?page=test&amp;pagesize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getUserWishLists-用户心愿单-page为中文<a name="getUserWishLists-%E7%94%A8%E6%88%B7%E5%BF%83%E6%84%BF%E5%8D%95-page%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/getUserWishLists?page=测试&amp;pagesize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getUserWishLists-用户心愿单-page为特殊字符<a name="getUserWishLists-%E7%94%A8%E6%88%B7%E5%BF%83%E6%84%BF%E5%8D%95-page%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/getUserWishLists?page=*&amp;pagesize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getUserWishLists-用户心愿单-page为数学符号<a name="getUserWishLists-%E7%94%A8%E6%88%B7%E5%BF%83%E6%84%BF%E5%8D%95-page%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/getUserWishLists?page=+&amp;pagesize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getUserWishLists-用户心愿单-page为标点符号<a name="getUserWishLists-%E7%94%A8%E6%88%B7%E5%BF%83%E6%84%BF%E5%8D%95-page%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/getUserWishLists?page=？&amp;pagesize=10</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getUserWishLists-用户心愿单-pagesize为标点符号<a name="getUserWishLists-%E7%94%A8%E6%88%B7%E5%BF%83%E6%84%BF%E5%8D%95-pagesize%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/getUserWishLists?page=1&amp;pagesize=？</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getUserWishLists-用户心愿单-pagesize为特殊符号<a name="getUserWishLists-%E7%94%A8%E6%88%B7%E5%BF%83%E6%84%BF%E5%8D%95-pagesize%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/getUserWishLists?page=1&amp;pagesize=*</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getUserWishLists-用户心愿单-pagesize为数学符号<a name="getUserWishLists-%E7%94%A8%E6%88%B7%E5%BF%83%E6%84%BF%E5%8D%95-pagesize%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/getUserWishLists?page=1&amp;pagesize=+</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getUserWishLists-用户心愿单-pagesize为空<a name="getUserWishLists-%E7%94%A8%E6%88%B7%E5%BF%83%E6%84%BF%E5%8D%95-pagesize%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/getUserWishLists?page=1&amp;pagesize=</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getUserWishLists-用户心愿单-pagesize为中文<a name="getUserWishLists-%E7%94%A8%E6%88%B7%E5%BF%83%E6%84%BF%E5%8D%95-pagesize%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/getUserWishLists?page=1&amp;pagesize=测试</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getUserWishLists-用户心愿单-pagesize为英文<a name="getUserWishLists-%E7%94%A8%E6%88%B7%E5%BF%83%E6%84%BF%E5%8D%95-pagesize%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/getUserWishLists?page=1&amp;pagesize=test</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>addWish-奖品加入心愿单-组合正确性验证<a name="addWish-%E5%A5%96%E5%93%81%E5%8A%A0%E5%85%A5%E5%BF%83%E6%84%BF%E5%8D%95-%E7%BB%84%E5%90%88%E6%AD%A3%E7%A1%AE%E6%80%A7%E9%AA%8C%E8%AF%81"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/addWish</td><td>POST</td><td>{&#13;
+	"roleType":"learner",&#13;
+	"prizeId":"136",&#13;
+	"consumeCount":1,&#13;
+	"userContactInfo":"123"&#13;
+	}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>addWish-奖品加入心愿单-roleType为空<a name="addWish-%E5%A5%96%E5%93%81%E5%8A%A0%E5%85%A5%E5%BF%83%E6%84%BF%E5%8D%95-roleType%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/addWish</td><td>POST</td><td>{&#13;
+	"roleType":"",&#13;
+	"prizeId":"136",&#13;
+	"consumeCount":1,&#13;
+	"userContactInfo":"123"&#13;
+	}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>addWish-奖品加入心愿单-roleType为中文<a name="addWish-%E5%A5%96%E5%93%81%E5%8A%A0%E5%85%A5%E5%BF%83%E6%84%BF%E5%8D%95-roleType%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/addWish</td><td>POST</td><td>{&#13;
+	"roleType":"测试",&#13;
+	"prizeId":"136",&#13;
+	"consumeCount":1,&#13;
+	"userContactInfo":"123"&#13;
+	}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>addWish-奖品加入心愿单-roleType为特殊符号<a name="addWish-%E5%A5%96%E5%93%81%E5%8A%A0%E5%85%A5%E5%BF%83%E6%84%BF%E5%8D%95-roleType%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/addWish</td><td>POST</td><td>{&#13;
+	"roleType":"&amp;",&#13;
+	"prizeId":"136",&#13;
+	"consumeCount":1,&#13;
+	"userContactInfo":"123"&#13;
+	}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>addWish-奖品加入心愿单-prizeId为特殊符号<a name="addWish-%E5%A5%96%E5%93%81%E5%8A%A0%E5%85%A5%E5%BF%83%E6%84%BF%E5%8D%95-prizeId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/addWish</td><td>POST</td><td>{&#13;
+	"roleType":"learner",&#13;
+	"prizeId":"&amp;",&#13;
+	"consumeCount":1,&#13;
+	"userContactInfo":"123"&#13;
+	}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addWish-奖品加入心愿单-prizeId为数学符号<a name="addWish-%E5%A5%96%E5%93%81%E5%8A%A0%E5%85%A5%E5%BF%83%E6%84%BF%E5%8D%95-prizeId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/addWish</td><td>POST</td><td>{&#13;
+	"roleType":"learner",&#13;
+	"prizeId":"+",&#13;
+	"consumeCount":1,&#13;
+	"userContactInfo":"123"&#13;
+	}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addWish-奖品加入心愿单-prizeId为标点符号<a name="addWish-%E5%A5%96%E5%93%81%E5%8A%A0%E5%85%A5%E5%BF%83%E6%84%BF%E5%8D%95-prizeId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/addWish</td><td>POST</td><td>{&#13;
+	"roleType":"learner",&#13;
+	"prizeId":"？",&#13;
+	"consumeCount":1,&#13;
+	"userContactInfo":"123"&#13;
+	}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addWish-奖品加入心愿单-prizeId为中文<a name="addWish-%E5%A5%96%E5%93%81%E5%8A%A0%E5%85%A5%E5%BF%83%E6%84%BF%E5%8D%95-prizeId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/addWish</td><td>POST</td><td>{&#13;
+	"roleType":"learner",&#13;
+	"prizeId":"测试",&#13;
+	"consumeCount":1,&#13;
+	"userContactInfo":"123"&#13;
+	}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addWish-奖品加入心愿单-prizeId为英文<a name="addWish-%E5%A5%96%E5%93%81%E5%8A%A0%E5%85%A5%E5%BF%83%E6%84%BF%E5%8D%95-prizeId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/addWish</td><td>POST</td><td>{&#13;
+	"roleType":"learner",&#13;
+	"prizeId":"test",&#13;
+	"consumeCount":1,&#13;
+	"userContactInfo":"123"&#13;
+	}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addWish-奖品加入心愿单-prizeId为空<a name="addWish-%E5%A5%96%E5%93%81%E5%8A%A0%E5%85%A5%E5%BF%83%E6%84%BF%E5%8D%95-prizeId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/addWish</td><td>POST</td><td>{&#13;
+	"roleType":"learner",&#13;
+	"prizeId":"",&#13;
+	"consumeCount":1,&#13;
+	"userContactInfo":"123"&#13;
+	}</td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>addWish-奖品加入心愿单-consumeCount为空<a name="addWish-%E5%A5%96%E5%93%81%E5%8A%A0%E5%85%A5%E5%BF%83%E6%84%BF%E5%8D%95-consumeCount%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/addWish</td><td>POST</td><td>{&#13;
+	"roleType":"learner",&#13;
+	"prizeId":"136",&#13;
+	"consumeCount":1,&#13;
+	"userContactInfo":"123"&#13;
+	}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>addWish-奖品加入心愿单-consumeCount为特殊字符<a name="addWish-%E5%A5%96%E5%93%81%E5%8A%A0%E5%85%A5%E5%BF%83%E6%84%BF%E5%8D%95-consumeCount%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/addWish</td><td>POST</td><td>{&#13;
+	"roleType":"learner",&#13;
+	"prizeId":"136",&#13;
+	"consumeCount":"&amp;",  &#13;
+	"userContactInfo":"123"&#13;
+	}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addWish-奖品加入心愿单-consumeCount为数学符号<a name="addWish-%E5%A5%96%E5%93%81%E5%8A%A0%E5%85%A5%E5%BF%83%E6%84%BF%E5%8D%95-consumeCount%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/addWish</td><td>POST</td><td>{&#13;
+	"roleType":"learner",&#13;
+	"prizeId":"136",&#13;
+	"consumeCount":"+",  &#13;
+	"userContactInfo":"123"&#13;
+	}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addWish-奖品加入心愿单-consumeCount为标点符号<a name="addWish-%E5%A5%96%E5%93%81%E5%8A%A0%E5%85%A5%E5%BF%83%E6%84%BF%E5%8D%95-consumeCount%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/addWish</td><td>POST</td><td>{&#13;
+	"roleType":"learner",&#13;
+	"prizeId":"136",&#13;
+	"consumeCount":"？",  &#13;
+	"userContactInfo":"123"&#13;
+	}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addWish-奖品加入心愿单-consumeCount为英文<a name="addWish-%E5%A5%96%E5%93%81%E5%8A%A0%E5%85%A5%E5%BF%83%E6%84%BF%E5%8D%95-consumeCount%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/addWish</td><td>POST</td><td>{&#13;
+	"roleType":"learner",&#13;
+	"prizeId":"136",&#13;
+	"consumeCount":"test",  &#13;
+	"userContactInfo":"123"&#13;
+	}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addWish-奖品加入心愿单-consumeCount为中文<a name="addWish-%E5%A5%96%E5%93%81%E5%8A%A0%E5%85%A5%E5%BF%83%E6%84%BF%E5%8D%95-consumeCount%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/addWish</td><td>POST</td><td>{&#13;
+	"roleType":"learner",&#13;
+	"prizeId":"136",&#13;
+	"consumeCount":"测试",  &#13;
+	"userContactInfo":"123"&#13;
+	}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>addWish-奖品加入心愿单-userContactInfo为空<a name="addWish-%E5%A5%96%E5%93%81%E5%8A%A0%E5%85%A5%E5%BF%83%E6%84%BF%E5%8D%95-userContactInfo%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/addWish</td><td>POST</td><td>{&#13;
+	"roleType":"learner",&#13;
+	"prizeId":"136",&#13;
+	"consumeCount":1,  &#13;
+	"userContactInfo":""&#13;
+	}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>addWish-奖品加入心愿单-userContactInfo为英文<a name="addWish-%E5%A5%96%E5%93%81%E5%8A%A0%E5%85%A5%E5%BF%83%E6%84%BF%E5%8D%95-userContactInfo%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/addWish</td><td>POST</td><td>{&#13;
+	"roleType":"learner",&#13;
+	"prizeId":"136",&#13;
+	"consumeCount":1,  &#13;
+	"userContactInfo":"test"&#13;
+	}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>addWish-奖品加入心愿单-userContactInfo为中文<a name="addWish-%E5%A5%96%E5%93%81%E5%8A%A0%E5%85%A5%E5%BF%83%E6%84%BF%E5%8D%95-userContactInfo%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/addWish</td><td>POST</td><td>{&#13;
+	"roleType":"learner",&#13;
+	"prizeId":"136",&#13;
+	"consumeCount":1,  &#13;
+	"userContactInfo":"测试"&#13;
+	}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>addWish-奖品加入心愿单-userContactInfo为标点符号<a name="addWish-%E5%A5%96%E5%93%81%E5%8A%A0%E5%85%A5%E5%BF%83%E6%84%BF%E5%8D%95-userContactInfo%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/addWish</td><td>POST</td><td>{&#13;
+	"roleType":"learner",&#13;
+	"prizeId":"136",&#13;
+	"consumeCount":1,  &#13;
+	"userContactInfo":"？"&#13;
+	}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>addWish-奖品加入心愿单-userContactInfo为特殊符号<a name="addWish-%E5%A5%96%E5%93%81%E5%8A%A0%E5%85%A5%E5%BF%83%E6%84%BF%E5%8D%95-userContactInfo%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/addWish</td><td>POST</td><td>{&#13;
+	"roleType":"learner",&#13;
+	"prizeId":"136",&#13;
+	"consumeCount":1,  &#13;
+	"userContactInfo":"*"&#13;
+	}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>addWish-奖品加入心愿单-userContactInfo为数学符号<a name="addWish-%E5%A5%96%E5%93%81%E5%8A%A0%E5%85%A5%E5%BF%83%E6%84%BF%E5%8D%95-userContactInfo%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/addWish</td><td>POST</td><td>{&#13;
+	"roleType":"learner",&#13;
+	"prizeId":"136",&#13;
+	"consumeCount":1,  &#13;
+	"userContactInfo":"+"&#13;
+	}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>wishlists组合正确性验证<a name="wishlists%E7%BB%84%E5%90%88%E6%AD%A3%E7%A1%AE%E6%80%A7%E9%AA%8C%E8%AF%81"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/wishlists/58</td><td>DELETE</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>wishlists-prizeId为空格<a name="wishlists-prizeId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/wishlists/%20</td><td>DELETE</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>wishlists-prizeId为英文<a name="wishlists-prizeId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/wishlists/prized</td><td>DELETE</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>wishlists-prizeId为中文<a name="wishlists-prizeId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/wishlists/奖品</td><td>DELETE</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>wishlists-prizeId为特殊符号<a name="wishlists-prizeId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/wishlists/&amp;</td><td>DELETE</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>wishlists-prizeId为数学符号<a name="wishlists-prizeId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/wishlists/+</td><td>DELETE</td><td>{&#13;
+	"prizeId":58&#13;
+	}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>wishlists-prizeId为标点符号<a name="wishlists-prizeId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/wishlists/,</td><td>DELETE</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>awardsList-获取奖品列表-组合正确性验证<a name="awardsList-%E8%8E%B7%E5%8F%96%E5%A5%96%E5%93%81%E5%88%97%E8%A1%A8-%E7%BB%84%E5%90%88%E6%AD%A3%E7%A1%AE%E6%80%A7%E9%AA%8C%E8%AF%81"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/awardsList?orderType=default&amp;upOrDown=up&amp;page=1&amp;pageSize=10&amp;roleType=learner</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>awardsList-获取奖品列表-orderType为特殊字符<a name="awardsList-%E8%8E%B7%E5%8F%96%E5%A5%96%E5%93%81%E5%88%97%E8%A1%A8-orderType%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/awardsList?orderType=&amp;&amp;upOrDown=up&amp;page=1&amp;pageSize=10&amp;roleType=learner</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>awardsList-获取奖品列表-orderType为数学符号<a name="awardsList-%E8%8E%B7%E5%8F%96%E5%A5%96%E5%93%81%E5%88%97%E8%A1%A8-orderType%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/awardsList?orderType=+&amp;upOrDown=up&amp;page=1&amp;pageSize=10&amp;roleType=learner</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>awardsList-获取奖品列表-orderType为标点符号<a name="awardsList-%E8%8E%B7%E5%8F%96%E5%A5%96%E5%93%81%E5%88%97%E8%A1%A8-orderType%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/awardsList?orderType=？&amp;upOrDown=up&amp;page=1&amp;pageSize=10&amp;roleType=learner</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>awardsList-获取奖品列表-orderType为中文<a name="awardsList-%E8%8E%B7%E5%8F%96%E5%A5%96%E5%93%81%E5%88%97%E8%A1%A8-orderType%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/awardsList?orderType=测试&amp;upOrDown=up&amp;page=1&amp;pageSize=10&amp;roleType=learner</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>awardsList-获取奖品列表-page为中文<a name="awardsList-%E8%8E%B7%E5%8F%96%E5%A5%96%E5%93%81%E5%88%97%E8%A1%A8-page%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/awardsList?orderType=default&amp;upOrDown=up&amp;page=测试&amp;pageSize=10&amp;roleType=learner</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>awardsList-获取奖品列表-page为英文<a name="awardsList-%E8%8E%B7%E5%8F%96%E5%A5%96%E5%93%81%E5%88%97%E8%A1%A8-page%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/awardsList?orderType=default&amp;upOrDown=up&amp;page=test&amp;pageSize=10&amp;roleType=learner</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>awardsList-获取奖品列表-page为特殊字符<a name="awardsList-%E8%8E%B7%E5%8F%96%E5%A5%96%E5%93%81%E5%88%97%E8%A1%A8-page%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/awardsList?orderType=default&amp;upOrDown=up&amp;page=*&amp;pageSize=10&amp;roleType=learner</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>awardsList-获取奖品列表-page为数学符号<a name="awardsList-%E8%8E%B7%E5%8F%96%E5%A5%96%E5%93%81%E5%88%97%E8%A1%A8-page%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/awardsList?orderType=default&amp;upOrDown=up&amp;page=+&amp;pageSize=10&amp;roleType=learner</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>awardsList-获取奖品列表-page为标点符号<a name="awardsList-%E8%8E%B7%E5%8F%96%E5%A5%96%E5%93%81%E5%88%97%E8%A1%A8-page%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/awardsList?orderType=default&amp;upOrDown=up&amp;page=？&amp;pageSize=10&amp;roleType=learner</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>awardsList-获取奖品列表-pageSize为标点符号<a name="awardsList-%E8%8E%B7%E5%8F%96%E5%A5%96%E5%93%81%E5%88%97%E8%A1%A8-pageSize%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/awardsList?orderType=default&amp;upOrDown=up&amp;page=1&amp;pageSize=？&amp;roleType=learner</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>awardsList-获取奖品列表-pageSize为特殊符号<a name="awardsList-%E8%8E%B7%E5%8F%96%E5%A5%96%E5%93%81%E5%88%97%E8%A1%A8-pageSize%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/awardsList?orderType=default&amp;upOrDown=up&amp;page=1&amp;pageSize=*&amp;roleType=learner</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>awardsList-获取奖品列表-pageSize为数学符号<a name="awardsList-%E8%8E%B7%E5%8F%96%E5%A5%96%E5%93%81%E5%88%97%E8%A1%A8-pageSize%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/awardsList?orderType=default&amp;upOrDown=up&amp;page=1&amp;pageSize=+&amp;roleType=learner</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>awardsList-获取奖品列表-pageSize为英文<a name="awardsList-%E8%8E%B7%E5%8F%96%E5%A5%96%E5%93%81%E5%88%97%E8%A1%A8-pageSize%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/awardsList?orderType=default&amp;upOrDown=up&amp;page=1&amp;pageSize=test&amp;roleType=learner</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>awardsList-获取奖品列表-pageSize为中文<a name="awardsList-%E8%8E%B7%E5%8F%96%E5%A5%96%E5%93%81%E5%88%97%E8%A1%A8-pageSize%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/awardsList?orderType=default&amp;upOrDown=up&amp;page=1&amp;pageSize=测试&amp;roleType=learner</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>awards-获取奖品详情-组合正确性验证<a name="awards-%E8%8E%B7%E5%8F%96%E5%A5%96%E5%93%81%E8%AF%A6%E6%83%85-%E7%BB%84%E5%90%88%E6%AD%A3%E7%A1%AE%E6%80%A7%E9%AA%8C%E8%AF%81"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/awards?id=161&amp;roleType=learner</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>awards-获取奖品详情-id为空<a name="awards-%E8%8E%B7%E5%8F%96%E5%A5%96%E5%93%81%E8%AF%A6%E6%83%85-id%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/awards?id=&amp;roleType=learner</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>awards-获取奖品详情-id为中文<a name="awards-%E8%8E%B7%E5%8F%96%E5%A5%96%E5%93%81%E8%AF%A6%E6%83%85-id%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/awards?id=测试&amp;roleType=learner</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>awards-获取奖品详情-id为英文<a name="awards-%E8%8E%B7%E5%8F%96%E5%A5%96%E5%93%81%E8%AF%A6%E6%83%85-id%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/awards?id=test&amp;roleType=learner</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>awards-获取奖品详情-id为特殊字符<a name="awards-%E8%8E%B7%E5%8F%96%E5%A5%96%E5%93%81%E8%AF%A6%E6%83%85-id%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/awards?id=&amp;&amp;roleType=learner</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>awards-获取奖品详情-id为数学符号<a name="awards-%E8%8E%B7%E5%8F%96%E5%A5%96%E5%93%81%E8%AF%A6%E6%83%85-id%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/awards?id=+&amp;roleType=learner</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>awards-获取奖品详情-id为标点符号<a name="awards-%E8%8E%B7%E5%8F%96%E5%A5%96%E5%93%81%E8%AF%A6%E6%83%85-id%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/awards?id=？&amp;roleType=learner</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>awards-获取奖品详情-roleType为标点符号<a name="awards-%E8%8E%B7%E5%8F%96%E5%A5%96%E5%93%81%E8%AF%A6%E6%83%85-roleType%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/awards?id=161&amp;roleType=？</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>awards-获取奖品详情-roleType为特殊符号<a name="awards-%E8%8E%B7%E5%8F%96%E5%A5%96%E5%93%81%E8%AF%A6%E6%83%85-roleType%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/awards?id=161&amp;roleType=*</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>awards-获取奖品详情-roleType为数学符号<a name="awards-%E8%8E%B7%E5%8F%96%E5%A5%96%E5%93%81%E8%AF%A6%E6%83%85-roleType%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/awards?id=161&amp;roleType=+</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>awards-获取奖品详情-roleType为英文<a name="awards-%E8%8E%B7%E5%8F%96%E5%A5%96%E5%93%81%E8%AF%A6%E6%83%85-roleType%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/awards?id=161&amp;roleType=iuerhf</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>awards-获取奖品详情-roleType为中文<a name="awards-%E8%8E%B7%E5%8F%96%E5%A5%96%E5%93%81%E8%AF%A6%E6%83%85-roleType%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/awards?id=161&amp;roleType=测试</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>exchange正确性验证<a name="exchange%E6%AD%A3%E7%A1%AE%E6%80%A7%E9%AA%8C%E8%AF%81"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</td><td>POST</td><td>{&#13;
+	"roleType":"learner",&#13;
+	"prizeId":58,&#13;
+	"consumeCount":1,&#13;
+	"userContactInfo":"13589342345"}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>exchange-roleType为trainer<a name="exchange-roleType%E4%B8%BAtrainer"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": "trainer",	&#13;
+    "prizeId": 136,		     &#13;
+    "consumeCount": 1,	     &#13;
+    "userContactInfo": "123"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>exchange-roleType为特殊字符<a name="exchange-roleType%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</td><td>POST</td><td>{&#13;
+	"roleType":"&amp;",&#13;
+	"prizeId":136,&#13;
+	"consumeCount":1,&#13;
+	"userContactInfo":"13589342345"&#13;
+	}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>exchange-roleType为a-z的字符串<a name="exchange-roleType%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</td><td>POST</td><td>{&#13;
+	"roleType":"wefcx",&#13;
+	"prizeId":136,&#13;
+	"consumeCount":1,&#13;
+	"userContactInfo":"13589342345"&#13;
+	}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>exchange-consumeCount为a-z的字符串<a name="exchange-consumeCount%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/award/v1/sec/learner/awards/exchange</td><td>POST</td><td>{&#13;
+    "roleType": "learner",	&#13;
+    "prizeId": 136,		     &#13;
+    "consumeCount": "cons",	     &#13;
+    "userContactInfo": "123"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+</body>
+</html>

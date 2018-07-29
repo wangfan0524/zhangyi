@@ -1,0 +1,3053 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ZSN-Interface Test Results</title>
+<style type="text/css">
+				body {
+					font:normal 68% verdana,arial,helvetica;
+					color:#000000;
+				}
+				table tr td, table tr th {
+					font-size: 68%;
+				}
+				table.details tr th{
+				    color: #ffffff;
+					font-weight: bold;
+					text-align:center;
+					background:#2674a6;
+					white-space: nowrap;
+				}
+				table.details tr td{
+					background:#eeeee0;
+				}
+				h1 {
+					margin: 0px 0px 5px; font: 165% verdana,arial,helvetica
+				}
+				h2 {
+					margin-top: 1em; margin-bottom: 0.5em; font: bold 125% verdana,arial,helvetica
+				}
+				h3 {
+					margin-bottom: 0.5em; font: bold 115% verdana,arial,helvetica
+				}
+				.Failure {
+					font-weight:bold; color:red;
+				}
+				
+	
+				img
+				{
+				  border-width: 0px;
+				}
+				
+				.expand_link
+				{
+				   position=absolute;
+				   right: 0px;
+				   width: 27px;
+				   top: 1px;
+				   height: 27px;
+				}
+				
+				.page_details
+				{
+				   display: none;
+				}
+                                
+                                .page_details_expanded
+                                {
+                                    display: block;
+                                    display/* hide this definition from  IE5/6 */: table-row;
+                                }
+
+
+			</style>
+<script language="JavaScript">
+                           function expand(details_id)
+			   {
+			      
+			      document.getElementById(details_id).className = "page_details_expanded";
+			   }
+			   
+			   function collapse(details_id)
+			   {
+			      
+			      document.getElementById(details_id).className = "page_details";
+			   }
+			   
+			   function change(details_id)
+			   {
+			      if(document.getElementById(details_id+"_image").src.match("expand"))
+			      {
+			         document.getElementById(details_id+"_image").src = "collapse.png";
+			         expand(details_id);
+			      }
+			      else
+			      {
+			         document.getElementById(details_id+"_image").src = "expand.png";
+			         collapse(details_id);
+			      } 
+                           }
+			</script>
+</head>
+<body>
+<h1>ZSN-Interface Test Results</h1>
+<table width="100%">
+<tr>
+<td align="left">Date report: 2018/07/06 16:02</td>
+<br>
+<td align="left">RunEnvironment:https://staging.zhishinet.com</td><td align="left">TestAccount:{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td>
+</tr>
+</table>
+<hr size="1">
+<h2>Summary</h2>
+<table width="95%" cellspacing="2" cellpadding="4" border="0" class="details" align="center">
+<tr valign="top">
+<th>Total</th><th>Pass</th><th>Failures</th><th>Success Rate</th>
+</tr>
+<tr valign="top">
+<td align="center">191</td><td align="center">191</td><td align="center">0</td><td align="center">100.00%</td>
+</tr>
+</table>
+<hr align="center" width="95%" size="1">
+<h2>Success Detail</h2>
+<h3>getToken<a name="getToken"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>syncEmendbook-saveEmendbook接口可用性检查-参数全正确<a name="syncEmendbook-saveEmendbook%E6%8E%A5%E5%8F%A3%E5%8F%AF%E7%94%A8%E6%80%A7%E6%A3%80%E6%9F%A5-%E5%8F%82%E6%95%B0%E5%85%A8%E6%AD%A3%E7%A1%AE"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=3911&amp;attemptNo=1&amp;sourceCode=1&amp;answerDate=1500515018760</td><td>GET</td><td></td><td>200 - HTTP/1.1 200</td><td></td>
+</tr>
+</table>
+<h3>syncEmendbook-sessionUserTrackingId为a-z的字符<a name="syncEmendbook-sessionUserTrackingId%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=test&amp;attemptNo=1&amp;answerDate=&amp;sourceCode=1</td><td>GET</td><td></td><td>500 - HTTP/1.1 500</td><td></td>
+</tr>
+</table>
+<h3>syncEmendbook-sessionUserTrackingId为-1<a name="syncEmendbook-sessionUserTrackingId%E4%B8%BA-1"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=-1&amp;attemptNo=1&amp;answerDate=1500515018760&amp;sourceCode=1</td><td>GET</td><td></td><td>200 - HTTP/1.1 200</td><td></td>
+</tr>
+</table>
+<h3>syncEmendbook-sessionUserTrackingId为0<a name="syncEmendbook-sessionUserTrackingId%E4%B8%BA0"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=0&amp;attemptNo=1&amp;answerDate=1500515018760&amp;sourceCode=1</td><td>GET</td><td></td><td>200 - HTTP/1.1 200</td><td></td>
+</tr>
+</table>
+<h3>syncEmendbook-sessionUserTrackingId为空<a name="syncEmendbook-sessionUserTrackingId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=&amp;attemptNo=1&amp;answerDate=1500515018760&amp;sourceCode=1</td><td>GET</td><td></td><td>500 - HTTP/1.1 500</td><td></td>
+</tr>
+</table>
+<h3>syncEmendbook-sessionUserTrackingId为空格<a name="syncEmendbook-sessionUserTrackingId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId= &amp;attemptNo=1&amp;answerDate=1500515018760&amp;sourceCode=1</td><td>GET</td><td></td><td>400 - Bad request</td><td></td>
+</tr>
+</table>
+<h3>syncEmendbook-sessionUserTrackingId为特殊字符<a name="syncEmendbook-sessionUserTrackingId%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=*&amp;attemptNo=1&amp;answerDate=1500515018760&amp;sourceCode=1</td><td>GET</td><td></td><td>500 - HTTP/1.1 500</td><td></td>
+</tr>
+</table>
+<h3>syncEmendbook-attemptNo为0<a name="syncEmendbook-attemptNo%E4%B8%BA0"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=3911&amp;attemptNo=0&amp;answerDate=1500515018760&amp;sourceCode=1</td><td>GET</td><td></td><td>200 - HTTP/1.1 200</td><td></td>
+</tr>
+</table>
+<h3>syncEmendbook-attemptNo为-1<a name="syncEmendbook-attemptNo%E4%B8%BA-1"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=3911&amp;attemptNo=-1&amp;answerDate=1500515018760&amp;sourceCode=1</td><td>GET</td><td></td><td>200 - HTTP/1.1 200</td><td></td>
+</tr>
+</table>
+<h3>syncEmendbook-attemptNo为英文<a name="syncEmendbook-attemptNo%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=3911&amp;attemptNo=test&amp;answerDate=1500515018760&amp;sourceCode=1</td><td>GET</td><td></td><td>500 - HTTP/1.1 500</td><td></td>
+</tr>
+</table>
+<h3>syncEmendbook-attemptNo为空<a name="syncEmendbook-attemptNo%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=3911&amp;attemptNo=&amp;answerDate=1500515018760&amp;sourceCode=1</td><td>GET</td><td></td><td>500 - HTTP/1.1 500</td><td></td>
+</tr>
+</table>
+<h3>syncEmendbook-attemptNo为空格<a name="syncEmendbook-attemptNo%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=3911&amp;attemptNo= &amp;answerDate=1500515018760&amp;sourceCode=1</td><td>GET</td><td></td><td>400 - Bad request</td><td></td>
+</tr>
+</table>
+<h3>syncEmendbook-attemptNo为特殊字符<a name="syncEmendbook-attemptNo%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=3911&amp;attemptNo=*&amp;answerDate=1500515018760&amp;sourceCode=1</td><td>GET</td><td></td><td>500 - HTTP/1.1 500</td><td></td>
+</tr>
+</table>
+<h3>syncEmendbook-answerDate为空<a name="syncEmendbook-answerDate%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=3911&amp;attemptNo=1&amp;answerDate=&amp;sourceCode=1</td><td>GET</td><td></td><td>500 - HTTP/1.1 500</td><td></td>
+</tr>
+</table>
+<h3>syncEmendbook-sourceCode为1（练习册）<a name="syncEmendbook-sourceCode%E4%B8%BA1%EF%BC%88%E7%BB%83%E4%B9%A0%E5%86%8C%EF%BC%89"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=3911&amp;attemptNo=1&amp;answerDate=1500515018760&amp;sourceCode=1</td><td>GET</td><td></td><td>200 - HTTP/1.1 200</td><td></td>
+</tr>
+</table>
+<h3>syncEmendbook-sourceCode为2（作业中心）<a name="syncEmendbook-sourceCode%E4%B8%BA2%EF%BC%88%E4%BD%9C%E4%B8%9A%E4%B8%AD%E5%BF%83%EF%BC%89"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=3911&amp;attemptNo=1&amp;answerDate=1500515018760&amp;sourceCode=2</td><td>GET</td><td></td><td>200 - HTTP/1.1 200</td><td></td>
+</tr>
+</table>
+<h3>syncEmendbook-sourceCode为0（不存在数据检查）<a name="syncEmendbook-sourceCode%E4%B8%BA0%EF%BC%88%E4%B8%8D%E5%AD%98%E5%9C%A8%E6%95%B0%E6%8D%AE%E6%A3%80%E6%9F%A5%EF%BC%89"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=3911&amp;attemptNo=1&amp;answerDate=1500515018760&amp;sourceCode=0</td><td>GET</td><td></td><td>200 - HTTP/1.1 200</td><td></td>
+</tr>
+</table>
+<h3>syncEmendbook-sourceCode为空<a name="syncEmendbook-sourceCode%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=3911&amp;attemptNo=1&amp;answerDate=1500515018760&amp;sourceCode=</td><td>GET</td><td></td><td>200 - HTTP/1.1 200</td><td></td>
+</tr>
+</table>
+<h3>syncEmendbook-sourceCode为空格<a name="syncEmendbook-sourceCode%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=3911&amp;attemptNo=1&amp;answerDate=1500515018760&amp;sourceCode= </td><td>GET</td><td></td><td>200 - HTTP/1.1 200</td><td></td>
+</tr>
+</table>
+<h3>syncEmendbook-sourceCode为特殊字符<a name="syncEmendbook-sourceCode%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=3911&amp;attemptNo=1&amp;answerDate=1500515018760&amp;sourceCode=*</td><td>GET</td><td></td><td>200 - HTTP/1.1 200</td><td></td>
+</tr>
+</table>
+<h3>getErrorBookList-subjectId组合查询<a name="getErrorBookList-subjectId%E7%BB%84%E5%90%88%E6%9F%A5%E8%AF%A2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;orderBy=answerDate&amp;isCorrect=&amp;assessmentOwnerIdList=3173,3177,3519&amp;assessmentQuestionTaxonomyTypeList=2,3&amp;homeworkTextbookId=11&amp;unitIdList=84,88&amp;isFavoured=false&amp;page=1&amp;pageSize=20</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorBookList-subjectId=1英文<a name="getErrorBookList-subjectId=1%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorBookList-subjectId=2数学<a name="getErrorBookList-subjectId=2%E6%95%B0%E5%AD%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=2</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorBookList-subjectId必填项检查<a name="getErrorBookList-subjectId%E5%BF%85%E5%A1%AB%E9%A1%B9%E6%A3%80%E6%9F%A5"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorBookList-subjectId=空<a name="getErrorBookList-subjectId=%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorBookList-subjectId= 空格<a name="getErrorBookList-subjectId= %E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId= </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 78: https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId= </td><td></td>
+</tr>
+</table>
+<h3>getErrorBookList-subjectId=0不存在的值<a name="getErrorBookList-subjectId=0%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E5%80%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=0</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorBookList-homeworkTextbookId=-1不存在的值<a name="getErrorBookList-homeworkTextbookId=-1%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E5%80%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;homeworkTextbookId=-1</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorBookList-homeworkTextbookId=空<a name="getErrorBookList-homeworkTextbookId=%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;homeworkTextbookId=</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorBookList-homeworkTextbookId= 空格<a name="getErrorBookList-homeworkTextbookId= %E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;homeworkTextbookId= </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 99: https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;homeworkTextbookId= </td><td></td>
+</tr>
+</table>
+<h3>getErrorBookList-homeworkTextbookId=*<a name="getErrorBookList-homeworkTextbookId=*"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;homeworkTextbookId=*</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorBookList-unitIdList单选<a name="getErrorBookList-unitIdList%E5%8D%95%E9%80%89"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;unitIdList=84</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorBookList-unitIdList多选<a name="getErrorBookList-unitIdList%E5%A4%9A%E9%80%89"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;unitIdList=84,88</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorBookList-isFavoured=ture<a name="getErrorBookList-isFavoured=ture"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;isFavoured=true</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorBookList-isFavoured=false<a name="getErrorBookList-isFavoured=false"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;isFavoured=false</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorBookList-isCorrect=1已纠正<a name="getErrorBookList-isCorrect=1%E5%B7%B2%E7%BA%A0%E6%AD%A3"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;isCorrect=1</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorBookList-isCorrect=0未纠正<a name="getErrorBookList-isCorrect=0%E6%9C%AA%E7%BA%A0%E6%AD%A3"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;isCorrect=0</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorBookList-isCorrect= 全部<a name="getErrorBookList-isCorrect= %E5%85%A8%E9%83%A8"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;isCorrect=</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorBookList-orderBy=answerDate<a name="getErrorBookList-orderBy=answerDate"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;orderBy=answerDate</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorBookList-orderBy=errorCount<a name="getErrorBookList-orderBy=errorCount"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;orderBy=errorCount</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorBookList-orderBy=questionTypeOrder<a name="getErrorBookList-orderBy=questionTypeOrder"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;orderBy=questionTypeOrder</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorBookList-page=1<a name="getErrorBookList-page=1"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;page=1</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorBookList-page=1000<a name="getErrorBookList-page=1000"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;page=1000</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorBookList-page=-1<a name="getErrorBookList-page=-1"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;page=-1</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorBookList-pageSize=<a name="getErrorBookList-pageSize="></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;pageSize=</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorBookList-pageSize=1<a name="getErrorBookList-pageSize=1"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;pageSize=1</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorBookList-pageSize=0<a name="getErrorBookList-pageSize=0"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;pageSize=0</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorBookList-pageSize=1000<a name="getErrorBookList-pageSize=1000"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;pageSize=1000</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorTextbook-subjectId=1英语<a name="getErrorTextbook-subjectId=1%E8%8B%B1%E8%AF%AD"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorTextbook?subjectId=1</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorTextbook-subjectId=2数学<a name="getErrorTextbook-subjectId=2%E6%95%B0%E5%AD%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorTextbook?subjectId=2</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorTextbook-subjectId=为空<a name="getErrorTextbook-subjectId=%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorTextbook?subjectId=</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorTextbook-subjectId= 空格<a name="getErrorTextbook-subjectId= %E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorTextbook?subjectId= </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 78: https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorTextbook?subjectId= </td><td></td>
+</tr>
+</table>
+<h3>getErrorTextbook-subjectId=1000000000000不存在<a name="getErrorTextbook-subjectId=1000000000000%E4%B8%8D%E5%AD%98%E5%9C%A8"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorTextbook?subjectId=1000000000000000000000000</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorTextbook-subjectId=*为特殊字符<a name="getErrorTextbook-subjectId=*%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorTextbook?subjectId=*</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorUserKnowledge-subjectId=1英语<a name="getErrorUserKnowledge-subjectId=1%E8%8B%B1%E8%AF%AD"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorUserKnowledge?subjectId=1</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorUserKnowledge-subjectId=2数学<a name="getErrorUserKnowledge-subjectId=2%E6%95%B0%E5%AD%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorUserKnowledge?subjectId=2</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorUserKnowledge-subjectId=0不存在的学科<a name="getErrorUserKnowledge-subjectId=0%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E5%AD%A6%E7%A7%91"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorUserKnowledge?subjectId=0</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorUserKnowledge-subjectId=空<a name="getErrorUserKnowledge-subjectId=%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorUserKnowledge?subjectId=</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorUserKnowledge-subjectId= 空格<a name="getErrorUserKnowledge-subjectId= %E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorUserKnowledge?subjectId= </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 83: https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorUserKnowledge?subjectId= </td><td></td>
+</tr>
+</table>
+<h3>getErrorUserKnowledge-subjectId=*为特殊字符<a name="getErrorUserKnowledge-subjectId=*%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorUserKnowledge?subjectId=*</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>isFavoured-subjectId=1英语<a name="isFavoured-subjectId=1%E8%8B%B1%E8%AF%AD"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/isFavoured</td><td>POST</td><td>{&#13;
+"id": {&#13;
+                "timestamp": 1500481330,&#13;
+                "machineIdentifier": 3408560,&#13;
+                "processIdentifier": 10,&#13;
+                "counter": 16679317&#13;
+            }, &#13;
+ "subjectId":1,&#13;
+ "favoured":true&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>isFavoured-favoured=false不收藏<a name="isFavoured-favoured=false%E4%B8%8D%E6%94%B6%E8%97%8F"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/isFavoured</td><td>POST</td><td>{&#13;
+ "id": {&#13;
+                "timestamp": 1500481330,&#13;
+                "machineIdentifier": 3408560,&#13;
+                "processIdentifier": 10,&#13;
+                "counter": 16679317&#13;
+            }, &#13;
+ "subjectId":1,&#13;
+ "favoured":false&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>isFavoured-subjectId=2数学<a name="isFavoured-subjectId=2%E6%95%B0%E5%AD%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/isFavoured</td><td>POST</td><td>{&#13;
+"id": {&#13;
+                "timestamp": 1500481332,&#13;
+                "machineIdentifier": 3408560,&#13;
+                "processIdentifier": 10,&#13;
+                "counter": 16679445&#13;
+            }, &#13;
+ "subjectId":2,&#13;
+ "favoured":true&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>isFavoured-id错误<a name="isFavoured-id%E9%94%99%E8%AF%AF"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/isFavoured</td><td>POST</td><td>{&#13;
+"id": {&#13;
+                "timestamp": 150048133200000,&#13;
+                "machineIdentifier": 3408560,&#13;
+                "processIdentifier": 10,&#13;
+                "counter": 16679445&#13;
+            }, &#13;
+ "subjectId":2,&#13;
+ "favoured":true&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getFavouredCount-subjectId为1（英语）<a name="getFavouredCount-subjectId%E4%B8%BA1%EF%BC%88%E8%8B%B1%E8%AF%AD%EF%BC%89"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getFavouredCount?subjectId=1</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getFavouredCount-subjectId为2（数学）<a name="getFavouredCount-subjectId%E4%B8%BA2%EF%BC%88%E6%95%B0%E5%AD%A6%EF%BC%89"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getFavouredCount?subjectId=2</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getFavouredCount-subjectId为不存在的值<a name="getFavouredCount-subjectId%E4%B8%BA%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E5%80%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getFavouredCount?subjectId=0</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getFavouredCount-subjectId为空<a name="getFavouredCount-subjectId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getFavouredCount?subjectId=</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getFavouredCount-subjectId为空格<a name="getFavouredCount-subjectId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getFavouredCount?subjectId=    </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 78: https://staging.zhishinet.com/api/emendbook/v1/sec/getFavouredCount?subjectId=    </td><td></td>
+</tr>
+</table>
+<h3>getFavouredCount-subjectId为a-z的字符串<a name="getFavouredCount-subjectId%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getFavouredCount?subjectId=test</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getFavouredCount-subjectId为中文<a name="getFavouredCount-subjectId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getFavouredCount?subjectId=测试</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getFavouredCount-subjectId为特殊字符<a name="getFavouredCount-subjectId%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getFavouredCount?subjectId=*</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getFavouredCount?subjectId=*</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getFavouredCount-subjectId为数学符号<a name="getFavouredCount-subjectId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getFavouredCount?subjectId=+</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getFavouredCount-subjectId为标点符号<a name="getFavouredCount-subjectId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getFavouredCount?subjectId=!</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getArticleCount-subjectId为1（英语）<a name="getArticleCount-subjectId%E4%B8%BA1%EF%BC%88%E8%8B%B1%E8%AF%AD%EF%BC%89"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getArticleCount?subjectId=1</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getArticleCount-subjectId为2（数学）<a name="getArticleCount-subjectId%E4%B8%BA2%EF%BC%88%E6%95%B0%E5%AD%A6%EF%BC%89"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getArticleCount?subjectId=2</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getArticleCount-subjectId为不存在的值<a name="getArticleCount-subjectId%E4%B8%BA%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E5%80%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getArticleCount?subjectId=0</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getArticleCount-subjectId为空<a name="getArticleCount-subjectId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getArticleCount?subjectId=</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getArticleCount-subjectId为空格<a name="getArticleCount-subjectId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getArticleCount?subjectId= </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 77: https://staging.zhishinet.com/api/emendbook/v1/sec/getArticleCount?subjectId= </td><td></td>
+</tr>
+</table>
+<h3>getArticleCount-subjectId为a-z的字符串<a name="getArticleCount-subjectId%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getArticleCount?subjectId=test</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getArticleCount-subjectId为中文<a name="getArticleCount-subjectId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getArticleCount?subjectId=测试</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getArticleCount-subjectId为特殊符号<a name="getArticleCount-subjectId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getArticleCount?subjectId=&amp;</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getArticleCount-subjectId为数学符号<a name="getArticleCount-subjectId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getArticleCount?subjectId=-</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getArticleCount-subjectId为标点符号<a name="getArticleCount-subjectId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getArticleCount?subjectId=，</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice-获取练习题目(提取PracticeId)<a name="getPractice-%E8%8E%B7%E5%8F%96%E7%BB%83%E4%B9%A0%E9%A2%98%E7%9B%AE(%E6%8F%90%E5%8F%96PracticeId)"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>{&#13;
+    "feature": 1,&#13;
+    "subjectId": 1,&#13;
+    "unitIdList": [],&#13;
+    "assessmentOwnerIdList": [],&#13;
+    "assessmentQuestionTaxonomyTypeList": [],&#13;
+    "isFavoured": false,&#13;
+    "isCorrect": "",&#13;
+    "orderBy": "answerDate"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getEmendbookScoreInfo正确性验证<a name="getEmendbookScoreInfo%E6%AD%A3%E7%A1%AE%E6%80%A7%E9%AA%8C%E8%AF%81"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getEmendbookScoreInfo?practiceId=25104</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getEmendbookScoreInfo-practiceId为不存在的值<a name="getEmendbookScoreInfo-practiceId%E4%B8%BA%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E5%80%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getEmendbookScoreInfo?practiceId=-1</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getEmendbookScoreInfo-practiceId为空<a name="getEmendbookScoreInfo-practiceId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getEmendbookScoreInfo?practiceId=</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getEmendbookScoreInfo-practiceId为空格<a name="getEmendbookScoreInfo-practiceId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getEmendbookScoreInfo?practiceId= </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 84: https://staging.zhishinet.com/api/emendbook/v1/sec/getEmendbookScoreInfo?practiceId= </td><td></td>
+</tr>
+</table>
+<h3>getEmendbookScoreInfo-practiceId为a-z的字符串<a name="getEmendbookScoreInfo-practiceId%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getEmendbookScoreInfo?practiceId=test</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getEmendbookScoreInfo-practiceId为中文<a name="getEmendbookScoreInfo-practiceId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getEmendbookScoreInfo?practiceId=测试</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getEmendbookScoreInfo-practiceId为特殊符号<a name="getEmendbookScoreInfo-practiceId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getEmendbookScoreInfo?practiceId=&amp;</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getEmendbookScoreInfo-practiceId为标点符号<a name="getEmendbookScoreInfo-practiceId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getEmendbookScoreInfo?practiceId=？</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getEmendbookScoreInfo-practiceId为数学符号<a name="getEmendbookScoreInfo-practiceId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getEmendbookScoreInfo?practiceId=-</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice正确性校验-英语（feature=1）<a name="getPractice%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C-%E8%8B%B1%E8%AF%AD%EF%BC%88feature=1%EF%BC%89"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>{&#13;
+    "feature": 1,&#13;
+    "subjectId": 1,&#13;
+    "unitIdList": [],&#13;
+    "assessmentOwnerIdList": [],&#13;
+    "assessmentQuestionTaxonomyTypeList": [],&#13;
+    "isFavoured": false,&#13;
+    "isCorrect": "",&#13;
+    "orderBy": "answerDate"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice正确性校验-数学（feature=1）<a name="getPractice%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C-%E6%95%B0%E5%AD%A6%EF%BC%88feature=1%EF%BC%89"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>{&#13;
+    "feature": 1,&#13;
+    "subjectId": 2,&#13;
+    "unitIdList": [],&#13;
+    "assessmentOwnerIdList": [],&#13;
+    "assessmentQuestionTaxonomyTypeList": [],&#13;
+    "isFavoured": false,&#13;
+    "isCorrect": "",&#13;
+    "orderBy": "answerDate"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice-subjectId为空<a name="getPractice-subjectId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>{&#13;
+    "feature": 1,&#13;
+    "subjectId":"" &#13;
+   &#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice-subjectId为特殊符号<a name="getPractice-subjectId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>{&#13;
+    "feature": 1,&#13;
+    "subjectId":"*"&#13;
+   &#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice-subjectId为数学符号<a name="getPractice-subjectId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>{&#13;
+    "feature": 1,&#13;
+    "subjectId": "+"&#13;
+   &#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice-subjectId为标点符号<a name="getPractice-subjectId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>{&#13;
+    "feature": 1,&#13;
+    "subjectId": "?"&#13;
+  &#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice-subjectId为英文<a name="getPractice-subjectId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>{&#13;
+    "feature": 1,&#13;
+    "subjectId":"b" &#13;
+    &#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice-subjectId为中文<a name="getPractice-subjectId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>{&#13;
+    "feature": 1,&#13;
+    "subjectId":"林" &#13;
+   &#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice-subjectId为空格<a name="getPractice-subjectId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>{&#13;
+    "feature": 1,&#13;
+    "subjectId":"    "     &#13;
+      &#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice-subjectId为0<a name="getPractice-subjectId%E4%B8%BA0"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>{&#13;
+    "feature": 1,&#13;
+    "subjectId":0&#13;
+   &#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice正确性校验-英语(feature=2)<a name="getPractice%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C-%E8%8B%B1%E8%AF%AD(feature=2)"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>{&#13;
+    "feature": 2,&#13;
+    "subjectId": 1&#13;
+&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice正确性校验-数学(feature=2)<a name="getPractice%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C-%E6%95%B0%E5%AD%A6(feature=2)"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>{&#13;
+    "feature": 2,&#13;
+    "subjectId": 2&#13;
+&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice-subjectId为空(feature=2)<a name="getPractice-subjectId%E4%B8%BA%E7%A9%BA(feature=2)"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>{&#13;
+    "feature": 2,&#13;
+    "subjectId":"" &#13;
+&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice正确性校验-英语（feature=3）<a name="getPractice%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C-%E8%8B%B1%E8%AF%AD%EF%BC%88feature=3%EF%BC%89"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>{&#13;
+    "feature": 3,&#13;
+    "subjectId": 1,&#13;
+    "unitIdList": [431]&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice正确性校验-数学（feature=3）<a name="getPractice%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C-%E6%95%B0%E5%AD%A6%EF%BC%88feature=3%EF%BC%89"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>{&#13;
+    "feature": 3,&#13;
+    "subjectId": 2,&#13;
+    "unitIdList": [431]&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice-subjectId为空(feature=3)<a name="getPractice-subjectId%E4%B8%BA%E7%A9%BA(feature=3)"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>{&#13;
+    "feature": 3,&#13;
+    "subjectId":"",   &#13;
+    "unitIdList": [431]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice-unitIdList为特殊符号<a name="getPractice-unitIdList%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>{&#13;
+    "feature": 3,&#13;
+    "subjectId":"",   &#13;
+    "unitIdList":"&amp;"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice-unitIdList为数学符号<a name="getPractice-unitIdList%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>{&#13;
+    "feature": 3,&#13;
+    "subjectId":"",   &#13;
+    "unitIdList":"="&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice-unitIdList为中文<a name="getPractice-unitIdList%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>{&#13;
+    "feature": 3,&#13;
+    "subjectId":"",   &#13;
+    "unitIdList":"南"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice-unitIdList为空<a name="getPractice-unitIdList%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>{&#13;
+    "feature": 3,&#13;
+    "subjectId":2,   &#13;
+    "unitIdList":[] &#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice-unitIdList为空格<a name="getPractice-unitIdList%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>{&#13;
+    "feature": 3,&#13;
+    "subjectId":1,   &#13;
+    "unitIdList":[    ]                &#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice-unitIdList为英文<a name="getPractice-unitIdList%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>{&#13;
+    "feature": 3,&#13;
+    "subjectId":"",   &#13;
+    "unitIdList":"a"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice-unitIdList为标点符号<a name="getPractice-unitIdList%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>{&#13;
+    "feature": 3,&#13;
+    "subjectId":"", &#13;
+    "unitIdList":"？"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice正确性校验(feature=4)<a name="getPractice%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C(feature=4)"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>{&#13;
+    "feature": 4,&#13;
+  &#13;
+"questionTypeId":9&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice-questionTypeId为特殊字符<a name="getPractice-questionTypeId%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>{&#13;
+    "feature": 4,&#13;
+  &#13;
+"questionTypeId":"&amp;"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice-questionTypeId为标点符号<a name="getPractice-questionTypeId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>{&#13;
+    "feature": 4,&#13;
+  &#13;
+"questionTypeId":"？"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice-questionTypeId为数学符号<a name="getPractice-questionTypeId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>{&#13;
+    "feature": 4,&#13;
+  &#13;
+"questionTypeId":"+"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice-questionTypeId为英文<a name="getPractice-questionTypeId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>{&#13;
+    "feature": 4,&#13;
+  &#13;
+"questionTypeId":"S"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice-questionTypeId为空<a name="getPractice-questionTypeId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>{&#13;
+    "feature": 4,&#13;
+  &#13;
+"questionTypeId":""&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice-questionTypeId为中文<a name="getPractice-questionTypeId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>{&#13;
+    "feature": 4,&#13;
+  &#13;
+"questionTypeId":"顾"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice-questionTypeId为空格<a name="getPractice-questionTypeId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>{&#13;
+    "feature": 4,&#13;
+  &#13;
+"questionTypeId":"   "     &#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice正确性校验-英语(feature=5)<a name="getPractice%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C-%E8%8B%B1%E8%AF%AD(feature=5)"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>&#13;
+{&#13;
+    "feature": 5,&#13;
+    "subjectId": 1&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice正确性校验-数学(feature=5)<a name="getPractice%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C-%E6%95%B0%E5%AD%A6(feature=5)"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>&#13;
+{&#13;
+    "feature": 5,&#13;
+    "subjectId": 2&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice-subjectId为空(feature=5)<a name="getPractice-subjectId%E4%B8%BA%E7%A9%BA(feature=5)"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>&#13;
+{&#13;
+    "feature": 5,&#13;
+    "subjectId":"" &#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice正确性校验（feature=6）<a name="getPractice%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C%EF%BC%88feature=6%EF%BC%89"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>&#13;
+{&#13;
+    "feature": 6,&#13;
+    "practiceId":1539&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice-practiceId为空（feature=6）<a name="getPractice-practiceId%E4%B8%BA%E7%A9%BA%EF%BC%88feature=6%EF%BC%89"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>&#13;
+{&#13;
+    "feature": 6,&#13;
+    "practiceId":""&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice-practiceId为特殊符号（feature=6）<a name="getPractice-practiceId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7%EF%BC%88feature=6%EF%BC%89"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>&#13;
+{&#13;
+    "feature": 6,&#13;
+    "practiceId":"&amp;"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice-practiceId为标点符号（feature=6）<a name="getPractice-practiceId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7%EF%BC%88feature=6%EF%BC%89"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>&#13;
+{&#13;
+    "feature": 6,&#13;
+    "practiceId":"？"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice-practiceId为中文（feature=6）<a name="getPractice-practiceId%E4%B8%BA%E4%B8%AD%E6%96%87%EF%BC%88feature=6%EF%BC%89"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>&#13;
+{&#13;
+    "feature": 6,&#13;
+    "practiceId":"李"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice-practiceId为数学符号（feature=6）<a name="getPractice-practiceId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7%EF%BC%88feature=6%EF%BC%89"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>&#13;
+{&#13;
+    "feature": 6,&#13;
+    "practiceId":"+"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getPractice-practiceId为英文（feature=6）<a name="getPractice-practiceId%E4%B8%BA%E8%8B%B1%E6%96%87%EF%BC%88feature=6%EF%BC%89"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</td><td>POST</td><td>&#13;
+{&#13;
+    "feature": 6,&#13;
+    "practiceId":"c"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorHomepageCount-subjectId正确性校验<a name="getErrorHomepageCount-subjectId%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorHomepageCount?subjectId=1</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorHomepageCount-subjectId为英文<a name="getErrorHomepageCount-subjectId%E4%B8%BA%E8%8B%B1%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorHomepageCount?subjectId=as</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorHomepageCount-subjectId为中文<a name="getErrorHomepageCount-subjectId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorHomepageCount?subjectId=途</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorHomepageCount-subjectId为特殊字符&amp;<a name="getErrorHomepageCount-subjectId%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6&amp;"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorHomepageCount?subjectId=&amp;</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorHomepageCount-subjectId为空<a name="getErrorHomepageCount-subjectId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorHomepageCount?subjectId=</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getErrorHomepageCount-subjectId为0<a name="getErrorHomepageCount-subjectId%E4%B8%BA0"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https:/api/emendbook/v1/sec/getErrorHomepageCount?subjectId=0</td><td>GET</td><td></td><td>Non HTTP response code: org.apache.http.client.ClientProtocolException - Non HTTP response message: URI does not specify a valid host name: https:/api/emendbook/v1/sec/getErrorHomepageCount?subjectId=0</td><td></td>
+</tr>
+</table>
+<h3>getErrorHomepageCount-subjectId为空格<a name="getErrorHomepageCount-subjectId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorHomepageCount?subjectId=       </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 83: https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorHomepageCount?subjectId=       </td><td></td>
+</tr>
+</table>
+<h3>getMicroVideo正确性验证<a name="getMicroVideo%E6%AD%A3%E7%A1%AE%E6%80%A7%E9%AA%8C%E8%AF%81"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getMicroVideo</td><td>POST</td><td>[&#13;
+    {&#13;
+        "questionId": 133877,&#13;
+        "questId": 1&#13;
+    },&#13;
+    {&#13;
+        "questionId": 253980,&#13;
+        "questId": 2&#13;
+    },&#13;
+    {&#13;
+        "questionId": 94327,&#13;
+        "questId": 3&#13;
+    },&#13;
+    {&#13;
+        "questionId": 228660,&#13;
+        "questId": 4&#13;
+    },&#13;
+    {&#13;
+        "questionId": 143955,&#13;
+        "questId": 5&#13;
+    },&#13;
+    {&#13;
+        "questionId": 272350,&#13;
+        "questId": 6&#13;
+    },&#13;
+    {&#13;
+        "questionId": 137124,&#13;
+        "questId": 7&#13;
+    },&#13;
+    {&#13;
+        "questionId": 125046,&#13;
+        "questId": 8&#13;
+    }&#13;
+]</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getMicroVideo-questionId为空<a name="getMicroVideo-questionId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getMicroVideo</td><td>POST</td><td>[&#13;
+    {&#13;
+        "questionId": "",&#13;
+        "questId": 1&#13;
+    }&#13;
+]</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getMicroVideo-questionId为不存在的值<a name="getMicroVideo-questionId%E4%B8%BA%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E5%80%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getMicroVideo</td><td>POST</td><td>[&#13;
+    {&#13;
+        "questionId": -1,&#13;
+        "questId": 1&#13;
+    }&#13;
+]</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getMicroVideo-questionId为空格<a name="getMicroVideo-questionId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getMicroVideo</td><td>POST</td><td>[&#13;
+    {&#13;
+        "questionId": " ",&#13;
+        "questId": 1&#13;
+    }&#13;
+]</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getMicroVideo-questionId为a-z的字符串<a name="getMicroVideo-questionId%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getMicroVideo</td><td>POST</td><td>[&#13;
+    {&#13;
+        "questionId": "test",&#13;
+        "questId": 1&#13;
+    }&#13;
+]</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getMicroVideo-questionId为中文<a name="getMicroVideo-questionId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getMicroVideo</td><td>POST</td><td>[&#13;
+    {&#13;
+        "questionId": "测试",&#13;
+        "questId": 1&#13;
+    }&#13;
+]</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getMicroVideo-questionId为特殊符号<a name="getMicroVideo-questionId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getMicroVideo</td><td>POST</td><td>[&#13;
+    {&#13;
+        "questionId": "*",&#13;
+        "questId": 1&#13;
+    }&#13;
+]</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getMicroVideo-questionId为标点符号<a name="getMicroVideo-questionId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getMicroVideo</td><td>POST</td><td>[&#13;
+    {&#13;
+        "questionId": "。",&#13;
+        "questId": 1&#13;
+    }&#13;
+]</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getMicroVideo-questionId为数学符号<a name="getMicroVideo-questionId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getMicroVideo</td><td>POST</td><td>[&#13;
+    {&#13;
+        "questionId": "+",&#13;
+        "questId": 1&#13;
+    }&#13;
+]</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getMicroVideo-questId为空<a name="getMicroVideo-questId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getMicroVideo</td><td>POST</td><td>[&#13;
+    {&#13;
+        "questionId": 253980,&#13;
+        "questId": ""&#13;
+    }&#13;
+]</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getMicroVideo-questId为不存在的值<a name="getMicroVideo-questId%E4%B8%BA%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E5%80%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getMicroVideo</td><td>POST</td><td>[&#13;
+    {&#13;
+        "questionId": 253980,&#13;
+        "questId": "0"&#13;
+    }&#13;
+]</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getMicroVideo-questId为空格<a name="getMicroVideo-questId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getMicroVideo</td><td>POST</td><td>[&#13;
+    {&#13;
+        "questionId": 253980,&#13;
+        "questId": " "&#13;
+    }&#13;
+]</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getMicroVideo-questId为a-z的字符串<a name="getMicroVideo-questId%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getMicroVideo</td><td>POST</td><td>[&#13;
+    {&#13;
+        "questionId": 253980,&#13;
+        "questId": "aaaa"&#13;
+    }&#13;
+]</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getMicroVideo-questId为中文<a name="getMicroVideo-questId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getMicroVideo</td><td>POST</td><td>[&#13;
+    {&#13;
+        "questionId": 253980,&#13;
+        "questId": "测试测试"&#13;
+    }&#13;
+]</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getMicroVideo-questId为特殊符号<a name="getMicroVideo-questId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getMicroVideo</td><td>POST</td><td>[&#13;
+    {&#13;
+        "questionId": 253980,&#13;
+        "questId": "&amp;"&#13;
+    }&#13;
+]</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getMicroVideo-questId为标点符号<a name="getMicroVideo-questId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getMicroVideo</td><td>POST</td><td>[&#13;
+    {&#13;
+        "questionId": 253980,&#13;
+        "questId": "！"&#13;
+    }&#13;
+]</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>getMicroVideo-questId为数学符号<a name="getMicroVideo-questId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/getMicroVideo</td><td>POST</td><td>[&#13;
+    {&#13;
+        "questionId": 253980,&#13;
+        "questId": "-"&#13;
+    }&#13;
+]</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>saveEmendbook-practiceId为空格<a name="saveEmendbook-practiceId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</td><td>POST</td><td>{&#13;
+    "PracticeId": "",&#13;
+    "SubjectId": 1,&#13;
+    "UserId": 105724,&#13;
+    "IsAssessmentCompleted": false,&#13;
+    "CategoryIndex": 0,&#13;
+    "GroupIndex": 0,&#13;
+    "QuestionIndex": 0,&#13;
+    "ActiveIndex": 0,&#13;
+    "QuestionCategorys": [&#13;
+        {&#13;
+            "CategoryId": 2,&#13;
+            "CategoryTitle": "词汇语法",&#13;
+            "QuestionGroups": [&#13;
+                {&#13;
+                    "GroupType": 1,&#13;
+                    "UserTimeSpent": 0,&#13;
+                    "Questions": [&#13;
+                        {&#13;
+                            "ArticleId": -1,&#13;
+                            "QuestionId": 146268,&#13;
+                            "IsQuestionCorrect": 0,&#13;
+                            "UserResponse": [""],&#13;
+                            "InputTypes": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "BlankAnswers": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "traceBlankAnswers": [&#13;
+                                ""&#13;
+                            ]&#13;
+                        }&#13;
+                    ],&#13;
+                    "FeedbackViewed": false&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>saveEmendbook-practiceId为a-z的字符串<a name="saveEmendbook-practiceId%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</td><td>POST</td><td>{&#13;
+    "PracticeId": "testtest",&#13;
+    "SubjectId": 1,&#13;
+    "UserId": 105724,&#13;
+    "IsAssessmentCompleted": false,&#13;
+    "CategoryIndex": 0,&#13;
+    "GroupIndex": 0,&#13;
+    "QuestionIndex": 0,&#13;
+    "ActiveIndex": 0,&#13;
+    "QuestionCategorys": [&#13;
+        {&#13;
+            "CategoryId": 2,&#13;
+            "CategoryTitle": "词汇语法",&#13;
+            "QuestionGroups": [&#13;
+                {&#13;
+                    "GroupType": 1,&#13;
+                    "UserTimeSpent": 0,&#13;
+                    "Questions": [&#13;
+                        {&#13;
+                            "ArticleId": -1,&#13;
+                            "QuestionId": 146268,&#13;
+                            "IsQuestionCorrect": 0,&#13;
+                            "UserResponse": [""],&#13;
+                            "InputTypes": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "BlankAnswers": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "traceBlankAnswers": [&#13;
+                                ""&#13;
+                            ]&#13;
+                        }&#13;
+                    ],&#13;
+                    "FeedbackViewed": false&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>saveEmendbook-practiceId为中文<a name="saveEmendbook-practiceId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</td><td>POST</td><td>{&#13;
+    "PracticeId": "测试测试",&#13;
+    "SubjectId": 1,&#13;
+    "UserId": 105724,&#13;
+    "IsAssessmentCompleted": false,&#13;
+    "CategoryIndex": 0,&#13;
+    "GroupIndex": 0,&#13;
+    "QuestionIndex": 0,&#13;
+    "ActiveIndex": 0,&#13;
+    "QuestionCategorys": [&#13;
+        {&#13;
+            "CategoryId": 2,&#13;
+            "CategoryTitle": "词汇语法",&#13;
+            "QuestionGroups": [&#13;
+                {&#13;
+                    "GroupType": 1,&#13;
+                    "UserTimeSpent": 0,&#13;
+                    "Questions": [&#13;
+                        {&#13;
+                            "ArticleId": -1,&#13;
+                            "QuestionId": 146268,&#13;
+                            "IsQuestionCorrect": 0,&#13;
+                            "UserResponse": [""],&#13;
+                            "InputTypes": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "BlankAnswers": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "traceBlankAnswers": [&#13;
+                                ""&#13;
+                            ]&#13;
+                        }&#13;
+                    ],&#13;
+                    "FeedbackViewed": false&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>saveEmendbook-practiceId为特殊字符<a name="saveEmendbook-practiceId%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</td><td>POST</td><td>{&#13;
+    "PracticeId": "&amp;",&#13;
+    "SubjectId": 1,&#13;
+    "UserId": 105724,&#13;
+    "IsAssessmentCompleted": false,&#13;
+    "CategoryIndex": 0,&#13;
+    "GroupIndex": 0,&#13;
+    "QuestionIndex": 0,&#13;
+    "ActiveIndex": 0,&#13;
+    "QuestionCategorys": [&#13;
+        {&#13;
+            "CategoryId": 2,&#13;
+            "CategoryTitle": "词汇语法",&#13;
+            "QuestionGroups": [&#13;
+                {&#13;
+                    "GroupType": 1,&#13;
+                    "UserTimeSpent": 0,&#13;
+                    "Questions": [&#13;
+                        {&#13;
+                            "ArticleId": -1,&#13;
+                            "QuestionId": 146268,&#13;
+                            "IsQuestionCorrect": 0,&#13;
+                            "UserResponse": [""],&#13;
+                            "InputTypes": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "BlankAnswers": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "traceBlankAnswers": [&#13;
+                                ""&#13;
+                            ]&#13;
+                        }&#13;
+                    ],&#13;
+                    "FeedbackViewed": false&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>saveEmendbook-practiceId为标点符号<a name="saveEmendbook-practiceId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</td><td>POST</td><td>{&#13;
+    "PracticeId": "!",&#13;
+    "SubjectId": 1,&#13;
+    "UserId": 105724,&#13;
+    "IsAssessmentCompleted": false,&#13;
+    "CategoryIndex": 0,&#13;
+    "GroupIndex": 0,&#13;
+    "QuestionIndex": 0,&#13;
+    "ActiveIndex": 0,&#13;
+    "QuestionCategorys": [&#13;
+        {&#13;
+            "CategoryId": 2,&#13;
+            "CategoryTitle": "词汇语法",&#13;
+            "QuestionGroups": [&#13;
+                {&#13;
+                    "GroupType": 1,&#13;
+                    "UserTimeSpent": 0,&#13;
+                    "Questions": [&#13;
+                        {&#13;
+                            "ArticleId": -1,&#13;
+                            "QuestionId": 146268,&#13;
+                            "IsQuestionCorrect": 0,&#13;
+                            "UserResponse": [""],&#13;
+                            "InputTypes": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "BlankAnswers": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "traceBlankAnswers": [&#13;
+                                ""&#13;
+                            ]&#13;
+                        }&#13;
+                    ],&#13;
+                    "FeedbackViewed": false&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>saveEmendbook-practiceId为数学符号<a name="saveEmendbook-practiceId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</td><td>POST</td><td>{&#13;
+    "PracticeId": "+",&#13;
+    "SubjectId": 1,&#13;
+    "UserId": 105724,&#13;
+    "IsAssessmentCompleted": false,&#13;
+    "CategoryIndex": 0,&#13;
+    "GroupIndex": 0,&#13;
+    "QuestionIndex": 0,&#13;
+    "ActiveIndex": 0,&#13;
+    "QuestionCategorys": [&#13;
+        {&#13;
+            "CategoryId": 2,&#13;
+            "CategoryTitle": "词汇语法",&#13;
+            "QuestionGroups": [&#13;
+                {&#13;
+                    "GroupType": 1,&#13;
+                    "UserTimeSpent": 0,&#13;
+                    "Questions": [&#13;
+                        {&#13;
+                            "ArticleId": -1,&#13;
+                            "QuestionId": 146268,&#13;
+                            "IsQuestionCorrect": 0,&#13;
+                            "UserResponse": [""],&#13;
+                            "InputTypes": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "BlankAnswers": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "traceBlankAnswers": [&#13;
+                                ""&#13;
+                            ]&#13;
+                        }&#13;
+                    ],&#13;
+                    "FeedbackViewed": false&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>saveEmendbook-subjectId为不存在的值<a name="saveEmendbook-subjectId%E4%B8%BA%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E5%80%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</td><td>POST</td><td>{&#13;
+    "PracticeId": "1789",&#13;
+    "SubjectId": 0,&#13;
+    "UserId": 105724,&#13;
+    "IsAssessmentCompleted": false,&#13;
+    "CategoryIndex": 0,&#13;
+    "GroupIndex": 0,&#13;
+    "QuestionIndex": 0,&#13;
+    "ActiveIndex": 0,&#13;
+    "QuestionCategorys": [&#13;
+        {&#13;
+            "CategoryId": 2,&#13;
+            "CategoryTitle": "词汇语法",&#13;
+            "QuestionGroups": [&#13;
+                {&#13;
+                    "GroupType": 1,&#13;
+                    "UserTimeSpent": 0,&#13;
+                    "Questions": [&#13;
+                        {&#13;
+                            "ArticleId": -1,&#13;
+                            "QuestionId": 146268,&#13;
+                            "IsQuestionCorrect": 0,&#13;
+                            "UserResponse": [""],&#13;
+                            "InputTypes": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "BlankAnswers": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "traceBlankAnswers": [&#13;
+                                ""&#13;
+                            ]&#13;
+                        }&#13;
+                    ],&#13;
+                    "FeedbackViewed": false&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>saveEmendbook-subjectId为空格<a name="saveEmendbook-subjectId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</td><td>POST</td><td>{&#13;
+    "PracticeId": 5977,&#13;
+    "SubjectId": 2,&#13;
+    "UserId": 105724,&#13;
+    "IsAssessmentCompleted": false,&#13;
+    "CategoryIndex": 0,&#13;
+    "GroupIndex": 0,&#13;
+    "QuestionIndex": 0,&#13;
+    "ActiveIndex": 0,&#13;
+    "QuestionCategorys": [&#13;
+        {&#13;
+            "CategoryId": 4,&#13;
+            "CategoryTitle": "选择题",&#13;
+            "QuestionGroups": [&#13;
+                {&#13;
+                    "GroupType": 1,&#13;
+                    "UserTimeSpent": 0,&#13;
+                    "Questions": [&#13;
+                        {&#13;
+                            "ArticleId": -1,&#13;
+                            "QuestionId": 229250,&#13;
+                            "IsQuestionCorrect": -1,&#13;
+                            "UserResponse": [""],&#13;
+                            "InputTypes": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "BlankAnswers": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "traceBlankAnswers": [&#13;
+                                ""&#13;
+                            ]&#13;
+                        }&#13;
+                    ],&#13;
+                    "FeedbackViewed": false&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>saveEmendbook-subjectId为a-z的字符串<a name="saveEmendbook-subjectId%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</td><td>POST</td><td>{&#13;
+    "PracticeId": "1789",&#13;
+    "SubjectId": "test",&#13;
+    "UserId": 105724,&#13;
+    "IsAssessmentCompleted": false,&#13;
+    "CategoryIndex": 0,&#13;
+    "GroupIndex": 0,&#13;
+    "QuestionIndex": 0,&#13;
+    "ActiveIndex": 0,&#13;
+    "QuestionCategorys": [&#13;
+        {&#13;
+            "CategoryId": 2,&#13;
+            "CategoryTitle": "词汇语法",&#13;
+            "QuestionGroups": [&#13;
+                {&#13;
+                    "GroupType": 1,&#13;
+                    "UserTimeSpent": 0,&#13;
+                    "Questions": [&#13;
+                        {&#13;
+                            "ArticleId": -1,&#13;
+                            "QuestionId": 146268,&#13;
+                            "IsQuestionCorrect": 0,&#13;
+                            "UserResponse": [""],&#13;
+                            "InputTypes": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "BlankAnswers": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "traceBlankAnswers": [&#13;
+                                ""&#13;
+                            ]&#13;
+                        }&#13;
+                    ],&#13;
+                    "FeedbackViewed": false&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>saveEmendbook-subjectId为中文<a name="saveEmendbook-subjectId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</td><td>POST</td><td>{&#13;
+    "PracticeId": "1789",&#13;
+    "SubjectId": "测试呀",&#13;
+    "UserId": 105724,&#13;
+    "IsAssessmentCompleted": false,&#13;
+    "CategoryIndex": 0,&#13;
+    "GroupIndex": 0,&#13;
+    "QuestionIndex": 0,&#13;
+    "ActiveIndex": 0,&#13;
+    "QuestionCategorys": [&#13;
+        {&#13;
+            "CategoryId": 2,&#13;
+            "CategoryTitle": "词汇语法",&#13;
+            "QuestionGroups": [&#13;
+                {&#13;
+                    "GroupType": 1,&#13;
+                    "UserTimeSpent": 0,&#13;
+                    "Questions": [&#13;
+                        {&#13;
+                            "ArticleId": -1,&#13;
+                            "QuestionId": 146268,&#13;
+                            "IsQuestionCorrect": 0,&#13;
+                            "UserResponse": [""],&#13;
+                            "InputTypes": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "BlankAnswers": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "traceBlankAnswers": [&#13;
+                                ""&#13;
+                            ]&#13;
+                        }&#13;
+                    ],&#13;
+                    "FeedbackViewed": false&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>saveEmendbook-subjectId为特殊符号<a name="saveEmendbook-subjectId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</td><td>POST</td><td>{&#13;
+    "PracticeId": "1789",&#13;
+    "SubjectId": "*",&#13;
+    "UserId": 105724,&#13;
+    "IsAssessmentCompleted": false,&#13;
+    "CategoryIndex": 0,&#13;
+    "GroupIndex": 0,&#13;
+    "QuestionIndex": 0,&#13;
+    "ActiveIndex": 0,&#13;
+    "QuestionCategorys": [&#13;
+        {&#13;
+            "CategoryId": 2,&#13;
+            "CategoryTitle": "词汇语法",&#13;
+            "QuestionGroups": [&#13;
+                {&#13;
+                    "GroupType": 1,&#13;
+                    "UserTimeSpent": 0,&#13;
+                    "Questions": [&#13;
+                        {&#13;
+                            "ArticleId": -1,&#13;
+                            "QuestionId": 146268,&#13;
+                            "IsQuestionCorrect": 0,&#13;
+                            "UserResponse": [""],&#13;
+                            "InputTypes": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "BlankAnswers": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "traceBlankAnswers": [&#13;
+                                ""&#13;
+                            ]&#13;
+                        }&#13;
+                    ],&#13;
+                    "FeedbackViewed": false&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>saveEmendbook-subjectId为数学符号<a name="saveEmendbook-subjectId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</td><td>POST</td><td>{&#13;
+    "PracticeId": "1789",&#13;
+    "SubjectId": "+",&#13;
+    "UserId": 105724,&#13;
+    "IsAssessmentCompleted": false,&#13;
+    "CategoryIndex": 0,&#13;
+    "GroupIndex": 0,&#13;
+    "QuestionIndex": 0,&#13;
+    "ActiveIndex": 0,&#13;
+    "QuestionCategorys": [&#13;
+        {&#13;
+            "CategoryId": 2,&#13;
+            "CategoryTitle": "词汇语法",&#13;
+            "QuestionGroups": [&#13;
+                {&#13;
+                    "GroupType": 1,&#13;
+                    "UserTimeSpent": 0,&#13;
+                    "Questions": [&#13;
+                        {&#13;
+                            "ArticleId": -1,&#13;
+                            "QuestionId": 146268,&#13;
+                            "IsQuestionCorrect": 0,&#13;
+                            "UserResponse": [""],&#13;
+                            "InputTypes": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "BlankAnswers": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "traceBlankAnswers": [&#13;
+                                ""&#13;
+                            ]&#13;
+                        }&#13;
+                    ],&#13;
+                    "FeedbackViewed": false&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>saveEmendbook-subjectId为标点符号<a name="saveEmendbook-subjectId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</td><td>POST</td><td>{&#13;
+    "PracticeId": "1789",&#13;
+    "SubjectId": "?",&#13;
+    "UserId": 105724,&#13;
+    "IsAssessmentCompleted": false,&#13;
+    "CategoryIndex": 0,&#13;
+    "GroupIndex": 0,&#13;
+    "QuestionIndex": 0,&#13;
+    "ActiveIndex": 0,&#13;
+    "QuestionCategorys": [&#13;
+        {&#13;
+            "CategoryId": 2,&#13;
+            "CategoryTitle": "词汇语法",&#13;
+            "QuestionGroups": [&#13;
+                {&#13;
+                    "GroupType": 1,&#13;
+                    "UserTimeSpent": 0,&#13;
+                    "Questions": [&#13;
+                        {&#13;
+                            "ArticleId": -1,&#13;
+                            "QuestionId": 146268,&#13;
+                            "IsQuestionCorrect": 0,&#13;
+                            "UserResponse": [""],&#13;
+                            "InputTypes": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "BlankAnswers": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "traceBlankAnswers": [&#13;
+                                ""&#13;
+                            ]&#13;
+                        }&#13;
+                    ],&#13;
+                    "FeedbackViewed": false&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>saveEmendbook-UserId为不存在的值<a name="saveEmendbook-UserId%E4%B8%BA%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E5%80%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</td><td>POST</td><td>{&#13;
+    "PracticeId": 1789,&#13;
+    "SubjectId": 1,&#13;
+    "UserId": -1,&#13;
+    "IsAssessmentCompleted": false,&#13;
+    "CategoryIndex": 0,&#13;
+    "GroupIndex": 0,&#13;
+    "QuestionIndex": 0,&#13;
+    "ActiveIndex": 0,&#13;
+    "QuestionCategorys": [&#13;
+        {&#13;
+            "CategoryId": 2,&#13;
+            "CategoryTitle": "词汇语法",&#13;
+            "QuestionGroups": [&#13;
+                {&#13;
+                    "GroupType": 1,&#13;
+                    "UserTimeSpent": 0,&#13;
+                    "Questions": [&#13;
+                        {&#13;
+                            "ArticleId": -1,&#13;
+                            "QuestionId": 146268,&#13;
+                            "IsQuestionCorrect": 0,&#13;
+                            "UserResponse": [""],&#13;
+                            "InputTypes": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "BlankAnswers": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "traceBlankAnswers": [&#13;
+                                ""&#13;
+                            ]&#13;
+                        }&#13;
+                    ],&#13;
+                    "FeedbackViewed": false&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>saveEmendbook-UserId为a-z的字符串<a name="saveEmendbook-UserId%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</td><td>POST</td><td>{&#13;
+    "PracticeId": 1789,&#13;
+    "SubjectId": 1,&#13;
+    "UserId": "aaaa",&#13;
+    "IsAssessmentCompleted": false,&#13;
+    "CategoryIndex": 0,&#13;
+    "GroupIndex": 0,&#13;
+    "QuestionIndex": 0,&#13;
+    "ActiveIndex": 0,&#13;
+    "QuestionCategorys": [&#13;
+        {&#13;
+            "CategoryId": 2,&#13;
+            "CategoryTitle": "词汇语法",&#13;
+            "QuestionGroups": [&#13;
+                {&#13;
+                    "GroupType": 1,&#13;
+                    "UserTimeSpent": 0,&#13;
+                    "Questions": [&#13;
+                        {&#13;
+                            "ArticleId": -1,&#13;
+                            "QuestionId": 146268,&#13;
+                            "IsQuestionCorrect": 0,&#13;
+                            "UserResponse": [""],&#13;
+                            "InputTypes": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "BlankAnswers": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "traceBlankAnswers": [&#13;
+                                ""&#13;
+                            ]&#13;
+                        }&#13;
+                    ],&#13;
+                    "FeedbackViewed": false&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>saveEmendbook-UserId为中文<a name="saveEmendbook-UserId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</td><td>POST</td><td>{&#13;
+    "PracticeId": 1789,&#13;
+    "SubjectId": 1,&#13;
+    "UserId": "测试测试",&#13;
+    "IsAssessmentCompleted": false,&#13;
+    "CategoryIndex": 0,&#13;
+    "GroupIndex": 0,&#13;
+    "QuestionIndex": 0,&#13;
+    "ActiveIndex": 0,&#13;
+    "QuestionCategorys": [&#13;
+        {&#13;
+            "CategoryId": 2,&#13;
+            "CategoryTitle": "词汇语法",&#13;
+            "QuestionGroups": [&#13;
+                {&#13;
+                    "GroupType": 1,&#13;
+                    "UserTimeSpent": 0,&#13;
+                    "Questions": [&#13;
+                        {&#13;
+                            "ArticleId": -1,&#13;
+                            "QuestionId": 146268,&#13;
+                            "IsQuestionCorrect": 0,&#13;
+                            "UserResponse": [""],&#13;
+                            "InputTypes": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "BlankAnswers": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "traceBlankAnswers": [&#13;
+                                ""&#13;
+                            ]&#13;
+                        }&#13;
+                    ],&#13;
+                    "FeedbackViewed": false&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>saveEmendbook-UserId为特殊符号<a name="saveEmendbook-UserId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</td><td>POST</td><td>{&#13;
+    "PracticeId": 1789,&#13;
+    "SubjectId": 1,&#13;
+    "UserId": "&amp;",&#13;
+    "IsAssessmentCompleted": false,&#13;
+    "CategoryIndex": 0,&#13;
+    "GroupIndex": 0,&#13;
+    "QuestionIndex": 0,&#13;
+    "ActiveIndex": 0,&#13;
+    "QuestionCategorys": [&#13;
+        {&#13;
+            "CategoryId": 2,&#13;
+            "CategoryTitle": "词汇语法",&#13;
+            "QuestionGroups": [&#13;
+                {&#13;
+                    "GroupType": 1,&#13;
+                    "UserTimeSpent": 0,&#13;
+                    "Questions": [&#13;
+                        {&#13;
+                            "ArticleId": -1,&#13;
+                            "QuestionId": 146268,&#13;
+                            "IsQuestionCorrect": 0,&#13;
+                            "UserResponse": [""],&#13;
+                            "InputTypes": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "BlankAnswers": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "traceBlankAnswers": [&#13;
+                                ""&#13;
+                            ]&#13;
+                        }&#13;
+                    ],&#13;
+                    "FeedbackViewed": false&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>saveEmendbook-UserId为数学符号<a name="saveEmendbook-UserId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</td><td>POST</td><td>{&#13;
+    "PracticeId": 1789,&#13;
+    "SubjectId": 1,&#13;
+    "UserId": "+",&#13;
+    "IsAssessmentCompleted": false,&#13;
+    "CategoryIndex": 0,&#13;
+    "GroupIndex": 0,&#13;
+    "QuestionIndex": 0,&#13;
+    "ActiveIndex": 0,&#13;
+    "QuestionCategorys": [&#13;
+        {&#13;
+            "CategoryId": 2,&#13;
+            "CategoryTitle": "词汇语法",&#13;
+            "QuestionGroups": [&#13;
+                {&#13;
+                    "GroupType": 1,&#13;
+                    "UserTimeSpent": 0,&#13;
+                    "Questions": [&#13;
+                        {&#13;
+                            "ArticleId": -1,&#13;
+                            "QuestionId": 146268,&#13;
+                            "IsQuestionCorrect": 0,&#13;
+                            "UserResponse": [""],&#13;
+                            "InputTypes": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "BlankAnswers": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "traceBlankAnswers": [&#13;
+                                ""&#13;
+                            ]&#13;
+                        }&#13;
+                    ],&#13;
+                    "FeedbackViewed": false&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>saveEmendbook-UserId为标点符号<a name="saveEmendbook-UserId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</td><td>POST</td><td>{&#13;
+    "PracticeId": 1789,&#13;
+    "SubjectId": 1,&#13;
+    "UserId": "。",&#13;
+    "IsAssessmentCompleted": false,&#13;
+    "CategoryIndex": 0,&#13;
+    "GroupIndex": 0,&#13;
+    "QuestionIndex": 0,&#13;
+    "ActiveIndex": 0,&#13;
+    "QuestionCategorys": [&#13;
+        {&#13;
+            "CategoryId": 2,&#13;
+            "CategoryTitle": "词汇语法",&#13;
+            "QuestionGroups": [&#13;
+                {&#13;
+                    "GroupType": 1,&#13;
+                    "UserTimeSpent": 0,&#13;
+                    "Questions": [&#13;
+                        {&#13;
+                            "ArticleId": -1,&#13;
+                            "QuestionId": 146268,&#13;
+                            "IsQuestionCorrect": 0,&#13;
+                            "UserResponse": [""],&#13;
+                            "InputTypes": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "BlankAnswers": [&#13;
+                                ""&#13;
+                            ],&#13;
+                            "traceBlankAnswers": [&#13;
+                                ""&#13;
+                            ]&#13;
+                        }&#13;
+                    ],&#13;
+                    "FeedbackViewed": false&#13;
+                }&#13;
+            ]&#13;
+        }&#13;
+    ]&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+</body>
+</html>

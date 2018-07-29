@@ -1,0 +1,1117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ZSN-Interface Test Results</title>
+<style type="text/css">
+				body {
+					font:normal 68% verdana,arial,helvetica;
+					color:#000000;
+				}
+				table tr td, table tr th {
+					font-size: 68%;
+				}
+				table.details tr th{
+				    color: #ffffff;
+					font-weight: bold;
+					text-align:center;
+					background:#2674a6;
+					white-space: nowrap;
+				}
+				table.details tr td{
+					background:#eeeee0;
+				}
+				h1 {
+					margin: 0px 0px 5px; font: 165% verdana,arial,helvetica
+				}
+				h2 {
+					margin-top: 1em; margin-bottom: 0.5em; font: bold 125% verdana,arial,helvetica
+				}
+				h3 {
+					margin-bottom: 0.5em; font: bold 115% verdana,arial,helvetica
+				}
+				.Failure {
+					font-weight:bold; color:red;
+				}
+				
+	
+				img
+				{
+				  border-width: 0px;
+				}
+				
+				.expand_link
+				{
+				   position=absolute;
+				   right: 0px;
+				   width: 27px;
+				   top: 1px;
+				   height: 27px;
+				}
+				
+				.page_details
+				{
+				   display: none;
+				}
+                                
+                                .page_details_expanded
+                                {
+                                    display: block;
+                                    display/* hide this definition from  IE5/6 */: table-row;
+                                }
+
+
+			</style>
+<script language="JavaScript">
+                           function expand(details_id)
+			   {
+			      
+			      document.getElementById(details_id).className = "page_details_expanded";
+			   }
+			   
+			   function collapse(details_id)
+			   {
+			      
+			      document.getElementById(details_id).className = "page_details";
+			   }
+			   
+			   function change(details_id)
+			   {
+			      if(document.getElementById(details_id+"_image").src.match("expand"))
+			      {
+			         document.getElementById(details_id+"_image").src = "collapse.png";
+			         expand(details_id);
+			      }
+			      else
+			      {
+			         document.getElementById(details_id+"_image").src = "expand.png";
+			         collapse(details_id);
+			      } 
+                           }
+			</script>
+</head>
+<body>
+<h1>ZSN-Interface Test Results</h1>
+<table width="100%">
+<tr>
+<td align="left">Date report: 2017/10/09 14:35</td>
+<br>
+<td align="left">RunEnvironment:https://staging.zhishinet.com</td><td align="left">TestAccount:{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td>
+</tr>
+</table>
+<hr size="1">
+<h2>Summary</h2>
+<table width="95%" cellspacing="2" cellpadding="4" border="0" class="details" align="center">
+<tr valign="top">
+<th>Total</th><th>Pass</th><th>Failures</th><th>Success Rate</th>
+</tr>
+<tr valign="top">
+<td align="center">90</td><td align="center">90</td><td align="center">0</td><td align="center">100.00%</td>
+</tr>
+</table>
+<hr align="center" width="95%" size="1">
+<h2>Success Detail</h2>
+<h3>getToken<a name="getToken"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000124",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>cheesecoins/log正确校验identity为student<a name="cheesecoins/log%E6%AD%A3%E7%A1%AE%E6%A0%A1%E9%AA%8Cidentity%E4%B8%BAstudent"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/cheesecoins/log?identity=student&amp;pageNo=1&amp;pageSize=1</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>cheesecoins/log正确校验identity为teacher<a name="cheesecoins/log%E6%AD%A3%E7%A1%AE%E6%A0%A1%E9%AA%8Cidentity%E4%B8%BAteacher"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/cheesecoins/log?identity=teacher&amp;pageNo=1&amp;pageSize=1</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>cheesecoins/log-identity为不存在的值<a name="cheesecoins/log-identity%E4%B8%BA%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E5%80%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/cheesecoins/log?identity=manager&amp;pageNo=1&amp;pageSize=1</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>cheesecoins/log-identity为空<a name="cheesecoins/log-identity%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/cheesecoins/log?identity=&amp;pageNo=1&amp;pageSize=1</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>cheesecoins/log-identity为空格<a name="cheesecoins/log-identity%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/cheesecoins/log?identity= &amp;pageNo=1&amp;pageSize=1</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 85: https://staging.zhishinet.com/api/user-profile/v1/sec/users/cheesecoins/log?identity= &amp;pageNo=1&amp;pageSize=1</td><td></td>
+</tr>
+</table>
+<h3>cheesecoins/log-identity为中文<a name="cheesecoins/log-identity%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/cheesecoins/log?identity=学生&amp;pageNo=1&amp;pageSize=1</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>cheesecoins/log-identity为数学符号<a name="cheesecoins/log-identity%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/cheesecoins/log?identity=-&amp;pageNo=1&amp;pageSize=1</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>cheesecoins/log-identity为特殊符号<a name="cheesecoins/log-identity%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/cheesecoins/log?identity=*&amp;pageNo=1&amp;pageSize=1</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>cheesecoins/log-identity为标点符号<a name="cheesecoins/log-identity%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/cheesecoins/log?identity=，&amp;pageNo=1&amp;pageSize=1</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>achievement正确性验证type=1<a name="achievement%E6%AD%A3%E7%A1%AE%E6%80%A7%E9%AA%8C%E8%AF%81type=1"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/achievement?type=1&amp;pageNo=1&amp;pageSize=1</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>achievement正确性验证type=2<a name="achievement%E6%AD%A3%E7%A1%AE%E6%80%A7%E9%AA%8C%E8%AF%81type=2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/achievement?type=2&amp;pageNo=1&amp;pageSize=1</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>achievement-type为不存在的值<a name="achievement-type%E4%B8%BA%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E5%80%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/achievement?type=-1&amp;pageNo=1&amp;pageSize=1</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>achievement-type为空<a name="achievement-type%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/achievement?type=&amp;pageNo=1&amp;pageSize=1</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>achievement-type为空格<a name="achievement-type%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/achievement?type= &amp;pageNo=1&amp;pageSize=1</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 77: https://staging.zhishinet.com/api/user-profile/v1/sec/users/achievement?type= &amp;pageNo=1&amp;pageSize=1</td><td></td>
+</tr>
+</table>
+<h3>achievement-type为a-z的字符串<a name="achievement-type%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/achievement?type=type&amp;pageNo=1&amp;pageSize=1</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>achievement-type为中文<a name="achievement-type%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/achievement?type=类型&amp;pageNo=1&amp;pageSize=1</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>achievement-type为数学符号<a name="achievement-type%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/achievement?type=-&amp;pageNo=1&amp;pageSize=1</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>achievement-type为特殊符号<a name="achievement-type%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/achievement?type=*&amp;pageNo=1&amp;pageSize=1</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>achievement-type为标点符号<a name="achievement-type%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/achievement?type=。&amp;pageNo=1&amp;pageSize=1</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>gender-正确性校验为1<a name="gender-%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C%E4%B8%BA1"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/gender</td><td>PUT</td><td>{&#13;
+    "gender": 1&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>gender-正确性校验为2<a name="gender-%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C%E4%B8%BA2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/gender</td><td>PUT</td><td>{&#13;
+    "gender": 2&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>gender为不存在的值<a name="gender%E4%B8%BA%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E5%80%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/gender</td><td>PUT</td><td>{&#13;
+    "gender": 6&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>gender-正确性校验为空<a name="gender-%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/gender</td><td>PUT</td><td>{&#13;
+    "gender": ""&#13;
+}</td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>gender-正确性校验为空格<a name="gender-%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/gender</td><td>PUT</td><td>{&#13;
+    "gender": " "&#13;
+}</td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>gender-正确性校验为a-z的字符串<a name="gender-%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/gender</td><td>PUT</td><td>{&#13;
+    "gender": "aaaa"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>gender-正确性校验为中文<a name="gender-%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/gender</td><td>PUT</td><td>{&#13;
+    "gender": "??"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>gender-正确性校验为数学符号<a name="gender-%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/gender</td><td>PUT</td><td>{&#13;
+    "gender": "-"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>gender-正确性校验为特殊符号<a name="gender-%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/gender</td><td>PUT</td><td>{&#13;
+    "gender": "&amp;"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>gender-正确性校验为标点符号<a name="gender-%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/gender</td><td>PUT</td><td>{&#13;
+    "gender": "!"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>defaultGlobalSessionId正确性校验<a name="defaultGlobalSessionId%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/defaultGlobalSessionId</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/defaultGlobalSessionId</td><td>POST</td><td>{&#13;
+    "globalSessionId": 2624,&#13;
+    "schoolName": "测试班级",&#13;
+    "gradeName": "2015",&#13;
+    "className": "QA 班级"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>defaultGlobalSessionId-globalSessionId为空<a name="defaultGlobalSessionId-globalSessionId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/defaultGlobalSessionId</td><td>POST</td><td>{&#13;
+    "globalSessionId": "",&#13;
+    "schoolName": "测试班级",&#13;
+    "gradeName": "2015",&#13;
+    "className": "QA 班级"&#13;
+}</td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>defaultGlobalSessionId-globalSessionId为空格<a name="defaultGlobalSessionId-globalSessionId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/defaultGlobalSessionId</td><td>POST</td><td>{&#13;
+    "globalSessionId": " ",&#13;
+    "schoolName": "测试班级",&#13;
+    "gradeName": "2015",&#13;
+    "className": "QA 班级"&#13;
+}</td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>defaultGlobalSessionId-globalSessionId为a-z的字符串<a name="defaultGlobalSessionId-globalSessionId%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/defaultGlobalSessionId</td><td>POST</td><td>{&#13;
+    "globalSessionId": "glob",&#13;
+    "schoolName": "测试班级",&#13;
+    "gradeName": "2015",&#13;
+    "className": "QA 班级"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>defaultGlobalSessionId-globalSessionId为中文<a name="defaultGlobalSessionId-globalSessionId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/defaultGlobalSessionId</td><td>POST</td><td>{&#13;
+    "globalSessionId": "班级",&#13;
+    "schoolName": "测试班级",&#13;
+    "gradeName": "2015",&#13;
+    "className": "QA 班级"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>defaultGlobalSessionId-globalSessionId为数学符号<a name="defaultGlobalSessionId-globalSessionId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/defaultGlobalSessionId</td><td>POST</td><td>{&#13;
+    "globalSessionId": "+",&#13;
+    "schoolName": "测试班级",&#13;
+    "gradeName": "2015",&#13;
+    "className": "QA 班级"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>defaultGlobalSessionId-globalSessionId为特殊符号<a name="defaultGlobalSessionId-globalSessionId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/defaultGlobalSessionId</td><td>POST</td><td>{&#13;
+    "globalSessionId": "#",&#13;
+    "schoolName": "测试班级",&#13;
+    "gradeName": "2015",&#13;
+    "className": "QA 班级"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>defaultGlobalSessionId-globalSessionId为标点符号<a name="defaultGlobalSessionId-globalSessionId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/defaultGlobalSessionId</td><td>POST</td><td>{&#13;
+    "globalSessionId": ",",&#13;
+    "schoolName": "测试班级",&#13;
+    "gradeName": "2015",&#13;
+    "className": "QA 班级"&#13;
+}</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>defaultGlobalSessionId-schoolName为空<a name="defaultGlobalSessionId-schoolName%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/defaultGlobalSessionId</td><td>POST</td><td>{&#13;
+    "globalSessionId": 2624,&#13;
+    "schoolName": "",&#13;
+    "gradeName": "2015",&#13;
+    "className": "QA 班级"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>defaultGlobalSessionId-schoolName为空格<a name="defaultGlobalSessionId-schoolName%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/defaultGlobalSessionId</td><td>POST</td><td>{&#13;
+    "globalSessionId": 2624,&#13;
+    "schoolName": " ",&#13;
+    "gradeName": "2015",&#13;
+    "className": "QA 班级"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>defaultGlobalSessionId-schoolName为特殊符号<a name="defaultGlobalSessionId-schoolName%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/defaultGlobalSessionId</td><td>POST</td><td>{&#13;
+    "globalSessionId": 2624,&#13;
+    "schoolName": "￥",&#13;
+    "gradeName": "2015",&#13;
+    "className": "QA 班级"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>defaultGlobalSessionId--schoolName为数学符号<a name="defaultGlobalSessionId--schoolName%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/defaultGlobalSessionId</td><td>POST</td><td>{&#13;
+    "globalSessionId": 2624,&#13;
+    "schoolName": "-",&#13;
+    "gradeName": "2015",&#13;
+    "className": "QA 班级"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>defaultGlobalSessionId-schoolName为标点符号<a name="defaultGlobalSessionId-schoolName%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/defaultGlobalSessionId</td><td>POST</td><td>{&#13;
+    "globalSessionId": 2624,&#13;
+    "schoolName": "？",&#13;
+    "gradeName": "2015",&#13;
+    "className": "QA 班级"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>defaultGlobalSessionId-gradeName为空<a name="defaultGlobalSessionId-gradeName%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/defaultGlobalSessionId</td><td>POST</td><td>{&#13;
+    "globalSessionId": 2624,&#13;
+    "schoolName": "测试班级",&#13;
+    "gradeName": "",&#13;
+    "className": "QA 班级"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>defaultGlobalSessionId-gradeName为空格<a name="defaultGlobalSessionId-gradeName%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/defaultGlobalSessionId</td><td>POST</td><td>{&#13;
+    "globalSessionId": 2624,&#13;
+    "schoolName": "测试班级",&#13;
+    "gradeName": " ",&#13;
+    "className": "QA 班级"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>defaultGlobalSessionId-gradeName为特殊符号<a name="defaultGlobalSessionId-gradeName%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/defaultGlobalSessionId</td><td>POST</td><td>{&#13;
+    "globalSessionId": 2624,&#13;
+    "schoolName": "测试班级",&#13;
+    "gradeName": "&amp;",&#13;
+    "className": "QA 班级"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>defaultGlobalSessionId-gradeName为数学符号<a name="defaultGlobalSessionId-gradeName%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/defaultGlobalSessionId</td><td>POST</td><td>{&#13;
+    "globalSessionId": 2624,&#13;
+    "schoolName": "测试班级",&#13;
+    "gradeName": "/",&#13;
+    "className": "QA 班级"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>defaultGlobalSessionId-gradeName标点符号<a name="defaultGlobalSessionId-gradeName%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/defaultGlobalSessionId</td><td>POST</td><td>{&#13;
+    "globalSessionId": 2624,&#13;
+    "schoolName": "测试班级",&#13;
+    "gradeName": "？",&#13;
+    "className": "QA 班级"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>defaultGlobalSessionId-className为空<a name="defaultGlobalSessionId-className%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/defaultGlobalSessionId</td><td>POST</td><td>{&#13;
+    "globalSessionId": 2624,&#13;
+    "schoolName": "测试班级",&#13;
+    "gradeName": "2015",&#13;
+    "className": ""&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>defaultGlobalSessionId--className为空格<a name="defaultGlobalSessionId--className%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/defaultGlobalSessionId</td><td>POST</td><td>{&#13;
+    "globalSessionId": 2624,&#13;
+    "schoolName": "测试班级",&#13;
+    "gradeName": "2015",&#13;
+    "className": " "&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>defaultGlobalSessionId--className为特殊符号<a name="defaultGlobalSessionId--className%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/defaultGlobalSessionId</td><td>POST</td><td>{&#13;
+    "globalSessionId": 2624,&#13;
+    "schoolName": "测试班级",&#13;
+    "gradeName": "2015",&#13;
+    "className": "@"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>defaultGlobalSessionId-className为标点符号<a name="defaultGlobalSessionId-className%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/defaultGlobalSessionId</td><td>POST</td><td>{&#13;
+    "globalSessionId": 2624,&#13;
+    "schoolName": "测试班级",&#13;
+    "gradeName": "2015",&#13;
+    "className": "！"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>defaultGlobalSessionId-className为数学符号<a name="defaultGlobalSessionId-className%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/defaultGlobalSessionId</td><td>POST</td><td>{&#13;
+    "globalSessionId": 2624,&#13;
+    "schoolName": "测试班级",&#13;
+    "gradeName": "2015",&#13;
+    "className": "+"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>tasks正确性校验taskType=1<a name="tasks%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8CtaskType=1"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/tasks?taskType=1</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>tasks正确性校验taskType=2<a name="tasks%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8CtaskType=2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/tasks?taskType=2</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>tasks正确性校验taskType=3<a name="tasks%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8CtaskType=3"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/tasks?taskType=3</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>tasks-taskType为空<a name="tasks-taskType%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/tasks?taskType=</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>tasks-taskType为空格<a name="tasks-taskType%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/tasks?taskType= </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 75: https://staging.zhishinet.com/api/user-profile/v1/sec/users/tasks?taskType= </td><td></td>
+</tr>
+</table>
+<h3>tasks-taskType为a-z的字符串<a name="tasks-taskType%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/tasks?taskType=aaaa</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>tasks-taskType 为中文<a name="tasks-taskType %E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/tasks?taskType=任务类型</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>tasks-taskType为数学符号<a name="tasks-taskType%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/tasks?taskType=-</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>tasks-taskType为特殊符号<a name="tasks-taskType%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/tasks?taskType=*</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>tasks-taskType为标点符号<a name="tasks-taskType%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/tasks?taskType=。</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>rank正确性校验<a name="rank%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/experience/rank?globalSessionId=2624</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>rank-globalSessionId为空<a name="rank-globalSessionId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/experience/rank?globalSessionId=</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>rank-globalSessionId为空格<a name="rank-globalSessionId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/experience/rank?globalSessionId= </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 92: https://staging.zhishinet.com/api/user-profile/v1/sec/users/experience/rank?globalSessionId= </td><td></td>
+</tr>
+</table>
+<h3>rank-globalSessionId为a-z的字符串<a name="rank-globalSessionId%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/experience/rank?globalSessionId=test</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>rank-globalSessionId为中文<a name="rank-globalSessionId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/experience/rank?globalSessionId=测试</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>rank-globalSessionId为数学符号<a name="rank-globalSessionId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/experience/rank?globalSessionId=+</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>rank-globalSessionId为特殊符号<a name="rank-globalSessionId%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/experience/rank?globalSessionId=&amp;</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>rank-globalSessionId为标点符号<a name="rank-globalSessionId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/experience/rank?globalSessionId=*</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>sessions正确性校验（identity=student）<a name="sessions%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C%EF%BC%88identity=student%EF%BC%89"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/sessions?identity=student</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>sessions正确性校验（identity=teacher）<a name="sessions%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C%EF%BC%88identity=teacher%EF%BC%89"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/sessions?identity=teacher</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>sessions-identity为空<a name="sessions-identity%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/sessions?identity=</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>sessions-identity为空格<a name="sessions-identity%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/sessions?identity= </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 78: https://staging.zhishinet.com/api/user-profile/v1/sec/users/sessions?identity= </td><td></td>
+</tr>
+</table>
+<h3>sessions-identity为a-z的字符串<a name="sessions-identity%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/sessions?identity=test</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>sessions-identity为中文<a name="sessions-identity%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/sessions?identity=测试</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>sessions-identity为数学符号<a name="sessions-identity%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/sessions?identity=+</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>sessions-identity为标点符号<a name="sessions-identity%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/sessions?identity=*</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>sessions-identity为特殊符号<a name="sessions-identity%E4%B8%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/sessions?identity=*</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>awardinfos正确校验<a name="awardinfos%E6%AD%A3%E7%A1%AE%E6%A0%A1%E9%AA%8C"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/user-profile/v1/sec/users/awardinfos</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+</body>
+</html>

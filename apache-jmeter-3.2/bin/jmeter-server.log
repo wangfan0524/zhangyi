@@ -1,0 +1,352 @@
+2017-10-30 15:48:58,726 INFO o.a.j.u.JMeterUtils: Setting Locale to zh_CN
+2017-10-30 15:48:58,742 INFO o.a.j.JMeter: Loading user properties from: user.properties
+2017-10-30 15:48:58,743 INFO o.a.j.JMeter: Loading system properties from: system.properties
+2017-10-30 15:48:58,751 INFO o.a.j.JMeter: Copyright (c) 1998-2017 The Apache Software Foundation
+2017-10-30 15:48:58,752 INFO o.a.j.JMeter: Version 3.2 r1790748
+2017-10-30 15:48:58,752 INFO o.a.j.JMeter: java.version=1.8.0_131
+2017-10-30 15:48:58,752 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2017-10-30 15:48:58,753 INFO o.a.j.JMeter: os.name=Windows 10
+2017-10-30 15:48:58,753 INFO o.a.j.JMeter: os.arch=amd64
+2017-10-30 15:48:58,753 INFO o.a.j.JMeter: os.version=10.0
+2017-10-30 15:48:58,753 INFO o.a.j.JMeter: file.encoding=GBK
+2017-10-30 15:48:58,753 INFO o.a.j.JMeter: Max memory     =1073741824
+2017-10-30 15:48:58,753 INFO o.a.j.JMeter: Available Processors =4
+2017-10-30 15:48:58,759 INFO o.a.j.JMeter: Default Locale=中文 (中国)
+2017-10-30 15:48:58,760 INFO o.a.j.JMeter: JMeter  Locale=中文 (中国)
+2017-10-30 15:48:58,760 INFO o.a.j.JMeter: JMeterHome=G:\项目\InterfaceTest\apache-jmeter-3.2
+2017-10-30 15:48:58,760 INFO o.a.j.JMeter: user.dir  =G:\项目\InterfaceTest\apache-jmeter-3.2\bin
+2017-10-30 15:48:58,760 INFO o.a.j.JMeter: PWD       =G:\项目\InterfaceTest\apache-jmeter-3.2\bin
+2017-10-30 15:48:58,762 INFO o.a.j.JMeter: IP: 192.168.70.7 Name: LAPTOP-JVHP31N1 FullName: LAPTOP-JVHP31N1
+2017-10-30 15:48:59,041 INFO o.a.j.e.RemoteJMeterEngineImpl: Starting backing engine on 1099
+2017-10-30 15:48:59,041 INFO o.a.j.e.RemoteJMeterEngineImpl: System property 'java.rmi.server.hostname' is not defined, using localHost address
+2017-10-30 15:48:59,042 INFO o.a.j.e.RemoteJMeterEngineImpl: Local IP address=192.168.70.7
+2017-10-30 15:48:59,042 INFO o.a.j.e.RemoteJMeterEngineImpl: IP address is a site-local address; this may cause problems with remote access.
+	Can be overridden by defining the system property 'java.rmi.server.hostname' - see jmeter-server script file
+2017-10-30 15:48:59,042 INFO o.a.j.e.RemoteJMeterEngineImpl: Creating RMI registry (server.rmi.create=true)
+2017-10-30 15:48:59,045 INFO o.a.j.e.RemoteJMeterEngineImpl: Bound to registry on port 1099
+2017-10-30 15:49:15,551 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2017-10-30 15:49:15,568 INFO o.a.j.s.BatchSampleSender: Using batching for this run. Thresholds: num=100, time=60000
+2017-10-30 15:49:15,568 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run with stripAlsoOnError: true
+2017-10-30 15:49:15,572 INFO o.a.j.s.BatchSampleSender: Using batching for this run. Thresholds: num=100, time=60000
+2017-10-30 15:49:15,572 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run with stripAlsoOnError: true
+2017-10-30 15:49:15,573 INFO o.a.j.s.BatchSampleSender: Using batching for this run. Thresholds: num=100, time=60000
+2017-10-30 15:49:15,573 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run with stripAlsoOnError: true
+2017-10-30 15:49:15,573 INFO o.a.j.s.BatchSampleSender: Using batching for this run. Thresholds: num=100, time=60000
+2017-10-30 15:49:15,574 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run with stripAlsoOnError: true
+2017-10-30 15:49:15,600 INFO o.a.j.e.RemoteJMeterEngineImpl: Creating JMeter engine on host 192.168.70.7:1099 base '.'
+2017-10-30 15:49:15,600 INFO o.a.j.e.RemoteJMeterEngineImpl: Remote client host: 192.168.70.5
+2017-10-30 15:49:15,604 INFO o.a.j.s.FileServer: Default base='G:\项目\InterfaceTest\apache-jmeter-3.2\bin'
+2017-10-30 15:49:15,604 INFO o.a.j.s.FileServer: Set new base='.'
+2017-10-30 15:49:15,626 INFO o.a.j.e.StandardJMeterEngine: Applying properties {}
+2017-10-30 15:49:15,627 INFO o.a.j.e.RemoteJMeterEngineImpl: Running test
+2017-10-30 15:49:15,631 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2017-10-30 15:49:15,632 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2017-10-30 15:49:15,635 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2017-10-30 15:49:15,635 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2017-10-30 15:49:16,064 INFO o.a.j.e.StandardJMeterEngine: No enabled thread groups found
+2017-10-30 15:49:16,065 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2017-10-30 15:49:16,066 INFO o.a.j.s.DataStrippingSampleSender: Test Ended on 192.168.70.7:1099
+2017-10-30 15:49:16,066 INFO o.a.j.s.BatchSampleSender: Test Ended on 192.168.70.7:1099
+2017-10-30 15:49:16,070 INFO o.a.j.s.DataStrippingSampleSender: Test Ended on 192.168.70.7:1099
+2017-10-30 15:49:16,070 INFO o.a.j.s.BatchSampleSender: Test Ended on 192.168.70.7:1099
+2017-10-30 15:49:16,072 INFO o.a.j.s.DataStrippingSampleSender: Test Ended on 192.168.70.7:1099
+2017-10-30 15:49:16,072 INFO o.a.j.s.BatchSampleSender: Test Ended on 192.168.70.7:1099
+2017-10-30 15:49:16,074 INFO o.a.j.s.DataStrippingSampleSender: Test Ended on 192.168.70.7:1099
+2017-10-30 15:49:16,074 INFO o.a.j.s.BatchSampleSender: Test Ended on 192.168.70.7:1099
+2017-10-30 15:49:16,081 INFO o.a.j.e.StandardJMeterEngine: Test has ended on host 192.168.70.7:1099
+2017-10-30 15:50:33,503 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2017-10-30 15:50:33,503 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2017-10-30 15:50:33,503 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2017-10-30 15:50:33,503 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2017-10-30 15:50:33,503 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2017-10-30 15:50:33,503 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2017-10-30 15:50:33,594 INFO o.a.j.s.BatchSampleSender: Using batching for this run. Thresholds: num=100, time=60000
+2017-10-30 15:50:33,594 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run with stripAlsoOnError: true
+2017-10-30 15:50:33,748 INFO o.a.j.e.RemoteJMeterEngineImpl: Creating JMeter engine on host 192.168.70.7:1099 base '.'
+2017-10-30 15:50:33,748 INFO o.a.j.e.RemoteJMeterEngineImpl: Remote client host: 192.168.70.5
+2017-10-30 15:50:33,750 INFO o.a.j.s.FileServer: Set new base='.'
+2017-10-30 15:50:33,753 INFO o.a.j.e.RemoteJMeterEngineImpl: Cleaning previously set properties: {}
+2017-10-30 15:50:33,754 INFO o.a.j.e.StandardJMeterEngine: Applying properties {}
+2017-10-30 15:50:33,755 INFO o.a.j.e.RemoteJMeterEngineImpl: Running test
+2017-10-30 15:50:33,756 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2017-10-30 15:50:33,756 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2017-10-30 15:50:33,759 ERROR o.a.j.e.PreCompiler: invalid variables
+org.apache.jmeter.functions.InvalidVariableException: Expected } after __Random function call in ${__Random(0,9999999,randomdata)
+	at org.apache.jmeter.engine.util.FunctionParser.makeFunction(FunctionParser.java:139) ~[ApacheJMeter_core.jar:3.2 r1790748]
+	at org.apache.jmeter.engine.util.FunctionParser.compileString(FunctionParser.java:82) ~[ApacheJMeter_core.jar:3.2 r1790748]
+	at org.apache.jmeter.engine.util.CompoundVariable.setParameters(CompoundVariable.java:186) ~[ApacheJMeter_core.jar:3.2 r1790748]
+	at org.apache.jmeter.engine.util.ReplaceStringWithFunctions.transformValue(ReplaceStringWithFunctions.java:46) ~[ApacheJMeter_core.jar:3.2 r1790748]
+	at org.apache.jmeter.engine.util.ValueReplacer.replaceValues(ValueReplacer.java:170) ~[ApacheJMeter_core.jar:3.2 r1790748]
+	at org.apache.jmeter.engine.util.ValueReplacer.replaceValues(ValueReplacer.java:178) ~[ApacheJMeter_core.jar:3.2 r1790748]
+	at org.apache.jmeter.engine.util.ValueReplacer.replaceValues(ValueReplacer.java:178) ~[ApacheJMeter_core.jar:3.2 r1790748]
+	at org.apache.jmeter.engine.util.ValueReplacer.replaceValues(ValueReplacer.java:80) ~[ApacheJMeter_core.jar:3.2 r1790748]
+	at org.apache.jmeter.engine.PreCompiler.addNode(PreCompiler.java:78) [ApacheJMeter_core.jar:3.2 r1790748]
+	at org.apache.jorphan.collections.HashTree.traverseInto(HashTree.java:996) [jorphan.jar:3.2 r1790748]
+	at org.apache.jorphan.collections.HashTree.traverse(HashTree.java:978) [jorphan.jar:3.2 r1790748]
+	at org.apache.jmeter.engine.StandardJMeterEngine.run(StandardJMeterEngine.java:369) [ApacheJMeter_core.jar:3.2 r1790748]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_131]
+2017-10-30 15:50:33,920 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : getPayUser用户付款信息查询
+2017-10-30 15:50:33,920 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group getPayUser用户付款信息查询.
+2017-10-30 15:50:33,920 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-10-30 15:50:33,920 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-10-30 15:50:33,924 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2017-10-30 15:50:33,925 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: getPayUser用户付款信息查询 to finish before starting next group
+2017-10-30 15:50:33,928 INFO o.a.j.t.JMeterThread: Thread started: getPayUser用户付款信息查询 1-1
+2017-10-30 15:50:33,970 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = LAPTOP-JVHP31N1
+2017-10-30 15:50:33,977 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2017-10-30 15:50:33,988 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2017-10-30 15:50:33,988 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2017-10-30 15:50:33,988 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2017-10-30 15:50:33,988 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2017-10-30 15:50:34,072 INFO o.a.j.p.h.s.LazySchemeSocketFactory: Setting up HTTPS TrustAll Socket Factory
+2017-10-30 15:50:34,081 INFO o.a.j.u.JsseSSLManager: Using default SSL protocol: TLS
+2017-10-30 15:50:34,081 INFO o.a.j.u.JsseSSLManager: SSL session context: per-thread
+2017-10-30 15:50:34,392 INFO o.a.j.u.SSLManager: JmeterKeyStore Location:  type JKS
+2017-10-30 15:50:34,393 INFO o.a.j.u.SSLManager: KeyStore created OK
+2017-10-30 15:50:34,393 WARN o.a.j.u.SSLManager: Keystore file not found, loading empty keystore
+2017-10-30 15:50:39,671 INFO o.a.j.t.JMeterThread: Thread is done: getPayUser用户付款信息查询 1-1
+2017-10-30 15:50:39,671 INFO o.a.j.t.JMeterThread: Thread finished: getPayUser用户付款信息查询 1-1
+2017-10-30 15:50:39,677 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 2 : addGoods添加商品
+2017-10-30 15:50:39,677 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group addGoods添加商品.
+2017-10-30 15:50:39,678 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-10-30 15:50:39,678 INFO o.a.j.t.ThreadGroup: Starting thread group... number=2 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-10-30 15:50:39,681 INFO o.a.j.t.ThreadGroup: Started thread group number 2
+2017-10-30 15:50:39,681 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: addGoods添加商品 to finish before starting next group
+2017-10-30 15:50:39,688 INFO o.a.j.t.JMeterThread: Thread started: addGoods添加商品 2-1
+2017-10-30 15:50:46,456 INFO o.a.j.t.JMeterThread: Thread is done: addGoods添加商品 2-1
+2017-10-30 15:50:46,456 INFO o.a.j.t.JMeterThread: Thread finished: addGoods添加商品 2-1
+2017-10-30 15:50:46,461 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 3 : commodity查询用户可见商品
+2017-10-30 15:50:46,461 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group commodity查询用户可见商品.
+2017-10-30 15:50:46,461 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-10-30 15:50:46,461 INFO o.a.j.t.ThreadGroup: Starting thread group... number=3 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-10-30 15:50:46,463 INFO o.a.j.t.ThreadGroup: Started thread group number 3
+2017-10-30 15:50:46,463 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: commodity查询用户可见商品 to finish before starting next group
+2017-10-30 15:50:46,463 INFO o.a.j.t.JMeterThread: Thread started: commodity查询用户可见商品 3-1
+2017-10-30 15:50:50,912 INFO o.a.j.t.JMeterThread: Thread is done: commodity查询用户可见商品 3-1
+2017-10-30 15:50:50,913 INFO o.a.j.t.JMeterThread: Thread finished: commodity查询用户可见商品 3-1
+2017-10-30 15:50:50,920 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 4 : order查询用户可操作订单
+2017-10-30 15:50:50,920 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group order查询用户可操作订单.
+2017-10-30 15:50:50,921 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-10-30 15:50:50,921 INFO o.a.j.t.ThreadGroup: Starting thread group... number=4 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-10-30 15:50:50,924 INFO o.a.j.t.ThreadGroup: Started thread group number 4
+2017-10-30 15:50:50,924 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: order查询用户可操作订单 to finish before starting next group
+2017-10-30 15:50:50,925 INFO o.a.j.t.JMeterThread: Thread started: order查询用户可操作订单 4-1
+2017-10-30 15:50:55,403 INFO o.a.j.t.JMeterThread: Thread is done: order查询用户可操作订单 4-1
+2017-10-30 15:50:55,403 INFO o.a.j.t.JMeterThread: Thread finished: order查询用户可操作订单 4-1
+2017-10-30 15:50:55,407 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 5 : orderDetail查询订单详情
+2017-10-30 15:50:55,408 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group orderDetail查询订单详情.
+2017-10-30 15:50:55,408 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-10-30 15:50:55,408 INFO o.a.j.t.ThreadGroup: Starting thread group... number=5 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-10-30 15:50:55,410 INFO o.a.j.t.ThreadGroup: Started thread group number 5
+2017-10-30 15:50:55,410 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: orderDetail查询订单详情 to finish before starting next group
+2017-10-30 15:50:55,412 INFO o.a.j.t.JMeterThread: Thread started: orderDetail查询订单详情 5-1
+2017-10-30 15:51:01,708 INFO o.a.j.t.JMeterThread: Thread is done: orderDetail查询订单详情 5-1
+2017-10-30 15:51:01,709 INFO o.a.j.t.JMeterThread: Thread finished: orderDetail查询订单详情 5-1
+2017-10-30 15:51:01,715 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 6 : userTypeDetail查询用户状态详细信息
+2017-10-30 15:51:01,716 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group userTypeDetail查询用户状态详细信息.
+2017-10-30 15:51:01,716 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-10-30 15:51:01,717 INFO o.a.j.t.ThreadGroup: Starting thread group... number=6 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-10-30 15:51:01,720 INFO o.a.j.t.ThreadGroup: Started thread group number 6
+2017-10-30 15:51:01,720 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: userTypeDetail查询用户状态详细信息 to finish before starting next group
+2017-10-30 15:51:01,721 INFO o.a.j.t.JMeterThread: Thread started: userTypeDetail查询用户状态详细信息 6-1
+2017-10-30 15:51:06,265 INFO o.a.j.t.JMeterThread: Thread is done: userTypeDetail查询用户状态详细信息 6-1
+2017-10-30 15:51:06,265 INFO o.a.j.t.JMeterThread: Thread finished: userTypeDetail查询用户状态详细信息 6-1
+2017-10-30 15:51:06,271 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 7 : goodsOperationGoodsRange商品日志列表-操作范围查询
+2017-10-30 15:51:06,271 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group goodsOperationGoodsRange商品日志列表-操作范围查询.
+2017-10-30 15:51:06,271 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-10-30 15:51:06,271 INFO o.a.j.t.ThreadGroup: Starting thread group... number=7 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-10-30 15:51:06,274 INFO o.a.j.t.ThreadGroup: Started thread group number 7
+2017-10-30 15:51:06,274 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: goodsOperationGoodsRange商品日志列表-操作范围查询 to finish before starting next group
+2017-10-30 15:51:06,275 INFO o.a.j.t.JMeterThread: Thread started: goodsOperationGoodsRange商品日志列表-操作范围查询 7-1
+2017-10-30 15:51:12,845 INFO o.a.j.t.JMeterThread: Thread is done: goodsOperationGoodsRange商品日志列表-操作范围查询 7-1
+2017-10-30 15:51:12,845 INFO o.a.j.t.JMeterThread: Thread finished: goodsOperationGoodsRange商品日志列表-操作范围查询 7-1
+2017-10-30 15:51:12,851 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 8 : goodsOperationLogs商品操作日志列表
+2017-10-30 15:51:12,851 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group goodsOperationLogs商品操作日志列表.
+2017-10-30 15:51:12,851 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-10-30 15:51:12,852 INFO o.a.j.t.ThreadGroup: Starting thread group... number=8 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-10-30 15:51:12,860 INFO o.a.j.t.ThreadGroup: Started thread group number 8
+2017-10-30 15:51:12,861 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: goodsOperationLogs商品操作日志列表 to finish before starting next group
+2017-10-30 15:51:12,874 INFO o.a.j.t.JMeterThread: Thread started: goodsOperationLogs商品操作日志列表 8-1
+2017-10-30 15:51:23,872 INFO o.a.j.t.JMeterThread: Thread is done: goodsOperationLogs商品操作日志列表 8-1
+2017-10-30 15:51:23,872 INFO o.a.j.t.JMeterThread: Thread finished: goodsOperationLogs商品操作日志列表 8-1
+2017-10-30 15:51:23,878 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 9 : listInProcessGoods商品审核列表
+2017-10-30 15:51:23,878 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group listInProcessGoods商品审核列表.
+2017-10-30 15:51:23,879 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-10-30 15:51:23,879 INFO o.a.j.t.ThreadGroup: Starting thread group... number=9 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-10-30 15:51:23,885 INFO o.a.j.t.ThreadGroup: Started thread group number 9
+2017-10-30 15:51:23,885 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: listInProcessGoods商品审核列表 to finish before starting next group
+2017-10-30 15:51:23,889 INFO o.a.j.t.JMeterThread: Thread started: listInProcessGoods商品审核列表 9-1
+2017-10-30 15:51:34,140 INFO o.a.j.t.JMeterThread: Thread is done: listInProcessGoods商品审核列表 9-1
+2017-10-30 15:51:34,140 INFO o.a.j.t.JMeterThread: Thread finished: listInProcessGoods商品审核列表 9-1
+2017-10-30 15:51:34,147 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 10 : checkGoods审核商品
+2017-10-30 15:51:34,148 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group checkGoods审核商品.
+2017-10-30 15:51:34,148 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-10-30 15:51:34,148 INFO o.a.j.t.ThreadGroup: Starting thread group... number=10 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-10-30 15:51:34,159 INFO o.a.j.t.ThreadGroup: Started thread group number 10
+2017-10-30 15:51:34,159 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: checkGoods审核商品 to finish before starting next group
+2017-10-30 15:51:34,163 INFO o.a.j.t.JMeterThread: Thread started: checkGoods审核商品 10-1
+2017-10-30 15:51:41,855 INFO o.a.j.t.JMeterThread: Thread is done: checkGoods审核商品 10-1
+2017-10-30 15:51:41,855 INFO o.a.j.t.JMeterThread: Thread finished: checkGoods审核商品 10-1
+2017-10-30 15:51:41,861 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 11 : userType-查询用户状态
+2017-10-30 15:51:41,861 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group userType-查询用户状态.
+2017-10-30 15:51:41,861 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-10-30 15:51:41,861 INFO o.a.j.t.ThreadGroup: Starting thread group... number=11 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-10-30 15:51:41,862 INFO o.a.j.t.ThreadGroup: Started thread group number 11
+2017-10-30 15:51:41,862 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: userType-查询用户状态 to finish before starting next group
+2017-10-30 15:51:41,863 INFO o.a.j.t.JMeterThread: Thread started: userType-查询用户状态 11-1
+2017-10-30 15:51:46,507 INFO o.a.j.t.JMeterThread: Thread is done: userType-查询用户状态 11-1
+2017-10-30 15:51:46,507 INFO o.a.j.t.JMeterThread: Thread finished: userType-查询用户状态 11-1
+2017-10-30 15:51:46,513 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 12 : userTypeRecording-用户类型记录查询
+2017-10-30 15:51:46,514 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group userTypeRecording-用户类型记录查询.
+2017-10-30 15:51:46,514 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-10-30 15:51:46,516 INFO o.a.j.t.ThreadGroup: Starting thread group... number=12 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-10-30 15:51:46,517 INFO o.a.j.t.ThreadGroup: Started thread group number 12
+2017-10-30 15:51:46,517 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: userTypeRecording-用户类型记录查询 to finish before starting next group
+2017-10-30 15:51:46,525 INFO o.a.j.t.JMeterThread: Thread started: userTypeRecording-用户类型记录查询 12-1
+2017-10-30 15:51:52,683 INFO o.a.j.t.JMeterThread: Thread is done: userTypeRecording-用户类型记录查询 12-1
+2017-10-30 15:51:52,683 INFO o.a.j.t.JMeterThread: Thread finished: userTypeRecording-用户类型记录查询 12-1
+2017-10-30 15:51:52,691 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 13 : exportOrderList-按查询条件导出订单列表
+2017-10-30 15:51:52,691 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group exportOrderList-按查询条件导出订单列表.
+2017-10-30 15:51:52,692 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-10-30 15:51:52,692 INFO o.a.j.t.ThreadGroup: Starting thread group... number=13 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-10-30 15:51:52,733 INFO o.a.j.t.ThreadGroup: Started thread group number 13
+2017-10-30 15:51:52,734 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: exportOrderList-按查询条件导出订单列表 to finish before starting next group
+2017-10-30 15:51:52,734 INFO o.a.j.t.JMeterThread: Thread started: exportOrderList-按查询条件导出订单列表 13-1
+2017-10-30 15:51:58,068 ERROR o.a.j.u.BeanShellInterpreter: Error invoking bsh method: eval	Sourced file: inline evaluation of: ``prev.setDataEncoding(UTF-8);'' : illegal use of undefined variable, class, or 'void' literal
+2017-10-30 15:51:58,068 WARN o.a.j.e.BeanShellPostProcessor: Problem in BeanShell script: org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval	Sourced file: inline evaluation of: ``prev.setDataEncoding(UTF-8);'' : illegal use of undefined variable, class, or 'void' literal
+2017-10-30 15:51:58,357 ERROR o.a.j.u.BeanShellInterpreter: Error invoking bsh method: eval	Sourced file: inline evaluation of: ``prev.setDataEncoding(UTF-8);'' : illegal use of undefined variable, class, or 'void' literal
+2017-10-30 15:51:58,357 WARN o.a.j.e.BeanShellPostProcessor: Problem in BeanShell script: org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval	Sourced file: inline evaluation of: ``prev.setDataEncoding(UTF-8);'' : illegal use of undefined variable, class, or 'void' literal
+2017-10-30 15:51:58,631 ERROR o.a.j.u.BeanShellInterpreter: Error invoking bsh method: eval	Sourced file: inline evaluation of: ``prev.setDataEncoding(UTF-8);'' : illegal use of undefined variable, class, or 'void' literal
+2017-10-30 15:51:58,631 WARN o.a.j.e.BeanShellPostProcessor: Problem in BeanShell script: org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval	Sourced file: inline evaluation of: ``prev.setDataEncoding(UTF-8);'' : illegal use of undefined variable, class, or 'void' literal
+2017-10-30 15:51:58,910 ERROR o.a.j.u.BeanShellInterpreter: Error invoking bsh method: eval	Sourced file: inline evaluation of: ``prev.setDataEncoding(UTF-8);'' : illegal use of undefined variable, class, or 'void' literal
+2017-10-30 15:51:58,911 WARN o.a.j.e.BeanShellPostProcessor: Problem in BeanShell script: org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval	Sourced file: inline evaluation of: ``prev.setDataEncoding(UTF-8);'' : illegal use of undefined variable, class, or 'void' literal
+2017-10-30 15:51:58,911 INFO o.a.j.t.JMeterThread: Thread is done: exportOrderList-按查询条件导出订单列表 13-1
+2017-10-30 15:51:58,911 INFO o.a.j.t.JMeterThread: Thread finished: exportOrderList-按查询条件导出订单列表 13-1
+2017-10-30 15:51:58,916 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 14 : getGoodsSelect-查询商品下拉列表
+2017-10-30 15:51:58,916 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group getGoodsSelect-查询商品下拉列表.
+2017-10-30 15:51:58,916 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-10-30 15:51:58,916 INFO o.a.j.t.ThreadGroup: Starting thread group... number=14 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-10-30 15:51:58,917 INFO o.a.j.t.ThreadGroup: Started thread group number 14
+2017-10-30 15:51:58,917 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: getGoodsSelect-查询商品下拉列表 to finish before starting next group
+2017-10-30 15:51:58,918 INFO o.a.j.t.JMeterThread: Thread started: getGoodsSelect-查询商品下拉列表 14-1
+2017-10-30 15:52:08,282 INFO o.a.j.t.JMeterThread: Thread is done: getGoodsSelect-查询商品下拉列表 14-1
+2017-10-30 15:52:08,282 INFO o.a.j.t.JMeterThread: Thread finished: getGoodsSelect-查询商品下拉列表 14-1
+2017-10-30 15:52:08,287 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 15 : getStudentsSelect-查询学生姓名下拉列表
+2017-10-30 15:52:08,287 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group getStudentsSelect-查询学生姓名下拉列表.
+2017-10-30 15:52:08,288 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-10-30 15:52:08,288 INFO o.a.j.t.ThreadGroup: Starting thread group... number=15 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-10-30 15:52:08,289 INFO o.a.j.t.ThreadGroup: Started thread group number 15
+2017-10-30 15:52:08,290 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: getStudentsSelect-查询学生姓名下拉列表 to finish before starting next group
+2017-10-30 15:52:08,291 INFO o.a.j.t.JMeterThread: Thread started: getStudentsSelect-查询学生姓名下拉列表 15-1
+2017-10-30 15:52:16,320 INFO o.a.j.t.JMeterThread: Thread is done: getStudentsSelect-查询学生姓名下拉列表 15-1
+2017-10-30 15:52:16,320 INFO o.a.j.t.JMeterThread: Thread finished: getStudentsSelect-查询学生姓名下拉列表 15-1
+2017-10-30 15:52:16,326 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 16 : getOrderListInfo-查询订单列表
+2017-10-30 15:52:16,327 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group getOrderListInfo-查询订单列表.
+2017-10-30 15:52:16,327 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-10-30 15:52:16,327 INFO o.a.j.t.ThreadGroup: Starting thread group... number=16 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-10-30 15:52:16,330 INFO o.a.j.t.ThreadGroup: Started thread group number 16
+2017-10-30 15:52:16,331 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: getOrderListInfo-查询订单列表 to finish before starting next group
+2017-10-30 15:52:16,332 INFO o.a.j.t.JMeterThread: Thread started: getOrderListInfo-查询订单列表 16-1
+2017-10-30 15:52:22,993 INFO o.a.j.t.JMeterThread: Thread is done: getOrderListInfo-查询订单列表 16-1
+2017-10-30 15:52:22,994 INFO o.a.j.t.JMeterThread: Thread finished: getOrderListInfo-查询订单列表 16-1
+2017-10-30 15:52:23,002 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 17 : goodsList-商品列表查询
+2017-10-30 15:52:23,002 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group goodsList-商品列表查询.
+2017-10-30 15:52:23,003 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-10-30 15:52:23,003 INFO o.a.j.t.ThreadGroup: Starting thread group... number=17 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-10-30 15:52:23,044 INFO o.a.j.t.ThreadGroup: Started thread group number 17
+2017-10-30 15:52:23,044 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: goodsList-商品列表查询 to finish before starting next group
+2017-10-30 15:52:23,053 INFO o.a.j.t.JMeterThread: Thread started: goodsList-商品列表查询 17-1
+2017-10-30 15:52:27,537 ERROR o.a.j.u.BeanShellInterpreter: Error invoking bsh method: eval	Sourced file: inline evaluation of: ``prev.setDataEncoding(UTF-8);'' : illegal use of undefined variable, class, or 'void' literal
+2017-10-30 15:52:27,537 WARN o.a.j.e.BeanShellPostProcessor: Problem in BeanShell script: org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval	Sourced file: inline evaluation of: ``prev.setDataEncoding(UTF-8);'' : illegal use of undefined variable, class, or 'void' literal
+2017-10-30 15:52:54,114 INFO o.a.j.t.JMeterThread: Thread is done: goodsList-商品列表查询 17-1
+2017-10-30 15:52:54,115 INFO o.a.j.t.JMeterThread: Thread finished: goodsList-商品列表查询 17-1
+2017-10-30 15:52:54,121 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 18 : createOrder-新建订单及会员退费
+2017-10-30 15:52:54,121 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group createOrder-新建订单及会员退费.
+2017-10-30 15:52:54,121 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-10-30 15:52:54,121 INFO o.a.j.t.ThreadGroup: Starting thread group... number=18 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2017-10-30 15:52:54,124 INFO o.a.j.t.ThreadGroup: Started thread group number 18
+2017-10-30 15:52:54,124 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2017-10-30 15:52:54,127 INFO o.a.j.t.JMeterThread: Thread started: createOrder-新建订单及会员退费 18-1
+2017-10-30 15:53:10,328 INFO o.a.j.t.JMeterThread: Thread is done: createOrder-新建订单及会员退费 18-1
+2017-10-30 15:53:10,328 INFO o.a.j.t.JMeterThread: Thread finished: createOrder-新建订单及会员退费 18-1
+2017-10-30 15:53:10,332 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2017-10-30 15:53:10,333 INFO o.a.j.s.DataStrippingSampleSender: Test Ended on 192.168.70.7:1099
+2017-10-30 15:53:10,333 INFO o.a.j.s.BatchSampleSender: Test Ended on 192.168.70.7:1099
+2017-10-30 15:53:10,374 INFO o.a.j.e.StandardJMeterEngine: Test has ended on host 192.168.70.7:1099
+2017-10-30 16:06:07,637 INFO o.a.j.s.BatchSampleSender: Using batching for this run. Thresholds: num=100, time=60000
+2017-10-30 16:06:07,637 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run with stripAlsoOnError: true
+2017-10-30 16:06:07,637 INFO o.a.j.s.BatchSampleSender: Using batching for this run. Thresholds: num=100, time=60000
+2017-10-30 16:06:07,637 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run with stripAlsoOnError: true
+2017-10-30 16:06:07,661 INFO o.a.j.e.RemoteJMeterEngineImpl: Creating JMeter engine on host 192.168.70.7:1099 base '.'
+2017-10-30 16:06:07,661 INFO o.a.j.e.RemoteJMeterEngineImpl: Remote client host: 192.168.70.5
+2017-10-30 16:06:07,661 WARN o.a.j.e.RemoteJMeterEngineImpl: Engine is busy - cannot create JMeter engine
+2017-10-30 16:06:24,045 INFO o.a.j.s.BatchSampleSender: Using batching for this run. Thresholds: num=100, time=60000
+2017-10-30 16:06:24,045 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run with stripAlsoOnError: true
+2017-10-30 16:06:24,090 INFO o.a.j.s.BatchSampleSender: Using batching for this run. Thresholds: num=100, time=60000
+2017-10-30 16:06:24,090 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run with stripAlsoOnError: true
+2017-10-30 16:06:24,098 INFO o.a.j.e.RemoteJMeterEngineImpl: Creating JMeter engine on host 192.168.70.7:1099 base '.'
+2017-10-30 16:06:24,098 INFO o.a.j.e.RemoteJMeterEngineImpl: Remote client host: 192.168.70.5
+2017-10-30 16:06:24,098 WARN o.a.j.e.RemoteJMeterEngineImpl: Engine is busy - cannot create JMeter engine
+2017-10-30 16:06:43,494 INFO o.a.j.s.BatchSampleSender: Using batching for this run. Thresholds: num=100, time=60000
+2017-10-30 16:06:43,494 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run with stripAlsoOnError: true
+2017-10-30 16:06:43,497 INFO o.a.j.s.BatchSampleSender: Using batching for this run. Thresholds: num=100, time=60000
+2017-10-30 16:06:43,497 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run with stripAlsoOnError: true
+2017-10-30 16:06:43,505 INFO o.a.j.e.RemoteJMeterEngineImpl: Creating JMeter engine on host 192.168.70.7:1099 base '.'
+2017-10-30 16:06:43,506 INFO o.a.j.e.RemoteJMeterEngineImpl: Remote client host: 192.168.70.5
+2017-10-30 16:06:43,506 WARN o.a.j.e.RemoteJMeterEngineImpl: Engine is busy - cannot create JMeter engine
+2017-10-30 16:07:03,538 INFO o.a.j.s.BatchSampleSender: Using batching for this run. Thresholds: num=100, time=60000
+2017-10-30 16:07:03,538 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run with stripAlsoOnError: true
+2017-10-30 16:07:03,549 INFO o.a.j.s.BatchSampleSender: Using batching for this run. Thresholds: num=100, time=60000
+2017-10-30 16:07:03,549 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run with stripAlsoOnError: true
+2017-10-30 16:07:03,556 INFO o.a.j.e.RemoteJMeterEngineImpl: Creating JMeter engine on host 192.168.70.7:1099 base '.'
+2017-10-30 16:07:03,557 INFO o.a.j.e.RemoteJMeterEngineImpl: Remote client host: 192.168.70.5
+2017-10-30 16:07:03,557 WARN o.a.j.e.RemoteJMeterEngineImpl: Engine is busy - cannot create JMeter engine
+2017-10-30 16:12:56,776 INFO o.a.j.s.BatchSampleSender: Using batching for this run. Thresholds: num=100, time=60000
+2017-10-30 16:12:56,776 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run with stripAlsoOnError: true
+2017-10-30 16:12:56,782 INFO o.a.j.s.BatchSampleSender: Using batching for this run. Thresholds: num=100, time=60000
+2017-10-30 16:12:56,782 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run with stripAlsoOnError: true
+2017-10-30 16:12:56,826 INFO o.a.j.e.RemoteJMeterEngineImpl: Creating JMeter engine on host 192.168.70.7:1099 base '.'
+2017-10-30 16:12:56,826 INFO o.a.j.e.RemoteJMeterEngineImpl: Remote client host: 192.168.70.5
+2017-10-30 16:12:56,826 WARN o.a.j.e.RemoteJMeterEngineImpl: Engine is busy - cannot create JMeter engine
+2017-10-30 16:15:36,007 INFO o.a.j.s.BatchSampleSender: Using batching for this run. Thresholds: num=100, time=60000
+2017-10-30 16:15:36,009 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run with stripAlsoOnError: true
+2017-10-30 16:15:36,009 INFO o.a.j.s.BatchSampleSender: Using batching for this run. Thresholds: num=100, time=60000
+2017-10-30 16:15:36,009 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run with stripAlsoOnError: true
+2017-10-30 16:15:36,118 INFO o.a.j.e.RemoteJMeterEngineImpl: Creating JMeter engine on host 192.168.70.7:1099 base '.'
+2017-10-30 16:15:36,118 INFO o.a.j.e.RemoteJMeterEngineImpl: Remote client host: 192.168.70.5
+2017-10-30 16:15:36,118 WARN o.a.j.e.RemoteJMeterEngineImpl: Engine is busy - cannot create JMeter engine
+2017-10-30 16:28:41,934 INFO o.a.j.s.BatchSampleSender: Using batching for this run. Thresholds: num=100, time=60000
+2017-10-30 16:28:41,935 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run with stripAlsoOnError: true
+2017-10-30 16:28:41,940 INFO o.a.j.s.BatchSampleSender: Using batching for this run. Thresholds: num=100, time=60000
+2017-10-30 16:28:41,940 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run with stripAlsoOnError: true
+2017-10-30 16:28:41,948 INFO o.a.j.e.RemoteJMeterEngineImpl: Creating JMeter engine on host 192.168.70.7:1099 base '.'
+2017-10-30 16:28:41,949 INFO o.a.j.e.RemoteJMeterEngineImpl: Remote client host: 192.168.70.5
+2017-10-30 16:28:41,949 WARN o.a.j.e.RemoteJMeterEngineImpl: Engine is busy - cannot create JMeter engine
+2017-10-30 16:34:17,451 INFO o.a.j.s.BatchSampleSender: Using batching for this run. Thresholds: num=100, time=60000
+2017-10-30 16:34:17,451 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run with stripAlsoOnError: true
+2017-10-30 16:34:17,509 INFO o.a.j.s.BatchSampleSender: Using batching for this run. Thresholds: num=100, time=60000
+2017-10-30 16:34:17,509 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run with stripAlsoOnError: true
+2017-10-30 16:34:17,518 INFO o.a.j.e.RemoteJMeterEngineImpl: Creating JMeter engine on host 192.168.70.7:1099 base '.'
+2017-10-30 16:34:17,518 INFO o.a.j.e.RemoteJMeterEngineImpl: Remote client host: 192.168.70.5
+2017-10-30 16:34:17,518 WARN o.a.j.e.RemoteJMeterEngineImpl: Engine is busy - cannot create JMeter engine
+2017-10-30 16:37:12,129 INFO o.a.j.s.BatchSampleSender: Using batching for this run. Thresholds: num=100, time=60000
+2017-10-30 16:37:12,130 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run with stripAlsoOnError: true
+2017-10-30 16:37:12,187 INFO o.a.j.s.BatchSampleSender: Using batching for this run. Thresholds: num=100, time=60000
+2017-10-30 16:37:12,187 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run with stripAlsoOnError: true
+2017-10-30 16:37:12,197 INFO o.a.j.e.RemoteJMeterEngineImpl: Creating JMeter engine on host 192.168.70.7:1099 base '.'
+2017-10-30 16:37:12,197 INFO o.a.j.e.RemoteJMeterEngineImpl: Remote client host: 192.168.70.5
+2017-10-30 16:37:12,197 WARN o.a.j.e.RemoteJMeterEngineImpl: Engine is busy - cannot create JMeter engine
+2017-10-30 16:37:47,619 INFO o.a.j.s.BatchSampleSender: Using batching for this run. Thresholds: num=100, time=60000
+2017-10-30 16:37:47,620 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run with stripAlsoOnError: true
+2017-10-30 16:37:47,620 INFO o.a.j.s.BatchSampleSender: Using batching for this run. Thresholds: num=100, time=60000
+2017-10-30 16:37:47,620 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run with stripAlsoOnError: true
+2017-10-30 16:37:47,630 INFO o.a.j.e.RemoteJMeterEngineImpl: Creating JMeter engine on host 192.168.70.7:1099 base '.'
+2017-10-30 16:37:47,630 INFO o.a.j.e.RemoteJMeterEngineImpl: Remote client host: 192.168.70.5
+2017-10-30 16:37:47,630 WARN o.a.j.e.RemoteJMeterEngineImpl: Engine is busy - cannot create JMeter engine
+2017-10-30 16:38:09,678 INFO o.a.j.s.BatchSampleSender: Using batching for this run. Thresholds: num=100, time=60000
+2017-10-30 16:38:09,679 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run with stripAlsoOnError: true
+2017-10-30 16:38:09,687 INFO o.a.j.s.BatchSampleSender: Using batching for this run. Thresholds: num=100, time=60000
+2017-10-30 16:38:09,687 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run with stripAlsoOnError: true
+2017-10-30 16:38:09,695 INFO o.a.j.e.RemoteJMeterEngineImpl: Creating JMeter engine on host 192.168.70.7:1099 base '.'
+2017-10-30 16:38:09,695 INFO o.a.j.e.RemoteJMeterEngineImpl: Remote client host: 192.168.70.5
+2017-10-30 16:38:09,695 WARN o.a.j.e.RemoteJMeterEngineImpl: Engine is busy - cannot create JMeter engine

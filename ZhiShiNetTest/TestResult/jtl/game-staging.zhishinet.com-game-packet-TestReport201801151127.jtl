@@ -1,0 +1,2538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="256" it="0" lt="0" ts="1515986834687" s="false" lb="getToken" rc="Non HTTP response code: java.net.UnknownHostException" rm="Non HTTP response message: staging.zihshinet.com" tn="getClassmateCircle -   查询班级圈信息   1-1" dt="text" by="3323" sby="0" ng="1" na="1">
+  <sample t="1" it="0" lt="0" ts="1515986834942" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getClassmateCircle -   查询班级圈信息   1-1" dt="text" by="1155" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">java.net.UnknownHostException: staging.zihshinet.com&#xd;
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)&#xd;
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928)&#xd;
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323)&#xd;
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1276)&#xd;
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)&#xd;
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)&#xd;
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)&#xd;
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:263)&#xd;
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:162)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.hc.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:318)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.MeasuringConnectionManager$MeasuredConnection.open(MeasuringConnectionManager.java:114)&#xd;
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:610)&#xd;
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:445)&#xd;
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)&#xd;
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:654)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:413)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:74)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1189)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1178)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:491)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:425)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:254)&#xd;
+	at java.lang.Thread.run(Thread.java:748)&#xd;
+</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;XXB00001&quot;,&#xd;
+	&quot;password&quot;: &quot;asdf1234&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zihshinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="1453" it="0" lt="1453" ts="1515986834950" s="false" lb="getClassmateCircle -   查询班级圈信息 -正确性验证" rc="401" rm="" tn="getClassmateCircle -   查询班级圈信息   1-1" dt="text" by="450" sby="254" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to contain /200/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getClassmateCircle?page=1&amp;pageSize=5</java.net.URL>
+</httpSample>
+<httpSample t="37" it="0" lt="37" ts="1515986836409" s="false" lb="getClassmateCircle -   查询班级圈信息 -不传参" rc="401" rm="" tn="getClassmateCircle -   查询班级圈信息   1-1" dt="text" by="450" sby="236" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to contain /200/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getClassmateCircle</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1515986836447" s="true" lb="getClassmateCircle -   查询班级圈信息 -page为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 82: https://game-staging.zhishinet.com/api/game-packet/v1/sec/getClassmateCircle?page=   &amp;pageSize=5" tn="getClassmateCircle -   查询班级圈信息   1-1" dt="text" by="1099" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getClassmateCircle?page=   &amp;pageSize=5</java.net.URL>
+</httpSample>
+<httpSample t="44" it="0" lt="44" ts="1515986836449" s="false" lb="getClassmateCircle -   查询班级圈信息 -page为特殊字符" rc="401" rm="" tn="getClassmateCircle -   查询班级圈信息   1-1" dt="text" by="450" sby="254" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getClassmateCircle?page=*&amp;pageSize=5</java.net.URL>
+</httpSample>
+<httpSample t="36" it="0" lt="36" ts="1515986836494" s="false" lb="getClassmateCircle -   查询班级圈信息 -page为数学字符" rc="401" rm="" tn="getClassmateCircle -   查询班级圈信息   1-1" dt="text" by="450" sby="254" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getClassmateCircle?page=+&amp;pageSize=5</java.net.URL>
+</httpSample>
+<httpSample t="41" it="0" lt="41" ts="1515986836531" s="false" lb="getClassmateCircle -   查询班级圈信息 -page为中文" rc="401" rm="" tn="getClassmateCircle -   查询班级圈信息   1-1" dt="text" by="450" sby="280" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getClassmateCircle?page=自动化&amp;pageSize=5</java.net.URL>
+</httpSample>
+<httpSample t="36" it="0" lt="36" ts="1515986836573" s="false" lb="getClassmateCircle -   查询班级圈信息 -page为英文" rc="401" rm="" tn="getClassmateCircle -   查询班级圈信息   1-1" dt="text" by="450" sby="256" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getClassmateCircle?page=dfd&amp;pageSize=5</java.net.URL>
+</httpSample>
+<httpSample t="38" it="0" lt="38" ts="1515986836610" s="false" lb="getClassmateCircle -   查询班级圈信息 -pageSize为英文" rc="401" rm="" tn="getClassmateCircle -   查询班级圈信息   1-1" dt="text" by="450" sby="256" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getClassmateCircle?page=1&amp;pageSize=bvd</java.net.URL>
+</httpSample>
+<httpSample t="35" it="0" lt="35" ts="1515986836649" s="false" lb="getClassmateCircle -   查询班级圈信息 -pageSize为中文" rc="401" rm="" tn="getClassmateCircle -   查询班级圈信息   1-1" dt="text" by="450" sby="280" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getClassmateCircle?page=1&amp;pageSize=就看见</java.net.URL>
+</httpSample>
+<httpSample t="53" it="0" lt="53" ts="1515986836685" s="false" lb="getClassmateCircle -   查询班级圈信息 -pageSize为特殊字符" rc="401" rm="" tn="getClassmateCircle -   查询班级圈信息   1-1" dt="text" by="450" sby="254" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getClassmateCircle?page=1&amp;pageSize=*</java.net.URL>
+</httpSample>
+<httpSample t="35" it="0" lt="35" ts="1515986836739" s="false" lb="getClassmateCircle -   查询班级圈信息 -pageSize为数学字符" rc="401" rm="" tn="getClassmateCircle -   查询班级圈信息   1-1" dt="text" by="450" sby="254" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getClassmateCircle?page=1&amp;pageSize=-</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1515986836775" s="true" lb="getClassmateCircle -   查询班级圈信息 -pageSize为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 93: https://game-staging.zhishinet.com/api/game-packet/v1/sec/getClassmateCircle?page=1&amp;pageSize=   " tn="getClassmateCircle -   查询班级圈信息   1-1" dt="text" by="1099" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getClassmateCircle?page=1&amp;pageSize=   </java.net.URL>
+</httpSample>
+<httpSample t="41" it="0" lt="41" ts="1515986836776" s="false" lb="getClassmateCircle -   查询班级圈信息 -pageSize为空" rc="401" rm="" tn="getClassmateCircle -   查询班级圈信息   1-1" dt="text" by="450" sby="253" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getClassmateCircle?page=1&amp;pageSize=</java.net.URL>
+</httpSample>
+<httpSample t="2" it="0" lt="0" ts="1515986836822" s="false" lb="getToken" rc="Non HTTP response code: java.net.UnknownHostException" rm="Non HTTP response message: staging.zihshinet.com" tn="getUserStarsBillBoard  -    查询排行榜信息   2-1" dt="text" by="3113" sby="0" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1515986836824" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getUserStarsBillBoard  -    查询排行榜信息   2-1" dt="text" by="1154" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">java.net.UnknownHostException: staging.zihshinet.com&#xd;
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)&#xd;
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)&#xd;
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)&#xd;
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)&#xd;
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:263)&#xd;
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:162)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.hc.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:318)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.MeasuringConnectionManager$MeasuredConnection.open(MeasuringConnectionManager.java:114)&#xd;
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:610)&#xd;
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:445)&#xd;
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)&#xd;
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:654)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:413)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:74)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1189)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1178)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:491)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:425)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:254)&#xd;
+	at java.lang.Thread.run(Thread.java:748)&#xd;
+</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;XXB00001&quot;,&#xd;
+	&quot;password&quot;: &quot;asdf1234&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zihshinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="189" it="0" lt="189" ts="1515986836825" s="false" lb="getUserStarsBillBoard  -     查询排行榜信息   -正确性验证" rc="401" rm="" tn="getUserStarsBillBoard  -    查询排行榜信息   2-1" dt="text" by="450" sby="248" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to contain /200/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getUserStarsBillBoard?count=10</java.net.URL>
+</httpSample>
+<httpSample t="37" it="0" lt="37" ts="1515986837015" s="false" lb="getUserStarsBillBoard  -  count为空" rc="401" rm="" tn="getUserStarsBillBoard  -    查询排行榜信息   2-1" dt="text" by="450" sby="246" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to contain /200/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getUserStarsBillBoard?count=</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1515986837053" s="true" lb="getUserStarsBillBoard  -  count为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 86: https://game-staging.zhishinet.com/api/game-packet/v1/sec/getUserStarsBillBoard?count=   " tn="getUserStarsBillBoard  -    查询排行榜信息   2-1" dt="text" by="1092" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getUserStarsBillBoard?count=   </java.net.URL>
+</httpSample>
+<httpSample t="33" it="0" lt="32" ts="1515986837054" s="false" lb="getUserStarsBillBoard  -  count为特殊字符" rc="401" rm="" tn="getUserStarsBillBoard  -    查询排行榜信息   2-1" dt="text" by="450" sby="247" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getUserStarsBillBoard?count=*</java.net.URL>
+</httpSample>
+<httpSample t="39" it="0" lt="39" ts="1515986837088" s="false" lb="getUserStarsBillBoard  -  count为数学字符" rc="401" rm="" tn="getUserStarsBillBoard  -    查询排行榜信息   2-1" dt="text" by="450" sby="247" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getUserStarsBillBoard?count==</java.net.URL>
+</httpSample>
+<httpSample t="39" it="0" lt="39" ts="1515986837128" s="false" lb="getUserStarsBillBoard  -  count为标点符号" rc="401" rm="" tn="getUserStarsBillBoard  -    查询排行榜信息   2-1" dt="text" by="450" sby="255" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getUserStarsBillBoard?count=，</java.net.URL>
+</httpSample>
+<httpSample t="37" it="0" lt="37" ts="1515986837168" s="false" lb="getUserStarsBillBoard  -  count为中文" rc="401" rm="" tn="getUserStarsBillBoard  -    查询排行榜信息   2-1" dt="text" by="450" sby="264" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getUserStarsBillBoard?count=回顾</java.net.URL>
+</httpSample>
+<httpSample t="40" it="0" lt="40" ts="1515986837206" s="false" lb="getUserStarsBillBoard  -  count为英文" rc="401" rm="" tn="getUserStarsBillBoard  -    查询排行榜信息   2-1" dt="text" by="450" sby="250" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getUserStarsBillBoard?count=ghns</java.net.URL>
+</httpSample>
+<httpSample t="2" it="0" lt="0" ts="1515986837252" s="false" lb="getToken" rc="Non HTTP response code: java.net.UnknownHostException" rm="Non HTTP response message: staging.zihshinet.com" tn="burypoint  -数据埋点  3-1" dt="text" by="3114" sby="0" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1515986837254" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="burypoint  -数据埋点  3-1" dt="text" by="1155" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">java.net.UnknownHostException: staging.zihshinet.com&#xd;
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)&#xd;
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)&#xd;
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)&#xd;
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)&#xd;
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:263)&#xd;
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:162)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.hc.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:318)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.MeasuringConnectionManager$MeasuredConnection.open(MeasuringConnectionManager.java:114)&#xd;
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:610)&#xd;
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:445)&#xd;
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)&#xd;
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:654)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:413)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:74)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1189)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1178)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:491)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:425)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:254)&#xd;
+	at java.lang.Thread.run(Thread.java:748)&#xd;
+</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;XXB00001&quot;,&#xd;
+	&quot;password&quot;: &quot;asdf1234&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zihshinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="204" it="0" lt="204" ts="1515986837255" s="false" lb="burypoint  -数据埋点  -正确性验证" rc="401" rm="" tn="burypoint  -数据埋点  3-1" dt="text" by="450" sby="417" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to contain /200/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;userName&quot;: &quot;测试&quot;,&#xd;
+    &quot;fullName&quot;: &quot;测试&quot;,&#xd;
+    &quot;school&quot;: &quot;芝士网&quot;,&#xd;
+    &quot;clazz&quot;: &quot;QA&quot;,&#xd;
+    &quot;action&quot;: &quot;trg&quot;,&#xd;
+    &quot;level&quot;: &quot;1&quot;,&#xd;
+    &quot;game&quot;: &quot;1&quot;,&#xd;
+    &quot;note&quot;: &quot;1&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</java.net.URL>
+</httpSample>
+<httpSample t="36" it="0" lt="36" ts="1515986837459" s="false" lb="burypoint  -userName  为空" rc="401" rm="" tn="burypoint  -数据埋点  3-1" dt="text" by="450" sby="415" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /may not be empty/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;userName&quot;: &quot;&quot;,&#xd;
+    &quot;fullName&quot;: &quot;测试&quot;,&#xd;
+    &quot;school&quot;: &quot;芝士网&quot;,&#xd;
+    &quot;clazz&quot;: &quot;QA&quot;,&#xd;
+    &quot;action&quot;: &quot;sgv&quot;,&#xd;
+    &quot;level&quot;: &quot;1&quot;,&#xd;
+    &quot;game&quot;: &quot;1&quot;,&#xd;
+    &quot;note&quot;: &quot;1&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</java.net.URL>
+</httpSample>
+<httpSample t="38" it="0" lt="38" ts="1515986837496" s="false" lb="burypoint  -userName  为空格" rc="401" rm="" tn="burypoint  -数据埋点  3-1" dt="text" by="450" sby="417" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /userName:may not be empty/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;userName&quot;: &quot;  &quot;,&#xd;
+    &quot;fullName&quot;: &quot;测试&quot;,&#xd;
+    &quot;school&quot;: &quot;芝士网&quot;,&#xd;
+    &quot;clazz&quot;: &quot;QA&quot;,&#xd;
+    &quot;action&quot;: &quot;sdv&quot;,&#xd;
+    &quot;level&quot;: &quot;1&quot;,&#xd;
+    &quot;game&quot;: &quot;1&quot;,&#xd;
+    &quot;note&quot;: &quot;1&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</java.net.URL>
+</httpSample>
+<httpSample t="34" it="0" lt="34" ts="1515986837535" s="false" lb="burypoint  -userName  为数字" rc="401" rm="" tn="burypoint  -数据埋点  3-1" dt="text" by="450" sby="417" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;userName&quot;: &quot;123&quot;,&#xd;
+    &quot;fullName&quot;: &quot;测试&quot;,&#xd;
+    &quot;school&quot;: &quot;芝士网&quot;,&#xd;
+    &quot;clazz&quot;: &quot;QA&quot;,&#xd;
+    &quot;action&quot;: &quot;dv&quot;,&#xd;
+    &quot;level&quot;: &quot;1&quot;,&#xd;
+    &quot;game&quot;: &quot;1&quot;,&#xd;
+    &quot;note&quot;: &quot;1&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</java.net.URL>
+</httpSample>
+<httpSample t="43" it="0" lt="43" ts="1515986837570" s="false" lb="burypoint  -userName  为特殊字符" rc="401" rm="" tn="burypoint  -数据埋点  3-1" dt="text" by="450" sby="417" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to contain /200/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;userName&quot;: &quot;&amp;&quot;,&#xd;
+    &quot;fullName&quot;: &quot;测试&quot;,&#xd;
+    &quot;school&quot;: &quot;芝士网&quot;,&#xd;
+    &quot;clazz&quot;: &quot;QA&quot;,&#xd;
+    &quot;action&quot;: &quot;sdcd&quot;,&#xd;
+    &quot;level&quot;: &quot;1&quot;,&#xd;
+    &quot;game&quot;: &quot;1&quot;,&#xd;
+    &quot;note&quot;: &quot;1&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</java.net.URL>
+</httpSample>
+<httpSample t="36" it="0" lt="36" ts="1515986837614" s="false" lb="burypoint  -fullName  为空" rc="401" rm="" tn="burypoint  -数据埋点  3-1" dt="text" by="450" sby="414" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /fullName:may not be empty/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;userName&quot;: &quot;关闭&quot;,&#xd;
+    &quot;fullName&quot;: &quot;&quot;,&#xd;
+    &quot;school&quot;: &quot;芝士网&quot;,&#xd;
+    &quot;clazz&quot;: &quot;QA&quot;,&#xd;
+    &quot;action&quot;: &quot;sd&quot;,&#xd;
+    &quot;level&quot;: &quot;1&quot;,&#xd;
+    &quot;game&quot;: &quot;1&quot;,&#xd;
+    &quot;note&quot;: &quot;1&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</java.net.URL>
+</httpSample>
+<httpSample t="38" it="0" lt="38" ts="1515986837651" s="false" lb="burypoint  -fullName  为特殊字符" rc="401" rm="" tn="burypoint  -数据埋点  3-1" dt="text" by="450" sby="415" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to contain /200/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;userName&quot;: &quot;关闭&quot;,&#xd;
+    &quot;fullName&quot;: &quot;*&quot;,&#xd;
+    &quot;school&quot;: &quot;芝士网&quot;,&#xd;
+    &quot;clazz&quot;: &quot;QA&quot;,&#xd;
+    &quot;action&quot;: &quot;sd&quot;,&#xd;
+    &quot;level&quot;: &quot;1&quot;,&#xd;
+    &quot;game&quot;: &quot;1&quot;,&#xd;
+    &quot;note&quot;: &quot;1&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</java.net.URL>
+</httpSample>
+<httpSample t="36" it="0" lt="36" ts="1515986837690" s="false" lb="burypoint  -fullName  为数学字符" rc="401" rm="" tn="burypoint  -数据埋点  3-1" dt="text" by="450" sby="415" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;userName&quot;: &quot;关闭&quot;,&#xd;
+    &quot;fullName&quot;: &quot;+&quot;,&#xd;
+    &quot;school&quot;: &quot;芝士网&quot;,&#xd;
+    &quot;clazz&quot;: &quot;QA&quot;,&#xd;
+    &quot;action&quot;: &quot;sd&quot;,&#xd;
+    &quot;level&quot;: &quot;1&quot;,&#xd;
+    &quot;game&quot;: &quot;1&quot;,&#xd;
+    &quot;note&quot;: &quot;1&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</java.net.URL>
+</httpSample>
+<httpSample t="40" it="0" lt="40" ts="1515986837726" s="false" lb="burypoint  -fullName  为数字" rc="401" rm="" tn="burypoint  -数据埋点  3-1" dt="text" by="450" sby="415" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;userName&quot;: &quot;关闭&quot;,&#xd;
+    &quot;fullName&quot;: &quot;1&quot;,&#xd;
+    &quot;school&quot;: &quot;芝士网&quot;,&#xd;
+    &quot;clazz&quot;: &quot;QA&quot;,&#xd;
+    &quot;action&quot;: &quot;sd&quot;,&#xd;
+    &quot;level&quot;: &quot;1&quot;,&#xd;
+    &quot;game&quot;: &quot;1&quot;,&#xd;
+    &quot;note&quot;: &quot;1&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</java.net.URL>
+</httpSample>
+<httpSample t="41" it="0" lt="41" ts="1515986837767" s="false" lb="burypoint  -fullName  为空格" rc="401" rm="" tn="burypoint  -数据埋点  3-1" dt="text" by="450" sby="418" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;userName&quot;: &quot;关闭&quot;,&#xd;
+    &quot;fullName&quot;: &quot;dfv&quot;,&#xd;
+    &quot;school&quot;: &quot;芝士网&quot;,&#xd;
+    &quot;clazz&quot;: &quot;QA&quot;,&#xd;
+    &quot;action&quot;: &quot;zdv&quot;,&#xd;
+    &quot;level&quot;: &quot;1&quot;,&#xd;
+    &quot;game&quot;: &quot;1&quot;,&#xd;
+    &quot;note&quot;: &quot;1&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</java.net.URL>
+</httpSample>
+<httpSample t="40" it="0" lt="40" ts="1515986837808" s="false" lb="burypoint  -action  为空" rc="401" rm="" tn="burypoint  -数据埋点  3-1" dt="text" by="450" sby="414" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /action:may not be empty/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;userName&quot;: &quot;关闭&quot;,&#xd;
+    &quot;fullName&quot;: &quot;测试&quot;,&#xd;
+    &quot;school&quot;: &quot;芝士网&quot;,&#xd;
+    &quot;clazz&quot;: &quot;QA&quot;,&#xd;
+    &quot;action&quot;: &quot;&quot;,&#xd;
+    &quot;level&quot;: &quot;1&quot;,&#xd;
+    &quot;game&quot;: &quot;1&quot;,&#xd;
+    &quot;note&quot;: &quot;1&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</java.net.URL>
+</httpSample>
+<httpSample t="35" it="0" lt="35" ts="1515986837849" s="false" lb="burypoint  -action  为空格" rc="401" rm="" tn="burypoint  -数据埋点  3-1" dt="text" by="450" sby="416" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /action:may not be empty/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;userName&quot;: &quot;关闭&quot;,&#xd;
+    &quot;fullName&quot;: &quot;测试&quot;,&#xd;
+    &quot;school&quot;: &quot;芝士网&quot;,&#xd;
+    &quot;clazz&quot;: &quot;QA&quot;,&#xd;
+    &quot;action&quot;: &quot;  &quot;,&#xd;
+    &quot;level&quot;: &quot;1&quot;,&#xd;
+    &quot;game&quot;: &quot;1&quot;,&#xd;
+    &quot;note&quot;: &quot;1&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</java.net.URL>
+</httpSample>
+<httpSample t="39" it="0" lt="39" ts="1515986837885" s="false" lb="burypoint  -action  为特殊字符" rc="401" rm="" tn="burypoint  -数据埋点  3-1" dt="text" by="450" sby="415" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;userName&quot;: &quot;关闭&quot;,&#xd;
+    &quot;fullName&quot;: &quot;测试&quot;,&#xd;
+    &quot;school&quot;: &quot;芝士网&quot;,&#xd;
+    &quot;clazz&quot;: &quot;QA&quot;,&#xd;
+    &quot;action&quot;: &quot;*&quot;,&#xd;
+    &quot;level&quot;: &quot;1&quot;,&#xd;
+    &quot;game&quot;: &quot;1&quot;,&#xd;
+    &quot;note&quot;: &quot;1&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</java.net.URL>
+</httpSample>
+<httpSample t="34" it="0" lt="34" ts="1515986837925" s="false" lb="burypoint  -action  为数学字符" rc="401" rm="" tn="burypoint  -数据埋点  3-1" dt="text" by="450" sby="415" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;userName&quot;: &quot;关闭&quot;,&#xd;
+    &quot;fullName&quot;: &quot;测试&quot;,&#xd;
+    &quot;school&quot;: &quot;芝士网&quot;,&#xd;
+    &quot;clazz&quot;: &quot;QA&quot;,&#xd;
+    &quot;action&quot;: &quot;+&quot;,&#xd;
+    &quot;level&quot;: &quot;1&quot;,&#xd;
+    &quot;game&quot;: &quot;1&quot;,&#xd;
+    &quot;note&quot;: &quot;1&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</java.net.URL>
+</httpSample>
+<httpSample t="38" it="0" lt="38" ts="1515986837960" s="false" lb="burypoint  -action  为中文" rc="401" rm="" tn="burypoint  -数据埋点  3-1" dt="text" by="450" sby="416" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;userName&quot;: &quot;关闭&quot;,&#xd;
+    &quot;fullName&quot;: &quot;测试&quot;,&#xd;
+    &quot;school&quot;: &quot;芝士网&quot;,&#xd;
+    &quot;clazz&quot;: &quot;QA&quot;,&#xd;
+    &quot;action&quot;: &quot;法人&quot;,&#xd;
+    &quot;level&quot;: &quot;1&quot;,&#xd;
+    &quot;game&quot;: &quot;1&quot;,&#xd;
+    &quot;note&quot;: &quot;1&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</java.net.URL>
+</httpSample>
+<httpSample t="34" it="0" lt="34" ts="1515986837999" s="false" lb="burypoint  -school为空" rc="401" rm="" tn="burypoint  -数据埋点  3-1" dt="text" by="450" sby="413" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /may not be empty/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;userName&quot;: &quot;关闭&quot;,&#xd;
+    &quot;fullName&quot;: &quot;多个&quot;,&#xd;
+    &quot;school&quot;: &quot;&quot;,&#xd;
+    &quot;clazz&quot;: &quot;QA&quot;,&#xd;
+    &quot;action&quot;: &quot;法人&quot;,&#xd;
+    &quot;level&quot;: &quot;1&quot;,&#xd;
+    &quot;game&quot;: &quot;1&quot;,&#xd;
+    &quot;note&quot;: &quot;1&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</java.net.URL>
+</httpSample>
+<httpSample t="39" it="0" lt="39" ts="1515986838034" s="false" lb="burypoint  -school为空格" rc="401" rm="" tn="burypoint  -数据埋点  3-1" dt="text" by="450" sby="414" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /school:may not be empty/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;userName&quot;: &quot;关闭&quot;,&#xd;
+    &quot;fullName&quot;: &quot;多个&quot;,&#xd;
+    &quot;school&quot;: &quot; &quot;,&#xd;
+    &quot;clazz&quot;: &quot;QA&quot;,&#xd;
+    &quot;action&quot;: &quot;法人&quot;,&#xd;
+    &quot;level&quot;: &quot;1&quot;,&#xd;
+    &quot;game&quot;: &quot;1&quot;,&#xd;
+    &quot;note&quot;: &quot;1&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</java.net.URL>
+</httpSample>
+<httpSample t="34" it="0" lt="34" ts="1515986838074" s="false" lb="burypoint  -school为特殊字符" rc="401" rm="" tn="burypoint  -数据埋点  3-1" dt="text" by="450" sby="414" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;userName&quot;: &quot;关闭&quot;,&#xd;
+    &quot;fullName&quot;: &quot;多个&quot;,&#xd;
+    &quot;school&quot;: &quot;#&quot;,&#xd;
+    &quot;clazz&quot;: &quot;QA&quot;,&#xd;
+    &quot;action&quot;: &quot;法人&quot;,&#xd;
+    &quot;level&quot;: &quot;1&quot;,&#xd;
+    &quot;game&quot;: &quot;1&quot;,&#xd;
+    &quot;note&quot;: &quot;1&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</java.net.URL>
+</httpSample>
+<httpSample t="39" it="0" lt="39" ts="1515986838109" s="false" lb="burypoint  -school为数学字符" rc="401" rm="" tn="burypoint  -数据埋点  3-1" dt="text" by="450" sby="414" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;userName&quot;: &quot;关闭&quot;,&#xd;
+    &quot;fullName&quot;: &quot;多个&quot;,&#xd;
+    &quot;school&quot;: &quot;=&quot;,&#xd;
+    &quot;clazz&quot;: &quot;QA&quot;,&#xd;
+    &quot;action&quot;: &quot;法人&quot;,&#xd;
+    &quot;level&quot;: &quot;1&quot;,&#xd;
+    &quot;game&quot;: &quot;1&quot;,&#xd;
+    &quot;note&quot;: &quot;1&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</java.net.URL>
+</httpSample>
+<httpSample t="35" it="0" lt="35" ts="1515986838149" s="false" lb="burypoint  -school为数字" rc="401" rm="" tn="burypoint  -数据埋点  3-1" dt="text" by="450" sby="414" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;userName&quot;: &quot;关闭&quot;,&#xd;
+    &quot;fullName&quot;: &quot;多个&quot;,&#xd;
+    &quot;school&quot;: &quot;2&quot;,&#xd;
+    &quot;clazz&quot;: &quot;QA&quot;,&#xd;
+    &quot;action&quot;: &quot;法人&quot;,&#xd;
+    &quot;level&quot;: &quot;1&quot;,&#xd;
+    &quot;game&quot;: &quot;1&quot;,&#xd;
+    &quot;note&quot;: &quot;1&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</java.net.URL>
+</httpSample>
+<httpSample t="42" it="0" lt="42" ts="1515986838184" s="false" lb="burypoint  -clazz为空" rc="401" rm="" tn="burypoint  -数据埋点  3-1" dt="text" by="450" sby="413" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /clazz:may not be empty/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;userName&quot;: &quot;关闭&quot;,&#xd;
+    &quot;fullName&quot;: &quot;多个&quot;,&#xd;
+    &quot;school&quot;: &quot;大概&quot;,&#xd;
+    &quot;clazz&quot;: &quot;&quot;,&#xd;
+    &quot;action&quot;: &quot;法人&quot;,&#xd;
+    &quot;level&quot;: &quot;1&quot;,&#xd;
+    &quot;game&quot;: &quot;1&quot;,&#xd;
+    &quot;note&quot;: &quot;1&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</java.net.URL>
+</httpSample>
+<httpSample t="35" it="0" lt="35" ts="1515986838226" s="false" lb="burypoint  -clazz为空格 " rc="401" rm="" tn="burypoint  -数据埋点  3-1" dt="text" by="450" sby="415" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /clazz:may not be empty/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;userName&quot;: &quot;关闭&quot;,&#xd;
+    &quot;fullName&quot;: &quot;多个&quot;,&#xd;
+    &quot;school&quot;: &quot;大概&quot;,&#xd;
+    &quot;clazz&quot;: &quot;  &quot;,&#xd;
+    &quot;action&quot;: &quot;法人&quot;,&#xd;
+    &quot;level&quot;: &quot;1&quot;,&#xd;
+    &quot;game&quot;: &quot;1&quot;,&#xd;
+    &quot;note&quot;: &quot;1&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</java.net.URL>
+</httpSample>
+<httpSample t="39" it="0" lt="39" ts="1515986838261" s="false" lb="burypoint  -clazz为特殊字符" rc="401" rm="" tn="burypoint  -数据埋点  3-1" dt="text" by="450" sby="414" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to contain /200/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;userName&quot;: &quot;关闭&quot;,&#xd;
+    &quot;fullName&quot;: &quot;多个&quot;,&#xd;
+    &quot;school&quot;: &quot;大概&quot;,&#xd;
+    &quot;clazz&quot;: &quot;#&quot;,&#xd;
+    &quot;action&quot;: &quot;法人&quot;,&#xd;
+    &quot;level&quot;: &quot;1&quot;,&#xd;
+    &quot;game&quot;: &quot;1&quot;,&#xd;
+    &quot;note&quot;: &quot;1&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</java.net.URL>
+</httpSample>
+<httpSample t="35" it="0" lt="35" ts="1515986838300" s="false" lb="burypoint  -clazz为数学字符" rc="401" rm="" tn="burypoint  -数据埋点  3-1" dt="text" by="450" sby="414" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;userName&quot;: &quot;关闭&quot;,&#xd;
+    &quot;fullName&quot;: &quot;多个&quot;,&#xd;
+    &quot;school&quot;: &quot;大概&quot;,&#xd;
+    &quot;clazz&quot;: &quot;+&quot;,&#xd;
+    &quot;action&quot;: &quot;法人&quot;,&#xd;
+    &quot;level&quot;: &quot;1&quot;,&#xd;
+    &quot;game&quot;: &quot;1&quot;,&#xd;
+    &quot;note&quot;: &quot;1&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/burypoint</java.net.URL>
+</httpSample>
+<httpSample t="1" it="0" lt="0" ts="1515986838339" s="false" lb="getToken" rc="Non HTTP response code: java.net.UnknownHostException" rm="Non HTTP response message: staging.zihshinet.com" tn="gameLevelHistory/query -查询关卡历史记录 4-1" dt="text" by="3114" sby="0" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1515986838340" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="gameLevelHistory/query -查询关卡历史记录 4-1" dt="text" by="1155" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">java.net.UnknownHostException: staging.zihshinet.com&#xd;
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)&#xd;
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)&#xd;
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)&#xd;
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)&#xd;
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:263)&#xd;
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:162)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.hc.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:318)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.MeasuringConnectionManager$MeasuredConnection.open(MeasuringConnectionManager.java:114)&#xd;
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:610)&#xd;
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:445)&#xd;
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)&#xd;
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:654)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:413)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:74)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1189)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1178)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:491)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:425)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:254)&#xd;
+	at java.lang.Thread.run(Thread.java:748)&#xd;
+</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;XXB00001&quot;,&#xd;
+	&quot;password&quot;: &quot;asdf1234&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zihshinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="202" it="0" lt="202" ts="1515986838341" s="false" lb="gameLevelHistory/query  -查询关卡历史记录" rc="401" rm="" tn="gameLevelHistory/query -查询关卡历史记录 4-1" dt="text" by="450" sby="251" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to contain /200/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelHistory/query?levelNum=1</java.net.URL>
+</httpSample>
+<httpSample t="37" it="0" lt="37" ts="1515986838544" s="false" lb="gameLevelHistory/query  -levelNum为空" rc="401" rm="" tn="gameLevelHistory/query -查询关卡历史记录 4-1" dt="text" by="450" sby="250" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /关卡编号不能为空/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelHistory/query?levelNum=</java.net.URL>
+</httpSample>
+<httpSample t="41" it="0" lt="41" ts="1515986838582" s="false" lb="gameLevelHistory/query  -不传参" rc="401" rm="" tn="gameLevelHistory/query -查询关卡历史记录 4-1" dt="text" by="450" sby="240" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Required Long parameter &apos;levelNum&apos; is not present/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelHistory/query</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1515986838624" s="true" lb="gameLevelHistory/query  -levelNum为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 90: https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelHistory/query?levelNum=  " tn="gameLevelHistory/query -查询关卡历史记录 4-1" dt="text" by="1095" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelHistory/query?levelNum=  </java.net.URL>
+</httpSample>
+<httpSample t="34" it="0" lt="34" ts="1515986838625" s="false" lb="gameLevelHistory/query  -levelNum为特殊字符" rc="401" rm="" tn="gameLevelHistory/query -查询关卡历史记录 4-1" dt="text" by="450" sby="251" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /关卡编号不能为空/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelHistory/query?levelNum=&amp;</java.net.URL>
+</httpSample>
+<httpSample t="43" it="0" lt="43" ts="1515986838660" s="false" lb="gameLevelHistory/query  -levelNum为数学字符" rc="401" rm="" tn="gameLevelHistory/query -查询关卡历史记录 4-1" dt="text" by="450" sby="251" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /关卡编号不能为空/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelHistory/query?levelNum=+</java.net.URL>
+</httpSample>
+<httpSample t="36" it="0" lt="36" ts="1515986838704" s="false" lb="gameLevelHistory/query  -levelNum为中文" rc="401" rm="" tn="gameLevelHistory/query -查询关卡历史记录 4-1" dt="text" by="450" sby="268" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelHistory/query?levelNum=你们</java.net.URL>
+</httpSample>
+<httpSample t="41" it="0" lt="41" ts="1515986838741" s="false" lb="gameLevelHistory/query  -levelNum为英文" rc="401" rm="" tn="gameLevelHistory/query -查询关卡历史记录 4-1" dt="text" by="450" sby="253" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelHistory/query?levelNum=vVB</java.net.URL>
+</httpSample>
+<httpSample t="36" it="0" lt="36" ts="1515986838783" s="false" lb="gameLevelHistory/query  -levelNum为不存在的数据" rc="401" rm="" tn="gameLevelHistory/query -查询关卡历史记录 4-1" dt="text" by="450" sby="252" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /关卡编号错误/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelHistory/query?levelNum=00</java.net.URL>
+</httpSample>
+<httpSample t="2" it="0" lt="0" ts="1515986838824" s="false" lb="getToken" rc="Non HTTP response code: java.net.UnknownHostException" rm="Non HTTP response message: staging.zihshinet.com" tn="/gameLevelRanking/query-查询关卡排行 5-1" dt="text" by="3114" sby="0" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1515986838826" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="/gameLevelRanking/query-查询关卡排行 5-1" dt="text" by="1155" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">java.net.UnknownHostException: staging.zihshinet.com&#xd;
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)&#xd;
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)&#xd;
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)&#xd;
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)&#xd;
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:263)&#xd;
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:162)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.hc.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:318)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.MeasuringConnectionManager$MeasuredConnection.open(MeasuringConnectionManager.java:114)&#xd;
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:610)&#xd;
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:445)&#xd;
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)&#xd;
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:654)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:413)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:74)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1189)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1178)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:491)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:425)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:254)&#xd;
+	at java.lang.Thread.run(Thread.java:748)&#xd;
+</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;XXB00001&quot;,&#xd;
+	&quot;password&quot;: &quot;asdf1234&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zihshinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="217" it="0" lt="217" ts="1515986838827" s="false" lb="/gameLevelRanking/query-查询关卡排行" rc="401" rm="" tn="/gameLevelRanking/query-查询关卡排行 5-1" dt="text" by="450" sby="260" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to contain /200/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelRanking/query?levelNum=1&amp;count=10</java.net.URL>
+</httpSample>
+<httpSample t="36" it="0" lt="36" ts="1515986839045" s="false" lb="gameLevelRanking/query  -levelNum为空" rc="401" rm="" tn="/gameLevelRanking/query-查询关卡排行 5-1" dt="text" by="450" sby="259" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /关卡编号不能为空/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelRanking/query?levelNum=&amp;count=10</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1515986839081" s="true" lb="gameLevelRanking/query  -levelNum为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 90: https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelRanking/query?levelNum=   &amp;count=10" tn="/gameLevelRanking/query-查询关卡排行 5-1" dt="text" by="1105" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelRanking/query?levelNum=   &amp;count=10</java.net.URL>
+</httpSample>
+<httpSample t="43" it="0" lt="43" ts="1515986839082" s="false" lb="gameLevelRanking/query  -levelNum为特殊字符" rc="401" rm="" tn="/gameLevelRanking/query-查询关卡排行 5-1" dt="text" by="450" sby="260" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /关卡编号不能为空/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelRanking/query?levelNum=&amp;&amp;count=10</java.net.URL>
+</httpSample>
+<httpSample t="37" it="0" lt="37" ts="1515986839126" s="false" lb="gameLevelRanking/query  -levelNum为数学字符" rc="401" rm="" tn="/gameLevelRanking/query-查询关卡排行 5-1" dt="text" by="450" sby="260" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /关卡编号不能为空/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelRanking/query?levelNum=+&amp;count=10</java.net.URL>
+</httpSample>
+<httpSample t="44" it="0" lt="44" ts="1515986839163" s="false" lb="gameLevelRanking/query  -levelNum为中文" rc="401" rm="" tn="/gameLevelRanking/query-查询关卡排行 5-1" dt="text" by="450" sby="277" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelRanking/query?levelNum=记录&amp;count=10</java.net.URL>
+</httpSample>
+<httpSample t="37" it="0" lt="37" ts="1515986839208" s="false" lb="gameLevelRanking/query  -levelNum为英文" rc="401" rm="" tn="/gameLevelRanking/query-查询关卡排行 5-1" dt="text" by="450" sby="261" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelRanking/query?levelNum=VB&amp;count=10</java.net.URL>
+</httpSample>
+<httpSample t="42" it="0" lt="41" ts="1515986839245" s="false" lb="gameLevelRanking/query  -count为空" rc="401" rm="" tn="/gameLevelRanking/query-查询关卡排行 5-1" dt="text" by="450" sby="258" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to contain /200/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelRanking/query?levelNum=1&amp;count=</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1515986839287" s="true" lb="gameLevelRanking/query  -count为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 98: https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelRanking/query?levelNum=1&amp;count=  " tn="/gameLevelRanking/query-查询关卡排行 5-1" dt="text" by="1103" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelRanking/query?levelNum=1&amp;count=  </java.net.URL>
+</httpSample>
+<httpSample t="35" it="0" lt="35" ts="1515986839288" s="false" lb="gameLevelRanking/query  -count为特殊字符" rc="401" rm="" tn="/gameLevelRanking/query-查询关卡排行 5-1" dt="text" by="450" sby="259" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelRanking/query?levelNum=1&amp;count=*</java.net.URL>
+</httpSample>
+<httpSample t="43" it="0" lt="43" ts="1515986839324" s="false" lb="gameLevelRanking/query  -count为数学字符" rc="401" rm="" tn="/gameLevelRanking/query-查询关卡排行 5-1" dt="text" by="450" sby="259" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelRanking/query?levelNum=1&amp;count=+</java.net.URL>
+</httpSample>
+<httpSample t="35" it="0" lt="35" ts="1515986839368" s="false" lb="gameLevelRanking/query  -count为中文" rc="401" rm="" tn="/gameLevelRanking/query-查询关卡排行 5-1" dt="text" by="450" sby="276" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelRanking/query?levelNum=1&amp;count=即可</java.net.URL>
+</httpSample>
+<httpSample t="41" it="0" lt="41" ts="1515986839404" s="false" lb="gameLevelRanking/query  -count为英文" rc="401" rm="" tn="/gameLevelRanking/query-查询关卡排行 5-1" dt="text" by="450" sby="260" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelRanking/query?levelNum=1&amp;count=hu</java.net.URL>
+</httpSample>
+<httpSample t="36" it="0" lt="36" ts="1515986839445" s="false" lb="gameLevelRanking/query  -不传参" rc="401" rm="" tn="/gameLevelRanking/query-查询关卡排行 5-1" dt="text" by="450" sby="240" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Required Long parameter &apos;levelNum&apos; is not present/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameLevelRanking/query</java.net.URL>
+</httpSample>
+<httpSample t="1" it="0" lt="0" ts="1515986839484" s="false" lb="getToken" rc="Non HTTP response code: java.net.UnknownHostException" rm="Non HTTP response message: staging.zihshinet.com" tn="gameUserLevelStatus/query -查询用户关卡信息，关卡列表-故事本 6-1" dt="text" by="3114" sby="0" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1515986839485" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="gameUserLevelStatus/query -查询用户关卡信息，关卡列表-故事本 6-1" dt="text" by="1155" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">java.net.UnknownHostException: staging.zihshinet.com&#xd;
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)&#xd;
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)&#xd;
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)&#xd;
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)&#xd;
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:263)&#xd;
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:162)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.hc.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:318)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.MeasuringConnectionManager$MeasuredConnection.open(MeasuringConnectionManager.java:114)&#xd;
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:610)&#xd;
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:445)&#xd;
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)&#xd;
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:654)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:413)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:74)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1189)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1178)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:491)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:425)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:254)&#xd;
+	at java.lang.Thread.run(Thread.java:748)&#xd;
+</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;XXB00001&quot;,&#xd;
+	&quot;password&quot;: &quot;asdf1234&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zihshinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="196" it="0" lt="196" ts="1515986839486" s="false" lb="gameUserLevelStatus/query -查询用户关卡信息，关卡列表-故事本" rc="401" rm="" tn="gameUserLevelStatus/query -查询用户关卡信息，关卡列表-故事本 6-1" dt="text" by="450" sby="243" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to contain /200/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameUserLevelStatus/query</java.net.URL>
+</httpSample>
+<httpSample t="1" it="0" lt="0" ts="1515986839686" s="false" lb="getToken" rc="Non HTTP response code: java.net.UnknownHostException" rm="Non HTTP response message: staging.zihshinet.com" tn="selectSession -查询会话记录 7-1" dt="text" by="3114" sby="0" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1515986839687" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="selectSession -查询会话记录 7-1" dt="text" by="1155" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">java.net.UnknownHostException: staging.zihshinet.com&#xd;
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)&#xd;
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)&#xd;
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)&#xd;
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)&#xd;
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:263)&#xd;
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:162)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.hc.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:318)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.MeasuringConnectionManager$MeasuredConnection.open(MeasuringConnectionManager.java:114)&#xd;
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:610)&#xd;
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:445)&#xd;
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)&#xd;
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:654)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:413)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:74)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1189)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1178)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:491)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:425)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:254)&#xd;
+	at java.lang.Thread.run(Thread.java:748)&#xd;
+</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;XXB00001&quot;,&#xd;
+	&quot;password&quot;: &quot;asdf1234&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zihshinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="190" it="0" lt="190" ts="1515986839688" s="false" lb="selectSession -查询会话记录" rc="401" rm="" tn="selectSession -查询会话记录 7-1" dt="text" by="450" sby="242" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to contain /200/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/selectSession?levelNum=1</java.net.URL>
+</httpSample>
+<httpSample t="38" it="0" lt="38" ts="1515986839879" s="false" lb="selectSession -levelNum为空" rc="401" rm="" tn="selectSession -查询会话记录 7-1" dt="text" by="450" sby="241" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /关卡编号不能为空/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/selectSession?levelNum=</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1515986839918" s="true" lb="selectSession -levelNum为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 81: https://game-staging.zhishinet.com/api/game-packet/v1/sec/selectSession?levelNum=   " tn="selectSession -查询会话记录 7-1" dt="text" by="1087" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/selectSession?levelNum=   </java.net.URL>
+</httpSample>
+<httpSample t="39" it="0" lt="39" ts="1515986839919" s="false" lb="selectSession -levelNum为特殊字符" rc="401" rm="" tn="selectSession -查询会话记录 7-1" dt="text" by="450" sby="241" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /关卡编号不能为空/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/selectSession?levelNum=#</java.net.URL>
+</httpSample>
+<httpSample t="37" it="0" lt="37" ts="1515986839958" s="false" lb="selectSession -levelNum为数学字符" rc="401" rm="" tn="selectSession -查询会话记录 7-1" dt="text" by="450" sby="242" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /关卡编号不能为空/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/selectSession?levelNum=+</java.net.URL>
+</httpSample>
+<httpSample t="35" it="0" lt="35" ts="1515986839996" s="false" lb="selectSession -levelNum为中文" rc="401" rm="" tn="selectSession -查询会话记录 7-1" dt="text" by="450" sby="268" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/selectSession?levelNum=自动化</java.net.URL>
+</httpSample>
+<httpSample t="41" it="0" lt="41" ts="1515986840031" s="false" lb="selectSession -levelNum为英文" rc="401" rm="" tn="selectSession -查询会话记录 7-1" dt="text" by="450" sby="244" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/selectSession?levelNum=dfg</java.net.URL>
+</httpSample>
+<httpSample t="1" it="0" lt="0" ts="1515986840076" s="false" lb="getToken" rc="Non HTTP response code: java.net.UnknownHostException" rm="Non HTTP response message: staging.zihshinet.com" tn="gameUserCardStatus/query -查询集卡册状态 8-1" dt="text" by="3114" sby="0" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1515986840077" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="gameUserCardStatus/query -查询集卡册状态 8-1" dt="text" by="1155" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">java.net.UnknownHostException: staging.zihshinet.com&#xd;
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)&#xd;
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)&#xd;
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)&#xd;
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)&#xd;
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:263)&#xd;
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:162)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.hc.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:318)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.MeasuringConnectionManager$MeasuredConnection.open(MeasuringConnectionManager.java:114)&#xd;
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:610)&#xd;
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:445)&#xd;
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)&#xd;
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:654)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:413)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:74)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1189)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1178)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:491)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:425)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:254)&#xd;
+	at java.lang.Thread.run(Thread.java:748)&#xd;
+</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;XXB00001&quot;,&#xd;
+	&quot;password&quot;: &quot;asdf1234&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zihshinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="194" it="0" lt="194" ts="1515986840077" s="false" lb="gameUserCardStatus/query -查询集卡册状态" rc="401" rm="" tn="gameUserCardStatus/query -查询集卡册状态 8-1" dt="text" by="450" sby="242" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to contain /200/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/gameUserCardStatus/query</java.net.URL>
+</httpSample>
+<httpSample t="1" it="0" lt="0" ts="1515986840274" s="false" lb="getToken" rc="Non HTTP response code: java.net.UnknownHostException" rm="Non HTTP response message: staging.zihshinet.com" tn="hasAuthority-查询用户是否拥有权限 9-1" dt="text" by="3114" sby="0" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1515986840275" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="hasAuthority-查询用户是否拥有权限 9-1" dt="text" by="1155" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">java.net.UnknownHostException: staging.zihshinet.com&#xd;
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)&#xd;
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)&#xd;
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)&#xd;
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)&#xd;
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:263)&#xd;
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:162)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.hc.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:318)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.MeasuringConnectionManager$MeasuredConnection.open(MeasuringConnectionManager.java:114)&#xd;
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:610)&#xd;
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:445)&#xd;
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)&#xd;
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:654)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:413)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:74)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1189)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1178)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:491)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:425)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:254)&#xd;
+	at java.lang.Thread.run(Thread.java:748)&#xd;
+</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;XXB00001&quot;,&#xd;
+	&quot;password&quot;: &quot;asdf1234&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zihshinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="202" it="0" lt="202" ts="1515986840276" s="false" lb="hasAuthority-查询用户是否拥有权限" rc="401" rm="" tn="hasAuthority-查询用户是否拥有权限 9-1" dt="text" by="450" sby="230" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to contain /200/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/hasAuthority</java.net.URL>
+</httpSample>
+<httpSample t="1" it="0" lt="0" ts="1515986840481" s="false" lb="getToken" rc="Non HTTP response code: java.net.UnknownHostException" rm="Non HTTP response message: staging.zihshinet.com" tn="onlyLearner-查询用户是否只有学生角色 10-1" dt="text" by="3114" sby="0" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1515986840482" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="onlyLearner-查询用户是否只有学生角色 10-1" dt="text" by="1155" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">java.net.UnknownHostException: staging.zihshinet.com&#xd;
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)&#xd;
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)&#xd;
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)&#xd;
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)&#xd;
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:263)&#xd;
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:162)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.hc.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:318)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.MeasuringConnectionManager$MeasuredConnection.open(MeasuringConnectionManager.java:114)&#xd;
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:610)&#xd;
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:445)&#xd;
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)&#xd;
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:654)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:413)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:74)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1189)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1178)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:491)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:425)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:254)&#xd;
+	at java.lang.Thread.run(Thread.java:748)&#xd;
+</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;XXB00001&quot;,&#xd;
+	&quot;password&quot;: &quot;asdf1234&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zihshinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="197" it="0" lt="197" ts="1515986840483" s="false" lb="onlyLearner-查询用户是否只有学生角色" rc="401" rm="" tn="onlyLearner-查询用户是否只有学生角色 10-1" dt="text" by="450" sby="229" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to contain /200/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/onlyLearner</java.net.URL>
+</httpSample>
+<httpSample t="1" it="0" lt="0" ts="1515986840683" s="false" lb="getToken" rc="Non HTTP response code: java.net.UnknownHostException" rm="Non HTTP response message: staging.zihshinet.com" tn="getContent-指定关卡指定游戏的内容使用记录 11-1" dt="text" by="3114" sby="0" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1515986840684" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getContent-指定关卡指定游戏的内容使用记录 11-1" dt="text" by="1155" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">java.net.UnknownHostException: staging.zihshinet.com&#xd;
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)&#xd;
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)&#xd;
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)&#xd;
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)&#xd;
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:263)&#xd;
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:162)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.hc.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:318)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.MeasuringConnectionManager$MeasuredConnection.open(MeasuringConnectionManager.java:114)&#xd;
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:610)&#xd;
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:445)&#xd;
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)&#xd;
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:654)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:413)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:74)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1189)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1178)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:491)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:425)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:254)&#xd;
+	at java.lang.Thread.run(Thread.java:748)&#xd;
+</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;XXB00001&quot;,&#xd;
+	&quot;password&quot;: &quot;asdf1234&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zihshinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="203" it="0" lt="203" ts="1515986840685" s="false" lb="getContent-指定关卡指定游戏的内容使用记录" rc="401" rm="" tn="getContent-指定关卡指定游戏的内容使用记录 11-1" dt="text" by="450" sby="249" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to contain /200/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getContent?levelNum=1&amp;gameNum=1</java.net.URL>
+</httpSample>
+<httpSample t="39" it="0" lt="39" ts="1515986840889" s="false" lb="getContent-指定关卡指定游戏的内容使用记录-levelNum为空" rc="401" rm="" tn="getContent-指定关卡指定游戏的内容使用记录 11-1" dt="text" by="450" sby="248" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /levelNum不能为空/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getContent?levelNum=&amp;gameNum=1</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1515986840928" s="true" lb="getContent-指定关卡指定游戏的内容使用记录-levelNum为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 78: https://game-staging.zhishinet.com/api/game-packet/v1/sec/getContent?levelNum=    &amp;gameNum=1" tn="getContent-指定关卡指定游戏的内容使用记录 11-1" dt="text" by="1095" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getContent?levelNum=    &amp;gameNum=1</java.net.URL>
+</httpSample>
+<httpSample t="39" it="0" lt="39" ts="1515986840929" s="false" lb="getContent-指定关卡指定游戏的内容使用记录-levelNum为特殊字符" rc="401" rm="" tn="getContent-指定关卡指定游戏的内容使用记录 11-1" dt="text" by="450" sby="249" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getContent?levelNum=@&amp;gameNum=1</java.net.URL>
+</httpSample>
+<httpSample t="35" it="0" lt="35" ts="1515986840968" s="false" lb="getContent-指定关卡指定游戏的内容使用记录-levelNum为数学字符" rc="401" rm="" tn="getContent-指定关卡指定游戏的内容使用记录 11-1" dt="text" by="450" sby="249" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /levelNum不能为空/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getContent?levelNum=+&amp;gameNum=1</java.net.URL>
+</httpSample>
+<httpSample t="39" it="0" lt="39" ts="1515986841004" s="false" lb="getContent-指定关卡指定游戏的内容使用记录-levelNum为中文" rc="401" rm="" tn="getContent-指定关卡指定游戏的内容使用记录 11-1" dt="text" by="450" sby="266" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getContent?levelNum=哪个&amp;gameNum=1</java.net.URL>
+</httpSample>
+<httpSample t="39" it="0" lt="39" ts="1515986841043" s="false" lb="getContent-指定关卡指定游戏的内容使用记录-levelNum为英文" rc="401" rm="" tn="getContent-指定关卡指定游戏的内容使用记录 11-1" dt="text" by="450" sby="250" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getContent?levelNum=fg&amp;gameNum=1</java.net.URL>
+</httpSample>
+<httpSample t="37" it="0" lt="37" ts="1515986841083" s="false" lb="getContent-指定关卡指定游戏的内容使用记录-gameNum为空" rc="401" rm="" tn="getContent-指定关卡指定游戏的内容使用记录 11-1" dt="text" by="450" sby="248" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /gameNum不能为空/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getContent?levelNum=1&amp;gameNum=</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1515986841121" s="true" lb="getContent-指定关卡指定游戏的内容使用记录-gameNum为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 88: https://game-staging.zhishinet.com/api/game-packet/v1/sec/getContent?levelNum=1&amp;gameNum=   " tn="getContent-指定关卡指定游戏的内容使用记录 11-1" dt="text" by="1094" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getContent?levelNum=1&amp;gameNum=   </java.net.URL>
+</httpSample>
+<httpSample t="34" it="0" lt="34" ts="1515986841121" s="false" lb="getContent-指定关卡指定游戏的内容使用记录-gameNum为特殊字符" rc="401" rm="" tn="getContent-指定关卡指定游戏的内容使用记录 11-1" dt="text" by="450" sby="249" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getContent?levelNum=1&amp;gameNum=@</java.net.URL>
+</httpSample>
+<httpSample t="39" it="0" lt="39" ts="1515986841156" s="false" lb="getContent-指定关卡指定游戏的内容使用记录-gameNum为数学字符" rc="401" rm="" tn="getContent-指定关卡指定游戏的内容使用记录 11-1" dt="text" by="450" sby="249" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /gameNum不能为空/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getContent?levelNum=1&amp;gameNum=+</java.net.URL>
+</httpSample>
+<httpSample t="34" it="0" lt="34" ts="1515986841195" s="false" lb="getContent-指定关卡指定游戏的内容使用记录-gameNum为中文" rc="401" rm="" tn="getContent-指定关卡指定游戏的内容使用记录 11-1" dt="text" by="450" sby="266" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getContent?levelNum=1&amp;gameNum=火狐</java.net.URL>
+</httpSample>
+<httpSample t="38" it="0" lt="37" ts="1515986841230" s="false" lb="getContent-指定关卡指定游戏的内容使用记录-gameNum为英文" rc="401" rm="" tn="getContent-指定关卡指定游戏的内容使用记录 11-1" dt="text" by="450" sby="251" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/getContent?levelNum=1&amp;gameNum=vbn</java.net.URL>
+</httpSample>
+<httpSample t="1" it="0" lt="0" ts="1515986841272" s="false" lb="getToken" rc="Non HTTP response code: java.net.UnknownHostException" rm="Non HTTP response message: staging.zihshinet.com" tn="randomGame  -随机单个游戏内容 12-1" dt="text" by="3114" sby="0" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1515986841273" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="randomGame  -随机单个游戏内容 12-1" dt="text" by="1155" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">java.net.UnknownHostException: staging.zihshinet.com&#xd;
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)&#xd;
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)&#xd;
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)&#xd;
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)&#xd;
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:263)&#xd;
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:162)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.hc.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:318)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.MeasuringConnectionManager$MeasuredConnection.open(MeasuringConnectionManager.java:114)&#xd;
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:610)&#xd;
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:445)&#xd;
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)&#xd;
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:654)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:413)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:74)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1189)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1178)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:491)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:425)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:254)&#xd;
+	at java.lang.Thread.run(Thread.java:748)&#xd;
+</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;XXB00001&quot;,&#xd;
+	&quot;password&quot;: &quot;asdf1234&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zihshinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="194" it="0" lt="194" ts="1515986841274" s="false" lb="randomGame  -随机单个游戏内容" rc="401" rm="" tn="randomGame  -随机单个游戏内容 12-1" dt="text" by="450" sby="262" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to contain /200/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=2&amp;contentNum=1&amp;levelNum=1</java.net.URL>
+</httpSample>
+<httpSample t="41" it="0" lt="41" ts="1515986841468" s="false" lb="randomGame  -随机单个游戏内容-gameNum为空" rc="401" rm="" tn="randomGame  -随机单个游戏内容 12-1" dt="text" by="450" sby="261" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /游戏编号不能为空/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=&amp;contentNum=1&amp;levelNum=1</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1515986841509" s="true" lb="randomGame  -随机单个游戏内容-gameNum为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 77: https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=    &amp;contentNum=1&amp;levelNum=1" tn="randomGame  -随机单个游戏内容 12-1" dt="text" by="1108" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=    &amp;contentNum=1&amp;levelNum=1</java.net.URL>
+</httpSample>
+<httpSample t="35" it="0" lt="35" ts="1515986841510" s="false" lb="randomGame  -随机单个游戏内容-gameNum为特殊字符" rc="401" rm="" tn="randomGame  -随机单个游戏内容 12-1" dt="text" by="450" sby="262" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=*&amp;contentNum=1&amp;levelNum=1</java.net.URL>
+</httpSample>
+<httpSample t="41" it="0" lt="41" ts="1515986841545" s="false" lb="randomGame  -随机单个游戏内容-gameNum为数学字符" rc="401" rm="" tn="randomGame  -随机单个游戏内容 12-1" dt="text" by="450" sby="262" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /游戏编号不能为空/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=+&amp;contentNum=1&amp;levelNum=1</java.net.URL>
+</httpSample>
+<httpSample t="36" it="0" lt="36" ts="1515986841586" s="false" lb="randomGame  -随机单个游戏内容-gameNum为中文" rc="401" rm="" tn="randomGame  -随机单个游戏内容 12-1" dt="text" by="450" sby="279" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=测试&amp;contentNum=1&amp;levelNum=1</java.net.URL>
+</httpSample>
+<httpSample t="41" it="0" lt="41" ts="1515986841623" s="false" lb="randomGame  -随机单个游戏内容-gameNum为英文" rc="401" rm="" tn="randomGame  -随机单个游戏内容 12-1" dt="text" by="450" sby="265" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=gfhb&amp;contentNum=1&amp;levelNum=1</java.net.URL>
+</httpSample>
+<httpSample t="35" it="0" lt="35" ts="1515986841665" s="false" lb="randomGame  -随机单个游戏内容-contentNum为空" rc="401" rm="" tn="randomGame  -随机单个游戏内容 12-1" dt="text" by="450" sby="261" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /游戏内容编号不能为空/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=2&amp;contentNum=&amp;levelNum=1</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1515986841701" s="true" lb="randomGame  -随机单个游戏内容-contentNum为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 90: https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=2&amp;contentNum=   &amp;levelNum=1" tn="randomGame  -随机单个游戏内容 12-1" dt="text" by="1107" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=2&amp;contentNum=   &amp;levelNum=1</java.net.URL>
+</httpSample>
+<httpSample t="39" it="0" lt="39" ts="1515986841701" s="false" lb="randomGame  -随机单个游戏内容-contentNum为特殊字符" rc="401" rm="" tn="randomGame  -随机单个游戏内容 12-1" dt="text" by="450" sby="262" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /游戏内容编号不能为空/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=2&amp;contentNum=&amp;&amp;levelNum=1</java.net.URL>
+</httpSample>
+<httpSample t="40" it="0" lt="40" ts="1515986841741" s="false" lb="randomGame  -随机单个游戏内容-contentNum为数学字符" rc="401" rm="" tn="randomGame  -随机单个游戏内容 12-1" dt="text" by="450" sby="262" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=2&amp;contentNum==&amp;levelNum=1</java.net.URL>
+</httpSample>
+<httpSample t="43" it="0" lt="43" ts="1515986841781" s="false" lb="randomGame  -随机单个游戏内容-contentNum为中文" rc="401" rm="" tn="randomGame  -随机单个游戏内容 12-1" dt="text" by="450" sby="270" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=2&amp;contentNum=测&amp;levelNum=1</java.net.URL>
+</httpSample>
+<httpSample t="35" it="0" lt="35" ts="1515986841824" s="false" lb="randomGame  -随机单个游戏内容-contentNum为英文" rc="401" rm="" tn="randomGame  -随机单个游戏内容 12-1" dt="text" by="450" sby="263" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=2&amp;contentNum=cb&amp;levelNum=1</java.net.URL>
+</httpSample>
+<httpSample t="41" it="0" lt="41" ts="1515986841860" s="false" lb="randomGame  -随机单个游戏内容-levelNum为英文" rc="401" rm="" tn="randomGame  -随机单个游戏内容 12-1" dt="text" by="450" sby="264" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=2&amp;contentNum=1&amp;levelNum=hhg</java.net.URL>
+</httpSample>
+<httpSample t="37" it="0" lt="37" ts="1515986841901" s="false" lb="randomGame  -随机单个游戏内容-levelNum为中文" rc="401" rm="" tn="randomGame  -随机单个游戏内容 12-1" dt="text" by="450" sby="279" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=2&amp;contentNum=1&amp;levelNum=接口</java.net.URL>
+</httpSample>
+<httpSample t="41" it="0" lt="41" ts="1515986841938" s="false" lb="randomGame  -随机单个游戏内容-levelNum为特殊字符" rc="401" rm="" tn="randomGame  -随机单个游戏内容 12-1" dt="text" by="450" sby="262" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=2&amp;contentNum=1&amp;levelNum=*</java.net.URL>
+</httpSample>
+<httpSample t="34" it="0" lt="34" ts="1515986841980" s="false" lb="randomGame  -随机单个游戏内容-levelNum为数学字符" rc="401" rm="" tn="randomGame  -随机单个游戏内容 12-1" dt="text" by="450" sby="262" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /关卡编号不能为空/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=2&amp;contentNum=1&amp;levelNum=+</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1515986842015" s="true" lb="randomGame  -随机单个游戏内容-levelNum为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 101: https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=2&amp;contentNum=1&amp;levelNum=   " tn="randomGame  -随机单个游戏内容 12-1" dt="text" by="1108" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=2&amp;contentNum=1&amp;levelNum=   </java.net.URL>
+</httpSample>
+<httpSample t="40" it="0" lt="40" ts="1515986842016" s="false" lb="randomGame  -随机单个游戏内容-levelNum为空" rc="401" rm="" tn="randomGame  -随机单个游戏内容 12-1" dt="text" by="450" sby="261" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /关卡编号不能为空/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/randomGame?gameNum=2&amp;contentNum=1&amp;levelNum=</java.net.URL>
+</httpSample>
+<httpSample t="1" it="0" lt="0" ts="1515986842059" s="false" lb="getToken" rc="Non HTTP response code: java.net.UnknownHostException" rm="Non HTTP response message: staging.zihshinet.com" tn="submitSession -保存会话记录（存Mongo） 13-1" dt="text" by="3114" sby="0" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1515986842060" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="submitSession -保存会话记录（存Mongo） 13-1" dt="text" by="1155" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">java.net.UnknownHostException: staging.zihshinet.com&#xd;
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)&#xd;
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)&#xd;
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)&#xd;
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)&#xd;
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:263)&#xd;
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:162)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.hc.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:318)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.MeasuringConnectionManager$MeasuredConnection.open(MeasuringConnectionManager.java:114)&#xd;
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:610)&#xd;
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:445)&#xd;
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)&#xd;
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:654)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:413)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:74)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1189)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1178)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:491)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:425)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:254)&#xd;
+	at java.lang.Thread.run(Thread.java:748)&#xd;
+</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;XXB00001&quot;,&#xd;
+	&quot;password&quot;: &quot;asdf1234&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zihshinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="196" it="0" lt="196" ts="1515986842060" s="false" lb="submitSession -保存会话记录（存Mongo）" rc="401" rm="" tn="submitSession -保存会话记录（存Mongo） 13-1" dt="text" by="450" sby="368" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to contain /200/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+  &quot;userId&quot;: 246331,&#xd;
+  &quot;levelNum&quot;: 1,&#xd;
+  &quot;levelStatus&quot;: 4,&#xd;
+  &quot;levelValue&quot;: &quot;已学习，未开始再次学习&quot;,&#xd;
+  &quot;content&quot;: []&#xd;
+}&#xd;
+</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/submitSession</java.net.URL>
+</httpSample>
+<httpSample t="43" it="0" lt="43" ts="1515986842257" s="false" lb="submitSession -相同参数，保存会话记录（存Mongo）" rc="401" rm="" tn="submitSession -保存会话记录（存Mongo） 13-1" dt="text" by="450" sby="368" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to contain /200/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+  &quot;userId&quot;: 246331,&#xd;
+  &quot;levelNum&quot;: 1,&#xd;
+  &quot;levelStatus&quot;: 4,&#xd;
+  &quot;levelValue&quot;: &quot;已学习，未开始再次学习&quot;,&#xd;
+  &quot;content&quot;: []&#xd;
+}&#xd;
+</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/submitSession</java.net.URL>
+</httpSample>
+<httpSample t="35" it="0" lt="35" ts="1515986842300" s="false" lb="submitSession -保存会话记录（存Mongo）-userId为空" rc="401" rm="" tn="submitSession -保存会话记录（存Mongo） 13-1" dt="text" by="450" sby="364" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /保存会话JSON缺少必须字段或者字段信息错误/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+  &quot;userId&quot;: &quot;&quot;,&#xd;
+  &quot;levelNum&quot;: 1,&#xd;
+  &quot;levelStatus&quot;: 4,&#xd;
+  &quot;levelValue&quot;: &quot;已学习，未开始再次学习&quot;,&#xd;
+  &quot;content&quot;: []&#xd;
+}&#xd;
+</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/submitSession</java.net.URL>
+</httpSample>
+<httpSample t="42" it="0" lt="42" ts="1515986842335" s="false" lb="submitSession -保存会话记录（存Mongo）-userId为空格" rc="401" rm="" tn="submitSession -保存会话记录（存Mongo） 13-1" dt="text" by="450" sby="366" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /保存会话JSON缺少必须字段或者字段信息错误/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+  &quot;userId&quot;: &quot;  &quot;,&#xd;
+  &quot;levelNum&quot;: 1,&#xd;
+  &quot;levelStatus&quot;: 4,&#xd;
+  &quot;levelValue&quot;: &quot;已学习，未开始再次学习&quot;,&#xd;
+  &quot;content&quot;: []&#xd;
+}&#xd;
+</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/submitSession</java.net.URL>
+</httpSample>
+<httpSample t="35" it="0" lt="35" ts="1515986842378" s="false" lb="submitSession -保存会话记录（存Mongo）-userId为特殊字符" rc="401" rm="" tn="submitSession -保存会话记录（存Mongo） 13-1" dt="text" by="450" sby="365" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /保存会话JSON缺少必须字段或者字段信息错误/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+  &quot;userId&quot;: &quot;&amp;&quot;,&#xd;
+  &quot;levelNum&quot;: 1,&#xd;
+  &quot;levelStatus&quot;: 4,&#xd;
+  &quot;levelValue&quot;: &quot;已学习，未开始再次学习&quot;,&#xd;
+  &quot;content&quot;: []&#xd;
+}&#xd;
+</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/submitSession</java.net.URL>
+</httpSample>
+<httpSample t="38" it="0" lt="38" ts="1515986842414" s="false" lb="submitSession -保存会话记录（存Mongo）-userId为数学字符" rc="401" rm="" tn="submitSession -保存会话记录（存Mongo） 13-1" dt="text" by="450" sby="365" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /保存会话JSON缺少必须字段或者字段信息错误/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+  &quot;userId&quot;: &quot;+&quot;,&#xd;
+  &quot;levelNum&quot;: 1,&#xd;
+  &quot;levelStatus&quot;: 4,&#xd;
+  &quot;levelValue&quot;: &quot;已学习，未开始再次学习&quot;,&#xd;
+  &quot;content&quot;: []&#xd;
+}&#xd;
+</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/submitSession</java.net.URL>
+</httpSample>
+<httpSample t="35" it="0" lt="35" ts="1515986842452" s="false" lb="submitSession -保存会话记录（存Mongo）-userId为中文" rc="401" rm="" tn="submitSession -保存会话记录（存Mongo） 13-1" dt="text" by="450" sby="367" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /保存会话JSON缺少必须字段或者字段信息错误/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+  &quot;userId&quot;: &quot;打分表&quot;,&#xd;
+  &quot;levelNum&quot;: 1,&#xd;
+  &quot;levelStatus&quot;: 4,&#xd;
+  &quot;levelValue&quot;: &quot;已学习，未开始再次学习&quot;,&#xd;
+  &quot;content&quot;: []&#xd;
+}&#xd;
+</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/submitSession</java.net.URL>
+</httpSample>
+<httpSample t="42" it="0" lt="42" ts="1515986842487" s="false" lb="submitSession -保存会话记录（存Mongo）-userId为英文" rc="401" rm="" tn="submitSession -保存会话记录（存Mongo） 13-1" dt="text" by="450" sby="366" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /保存会话JSON缺少必须字段或者字段信息错误/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+  &quot;userId&quot;: &quot;fb&quot;,&#xd;
+  &quot;levelNum&quot;: 1,&#xd;
+  &quot;levelStatus&quot;: 4,&#xd;
+  &quot;levelValue&quot;: &quot;已学习，未开始再次学习&quot;,&#xd;
+  &quot;content&quot;: []&#xd;
+}&#xd;
+</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/submitSession</java.net.URL>
+</httpSample>
+<httpSample t="36" it="0" lt="36" ts="1515986842529" s="false" lb="submitSession -保存会话记录（存Mongo）-levelNum为英文" rc="401" rm="" tn="submitSession -保存会话记录（存Mongo） 13-1" dt="text" by="450" sby="370" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /保存会话JSON缺少必须字段或者字段信息错误/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+  &quot;userId&quot;:246331,&#xd;
+  &quot;levelNum&quot;: &quot;df&quot;,&#xd;
+  &quot;levelStatus&quot;: 4,&#xd;
+  &quot;levelValue&quot;: &quot;已学习，未开始再次学习&quot;,&#xd;
+  &quot;content&quot;: []&#xd;
+}&#xd;
+</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/submitSession</java.net.URL>
+</httpSample>
+<httpSample t="42" it="0" lt="42" ts="1515986842566" s="false" lb="submitSession -保存会话记录（存Mongo）-levelNum为中文" rc="401" rm="" tn="submitSession -保存会话记录（存Mongo） 13-1" dt="text" by="450" sby="370" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /保存会话JSON缺少必须字段或者字段信息错误/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+  &quot;userId&quot;: 246331,&#xd;
+  &quot;levelNum&quot;: &quot;发&quot;,&#xd;
+  &quot;levelStatus&quot;: 4,&#xd;
+  &quot;levelValue&quot;: &quot;已学习，未开始再次学习&quot;,&#xd;
+  &quot;content&quot;: []&#xd;
+}&#xd;
+</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/submitSession</java.net.URL>
+</httpSample>
+<httpSample t="37" it="0" lt="37" ts="1515986842609" s="false" lb="submitSession -保存会话记录（存Mongo）-levelNum为特殊字符" rc="401" rm="" tn="submitSession -保存会话记录（存Mongo） 13-1" dt="text" by="450" sby="370" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /保存会话JSON缺少必须字段或者字段信息错误/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+  &quot;userId&quot;: 246331,&#xd;
+  &quot;levelNum&quot;: &quot;*&quot;,&#xd;
+  &quot;levelStatus&quot;: 4,&#xd;
+  &quot;levelValue&quot;: &quot;已学习，未开始再次学习&quot;,&#xd;
+  &quot;content&quot;: []&#xd;
+}&#xd;
+</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/submitSession</java.net.URL>
+</httpSample>
+<httpSample t="39" it="0" lt="39" ts="1515986842647" s="false" lb="submitSession -保存会话记录（存Mongo）-levelNum为数学字符" rc="401" rm="" tn="submitSession -保存会话记录（存Mongo） 13-1" dt="text" by="450" sby="370" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /保存会话JSON缺少必须字段或者字段信息错误/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+  &quot;userId&quot;: 246331,&#xd;
+  &quot;levelNum&quot;: &quot;+&quot;,&#xd;
+  &quot;levelStatus&quot;: 4,&#xd;
+  &quot;levelValue&quot;: &quot;已学习，未开始再次学习&quot;,&#xd;
+  &quot;content&quot;: []&#xd;
+}&#xd;
+</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/submitSession</java.net.URL>
+</httpSample>
+<httpSample t="35" it="0" lt="35" ts="1515986842687" s="false" lb="submitSession -保存会话记录（存Mongo）-levelNum为空格" rc="401" rm="" tn="submitSession -保存会话记录（存Mongo） 13-1" dt="text" by="450" sby="371" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /保存会话JSON缺少必须字段或者字段信息错误/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+  &quot;userId&quot;: 246331,&#xd;
+  &quot;levelNum&quot;: &quot;  &quot;,&#xd;
+  &quot;levelStatus&quot;: 4,&#xd;
+  &quot;levelValue&quot;: &quot;已学习，未开始再次学习&quot;,&#xd;
+  &quot;content&quot;: []&#xd;
+}&#xd;
+</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/submitSession</java.net.URL>
+</httpSample>
+<httpSample t="43" it="0" lt="43" ts="1515986842723" s="false" lb="submitSession -保存会话记录（存Mongo）-levelNum为空" rc="401" rm="" tn="submitSession -保存会话记录（存Mongo） 13-1" dt="text" by="450" sby="369" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /保存会话JSON缺少必须字段或者字段信息错误/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+  &quot;userId&quot;: 246331,&#xd;
+  &quot;levelNum&quot;: &quot;&quot;,&#xd;
+  &quot;levelStatus&quot;: 4,&#xd;
+  &quot;levelValue&quot;: &quot;已学习，未开始再次学习&quot;,&#xd;
+  &quot;content&quot;: []&#xd;
+}&#xd;
+</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/submitSession</java.net.URL>
+</httpSample>
+<httpSample t="1" it="0" lt="0" ts="1515986842769" s="false" lb="getToken" rc="Non HTTP response code: java.net.UnknownHostException" rm="Non HTTP response message: staging.zihshinet.com" tn="submitLevel-提交关卡 14-1" dt="text" by="3114" sby="0" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1515986842770" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="submitLevel-提交关卡 14-1" dt="text" by="1155" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">java.net.UnknownHostException: staging.zihshinet.com&#xd;
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)&#xd;
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)&#xd;
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)&#xd;
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)&#xd;
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:263)&#xd;
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:162)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.hc.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:318)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.MeasuringConnectionManager$MeasuredConnection.open(MeasuringConnectionManager.java:114)&#xd;
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:610)&#xd;
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:445)&#xd;
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)&#xd;
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:654)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:413)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:74)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1189)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1178)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:491)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:425)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:254)&#xd;
+	at java.lang.Thread.run(Thread.java:748)&#xd;
+</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;XXB00001&quot;,&#xd;
+	&quot;password&quot;: &quot;asdf1234&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zihshinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="192" it="0" lt="192" ts="1515986842771" s="false" lb="submitLevel-提交关卡" rc="401" rm="" tn="submitLevel-提交关卡 14-1" dt="text" by="450" sby="483" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to contain /200/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;levelNum&quot;: 1,&#xd;
+    &quot;score&quot;: 71,&#xd;
+    &quot;gameContentList&quot;: [&#xd;
+        {&#xd;
+            &quot;gameNum&quot;: 3,&#xd;
+            &quot;contentNum&quot;: 3&#xd;
+        },&#xd;
+        {&#xd;
+            &quot;gameNum&quot;: 4,&#xd;
+            &quot;contentNum&quot;: 3&#xd;
+        }&#xd;
+    ]&#xd;
+}</queryString>
+  <java.net.URL>https://game-staging.zhishinet.com/api/game-packet/v1/sec/submitLevel</java.net.URL>
+</httpSample>
+
+</testResults>

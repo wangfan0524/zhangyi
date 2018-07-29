@@ -1,0 +1,3394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="1151" it="0" lt="1131" ts="1507534453547" s="true" lb="getToken" rc="200" rm="" tn="微课堂（学生端） 1-1" dt="text" by="1791" sby="293" ng="1" na="1">
+  <sample t="1" it="0" lt="0" ts="1507534454697" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="微课堂（学生端） 1-1" dt="text" by="1426" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="366" it="0" lt="366" ts="1507534454706" s="true" lb="getuser-获取用户信息" rc="200" rm="" tn="微课堂（学生端） 1-1" dt="text" by="1093" sby="253" ng="1" na="1">
+  <assertionResult>
+    <name>BSF Assertion(code或数据异常)</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/app-student/v1/sec/users/student</java.net.URL>
+</httpSample>
+<httpSample t="117" it="0" lt="116" ts="1507534455389" s="true" lb="学生学科信息获取" rc="200" rm="" tn="微课堂（学生端） 1-1" dt="text" by="447" sby="260" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/subjects?roleTypeId=1</java.net.URL>
+</httpSample>
+<httpSample t="137" it="0" lt="137" ts="1507534455507" s="true" lb="学生端个性视频推荐" rc="200" rm="" tn="微课堂（学生端） 1-1" dt="text" by="2606" sby="288" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend?limit=4&amp;subjectId=1&amp;roleTypeId=1</java.net.URL>
+</httpSample>
+<httpSample t="295" it="0" lt="294" ts="1507534455646" s="true" lb="videos_获取视频列表1 学生，获取英语视频，知识点默认全部，关键词为空，收藏标识默认全部" rc="200" rm="" tn="微课堂（学生端） 1-1" dt="text" by="14479" sby="366" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;searchText=&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=25</java.net.URL>
+</httpSample>
+<httpSample t="116" it="0" lt="116" ts="1507534455942" s="true" lb="学生端收藏视频" rc="200" rm="" tn="微课堂（学生端） 1-1" dt="text" by="305" sby="298" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;videoId&quot;:5678&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection</java.net.URL>
+</httpSample>
+<httpSample t="118" it="0" lt="118" ts="1507534456060" s="true" lb="学生端取消收藏视频" rc="200" rm="" tn="微课堂（学生端） 1-1" dt="text" by="305" sby="283" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">DELETE</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection/5678</java.net.URL>
+</httpSample>
+<httpSample t="112" it="0" lt="112" ts="1507534456180" s="true" lb="学生端视频点赞" rc="200" rm="" tn="微课堂（学生端） 1-1" dt="text" by="305" sby="301" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;microVideoId&quot;:43&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment</java.net.URL>
+</httpSample>
+<httpSample t="116" it="0" lt="116" ts="1507534456295" s="true" lb="学生端取消视频点赞" rc="200" rm="" tn="微课堂（学生端） 1-1" dt="text" by="305" sby="281" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">DELETE</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment/43</java.net.URL>
+</httpSample>
+<httpSample t="114" it="0" lt="114" ts="1507534456413" s="true" lb="videos/comment_视频评价" rc="200" rm="" tn="微课堂（学生端） 1-1" dt="text" by="305" sby="332" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;microVideoId&quot;:43,&#xd;
+	&quot;commentContent&quot;:&quot;武晋升自动插入2此评论&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/comment</java.net.URL>
+</httpSample>
+<httpSample t="111" it="0" lt="111" ts="1507534456529" s="true" lb="videos/play_视频播放，播放次数累计增加1" rc="200" rm="" tn="微课堂（学生端） 1-1" dt="" by="250" sby="253" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/play/43</java.net.URL>
+</httpSample>
+<httpSample t="117" it="0" lt="116" ts="1507534456642" s="true" lb="/videos_视频详情" rc="200" rm="" tn="微课堂（学生端） 1-1" dt="text" by="1963" sby="248" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/43</java.net.URL>
+</httpSample>
+<httpSample t="145" it="0" lt="145" ts="1507534456760" s="true" lb="videos/recommend_相关视频推荐" rc="200" rm="" tn="微课堂（学生端） 1-1" dt="text" by="2979" sby="261" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend/126/1</java.net.URL>
+</httpSample>
+<httpSample t="127" it="0" lt="127" ts="1507534456906" s="true" lb="videos/publish_发布视频" rc="200" rm="" tn="微课堂（学生端） 1-1" dt="text" by="305" sby="296" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;videoId&quot;:258	&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec//videos/publish</java.net.URL>
+</httpSample>
+<httpSample t="105" it="0" lt="105" ts="1507534457034" s="true" lb="videos/publish_取消视频发布" rc="200" rm="" tn="微课堂（学生端） 1-1" dt="text" by="305" sby="279" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">DELETE</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/publish/258</java.net.URL>
+</httpSample>
+<httpSample t="292" it="0" lt="292" ts="1507534457141" s="true" lb="技能树绑定" rc="200" rm="" tn="微课堂（学生端） 1-1" dt="text" by="305" sby="407" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&quot;videoId&quot;:258,&quot;taxonomyItemIds&quot;:[11033,11034,11035,11038,11039,11114,11115,11116,11120,11121,11122,9282,9283,9277,9280,9285]}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/taxonomy/bind</java.net.URL>
+</httpSample>
+<httpSample t="405" it="0" lt="402" ts="1507534457465" s="true" lb="getToken" rc="200" rm="" tn="微课堂（教师端） 2-1" dt="text" by="1791" sby="293" ng="1" na="1">
+  <sample t="2" it="0" lt="0" ts="1507534457868" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="微课堂（教师端） 2-1" dt="text" by="1426" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="118" it="0" lt="118" ts="1507534457872" s="true" lb="getuser-获取用户信息" rc="200" rm="" tn="微课堂（教师端） 2-1" dt="text" by="1093" sby="253" ng="1" na="1">
+  <assertionResult>
+    <name>BSF Assertion(code或数据异常)</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/app-student/v1/sec/users/student</java.net.URL>
+</httpSample>
+<httpSample t="97" it="0" lt="97" ts="1507534458077" s="true" lb="管理员学科信息获取" rc="200" rm="" tn="微课堂（教师端） 2-1" dt="text" by="447" sby="260" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/subjects?roleTypeId=2</java.net.URL>
+</httpSample>
+<httpSample t="115" it="0" lt="115" ts="1507534458175" s="true" lb="管理员端个性视频推荐" rc="200" rm="" tn="微课堂（教师端） 2-1" dt="text" by="2606" sby="288" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend?limit=4&amp;subjectId=1&amp;roleTypeId=2</java.net.URL>
+</httpSample>
+<httpSample t="154" it="0" lt="154" ts="1507534458291" s="true" lb="videos_获取视频列表1 管理员，获取英语视频，知识点默认全部，关键词为‘数词’" rc="200" rm="" tn="微课堂（教师端） 2-1" dt="text" by="3734" sby="387" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=2&amp;subjectId=1&amp;taxonomyId=-1&amp;searchText=数词&amp;collectFlag=-1&amp;orderType=recent&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=25</java.net.URL>
+</httpSample>
+<httpSample t="117" it="0" lt="117" ts="1507534458447" s="true" lb="管理员端收藏视频" rc="200" rm="" tn="微课堂（教师端） 2-1" dt="text" by="305" sby="298" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;videoId&quot;:5678&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection</java.net.URL>
+</httpSample>
+<httpSample t="104" it="0" lt="103" ts="1507534458565" s="true" lb="管理员端取消收藏视频" rc="200" rm="" tn="微课堂（教师端） 2-1" dt="text" by="305" sby="283" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">DELETE</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection/5678</java.net.URL>
+</httpSample>
+<httpSample t="110" it="0" lt="109" ts="1507534458670" s="true" lb="管理员端视频点赞" rc="200" rm="" tn="微课堂（教师端） 2-1" dt="text" by="305" sby="302" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;microVideoId&quot;:127&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment</java.net.URL>
+</httpSample>
+<httpSample t="123" it="0" lt="123" ts="1507534458781" s="true" lb="管理员端取消视频点赞" rc="200" rm="" tn="微课堂（教师端） 2-1" dt="text" by="305" sby="282" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">DELETE</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment/127</java.net.URL>
+</httpSample>
+<httpSample t="108" it="0" lt="108" ts="1507534458906" s="true" lb="videos/comment_视频评价" rc="200" rm="" tn="微课堂（教师端） 2-1" dt="text" by="305" sby="332" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;microVideoId&quot;:43,&#xd;
+	&quot;commentContent&quot;:&quot;武晋升自动插入2此评论&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/comment</java.net.URL>
+</httpSample>
+<httpSample t="102" it="0" lt="102" ts="1507534459016" s="true" lb="videos/play_视频播放，播放次数累计增加1" rc="200" rm="" tn="微课堂（教师端） 2-1" dt="" by="250" sby="253" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/play/43</java.net.URL>
+</httpSample>
+<httpSample t="106" it="0" lt="106" ts="1507534459121" s="true" lb="/videos_视频详情" rc="200" rm="" tn="微课堂（教师端） 2-1" dt="text" by="1963" sby="248" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/43</java.net.URL>
+</httpSample>
+<httpSample t="114" it="0" lt="114" ts="1507534459229" s="true" lb="videos/recommend_相关视频推荐" rc="200" rm="" tn="微课堂（教师端） 2-1" dt="text" by="2979" sby="261" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend/126/1</java.net.URL>
+</httpSample>
+<httpSample t="98" it="0" lt="98" ts="1507534459344" s="true" lb="videos/publish_发布视频" rc="200" rm="" tn="微课堂（教师端） 2-1" dt="text" by="305" sby="296" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;videoId&quot;:258	&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec//videos/publish</java.net.URL>
+</httpSample>
+<httpSample t="97" it="0" lt="97" ts="1507534459443" s="true" lb="videos/publish_取消视频发布" rc="200" rm="" tn="微课堂（教师端） 2-1" dt="text" by="305" sby="279" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">DELETE</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/publish/258</java.net.URL>
+</httpSample>
+<httpSample t="342" it="0" lt="342" ts="1507534459541" s="true" lb="技能树绑定" rc="200" rm="" tn="微课堂（教师端） 2-1" dt="text" by="305" sby="407" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&quot;videoId&quot;:258,&quot;taxonomyItemIds&quot;:[11033,11034,11035,11038,11039,11114,11115,11116,11120,11121,11122,9282,9283,9277,9280,9285]}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/taxonomy/bind</java.net.URL>
+</httpSample>
+
+<httpSample t="1047" it="0" lt="1007" ts="1507534462445" s="true" lb="getToken" rc="200" rm="" tn="subjects学科信息数据接口 1-1" dt="text" by="1800" sby="293" ng="1" na="1">
+  <sample t="2" it="0" lt="0" ts="1507534463491" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="subjects学科信息数据接口 1-1" dt="text" by="1435" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="116" it="0" lt="116" ts="1507534463509" s="true" lb="subjects正确性校验roleTypeId=1(学生)" rc="200" rm="" tn="subjects学科信息数据接口 1-1" dt="text" by="447" sby="260" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/subjects?roleTypeId=1</java.net.URL>
+</httpSample>
+<httpSample t="104" it="0" lt="104" ts="1507534463629" s="true" lb="subjects正确性校验roleTypeId=2(管理员)" rc="200" rm="" tn="subjects学科信息数据接口 1-1" dt="text" by="447" sby="260" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/subjects?roleTypeId=2</java.net.URL>
+</httpSample>
+<httpSample t="104" it="0" lt="104" ts="1507534463734" s="true" lb="subjects-roleTypeId为空" rc="500" rm="" tn="subjects学科信息数据接口 1-1" dt="text" by="494" sby="259" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/subjects?roleTypeId=</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1507534463839" s="true" lb="subjects-roleTypeId为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 72: https://staging.zhishinet.com/api/microvideo/v1/sec/subjects?roleTypeId= " tn="subjects学科信息数据接口 1-1" dt="text" by="1083" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/subjects?roleTypeId= </java.net.URL>
+</httpSample>
+<httpSample t="123" it="0" lt="123" ts="1507534463841" s="true" lb="subjects-roleTypeId为不存在的值" rc="500" rm="" tn="subjects学科信息数据接口 1-1" dt="text" by="494" sby="260" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/subjects?roleTypeId=3</java.net.URL>
+</httpSample>
+<httpSample t="100" it="0" lt="100" ts="1507534463965" s="true" lb="subjects-roleTypeId为a-z的字符串" rc="400" rm="" tn="subjects学科信息数据接口 1-1" dt="text" by="676" sby="263" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/subjects?roleTypeId=test</java.net.URL>
+</httpSample>
+<httpSample t="123" it="0" lt="123" ts="1507534464066" s="true" lb="subjects-roleTypeId为中文" rc="400" rm="" tn="subjects学科信息数据接口 1-1" dt="text" by="678" sby="277" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/subjects?roleTypeId=测试</java.net.URL>
+</httpSample>
+<httpSample t="126" it="0" lt="125" ts="1507534464192" s="true" lb="subjects-roleTypeId为标点符号" rc="400" rm="" tn="subjects学科信息数据接口 1-1" dt="text" by="673" sby="260" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/subjects?roleTypeId=!</java.net.URL>
+</httpSample>
+<httpSample t="110" it="0" lt="109" ts="1507534464322" s="true" lb="subjects-roleTypeId为特殊符号" rc="500" rm="" tn="subjects学科信息数据接口 1-1" dt="text" by="494" sby="260" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/subjects?roleTypeId=&amp;</java.net.URL>
+</httpSample>
+<httpSample t="103" it="0" lt="102" ts="1507534464434" s="true" lb="subjects-roleTypeId为数学符号" rc="500" rm="" tn="subjects学科信息数据接口 1-1" dt="text" by="494" sby="260" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/subjects?roleTypeId=+</java.net.URL>
+</httpSample>
+<httpSample t="435" it="0" lt="434" ts="1507534464586" s="true" lb="getToken" rc="200" rm="" tn="admin管理端微视频列表分页查 2-1" dt="text" by="1803" sby="293" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1507534465021" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="admin管理端微视频列表分页查 2-1" dt="text" by="1438" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="297" it="0" lt="297" ts="1507534465024" s="true" lb="admin组合正确性校验subjectId=-1(全部)" rc="200" rm="" tn="admin管理端微视频列表分页查 2-1" dt="text" by="10560" sby="336" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=-1&amp;isPublish=-1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=&amp;pageSize=</java.net.URL>
+</httpSample>
+<httpSample t="2398" it="0" lt="2397" ts="1507534465323" s="true" lb="admin组合正确性校验subjectId=1(英语)" rc="200" rm="" tn="admin管理端微视频列表分页查 2-1" dt="text" by="17870" sby="334" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=&amp;pageSize=</java.net.URL>
+</httpSample>
+<httpSample t="235" it="0" lt="235" ts="1507534467725" s="true" lb="admin组合正确性校验subjectId=2(数学)" rc="200" rm="" tn="admin管理端微视频列表分页查 2-1" dt="text" by="1384" sby="334" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=2&amp;isPublish=0&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=&amp;pageSize=</java.net.URL>
+</httpSample>
+<httpSample t="146" it="0" lt="145" ts="1507534467963" s="true" lb="admin-subjectId为空" rc="200" rm="" tn="admin管理端微视频列表分页查 2-1" dt="text" by="3724" sby="336" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1507534468111" s="true" lb="admin-subjectId为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 75: https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId= &amp;isPublish=1&amp;searchText=&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25&amp;orderType=recent" tn="admin管理端微视频列表分页查 2-1" dt="text" by="1160" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId= &amp;isPublish=1&amp;searchText=&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25&amp;orderType=recent</java.net.URL>
+</httpSample>
+<httpSample t="109" it="0" lt="109" ts="1507534468118" s="true" lb="admin-subjectId为a-z的字符串" rc="400" rm="" tn="admin管理端微视频列表分页查 2-1" dt="text" by="680" sby="340" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=aaaa&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25</java.net.URL>
+</httpSample>
+<httpSample t="113" it="0" lt="112" ts="1507534468229" s="true" lb="admin-subjectId为中文" rc="400" rm="" tn="admin管理端微视频列表分页查 2-1" dt="text" by="682" sby="354" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=测试&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25</java.net.URL>
+</httpSample>
+<httpSample t="104" it="0" lt="104" ts="1507534468343" s="true" lb="admin-subjectId为标点符号" rc="400" rm="" tn="admin管理端微视频列表分页查 2-1" dt="text" by="677" sby="337" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=,&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25</java.net.URL>
+</httpSample>
+<httpSample t="145" it="0" lt="145" ts="1507534468449" s="true" lb="admin-subjectId为特殊符号" rc="200" rm="" tn="admin管理端微视频列表分页查 2-1" dt="text" by="3724" sby="337" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=&amp;&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25</java.net.URL>
+</httpSample>
+<httpSample t="108" it="0" lt="108" ts="1507534468596" s="true" lb="admin-subjectId为数学符号" rc="500" rm="" tn="admin管理端微视频列表分页查 2-1" dt="text" by="519" sby="337" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=+&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25</java.net.URL>
+</httpSample>
+<httpSample t="2513" it="0" lt="2512" ts="1507534468706" s="true" lb="admin-isPublish为空" rc="200" rm="" tn="admin管理端微视频列表分页查 2-1" dt="text" by="18015" sby="336" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1507534471226" s="true" lb="admin-isPublish为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 87: https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish= &amp;searchText=&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25&amp;orderType=recent" tn="admin管理端微视频列表分页查 2-1" dt="text" by="1160" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish= &amp;searchText=&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25&amp;orderType=recent</java.net.URL>
+</httpSample>
+<httpSample t="229" it="0" lt="229" ts="1507534471230" s="true" lb="admin-isPublish为a-z的字符串" rc="400" rm="" tn="admin管理端微视频列表分页查 2-1" dt="text" by="679" sby="339" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=isp&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25</java.net.URL>
+</httpSample>
+<httpSample t="101" it="0" lt="101" ts="1507534471462" s="true" lb="admin-isPublish为中文" rc="400" rm="" tn="admin管理端微视频列表分页查 2-1" dt="text" by="682" sby="354" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=中古&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25</java.net.URL>
+</httpSample>
+<httpSample t="123" it="0" lt="123" ts="1507534471565" s="true" lb="admin-isPublish为标点符号" rc="400" rm="" tn="admin管理端微视频列表分页查 2-1" dt="text" by="679" sby="345" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=。&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25</java.net.URL>
+</httpSample>
+<httpSample t="110" it="0" lt="110" ts="1507534471690" s="true" lb="admin-isPublish为特殊符号" rc="400" rm="" tn="admin管理端微视频列表分页查 2-1" dt="text" by="677" sby="337" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=@&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25</java.net.URL>
+</httpSample>
+<httpSample t="105" it="0" lt="105" ts="1507534471803" s="true" lb="admin-isPublish为数学符号" rc="400" rm="" tn="admin管理端微视频列表分页查 2-1" dt="text" by="677" sby="337" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=-&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25</java.net.URL>
+</httpSample>
+<httpSample t="2474" it="0" lt="2473" ts="1507534471911" s="true" lb="admin-orderType为空" rc="200" rm="" tn="admin管理端微视频列表分页查 2-1" dt="text" by="17878" sby="331" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1507534474387" s="true" lb="admin-orderType为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 144: https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25&amp;orderType= " tn="admin管理端微视频列表分页查 2-1" dt="text" by="1156" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25&amp;orderType= </java.net.URL>
+</httpSample>
+<httpSample t="217" it="0" lt="217" ts="1507534474391" s="true" lb="admin-orderType为a-z的字符串" rc="500" rm="" tn="admin管理端微视频列表分页查 2-1" dt="text" by="542" sby="335" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=rece&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25</java.net.URL>
+</httpSample>
+<httpSample t="99" it="0" lt="98" ts="1507534474610" s="true" lb="admin-orderType为中文" rc="500" rm="" tn="admin管理端微视频列表分页查 2-1" dt="text" by="542" sby="349" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=排序&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25</java.net.URL>
+</httpSample>
+<httpSample t="106" it="0" lt="106" ts="1507534474710" s="true" lb="admin-orderType为标点符号" rc="500" rm="" tn="admin管理端微视频列表分页查 2-1" dt="text" by="542" sby="340" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=！&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25</java.net.URL>
+</httpSample>
+<httpSample t="112" it="0" lt="111" ts="1507534474818" s="true" lb="admin-orderType为特殊符号" rc="500" rm="" tn="admin管理端微视频列表分页查 2-1" dt="text" by="542" sby="332" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=*&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25</java.net.URL>
+</httpSample>
+<httpSample t="112" it="0" lt="112" ts="1507534474931" s="true" lb="admin-orderType为数学符号" rc="500" rm="" tn="admin管理端微视频列表分页查 2-1" dt="text" by="542" sby="332" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=/&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=25</java.net.URL>
+</httpSample>
+<httpSample t="2406" it="0" lt="2405" ts="1507534475045" s="true" lb="admin-pageNo为空" rc="200" rm="" tn="admin管理端微视频列表分页查 2-1" dt="text" by="17878" sby="336" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=&amp;pageSize=25</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1507534477452" s="true" lb="admin-pageNo为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 120: https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;upOrDown=up&amp;pageNo= &amp;pageSize=25&amp;orderType=recent" tn="admin管理端微视频列表分页查 2-1" dt="text" by="1161" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;upOrDown=up&amp;pageNo= &amp;pageSize=25&amp;orderType=recent</java.net.URL>
+</httpSample>
+<httpSample t="212" it="0" lt="212" ts="1507534477455" s="true" lb="admin-pageNo为a-z的字符串" rc="400" rm="" tn="admin管理端微视频列表分页查 2-1" dt="text" by="680" sby="340" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=page&amp;pageSize=25</java.net.URL>
+</httpSample>
+<httpSample t="104" it="0" lt="104" ts="1507534477668" s="true" lb="admin-pageNo为中文" rc="400" rm="" tn="admin管理端微视频列表分页查 2-1" dt="text" by="682" sby="354" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=页码&amp;pageSize=25</java.net.URL>
+</httpSample>
+<httpSample t="97" it="0" lt="97" ts="1507534477774" s="true" lb="admin-pageNo为标点符号" rc="400" rm="" tn="admin管理端微视频列表分页查 2-1" dt="text" by="679" sby="345" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=，&amp;pageSize=25</java.net.URL>
+</httpSample>
+<httpSample t="101" it="0" lt="101" ts="1507534477873" s="true" lb="admin-pageNo为特殊符号" rc="400" rm="" tn="admin管理端微视频列表分页查 2-1" dt="text" by="677" sby="337" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=@&amp;pageSize=25</java.net.URL>
+</httpSample>
+<httpSample t="98" it="0" lt="98" ts="1507534477976" s="true" lb="admin-pageNo为数学符号" rc="500" rm="" tn="admin管理端微视频列表分页查 2-1" dt="text" by="519" sby="337" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=+&amp;pageSize=25</java.net.URL>
+</httpSample>
+<httpSample t="2446" it="0" lt="2445" ts="1507534478076" s="true" lb="admin-pageSize为空" rc="200" rm="" tn="admin管理端微视频列表分页查 2-1" dt="text" by="17878" sby="335" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1507534480524" s="true" lb="admin-pageSize为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 131: https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;upOrDown=up&amp;pageNo=1&amp;pageSize= &amp;orderType=recent" tn="admin管理端微视频列表分页查 2-1" dt="text" by="1160" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;upOrDown=up&amp;pageNo=1&amp;pageSize= &amp;orderType=recent</java.net.URL>
+</httpSample>
+<httpSample t="229" it="0" lt="229" ts="1507534480528" s="true" lb="admin-pageSize为a-z的字符串" rc="400" rm="" tn="admin管理端微视频列表分页查 2-1" dt="text" by="680" sby="339" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=size</java.net.URL>
+</httpSample>
+<httpSample t="110" it="0" lt="110" ts="1507534480759" s="true" lb="admin-pageSize为中文" rc="400" rm="" tn="admin管理端微视频列表分页查 2-1" dt="text" by="682" sby="353" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=测试</java.net.URL>
+</httpSample>
+<httpSample t="102" it="0" lt="101" ts="1507534480871" s="true" lb="admin-pageSize为标点符号" rc="400" rm="" tn="admin管理端微视频列表分页查 2-1" dt="text" by="679" sby="344" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=？</java.net.URL>
+</httpSample>
+<httpSample t="98" it="0" lt="97" ts="1507534480975" s="true" lb="admin-pageSize为特殊符号" rc="400" rm="" tn="admin管理端微视频列表分页查 2-1" dt="text" by="677" sby="336" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=*</java.net.URL>
+</httpSample>
+<httpSample t="105" it="0" lt="105" ts="1507534481075" s="true" lb="admin-pageSize为数学符号" rc="400" rm="" tn="admin管理端微视频列表分页查 2-1" dt="text" by="677" sby="336" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/admin?subjectId=1&amp;isPublish=1&amp;searchText=&amp;orderType=recent&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=-</java.net.URL>
+</httpSample>
+<httpSample t="409" it="0" lt="407" ts="1507534481194" s="true" lb="getToken" rc="200" rm="" tn="publish微视频发布 3-1" dt="text" by="1790" sby="293" ng="1" na="1">
+  <sample t="1" it="0" lt="0" ts="1507534481602" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="publish微视频发布 3-1" dt="text" by="1425" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="108" it="0" lt="107" ts="1507534481604" s="true" lb="publish正确性校验" rc="200" rm="" tn="publish微视频发布 3-1" dt="text" by="305" sby="299" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;videoId&quot;: 258&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec//videos/publish</java.net.URL>
+</httpSample>
+<httpSample t="105" it="0" lt="105" ts="1507534481714" s="true" lb="publish-videoId为空" rc="500" rm="" tn="publish微视频发布 3-1" dt="text" by="542" sby="298" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;videoId&quot;: &quot;&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec//videos/publish</java.net.URL>
+</httpSample>
+<httpSample t="99" it="0" lt="99" ts="1507534481821" s="true" lb="publish-videoId为空格" rc="500" rm="" tn="publish微视频发布 3-1" dt="text" by="542" sby="299" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /java.lang.String cannot be cast to java.lang.Integer/</failureMessage>
+  </assertionResult>
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;videoId&quot;: &quot; &quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec//videos/publish</java.net.URL>
+</httpSample>
+<httpSample t="96" it="0" lt="96" ts="1507534481923" s="true" lb="publish-videoId为不存在的值" rc="500" rm="" tn="publish微视频发布 3-1" dt="text" by="542" sby="310" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;videoId&quot;: 10000000000000&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec//videos/publish</java.net.URL>
+</httpSample>
+<httpSample t="95" it="0" lt="95" ts="1507534482021" s="true" lb="publish-videoId为a-z的字符串" rc="400" rm="" tn="publish微视频发布 3-1" dt="text" by="685" sby="301" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;videoId&quot;: &quot;vide&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec//videos/publish</java.net.URL>
+</httpSample>
+<httpSample t="108" it="0" lt="107" ts="1507534482117" s="true" lb="publish-videoId为中文" rc="500" rm="" tn="publish微视频发布 3-1" dt="text" by="542" sby="300" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;videoId&quot;: &quot;视频&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec//videos/publish</java.net.URL>
+</httpSample>
+<httpSample t="97" it="0" lt="97" ts="1507534482226" s="true" lb="publish-videoId为标点符号" rc="500" rm="" tn="publish微视频发布 3-1" dt="text" by="542" sby="299" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;videoId&quot;: &quot;,&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec//videos/publish</java.net.URL>
+</httpSample>
+<httpSample t="88" it="0" lt="88" ts="1507534482324" s="true" lb="publish-videoId为特殊符号" rc="500" rm="" tn="publish微视频发布 3-1" dt="text" by="542" sby="299" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;videoId&quot;: &quot;*&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec//videos/publish</java.net.URL>
+</httpSample>
+<httpSample t="104" it="0" lt="104" ts="1507534482414" s="true" lb="publish-videoId为数学符号" rc="500" rm="" tn="publish微视频发布 3-1" dt="text" by="542" sby="299" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;videoId&quot;: &quot;+&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec//videos/publish</java.net.URL>
+</httpSample>
+<httpSample t="418" it="0" lt="417" ts="1507534482531" s="true" lb="getToken" rc="200" rm="" tn="publish取消微视频发布 4-1" dt="text" by="1797" sby="293" ng="1" na="1">
+  <sample t="1" it="0" lt="0" ts="1507534482948" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="publish取消微视频发布 4-1" dt="text" by="1432" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="100" it="0" lt="100" ts="1507534482950" s="true" lb="publish正确性校验" rc="200" rm="" tn="publish取消微视频发布 4-1" dt="text" by="305" sby="279" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">DELETE</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/publish/258</java.net.URL>
+</httpSample>
+<httpSample t="101" it="0" lt="101" ts="1507534483051" s="true" lb="publish-videoId为空格" rc="500" rm="" tn="publish取消微视频发布 4-1" dt="text" by="525" sby="279" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">DELETE</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/publish/%20</java.net.URL>
+</httpSample>
+<httpSample t="93" it="0" lt="93" ts="1507534483154" s="true" lb="publish-videoId为a-z的字符串" rc="400" rm="" tn="publish取消微视频发布 4-1" dt="text" by="687" sby="280" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">DELETE</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/publish/test</java.net.URL>
+</httpSample>
+<httpSample t="101" it="0" lt="100" ts="1507534483249" s="true" lb="publish-videoId为中文" rc="400" rm="" tn="publish取消微视频发布 4-1" dt="text" by="703" sby="294" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">DELETE</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/publish/测试</java.net.URL>
+</httpSample>
+<httpSample t="97" it="0" lt="97" ts="1507534483351" s="true" lb="publish-videoId 为标点符号" rc="400" rm="" tn="publish取消微视频发布 4-1" dt="text" by="691" sby="285" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">DELETE</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/publish/。</java.net.URL>
+</httpSample>
+<httpSample t="105" it="0" lt="105" ts="1507534483449" s="true" lb="publish-videoId为特殊符号" rc="400" rm="" tn="publish取消微视频发布 4-1" dt="text" by="681" sby="277" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">DELETE</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/publish/@</java.net.URL>
+</httpSample>
+<httpSample t="95" it="0" lt="95" ts="1507534483556" s="true" lb="publish-videoId为数学符号" rc="400" rm="" tn="publish取消微视频发布 4-1" dt="text" by="681" sby="277" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">DELETE</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/publish/+</java.net.URL>
+</httpSample>
+<httpSample t="400" it="0" lt="398" ts="1507534483666" s="true" lb="getToken" rc="200" rm="" tn="tree技能树展示 5-1" dt="text" by="1790" sby="293" ng="1" na="1">
+  <sample t="1" it="0" lt="0" ts="1507534484065" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="tree技能树展示 5-1" dt="text" by="1425" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="147" it="0" lt="146" ts="1507534484067" s="true" lb="tree正确性校验" rc="200" rm="" tn="tree技能树展示 5-1" dt="text" by="709" sby="290" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/258/taxonomy/tree?taxonomyItemId=-1&amp;level=-1</java.net.URL>
+</httpSample>
+<httpSample t="96" it="0" lt="96" ts="1507534484215" s="true" lb="tree-taxonomyItemId为空" rc="500" rm="" tn="tree技能树展示 5-1" dt="text" by="541" sby="288" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/258/taxonomy/tree?taxonomyItemId=&amp;level=-1</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1507534484313" s="true" lb="tree-taxonomyItemId为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 92: https://staging.zhishinet.com/api/microvideo/v1/sec/videos/258/taxonomy/tree?taxonomyItemId= &amp;level=-1" tn="tree技能树展示 5-1" dt="text" by="1112" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/258/taxonomy/tree?taxonomyItemId= &amp;level=-1</java.net.URL>
+</httpSample>
+<httpSample t="96" it="0" lt="95" ts="1507534484316" s="true" lb="tree-taxonomyItemId为a-z的字符串" rc="400" rm="" tn="tree技能树展示 5-1" dt="text" by="692" sby="292" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/258/taxonomy/tree?taxonomyItemId=taxo&amp;level=-1</java.net.URL>
+</httpSample>
+<httpSample t="96" it="0" lt="96" ts="1507534484413" s="true" lb="tree-taxonomyItemId为中文" rc="400" rm="" tn="tree技能树展示 5-1" dt="text" by="703" sby="333" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/258/taxonomy/tree?taxonomyItemId=技能头结点&amp;level=-1</java.net.URL>
+</httpSample>
+<httpSample t="100" it="0" lt="100" ts="1507534484510" s="true" lb="tree-taxonomyItemId为标点符号" rc="400" rm="" tn="tree技能树展示 5-1" dt="text" by="689" sby="289" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/258/taxonomy/tree?taxonomyItemId=,&amp;level=-1</java.net.URL>
+</httpSample>
+<httpSample t="94" it="0" lt="94" ts="1507534484611" s="true" lb="tree-roleTypeId为特殊符号" rc="400" rm="" tn="tree技能树展示 5-1" dt="text" by="689" sby="289" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/258/taxonomy/tree?taxonomyItemId=*&amp;level=-1</java.net.URL>
+</httpSample>
+<httpSample t="94" it="0" lt="94" ts="1507534484707" s="true" lb="tree-taxonomyItemId为数学符号" rc="400" rm="" tn="tree技能树展示 5-1" dt="text" by="689" sby="289" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/258/taxonomy/tree?taxonomyItemId=-&amp;level=-1</java.net.URL>
+</httpSample>
+<httpSample t="99" it="0" lt="99" ts="1507534484803" s="true" lb="tree-level为空" rc="500" rm="" tn="tree技能树展示 5-1" dt="text" by="541" sby="288" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/258/taxonomy/tree?taxonomyItemId=-1&amp;level=</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1507534484903" s="true" lb="tree-level为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 101: https://staging.zhishinet.com/api/microvideo/v1/sec/videos/258/taxonomy/tree?taxonomyItemId=-1&amp;level= " tn="tree技能树展示 5-1" dt="text" by="1113" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/258/taxonomy/tree?taxonomyItemId=-1&amp;level= </java.net.URL>
+</httpSample>
+<httpSample t="99" it="0" lt="99" ts="1507534484904" s="true" lb="tree-level为不存在的值" rc="500" rm="" tn="tree技能树展示 5-1" dt="text" by="510" sby="290" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/258/taxonomy/tree?taxonomyItemId=-1&amp;level=-2</java.net.URL>
+</httpSample>
+<httpSample t="113" it="0" lt="113" ts="1507534485004" s="true" lb="tree-level为a-z的字符串" rc="400" rm="" tn="tree技能树展示 5-1" dt="text" by="692" sby="292" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/258/taxonomy/tree?taxonomyItemId=-1&amp;level=test</java.net.URL>
+</httpSample>
+<httpSample t="92" it="0" lt="92" ts="1507534485119" s="true" lb="tree-level为中文" rc="400" rm="" tn="tree技能树展示 5-1" dt="text" by="694" sby="306" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/258/taxonomy/tree?taxonomyItemId=-1&amp;level=测试</java.net.URL>
+</httpSample>
+<httpSample t="96" it="0" lt="96" ts="1507534485213" s="true" lb="tree-level为标点符号" rc="400" rm="" tn="tree技能树展示 5-1" dt="text" by="691" sby="297" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/258/taxonomy/tree?taxonomyItemId=-1&amp;level=！</java.net.URL>
+</httpSample>
+<httpSample t="487" it="0" lt="487" ts="1507534485310" s="true" lb="tree-level为特殊符号" rc="400" rm="" tn="tree技能树展示 5-1" dt="text" by="689" sby="289" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/258/taxonomy/tree?taxonomyItemId=-1&amp;level=@</java.net.URL>
+</httpSample>
+<httpSample t="200" it="0" lt="200" ts="1507534485799" s="true" lb="tree-level为数学符号" rc="400" rm="" tn="tree技能树展示 5-1" dt="text" by="689" sby="289" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/258/taxonomy/tree?taxonomyItemId=-1&amp;level=/</java.net.URL>
+</httpSample>
+<httpSample t="497" it="0" lt="495" ts="1507534486013" s="true" lb="getToken" rc="200" rm="" tn="bind技能树绑定 6-1" dt="text" by="1790" sby="293" ng="1" na="1">
+  <sample t="1" it="0" lt="0" ts="1507534486509" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="bind技能树绑定 6-1" dt="text" by="1425" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="308" it="0" lt="308" ts="1507534486511" s="true" lb="bind正确性校验" rc="200" rm="" tn="bind技能树绑定 6-1" dt="text" by="305" sby="589" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;videoId&quot;: 258,&#xd;
+    &quot;taxonomyItemIds&quot;: [&#xd;
+        11033,&#xd;
+        11034,&#xd;
+        11035,&#xd;
+        11038,&#xd;
+        11039,&#xd;
+        11114,&#xd;
+        11115,&#xd;
+        11116,&#xd;
+        11120,&#xd;
+        11121,&#xd;
+        11122,&#xd;
+        9282,&#xd;
+        9283,&#xd;
+        9277,&#xd;
+        9280,&#xd;
+        9285&#xd;
+    ]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/taxonomy/bind</java.net.URL>
+</httpSample>
+<httpSample t="112" it="0" lt="112" ts="1507534486821" s="true" lb="bind-videoId为空" rc="500" rm="" tn="bind技能树绑定 6-1" dt="text" by="521" sby="588" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;videoId&quot;: &quot;&quot;,&#xd;
+    &quot;taxonomyItemIds&quot;: [&#xd;
+        11033,&#xd;
+        11034,&#xd;
+        11035,&#xd;
+        11038,&#xd;
+        11039,&#xd;
+        11114,&#xd;
+        11115,&#xd;
+        11116,&#xd;
+        11120,&#xd;
+        11121,&#xd;
+        11122,&#xd;
+        9282,&#xd;
+        9283,&#xd;
+        9277,&#xd;
+        9280,&#xd;
+        9285&#xd;
+    ]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/taxonomy/bind</java.net.URL>
+</httpSample>
+<httpSample t="103" it="0" lt="103" ts="1507534486935" s="true" lb="bind-videoId为空格" rc="500" rm="" tn="bind技能树绑定 6-1" dt="text" by="521" sby="589" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;videoId&quot;: &quot; &quot;,&#xd;
+    &quot;taxonomyItemIds&quot;: [&#xd;
+        11033,&#xd;
+        11034,&#xd;
+        11035,&#xd;
+        11038,&#xd;
+        11039,&#xd;
+        11114,&#xd;
+        11115,&#xd;
+        11116,&#xd;
+        11120,&#xd;
+        11121,&#xd;
+        11122,&#xd;
+        9282,&#xd;
+        9283,&#xd;
+        9277,&#xd;
+        9280,&#xd;
+        9285&#xd;
+    ]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/taxonomy/bind</java.net.URL>
+</httpSample>
+<httpSample t="99" it="0" lt="99" ts="1507534487040" s="true" lb="bind-videoId为a-z的字符串" rc="400" rm="" tn="bind技能树绑定 6-1" dt="text" by="1161" sby="592" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;videoId&quot;: &quot;vide&quot;,&#xd;
+    &quot;taxonomyItemIds&quot;: [&#xd;
+        11033,&#xd;
+        11034,&#xd;
+        11035,&#xd;
+        11038,&#xd;
+        11039,&#xd;
+        11114,&#xd;
+        11115,&#xd;
+        11116,&#xd;
+        11120,&#xd;
+        11121,&#xd;
+        11122,&#xd;
+        9282,&#xd;
+        9283,&#xd;
+        9277,&#xd;
+        9280,&#xd;
+        9285&#xd;
+    ]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/taxonomy/bind</java.net.URL>
+</httpSample>
+<httpSample t="107" it="0" lt="107" ts="1507534487141" s="true" lb="bind-videoId为中文" rc="400" rm="" tn="bind技能树绑定 6-1" dt="text" by="1157" sby="590" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;videoId&quot;: &quot;视频&quot;,&#xd;
+    &quot;taxonomyItemIds&quot;: [&#xd;
+        11033,&#xd;
+        11034,&#xd;
+        11035,&#xd;
+        11038,&#xd;
+        11039,&#xd;
+        11114,&#xd;
+        11115,&#xd;
+        11116,&#xd;
+        11120,&#xd;
+        11121,&#xd;
+        11122,&#xd;
+        9282,&#xd;
+        9283,&#xd;
+        9277,&#xd;
+        9280,&#xd;
+        9285&#xd;
+    ]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/taxonomy/bind</java.net.URL>
+</httpSample>
+<httpSample t="103" it="0" lt="103" ts="1507534487249" s="true" lb="bind-videoId为标点符号" rc="400" rm="" tn="bind技能树绑定 6-1" dt="text" by="1155" sby="589" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;videoId&quot;: &quot;?&quot;,&#xd;
+    &quot;taxonomyItemIds&quot;: [&#xd;
+        11033,&#xd;
+        11034,&#xd;
+        11035,&#xd;
+        11038,&#xd;
+        11039,&#xd;
+        11114,&#xd;
+        11115,&#xd;
+        11116,&#xd;
+        11120,&#xd;
+        11121,&#xd;
+        11122,&#xd;
+        9282,&#xd;
+        9283,&#xd;
+        9277,&#xd;
+        9280,&#xd;
+        9285&#xd;
+    ]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/taxonomy/bind</java.net.URL>
+</httpSample>
+<httpSample t="97" it="0" lt="97" ts="1507534487354" s="true" lb="bind-videoId为特殊符号" rc="400" rm="" tn="bind技能树绑定 6-1" dt="text" by="1155" sby="589" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;videoId&quot;: &quot;*&quot;,&#xd;
+    &quot;taxonomyItemIds&quot;: [&#xd;
+        11033,&#xd;
+        11034,&#xd;
+        11035,&#xd;
+        11038,&#xd;
+        11039,&#xd;
+        11114,&#xd;
+        11115,&#xd;
+        11116,&#xd;
+        11120,&#xd;
+        11121,&#xd;
+        11122,&#xd;
+        9282,&#xd;
+        9283,&#xd;
+        9277,&#xd;
+        9280,&#xd;
+        9285&#xd;
+    ]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/taxonomy/bind</java.net.URL>
+</httpSample>
+<httpSample t="104" it="0" lt="104" ts="1507534487453" s="true" lb="bind-videoId为数学符号" rc="400" rm="" tn="bind技能树绑定 6-1" dt="text" by="1155" sby="589" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;videoId&quot;: &quot;-&quot;,&#xd;
+    &quot;taxonomyItemIds&quot;: [&#xd;
+        11033,&#xd;
+        11034,&#xd;
+        11035,&#xd;
+        11038,&#xd;
+        11039,&#xd;
+        11114,&#xd;
+        11115,&#xd;
+        11116,&#xd;
+        11120,&#xd;
+        11121,&#xd;
+        11122,&#xd;
+        9282,&#xd;
+        9283,&#xd;
+        9277,&#xd;
+        9280,&#xd;
+        9285&#xd;
+    ]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/taxonomy/bind</java.net.URL>
+</httpSample>
+<httpSample t="112" it="0" lt="112" ts="1507534487559" s="true" lb="bind-taxonomyItemIds为空" rc="200" rm="" tn="bind技能树绑定 6-1" dt="text" by="305" sby="348" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;videoId&quot;: 258,&#xd;
+    &quot;taxonomyItemIds&quot;: [&#xd;
+      &quot;&quot;&#xd;
+    ]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/taxonomy/bind</java.net.URL>
+</httpSample>
+<httpSample t="113" it="0" lt="113" ts="1507534487673" s="true" lb="bind-taxonomyItemIds为空格" rc="200" rm="" tn="bind技能树绑定 6-1" dt="text" by="305" sby="349" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;videoId&quot;: 258,&#xd;
+    &quot;taxonomyItemIds&quot;: [&#xd;
+      &quot; &quot;&#xd;
+    ]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/taxonomy/bind</java.net.URL>
+</httpSample>
+<httpSample t="100" it="0" lt="100" ts="1507534487787" s="true" lb="bind-taxonomyItemIds为不存在的值" rc="400" rm="" tn="bind技能树绑定 6-1" dt="text" by="1245" sby="363" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;videoId&quot;: 258,&#xd;
+    &quot;taxonomyItemIds&quot;: [&#xd;
+        100000000000000&#xd;
+    ]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/taxonomy/bind</java.net.URL>
+</httpSample>
+<httpSample t="104" it="0" lt="104" ts="1507534487888" s="true" lb="bind-taxonomyItemIds为a-z的字符串" rc="400" rm="" tn="bind技能树绑定 6-1" dt="text" by="1201" sby="351" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;videoId&quot;: 258,&#xd;
+    &quot;taxonomyItemIds&quot;: [&#xd;
+     &quot;taxo&quot;&#xd;
+    ]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/taxonomy/bind</java.net.URL>
+</httpSample>
+<httpSample t="122" it="0" lt="122" ts="1507534487995" s="true" lb="bind-taxonomyItemIds为中文" rc="400" rm="" tn="bind技能树绑定 6-1" dt="text" by="1197" sby="352" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;videoId&quot;: 258,&#xd;
+    &quot;taxonomyItemIds&quot;: [&#xd;
+        &quot;测试&quot;&#xd;
+    ]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/taxonomy/bind</java.net.URL>
+</httpSample>
+<httpSample t="204" it="0" lt="204" ts="1507534488120" s="true" lb="bind-taxonomyItemIds为标点符号" rc="400" rm="" tn="bind技能树绑定 6-1" dt="text" by="1195" sby="351" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;videoId&quot;: 258,&#xd;
+    &quot;taxonomyItemIds&quot;: [&#xd;
+        &quot;,&quot;&#xd;
+    ]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/taxonomy/bind</java.net.URL>
+</httpSample>
+<httpSample t="95" it="0" lt="95" ts="1507534488326" s="true" lb="bind-taxonomyItemIds为特殊符号" rc="400" rm="" tn="bind技能树绑定 6-1" dt="text" by="1195" sby="351" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;videoId&quot;: 258,&#xd;
+    &quot;taxonomyItemIds&quot;: [&#xd;
+        &quot;#&quot;&#xd;
+    ]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/taxonomy/bind</java.net.URL>
+</httpSample>
+<httpSample t="92" it="0" lt="92" ts="1507534488423" s="true" lb="bind-taxonomyItemIds为数学符号" rc="400" rm="" tn="bind技能树绑定 6-1" dt="text" by="1195" sby="351" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;videoId&quot;: 258,&#xd;
+    &quot;taxonomyItemIds&quot;: [&#xd;
+        &quot;+&quot;&#xd;
+    ]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/taxonomy/bind</java.net.URL>
+</httpSample>
+<httpSample t="407" it="0" lt="406" ts="1507534488532" s="true" lb="getToken" rc="200" rm="" tn="compliment微视频点赞 7-1" dt="text" by="1795" sby="293" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1507534488939" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="compliment微视频点赞 7-1" dt="text" by="1430" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="114" it="0" lt="114" ts="1507534488940" s="true" lb="compliment正确性校验" rc="200" rm="" tn="compliment微视频点赞 7-1" dt="text" by="305" sby="306" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;microVideoId&quot;: 179&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment</java.net.URL>
+</httpSample>
+<httpSample t="105" it="0" lt="105" ts="1507534489055" s="true" lb="compliment-microVideoId为空" rc="500" rm="" tn="compliment微视频点赞 7-1" dt="text" by="525" sby="305" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;microVideoId&quot;: &quot;&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment</java.net.URL>
+</httpSample>
+<httpSample t="95" it="0" lt="95" ts="1507534489161" s="true" lb="compliment-microVideoId为空格" rc="500" rm="" tn="compliment微视频点赞 7-1" dt="text" by="525" sby="306" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;microVideoId&quot;: &quot; &quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment</java.net.URL>
+</httpSample>
+<httpSample t="92" it="0" lt="92" ts="1507534489257" s="true" lb="compliment-microVideoId为a-z的字符串" rc="500" rm="" tn="compliment微视频点赞 7-1" dt="text" by="525" sby="309" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;microVideoId&quot;: &quot;micr&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment</java.net.URL>
+</httpSample>
+<httpSample t="96" it="0" lt="96" ts="1507534489350" s="true" lb="compliment-microVideoId为中文" rc="500" rm="" tn="compliment微视频点赞 7-1" dt="text" by="525" sby="307" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;microVideoId&quot;: &quot;测试&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment</java.net.URL>
+</httpSample>
+<httpSample t="98" it="0" lt="98" ts="1507534489447" s="true" lb="compliment-microVideoId为标点符号" rc="500" rm="" tn="compliment微视频点赞 7-1" dt="text" by="525" sby="306" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;microVideoId&quot;: &quot;，&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment</java.net.URL>
+</httpSample>
+<httpSample t="108" it="0" lt="108" ts="1507534489546" s="true" lb="compliment-microVideoId为特殊符号" rc="500" rm="" tn="compliment微视频点赞 7-1" dt="text" by="525" sby="306" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;microVideoId&quot;: &quot;#&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment</java.net.URL>
+</httpSample>
+<httpSample t="93" it="0" lt="93" ts="1507534489656" s="true" lb="compliment-microVideoId为数学符号" rc="500" rm="" tn="compliment微视频点赞 7-1" dt="text" by="525" sby="306" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;microVideoId&quot;: &quot;-&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment</java.net.URL>
+</httpSample>
+<httpSample t="416" it="0" lt="414" ts="1507534489766" s="true" lb="getToken" rc="200" rm="" tn="compliment取消视频点赞 8-1" dt="text" by="1798" sby="293" ng="1" na="1">
+  <sample t="1" it="0" lt="0" ts="1507534490181" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="compliment取消视频点赞 8-1" dt="text" by="1433" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="106" it="0" lt="106" ts="1507534490183" s="true" lb="compliment正确性校验" rc="200" rm="" tn="compliment取消视频点赞 8-1" dt="text" by="305" sby="282" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">DELETE</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment/179</java.net.URL>
+</httpSample>
+<httpSample t="113" it="0" lt="113" ts="1507534490291" s="true" lb="compliment-microVideoId为空格" rc="500" rm="" tn="compliment取消视频点赞 8-1" dt="text" by="515" sby="282" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">DELETE</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment/%20</java.net.URL>
+</httpSample>
+<httpSample t="96" it="0" lt="96" ts="1507534490406" s="true" lb="compliment-microVideoId为a-z的字符串" rc="400" rm="" tn="compliment取消视频点赞 8-1" dt="text" by="690" sby="283" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">DELETE</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment/test</java.net.URL>
+</httpSample>
+<httpSample t="95" it="0" lt="95" ts="1507534490503" s="true" lb="compliment-microVideoId为中文" rc="400" rm="" tn="compliment取消视频点赞 8-1" dt="text" by="706" sby="297" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">DELETE</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment/视频</java.net.URL>
+</httpSample>
+<httpSample t="93" it="0" lt="93" ts="1507534490600" s="true" lb="compliment-microVideoId为标点符号" rc="400" rm="" tn="compliment取消视频点赞 8-1" dt="text" by="684" sby="280" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">DELETE</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment/+</java.net.URL>
+</httpSample>
+<httpSample t="104" it="0" lt="104" ts="1507534490695" s="true" lb="compliment-microVideoId为特殊符号" rc="400" rm="" tn="compliment取消视频点赞 8-1" dt="text" by="684" sby="280" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">DELETE</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment/*</java.net.URL>
+</httpSample>
+<httpSample t="100" it="0" lt="100" ts="1507534490800" s="true" lb="compliment-microVideoId为数学符号" rc="400" rm="" tn="compliment取消视频点赞 8-1" dt="text" by="684" sby="280" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">DELETE</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/compliment/+</java.net.URL>
+</httpSample>
+<httpSample t="410" it="0" lt="408" ts="1507534490915" s="true" lb="getToken" rc="200" rm="" tn="collection-收藏 9-1" dt="text" by="1790" sby="293" ng="1" na="1">
+  <sample t="1" it="0" lt="0" ts="1507534491324" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="collection-收藏 9-1" dt="text" by="1425" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="104" it="0" lt="104" ts="1507534491326" s="true" lb="collection-收藏-正确性校验" rc="200" rm="" tn="collection-收藏 9-1" dt="text" by="305" sby="302" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;videoId&quot;:&quot;5678&quot;&#xd;
+&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection</java.net.URL>
+</httpSample>
+<httpSample t="107" it="0" lt="107" ts="1507534491431" s="true" lb="collection-收藏-videoId为空" rc="500" rm="" tn="collection-收藏 9-1" dt="text" by="523" sby="298" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;videoId&quot;:&quot;&quot;&#xd;
+&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection</java.net.URL>
+</httpSample>
+<httpSample t="96" it="0" lt="95" ts="1507534491539" s="true" lb="collection-收藏-videoId为空格" rc="500" rm="" tn="collection-收藏 9-1" dt="text" by="523" sby="300" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;videoId&quot;:&quot;  &quot;&#xd;
+&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection</java.net.URL>
+</httpSample>
+<httpSample t="98" it="0" lt="98" ts="1507534491636" s="true" lb="collection-收藏-videoId为中文" rc="400" rm="" tn="collection-收藏 9-1" dt="text" by="1126" sby="300" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;videoId&quot;:&quot;测试&quot;&#xd;
+&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection</java.net.URL>
+</httpSample>
+<httpSample t="99" it="0" lt="99" ts="1507534491735" s="true" lb="collection-收藏-videoId为英文" rc="400" rm="" tn="collection-收藏 9-1" dt="text" by="1130" sby="302" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;videoId&quot;:&quot;test&quot;&#xd;
+&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection</java.net.URL>
+</httpSample>
+<httpSample t="93" it="0" lt="93" ts="1507534491836" s="true" lb="collection-收藏-videoId为标点符号" rc="400" rm="" tn="collection-收藏 9-1" dt="text" by="1124" sby="299" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;videoId&quot;:&quot;？&quot;&#xd;
+&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection</java.net.URL>
+</httpSample>
+<httpSample t="94" it="0" lt="93" ts="1507534491931" s="true" lb="collection-收藏-videoId为特殊符号" rc="400" rm="" tn="collection-收藏 9-1" dt="text" by="1124" sby="299" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;videoId&quot;:&quot;*&quot;&#xd;
+&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection</java.net.URL>
+</httpSample>
+<httpSample t="92" it="0" lt="92" ts="1507534492027" s="true" lb="collection-收藏-videoId为数学符号" rc="400" rm="" tn="collection-收藏 9-1" dt="text" by="1124" sby="299" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;videoId&quot;:&quot;+&quot;&#xd;
+&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection</java.net.URL>
+</httpSample>
+<httpSample t="100" it="0" lt="100" ts="1507534492121" s="true" lb="collection-收藏-videoId为负数" rc="200" rm="" tn="collection-收藏 9-1" dt="text" by="305" sby="300" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;videoId&quot;:&quot;-1&quot;&#xd;
+&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection</java.net.URL>
+</httpSample>
+<httpSample t="400" it="0" lt="398" ts="1507534492230" s="true" lb="getToken" rc="200" rm="" tn="collection-取消收藏 10-1" dt="text" by="1794" sby="293" ng="1" na="1">
+  <sample t="1" it="0" lt="0" ts="1507534492629" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="collection-取消收藏 10-1" dt="text" by="1429" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="124" it="0" lt="124" ts="1507534492631" s="true" lb="collection-取消收藏-正确性校验" rc="200" rm="" tn="collection-取消收藏 10-1" dt="text" by="305" sby="283" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">DELETE</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection/5678</java.net.URL>
+</httpSample>
+<httpSample t="91" it="0" lt="91" ts="1507534492756" s="true" lb="collection-取消收藏-videoId为特殊符号" rc="400" rm="" tn="collection-取消收藏 10-1" dt="text" by="684" sby="280" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">DELETE</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection/&amp;</java.net.URL>
+</httpSample>
+<httpSample t="103" it="0" lt="103" ts="1507534492849" s="true" lb="collection-取消收藏-videoId为标点符号" rc="400" rm="" tn="collection-取消收藏 10-1" dt="text" by="694" sby="288" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">DELETE</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection/？</java.net.URL>
+</httpSample>
+<httpSample t="98" it="0" lt="98" ts="1507534492953" s="true" lb="collection-取消收藏-videoId为数学符号" rc="400" rm="" tn="collection-取消收藏 10-1" dt="text" by="684" sby="280" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">DELETE</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection/+</java.net.URL>
+</httpSample>
+<httpSample t="100" it="0" lt="100" ts="1507534493053" s="true" lb="collection-取消收藏-videoId为中文" rc="400" rm="" tn="collection-取消收藏 10-1" dt="text" by="706" sby="297" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">DELETE</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection/测试</java.net.URL>
+</httpSample>
+<httpSample t="100" it="0" lt="99" ts="1507534493154" s="true" lb="collection-取消收藏-videoId为英文" rc="400" rm="" tn="collection-取消收藏 10-1" dt="text" by="690" sby="283" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">DELETE</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/collection/Test</java.net.URL>
+</httpSample>
+<httpSample t="432" it="0" lt="431" ts="1507534493293" s="true" lb="getToken" rc="200" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="1804" sby="293" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1507534493725" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="videosOpting-客户端视频列表 11-1" dt="text" by="1439" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="117" it="0" lt="117" ts="1507534493726" s="true" lb="videosOpting-客户端视频列表-正确性校验" rc="200" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="1457" sby="368" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20&amp;searchText=ce</java.net.URL>
+</httpSample>
+<httpSample t="123" it="0" lt="123" ts="1507534493845" s="true" lb="客户端视频列表-roleTypeId为管理员" rc="200" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="1457" sby="368" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=2&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20&amp;searchText=ce</java.net.URL>
+</httpSample>
+<httpSample t="96" it="0" lt="96" ts="1507534493969" s="true" lb="客户端视频列表-roleTypeId为空" rc="500" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="518" sby="367" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20&amp;searchText=ce</java.net.URL>
+</httpSample>
+<httpSample t="99" it="0" lt="99" ts="1507534494066" s="true" lb="客户端视频列表-roleTypeId为不存在的值" rc="500" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="518" sby="368" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=5&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20&amp;searchText=ce</java.net.URL>
+</httpSample>
+<httpSample t="109" it="0" lt="109" ts="1507534494167" s="true" lb="客户端视频列表-roleTypeId为数学符号" rc="500" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="518" sby="368" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=+&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20&amp;searchText=ce</java.net.URL>
+</httpSample>
+<httpSample t="95" it="0" lt="95" ts="1507534494277" s="true" lb="客户端视频列表-roleTypeId为标点符号" rc="400" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="679" sby="376" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=？&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20&amp;searchText=ce</java.net.URL>
+</httpSample>
+<httpSample t="114" it="0" lt="114" ts="1507534494374" s="true" lb="客户端视频列表-roleTypeId为特殊符号" rc="500" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="518" sby="368" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=&amp;&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20&amp;searchText=ce</java.net.URL>
+</httpSample>
+<httpSample t="96" it="0" lt="96" ts="1507534494489" s="true" lb="客户端视频列表-roleTypeId为中文" rc="400" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="682" sby="386" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=测试&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20&amp;searchText=ces</java.net.URL>
+</httpSample>
+<httpSample t="111" it="0" lt="111" ts="1507534494586" s="true" lb="客户端视频列表-roleTypeId为英文" rc="400" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="680" sby="372" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=test&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20&amp;searchText=ces</java.net.URL>
+</httpSample>
+<httpSample t="106" it="0" lt="106" ts="1507534494698" s="true" lb="客户端视频列表-subjectId为数学" rc="200" rm="" tn="videosOpting-客户端视频列表 11-1" dt="" by="250" sby="370" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=2&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20&amp;searchText=cews</java.net.URL>
+</httpSample>
+<httpSample t="108" it="0" lt="108" ts="1507534494805" s="true" lb="客户端视频列表-subjectId为空" rc="500" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="523" sby="368" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20&amp;searchText=ces</java.net.URL>
+</httpSample>
+<httpSample t="93" it="0" lt="93" ts="1507534494915" s="true" lb="客户端视频列表-subjectId为中文" rc="400" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="682" sby="371" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=测试&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="98" it="0" lt="98" ts="1507534495009" s="true" lb="客户端视频列表-subjectId为英文" rc="400" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="680" sby="357" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=test&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="99" it="0" lt="99" ts="1507534495108" s="true" lb="客户端视频列表-subjectId为数学符号" rc="500" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="523" sby="354" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=+&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="107" it="0" lt="107" ts="1507534495208" s="true" lb="客户端视频列表-subjectId为标点符号" rc="400" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="679" sby="362" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=？&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="204" it="0" lt="204" ts="1507534495316" s="true" lb="客户端视频列表-subjectId为特殊符号" rc="500" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="523" sby="354" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=&amp;&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="118" it="0" lt="118" ts="1507534495521" s="true" lb="客户端视频列表-taxonomyId为特殊符号" rc="200" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="11636" sby="353" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=&amp;&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="96" it="0" lt="96" ts="1507534495640" s="true" lb="客户端视频列表-taxonomyId为标点符号" rc="400" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="679" sby="361" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=？&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="93" it="0" lt="92" ts="1507534495738" s="true" lb="客户端视频列表-taxonomyId为数学符号" rc="500" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="513" sby="353" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=+&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="97" it="0" lt="97" ts="1507534495832" s="true" lb="客户端视频列表-taxonomyId为中文" rc="400" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="682" sby="370" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=测试&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="100" it="0" lt="100" ts="1507534495930" s="true" lb="客户端视频列表-taxonomyId为英文" rc="400" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="680" sby="356" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=Test&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="114" it="0" lt="114" ts="1507534496031" s="true" lb="客户端视频列表-taxonomyId为空" rc="200" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="11629" sby="352" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="113" it="0" lt="113" ts="1507534496147" s="true" lb="客户端视频列表-collectFlag为空" rc="200" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="11636" sby="352" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="96" it="0" lt="96" ts="1507534496262" s="true" lb="客户端视频列表-collectFlag为特殊字符" rc="400" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="677" sby="353" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=*&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="112" it="0" lt="112" ts="1507534496359" s="true" lb="客户端视频列表-collectFlag为数学符号" rc="500" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="522" sby="353" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=+&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="89" it="0" lt="89" ts="1507534496473" s="true" lb="客户端视频列表-collectFlag为标点符号" rc="400" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="679" sby="361" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=？&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="92" it="0" lt="92" ts="1507534496564" s="true" lb="客户端视频列表-collectFlag为英文" rc="400" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="680" sby="356" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=test&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="96" it="0" lt="96" ts="1507534496657" s="true" lb="客户端视频列表-collectFlag为中文" rc="400" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="682" sby="370" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=测试&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="120" it="0" lt="120" ts="1507534496754" s="true" lb="客户端视频列表-orderType为中文" rc="200" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="11623" sby="369" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=测试&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="115" it="0" lt="114" ts="1507534496875" s="true" lb="客户端视频列表-orderType为英文" rc="200" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="11616" sby="355" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=test&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="118" it="0" lt="118" ts="1507534496990" s="true" lb="客户端视频列表-orderType为空" rc="200" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="11616" sby="351" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="117" it="0" lt="117" ts="1507534497109" s="true" lb="客户端视频列表-orderType为特殊字符" rc="200" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="11623" sby="352" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=&amp;&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="114" it="0" lt="114" ts="1507534497228" s="true" lb="客户端视频列表-orderType为标点符号" rc="200" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="11616" sby="360" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=？&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="254" it="0" lt="253" ts="1507534497343" s="true" lb="客户端视频列表-orderType为数学符号" rc="200" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="11623" sby="352" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=+&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="113" it="0" lt="113" ts="1507534497599" s="true" lb="客户端视频列表-upOrDown为数学符号" rc="200" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="11629" sby="351" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=+&amp;pageNo=1&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="117" it="0" lt="117" ts="1507534497713" s="true" lb="客户端视频列表-upOrDown为标点符号" rc="200" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="11629" sby="359" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=？&amp;pageNo=1&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="141" it="0" lt="141" ts="1507534497831" s="true" lb="客户端视频列表-upOrDown为特殊符号" rc="200" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="11629" sby="351" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=&amp;&amp;pageNo=1&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="122" it="0" lt="122" ts="1507534497973" s="true" lb="客户端视频列表-upOrDown为空" rc="200" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="11636" sby="350" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=&amp;pageNo=1&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="116" it="0" lt="116" ts="1507534498096" s="true" lb="客户端视频列表-upOrDown为down" rc="200" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="11629" sby="354" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=down&amp;pageNo=1&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="118" it="0" lt="118" ts="1507534498213" s="true" lb="客户端视频列表-upOrDown为中文" rc="200" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="11629" sby="368" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=测试&amp;pageNo=1&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="122" it="0" lt="122" ts="1507534498332" s="true" lb="客户端视频列表-upOrDown为英文" rc="200" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="11629" sby="358" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=testhuhj&amp;pageNo=1&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="95" it="0" lt="95" ts="1507534498455" s="true" lb="客户端视频列表-pageNo为英文" rc="400" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="680" sby="355" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=up&amp;pageNo=test&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="92" it="0" lt="92" ts="1507534498551" s="true" lb="客户端视频列表-pageNo为中文" rc="400" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="682" sby="369" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=up&amp;pageNo=测试&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="98" it="0" lt="98" ts="1507534498645" s="true" lb="客户端视频列表-pageNo为标点符号" rc="400" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="679" sby="360" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=up&amp;pageNo=？&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="94" it="0" lt="94" ts="1507534498745" s="true" lb="客户端视频列表-pageNo为数学符号" rc="500" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="522" sby="352" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=up&amp;pageNo=+&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="108" it="0" lt="108" ts="1507534498841" s="true" lb="客户端视频列表-pageNo为特殊符号" rc="400" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="677" sby="352" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=up&amp;pageNo=*&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="160" it="0" lt="160" ts="1507534498950" s="true" lb="客户端视频列表-pageSize为特殊符号" rc="200" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="14412" sby="351" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=&amp;</java.net.URL>
+</httpSample>
+<httpSample t="101" it="0" lt="101" ts="1507534499111" s="true" lb="客户端视频列表-pageSize为标点符号" rc="400" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="679" sby="359" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=？</java.net.URL>
+</httpSample>
+<httpSample t="112" it="0" lt="112" ts="1507534499214" s="true" lb="客户端视频列表-pageSize为数学符号" rc="500" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="522" sby="351" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=+</java.net.URL>
+</httpSample>
+<httpSample t="103" it="0" lt="103" ts="1507534499328" s="true" lb="客户端视频列表-pageSize为中文" rc="400" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="682" sby="368" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=测试</java.net.URL>
+</httpSample>
+<httpSample t="206" it="0" lt="206" ts="1507534499432" s="true" lb="客户端视频列表-pageSize为英文" rc="400" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="680" sby="354" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=test</java.net.URL>
+</httpSample>
+<httpSample t="99" it="0" lt="99" ts="1507534499640" s="true" lb="客户端视频列表-searchText为空" rc="400" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="680" sby="366" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=test&amp;searchText=</java.net.URL>
+</httpSample>
+<httpSample t="109" it="0" lt="109" ts="1507534499740" s="true" lb="客户端视频列表-searchText为特殊符号" rc="400" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="680" sby="367" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=test&amp;searchText=*</java.net.URL>
+</httpSample>
+<httpSample t="101" it="0" lt="101" ts="1507534499850" s="true" lb="客户端视频列表-searchText为数学符号" rc="400" rm="" tn="videosOpting-客户端视频列表 11-1" dt="text" by="680" sby="367" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videosOpting?roleTypeId=1&amp;subjectId=1&amp;taxonomyId=-1&amp;collectFlag=-1&amp;orderType=hot&amp;upOrDown=up&amp;pageNo=1&amp;pageSize=test&amp;searchText=+</java.net.URL>
+</httpSample>
+<httpSample t="455" it="0" lt="454" ts="1507534499960" s="true" lb="getToken" rc="200" rm="" tn="taxonomys-视频知识点信息 12-1" dt="text" by="1801" sby="293" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1507534500415" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="taxonomys-视频知识点信息 12-1" dt="text" by="1436" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="123" it="0" lt="123" ts="1507534500418" s="true" lb="taxonomys-视频知识点信息-正确性校验" rc="200" rm="" tn="taxonomys-视频知识点信息 12-1" dt="text" by="1285" sby="273" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/taxonomys?roleTypeId=1&amp;subjectId=1</java.net.URL>
+</httpSample>
+<httpSample t="104" it="0" lt="104" ts="1507534500542" s="true" lb="视频知识点信息-roleTypeId为空" rc="500" rm="" tn="taxonomys-视频知识点信息 12-1" dt="text" by="531" sby="272" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/taxonomys?roleTypeId=&amp;subjectId=1</java.net.URL>
+</httpSample>
+<httpSample t="120" it="0" lt="119" ts="1507534500648" s="true" lb="视频知识点信息-roleTypeId为标点符号" rc="400" rm="" tn="taxonomys-视频知识点信息 12-1" dt="text" by="676" sby="281" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/taxonomys?roleTypeId=？&amp;subjectId=1</java.net.URL>
+</httpSample>
+<httpSample t="104" it="0" lt="104" ts="1507534500769" s="true" lb="视频知识点信息-roleTypeId为特殊符号" rc="500" rm="" tn="taxonomys-视频知识点信息 12-1" dt="text" by="531" sby="273" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/taxonomys?roleTypeId=&amp;&amp;subjectId=1</java.net.URL>
+</httpSample>
+<httpSample t="110" it="0" lt="110" ts="1507534500874" s="true" lb="视频知识点信息-roleTypeId为管理员" rc="200" rm="" tn="taxonomys-视频知识点信息 12-1" dt="text" by="1285" sby="273" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/taxonomys?roleTypeId=2&amp;subjectId=1</java.net.URL>
+</httpSample>
+<httpSample t="97" it="0" lt="97" ts="1507534500985" s="true" lb="视频知识点信息-roleTypeId为数学符号" rc="500" rm="" tn="taxonomys-视频知识点信息 12-1" dt="text" by="531" sby="273" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/taxonomys?roleTypeId=+&amp;subjectId=1</java.net.URL>
+</httpSample>
+<httpSample t="109" it="0" lt="109" ts="1507534501083" s="true" lb="视频知识点信息-roleTypeId为不存在的值" rc="500" rm="" tn="taxonomys-视频知识点信息 12-1" dt="text" by="531" sby="273" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/taxonomys?roleTypeId=5&amp;subjectId=1</java.net.URL>
+</httpSample>
+<httpSample t="98" it="0" lt="98" ts="1507534501193" s="true" lb="视频知识点信息-subjectId为空" rc="500" rm="" tn="taxonomys-视频知识点信息 12-1" dt="text" by="520" sby="272" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/taxonomys?roleTypeId=1&amp;subjectId=</java.net.URL>
+</httpSample>
+<httpSample t="96" it="0" lt="96" ts="1507534501292" s="true" lb="视频知识点信息-subjectId为中文" rc="400" rm="" tn="taxonomys-视频知识点信息 12-1" dt="text" by="679" sby="290" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/taxonomys?roleTypeId=1&amp;subjectId=测试</java.net.URL>
+</httpSample>
+<httpSample t="124" it="0" lt="124" ts="1507534501389" s="true" lb="视频知识点信息-subjectId为英文" rc="400" rm="" tn="taxonomys-视频知识点信息 12-1" dt="text" by="677" sby="276" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/taxonomys?roleTypeId=1&amp;subjectId=Test</java.net.URL>
+</httpSample>
+<httpSample t="96" it="0" lt="96" ts="1507534501514" s="true" lb="视频知识点信息-subjectId为标点符号" rc="400" rm="" tn="taxonomys-视频知识点信息 12-1" dt="text" by="676" sby="281" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/taxonomys?roleTypeId=1&amp;subjectId=？</java.net.URL>
+</httpSample>
+<httpSample t="94" it="0" lt="94" ts="1507534501611" s="true" lb="视频知识点信息-subjectId为特殊符号" rc="400" rm="" tn="taxonomys-视频知识点信息 12-1" dt="text" by="674" sby="273" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/taxonomys?roleTypeId=1&amp;subjectId=*</java.net.URL>
+</httpSample>
+<httpSample t="96" it="0" lt="96" ts="1507534501706" s="true" lb="视频知识点信息-subjectId为数学符号" rc="500" rm="" tn="taxonomys-视频知识点信息 12-1" dt="text" by="520" sby="273" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/taxonomys?roleTypeId=1&amp;subjectId=+</java.net.URL>
+</httpSample>
+<httpSample t="398" it="0" lt="397" ts="1507534501811" s="true" lb="getToken" rc="200" rm="" tn="recommend-视频推荐 13-1" dt="text" by="1794" sby="293" ng="1" na="1">
+  <sample t="1" it="0" lt="0" ts="1507534502208" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="recommend-视频推荐 13-1" dt="text" by="1429" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="113" it="0" lt="113" ts="1507534502209" s="true" lb="recommend-视频推荐-正确性验证" rc="200" rm="" tn="recommend-视频推荐 13-1" dt="text" by="2606" sby="275" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend?subjectId=1&amp;limit=4</java.net.URL>
+</httpSample>
+<httpSample t="97" it="0" lt="97" ts="1507534502323" s="true" lb="recommend-视频推荐-subjectId为空" rc="500" rm="" tn="recommend-视频推荐 13-1" dt="text" by="518" sby="274" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend?subjectId=&amp;limit=4</java.net.URL>
+</httpSample>
+<httpSample t="100" it="0" lt="99" ts="1507534502422" s="true" lb="recommend-视频推荐-subjectId为特殊符号" rc="400" rm="" tn="recommend-视频推荐 13-1" dt="text" by="681" sby="275" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend?subjectId=*&amp;limit=4</java.net.URL>
+</httpSample>
+<httpSample t="106" it="0" lt="106" ts="1507534502523" s="true" lb="recommend-视频推荐-subjectId为数学符号" rc="500" rm="" tn="recommend-视频推荐 13-1" dt="text" by="518" sby="275" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend?subjectId=+&amp;limit=4</java.net.URL>
+</httpSample>
+<httpSample t="91" it="0" lt="91" ts="1507534502631" s="true" lb="recommend-视频推荐-subjectId为标点符号" rc="400" rm="" tn="recommend-视频推荐 13-1" dt="text" by="683" sby="283" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend?subjectId=？&amp;limit=4</java.net.URL>
+</httpSample>
+<httpSample t="100" it="0" lt="99" ts="1507534502724" s="true" lb="recommend-视频推荐-subjectId为中文" rc="400" rm="" tn="recommend-视频推荐 13-1" dt="text" by="686" sby="292" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend?subjectId=测试&amp;limit=4</java.net.URL>
+</httpSample>
+<httpSample t="95" it="0" lt="95" ts="1507534502825" s="true" lb="recommend-视频推荐-subjectId为英文" rc="400" rm="" tn="recommend-视频推荐 13-1" dt="text" by="684" sby="278" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend?subjectId=Test&amp;limit=4</java.net.URL>
+</httpSample>
+<httpSample t="103" it="0" lt="103" ts="1507534502921" s="true" lb="recommend-视频推荐-subjectId为不存在的值" rc="500" rm="" tn="recommend-视频推荐 13-1" dt="text" by="518" sby="275" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend?subjectId=5&amp;limit=4</java.net.URL>
+</httpSample>
+<httpSample t="119" it="0" lt="119" ts="1507534503026" s="true" lb="recommend-视频推荐-正确性验证" rc="200" rm="" tn="recommend-视频推荐 13-1" dt="text" by="2536" sby="275" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend?subjectId=2&amp;limit=4</java.net.URL>
+</httpSample>
+<httpSample t="124" it="0" lt="124" ts="1507534503146" s="true" lb="recommend-视频推荐-limit为空" rc="200" rm="" tn="recommend-视频推荐 13-1" dt="text" by="2606" sby="274" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend?subjectId=1&amp;limit=</java.net.URL>
+</httpSample>
+<httpSample t="99" it="0" lt="99" ts="1507534503271" s="true" lb="recommend-视频推荐-limit为数学符号" rc="500" rm="" tn="recommend-视频推荐 13-1" dt="text" by="536" sby="275" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend?subjectId=1&amp;limit=+</java.net.URL>
+</httpSample>
+<httpSample t="96" it="0" lt="96" ts="1507534503371" s="true" lb="recommend-视频推荐-limit为标点符号" rc="400" rm="" tn="recommend-视频推荐 13-1" dt="text" by="683" sby="283" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend?subjectId=1&amp;limit=？</java.net.URL>
+</httpSample>
+<httpSample t="115" it="0" lt="115" ts="1507534503468" s="true" lb="recommend-视频推荐-limit为特殊符号" rc="200" rm="" tn="recommend-视频推荐 13-1" dt="text" by="2606" sby="275" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend?subjectId=1&amp;limit=&amp;</java.net.URL>
+</httpSample>
+<httpSample t="93" it="0" lt="92" ts="1507534503584" s="true" lb="recommend-视频推荐-limit为中文" rc="400" rm="" tn="recommend-视频推荐 13-1" dt="text" by="686" sby="292" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend?subjectId=1&amp;limit=测试</java.net.URL>
+</httpSample>
+<httpSample t="94" it="0" lt="94" ts="1507534503679" s="true" lb="recommend-视频推荐-limit为英文" rc="400" rm="" tn="recommend-视频推荐 13-1" dt="text" by="684" sby="278" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend?subjectId=1&amp;limit=test</java.net.URL>
+</httpSample>
+<httpSample t="422" it="0" lt="421" ts="1507534503780" s="true" lb="getToken" rc="200" rm="" tn="videos-视频播放 14-1" dt="text" by="1791" sby="293" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1507534504202" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="videos-视频播放 14-1" dt="text" by="1426" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="124" it="0" lt="124" ts="1507534504203" s="true" lb="videos-视频播放-正确性验证" rc="200" rm="" tn="videos-视频播放 14-1" dt="" by="250" sby="253" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/play/22</java.net.URL>
+</httpSample>
+<httpSample t="108" it="0" lt="108" ts="1507534504329" s="true" lb="videos-视频播放-microVideoId为空" rc="400" rm="" tn="videos-视频播放 14-1" dt="text" by="680" sby="251" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/play/</java.net.URL>
+</httpSample>
+<httpSample t="109" it="0" lt="109" ts="1507534504438" s="true" lb="videos-视频播放-microVideoId为特殊符号" rc="400" rm="" tn="videos-视频播放 14-1" dt="text" by="678" sby="252" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/play/*</java.net.URL>
+</httpSample>
+<httpSample t="103" it="0" lt="103" ts="1507534504548" s="true" lb="videos-视频播放-microVideoId为标点符号" rc="400" rm="" tn="videos-视频播放 14-1" dt="text" by="688" sby="260" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/play/？</java.net.URL>
+</httpSample>
+<httpSample t="95" it="0" lt="95" ts="1507534504653" s="true" lb="videos-视频播放-microVideoId为数学符号" rc="400" rm="" tn="videos-视频播放 14-1" dt="text" by="678" sby="252" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/play/+</java.net.URL>
+</httpSample>
+<httpSample t="104" it="0" lt="103" ts="1507534504749" s="true" lb="videos-视频播放-microVideoId为中文" rc="400" rm="" tn="videos-视频播放 14-1" dt="text" by="700" sby="269" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/play/测试</java.net.URL>
+</httpSample>
+<httpSample t="101" it="0" lt="101" ts="1507534504854" s="true" lb="videos-视频播放-microVideoId为英文" rc="400" rm="" tn="videos-视频播放 14-1" dt="text" by="684" sby="255" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/play/test</java.net.URL>
+</httpSample>
+<httpSample t="406" it="0" lt="405" ts="1507534504966" s="true" lb="getToken" rc="200" rm="" tn="comment-微视频评论 15-1" dt="text" by="1795" sby="293" ng="1" na="1">
+  <sample t="1" it="0" lt="0" ts="1507534505371" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="comment-微视频评论 15-1" dt="text" by="1430" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="101" it="0" lt="101" ts="1507534505373" s="true" lb="comment-微视频评论-正确性验证" rc="200" rm="" tn="comment-微视频评论 15-1" dt="text" by="305" sby="328" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;microVideoId&quot;:22,&#xd;
+	&quot;commentContent&quot;:&quot;yuerhf&quot; &#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/comment</java.net.URL>
+</httpSample>
+<httpSample t="96" it="0" lt="96" ts="1507534505476" s="true" lb="comment-微视频评论-microVideoId为空" rc="500" rm="" tn="comment-微视频评论 15-1" dt="text" by="522" sby="328" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;microVideoId&quot;:&quot;&quot;,&#xd;
+	&quot;commentContent&quot;:&quot;yuerhf&quot; &#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/comment</java.net.URL>
+</httpSample>
+<httpSample t="102" it="0" lt="102" ts="1507534505573" s="true" lb="comment-微视频评论-microVideoId为空格" rc="500" rm="" tn="comment-微视频评论 15-1" dt="text" by="522" sby="330" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;microVideoId&quot;:&quot;  &quot;,&#xd;
+	&quot;commentContent&quot;:&quot;yuerhf&quot; &#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/comment</java.net.URL>
+</httpSample>
+<httpSample t="106" it="0" lt="106" ts="1507534505676" s="true" lb="comment-微视频评论-microVideoId为中文" rc="500" rm="" tn="comment-微视频评论 15-1" dt="text" by="522" sby="330" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;microVideoId&quot;:&quot;测试&quot;,&#xd;
+	&quot;commentContent&quot;:&quot;yuerhf&quot; &#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/comment</java.net.URL>
+</httpSample>
+<httpSample t="96" it="0" lt="96" ts="1507534505783" s="true" lb="comment-微视频评论-microVideoId为英文" rc="500" rm="" tn="comment-微视频评论 15-1" dt="text" by="522" sby="332" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;microVideoId&quot;:&quot;test&quot;,&#xd;
+	&quot;commentContent&quot;:&quot;yuerhf&quot; &#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/comment</java.net.URL>
+</httpSample>
+<httpSample t="107" it="0" lt="107" ts="1507534505881" s="true" lb="comment-微视频评论-microVideoId为特殊符号" rc="500" rm="" tn="comment-微视频评论 15-1" dt="text" by="522" sby="329" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;microVideoId&quot;:&quot;*&quot;,&#xd;
+	&quot;commentContent&quot;:&quot;yuerhf&quot; &#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/comment</java.net.URL>
+</httpSample>
+<httpSample t="93" it="0" lt="92" ts="1507534505989" s="true" lb="comment-微视频评论-microVideoId为标点符号" rc="500" rm="" tn="comment-微视频评论 15-1" dt="text" by="522" sby="329" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;microVideoId&quot;:&quot;？&quot;,&#xd;
+	&quot;commentContent&quot;:&quot;yuerhf&quot; &#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/comment</java.net.URL>
+</httpSample>
+<httpSample t="97" it="0" lt="97" ts="1507534506082" s="true" lb="comment-微视频评论-microVideoId为数学符号" rc="500" rm="" tn="comment-微视频评论 15-1" dt="text" by="522" sby="329" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;microVideoId&quot;:&quot;+&quot;,&#xd;
+	&quot;commentContent&quot;:&quot;yuerhf&quot; &#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/comment</java.net.URL>
+</httpSample>
+<httpSample t="98" it="0" lt="98" ts="1507534506180" s="true" lb="comment-微视频评论-commentContent为空" rc="500" rm="" tn="comment-微视频评论 15-1" dt="text" by="510" sby="322" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;microVideoId&quot;:22,&#xd;
+	&quot;commentContent&quot;:&quot;&quot; &#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/comment</java.net.URL>
+</httpSample>
+<httpSample t="98" it="0" lt="98" ts="1507534506280" s="true" lb="comment-微视频评论-commentContent为特殊字符" rc="200" rm="" tn="comment-微视频评论 15-1" dt="text" by="305" sby="323" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;microVideoId&quot;:22,&#xd;
+	&quot;commentContent&quot;:&quot;&amp;&quot; &#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/comment</java.net.URL>
+</httpSample>
+<httpSample t="97" it="0" lt="97" ts="1507534506379" s="true" lb="comment-微视频评论-commentContent为空格" rc="500" rm="" tn="comment-微视频评论 15-1" dt="text" by="510" sby="325" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;microVideoId&quot;:22,&#xd;
+	&quot;commentContent&quot;:&quot;   &quot; &#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/comment</java.net.URL>
+</httpSample>
+<httpSample t="413" it="0" lt="409" ts="1507534506485" s="true" lb="getToken" rc="200" rm="" tn="recommend-相关视频 16-1" dt="text" by="1795" sby="293" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1507534506898" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="recommend-相关视频 16-1" dt="text" by="1430" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="115" it="0" lt="115" ts="1507534506899" s="true" lb="recommend-相关视频-正确性验证" rc="200" rm="" tn="recommend-相关视频 16-1" dt="text" by="2606" sby="284" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend/?microVideoId=20&amp;subjectId=1</java.net.URL>
+</httpSample>
+<httpSample t="114" it="0" lt="114" ts="1507534507016" s="true" lb="recommend-相关视频-正确性验证" rc="200" rm="" tn="recommend-相关视频 16-1" dt="text" by="2536" sby="284" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend/?microVideoId=20&amp;subjectId=2</java.net.URL>
+</httpSample>
+<httpSample t="117" it="0" lt="117" ts="1507534507131" s="true" lb="recommend-相关视频-microVideoId为中文" rc="200" rm="" tn="recommend-相关视频 16-1" dt="text" by="2536" sby="300" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend/?microVideoId=测试&amp;subjectId=2</java.net.URL>
+</httpSample>
+<httpSample t="118" it="0" lt="118" ts="1507534507249" s="true" lb="recommend-相关视频-microVideoId为英文" rc="200" rm="" tn="recommend-相关视频 16-1" dt="text" by="2536" sby="286" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend/?microVideoId=test&amp;subjectId=2</java.net.URL>
+</httpSample>
+<httpSample t="114" it="0" lt="114" ts="1507534507368" s="true" lb="recommend-相关视频-microVideoId为特殊符号" rc="200" rm="" tn="recommend-相关视频 16-1" dt="text" by="2536" sby="283" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend/?microVideoId=*&amp;subjectId=2</java.net.URL>
+</httpSample>
+<httpSample t="127" it="0" lt="127" ts="1507534507483" s="true" lb="recommend-相关视频-microVideoId为数学符号" rc="200" rm="" tn="recommend-相关视频 16-1" dt="text" by="2536" sby="283" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend/?microVideoId=+&amp;subjectId=2</java.net.URL>
+</httpSample>
+<httpSample t="111" it="0" lt="111" ts="1507534507611" s="true" lb="recommend-相关视频-microVideoId为标点符号" rc="200" rm="" tn="recommend-相关视频 16-1" dt="text" by="2536" sby="291" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend/?microVideoId=？&amp;subjectId=2</java.net.URL>
+</httpSample>
+<httpSample t="113" it="0" lt="113" ts="1507534507723" s="true" lb="recommend-相关视频-subjectId为空" rc="500" rm="" tn="recommend-相关视频 16-1" dt="text" by="519" sby="283" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend/?microVideoId=22&amp;subjectId=</java.net.URL>
+</httpSample>
+<httpSample t="103" it="0" lt="103" ts="1507534507837" s="true" lb="recommend-相关视频-subjectId为中文" rc="400" rm="" tn="recommend-相关视频 16-1" dt="text" by="687" sby="301" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend/?microVideoId=22&amp;subjectId=测试</java.net.URL>
+</httpSample>
+<httpSample t="96" it="0" lt="96" ts="1507534507941" s="true" lb="recommend-相关视频-subjectId为英文" rc="400" rm="" tn="recommend-相关视频 16-1" dt="text" by="685" sby="287" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend/?microVideoId=22&amp;subjectId=test</java.net.URL>
+</httpSample>
+<httpSample t="101" it="0" lt="101" ts="1507534508038" s="true" lb="recommend-相关视频-subjectId为数学符号" rc="500" rm="" tn="recommend-相关视频 16-1" dt="text" by="519" sby="284" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend/?microVideoId=22&amp;subjectId=+</java.net.URL>
+</httpSample>
+<httpSample t="96" it="0" lt="96" ts="1507534508140" s="true" lb="recommend-相关视频-subjectId为标点符号" rc="400" rm="" tn="recommend-相关视频 16-1" dt="text" by="684" sby="292" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend/?microVideoId=22&amp;subjectId=？</java.net.URL>
+</httpSample>
+<httpSample t="99" it="0" lt="99" ts="1507534508237" s="true" lb="recommend-相关视频-subjectId为特殊符号" rc="500" rm="" tn="recommend-相关视频 16-1" dt="text" by="519" sby="284" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/microvideo/v1/sec/videos/recommend/?microVideoId=22&amp;subjectId=&amp;</java.net.URL>
+</httpSample>
+
+</testResults>

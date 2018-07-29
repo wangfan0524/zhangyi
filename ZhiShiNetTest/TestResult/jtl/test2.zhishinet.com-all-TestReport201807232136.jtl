@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="4288" it="0" lt="4273" ts="1532352973054" s="false" lb="getToken" rc="401" rm="" tn="getTotalCoinsAndExp-获取芝士币 1-1" dt="text" by="1517" sby="293" ng="1" na="1">
+  <sample t="2" it="0" lt="0" ts="1532352977340" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getTotalCoinsAndExp-获取芝士币 1-1" dt="text" by="1164" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;0040001&quot;,&quot;devMessage&quot;:&quot;UNAUTHORIZED&quot;,&quot;usrMessage&quot;:&quot;认证失败,请重新获取Token&quot;,&quot;timestamp&quot;:1532071537249}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;${username}&quot;,&#xd;
+	&quot;password&quot;: &quot;${passwd}&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://test2.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="533" it="0" lt="533" ts="1532352977359" s="false" lb="getTotalCoinsAndExp正确校验" rc="401" rm="" tn="getTotalCoinsAndExp-获取芝士币 1-1" dt="text" by="1557" sby="230" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532352977892" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getTotalCoinsAndExp-获取芝士币 1-1" dt="text" by="1108" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test2.zhishinet.com/api/app-student/v2/sec/getTotalCoinsAndExp</java.net.URL>
+</httpSample>
+<httpSample t="713" it="0" lt="711" ts="1532352977956" s="false" lb="getToken" rc="401" rm="" tn="getusers获取用户信息 2-1" dt="text" by="1506" sby="293" ng="1" na="1">
+  <sample t="1" it="0" lt="0" ts="1532352978668" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getusers获取用户信息 2-1" dt="text" by="1153" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;0040001&quot;,&quot;devMessage&quot;:&quot;UNAUTHORIZED&quot;,&quot;usrMessage&quot;:&quot;认证失败,请重新获取Token&quot;,&quot;timestamp&quot;:1532071537249}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;${username}&quot;,&#xd;
+	&quot;password&quot;: &quot;${passwd}&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://test2.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="167" it="0" lt="167" ts="1532352978682" s="false" lb="/users/student-学生信息正确性校验" rc="401" rm="" tn="getusers获取用户信息 2-1" dt="text" by="1547" sby="224" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532352978849" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getusers获取用户信息 2-1" dt="text" by="1098" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test2.zhishinet.com/api/app-student/v2/sec/users/student</java.net.URL>
+</httpSample>
+<httpSample t="91" it="0" lt="90" ts="1532352978853" s="false" lb="getusers教师信息正确性校验" rc="401" rm="" tn="getusers获取用户信息 2-1" dt="text" by="1540" sby="224" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to contain /200/</failureMessage>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532352978944" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getusers获取用户信息 2-1" dt="text" by="1091" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test2.zhishinet.com/api/app-student/v2/sec/users/teacher</java.net.URL>
+</httpSample>
+<httpSample t="104" it="0" lt="103" ts="1532352978954" s="false" lb="getusers为空" rc="401" rm="" tn="getusers获取用户信息 2-1" dt="text" by="1518" sby="217" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /No message available/</failureMessage>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532352979058" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getusers获取用户信息 2-1" dt="text" by="1069" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test2.zhishinet.com/api/app-student/v2/sec/users/</java.net.URL>
+</httpSample>
+<httpSample t="102" it="0" lt="101" ts="1532352979062" s="false" lb="getusers为数学符号" rc="401" rm="" tn="getusers获取用户信息 2-1" dt="text" by="1526" sby="218" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532352979164" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getusers获取用户信息 2-1" dt="text" by="1077" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test2.zhishinet.com/api/app-student/v2/sec/users/+</java.net.URL>
+</httpSample>
+<httpSample t="88" it="0" lt="86" ts="1532352979179" s="false" lb="getusers为特殊字符" rc="401" rm="" tn="getusers获取用户信息 2-1" dt="text" by="1526" sby="218" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532352979267" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getusers获取用户信息 2-1" dt="text" by="1077" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test2.zhishinet.com/api/app-student/v2/sec/users/&amp;</java.net.URL>
+</httpSample>
+<httpSample t="88" it="0" lt="88" ts="1532352979272" s="false" lb="getusers为标点符号" rc="401" rm="" tn="getusers获取用户信息 2-1" dt="text" by="1527" sby="226" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532352979360" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getusers获取用户信息 2-1" dt="text" by="1078" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test2.zhishinet.com/api/app-student/v2/sec/users/？</java.net.URL>
+</httpSample>
+<httpSample t="690" it="0" lt="690" ts="1532352979385" s="false" lb="getToken" rc="401" rm="" tn="getTotalCoinsAndExp获取用户芝士币、经验 3-1" dt="text" by="1526" sby="293" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1532352980075" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getTotalCoinsAndExp获取用户芝士币、经验 3-1" dt="text" by="1173" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;0040001&quot;,&quot;devMessage&quot;:&quot;UNAUTHORIZED&quot;,&quot;usrMessage&quot;:&quot;认证失败,请重新获取Token&quot;,&quot;timestamp&quot;:1532071537249}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;${username}&quot;,&#xd;
+	&quot;password&quot;: &quot;${passwd}&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://test2.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="159" it="0" lt="158" ts="1532352980080" s="false" lb="getTotalCoinsAndExp正确性校验" rc="401" rm="" tn="getTotalCoinsAndExp获取用户芝士币、经验 3-1" dt="text" by="1568" sby="230" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532352980239" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getTotalCoinsAndExp获取用户芝士币、经验 3-1" dt="text" by="1119" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test2.zhishinet.com/api/app-student/v2/sec/getTotalCoinsAndExp</java.net.URL>
+</httpSample>
+
+<httpSample t="3333" it="0" lt="3324" ts="1532352982782" s="false" lb="getToken" rc="401" rm="" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="1515" sby="293" ng="1" na="1">
+  <sample t="3" it="0" lt="0" ts="1532352986113" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="1162" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;0040001&quot;,&quot;devMessage&quot;:&quot;UNAUTHORIZED&quot;,&quot;usrMessage&quot;:&quot;认证失败,请重新获取Token&quot;,&quot;timestamp&quot;:1532071537249}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;${username}&quot;,&#xd;
+	&quot;password&quot;: &quot;${passwd}&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://test2.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="496" it="0" lt="496" ts="1532352986138" s="false" lb="cheesecoins/log正确校验identity为student" rc="401" rm="" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="1614" sby="270" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532352986634" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="1165" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test2.zhishinet.com/api/user-profile/v1/sec/users/cheesecoins/log?identity=student&amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="99" it="0" lt="99" ts="1532352986641" s="false" lb="cheesecoins/log正确校验identity为teacher" rc="401" rm="" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="1614" sby="270" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532352986740" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="1165" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test2.zhishinet.com/api/user-profile/v1/sec/users/cheesecoins/log?identity=teacher&amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="119" it="0" lt="119" ts="1532352986743" s="false" lb="cheesecoins/log-identity为不存在的值" rc="401" rm="" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="1610" sby="270" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected something using /Paramter identity value must be &apos;student&apos; or &apos;teacher&apos;&quot;/	Test failed: text expected something using /参数identity的值必须为&apos;student&apos; 或 &apos;teacher&apos;/	</failureMessage>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532352986862" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="1161" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test2.zhishinet.com/api/user-profile/v1/sec/users/cheesecoins/log?identity=manager&amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="95" it="0" lt="94" ts="1532352986864" s="false" lb="cheesecoins/log-identity为空" rc="401" rm="" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="1595" sby="263" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1532352986958" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="1146" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test2.zhishinet.com/api/user-profile/v1/sec/users/cheesecoins/log?identity=&amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="14" it="0" lt="0" ts="1532352986968" s="true" lb="cheesecoins/log-identity为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 83: https://test2.zhishinet.com/api/user-profile/v1/sec/users/cheesecoins/log?identity= &amp;pageNo=1&amp;pageSize=1" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="2256" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1532352986981" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="1149" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test2.zhishinet.com/api/user-profile/v1/sec/users/cheesecoins/log?identity= &amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="88" it="0" lt="88" ts="1532352986985" s="false" lb="cheesecoins/log-identity为中文" rc="401" rm="" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="1600" sby="281" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected something using /Paramter identity value must be &apos;student&apos; or &apos;teacher&apos;&quot;/	Test failed: text expected something using /参数identity的值必须为&apos;student&apos; 或 &apos;teacher&apos;/	</failureMessage>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532352987073" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="1151" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test2.zhishinet.com/api/user-profile/v1/sec/users/cheesecoins/log?identity=学生&amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="90" it="0" lt="89" ts="1532352987075" s="false" lb="cheesecoins/log-identity为数学符号" rc="401" rm="" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="1602" sby="264" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected something using /Paramter identity value must be &apos;student&apos; or &apos;teacher&apos;&quot;/	Test failed: text expected something using /参数identity的值必须为&apos;student&apos; 或 &apos;teacher&apos;/	</failureMessage>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532352987165" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="1153" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test2.zhishinet.com/api/user-profile/v1/sec/users/cheesecoins/log?identity=-&amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="98" it="0" lt="97" ts="1532352987167" s="false" lb="cheesecoins/log-identity为特殊符号" rc="401" rm="" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="1602" sby="264" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected something using /Paramter identity value must be &apos;student&apos; or &apos;teacher&apos;&quot;/	Test failed: text expected something using /参数identity的值必须为&apos;student&apos; 或 &apos;teacher&apos;/	</failureMessage>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532352987265" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="1153" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test2.zhishinet.com/api/user-profile/v1/sec/users/cheesecoins/log?identity=*&amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="90" it="0" lt="90" ts="1532352987267" s="false" lb="cheesecoins/log-identity为标点符号" rc="401" rm="" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="1603" sby="272" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected something using /Paramter identity value must be &apos;student&apos; or &apos;teacher&apos;&quot;/	Test failed: text expected something using /参数identity的值必须为&apos;student&apos; 或 &apos;teacher&apos;/	</failureMessage>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532352987357" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="cheesecoins/log-获取用户芝士币日志记录 1-1" dt="text" by="1154" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test2.zhishinet.com/api/user-profile/v1/sec/users/cheesecoins/log?identity=，&amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="713" it="0" lt="711" ts="1532352987401" s="false" lb="getToken" rc="401" rm="" tn="achievement-获取学员成就记录 2-1" dt="text" by="1506" sby="293" ng="1" na="1">
+  <sample t="1" it="0" lt="0" ts="1532352988112" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="achievement-获取学员成就记录 2-1" dt="text" by="1153" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;0040001&quot;,&quot;devMessage&quot;:&quot;UNAUTHORIZED&quot;,&quot;usrMessage&quot;:&quot;认证失败,请重新获取Token&quot;,&quot;timestamp&quot;:1532071537249}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;${username}&quot;,&#xd;
+	&quot;password&quot;: &quot;${passwd}&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://test2.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="166" it="0" lt="166" ts="1532352988126" s="false" lb="achievement正确性验证type=1" rc="401" rm="" tn="achievement-获取学员成就记录 2-1" dt="text" by="1577" sby="256" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532352988292" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="achievement-获取学员成就记录 2-1" dt="text" by="1128" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test2.zhishinet.com/api/user-profile/v1/sec/users/achievement?type=1&amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="83" it="0" lt="83" ts="1532352988298" s="false" lb="achievement正确性验证type=2" rc="401" rm="" tn="achievement-获取学员成就记录 2-1" dt="text" by="1577" sby="256" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532352988381" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="achievement-获取学员成就记录 2-1" dt="text" by="1128" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test2.zhishinet.com/api/user-profile/v1/sec/users/achievement?type=2&amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="84" it="0" lt="84" ts="1532352988385" s="false" lb="achievement-type为不存在的值" rc="401" rm="" tn="achievement-获取学员成就记录 2-1" dt="text" by="1579" sby="257" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532352988469" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="achievement-获取学员成就记录 2-1" dt="text" by="1130" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test2.zhishinet.com/api/user-profile/v1/sec/users/achievement?type=-1&amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="86" it="0" lt="85" ts="1532352988474" s="false" lb="achievement-type为空" rc="401" rm="" tn="achievement-获取学员成就记录 2-1" dt="text" by="1569" sby="255" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1532352988559" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="achievement-获取学员成就记录 2-1" dt="text" by="1120" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test2.zhishinet.com/api/user-profile/v1/sec/users/achievement?type=&amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="2" it="0" lt="0" ts="1532352988565" s="true" lb="achievement-type为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 75: https://test2.zhishinet.com/api/user-profile/v1/sec/users/achievement?type= &amp;pageNo=1&amp;pageSize=1" tn="achievement-获取学员成就记录 2-1" dt="text" by="2222" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532352988567" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="achievement-获取学员成就记录 2-1" dt="text" by="1123" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test2.zhishinet.com/api/user-profile/v1/sec/users/achievement?type= &amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="89" it="0" lt="89" ts="1532352988572" s="false" lb="achievement-type为a-z的字符串" rc="401" rm="" tn="achievement-获取学员成就记录 2-1" dt="text" by="1581" sby="259" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532352988661" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="achievement-获取学员成就记录 2-1" dt="text" by="1132" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test2.zhishinet.com/api/user-profile/v1/sec/users/achievement?type=type&amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="104" it="0" lt="102" ts="1532352988663" s="false" lb="achievement-type为中文" rc="401" rm="" tn="achievement-获取学员成就记录 2-1" dt="text" by="1575" sby="273" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1532352988766" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="achievement-获取学员成就记录 2-1" dt="text" by="1126" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test2.zhishinet.com/api/user-profile/v1/sec/users/achievement?type=类型&amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="112" it="0" lt="110" ts="1532352988776" s="false" lb="achievement-type为数学符号" rc="401" rm="" tn="achievement-获取学员成就记录 2-1" dt="text" by="1575" sby="256" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1532352988887" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="achievement-获取学员成就记录 2-1" dt="text" by="1126" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test2.zhishinet.com/api/user-profile/v1/sec/users/achievement?type=-&amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="88" it="0" lt="87" ts="1532352988894" s="false" lb="achievement-type为特殊符号" rc="401" rm="" tn="achievement-获取学员成就记录 2-1" dt="text" by="1576" sby="256" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1532352988981" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="achievement-获取学员成就记录 2-1" dt="text" by="1127" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test2.zhishinet.com/api/user-profile/v1/sec/users/achievement?type=*&amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="89" it="0" lt="89" ts="1532352988986" s="false" lb="achievement-type为标点符号" rc="401" rm="" tn="achievement-获取学员成就记录 2-1" dt="text" by="1577" sby="264" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /Failed to convert value of type/</failureMessage>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1532352989075" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="achievement-获取学员成就记录 2-1" dt="text" by="1128" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;UNAUTHORIZED&quot;,&quot;message&quot;:&quot;Request without authorization header.&quot;,&quot;success&quot;:false,&quot;total&quot;:0}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://test2.zhishinet.com/api/user-profile/v1/sec/users/achievement?type=。&amp;pageNo=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+
+</testResults>

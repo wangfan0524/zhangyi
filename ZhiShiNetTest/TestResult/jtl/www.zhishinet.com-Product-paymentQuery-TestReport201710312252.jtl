@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="1875" it="0" lt="1846" ts="1509461547603" s="true" lb="getToken" rc="200" rm="" tn="付费 1-1" dt="text" by="1542" sby="289" ng="1" na="1">
+  <sample t="1" it="0" lt="0" ts="1509461549477" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="付费 1-1" dt="text" by="1179" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;TECH0002&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://www.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="148" it="0" lt="148" ts="1509461549487" s="true" lb="getPayUser-用户付款信息查询" rc="200" rm="" tn="付费 1-1" dt="text" by="1749" sby="255" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1509461549635" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="付费 1-1" dt="text" by="1353" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/payment/v1/sec/getPayUser?userId=53474</java.net.URL>
+</httpSample>
+<httpSample t="608" it="0" lt="607" ts="1509461549640" s="true" lb="getGoodsDetail-商品查询界面" rc="200" rm="" tn="付费 1-1" dt="text" by="4200" sby="295" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1509461550247" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="付费 1-1" dt="text" by="1399" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/payment/v1/sec/getGoodsDetail?userId=53474&amp;orderBy=1&amp;currentPage=1&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="181" it="0" lt="180" ts="1509461550249" s="true" lb="getOrdersList-订单查询接口" rc="200" rm="" tn="付费 1-1" dt="text" by="1702" sby="280" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1509461550429" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="付费 1-1" dt="text" by="1381" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/payment/v1/sec/getOrdersList?orderBy=1&amp;currentPage=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+
+</testResults>

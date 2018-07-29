@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="1762" it="0" lt="1742" ts="1509461578280" s="true" lb="getToken" rc="200" rm="" tn="用户 1-1" dt="text" by="1542" sby="289" ng="1" na="1">
+  <sample t="2" it="0" lt="0" ts="1509461580041" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="用户 1-1" dt="text" by="1179" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;TECH0002&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://www.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="203" it="0" lt="203" ts="1509461580060" s="true" lb="getProvince-获取所有省份信息" rc="200" rm="" tn="用户 1-1" dt="text" by="7535" sby="239" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1509461580263" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="用户 1-1" dt="text" by="1336" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/sys/v1/sec/getProvince</java.net.URL>
+</httpSample>
+<httpSample t="222" it="0" lt="222" ts="1509461580268" s="true" lb="getCity-获取市信息" rc="200" rm="" tn="用户 1-1" dt="text" by="1975" sby="249" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1509461580490" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="用户 1-1" dt="text" by="1338" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/sys/v1/sec/getCity?provinceId=20</java.net.URL>
+</httpSample>
+<httpSample t="465" it="0" lt="465" ts="1509461580491" s="true" lb="getDistrict-获取县/区信息" rc="200" rm="" tn="用户 1-1" dt="text" by="4145" sby="249" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1509461580956" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="用户 1-1" dt="text" by="1345" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/sys/v1/sec/getDistrict?cityId=21</java.net.URL>
+</httpSample>
+<httpSample t="351" it="0" lt="351" ts="1509461580957" s="true" lb="getSchoolCampus-获取学校校区信息" rc="200" rm="" tn="用户 1-1" dt="text" by="1708" sby="281" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1509461581308" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="用户 1-1" dt="text" by="1387" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/sys/v1/sec/getSchoolCampus?cityId=37&amp;districtId=38&amp;provinceId=20</java.net.URL>
+</httpSample>
+<httpSample t="357" it="0" lt="357" ts="1509461581309" s="true" lb="getClass-获取班级信息" rc="200" rm="" tn="用户 1-1" dt="text" by="4912" sby="247" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1509461581666" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="用户 1-1" dt="text" by="1339" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/sys/v1/sec/getClass?campusId=1</java.net.URL>
+</httpSample>
+<httpSample t="171" it="0" lt="171" ts="1509461581667" s="true" lb="setDefaultQuery-查询用户上一次访问通用方法" rc="200" rm="" tn="用户 1-1" dt="" by="1736" sby="365" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1509461581838" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="用户 1-1" dt="text" by="1488" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	 &quot;sourceCode&quot;:&quot;HOMEWORK&quot;,&#xd;
+	 &quot;sourceKey&quot;:2,        &#xd;
+ 	 &quot;attribute1&quot;:1,  &#xd;
+ 	 &quot;attribute2&quot;:3 &#xd;
+}</queryString>
+  <java.net.URL>https://www.zhishinet.com/api/sys/v1/sec/setDefaultQuery</java.net.URL>
+</httpSample>
+
+</testResults>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="test_jmeter" default="all" basedir=".">
+	<property environment="env"/>
+    <tstamp>
+        <format property="time" pattern="yyyyMMddHHmm" />
+    </tstamp>
+    <!-- 需要改成自己本地的 Jmeter 目录-->
+    <!-- property name="jmeter.home" value="${env.JMETER_HOME}" /-->
+	<condition property="jmeter.home" value="${JMETER_HOME}" else="${env.JMETER_HOME}">
+		<isset property="JMETER_HOME" />
+	</condition>
+	<property name="lib.dir" value="${jmeter.home}\lib" />
+    <!-- jmeter生成jtl格式的结果报告的路径-->
+    <property name="jmeter.result.jtl.dir" value="${basedir}\TestResult\jtl" />
+    <!-- jmeter生成html格式的结果报告的路径-->
+    <property name="jmeter.result.html.dir" value="${basedir}\TestReport\html" />
+	<property name="jmeter.history.dir" value="${basedir}\TestHistory" />
+    <!-- 生成的报告的前缀 -->
+	<condition property="hostname" value="${host}" else="test.zhishinet.com">
+		<isset property="host" />
+	</condition>
+    <property name="ReportName" value="test-SIT-TestReport" />
+    <property name="jmeter.result.jtlName" value="${jmeter.result.jtl.dir}/${ReportName}${time}.jtl" />
+	<property name="jmeter.result.log" value="${basedir}/TestLog/${time}.log" />
+    <property name="jmeter.result.htmlName" value="${jmeter.result.html.dir}/${ReportName}${time}.html" />
+
+    <!-- 电脑地址 -->
+    <property name="ComputerName" value="LAPTOP-VJV4S5M8" />
+	
+	<target name="show-test-properties">
+		<echo>JMETER_HOME				: ${jmeter.home}</echo>
+		<echo>TEST_PATH				: ${test.plan.path}</echo>
+		<echo>THREADGROUP_COUNT			: ${threadgroup.count}</echo>
+		<echo>THREADGROUP_RAMPUP			: ${threadgroup.rampup}</echo>
+		<echo>THREADGROUP_DURATION		: ${threadgroup.duration}</echo>
+	</target>
+	
+    <target name="run" depends="show-test-properties">
+		<antcall target="delete" />
+        <antcall target="run_jmeter" />
+        <antcall target="report" />
+		<!--antcall target="sendEmail" /-->
+    </target>
+	
+    <target name="run_jmeter">
+        <taskdef name="jmeter" classname="org.programmerplanet.ant.taskdefs.jmeter.JMeterTask" />
+        <jmeter jmeterhome="${jmeter.home}" resultlog="${jmeter.result.jtlName}" jmeterlogfile="${jmeter.result.log}">
+            <!-- 声明要运行的脚本。"*.jmx"指包含此目录下的所有jmeter脚本 -->
+            <testplans dir="${basedir}\TestSuite" includes="SIT*.jmx" />
+			
+			<property name="host" value="${hostname}"/>
+			<!-- property name="port" value="${port}"/ -->
+			<!-- property name="username" value="${username}"/ -->
+			<!-- property name="passwd" value="${passwd}"/ -->
+			
+        </jmeter>
+    </target>
+    <target name="report">
+		<path id="xslt.classpath">
+        <fileset dir="${lib.dir}" includes="xalan*.jar"/>
+        <fileset dir="${lib.dir}" includes="serializer*.jar"/>
+		</path>
+        <tstamp><format property="show-data" pattern="'n'"/></tstamp>
+		<tstamp><format property="report.title" pattern="'ZSN-Interface Test Results'"/></tstamp>
+		<tstamp><format property="report.datestamp" pattern="yyyy/MM/dd HH:mm"/></tstamp>
+        <xslt
+            classpathref="xslt.classpath"
+            force="true"
+            in="${jmeter.result.jtlName}"
+            out="${jmeter.result.htmlName}"
+            style="${jmeter.home}/extras/jmeter-results-detail-report_90Line.xsl">
+            <param name="showData" expression="${show-data}"/>
+            <param name="titleReport" expression="${report.title}"/>
+            <param name="dateReport" expression="${report.datestamp}"/>
+        </xslt>
+        <copy todir="${jmeter.result.html.dir}">
+            <fileset dir="${jmeter.home}/extras">
+                <include name="collapse.png" />
+                <include name="expand.png" />
+            </fileset>
+        </copy>
+		<copy todir="${jmeter.history.dir}">
+            <fileset dir="${jmeter.result.html.dir}">
+                <include name="${ReportName}${time}.html" />
+            </fileset>
+        </copy>
+    </target>	
+	<target name ="delete">
+		<delete includeEmptyDirs="true">
+		<fileset dir="${jmeter.result.html.dir}" includes="**/*"/>
+		</delete>
+	</target>
+</project>

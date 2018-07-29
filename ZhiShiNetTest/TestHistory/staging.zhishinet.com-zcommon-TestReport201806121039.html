@@ -1,0 +1,986 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ZSN-Interface Test Results</title>
+<style type="text/css">
+				body {
+					font:normal 68% verdana,arial,helvetica;
+					color:#000000;
+				}
+				table tr td, table tr th {
+					font-size: 68%;
+				}
+				table.details tr th{
+				    color: #ffffff;
+					font-weight: bold;
+					text-align:center;
+					background:#2674a6;
+					white-space: nowrap;
+				}
+				table.details tr td{
+					background:#eeeee0;
+				}
+				h1 {
+					margin: 0px 0px 5px; font: 165% verdana,arial,helvetica
+				}
+				h2 {
+					margin-top: 1em; margin-bottom: 0.5em; font: bold 125% verdana,arial,helvetica
+				}
+				h3 {
+					margin-bottom: 0.5em; font: bold 115% verdana,arial,helvetica
+				}
+				.Failure {
+					font-weight:bold; color:red;
+				}
+				
+	
+				img
+				{
+				  border-width: 0px;
+				}
+				
+				.expand_link
+				{
+				   position=absolute;
+				   right: 0px;
+				   width: 27px;
+				   top: 1px;
+				   height: 27px;
+				}
+				
+				.page_details
+				{
+				   display: none;
+				}
+                                
+                                .page_details_expanded
+                                {
+                                    display: block;
+                                    display/* hide this definition from  IE5/6 */: table-row;
+                                }
+
+
+			</style>
+<script language="JavaScript">
+                           function expand(details_id)
+			   {
+			      
+			      document.getElementById(details_id).className = "page_details_expanded";
+			   }
+			   
+			   function collapse(details_id)
+			   {
+			      
+			      document.getElementById(details_id).className = "page_details";
+			   }
+			   
+			   function change(details_id)
+			   {
+			      if(document.getElementById(details_id+"_image").src.match("expand"))
+			      {
+			         document.getElementById(details_id+"_image").src = "collapse.png";
+			         expand(details_id);
+			      }
+			      else
+			      {
+			         document.getElementById(details_id+"_image").src = "expand.png";
+			         collapse(details_id);
+			      } 
+                           }
+			</script>
+</head>
+<body>
+<h1>ZSN-Interface Test Results</h1>
+<table width="100%">
+<tr>
+<td align="left">Date report: 2018/06/12 10:40</td>
+<br>
+<td align="left">RunEnvironment:https://staging.zhishinet.com</td><td align="left">TestAccount:{&#13;
+	"username": "sh000012",&#13;
+	"password": "welcome123"&#13;
+}</td>
+</tr>
+</table>
+<hr size="1">
+<h2>Summary</h2>
+<table width="95%" cellspacing="2" cellpadding="4" border="0" class="details" align="center">
+<tr valign="top">
+<th>Total</th><th>Pass</th><th>Failures</th><th>Success Rate</th>
+</tr>
+<tr valign="top">
+<td align="center">120</td><td align="center">119</td><td align="center">1</td><td align="center">99.17%</td>
+</tr>
+</table>
+<hr align="center" width="95%" size="1">
+<h2>Failure Detail</h2>
+<h3>resource-正确性检验（仅下载）<a name="resource-%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A3%80%E9%AA%8C%EF%BC%88%E4%BB%85%E4%B8%8B%E8%BD%BD%EF%BC%89"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Failure Message</th>
+</tr>
+<tr>
+<td>https://ubjchinastagingstorage.blob.core.chinacloudapi.cn/userdata/resources/5/5ed44440-995d-4d33-b7c4-f300f154f20b</td><td>GET</td><td></td><td>403 - Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.</td><td>﻿&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Error&gt;&lt;Code&gt;AuthenticationFailed&lt;/Code&gt;&lt;Message&gt;Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:dbc13f5b-301e-0024-59f6-01f3b0000000
+Time:2018-06-12T02:40:23.0295354Z&lt;/Message&gt;&lt;AuthenticationErrorDetail&gt;Authentication scheme Bearer is not supported.&lt;/AuthenticationErrorDetail&gt;&lt;/Error&gt;</td>
+</tr>
+</table>
+<h2>Success Detail</h2>
+<h3>getToken<a name="getToken"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000012",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000012",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000012",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000012",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000012",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000012",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000012",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000012",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000012",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000012",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zauth/v1/token/access</td><td>POST</td><td>{&#13;
+	"username": "sh000012",&#13;
+	"password": "welcome123"&#13;
+}</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>getServerTime-正确性校验<a name="getServerTime-%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/getServerTime</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>sendMessage正确性校验-BindPhoneNumber<a name="sendMessage%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C-BindPhoneNumber"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=3</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=3</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>sendMessage正确性校验-UnbindPhoneNumber<a name="sendMessage%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C-UnbindPhoneNumber"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=4</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=4</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>sendMessage-ubUserSMSConfigId为空<a name="sendMessage-ubUserSMSConfigId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>sendMessage-ubUserSMSConfigId为空格<a name="sendMessage-ubUserSMSConfigId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=  </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 99: https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=  </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=  </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 103: https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=  </td><td></td>
+</tr>
+</table>
+<h3>sendMessage-ubUserSMSConfigId为a-z的字符串<a name="sendMessage-ubUserSMSConfigId%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=phone</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=bind</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>sendMessage-ubUserSMSConfigId为中文<a name="sendMessage-ubUserSMSConfigId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=验证</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=解绑</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>sendMessage-ubUserSMSConfigId为特殊字符<a name="sendMessage-ubUserSMSConfigId%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=$</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=@</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>sendMessage-ubUserSMSConfigId为数学符号<a name="sendMessage-ubUserSMSConfigId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId==</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=*</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>sendMessage-ubUserSMSConfigId为标点符号<a name="sendMessage-ubUserSMSConfigId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=，</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=；</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>sendMessage-phoneNumber位数不正确<a name="sendMessage-phoneNumber%E4%BD%8D%E6%95%B0%E4%B8%8D%E6%AD%A3%E7%A1%AE"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=1371111666&amp;ubUserSMSConfigId=3</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=1371111777&amp;ubUserSMSConfigId=3</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>sendMessage-phoneNumber为空<a name="sendMessage-phoneNumber%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=&amp;ubUserSMSConfigId=3</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=&amp;ubUserSMSConfigId=3</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>sendMessage-phoneNumber为空格<a name="sendMessage-phoneNumber%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=  &amp;ubUserSMSConfigId=3</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 69: https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=  &amp;ubUserSMSConfigId=3</td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=  &amp;ubUserSMSConfigId=3</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 73: https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=  &amp;ubUserSMSConfigId=3</td><td></td>
+</tr>
+</table>
+<h3>sendMessage-phoneNumber为a-z的字符串<a name="sendMessage-phoneNumber%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=bind&amp;ubUserSMSConfigId=3</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=phone&amp;ubUserSMSConfigId=3</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>sendMessage-phoneNumber为中文<a name="sendMessage-phoneNumber%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=手机&amp;ubUserSMSConfigId=3</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=手机号&amp;ubUserSMSConfigId=3</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>sendMessage-phoneNumber为特殊字符<a name="sendMessage-phoneNumber%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=@&amp;ubUserSMSConfigId=3</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=@&amp;ubUserSMSConfigId=3</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>sendMessage-phoneNumber为数学符号<a name="sendMessage-phoneNumber%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=-&amp;ubUserSMSConfigId=3</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=-&amp;ubUserSMSConfigId=3</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>sendMessage-phoneNumber为标点符号<a name="sendMessage-phoneNumber%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=？&amp;ubUserSMSConfigId=3</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=、&amp;ubUserSMSConfigId=3</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>JDBC Request<a name="JDBC Request"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td></td><td></td><td></td><td>200 - OK</td><td></td>
+</tr>
+<tr>
+<td></td><td></td><td></td><td>200 - OK</td><td></td>
+</tr>
+</table>
+<h3>checkMessageCode正确性校验-BindPhoneNumber<a name="checkMessageCode%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A0%A1%E9%AA%8C-BindPhoneNumber"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=3161</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=4648</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>checkMessageCode-phoneNumber位数不正确<a name="checkMessageCode-phoneNumber%E4%BD%8D%E6%95%B0%E4%B8%8D%E6%AD%A3%E7%A1%AE"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=1371111666&amp;ubUserSMSConfigId=3&amp;code=3161</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=1371111666&amp;ubUserSMSConfigId=3&amp;code=3161</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>checkMessageCode-phoneNumber为空<a name="checkMessageCode-phoneNumber%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=&amp;ubUserSMSConfigId=3&amp;code=3161</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=&amp;ubUserSMSConfigId=3&amp;code=3161</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>checkMessageCode-phoneNumber为空格<a name="checkMessageCode-phoneNumber%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=  &amp;ubUserSMSConfigId=3&amp;code=3161</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 74: https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=  &amp;ubUserSMSConfigId=3&amp;code=3161</td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=  &amp;ubUserSMSConfigId=3&amp;code=3161</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 78: https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=  &amp;ubUserSMSConfigId=3&amp;code=3161</td><td></td>
+</tr>
+</table>
+<h3>checkMessageCode-phoneNumber为a-z的字符串<a name="checkMessageCode-phoneNumber%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=phone&amp;ubUserSMSConfigId=3&amp;code=3161</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=phone&amp;ubUserSMSConfigId=3&amp;code=3161</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>checkMessageCode-phoneNumber为中文<a name="checkMessageCode-phoneNumber%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=手机&amp;ubUserSMSConfigId=3&amp;code=3161</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=手机号&amp;ubUserSMSConfigId=3&amp;code=3161</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>checkMessageCode-phoneNumber为特殊字符<a name="checkMessageCode-phoneNumber%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=@&amp;ubUserSMSConfigId=3&amp;code=3161</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=@&amp;ubUserSMSConfigId=3&amp;code=3161</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>checkMessageCode-phoneNumber为数学符号<a name="checkMessageCode-phoneNumber%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=/&amp;ubUserSMSConfigId=3&amp;code=3161</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=*&amp;ubUserSMSConfigId=3&amp;code=3161</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>checkMessageCode-phoneNumber为标点符号<a name="checkMessageCode-phoneNumber%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=!&amp;ubUserSMSConfigId=3&amp;code=3161</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=！&amp;ubUserSMSConfigId=3&amp;code=3161</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>checkMessageCode-ubUserSMSConfigId为空<a name="checkMessageCode-ubUserSMSConfigId%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=&amp;code=3161</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=&amp;code=3161</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>checkMessageCode-ubUserSMSConfigId为空格<a name="checkMessageCode-ubUserSMSConfigId%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=  &amp;code=3161</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 104: https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=  &amp;code=3161</td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=  &amp;code=3161</td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 108: https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=  &amp;code=3161</td><td></td>
+</tr>
+</table>
+<h3>checkMessageCode-ubUserSMSConfigId为a-z的字符串<a name="checkMessageCode-ubUserSMSConfigId%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=bind&amp;code=3161</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=unbind&amp;code=3161</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>checkMessageCode-ubUserSMSConfigId为中文<a name="checkMessageCode-ubUserSMSConfigId%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=验证&amp;code=3161</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=解绑&amp;code=3161</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>checkMessageCode-ubUserSMSConfigId为特殊字符<a name="checkMessageCode-ubUserSMSConfigId%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=$&amp;code=3161</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=@&amp;code=3161</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>checkMessageCode-ubUserSMSConfigId为数学符号<a name="checkMessageCode-ubUserSMSConfigId%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId==&amp;code=3161</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=-&amp;code=3161</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>checkMessageCode-ubUserSMSConfigId为标点符号<a name="checkMessageCode-ubUserSMSConfigId%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=&ldquo;&amp;code=3161</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=？&amp;code=3161</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>checkMessageCode-code位数不正确<a name="checkMessageCode-code%E4%BD%8D%E6%95%B0%E4%B8%8D%E6%AD%A3%E7%A1%AE"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=123</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=123</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>checkMessageCode-code为空<a name="checkMessageCode-code%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=</td><td>GET</td><td></td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>checkMessageCode-code为空格<a name="checkMessageCode-code%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=  </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 111: https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=  </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=  </td><td>GET</td><td></td><td>Non HTTP response code: java.net.URISyntaxException - Non HTTP response message: Illegal character in query at index 115: https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=  </td><td></td>
+</tr>
+</table>
+<h3>checkMessageCode-code为a-z的字符串<a name="checkMessageCode-code%E4%B8%BAa-z%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=code</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=code</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>checkMessageCode-code为中文<a name="checkMessageCode-code%E4%B8%BA%E4%B8%AD%E6%96%87"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=密码</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=密码</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>checkMessageCode-code为特殊字符<a name="checkMessageCode-code%E4%B8%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=@</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=$</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>checkMessageCode-code为数学符号<a name="checkMessageCode-code%E4%B8%BA%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=-</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=-</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>checkMessageCode-code为标点符号<a name="checkMessageCode-code%E4%B8%BA%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=？</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=。</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>metadata-正确性检验（文本类型）<a name="metadata-%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A3%80%E9%AA%8C%EF%BC%88%E6%96%87%E6%9C%AC%E7%B1%BB%E5%9E%8B%EF%BC%89"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/trx/metadata</td><td>POST</td><td>resourceId=97b112d-59cd-4434-93ae-ecd36b58c784112&amp;storageLocationCode=LOCAL_WINDOWS&amp;fileName=test.txt&amp;contentType=text%2Fplain</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/static/trx/metadata</td><td>POST</td><td>resourceId=678dbd-5dcd-1129xudncudae-ec789ss112&amp;storageLocationCode=LOCAL_WINDOWS&amp;fileName=aa.txt&amp;contentType=text%2Fplain</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>metadata-正确性检验（图片类型）<a name="metadata-%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A3%80%E9%AA%8C%EF%BC%88%E5%9B%BE%E7%89%87%E7%B1%BB%E5%9E%8B%EF%BC%89"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/trx/metadata</td><td>POST</td><td>resourceId=97b112d-59cd-4112-93ae-ecd36b58c784112&amp;storageLocationCode=LOCAL_WINDOWS&amp;fileName=test.png&amp;contentType=image%2Fpng</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/static/trx/metadata</td><td>POST</td><td>resourceId=97babdd-59cd-44saw11293ae-ecd36b58c112&amp;storageLocationCode=LOCAL_WINDOWS&amp;fileName=b.png&amp;contentType=image%2Fpng</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>metadata-正确性检验（音频类型）<a name="metadata-%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A3%80%E9%AA%8C%EF%BC%88%E9%9F%B3%E9%A2%91%E7%B1%BB%E5%9E%8B%EF%BC%89"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/trx/metadata</td><td>POST</td><td>resourceId=97b2255d-112cd-4112-93ae-ecdb58c784112&amp;storageLocationCode=LOCAL_WINDOWS&amp;fileName=test.wav&amp;contentType=audio%2Fwav</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/static/trx/metadata</td><td>POST</td><td>resourceId=97bsvdsg112d-59cd-4434-93ae-ec7rhf84ssc112&amp;storageLocationCode=LOCAL_WINDOWS&amp;fileName=a.wav&amp;contentType=audio%2Fwav</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>metadata-storageLocationCode缺失<a name="metadata-storageLocationCode%E7%BC%BA%E5%A4%B1"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/trx/metadata</td><td>POST</td><td>resourceId=97b2255d-59cd-4434-93ae-ecd36b58c784112&amp;fileName=test.txt&amp;contentType=text%2Fplain</td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/static/trx/metadata</td><td>POST</td><td>resourceId=678db2255d-59cd-4434-93ae-ec789ssc112&amp;fileName=aa.txt&amp;contentType=text%2Fplain</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>metadata-storageLocationCode为空<a name="metadata-storageLocationCode%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/trx/metadata</td><td>POST</td><td>resourceId=97b2255d-59cd-4434-93ae-ecd36b58c784112&amp;storageLocationCode=&amp;fileName=test.txt&amp;contentType=text%2Fplain</td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/static/trx/metadata</td><td>POST</td><td>resourceId=678db2255d-59cd-4434-93ae-ec789ssc112&amp;storageLocationCode=&amp;fileName=aa.txt&amp;contentType=text%2Fplain</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>metadata-storageLocationCode为空格<a name="metadata-storageLocationCode%E4%B8%BA%E7%A9%BA%E6%A0%BC"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/trx/metadata</td><td>POST</td><td>resourceId=97b2255d-59cd-4434-93ae-ecd36b58c784112&amp;storageLocationCode=+&amp;fileName=test.txt&amp;contentType=text%2Fplain</td><td>500 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/static/trx/metadata</td><td>POST</td><td>resourceId=678db2255d-59cd-4434-93ae-ec789ssc112&amp;storageLocationCode=+&amp;fileName=aa.txt&amp;contentType=text%2Fplain</td><td>500 - </td><td></td>
+</tr>
+</table>
+<h3>resource-正确性资源（上传文本文档）<a name="resource-%E6%AD%A3%E7%A1%AE%E6%80%A7%E8%B5%84%E6%BA%90%EF%BC%88%E4%B8%8A%E4%BC%A0%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3%EF%BC%89"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/trx/resource</td><td>POST</td><td>--0qGbKFgEg57oIT8AsyxCbI_oz0qniOSCw0qEc4&#13;
+Content-Disposition: form-data; name="storageLocCode"&#13;
+Content-Type: text/plain; charset=US-ASCII&#13;
+Content-Transfer-Encoding: 8bit&#13;
+&#13;
+LOCAL_WINDOWS&#13;
+--0qGbKFgEg57oIT8AsyxCbI_oz0qniOSCw0qEc4&#13;
+Content-Disposition: form-data; name="fileName"; filename="test.txt"&#13;
+Content-Type: text/plain&#13;
+Content-Transfer-Encoding: binary&#13;
+&#13;
+&lt;actual file content, not shown here&gt;&#13;
+--0qGbKFgEg57oIT8AsyxCbI_oz0qniOSCw0qEc4--&#13;
+</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>resource-正确性资源（上传图片资源）<a name="resource-%E6%AD%A3%E7%A1%AE%E6%80%A7%E8%B5%84%E6%BA%90%EF%BC%88%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E8%B5%84%E6%BA%90%EF%BC%89"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/trx/resource</td><td>POST</td><td>--KbNdE-VQwaf3bEfYCwmJi2U__tOG-i3jpV&#13;
+Content-Disposition: form-data; name="storageLocCode"&#13;
+Content-Type: text/plain; charset=US-ASCII&#13;
+Content-Transfer-Encoding: 8bit&#13;
+&#13;
+LOCAL_WINDOWS&#13;
+--KbNdE-VQwaf3bEfYCwmJi2U__tOG-i3jpV&#13;
+Content-Disposition: form-data; name="fileName"; filename="aaa.png"&#13;
+Content-Type: image/png&#13;
+Content-Transfer-Encoding: binary&#13;
+&#13;
+&lt;actual file content, not shown here&gt;&#13;
+--KbNdE-VQwaf3bEfYCwmJi2U__tOG-i3jpV--&#13;
+</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/static/trx/resource</td><td>POST</td><td>--agx0OaKOwOflJs9OltyCNZmgp0fTP6agqwmVF5R&#13;
+Content-Disposition: form-data; name="storageLocCode"&#13;
+Content-Type: text/plain; charset=US-ASCII&#13;
+Content-Transfer-Encoding: 8bit&#13;
+&#13;
+LOCAL_WINDOWS&#13;
+--agx0OaKOwOflJs9OltyCNZmgp0fTP6agqwmVF5R&#13;
+Content-Disposition: form-data; name="fileName"; filename="aaa.png"&#13;
+Content-Type: image/png&#13;
+Content-Transfer-Encoding: binary&#13;
+&#13;
+&lt;actual file content, not shown here&gt;&#13;
+--agx0OaKOwOflJs9OltyCNZmgp0fTP6agqwmVF5R--&#13;
+</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>resource-storageLocCode缺失<a name="resource-storageLocCode%E7%BC%BA%E5%A4%B1"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/trx/resource</td><td>POST</td><td>--l9C5oIcEaxe7Rk1YbTCrcS0Nwa5-WmZ&#13;
+Content-Disposition: form-data; name="fileName"; filename="test.txt"&#13;
+Content-Type: text/plain&#13;
+Content-Transfer-Encoding: binary&#13;
+&#13;
+&lt;actual file content, not shown here&gt;&#13;
+--l9C5oIcEaxe7Rk1YbTCrcS0Nwa5-WmZ--&#13;
+</td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/static/trx/resource</td><td>POST</td><td>--8hGj4bV-xznM6yESkaYZGsFH1010LK4tdPfUm&#13;
+Content-Disposition: form-data; name="fileName"; filename="test.txt"&#13;
+Content-Type: text/plain&#13;
+Content-Transfer-Encoding: binary&#13;
+&#13;
+&lt;actual file content, not shown here&gt;&#13;
+--8hGj4bV-xznM6yESkaYZGsFH1010LK4tdPfUm--&#13;
+</td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>resource-正确性检验（下载图片性资源并裁剪其大小）<a name="resource-%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A3%80%E9%AA%8C%EF%BC%88%E4%B8%8B%E8%BD%BD%E5%9B%BE%E7%89%87%E6%80%A7%E8%B5%84%E6%BA%90%E5%B9%B6%E8%A3%81%E5%89%AA%E5%85%B6%E5%A4%A7%E5%B0%8F%EF%BC%89"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/trx/resource?resourceId=bafaed96-c597-4c7f-a00a-7de524cf2b75&amp;resolution=200_500</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/static/trx/resource?resourceId=c7ad6cb8-9f36-4af4-901e-cbae6b9d9b89&amp;resolution=200_500</td><td>GET</td><td></td><td>200 - </td><td></td>
+</tr>
+</table>
+<h3>resource-正确性检验（仅下载）<a name="resource-%E6%AD%A3%E7%A1%AE%E6%80%A7%E6%A3%80%E9%AA%8C%EF%BC%88%E4%BB%85%E4%B8%8B%E8%BD%BD%EF%BC%89"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://ubjchinastagingstorage.blob.core.chinacloudapi.cn/userdata/resources/c/c7ad6cb8-9f36-4af4-901e-cbae6b9d9b89</td><td>GET</td><td></td><td>200 - OK</td><td></td>
+</tr>
+</table>
+<h3>resource-resourceId缺失<a name="resource-resourceId%E7%BC%BA%E5%A4%B1"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/sec/trx/resource</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/static/trx/resource</td><td>GET</td><td></td><td>400 - </td><td></td>
+</tr>
+</table>
+<h3>resource-正确性资源（上传文本文件）<a name="resource-%E6%AD%A3%E7%A1%AE%E6%80%A7%E8%B5%84%E6%BA%90%EF%BC%88%E4%B8%8A%E4%BC%A0%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%EF%BC%89"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>Request</th><th>Method</th><th>Parameters</th><th>Response Code</th><th>Sucess Message</th>
+</tr>
+<tr>
+<td>https://staging.zhishinet.com/api/zcommon/v1/static/trx/resource</td><td>POST</td><td>--CWhFBT97_fp6NRCseecIunTvOGS91ypW_XQS1b4x&#13;
+Content-Disposition: form-data; name="storageLocCode"&#13;
+Content-Type: text/plain; charset=US-ASCII&#13;
+Content-Transfer-Encoding: 8bit&#13;
+&#13;
+LOCAL_WINDOWS&#13;
+--CWhFBT97_fp6NRCseecIunTvOGS91ypW_XQS1b4x&#13;
+Content-Disposition: form-data; name="fileName"; filename="test.txt"&#13;
+Content-Type: text/plain&#13;
+Content-Transfer-Encoding: binary&#13;
+&#13;
+&lt;actual file content, not shown here&gt;&#13;
+--CWhFBT97_fp6NRCseecIunTvOGS91ypW_XQS1b4x--&#13;
+</td><td>200 - </td><td></td>
+</tr>
+</table>
+</body>
+</html>

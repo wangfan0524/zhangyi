@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="2302" it="0" lt="2254" ts="1509461069283" s="true" lb="getToken" rc="200" rm="" tn="学生app 1-1" dt="text" by="1774" sby="289" ng="1" na="1">
+  <sample t="1" it="0" lt="0" ts="1509461071584" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="学生app 1-1" dt="text" by="1410" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;TECH0002&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://www.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="658" it="0" lt="658" ts="1509461071593" s="true" lb="getClassWithSubject正确性校验" rc="200" rm="" tn="学生app 1-1" dt="text" by="454" sby="255" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/app-student/v1/sec/getClassWithSubject</java.net.URL>
+</httpSample>
+<httpSample t="499" it="0" lt="499" ts="1509461072255" s="true" lb="getTextbookStatus 正确性校验" rc="200" rm="" tn="学生app 1-1" dt="text" by="403" sby="283" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/app-student/v1/sec/getTextbookStatus?subjectId=1&amp;globalSessionId=1</java.net.URL>
+</httpSample>
+<httpSample t="192" it="0" lt="192" ts="1509461072755" s="true" lb="getDefaultOption获取默认课本正确性校验" rc="200" rm="" tn="学生app 1-1" dt="" by="249" sby="252" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/app-student/v1/sec/getDefaultOption</java.net.URL>
+</httpSample>
+<httpSample t="178" it="0" lt="178" ts="1509461072947" s="true" lb="getTextbooks正确性校验" rc="200" rm="" tn="学生app 1-1" dt="text" by="302" sby="278" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/app-student/v1/sec/getTextbooks?subjectId=1&amp;globalSessionId=1</java.net.URL>
+</httpSample>
+<httpSample t="247" it="0" lt="247" ts="1509461073126" s="true" lb="currentAssessments获取当前作业列表 正确性校验" rc="200" rm="" tn="学生app 1-1" dt="" by="249" sby="314" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/app-student/v1/sec/currentAssessments?page=1&amp;pageSize=10&amp;statusIds=3&amp;sessionIds=2624&amp;subjectIds=1</java.net.URL>
+</httpSample>
+<httpSample t="252" it="0" lt="252" ts="1509461073375" s="true" lb="getSpecificAssessment 获取特定作业状态信息正确性校验" rc="200" rm="" tn="学生app 1-1" dt="" by="249" sby="291" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/app-student/v1/sec/getSpecificAssessment?assessmentId=14344&amp;sessionId=2624</java.net.URL>
+</httpSample>
+<httpSample t="493" it="0" lt="493" ts="1509461073628" s="true" lb="historyAssessments获取历史作业列表 正确性校验" rc="200" rm="" tn="学生app 1-1" dt="" by="249" sby="314" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/app-student/v1/sec/historyAssessments?page=1&amp;pagesize=10&amp;statusIds=3&amp;sessionIds=2624&amp;subjectIds=1</java.net.URL>
+</httpSample>
+<httpSample t="176" it="0" lt="176" ts="1509461074123" s="true" lb="getCurriculums-获取练习册列表 正确性校验" rc="200" rm="" tn="学生app 1-1" dt="text" by="1355" sby="278" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/app-student/v1/sec/getCurriculums?textbookId=1&amp;sessionId=2624</java.net.URL>
+</httpSample>
+<httpSample t="306" it="0" lt="306" ts="1509461074301" s="true" lb="getCourses-获取单元列表 正确性校验" rc="200" rm="" tn="学生app 1-1" dt="text" by="1817" sby="278" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/app-student/v1/sec/getCourses?sessionId=2624&amp;curriculumId=225</java.net.URL>
+</httpSample>
+<httpSample t="154" it="0" lt="154" ts="1509461074608" s="true" lb="getCourseSummary-获取精通状态 正确性校验" rc="200" rm="" tn="学生app 1-1" dt="text" by="302" sby="281" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/app-student/v1/sec/getCourseSummary?sessionId=2624&amp;courseId=2058</java.net.URL>
+</httpSample>
+<httpSample t="233" it="0" lt="233" ts="1509461074763" s="true" lb="getSectionAndModuleOfOneCourse-获取单元练习列表 正确性校验" rc="200" rm="" tn="学生app 1-1" dt="text" by="5274" sby="295" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/app-student/v1/sec/getSectionAndModuleOfOneCourse?sessionId=2624&amp;courseId=2058</java.net.URL>
+</httpSample>
+<httpSample t="195" it="0" lt="195" ts="1509461074997" s="true" lb="getAssessmentDetails-获取练习完成情况 正确性校验" rc="200" rm="" tn="学生app 1-1" dt="text" by="302" sby="319" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/app-student/v1/sec/getAssessmentDetails?assessmentId=13554&amp;sessionId=2624&amp;moduleId=29950&amp;courseId=2058</java.net.URL>
+</httpSample>
+<httpSample t="243" it="0" lt="243" ts="1509461075193" s="true" lb="getPlaylistScoreInfo-练习成绩报告页 正确性校验" rc="200" rm="" tn="学生app 1-1" dt="text" by="6645" sby="401" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/app-student/v1/sec/getPlaylistScoreInfo?courseId=2058&amp;moduleId=29950&amp;userId=5878&amp;attemptNo=5&amp;isReview=false&amp;assessmentId=13554&amp;isPreview=0&amp;sessionId=2624&amp;sessionUserTrackingId=50142165</java.net.URL>
+</httpSample>
+<httpSample t="178" it="0" lt="178" ts="1509461075437" s="true" lb="getPlaylistVideoList-练习成绩报告页微视频列表 正确性校验" rc="500" rm="" tn="学生app 1-1" dt="text" by="350" sby="402" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/app-student/v1/sec/getPlaylistVideoList?isReview=false&amp;userId=10644&amp;moduleId=29835&amp;assessmentId=11584&amp;attemptNo=1&amp;sessionUserTrackingId=50142351&amp;sessionId=2624&amp;courseId=2058&amp;isPreview=0</java.net.URL>
+</httpSample>
+<httpSample t="182" it="0" lt="182" ts="1509461075616" s="true" lb="getuser-获取用户信息 正确性校验" rc="200" rm="" tn="学生app 1-1" dt="text" by="858" sby="249" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/app-student/v2/sec/users/student</java.net.URL>
+</httpSample>
+<httpSample t="294" it="0" lt="294" ts="1509461075799" s="true" lb="getTotalCoinsAndExp-获取用户芝士币，经验" rc="200" rm="" tn="学生app 1-1" dt="text" by="365" sby="255" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/app-student/v1/sec/getTotalCoinsAndExp</java.net.URL>
+</httpSample>
+<httpSample t="417" it="0" lt="417" ts="1509461076094" s="true" lb="getHomeworkScoreInfo-作业成绩报告页" rc="200" rm="" tn="学生app 1-1" dt="text" by="7131" sby="354" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/app-student/v1/sec/getHomeworkScoreInfo?sessionId=2624&amp;homeworkAssessmentId=14295&amp;userId=5878&amp;isReview=false&amp;sessionUserTrackingId=799811</java.net.URL>
+</httpSample>
+<httpSample t="191" it="0" lt="191" ts="1509461076512" s="true" lb="getHomeworkVideoList-作业成绩报告页微视频列表" rc="200" rm="" tn="学生app 1-1" dt="" by="249" sby="366" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/app-student/v1/sec/getHomeworkVideoList?userId=60136&amp;isReview=true&amp;sessionId=2624&amp;homeworkAssessmentId=14427&amp;sessionUserTrackingId=815630&amp;subjectId=2</java.net.URL>
+</httpSample>
+
+</testResults>

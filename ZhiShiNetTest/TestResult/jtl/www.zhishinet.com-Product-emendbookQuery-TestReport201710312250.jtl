@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="1606" it="0" lt="1585" ts="1509461449085" s="true" lb="getToken" rc="200" rm="" tn="错题本 1-1" dt="text" by="1544" sby="289" ng="1" na="1">
+  <sample t="2" it="0" lt="0" ts="1509461450689" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="错题本 1-1" dt="text" by="1181" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;TECH0002&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://www.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="203" it="0" lt="203" ts="1509461450704" s="true" lb="getErrorBookList-根据条件查询错题列表（组合查询）" rc="200" rm="" tn="错题本 1-1" dt="text" by="1904" sby="443" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1509461450907" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="错题本 1-1" dt="text" by="1583" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;orderBy=answerDate&amp;isCorrect=&amp;assessmentOwnerIdList=3173,3177,3519&amp;assessmentQuestionTaxonomyTypeList=2,3&amp;homeworkTextbookId=11&amp;unitIdList=84,88&amp;isFavoured=false&amp;page=1&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="147" it="0" lt="147" ts="1509461450912" s="true" lb="getErrorTextbook-获取当前用户某一学科错题课本（subjectId=1英语）" rc="200" rm="" tn="错题本 1-1" dt="text" by="1699" sby="262" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1509461451059" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="错题本 1-1" dt="text" by="1398" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/emendbook/v1/sec/getErrorTextbook?subjectId=1</java.net.URL>
+</httpSample>
+<httpSample t="139" it="0" lt="138" ts="1509461451060" s="true" lb="getErrorTextbook-获取当前用户某一学科错题课本（subjectId=2数学）" rc="200" rm="" tn="错题本 1-1" dt="text" by="1700" sby="262" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1509461451198" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="错题本 1-1" dt="text" by="1399" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/emendbook/v1/sec/getErrorTextbook?subjectId=2</java.net.URL>
+</httpSample>
+<httpSample t="432" it="0" lt="432" ts="1509461451199" s="true" lb="getErrorUserKnowledge-获取用户某一学科错题知识点（subjectId=1英语）" rc="200" rm="" tn="错题本 1-1" dt="text" by="1708" sby="267" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1509461451631" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="错题本 1-1" dt="text" by="1407" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/emendbook/v1/sec/getErrorUserKnowledge?subjectId=1</java.net.URL>
+</httpSample>
+<httpSample t="172" it="0" lt="172" ts="1509461451632" s="true" lb="getErrorUserKnowledge-获取用户某一学科错题知识点（subjectId=2数学）" rc="200" rm="" tn="错题本 1-1" dt="text" by="1708" sby="267" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1509461451804" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="错题本 1-1" dt="text" by="1407" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/emendbook/v1/sec/getErrorUserKnowledge?subjectId=2</java.net.URL>
+</httpSample>
+<httpSample t="166" it="0" lt="166" ts="1509461451805" s="true" lb="getFavouredCount-获取收藏专练错题数量（subjectId为1（英语））" rc="200" rm="" tn="错题本 1-1" dt="text" by="1751" sby="262" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1509461451971" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="错题本 1-1" dt="text" by="1396" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/emendbook/v1/sec/getFavouredCount?subjectId=1</java.net.URL>
+</httpSample>
+<httpSample t="151" it="0" lt="150" ts="1509461451972" s="true" lb="getFavouredCount-获取收藏专练错题数量（subjectId为2（数学））" rc="200" rm="" tn="错题本 1-1" dt="text" by="1751" sby="262" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1509461452123" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="错题本 1-1" dt="text" by="1396" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/emendbook/v1/sec/getFavouredCount?subjectId=2</java.net.URL>
+</httpSample>
+<httpSample t="187" it="0" lt="187" ts="1509461452124" s="true" lb="getArticleCount-获取阅读专练错题数量（subjectId为1（英语））" rc="200" rm="" tn="错题本 1-1" dt="text" by="1695" sby="261" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1509461452311" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="错题本 1-1" dt="text" by="1394" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/emendbook/v1/sec/getArticleCount?subjectId=1</java.net.URL>
+</httpSample>
+<httpSample t="189" it="0" lt="189" ts="1509461452312" s="true" lb="getEmendbookScoreInfo错题练习成绩查询" rc="200" rm="" tn="错题本 1-1" dt="text" by="2037" sby="273" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1509461452501" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="错题本 1-1" dt="text" by="1383" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/emendbook/v1/sec/getEmendbookScoreInfo?practiceId=775619</java.net.URL>
+</httpSample>
+<httpSample t="174" it="0" lt="173" ts="1509461452502" s="true" lb="getPractice-获取练习题目接口-正确性校验-英语（feature=1）" rc="200" rm="" tn="错题本 1-1" dt="text" by="2305" sby="492" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1509461452676" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="错题本 1-1" dt="text" by="1632" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 1,&#xd;
+    &quot;subjectId&quot;: 1,&#xd;
+    &quot;unitIdList&quot;: [],&#xd;
+    &quot;assessmentOwnerIdList&quot;: [],&#xd;
+    &quot;assessmentQuestionTaxonomyTypeList&quot;: [],&#xd;
+    &quot;isFavoured&quot;: false,&#xd;
+    &quot;isCorrect&quot;: &quot;&quot;,&#xd;
+    &quot;orderBy&quot;: &quot;answerDate&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://www.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="160" it="0" lt="160" ts="1509461452678" s="true" lb="getPractice-获取练习题目接口-正确性校验-数学（feature=1）" rc="200" rm="" tn="错题本 1-1" dt="text" by="2305" sby="492" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1509461452838" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="错题本 1-1" dt="text" by="1632" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 1,&#xd;
+    &quot;subjectId&quot;: 2,&#xd;
+    &quot;unitIdList&quot;: [],&#xd;
+    &quot;assessmentOwnerIdList&quot;: [],&#xd;
+    &quot;assessmentQuestionTaxonomyTypeList&quot;: [],&#xd;
+    &quot;isFavoured&quot;: false,&#xd;
+    &quot;isCorrect&quot;: &quot;&quot;,&#xd;
+    &quot;orderBy&quot;: &quot;answerDate&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://www.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="149" it="0" lt="149" ts="1509461452839" s="true" lb="getPractice正-获取练习题目接口-确性校验-英语(feature=2)" rc="200" rm="" tn="错题本 1-1" dt="text" by="2169" sby="311" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1509461452988" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="错题本 1-1" dt="text" by="1496" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 2,&#xd;
+    &quot;subjectId&quot;: 1&#xd;
+&#xd;
+}</queryString>
+  <java.net.URL>https://www.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="153" it="0" lt="152" ts="1509461452989" s="true" lb="getPractice-获取练习题目接口-正确性校验-数学(feature=2)" rc="200" rm="" tn="错题本 1-1" dt="text" by="2171" sby="311" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1509461453141" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="错题本 1-1" dt="text" by="1496" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 2,&#xd;
+    &quot;subjectId&quot;: 2&#xd;
+&#xd;
+}</queryString>
+  <java.net.URL>https://www.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="180" it="0" lt="180" ts="1509461453143" s="true" lb="getPractice-获取练习题目接口-正确性校验-英语（feature=3）" rc="200" rm="" tn="错题本 1-1" dt="text" by="2149" sby="335" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1509461453323" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="错题本 1-1" dt="text" by="1476" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 3,&#xd;
+    &quot;subjectId&quot;: 1,&#xd;
+    &quot;unitIdList&quot;: [431]&#xd;
+}</queryString>
+  <java.net.URL>https://www.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="683" it="0" lt="682" ts="1509461453324" s="true" lb="getPractice-获取练习题目接口-正确性校验-数学（feature=3）" rc="200" rm="" tn="错题本 1-1" dt="text" by="2149" sby="335" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1509461454007" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="错题本 1-1" dt="text" by="1476" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 3,&#xd;
+    &quot;subjectId&quot;: 2,&#xd;
+    &quot;unitIdList&quot;: [431]&#xd;
+}</queryString>
+  <java.net.URL>https://www.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="176" it="0" lt="176" ts="1509461454008" s="true" lb="getPractice-获取练习题目接口-正确性校验(feature=4)" rc="200" rm="" tn="错题本 1-1" dt="text" by="2122" sby="313" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1509461454184" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="错题本 1-1" dt="text" by="1447" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 4,&#xd;
+  &#xd;
+&quot;questionTypeId&quot;:9&#xd;
+}</queryString>
+  <java.net.URL>https://www.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="179" it="0" lt="177" ts="1509461454185" s="true" lb="getPractice-获取练习题目接口-正确性校验-英语(feature=5)" rc="200" rm="" tn="错题本 1-1" dt="text" by="2123" sby="311" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1509461454363" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="错题本 1-1" dt="text" by="1450" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">&#xd;
+{&#xd;
+    &quot;feature&quot;: 5,&#xd;
+    &quot;subjectId&quot;: 1&#xd;
+}</queryString>
+  <java.net.URL>https://www.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="184" it="0" lt="183" ts="1509461454367" s="true" lb="getPractice-获取练习题目接口-正确性校验-数学(feature=5)" rc="200" rm="" tn="错题本 1-1" dt="text" by="2123" sby="311" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1509461454551" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="错题本 1-1" dt="text" by="1450" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">&#xd;
+{&#xd;
+    &quot;feature&quot;: 5,&#xd;
+    &quot;subjectId&quot;: 2&#xd;
+}</queryString>
+  <java.net.URL>https://www.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="175" it="0" lt="175" ts="1509461454551" s="true" lb="getPractice-获取练习题目接口-正确性校验（feature=6）" rc="200" rm="" tn="错题本 1-1" dt="" by="1698" sby="314" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1509461454726" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="错题本 1-1" dt="text" by="1450" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">&#xd;
+{&#xd;
+    &quot;feature&quot;: 6,&#xd;
+    &quot;practiceId&quot;:1539&#xd;
+}</queryString>
+  <java.net.URL>https://www.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="279" it="0" lt="279" ts="1509461454726" s="true" lb="getErrorHomepageCount获取错题首页错题数量" rc="200" rm="" tn="错题本 1-1" dt="text" by="1738" sby="267" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1509461455005" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="错题本 1-1" dt="text" by="1381" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/emendbook/v1/sec/getErrorHomepageCount?subjectId=1</java.net.URL>
+</httpSample>
+<httpSample t="199" it="0" lt="198" ts="1509461455006" s="true" lb="getMicroVideo获取错题微视频" rc="200" rm="" tn="错题本 1-1" dt="text" by="3646" sby="815" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1509461455204" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="错题本 1-1" dt="text" by="1924" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">[&#xd;
+    {&#xd;
+        &quot;questionId&quot;: 133877,&#xd;
+        &quot;questId&quot;: 1&#xd;
+    },&#xd;
+    {&#xd;
+        &quot;questionId&quot;: 253980,&#xd;
+        &quot;questId&quot;: 2&#xd;
+    },&#xd;
+    {&#xd;
+        &quot;questionId&quot;: 94327,&#xd;
+        &quot;questId&quot;: 3&#xd;
+    },&#xd;
+    {&#xd;
+        &quot;questionId&quot;: 228660,&#xd;
+        &quot;questId&quot;: 4&#xd;
+    },&#xd;
+    {&#xd;
+        &quot;questionId&quot;: 143955,&#xd;
+        &quot;questId&quot;: 5&#xd;
+    },&#xd;
+    {&#xd;
+        &quot;questionId&quot;: 272350,&#xd;
+        &quot;questId&quot;: 6&#xd;
+    },&#xd;
+    {&#xd;
+        &quot;questionId&quot;: 137124,&#xd;
+        &quot;questId&quot;: 7&#xd;
+    },&#xd;
+    {&#xd;
+        &quot;questionId&quot;: 125046,&#xd;
+        &quot;questId&quot;: 8&#xd;
+    }&#xd;
+]</queryString>
+  <java.net.URL>https://www.zhishinet.com/api/emendbook/v1/sec/getMicroVideo</java.net.URL>
+</httpSample>
+
+</testResults>

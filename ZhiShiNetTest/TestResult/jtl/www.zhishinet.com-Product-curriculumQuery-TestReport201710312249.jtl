@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="2029" it="0" lt="1993" ts="1509461400788" s="true" lb="getToken" rc="200" rm="" tn="练习册 1-1" dt="text" by="1544" sby="289" ng="1" na="1">
+  <sample t="3" it="0" lt="0" ts="1509461402814" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="练习册 1-1" dt="text" by="1181" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;TECH0002&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://www.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="182" it="0" lt="182" ts="1509461402829" s="true" lb="getSubjectList-获取学科列表" rc="200" rm="" tn="练习册 1-1" dt="text" by="1886" sby="258" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1509461403011" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="练习册 1-1" dt="text" by="1358" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/course/v1/sec/getSubjectList?roleTypeId=1</java.net.URL>
+</httpSample>
+<httpSample t="305" it="0" lt="303" ts="1509461403015" s="true" lb="getCourseLastQuery-获取练习册上一次用户查询条件列表" rc="200" rm="" tn="练习册 1-1" dt="text" by="1704" sby="277" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="2" it="0" lt="0" ts="1509461403318" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="练习册 1-1" dt="text" by="1403" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/course/v1/sec/getCourseLastQuery?courseSessionId=&amp;subjectId=</java.net.URL>
+</httpSample>
+<httpSample t="1077" it="0" lt="986" ts="1509461403326" s="true" lb="getCourseCurriculumList-获取所有课本以及课本下练习册列表" rc="200" rm="" tn="练习册 1-1" dt="text" by="36196" sby="292" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1509461404403" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="练习册 1-1" dt="text" by="1425" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/course/v1/sec/getCourseCurriculumList?pageSize=0&amp;sessionId=2624&amp;subjectId=1</java.net.URL>
+</httpSample>
+<httpSample t="180" it="0" lt="180" ts="1509461404404" s="true" lb="getCourseList-获取练习册单元列表" rc="200" rm="" tn="练习册 1-1" dt="text" by="1727" sby="297" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1509461404584" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="练习册 1-1" dt="text" by="1406" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/course/v1/sec/getCourseList?sessionId=2624&amp;curriculumId=554&amp;orderBy=DisplayOrder</java.net.URL>
+</httpSample>
+<httpSample t="367" it="0" lt="367" ts="1509461404585" s="true" lb="getCourseSectionAndModuleList-获取练习题目列表和小结" rc="200" rm="" tn="练习册 1-1" dt="text" by="7129" sby="349" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1509461404952" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="练习册 1-1" dt="text" by="1484" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/course/v1/sec/getCourseSectionAndModuleList?userId=105724&amp;courseId=2821&amp;currentPage=1&amp;pageSize=0&amp;orderBy=DisplayOrder&amp;sessionId=2624</java.net.URL>
+</httpSample>
+<httpSample t="176" it="0" lt="176" ts="1509461404953" s="true" lb="getCourseSectionAvgScore-获取练习题目平均分" rc="200" rm="" tn="练习册 1-1" dt="text" by="1740" sby="299" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1509461405129" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="练习册 1-1" dt="text" by="1418" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/course/v1/sec/getCourseSectionAvgScore?moduleId=26058&amp;sessionId=2624&amp;courseId=2821</java.net.URL>
+</httpSample>
+<httpSample t="687" it="0" lt="686" ts="1509461405130" s="true" lb="getCourseBookList-获取练习科目列表" rc="200" rm="" tn="练习册 1-1" dt="text" by="6167" sby="300" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1509461405817" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="练习册 1-1" dt="text" by="1413" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/course/v1/sec/getCourseBookList?subjectId=1&amp;userId=105724&amp;currentPage=1&amp;pageSize=10</java.net.URL>
+</httpSample>
+<httpSample t="176" it="0" lt="176" ts="1509461405818" s="true" lb="getCourseKnowledgeSummary-获取练习册学情概要" rc="200" rm="" tn="练习册 1-1" dt="text" by="1819" sby="285" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1509461405994" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="练习册 1-1" dt="text" by="1404" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/course/v1/sec/getCourseKnowledgeSummary?courseId=1172&amp;sessionId=2624</java.net.URL>
+</httpSample>
+<httpSample t="161" it="0" lt="161" ts="1509461405996" s="true" lb="getCourseSectionList-获取练习册单元小结" rc="200" rm="" tn="练习册 1-1" dt="text" by="1770" sby="286" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1509461406157" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="练习册 1-1" dt="text" by="1400" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/course/v1/sec/getCourseSectionList?courseId=2821&amp;orderBy=DisplayOrder</java.net.URL>
+</httpSample>
+<httpSample t="167" it="0" lt="164" ts="1509461406158" s="true" lb="getModuleList-获取练习题目列表" rc="200" rm="" tn="练习册 1-1" dt="text" by="1766" sby="332" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1509461406324" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="练习册 1-1" dt="text" by="1445" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/course/v1/sec/getModuleList?sectionId=1&amp;userId=105724&amp;currentPage=1&amp;pageSize=10&amp;orderBy=DisplayOrder&amp;sessionId=2624</java.net.URL>
+</httpSample>
+<httpSample t="176" it="0" lt="176" ts="1509461406328" s="true" lb="getModuleAndTrackingDetail-获取单个练习题" rc="200" rm="" tn="练习册 1-1" dt="text" by="1702" sby="288" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1509461406504" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="练习册 1-1" dt="text" by="1401" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://www.zhishinet.com/api/course/v1/sec/getModuleAndTrackingDetail?sessionUserTrackingId=56417412</java.net.URL>
+</httpSample>
+
+</testResults>

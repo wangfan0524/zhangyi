@@ -1,0 +1,1417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="2950" it="0" lt="2947" ts="1528717802243" s="true" lb="getToken" rc="200" rm="" tn="getServerTime获取服务器时间 1-1" dt="text" by="364" sby="293" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000012&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="398" it="0" lt="398" ts="1528717805241" s="true" lb="getServerTime-正确性校验" rc="200" rm="" tn="getServerTime获取服务器时间 1-1" dt="text" by="324" sby="245" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/getServerTime</java.net.URL>
+</httpSample>
+<httpSample t="710" it="0" lt="710" ts="1528717805697" s="true" lb="getToken" rc="200" rm="" tn="sendMessage非sec发送验证码 2-1" dt="text" by="364" sby="293" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000012&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="488" it="0" lt="488" ts="1528717806409" s="true" lb="sendMessage正确性校验-BindPhoneNumber" rc="200" rm="" tn="sendMessage非sec发送验证码 2-1" dt="text" by="250" sby="287" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=3</java.net.URL>
+</httpSample>
+<httpSample t="139" it="0" lt="138" ts="1528717806910" s="true" lb="sendMessage正确性校验-UnbindPhoneNumber" rc="400" rm="" tn="sendMessage非sec发送验证码 2-1" dt="text" by="293" sby="287" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=4</java.net.URL>
+</httpSample>
+<httpSample t="75" it="0" lt="75" ts="1528717807059" s="true" lb="sendMessage-ubUserSMSConfigId为空" rc="500" rm="" tn="sendMessage非sec发送验证码 2-1" dt="text" by="413" sby="286" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1528717807140" s="true" lb="sendMessage-ubUserSMSConfigId为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 99: https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=  " tn="sendMessage非sec发送验证码 2-1" dt="text" by="1104" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=  </java.net.URL>
+</httpSample>
+<httpSample t="71" it="0" lt="71" ts="1528717807168" s="true" lb="sendMessage-ubUserSMSConfigId为a-z的字符串" rc="400" rm="" tn="sendMessage非sec发送验证码 2-1" dt="text" by="603" sby="291" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=phone</java.net.URL>
+</httpSample>
+<httpSample t="73" it="0" lt="73" ts="1528717807242" s="true" lb="sendMessage-ubUserSMSConfigId为中文" rc="400" rm="" tn="sendMessage非sec发送验证码 2-1" dt="text" by="604" sby="304" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=验证</java.net.URL>
+</httpSample>
+<httpSample t="73" it="0" lt="73" ts="1528717807323" s="true" lb="sendMessage-ubUserSMSConfigId为特殊字符" rc="400" rm="" tn="sendMessage非sec发送验证码 2-1" dt="text" by="599" sby="287" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=$</java.net.URL>
+</httpSample>
+<httpSample t="71" it="0" lt="71" ts="1528717807400" s="true" lb="sendMessage-ubUserSMSConfigId为数学符号" rc="400" rm="" tn="sendMessage非sec发送验证码 2-1" dt="text" by="599" sby="287" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId==</java.net.URL>
+</httpSample>
+<httpSample t="69" it="0" lt="69" ts="1528717807474" s="true" lb="sendMessage-ubUserSMSConfigId为标点符号" rc="400" rm="" tn="sendMessage非sec发送验证码 2-1" dt="text" by="601" sby="295" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=，</java.net.URL>
+</httpSample>
+<httpSample t="78" it="0" lt="78" ts="1528717807545" s="true" lb="sendMessage-phoneNumber位数不正确" rc="500" rm="" tn="sendMessage非sec发送验证码 2-1" dt="text" by="432" sby="286" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=1371111666&amp;ubUserSMSConfigId=3</java.net.URL>
+</httpSample>
+<httpSample t="75" it="0" lt="75" ts="1528717807626" s="true" lb="sendMessage-phoneNumber为空" rc="500" rm="" tn="sendMessage非sec发送验证码 2-1" dt="text" by="413" sby="276" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=&amp;ubUserSMSConfigId=3</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1528717807703" s="true" lb="sendMessage-phoneNumber为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 69: https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=  &amp;ubUserSMSConfigId=3" tn="sendMessage非sec发送验证码 2-1" dt="text" by="1094" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=  &amp;ubUserSMSConfigId=3</java.net.URL>
+</httpSample>
+<httpSample t="356" it="0" lt="356" ts="1528717807706" s="true" lb="sendMessage-phoneNumber为a-z的字符串" rc="500" rm="" tn="sendMessage非sec发送验证码 2-1" dt="text" by="432" sby="280" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=bind&amp;ubUserSMSConfigId=3</java.net.URL>
+</httpSample>
+<httpSample t="84" it="0" lt="84" ts="1528717808073" s="true" lb="sendMessage-phoneNumber为中文" rc="500" rm="" tn="sendMessage非sec发送验证码 2-1" dt="text" by="432" sby="294" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=手机&amp;ubUserSMSConfigId=3</java.net.URL>
+</httpSample>
+<httpSample t="75" it="0" lt="75" ts="1528717808159" s="true" lb="sendMessage-phoneNumber为特殊字符" rc="500" rm="" tn="sendMessage非sec发送验证码 2-1" dt="text" by="432" sby="277" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=@&amp;ubUserSMSConfigId=3</java.net.URL>
+</httpSample>
+<httpSample t="73" it="0" lt="72" ts="1528717808237" s="true" lb="sendMessage-phoneNumber为数学符号" rc="500" rm="" tn="sendMessage非sec发送验证码 2-1" dt="text" by="432" sby="277" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=-&amp;ubUserSMSConfigId=3</java.net.URL>
+</httpSample>
+<httpSample t="80" it="0" lt="80" ts="1528717808314" s="true" lb="sendMessage-phoneNumber为标点符号" rc="500" rm="" tn="sendMessage非sec发送验证码 2-1" dt="text" by="432" sby="285" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sendMessage?phoneNumber=？&amp;ubUserSMSConfigId=3</java.net.URL>
+</httpSample>
+<httpSample t="718" it="0" lt="718" ts="1528717808438" s="true" lb="getToken" rc="200" rm="" tn="sendMessage--sec发送验证码 3-1" dt="text" by="364" sby="293" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000012&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="534" it="0" lt="534" ts="1528717809168" s="true" lb="sendMessage正确性校验-BindPhoneNumber" rc="200" rm="" tn="sendMessage--sec发送验证码 3-1" dt="text" by="319" sby="291" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=3</java.net.URL>
+</httpSample>
+<httpSample t="228" it="0" lt="228" ts="1528717809710" s="true" lb="sendMessage正确性校验-UnbindPhoneNumber" rc="400" rm="" tn="sendMessage--sec发送验证码 3-1" dt="text" by="362" sby="291" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=4</java.net.URL>
+</httpSample>
+<httpSample t="202" it="0" lt="202" ts="1528717809942" s="true" lb="sendMessage-ubUserSMSConfigId为空" rc="500" rm="" tn="sendMessage--sec发送验证码 3-1" dt="text" by="486" sby="290" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1528717810156" s="true" lb="sendMessage-ubUserSMSConfigId为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 103: https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=  " tn="sendMessage--sec发送验证码 3-1" dt="text" by="1109" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=  </java.net.URL>
+</httpSample>
+<httpSample t="200" it="0" lt="200" ts="1528717810165" s="true" lb="sendMessage-ubUserSMSConfigId为a-z的字符串" rc="400" rm="" tn="sendMessage--sec发送验证码 3-1" dt="text" by="675" sby="294" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=bind</java.net.URL>
+</httpSample>
+<httpSample t="192" it="0" lt="192" ts="1528717810367" s="true" lb="sendMessage-ubUserSMSConfigId为中文" rc="400" rm="" tn="sendMessage--sec发送验证码 3-1" dt="text" by="677" sby="308" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=解绑</java.net.URL>
+</httpSample>
+<httpSample t="476" it="0" lt="476" ts="1528717810563" s="true" lb="sendMessage-ubUserSMSConfigId为特殊字符" rc="400" rm="" tn="sendMessage--sec发送验证码 3-1" dt="text" by="672" sby="291" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=@</java.net.URL>
+</httpSample>
+<httpSample t="195" it="0" lt="195" ts="1528717811045" s="true" lb="sendMessage-ubUserSMSConfigId为数学符号" rc="400" rm="" tn="sendMessage--sec发送验证码 3-1" dt="text" by="672" sby="291" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=*</java.net.URL>
+</httpSample>
+<httpSample t="198" it="0" lt="198" ts="1528717811247" s="true" lb="sendMessage-ubUserSMSConfigId为标点符号" rc="400" rm="" tn="sendMessage--sec发送验证码 3-1" dt="text" by="674" sby="299" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=13772129676&amp;ubUserSMSConfigId=；</java.net.URL>
+</httpSample>
+<httpSample t="257" it="0" lt="257" ts="1528717811452" s="true" lb="sendMessage-phoneNumber位数不正确" rc="400" rm="" tn="sendMessage--sec发送验证码 3-1" dt="text" by="360" sby="290" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=1371111777&amp;ubUserSMSConfigId=3</java.net.URL>
+</httpSample>
+<httpSample t="235" it="0" lt="235" ts="1528717811716" s="true" lb="sendMessage-phoneNumber为空" rc="500" rm="" tn="sendMessage--sec发送验证码 3-1" dt="text" by="486" sby="280" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=&amp;ubUserSMSConfigId=3</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1528717811957" s="true" lb="sendMessage-phoneNumber为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 73: https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=  &amp;ubUserSMSConfigId=3" tn="sendMessage--sec发送验证码 3-1" dt="text" by="1098" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=  &amp;ubUserSMSConfigId=3</java.net.URL>
+</httpSample>
+<httpSample t="233" it="0" lt="233" ts="1528717811965" s="true" lb="sendMessage-phoneNumber为a-z的字符串" rc="400" rm="" tn="sendMessage--sec发送验证码 3-1" dt="text" by="360" sby="285" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=phone&amp;ubUserSMSConfigId=3</java.net.URL>
+</httpSample>
+<httpSample t="262" it="0" lt="261" ts="1528717812201" s="true" lb="sendMessage-phoneNumber为中文" rc="400" rm="" tn="sendMessage--sec发送验证码 3-1" dt="text" by="360" sby="307" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=手机号&amp;ubUserSMSConfigId=3</java.net.URL>
+</httpSample>
+<httpSample t="274" it="0" lt="274" ts="1528717812472" s="true" lb="sendMessage-phoneNumber为特殊字符" rc="400" rm="" tn="sendMessage--sec发送验证码 3-1" dt="text" by="360" sby="281" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=@&amp;ubUserSMSConfigId=3</java.net.URL>
+</httpSample>
+<httpSample t="625" it="0" lt="625" ts="1528717812754" s="true" lb="sendMessage-phoneNumber为数学符号" rc="400" rm="" tn="sendMessage--sec发送验证码 3-1" dt="text" by="360" sby="281" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=-&amp;ubUserSMSConfigId=3</java.net.URL>
+</httpSample>
+<httpSample t="290" it="0" lt="290" ts="1528717813382" s="true" lb="sendMessage-phoneNumber为标点符号" rc="400" rm="" tn="sendMessage--sec发送验证码 3-1" dt="text" by="360" sby="289" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/sendMessage?phoneNumber=、&amp;ubUserSMSConfigId=3</java.net.URL>
+</httpSample>
+<httpSample t="679" it="0" lt="678" ts="1528717813713" s="true" lb="getToken" rc="200" rm="" tn="checkMessageCode非sec验证验证码 4-1" dt="text" by="364" sby="293" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000012&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<sample t="2954" it="0" lt="2922" ts="1528717814401" s="true" lb="JDBC Request" rc="200" rm="OK" tn="checkMessageCode非sec验证验证码 4-1" dt="text" by="1517" sby="0" ng="1" na="1">
+  <sample t="2" it="0" lt="0" ts="1528717817353" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="checkMessageCode非sec验证验证码 4-1" dt="text" by="1413" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <samplerData class="java.lang.String">[Select Statement] select top 5 MobilePhoneNo,Code from UBUserSMSLog where MobilePhoneNo=&apos;13772129676&apos; order by ID desc
+Code
+nvarchar</samplerData>
+</sample>
+<httpSample t="409" it="0" lt="408" ts="1528717817359" s="true" lb="checkMessageCode正确性校验-BindPhoneNumber" rc="400" rm="" tn="checkMessageCode非sec验证验证码 4-1" dt="text" by="256" sby="302" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=3161</java.net.URL>
+</httpSample>
+<httpSample t="83" it="0" lt="83" ts="1528717817774" s="true" lb="checkMessageCode-phoneNumber位数不正确" rc="400" rm="" tn="checkMessageCode非sec验证验证码 4-1" dt="text" by="256" sby="301" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=1371111666&amp;ubUserSMSConfigId=3&amp;code=3161</java.net.URL>
+</httpSample>
+<httpSample t="79" it="0" lt="79" ts="1528717817864" s="true" lb="checkMessageCode-phoneNumber为空" rc="500" rm="" tn="checkMessageCode非sec验证验证码 4-1" dt="text" by="418" sby="291" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=&amp;ubUserSMSConfigId=3&amp;code=3161</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1528717817949" s="true" lb="checkMessageCode-phoneNumber为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 74: https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=  &amp;ubUserSMSConfigId=3&amp;code=3161" tn="checkMessageCode非sec验证验证码 4-1" dt="text" by="1109" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=  &amp;ubUserSMSConfigId=3&amp;code=3161</java.net.URL>
+</httpSample>
+<httpSample t="80" it="0" lt="80" ts="1528717817958" s="true" lb="checkMessageCode-phoneNumber为a-z的字符串" rc="400" rm="" tn="checkMessageCode非sec验证验证码 4-1" dt="text" by="256" sby="296" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=phone&amp;ubUserSMSConfigId=3&amp;code=3161</java.net.URL>
+</httpSample>
+<httpSample t="79" it="0" lt="79" ts="1528717818040" s="true" lb="checkMessageCode-phoneNumber为中文" rc="400" rm="" tn="checkMessageCode非sec验证验证码 4-1" dt="text" by="256" sby="309" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=手机&amp;ubUserSMSConfigId=3&amp;code=3161</java.net.URL>
+</httpSample>
+<httpSample t="82" it="0" lt="82" ts="1528717818125" s="true" lb="checkMessageCode-phoneNumber为特殊字符" rc="400" rm="" tn="checkMessageCode非sec验证验证码 4-1" dt="text" by="256" sby="292" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=@&amp;ubUserSMSConfigId=3&amp;code=3161</java.net.URL>
+</httpSample>
+<httpSample t="80" it="0" lt="80" ts="1528717818212" s="true" lb="checkMessageCode-phoneNumber为数学符号" rc="400" rm="" tn="checkMessageCode非sec验证验证码 4-1" dt="text" by="256" sby="292" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=/&amp;ubUserSMSConfigId=3&amp;code=3161</java.net.URL>
+</httpSample>
+<httpSample t="90" it="0" lt="90" ts="1528717818296" s="true" lb="checkMessageCode-phoneNumber为标点符号" rc="400" rm="" tn="checkMessageCode非sec验证验证码 4-1" dt="text" by="256" sby="292" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=!&amp;ubUserSMSConfigId=3&amp;code=3161</java.net.URL>
+</httpSample>
+<httpSample t="73" it="0" lt="73" ts="1528717818391" s="true" lb="checkMessageCode-ubUserSMSConfigId为空" rc="500" rm="" tn="checkMessageCode非sec验证验证码 4-1" dt="text" by="418" sby="301" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=&amp;code=3161</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1528717818467" s="true" lb="checkMessageCode-ubUserSMSConfigId为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 104: https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=  &amp;code=3161" tn="checkMessageCode非sec验证验证码 4-1" dt="text" by="1120" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=  &amp;code=3161</java.net.URL>
+</httpSample>
+<httpSample t="77" it="0" lt="77" ts="1528717818470" s="true" lb="checkMessageCode-ubUserSMSConfigId为a-z的字符串" rc="400" rm="" tn="checkMessageCode非sec验证验证码 4-1" dt="text" by="607" sby="305" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=bind&amp;code=3161</java.net.URL>
+</httpSample>
+<httpSample t="71" it="0" lt="71" ts="1528717818551" s="true" lb="checkMessageCode-ubUserSMSConfigId为中文" rc="400" rm="" tn="checkMessageCode非sec验证验证码 4-1" dt="text" by="609" sby="319" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=验证&amp;code=3161</java.net.URL>
+</httpSample>
+<httpSample t="73" it="0" lt="73" ts="1528717818624" s="true" lb="checkMessageCode-ubUserSMSConfigId为特殊字符" rc="400" rm="" tn="checkMessageCode非sec验证验证码 4-1" dt="text" by="604" sby="302" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=$&amp;code=3161</java.net.URL>
+</httpSample>
+<httpSample t="71" it="0" lt="71" ts="1528717818699" s="true" lb="checkMessageCode-ubUserSMSConfigId为数学符号" rc="400" rm="" tn="checkMessageCode非sec验证验证码 4-1" dt="text" by="604" sby="302" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId==&amp;code=3161</java.net.URL>
+</httpSample>
+<httpSample t="73" it="0" lt="73" ts="1528717818776" s="true" lb="checkMessageCode-ubUserSMSConfigId为标点符号" rc="400" rm="" tn="checkMessageCode非sec验证验证码 4-1" dt="text" by="606" sby="310" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=“&amp;code=3161</java.net.URL>
+</httpSample>
+<httpSample t="81" it="0" lt="81" ts="1528717818856" s="true" lb="checkMessageCode-code位数不正确" rc="400" rm="" tn="checkMessageCode非sec验证验证码 4-1" dt="text" by="256" sby="301" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=123</java.net.URL>
+</httpSample>
+<httpSample t="77" it="0" lt="77" ts="1528717818943" s="true" lb="checkMessageCode-code为空" rc="500" rm="" tn="checkMessageCode非sec验证验证码 4-1" dt="text" by="418" sby="298" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1528717819022" s="true" lb="checkMessageCode-code为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 111: https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=  " tn="checkMessageCode非sec验证验证码 4-1" dt="text" by="1117" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=  </java.net.URL>
+</httpSample>
+<httpSample t="81" it="0" lt="81" ts="1528717819026" s="true" lb="checkMessageCode-code为a-z的字符串" rc="400" rm="" tn="checkMessageCode非sec验证验证码 4-1" dt="text" by="256" sby="302" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=code</java.net.URL>
+</httpSample>
+<httpSample t="86" it="0" lt="86" ts="1528717819109" s="true" lb="checkMessageCode-code为中文" rc="400" rm="" tn="checkMessageCode非sec验证验证码 4-1" dt="text" by="256" sby="316" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=密码</java.net.URL>
+</httpSample>
+<httpSample t="75" it="0" lt="75" ts="1528717819196" s="true" lb="checkMessageCode-code为特殊字符" rc="400" rm="" tn="checkMessageCode非sec验证验证码 4-1" dt="text" by="256" sby="299" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=@</java.net.URL>
+</httpSample>
+<httpSample t="78" it="0" lt="78" ts="1528717819273" s="true" lb="checkMessageCode-code为数学符号" rc="400" rm="" tn="checkMessageCode非sec验证验证码 4-1" dt="text" by="256" sby="299" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=-</java.net.URL>
+</httpSample>
+<httpSample t="81" it="0" lt="81" ts="1528717819353" s="true" lb="checkMessageCode-code为标点符号" rc="400" rm="" tn="checkMessageCode非sec验证验证码 4-1" dt="text" by="256" sby="307" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=？</java.net.URL>
+</httpSample>
+<httpSample t="667" it="0" lt="666" ts="1528717819457" s="true" lb="getToken" rc="200" rm="" tn="checkMessageCode--sec验证验证码 5-1" dt="text" by="364" sby="293" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000012&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<sample t="140" it="0" lt="137" ts="1528717820129" s="true" lb="JDBC Request" rc="200" rm="OK" tn="checkMessageCode--sec验证验证码 5-1" dt="text" by="1517" sby="0" ng="1" na="1">
+  <sample t="1" it="0" lt="0" ts="1528717820268" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="checkMessageCode--sec验证验证码 5-1" dt="text" by="1413" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <samplerData class="java.lang.String">[Select Statement] select top 5 MobilePhoneNo,Code from UBUserSMSLog where MobilePhoneNo=&apos;13772129676&apos; order by ID desc
+Code
+nvarchar</samplerData>
+</sample>
+<httpSample t="258" it="0" lt="258" ts="1528717820273" s="true" lb="checkMessageCode正确性校验-BindPhoneNumber" rc="400" rm="" tn="checkMessageCode--sec验证验证码 5-1" dt="text" by="325" sby="306" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=4648</java.net.URL>
+</httpSample>
+<httpSample t="207" it="0" lt="207" ts="1528717820536" s="true" lb="checkMessageCode-phoneNumber位数不正确" rc="400" rm="" tn="checkMessageCode--sec验证验证码 5-1" dt="text" by="325" sby="305" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=1371111666&amp;ubUserSMSConfigId=3&amp;code=3161</java.net.URL>
+</httpSample>
+<httpSample t="220" it="0" lt="220" ts="1528717820746" s="true" lb="checkMessageCode-phoneNumber为空" rc="500" rm="" tn="checkMessageCode--sec验证验证码 5-1" dt="text" by="491" sby="295" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=&amp;ubUserSMSConfigId=3&amp;code=3161</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1528717820968" s="true" lb="checkMessageCode-phoneNumber为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 78: https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=  &amp;ubUserSMSConfigId=3&amp;code=3161" tn="checkMessageCode--sec验证验证码 5-1" dt="text" by="1113" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=  &amp;ubUserSMSConfigId=3&amp;code=3161</java.net.URL>
+</httpSample>
+<httpSample t="208" it="0" lt="208" ts="1528717820970" s="true" lb="checkMessageCode-phoneNumber为a-z的字符串" rc="400" rm="" tn="checkMessageCode--sec验证验证码 5-1" dt="text" by="325" sby="300" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=phone&amp;ubUserSMSConfigId=3&amp;code=3161</java.net.URL>
+</httpSample>
+<httpSample t="245" it="0" lt="245" ts="1528717821180" s="true" lb="checkMessageCode-phoneNumber为中文" rc="400" rm="" tn="checkMessageCode--sec验证验证码 5-1" dt="text" by="325" sby="322" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=手机号&amp;ubUserSMSConfigId=3&amp;code=3161</java.net.URL>
+</httpSample>
+<httpSample t="192" it="0" lt="192" ts="1528717821426" s="true" lb="checkMessageCode-phoneNumber为特殊字符" rc="400" rm="" tn="checkMessageCode--sec验证验证码 5-1" dt="text" by="325" sby="296" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=@&amp;ubUserSMSConfigId=3&amp;code=3161</java.net.URL>
+</httpSample>
+<httpSample t="507" it="0" lt="507" ts="1528717821619" s="true" lb="checkMessageCode-phoneNumber为数学符号" rc="400" rm="" tn="checkMessageCode--sec验证验证码 5-1" dt="text" by="325" sby="296" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=*&amp;ubUserSMSConfigId=3&amp;code=3161</java.net.URL>
+</httpSample>
+<httpSample t="195" it="0" lt="195" ts="1528717822129" s="true" lb="checkMessageCode-phoneNumber为标点符号" rc="400" rm="" tn="checkMessageCode--sec验证验证码 5-1" dt="text" by="325" sby="304" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=！&amp;ubUserSMSConfigId=3&amp;code=3161</java.net.URL>
+</httpSample>
+<httpSample t="198" it="0" lt="198" ts="1528717822325" s="true" lb="checkMessageCode-ubUserSMSConfigId为空" rc="500" rm="" tn="checkMessageCode--sec验证验证码 5-1" dt="text" by="491" sby="305" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=&amp;code=3161</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1528717822524" s="true" lb="checkMessageCode-ubUserSMSConfigId为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 108: https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=  &amp;code=3161" tn="checkMessageCode--sec验证验证码 5-1" dt="text" by="1124" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=  &amp;code=3161</java.net.URL>
+</httpSample>
+<httpSample t="267" it="0" lt="267" ts="1528717822526" s="true" lb="checkMessageCode-ubUserSMSConfigId为a-z的字符串" rc="400" rm="" tn="checkMessageCode--sec验证验证码 5-1" dt="text" by="682" sby="311" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=unbind&amp;code=3161</java.net.URL>
+</httpSample>
+<httpSample t="204" it="0" lt="204" ts="1528717822798" s="true" lb="checkMessageCode-ubUserSMSConfigId为中文" rc="400" rm="" tn="checkMessageCode--sec验证验证码 5-1" dt="text" by="682" sby="323" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=解绑&amp;code=3161</java.net.URL>
+</httpSample>
+<httpSample t="187" it="0" lt="187" ts="1528717823003" s="true" lb="checkMessageCode-ubUserSMSConfigId为特殊字符" rc="400" rm="" tn="checkMessageCode--sec验证验证码 5-1" dt="text" by="677" sby="306" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=@&amp;code=3161</java.net.URL>
+</httpSample>
+<httpSample t="225" it="0" lt="225" ts="1528717823192" s="true" lb="checkMessageCode-ubUserSMSConfigId为数学符号" rc="400" rm="" tn="checkMessageCode--sec验证验证码 5-1" dt="text" by="677" sby="306" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=-&amp;code=3161</java.net.URL>
+</httpSample>
+<httpSample t="212" it="0" lt="212" ts="1528717823421" s="true" lb="checkMessageCode-ubUserSMSConfigId为标点符号" rc="400" rm="" tn="checkMessageCode--sec验证验证码 5-1" dt="text" by="679" sby="314" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=？&amp;code=3161</java.net.URL>
+</httpSample>
+<httpSample t="440" it="0" lt="440" ts="1528717823636" s="true" lb="checkMessageCode-code位数不正确" rc="400" rm="" tn="checkMessageCode--sec验证验证码 5-1" dt="text" by="325" sby="305" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=123</java.net.URL>
+</httpSample>
+<httpSample t="189" it="0" lt="189" ts="1528717824078" s="true" lb="checkMessageCode-code为空" rc="500" rm="" tn="checkMessageCode--sec验证验证码 5-1" dt="text" by="491" sby="302" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1528717824268" s="true" lb="checkMessageCode-code为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 115: https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=  " tn="checkMessageCode--sec验证验证码 5-1" dt="text" by="1121" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=  </java.net.URL>
+</httpSample>
+<httpSample t="218" it="0" lt="218" ts="1528717824270" s="true" lb="checkMessageCode-code为a-z的字符串" rc="400" rm="" tn="checkMessageCode--sec验证验证码 5-1" dt="text" by="325" sby="306" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=code</java.net.URL>
+</httpSample>
+<httpSample t="218" it="0" lt="218" ts="1528717824490" s="true" lb="checkMessageCode-code为中文" rc="400" rm="" tn="checkMessageCode--sec验证验证码 5-1" dt="text" by="325" sby="320" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=密码</java.net.URL>
+</httpSample>
+<httpSample t="210" it="0" lt="210" ts="1528717824709" s="true" lb="checkMessageCode-code为特殊字符" rc="400" rm="" tn="checkMessageCode--sec验证验证码 5-1" dt="text" by="325" sby="303" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=$</java.net.URL>
+</httpSample>
+<httpSample t="198" it="0" lt="198" ts="1528717824921" s="true" lb="checkMessageCode-code为数学符号" rc="400" rm="" tn="checkMessageCode--sec验证验证码 5-1" dt="text" by="325" sby="303" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=-</java.net.URL>
+</httpSample>
+<httpSample t="195" it="0" lt="195" ts="1528717825120" s="true" lb="checkMessageCode-code为标点符号" rc="400" rm="" tn="checkMessageCode--sec验证验证码 5-1" dt="text" by="325" sby="311" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/checkMessageCode?phoneNumber=13772129676&amp;ubUserSMSConfigId=3&amp;code=。</java.net.URL>
+</httpSample>
+<httpSample t="689" it="0" lt="689" ts="1528717825350" s="true" lb="getToken" rc="200" rm="" tn="metadata-安全资源的上传-事务型资源元信息 6-1" dt="text" by="364" sby="293" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000012&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="215" it="0" lt="215" ts="1528717826041" s="true" lb="metadata-正确性检验（文本类型）" rc="200" rm="" tn="metadata-安全资源的上传-事务型资源元信息 6-1" dt="text" by="510" sby="413" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">resourceId=97b704d-59cd-4434-93ae-ecd36b58c784704&amp;storageLocationCode=LOCAL_WINDOWS&amp;fileName=test.txt&amp;contentType=text%2Fplain</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/trx/metadata</java.net.URL>
+</httpSample>
+<httpSample t="196" it="0" lt="195" ts="1528717826260" s="true" lb="metadata-正确性检验（图片类型）" rc="200" rm="" tn="metadata-安全资源的上传-事务型资源元信息 6-1" dt="text" by="509" sby="412" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">resourceId=97b704d-59cd-4704-93ae-ecd36b58c784704&amp;storageLocationCode=LOCAL_WINDOWS&amp;fileName=test.png&amp;contentType=image%2Fpng</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/trx/metadata</java.net.URL>
+</httpSample>
+<httpSample t="190" it="0" lt="190" ts="1528717826461" s="true" lb="metadata-正确性检验（音频类型）" rc="200" rm="" tn="metadata-安全资源的上传-事务型资源元信息 6-1" dt="text" by="509" sby="412" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">resourceId=97b2255d-704cd-4704-93ae-ecdb58c784704&amp;storageLocationCode=LOCAL_WINDOWS&amp;fileName=test.wav&amp;contentType=audio%2Fwav</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/trx/metadata</java.net.URL>
+</httpSample>
+<httpSample t="181" it="0" lt="181" ts="1528717826654" s="true" lb="metadata-storageLocationCode缺失" rc="500" rm="" tn="metadata-安全资源的上传-事务型资源元信息 6-1" dt="text" by="574" sby="379" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">resourceId=97b2255d-59cd-4434-93ae-ecd36b58c784704&amp;fileName=test.txt&amp;contentType=text%2Fplain</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/trx/metadata</java.net.URL>
+</httpSample>
+<httpSample t="190" it="0" lt="190" ts="1528717826839" s="true" lb="metadata-storageLocationCode为空" rc="500" rm="" tn="metadata-安全资源的上传-事务型资源元信息 6-1" dt="text" by="574" sby="401" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">resourceId=97b2255d-59cd-4434-93ae-ecd36b58c784704&amp;storageLocationCode=&amp;fileName=test.txt&amp;contentType=text%2Fplain</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/trx/metadata</java.net.URL>
+</httpSample>
+<httpSample t="222" it="0" lt="222" ts="1528717827032" s="true" lb="metadata-storageLocationCode为空格" rc="500" rm="" tn="metadata-安全资源的上传-事务型资源元信息 6-1" dt="text" by="574" sby="402" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">resourceId=97b2255d-59cd-4434-93ae-ecd36b58c784704&amp;storageLocationCode=+&amp;fileName=test.txt&amp;contentType=text%2Fplain</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/trx/metadata</java.net.URL>
+</httpSample>
+<httpSample t="693" it="0" lt="693" ts="1528717827292" s="true" lb="getToken" rc="200" rm="" tn="resource-安全资源的上传-事务型资源 7-1" dt="text" by="364" sby="293" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000012&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="422" it="0" lt="422" ts="1528717827989" s="true" lb="resource-正确性资源（上传文本文档）" rc="200" rm="" tn="resource-安全资源的上传-事务型资源 7-1" dt="text" by="506" sby="744" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">--U7PHoosAIe7Z8LER7Z4PJDZJQlG8-NDfkSHS&#xd;
+Content-Disposition: form-data; name=&quot;storageLocCode&quot;&#xd;
+Content-Type: text/plain; charset=US-ASCII&#xd;
+Content-Transfer-Encoding: 8bit&#xd;
+&#xd;
+LOCAL_WINDOWS&#xd;
+--U7PHoosAIe7Z8LER7Z4PJDZJQlG8-NDfkSHS&#xd;
+Content-Disposition: form-data; name=&quot;fileName&quot;; filename=&quot;test.txt&quot;&#xd;
+Content-Type: text/plain&#xd;
+Content-Transfer-Encoding: binary&#xd;
+&#xd;
+&lt;actual file content, not shown here&gt;&#xd;
+--U7PHoosAIe7Z8LER7Z4PJDZJQlG8-NDfkSHS--&#xd;
+</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/trx/resource</java.net.URL>
+</httpSample>
+<httpSample t="334" it="0" lt="311" ts="1528717828414" s="true" lb="resource-正确性资源（上传图片资源）" rc="200" rm="" tn="resource-安全资源的上传-事务型资源 7-1" dt="text" by="2280" sby="14764" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1528717828747" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="resource-安全资源的上传-事务型资源 7-1" dt="text" by="1776" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">--EVXTIjf2MQB883ppcg1Cs3YBa30ovc&#xd;
+Content-Disposition: form-data; name=&quot;storageLocCode&quot;&#xd;
+Content-Type: text/plain; charset=US-ASCII&#xd;
+Content-Transfer-Encoding: 8bit&#xd;
+&#xd;
+LOCAL_WINDOWS&#xd;
+--EVXTIjf2MQB883ppcg1Cs3YBa30ovc&#xd;
+Content-Disposition: form-data; name=&quot;fileName&quot;; filename=&quot;aaa.png&quot;&#xd;
+Content-Type: image/png&#xd;
+Content-Transfer-Encoding: binary&#xd;
+&#xd;
+&lt;actual file content, not shown here&gt;&#xd;
+--EVXTIjf2MQB883ppcg1Cs3YBa30ovc--&#xd;
+</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/trx/resource</java.net.URL>
+</httpSample>
+<httpSample t="229" it="0" lt="229" ts="1528717828753" s="true" lb="resource-storageLocCode缺失" rc="200" rm="" tn="resource-安全资源的上传-事务型资源 7-1" dt="text" by="506" sby="543" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">--s4msHYmKamAlSii7hyFnpdvrjPy8C3oH&#xd;
+Content-Disposition: form-data; name=&quot;fileName&quot;; filename=&quot;test.txt&quot;&#xd;
+Content-Type: text/plain&#xd;
+Content-Transfer-Encoding: binary&#xd;
+&#xd;
+&lt;actual file content, not shown here&gt;&#xd;
+--s4msHYmKamAlSii7hyFnpdvrjPy8C3oH--&#xd;
+</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/trx/resource</java.net.URL>
+</httpSample>
+<httpSample t="681" it="0" lt="681" ts="1528717829017" s="true" lb="getToken" rc="200" rm="" tn="resource-安全资源的下载-事务型资源 8-1" dt="text" by="364" sby="293" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000012&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="2614" it="0" lt="2614" ts="1528717829702" s="true" lb="resource-正确性检验（下载图片性资源并裁剪其大小）" rc="200" rm="" tn="resource-安全资源的下载-事务型资源 8-1" dt="bin" by="14393" sby="283" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/trx/resource?resourceId=f548f57f-a745-4027-9048-16bb44ffdf61&amp;resolution=200_500</java.net.URL>
+</httpSample>
+<httpSample t="902" it="0" lt="525" ts="1528717832321" s="false" lb="resource-正确性检验（仅下载）" rc="403" rm="Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature." tn="resource-安全资源的下载-事务型资源 8-1" dt="text" by="1134" sby="534" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[403]]]
+
+****** comparison: [[[200]]]
+
+/</failureMessage>
+  </assertionResult>
+  <httpSample t="525" it="0" lt="525" ts="1528717832321" s="true" lb="https://staging.zhishinet.com/api/zcommon/v1/sec/trx/resource?resourceId=f548f57f-a745-4027-9048-16bb44ffdf61" rc="302" rm="" tn="resource-安全资源的下载-事务型资源 8-1" dt="" by="376" sby="264" ng="1" na="1">
+    <cookies class="java.lang.String"></cookies>
+    <method class="java.lang.String">GET</method>
+    <queryString class="java.lang.String"></queryString>
+    <redirectLocation class="java.lang.String">https://ubjchinastagingstorage.blob.core.chinacloudapi.cn/userdata/resources/f/f548f57f-a745-4027-9048-16bb44ffdf61</redirectLocation>
+    <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/trx/resource?resourceId=f548f57f-a745-4027-9048-16bb44ffdf61</java.net.URL>
+  </httpSample>
+  <httpSample t="372" it="0" lt="372" ts="1528717832851" s="false" lb="https://ubjchinastagingstorage.blob.core.chinacloudapi.cn/userdata/resources/f/f548f57f-a745-4027-9048-16bb44ffdf61" rc="403" rm="Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature." tn="resource-安全资源的下载-事务型资源 8-1" dt="text" by="758" sby="270" ng="1" na="1">
+    <responseData class="java.lang.String">﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;Error&gt;&lt;Code&gt;AuthenticationFailed&lt;/Code&gt;&lt;Message&gt;Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:92dada60-401e-002b-277a-011e46000000
+Time:2018-06-11T11:50:34.9809637Z&lt;/Message&gt;&lt;AuthenticationErrorDetail&gt;Authentication scheme Bearer is not supported.&lt;/AuthenticationErrorDetail&gt;&lt;/Error&gt;</responseData>
+    <cookies class="java.lang.String"></cookies>
+    <method class="java.lang.String">GET</method>
+    <queryString class="java.lang.String"></queryString>
+    <java.net.URL>https://ubjchinastagingstorage.blob.core.chinacloudapi.cn/userdata/resources/f/f548f57f-a745-4027-9048-16bb44ffdf61</java.net.URL>
+  </httpSample>
+  <responseData class="java.lang.String">﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;Error&gt;&lt;Code&gt;AuthenticationFailed&lt;/Code&gt;&lt;Message&gt;Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:92dada60-401e-002b-277a-011e46000000
+Time:2018-06-11T11:50:34.9809637Z&lt;/Message&gt;&lt;AuthenticationErrorDetail&gt;Authentication scheme Bearer is not supported.&lt;/AuthenticationErrorDetail&gt;&lt;/Error&gt;</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <redirectLocation class="java.lang.String">https://ubjchinastagingstorage.blob.core.chinacloudapi.cn/userdata/resources/f/f548f57f-a745-4027-9048-16bb44ffdf61</redirectLocation>
+  <java.net.URL>https://ubjchinastagingstorage.blob.core.chinacloudapi.cn/userdata/resources/f/f548f57f-a745-4027-9048-16bb44ffdf61</java.net.URL>
+</httpSample>
+<httpSample t="171" it="0" lt="171" ts="1528717833226" s="true" lb="resource-resourceId缺失" rc="400" rm="" tn="resource-安全资源的下载-事务型资源 8-1" dt="text" by="551" sby="216" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/sec/trx/resource</java.net.URL>
+</httpSample>
+<httpSample t="728" it="0" lt="727" ts="1528717833416" s="true" lb="getToken" rc="200" rm="" tn="metadata-非安全资源的上传-事务型资源元信息 9-1" dt="text" by="364" sby="293" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000012&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="133" it="0" lt="132" ts="1528717834148" s="true" lb="metadata-正确性检验（文本类型）" rc="200" rm="" tn="metadata-非安全资源的上传-事务型资源元信息 9-1" dt="text" by="434" sby="352" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">resourceId=678dbd-5dcd-7049xudncudae-ec789ss704&amp;storageLocationCode=LOCAL_WINDOWS&amp;fileName=aa.txt&amp;contentType=text%2Fplain</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/static/trx/metadata</java.net.URL>
+</httpSample>
+<httpSample t="83" it="0" lt="83" ts="1528717834286" s="true" lb="metadata-正确性检验（图片类型）" rc="200" rm="" tn="metadata-非安全资源的上传-事务型资源元信息 9-1" dt="text" by="434" sby="352" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">resourceId=97babdd-59cd-44saw70493ae-ecd36b58c704&amp;storageLocationCode=LOCAL_WINDOWS&amp;fileName=b.png&amp;contentType=image%2Fpng</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/static/trx/metadata</java.net.URL>
+</httpSample>
+<httpSample t="79" it="0" lt="79" ts="1528717834371" s="true" lb="metadata-正确性检验（音频类型）" rc="200" rm="" tn="metadata-非安全资源的上传-事务型资源元信息 9-1" dt="text" by="438" sby="356" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">resourceId=97bsvdsg704d-59cd-4434-93ae-ec7rhf84ssc704&amp;storageLocationCode=LOCAL_WINDOWS&amp;fileName=a.wav&amp;contentType=audio%2Fwav</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/static/trx/metadata</java.net.URL>
+</httpSample>
+<httpSample t="77" it="0" lt="77" ts="1528717834452" s="true" lb="metadata-storageLocationCode缺失" rc="500" rm="" tn="metadata-非安全资源的上传-事务型资源元信息 9-1" dt="text" by="508" sby="318" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">resourceId=678db2255d-59cd-4434-93ae-ec789ssc704&amp;fileName=aa.txt&amp;contentType=text%2Fplain</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/static/trx/metadata</java.net.URL>
+</httpSample>
+<httpSample t="75" it="0" lt="75" ts="1528717834531" s="true" lb="metadata-storageLocationCode为空" rc="500" rm="" tn="metadata-非安全资源的上传-事务型资源元信息 9-1" dt="text" by="508" sby="340" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">resourceId=678db2255d-59cd-4434-93ae-ec789ssc704&amp;storageLocationCode=&amp;fileName=aa.txt&amp;contentType=text%2Fplain</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/static/trx/metadata</java.net.URL>
+</httpSample>
+<httpSample t="74" it="0" lt="74" ts="1528717834608" s="true" lb="metadata-storageLocationCode为空格" rc="500" rm="" tn="metadata-非安全资源的上传-事务型资源元信息 9-1" dt="text" by="508" sby="341" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">resourceId=678db2255d-59cd-4434-93ae-ec789ssc704&amp;storageLocationCode=+&amp;fileName=aa.txt&amp;contentType=text%2Fplain</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/static/trx/metadata</java.net.URL>
+</httpSample>
+<httpSample t="664" it="0" lt="664" ts="1528717834723" s="true" lb="getToken" rc="200" rm="" tn="resource-非安全资源的上传-事务型资源 10-1" dt="text" by="364" sby="293" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000012&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="267" it="0" lt="264" ts="1528717835390" s="true" lb="resource-正确性资源（上传图片资源）" rc="200" rm="" tn="resource-非安全资源的上传-事务型资源 10-1" dt="text" by="2138" sby="14711" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="0" it="0" lt="0" ts="1528717835657" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="resource-非安全资源的上传-事务型资源 10-1" dt="text" by="1703" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">--ETvtGwIGPZNf0eS5Ob4iIioPwbeO_6K&#xd;
+Content-Disposition: form-data; name=&quot;storageLocCode&quot;&#xd;
+Content-Type: text/plain; charset=US-ASCII&#xd;
+Content-Transfer-Encoding: 8bit&#xd;
+&#xd;
+LOCAL_WINDOWS&#xd;
+--ETvtGwIGPZNf0eS5Ob4iIioPwbeO_6K&#xd;
+Content-Disposition: form-data; name=&quot;fileName&quot;; filename=&quot;aaa.png&quot;&#xd;
+Content-Type: image/png&#xd;
+Content-Transfer-Encoding: binary&#xd;
+&#xd;
+&lt;actual file content, not shown here&gt;&#xd;
+--ETvtGwIGPZNf0eS5Ob4iIioPwbeO_6K--&#xd;
+</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/static/trx/resource</java.net.URL>
+</httpSample>
+<httpSample t="205" it="0" lt="205" ts="1528717835660" s="true" lb="resource-正确性资源（上传文本文件）" rc="200" rm="" tn="resource-非安全资源的上传-事务型资源 10-1" dt="text" by="437" sby="667" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">--UYjP2wZE3q9qUVg2e9dPE_xxcDng-kE&#xd;
+Content-Disposition: form-data; name=&quot;storageLocCode&quot;&#xd;
+Content-Type: text/plain; charset=US-ASCII&#xd;
+Content-Transfer-Encoding: 8bit&#xd;
+&#xd;
+LOCAL_WINDOWS&#xd;
+--UYjP2wZE3q9qUVg2e9dPE_xxcDng-kE&#xd;
+Content-Disposition: form-data; name=&quot;fileName&quot;; filename=&quot;test.txt&quot;&#xd;
+Content-Type: text/plain&#xd;
+Content-Transfer-Encoding: binary&#xd;
+&#xd;
+&lt;actual file content, not shown here&gt;&#xd;
+--UYjP2wZE3q9qUVg2e9dPE_xxcDng-kE--&#xd;
+</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/static/trx/resource</java.net.URL>
+</httpSample>
+<httpSample t="133" it="0" lt="133" ts="1528717835867" s="true" lb="resource-storageLocCode缺失" rc="200" rm="" tn="resource-非安全资源的上传-事务型资源 10-1" dt="text" by="437" sby="492" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">--ngkjII-CNlSqRwnPyLfj218z5Ax6_xxw0b&#xd;
+Content-Disposition: form-data; name=&quot;fileName&quot;; filename=&quot;test.txt&quot;&#xd;
+Content-Type: text/plain&#xd;
+Content-Transfer-Encoding: binary&#xd;
+&#xd;
+&lt;actual file content, not shown here&gt;&#xd;
+--ngkjII-CNlSqRwnPyLfj218z5Ax6_xxw0b--&#xd;
+</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/static/trx/resource</java.net.URL>
+</httpSample>
+<httpSample t="651" it="0" lt="651" ts="1528717836076" s="true" lb="getToken" rc="200" rm="" tn="resource-非安全资源的下载-事务型资源 11-1" dt="text" by="364" sby="293" ng="1" na="1">
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000012&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="2434" it="0" lt="2433" ts="1528717836733" s="true" lb="resource-正确性检验（下载图片性资源并裁剪其大小）" rc="200" rm="" tn="resource-非安全资源的下载-事务型资源 11-1" dt="bin" by="14324" sby="226" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/static/trx/resource?resourceId=5b6d22c0-33a5-4667-94df-39d94a8c2b19&amp;resolution=200_500</java.net.URL>
+</httpSample>
+<httpSample t="631" it="0" lt="404" ts="1528717839173" s="true" lb="resource-正确性检验（仅下载）" rc="200" rm="OK" tn="resource-非安全资源的下载-事务型资源 11-1" dt="bin" by="14770" sby="417" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <httpSample t="404" it="0" lt="404" ts="1528717839173" s="true" lb="https://staging.zhishinet.com/api/zcommon/v1/static/trx/resource?resourceId=5b6d22c0-33a5-4667-94df-39d94a8c2b19" rc="302" rm="" tn="resource-非安全资源的下载-事务型资源 11-1" dt="" by="307" sby="207" ng="1" na="1">
+    <cookies class="java.lang.String"></cookies>
+    <method class="java.lang.String">GET</method>
+    <queryString class="java.lang.String"></queryString>
+    <redirectLocation class="java.lang.String">https://ubjchinastagingstorage.blob.core.chinacloudapi.cn/userdata/resources/5/5b6d22c0-33a5-4667-94df-39d94a8c2b19</redirectLocation>
+    <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/static/trx/resource?resourceId=5b6d22c0-33a5-4667-94df-39d94a8c2b19</java.net.URL>
+  </httpSample>
+  <httpSample t="226" it="0" lt="226" ts="1528717839578" s="true" lb="https://ubjchinastagingstorage.blob.core.chinacloudapi.cn/userdata/resources/5/5b6d22c0-33a5-4667-94df-39d94a8c2b19" rc="200" rm="OK" tn="resource-非安全资源的下载-事务型资源 11-1" dt="bin" by="14463" sby="210" ng="1" na="1">
+    <cookies class="java.lang.String"></cookies>
+    <method class="java.lang.String">GET</method>
+    <queryString class="java.lang.String"></queryString>
+    <java.net.URL>https://ubjchinastagingstorage.blob.core.chinacloudapi.cn/userdata/resources/5/5b6d22c0-33a5-4667-94df-39d94a8c2b19</java.net.URL>
+  </httpSample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <redirectLocation class="java.lang.String">https://ubjchinastagingstorage.blob.core.chinacloudapi.cn/userdata/resources/5/5b6d22c0-33a5-4667-94df-39d94a8c2b19</redirectLocation>
+  <java.net.URL>https://ubjchinastagingstorage.blob.core.chinacloudapi.cn/userdata/resources/5/5b6d22c0-33a5-4667-94df-39d94a8c2b19</java.net.URL>
+</httpSample>
+<httpSample t="70" it="0" lt="70" ts="1528717839807" s="true" lb="resource-resourceId缺失" rc="400" rm="" tn="resource-非安全资源的下载-事务型资源 11-1" dt="text" by="485" sby="159" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zcommon/v1/static/trx/resource</java.net.URL>
+</httpSample>
+
+</testResults>

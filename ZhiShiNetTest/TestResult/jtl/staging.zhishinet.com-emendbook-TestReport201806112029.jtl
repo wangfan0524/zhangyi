@@ -1,0 +1,3227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="2596" it="0" lt="2576" ts="1528720201926" s="true" lb="getToken" rc="200" rm="" tn="syncEmendbookTest 1-1" dt="text" by="1774" sby="293" ng="1" na="1">
+  <sample t="1" it="0" lt="0" ts="1528720204521" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="syncEmendbookTest 1-1" dt="text" by="1410" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="516" it="0" lt="516" ts="1528720204567" s="true" lb="syncEmendbook-saveEmendbook接口可用性检查-参数全正确" rc="200" rm="HTTP/1.1 200" tn="syncEmendbookTest 1-1" dt="" by="243" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=3911&amp;attemptNo=1&amp;sourceCode=1&amp;answerDate=1500515018760</java.net.URL>
+</httpSample>
+<httpSample t="265" it="0" lt="265" ts="1528720205122" s="true" lb="syncEmendbook-sessionUserTrackingId为a-z的字符" rc="500" rm="HTTP/1.1 500" tn="syncEmendbookTest 1-1" dt="text" by="473" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=test&amp;attemptNo=1&amp;answerDate=&amp;sourceCode=1</java.net.URL>
+</httpSample>
+<httpSample t="324" it="0" lt="324" ts="1528720205394" s="true" lb="syncEmendbook-sessionUserTrackingId为-1" rc="200" rm="HTTP/1.1 200" tn="syncEmendbookTest 1-1" dt="" by="243" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=-1&amp;attemptNo=1&amp;answerDate=1500515018760&amp;sourceCode=1</java.net.URL>
+</httpSample>
+<httpSample t="204" it="0" lt="204" ts="1528720205720" s="true" lb="syncEmendbook-sessionUserTrackingId为0" rc="200" rm="HTTP/1.1 200" tn="syncEmendbookTest 1-1" dt="" by="243" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=0&amp;attemptNo=1&amp;answerDate=1500515018760&amp;sourceCode=1</java.net.URL>
+</httpSample>
+<httpSample t="174" it="0" lt="174" ts="1528720205927" s="true" lb="syncEmendbook-sessionUserTrackingId为空" rc="500" rm="HTTP/1.1 500" tn="syncEmendbookTest 1-1" dt="text" by="469" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=&amp;attemptNo=1&amp;answerDate=1500515018760&amp;sourceCode=1</java.net.URL>
+</httpSample>
+<httpSample t="105" it="0" lt="105" ts="1528720206103" s="true" lb="syncEmendbook-sessionUserTrackingId为空格" rc="400" rm="Bad request" tn="syncEmendbookTest 1-1" dt="text" by="280" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId= &amp;attemptNo=1&amp;answerDate=1500515018760&amp;sourceCode=1</java.net.URL>
+</httpSample>
+<httpSample t="223" it="0" lt="223" ts="1528720206215" s="true" lb="syncEmendbook-sessionUserTrackingId为特殊字符" rc="500" rm="HTTP/1.1 500" tn="syncEmendbookTest 1-1" dt="text" by="470" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=*&amp;attemptNo=1&amp;answerDate=1500515018760&amp;sourceCode=1</java.net.URL>
+</httpSample>
+<httpSample t="169" it="0" lt="169" ts="1528720206449" s="true" lb="syncEmendbook-attemptNo为0" rc="200" rm="HTTP/1.1 200" tn="syncEmendbookTest 1-1" dt="" by="243" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=3911&amp;attemptNo=0&amp;answerDate=1500515018760&amp;sourceCode=1</java.net.URL>
+</httpSample>
+<httpSample t="216" it="0" lt="216" ts="1528720206619" s="true" lb="syncEmendbook-attemptNo为-1" rc="200" rm="HTTP/1.1 200" tn="syncEmendbookTest 1-1" dt="" by="243" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=3911&amp;attemptNo=-1&amp;answerDate=1500515018760&amp;sourceCode=1</java.net.URL>
+</httpSample>
+<httpSample t="200" it="0" lt="200" ts="1528720206837" s="true" lb="syncEmendbook-attemptNo为英文" rc="500" rm="HTTP/1.1 500" tn="syncEmendbookTest 1-1" dt="text" by="473" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=3911&amp;attemptNo=test&amp;answerDate=1500515018760&amp;sourceCode=1</java.net.URL>
+</httpSample>
+<httpSample t="196" it="0" lt="196" ts="1528720207043" s="true" lb="syncEmendbook-attemptNo为空" rc="500" rm="HTTP/1.1 500" tn="syncEmendbookTest 1-1" dt="text" by="469" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=3911&amp;attemptNo=&amp;answerDate=1500515018760&amp;sourceCode=1</java.net.URL>
+</httpSample>
+<httpSample t="109" it="0" lt="109" ts="1528720207245" s="true" lb="syncEmendbook-attemptNo为空格" rc="400" rm="Bad request" tn="syncEmendbookTest 1-1" dt="text" by="280" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=3911&amp;attemptNo= &amp;answerDate=1500515018760&amp;sourceCode=1</java.net.URL>
+</httpSample>
+<httpSample t="187" it="0" lt="187" ts="1528720207366" s="true" lb="syncEmendbook-attemptNo为特殊字符" rc="500" rm="HTTP/1.1 500" tn="syncEmendbookTest 1-1" dt="text" by="470" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=3911&amp;attemptNo=*&amp;answerDate=1500515018760&amp;sourceCode=1</java.net.URL>
+</httpSample>
+<httpSample t="187" it="0" lt="187" ts="1528720207559" s="true" lb="syncEmendbook-answerDate为空" rc="500" rm="HTTP/1.1 500" tn="syncEmendbookTest 1-1" dt="text" by="480" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=3911&amp;attemptNo=1&amp;answerDate=&amp;sourceCode=1</java.net.URL>
+</httpSample>
+<httpSample t="190" it="0" lt="190" ts="1528720207760" s="true" lb="syncEmendbook-sourceCode为1（练习册）" rc="200" rm="HTTP/1.1 200" tn="syncEmendbookTest 1-1" dt="" by="243" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=3911&amp;attemptNo=1&amp;answerDate=1500515018760&amp;sourceCode=1</java.net.URL>
+</httpSample>
+<httpSample t="216" it="0" lt="216" ts="1528720207952" s="true" lb="syncEmendbook-sourceCode为2（作业中心）" rc="200" rm="HTTP/1.1 200" tn="syncEmendbookTest 1-1" dt="" by="243" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=3911&amp;attemptNo=1&amp;answerDate=1500515018760&amp;sourceCode=2</java.net.URL>
+</httpSample>
+<httpSample t="199" it="0" lt="199" ts="1528720208170" s="true" lb="syncEmendbook-sourceCode为0（不存在数据检查）" rc="200" rm="HTTP/1.1 200" tn="syncEmendbookTest 1-1" dt="" by="243" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=3911&amp;attemptNo=1&amp;answerDate=1500515018760&amp;sourceCode=0</java.net.URL>
+</httpSample>
+<httpSample t="198" it="0" lt="198" ts="1528720208370" s="true" lb="syncEmendbook-sourceCode为空" rc="200" rm="HTTP/1.1 200" tn="syncEmendbookTest 1-1" dt="" by="243" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=3911&amp;attemptNo=1&amp;answerDate=1500515018760&amp;sourceCode=</java.net.URL>
+</httpSample>
+<httpSample t="350" it="0" lt="350" ts="1528720208570" s="true" lb="syncEmendbook-sourceCode为空格" rc="200" rm="HTTP/1.1 200" tn="syncEmendbookTest 1-1" dt="" by="243" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=3911&amp;attemptNo=1&amp;answerDate=1500515018760&amp;sourceCode= </java.net.URL>
+</httpSample>
+<httpSample t="167" it="0" lt="167" ts="1528720208922" s="true" lb="syncEmendbook-sourceCode为特殊字符" rc="200" rm="HTTP/1.1 200" tn="syncEmendbookTest 1-1" dt="" by="243" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/syncEmendbook?sessionUserTrackingId=3911&amp;attemptNo=1&amp;answerDate=1500515018760&amp;sourceCode=*</java.net.URL>
+</httpSample>
+<httpSample t="543" it="0" lt="542" ts="1528720209117" s="true" lb="getToken" rc="200" rm="" tn="getErrorBookListTest 2-1" dt="text" by="1777" sby="293" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1528720209660" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getErrorBookListTest 2-1" dt="text" by="1413" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="9842" it="0" lt="9780" ts="1528720209662" s="true" lb="getErrorBookList-subjectId组合查询" rc="200" rm="" tn="getErrorBookListTest 2-1" dt="text" by="40655" sby="447" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;orderBy=answerDate&amp;isCorrect=&amp;assessmentOwnerIdList=3173,3177,3519&amp;assessmentQuestionTaxonomyTypeList=2,3&amp;homeworkTextbookId=11&amp;unitIdList=84,88&amp;isFavoured=false&amp;page=1&amp;pageSize=20</java.net.URL>
+</httpSample>
+<httpSample t="643" it="0" lt="519" ts="1528720219508" s="true" lb="getErrorBookList-subjectId=1英文" rc="200" rm="" tn="getErrorBookListTest 2-1" dt="text" by="78381" sby="266" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1</java.net.URL>
+</httpSample>
+<httpSample t="3139" it="0" lt="3079" ts="1528720220153" s="true" lb="getErrorBookList-subjectId=2数学" rc="200" rm="" tn="getErrorBookListTest 2-1" dt="text" by="44823" sby="266" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=2</java.net.URL>
+</httpSample>
+<httpSample t="418" it="0" lt="418" ts="1528720223297" s="true" lb="getErrorBookList-subjectId必填项检查" rc="500" rm="" tn="getErrorBookListTest 2-1" dt="text" by="381" sby="273" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList</java.net.URL>
+</httpSample>
+<httpSample t="181" it="0" lt="181" ts="1528720223724" s="true" lb="getErrorBookList-subjectId=空" rc="500" rm="" tn="getErrorBookListTest 2-1" dt="text" by="351" sby="265" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1528720223909" s="true" lb="getErrorBookList-subjectId= 空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 78: https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId= " tn="getErrorBookListTest 2-1" dt="text" by="1082" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId= </java.net.URL>
+</httpSample>
+<httpSample t="194" it="0" lt="194" ts="1528720223915" s="true" lb="getErrorBookList-subjectId=0不存在的值" rc="500" rm="" tn="getErrorBookListTest 2-1" dt="text" by="345" sby="266" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=0</java.net.URL>
+</httpSample>
+<httpSample t="214" it="0" lt="214" ts="1528720224113" s="false" lb="getErrorBookList-homeworkTextbookId=00不存在的值" rc="500" rm="" tn="getErrorBookListTest 2-1" dt="text" by="619" sby="288" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:&quot;000000&quot;,&quot;message&quot;:&quot;Query failed with error code 2 and error message &apos;$and/$or/$nor must be a nonempty array&apos; on server 172.0.0.32:27017; nested exception is com.mongodb.MongoQueryException: Query failed with error code 2 and error message &apos;$and/$or/$nor must be a nonempty array&apos; on server 172.0.0.32:27017&quot;}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;homeworkTextbookId=00</java.net.URL>
+</httpSample>
+<httpSample t="525" it="0" lt="413" ts="1528720224335" s="true" lb="getErrorBookList-homeworkTextbookId=空" rc="200" rm="" tn="getErrorBookListTest 2-1" dt="text" by="78381" sby="286" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;homeworkTextbookId=</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1528720224863" s="true" lb="getErrorBookList-homeworkTextbookId= 空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 99: https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;homeworkTextbookId= " tn="getErrorBookListTest 2-1" dt="text" by="1103" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;homeworkTextbookId= </java.net.URL>
+</httpSample>
+<httpSample t="220" it="0" lt="220" ts="1528720224867" s="true" lb="getErrorBookList-homeworkTextbookId=*" rc="500" rm="" tn="getErrorBookListTest 2-1" dt="text" by="493" sby="287" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;homeworkTextbookId=*</java.net.URL>
+</httpSample>
+<httpSample t="303" it="0" lt="245" ts="1528720225091" s="true" lb="getErrorBookList-unitIdList单选" rc="200" rm="" tn="getErrorBookListTest 2-1" dt="text" by="43004" sby="280" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;unitIdList=84</java.net.URL>
+</httpSample>
+<httpSample t="531" it="0" lt="481" ts="1528720225399" s="true" lb="getErrorBookList-unitIdList多选" rc="200" rm="" tn="getErrorBookListTest 2-1" dt="text" by="42086" sby="283" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;unitIdList=84,88</java.net.URL>
+</httpSample>
+<httpSample t="270" it="0" lt="212" ts="1528720225934" s="true" lb="getErrorBookList-isFavoured=ture" rc="200" rm="" tn="getErrorBookListTest 2-1" dt="text" by="52271" sby="282" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;isFavoured=true</java.net.URL>
+</httpSample>
+<httpSample t="310" it="0" lt="221" ts="1528720226210" s="true" lb="getErrorBookList-isFavoured=false" rc="200" rm="" tn="getErrorBookListTest 2-1" dt="text" by="78413" sby="283" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;isFavoured=false</java.net.URL>
+</httpSample>
+<httpSample t="234" it="0" lt="209" ts="1528720226527" s="true" lb="getErrorBookList-isCorrect=1已纠正" rc="200" rm="" tn="getErrorBookListTest 2-1" dt="text" by="41641" sby="278" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;isCorrect=1</java.net.URL>
+</httpSample>
+<httpSample t="256" it="0" lt="194" ts="1528720226765" s="true" lb="getErrorBookList-isCorrect=0未纠正" rc="200" rm="" tn="getErrorBookListTest 2-1" dt="text" by="78420" sby="278" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;isCorrect=0</java.net.URL>
+</httpSample>
+<httpSample t="271" it="0" lt="209" ts="1528720227024" s="true" lb="getErrorBookList-isCorrect= 全部" rc="200" rm="" tn="getErrorBookListTest 2-1" dt="text" by="78397" sby="277" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;isCorrect=</java.net.URL>
+</httpSample>
+<httpSample t="452" it="0" lt="194" ts="1528720227300" s="true" lb="getErrorBookList-orderBy=answerDate" rc="200" rm="" tn="getErrorBookListTest 2-1" dt="text" by="78389" sby="285" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;orderBy=answerDate</java.net.URL>
+</httpSample>
+<httpSample t="479" it="0" lt="426" ts="1528720227756" s="true" lb="getErrorBookList-orderBy=errorCount" rc="200" rm="" tn="getErrorBookListTest 2-1" dt="text" by="51358" sby="285" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;orderBy=errorCount</java.net.URL>
+</httpSample>
+<httpSample t="243" it="0" lt="214" ts="1528720228238" s="true" lb="getErrorBookList-orderBy=questionTypeOrder" rc="200" rm="" tn="getErrorBookListTest 2-1" dt="text" by="44460" sby="292" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;orderBy=questionTypeOrder</java.net.URL>
+</httpSample>
+<httpSample t="284" it="0" lt="206" ts="1528720228484" s="true" lb="getErrorBookList-page=1" rc="200" rm="" tn="getErrorBookListTest 2-1" dt="text" by="79879" sby="273" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <sample t="1" it="0" lt="0" ts="1528720228767" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getErrorBookListTest 2-1" dt="text" by="1490" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;page=1</java.net.URL>
+</httpSample>
+<httpSample t="249" it="0" lt="249" ts="1528720228778" s="true" lb="getErrorBookList-page=1000" rc="200" rm="" tn="getErrorBookListTest 2-1" dt="text" by="325" sby="276" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;page=1000</java.net.URL>
+</httpSample>
+<httpSample t="254" it="0" lt="193" ts="1528720229031" s="true" lb="getErrorBookList-page=-1" rc="200" rm="" tn="getErrorBookListTest 2-1" dt="text" by="78397" sby="274" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;page=-1</java.net.URL>
+</httpSample>
+<httpSample t="251" it="0" lt="192" ts="1528720229287" s="true" lb="getErrorBookList-pageSize=" rc="200" rm="" tn="getErrorBookListTest 2-1" dt="text" by="78405" sby="276" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;pageSize=</java.net.URL>
+</httpSample>
+<httpSample t="225" it="0" lt="225" ts="1528720229543" s="true" lb="getErrorBookList-pageSize=1" rc="200" rm="" tn="getErrorBookListTest 2-1" dt="text" by="6352" sby="277" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;pageSize=1</java.net.URL>
+</httpSample>
+<httpSample t="23276" it="0" lt="1471" ts="1528720229777" s="true" lb="getErrorBookList-pageSize=0" rc="200" rm="" tn="getErrorBookListTest 2-1" dt="text" by="5102783" sby="277" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;pageSize=0</java.net.URL>
+</httpSample>
+<httpSample t="12906" it="0" lt="693" ts="1528720253057" s="true" lb="getErrorBookList-pageSize=1000" rc="200" rm="" tn="getErrorBookListTest 2-1" dt="text" by="2875260" sby="280" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorBookList?subjectId=1&amp;pageSize=1000</java.net.URL>
+</httpSample>
+<httpSample t="673" it="0" lt="669" ts="1528720265995" s="true" lb="getToken" rc="200" rm="" tn="getErrorTextbookTest 3-1" dt="text" by="1777" sby="293" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1528720266668" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getErrorTextbookTest 3-1" dt="text" by="1413" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="1200" it="0" lt="1199" ts="1528720266675" s="true" lb="getErrorTextbook-subjectId=1英语" rc="200" rm="" tn="getErrorTextbookTest 3-1" dt="text" by="5079" sby="266" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorTextbook?subjectId=1</java.net.URL>
+</httpSample>
+<httpSample t="273" it="0" lt="273" ts="1528720267877" s="true" lb="getErrorTextbook-subjectId=2数学" rc="200" rm="" tn="getErrorTextbookTest 3-1" dt="text" by="1702" sby="266" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorTextbook?subjectId=2</java.net.URL>
+</httpSample>
+<httpSample t="410" it="0" lt="410" ts="1528720268152" s="true" lb="getErrorTextbook-subjectId=为空" rc="500" rm="" tn="getErrorTextbookTest 3-1" dt="text" by="351" sby="265" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorTextbook?subjectId=</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1528720268565" s="true" lb="getErrorTextbook-subjectId= 空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 78: https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorTextbook?subjectId= " tn="getErrorTextbookTest 3-1" dt="text" by="1082" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorTextbook?subjectId= </java.net.URL>
+</httpSample>
+<httpSample t="185" it="0" lt="185" ts="1528720268569" s="true" lb="getErrorTextbook-subjectId=1000000000000不存在" rc="500" rm="" tn="getErrorTextbookTest 3-1" dt="text" by="517" sby="290" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorTextbook?subjectId=1000000000000000000000000</java.net.URL>
+</httpSample>
+<httpSample t="184" it="0" lt="183" ts="1528720268759" s="true" lb="getErrorTextbook-subjectId=*为特殊字符" rc="500" rm="" tn="getErrorTextbookTest 3-1" dt="text" by="493" sby="266" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorTextbook?subjectId=*</java.net.URL>
+</httpSample>
+<httpSample t="547" it="0" lt="545" ts="1528720268971" s="true" lb="getToken" rc="200" rm="" tn="getErrorUserKnowledgeTest 4-1" dt="text" by="1781" sby="293" ng="1" na="1">
+  <sample t="1" it="0" lt="0" ts="1528720269517" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getErrorUserKnowledgeTest 4-1" dt="text" by="1417" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="234" it="0" lt="234" ts="1528720269522" s="true" lb="getErrorUserKnowledge-subjectId=1英语" rc="200" rm="" tn="getErrorUserKnowledgeTest 4-1" dt="text" by="5960" sby="271" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorUserKnowledge?subjectId=1</java.net.URL>
+</httpSample>
+<httpSample t="258" it="0" lt="257" ts="1528720269760" s="true" lb="getErrorUserKnowledge-subjectId=2数学" rc="200" rm="" tn="getErrorUserKnowledgeTest 4-1" dt="text" by="7177" sby="271" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorUserKnowledge?subjectId=2</java.net.URL>
+</httpSample>
+<httpSample t="186" it="0" lt="185" ts="1528720270024" s="true" lb="getErrorUserKnowledge-subjectId=0不存在的学科" rc="200" rm="" tn="getErrorUserKnowledgeTest 4-1" dt="text" by="302" sby="271" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorUserKnowledge?subjectId=0</java.net.URL>
+</httpSample>
+<httpSample t="168" it="0" lt="168" ts="1528720270213" s="true" lb="getErrorUserKnowledge-subjectId=空" rc="500" rm="" tn="getErrorUserKnowledgeTest 4-1" dt="text" by="351" sby="270" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorUserKnowledge?subjectId=</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1528720270384" s="true" lb="getErrorUserKnowledge-subjectId= 空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 83: https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorUserKnowledge?subjectId= " tn="getErrorUserKnowledgeTest 4-1" dt="text" by="1087" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorUserKnowledge?subjectId= </java.net.URL>
+</httpSample>
+<httpSample t="168" it="0" lt="168" ts="1528720270389" s="true" lb="getErrorUserKnowledge-subjectId=*为特殊字符" rc="500" rm="" tn="getErrorUserKnowledgeTest 4-1" dt="text" by="493" sby="271" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorUserKnowledge?subjectId=*</java.net.URL>
+</httpSample>
+<httpSample t="578" it="0" lt="577" ts="1528720270572" s="true" lb="getToken" rc="200" rm="" tn="isFavouredTest 5-1" dt="text" by="1770" sby="293" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1528720271150" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="isFavouredTest 5-1" dt="text" by="1406" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="1304" it="0" lt="1304" ts="1528720271151" s="true" lb="isFavoured-subjectId=1英语" rc="200" rm="" tn="isFavouredTest 5-1" dt="" by="249" sby="503" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+&quot;id&quot;: {&#xd;
+                &quot;timestamp&quot;: 1500481330,&#xd;
+                &quot;machineIdentifier&quot;: 3408560,&#xd;
+                &quot;processIdentifier&quot;: 10,&#xd;
+                &quot;counter&quot;: 16679317&#xd;
+            }, &#xd;
+ &quot;subjectId&quot;:1,&#xd;
+ &quot;favoured&quot;:true&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/isFavoured</java.net.URL>
+</httpSample>
+<httpSample t="171" it="0" lt="171" ts="1528720272458" s="true" lb="isFavoured-favoured=false不收藏" rc="200" rm="" tn="isFavouredTest 5-1" dt="" by="249" sby="505" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+ &quot;id&quot;: {&#xd;
+                &quot;timestamp&quot;: 1500481330,&#xd;
+                &quot;machineIdentifier&quot;: 3408560,&#xd;
+                &quot;processIdentifier&quot;: 10,&#xd;
+                &quot;counter&quot;: 16679317&#xd;
+            }, &#xd;
+ &quot;subjectId&quot;:1,&#xd;
+ &quot;favoured&quot;:false&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/isFavoured</java.net.URL>
+</httpSample>
+<httpSample t="751" it="0" lt="751" ts="1528720272641" s="true" lb="isFavoured-subjectId=2数学" rc="200" rm="" tn="isFavouredTest 5-1" dt="" by="249" sby="503" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+&quot;id&quot;: {&#xd;
+                &quot;timestamp&quot;: 1500481332,&#xd;
+                &quot;machineIdentifier&quot;: 3408560,&#xd;
+                &quot;processIdentifier&quot;: 10,&#xd;
+                &quot;counter&quot;: 16679445&#xd;
+            }, &#xd;
+ &quot;subjectId&quot;:2,&#xd;
+ &quot;favoured&quot;:true&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/isFavoured</java.net.URL>
+</httpSample>
+<httpSample t="165" it="0" lt="165" ts="1528720273396" s="true" lb="isFavoured-id错误" rc="500" rm="" tn="isFavouredTest 5-1" dt="text" by="1072" sby="508" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+&quot;id&quot;: {&#xd;
+                &quot;timestamp&quot;: 150048133200000,&#xd;
+                &quot;machineIdentifier&quot;: 3408560,&#xd;
+                &quot;processIdentifier&quot;: 10,&#xd;
+                &quot;counter&quot;: 16679445&#xd;
+            }, &#xd;
+ &quot;subjectId&quot;:2,&#xd;
+ &quot;favoured&quot;:true&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/isFavoured</java.net.URL>
+</httpSample>
+<httpSample t="549" it="0" lt="548" ts="1528720273604" s="true" lb="getToken" rc="200" rm="" tn="getFavouredCountTest 6-1" dt="text" by="1777" sby="293" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1528720274153" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getFavouredCountTest 6-1" dt="text" by="1413" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="177" it="0" lt="177" ts="1528720274158" s="true" lb="getFavouredCount-subjectId为1（英语）" rc="200" rm="" tn="getFavouredCountTest 6-1" dt="text" by="358" sby="266" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getFavouredCount?subjectId=1</java.net.URL>
+</httpSample>
+<httpSample t="203" it="0" lt="203" ts="1528720274338" s="true" lb="getFavouredCount-subjectId为2（数学）" rc="200" rm="" tn="getFavouredCountTest 6-1" dt="text" by="356" sby="266" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getFavouredCount?subjectId=2</java.net.URL>
+</httpSample>
+<httpSample t="183" it="0" lt="183" ts="1528720274546" s="true" lb="getFavouredCount-subjectId为不存在的值" rc="500" rm="" tn="getFavouredCountTest 6-1" dt="text" by="345" sby="266" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getFavouredCount?subjectId=0</java.net.URL>
+</httpSample>
+<httpSample t="181" it="0" lt="181" ts="1528720274733" s="true" lb="getFavouredCount-subjectId为空" rc="500" rm="" tn="getFavouredCountTest 6-1" dt="text" by="351" sby="265" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getFavouredCount?subjectId=</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1528720274917" s="true" lb="getFavouredCount-subjectId为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 78: https://staging.zhishinet.com/api/emendbook/v1/sec/getFavouredCount?subjectId=    " tn="getFavouredCountTest 6-1" dt="text" by="1085" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getFavouredCount?subjectId=    </java.net.URL>
+</httpSample>
+<httpSample t="389" it="0" lt="389" ts="1528720274923" s="true" lb="getFavouredCount-subjectId为a-z的字符串" rc="500" rm="" tn="getFavouredCountTest 6-1" dt="text" by="496" sby="269" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getFavouredCount?subjectId=test</java.net.URL>
+</httpSample>
+<httpSample t="186" it="0" lt="186" ts="1528720275314" s="true" lb="getFavouredCount-subjectId为中文" rc="500" rm="" tn="getFavouredCountTest 6-1" dt="text" by="498" sby="283" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getFavouredCount?subjectId=测试</java.net.URL>
+</httpSample>
+<httpSample t="196" it="0" lt="196" ts="1528720275502" s="true" lb="getFavouredCount-subjectId为特殊字符" rc="500" rm="" tn="getFavouredCountTest 6-1" dt="text" by="493" sby="266" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getFavouredCount?subjectId=*</java.net.URL>
+</httpSample>
+<httpSample t="397" it="0" lt="396" ts="1528720275700" s="true" lb="getFavouredCount-subjectId为特殊字符" rc="500" rm="" tn="getFavouredCountTest 6-1" dt="text" by="493" sby="266" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getFavouredCount?subjectId=*</java.net.URL>
+</httpSample>
+<httpSample t="181" it="0" lt="181" ts="1528720276101" s="true" lb="getFavouredCount-subjectId为数学符号" rc="500" rm="" tn="getFavouredCountTest 6-1" dt="text" by="351" sby="266" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getFavouredCount?subjectId=+</java.net.URL>
+</httpSample>
+<httpSample t="154" it="0" lt="154" ts="1528720276284" s="true" lb="getFavouredCount-subjectId为标点符号" rc="500" rm="" tn="getFavouredCountTest 6-1" dt="text" by="493" sby="266" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getFavouredCount?subjectId=!</java.net.URL>
+</httpSample>
+<httpSample t="611" it="0" lt="610" ts="1528720276450" s="true" lb="getToken" rc="200" rm="" tn="getArticleCountTest 7-1" dt="text" by="1776" sby="293" ng="1" na="1">
+  <sample t="1" it="0" lt="0" ts="1528720277061" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getArticleCountTest 7-1" dt="text" by="1412" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="302" it="0" lt="302" ts="1528720277063" s="true" lb="getArticleCount-subjectId为1（英语）" rc="200" rm="" tn="getArticleCountTest 7-1" dt="text" by="616" sby="265" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getArticleCount?subjectId=1</java.net.URL>
+</httpSample>
+<httpSample t="179" it="0" lt="179" ts="1528720277366" s="true" lb="getArticleCount-subjectId为2（数学）" rc="200" rm="" tn="getArticleCountTest 7-1" dt="text" by="302" sby="265" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getArticleCount?subjectId=2</java.net.URL>
+</httpSample>
+<httpSample t="187" it="0" lt="187" ts="1528720277550" s="true" lb="getArticleCount-subjectId为不存在的值" rc="500" rm="" tn="getArticleCountTest 7-1" dt="text" by="345" sby="265" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getArticleCount?subjectId=0</java.net.URL>
+</httpSample>
+<httpSample t="197" it="0" lt="196" ts="1528720277742" s="true" lb="getArticleCount-subjectId为空" rc="500" rm="" tn="getArticleCountTest 7-1" dt="text" by="351" sby="264" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getArticleCount?subjectId=</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1528720277941" s="true" lb="getArticleCount-subjectId为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 77: https://staging.zhishinet.com/api/emendbook/v1/sec/getArticleCount?subjectId= " tn="getArticleCountTest 7-1" dt="text" by="1081" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getArticleCount?subjectId= </java.net.URL>
+</httpSample>
+<httpSample t="173" it="0" lt="173" ts="1528720277943" s="true" lb="getArticleCount-subjectId为a-z的字符串" rc="500" rm="" tn="getArticleCountTest 7-1" dt="text" by="496" sby="268" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getArticleCount?subjectId=test</java.net.URL>
+</httpSample>
+<httpSample t="355" it="0" lt="355" ts="1528720278129" s="true" lb="getArticleCount-subjectId为中文" rc="500" rm="" tn="getArticleCountTest 7-1" dt="text" by="498" sby="282" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getArticleCount?subjectId=测试</java.net.URL>
+</httpSample>
+<httpSample t="379" it="0" lt="379" ts="1528720278486" s="true" lb="getArticleCount-subjectId为特殊符号" rc="500" rm="" tn="getArticleCountTest 7-1" dt="text" by="351" sby="265" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getArticleCount?subjectId=&amp;</java.net.URL>
+</httpSample>
+<httpSample t="183" it="0" lt="183" ts="1528720278869" s="true" lb="getArticleCount-subjectId为数学符号" rc="500" rm="" tn="getArticleCountTest 7-1" dt="text" by="493" sby="265" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getArticleCount?subjectId=-</java.net.URL>
+</httpSample>
+<httpSample t="154" it="0" lt="154" ts="1528720279055" s="true" lb="getArticleCount-subjectId为标点符号" rc="500" rm="" tn="getArticleCountTest 7-1" dt="text" by="495" sby="273" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getArticleCount?subjectId=，</java.net.URL>
+</httpSample>
+<httpSample t="563" it="0" lt="561" ts="1528720279250" s="true" lb="getToken" rc="200" rm="" tn="getEmendbookScoreInfoTest 8-1" dt="text" by="1782" sby="293" ng="1" na="1">
+  <sample t="1" it="0" lt="0" ts="1528720279812" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getEmendbookScoreInfoTest 8-1" dt="text" by="1418" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="1912" it="0" lt="1894" ts="1528720279815" s="true" lb="getPractice-获取练习题目(提取PracticeId)" rc="200" rm="" tn="getEmendbookScoreInfoTest 8-1" dt="text" by="24187" sby="496" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 1,&#xd;
+    &quot;subjectId&quot;: 1,&#xd;
+    &quot;unitIdList&quot;: [],&#xd;
+    &quot;assessmentOwnerIdList&quot;: [],&#xd;
+    &quot;assessmentQuestionTaxonomyTypeList&quot;: [],&#xd;
+    &quot;isFavoured&quot;: false,&#xd;
+    &quot;isCorrect&quot;: &quot;&quot;,&#xd;
+    &quot;orderBy&quot;: &quot;answerDate&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="486" it="0" lt="486" ts="1528720281735" s="true" lb="getEmendbookScoreInfo正确性验证" rc="200" rm="" tn="getEmendbookScoreInfoTest 8-1" dt="text" by="2489" sby="276" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getEmendbookScoreInfo?practiceId=24956</java.net.URL>
+</httpSample>
+<httpSample t="191" it="0" lt="191" ts="1528720282224" s="true" lb="getEmendbookScoreInfo-practiceId为不存在的值" rc="500" rm="" tn="getEmendbookScoreInfoTest 8-1" dt="text" by="370" sby="273" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getEmendbookScoreInfo?practiceId=-1</java.net.URL>
+</httpSample>
+<httpSample t="302" it="0" lt="302" ts="1528720282417" s="true" lb="getEmendbookScoreInfo-practiceId为空" rc="500" rm="" tn="getEmendbookScoreInfoTest 8-1" dt="text" by="376" sby="271" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getEmendbookScoreInfo?practiceId=</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1528720282721" s="true" lb="getEmendbookScoreInfo-practiceId为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 84: https://staging.zhishinet.com/api/emendbook/v1/sec/getEmendbookScoreInfo?practiceId= " tn="getEmendbookScoreInfoTest 8-1" dt="text" by="1088" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getEmendbookScoreInfo?practiceId= </java.net.URL>
+</httpSample>
+<httpSample t="174" it="0" lt="174" ts="1528720282725" s="true" lb="getEmendbookScoreInfo-practiceId为a-z的字符串" rc="500" rm="" tn="getEmendbookScoreInfoTest 8-1" dt="text" by="496" sby="275" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getEmendbookScoreInfo?practiceId=test</java.net.URL>
+</httpSample>
+<httpSample t="171" it="0" lt="170" ts="1528720282903" s="true" lb="getEmendbookScoreInfo-practiceId为中文" rc="500" rm="" tn="getEmendbookScoreInfoTest 8-1" dt="text" by="498" sby="289" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getEmendbookScoreInfo?practiceId=测试</java.net.URL>
+</httpSample>
+<httpSample t="250" it="0" lt="250" ts="1528720283077" s="true" lb="getEmendbookScoreInfo-practiceId为特殊符号" rc="500" rm="" tn="getEmendbookScoreInfoTest 8-1" dt="text" by="376" sby="272" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getEmendbookScoreInfo?practiceId=&amp;</java.net.URL>
+</httpSample>
+<httpSample t="164" it="0" lt="164" ts="1528720283329" s="true" lb="getEmendbookScoreInfo-practiceId为标点符号" rc="500" rm="" tn="getEmendbookScoreInfoTest 8-1" dt="text" by="495" sby="280" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getEmendbookScoreInfo?practiceId=？</java.net.URL>
+</httpSample>
+<httpSample t="164" it="0" lt="164" ts="1528720283495" s="true" lb="getEmendbookScoreInfo-practiceId为数学符号" rc="500" rm="" tn="getEmendbookScoreInfoTest 8-1" dt="text" by="493" sby="272" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getEmendbookScoreInfo?practiceId=-</java.net.URL>
+</httpSample>
+<httpSample t="598" it="0" lt="596" ts="1528720283680" s="true" lb="getToken" rc="200" rm="" tn="getPractice 9-1" dt="text" by="1767" sby="293" ng="1" na="1">
+  <sample t="1" it="0" lt="0" ts="1528720284277" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getPractice 9-1" dt="text" by="1403" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="593" it="0" lt="572" ts="1528720284282" s="true" lb="getPractice正确性校验-英语（feature=1）" rc="200" rm="" tn="getPractice 9-1" dt="text" by="23263" sby="496" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 1,&#xd;
+    &quot;subjectId&quot;: 1,&#xd;
+    &quot;unitIdList&quot;: [],&#xd;
+    &quot;assessmentOwnerIdList&quot;: [],&#xd;
+    &quot;assessmentQuestionTaxonomyTypeList&quot;: [],&#xd;
+    &quot;isFavoured&quot;: false,&#xd;
+    &quot;isCorrect&quot;: &quot;&quot;,&#xd;
+    &quot;orderBy&quot;: &quot;answerDate&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="704" it="0" lt="684" ts="1528720284880" s="true" lb="getPractice正确性校验-数学（feature=1）" rc="200" rm="" tn="getPractice 9-1" dt="text" by="19364" sby="496" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 1,&#xd;
+    &quot;subjectId&quot;: 2,&#xd;
+    &quot;unitIdList&quot;: [],&#xd;
+    &quot;assessmentOwnerIdList&quot;: [],&#xd;
+    &quot;assessmentQuestionTaxonomyTypeList&quot;: [],&#xd;
+    &quot;isFavoured&quot;: false,&#xd;
+    &quot;isCorrect&quot;: &quot;&quot;,&#xd;
+    &quot;orderBy&quot;: &quot;answerDate&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="191" it="0" lt="191" ts="1528720285587" s="true" lb="getPractice-subjectId为空" rc="500" rm="" tn="getPractice 9-1" dt="text" by="358" sby="319" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 1,&#xd;
+    &quot;subjectId&quot;:&quot;&quot; &#xd;
+   &#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="419" it="0" lt="418" ts="1528720285781" s="true" lb="getPractice-subjectId为特殊符号" rc="500" rm="" tn="getPractice 9-1" dt="text" by="948" sby="319" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 1,&#xd;
+    &quot;subjectId&quot;:&quot;*&quot;&#xd;
+   &#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="200" it="0" lt="200" ts="1528720286202" s="true" lb="getPractice-subjectId为数学符号" rc="500" rm="" tn="getPractice 9-1" dt="text" by="948" sby="320" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 1,&#xd;
+    &quot;subjectId&quot;: &quot;+&quot;&#xd;
+   &#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="190" it="0" lt="190" ts="1528720286405" s="true" lb="getPractice-subjectId为标点符号" rc="500" rm="" tn="getPractice 9-1" dt="text" by="948" sby="319" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 1,&#xd;
+    &quot;subjectId&quot;: &quot;?&quot;&#xd;
+  &#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="171" it="0" lt="171" ts="1528720286597" s="true" lb="getPractice-subjectId为英文" rc="500" rm="" tn="getPractice 9-1" dt="text" by="948" sby="321" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 1,&#xd;
+    &quot;subjectId&quot;:&quot;b&quot; &#xd;
+    &#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="177" it="0" lt="177" ts="1528720286769" s="true" lb="getPractice-subjectId为中文" rc="500" rm="" tn="getPractice 9-1" dt="text" by="948" sby="320" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 1,&#xd;
+    &quot;subjectId&quot;:&quot;林&quot; &#xd;
+   &#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="163" it="0" lt="163" ts="1528720286951" s="true" lb="getPractice-subjectId为空格" rc="500" rm="" tn="getPractice 9-1" dt="text" by="358" sby="330" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 1,&#xd;
+    &quot;subjectId&quot;:&quot;    &quot;     &#xd;
+      &#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="168" it="0" lt="168" ts="1528720287117" s="true" lb="getPractice-subjectId为0" rc="500" rm="" tn="getPractice 9-1" dt="text" by="345" sby="317" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 1,&#xd;
+    &quot;subjectId&quot;:0&#xd;
+   &#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="268" it="0" lt="268" ts="1528720287287" s="true" lb="getPractice正确性校验-英语(feature=2)" rc="200" rm="" tn="getPractice 9-1" dt="text" by="11252" sby="315" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 2,&#xd;
+    &quot;subjectId&quot;: 1&#xd;
+&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="462" it="0" lt="462" ts="1528720287557" s="true" lb="getPractice正确性校验-数学(feature=2)" rc="200" rm="" tn="getPractice 9-1" dt="text" by="16717" sby="315" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 2,&#xd;
+    &quot;subjectId&quot;: 2&#xd;
+&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="383" it="0" lt="382" ts="1528720288021" s="true" lb="getPractice-subjectId为空(feature=2)" rc="500" rm="" tn="getPractice 9-1" dt="text" by="360" sby="316" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 2,&#xd;
+    &quot;subjectId&quot;:&quot;&quot; &#xd;
+&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="207" it="0" lt="207" ts="1528720288405" s="true" lb="getPractice正确性校验-英语（feature=3）" rc="200" rm="" tn="getPractice 9-1" dt="text" by="671" sby="339" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 3,&#xd;
+    &quot;subjectId&quot;: 1,&#xd;
+    &quot;unitIdList&quot;: [431]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="182" it="0" lt="182" ts="1528720288618" s="true" lb="getPractice正确性校验-数学（feature=3）" rc="200" rm="" tn="getPractice 9-1" dt="text" by="671" sby="339" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 3,&#xd;
+    &quot;subjectId&quot;: 2,&#xd;
+    &quot;unitIdList&quot;: [431]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="167" it="0" lt="167" ts="1528720288802" s="true" lb="getPractice-subjectId为空(feature=3)" rc="500" rm="" tn="getPractice 9-1" dt="text" by="360" sby="342" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 3,&#xd;
+    &quot;subjectId&quot;:&quot;&quot;,   &#xd;
+    &quot;unitIdList&quot;: [431]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="184" it="0" lt="184" ts="1528720288972" s="true" lb="getPractice-unitIdList为特殊符号" rc="500" rm="" tn="getPractice 9-1" dt="text" by="918" sby="339" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 3,&#xd;
+    &quot;subjectId&quot;:&quot;&quot;,   &#xd;
+    &quot;unitIdList&quot;:&quot;&amp;&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="177" it="0" lt="177" ts="1528720289162" s="true" lb="getPractice-unitIdList为数学符号" rc="500" rm="" tn="getPractice 9-1" dt="text" by="918" sby="339" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 3,&#xd;
+    &quot;subjectId&quot;:&quot;&quot;,   &#xd;
+    &quot;unitIdList&quot;:&quot;=&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="172" it="0" lt="172" ts="1528720289344" s="true" lb="getPractice-unitIdList为中文" rc="500" rm="" tn="getPractice 9-1" dt="text" by="918" sby="339" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 3,&#xd;
+    &quot;subjectId&quot;:&quot;&quot;,   &#xd;
+    &quot;unitIdList&quot;:&quot;南&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="167" it="0" lt="167" ts="1528720289519" s="true" lb="getPractice-unitIdList为空" rc="500" rm="" tn="getPractice 9-1" dt="text" by="362" sby="338" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 3,&#xd;
+    &quot;subjectId&quot;:2,   &#xd;
+    &quot;unitIdList&quot;:[] &#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="187" it="0" lt="186" ts="1528720289688" s="true" lb="getPractice-unitIdList为空格" rc="500" rm="" tn="getPractice 9-1" dt="text" by="362" sby="357" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 3,&#xd;
+    &quot;subjectId&quot;:1,   &#xd;
+    &quot;unitIdList&quot;:[    ]                &#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="166" it="0" lt="166" ts="1528720289877" s="true" lb="getPractice-unitIdList为英文" rc="500" rm="" tn="getPractice 9-1" dt="text" by="918" sby="339" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 3,&#xd;
+    &quot;subjectId&quot;:&quot;&quot;,   &#xd;
+    &quot;unitIdList&quot;:&quot;a&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="379" it="0" lt="378" ts="1528720290051" s="true" lb="getPractice-unitIdList为标点符号" rc="500" rm="" tn="getPractice 9-1" dt="text" by="918" sby="337" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 3,&#xd;
+    &quot;subjectId&quot;:&quot;&quot;, &#xd;
+    &quot;unitIdList&quot;:&quot;？&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="283" it="0" lt="283" ts="1528720290432" s="true" lb="getPractice正确性校验(feature=4)" rc="200" rm="" tn="getPractice 9-1" dt="text" by="9841" sby="317" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 4,&#xd;
+  &#xd;
+&quot;questionTypeId&quot;:9&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="176" it="0" lt="176" ts="1528720290719" s="true" lb="getPractice-questionTypeId为特殊字符" rc="500" rm="" tn="getPractice 9-1" dt="text" by="958" sby="319" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 4,&#xd;
+  &#xd;
+&quot;questionTypeId&quot;:&quot;&amp;&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="319" it="0" lt="319" ts="1528720290897" s="true" lb="getPractice-questionTypeId为标点符号" rc="500" rm="" tn="getPractice 9-1" dt="text" by="956" sby="319" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 4,&#xd;
+  &#xd;
+&quot;questionTypeId&quot;:&quot;？&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="190" it="0" lt="189" ts="1528720291218" s="true" lb="getPractice-questionTypeId为数学符号" rc="500" rm="" tn="getPractice 9-1" dt="text" by="958" sby="319" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 4,&#xd;
+  &#xd;
+&quot;questionTypeId&quot;:&quot;+&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="176" it="0" lt="176" ts="1528720291410" s="true" lb="getPractice-questionTypeId为英文" rc="500" rm="" tn="getPractice 9-1" dt="text" by="958" sby="319" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 4,&#xd;
+  &#xd;
+&quot;questionTypeId&quot;:&quot;S&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="157" it="0" lt="157" ts="1528720291591" s="true" lb="getPractice-questionTypeId为空" rc="500" rm="" tn="getPractice 9-1" dt="text" by="365" sby="318" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 4,&#xd;
+  &#xd;
+&quot;questionTypeId&quot;:&quot;&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="176" it="0" lt="175" ts="1528720291753" s="true" lb="getPractice-questionTypeId为中文" rc="500" rm="" tn="getPractice 9-1" dt="text" by="958" sby="319" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 4,&#xd;
+  &#xd;
+&quot;questionTypeId&quot;:&quot;顾&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="188" it="0" lt="188" ts="1528720291932" s="true" lb="getPractice-questionTypeId为空格" rc="500" rm="" tn="getPractice 9-1" dt="text" by="365" sby="326" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;feature&quot;: 4,&#xd;
+  &#xd;
+&quot;questionTypeId&quot;:&quot;   &quot;     &#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="480" it="0" lt="480" ts="1528720292124" s="true" lb="getPractice正确性校验-英语(feature=5)" rc="200" rm="" tn="getPractice 9-1" dt="text" by="10254" sby="315" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">&#xd;
+{&#xd;
+    &quot;feature&quot;: 5,&#xd;
+    &quot;subjectId&quot;: 1&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="195" it="0" lt="195" ts="1528720292606" s="true" lb="getPractice正确性校验-数学(feature=5)" rc="200" rm="" tn="getPractice 9-1" dt="text" by="671" sby="315" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">&#xd;
+{&#xd;
+    &quot;feature&quot;: 5,&#xd;
+    &quot;subjectId&quot;: 2&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="172" it="0" lt="172" ts="1528720292802" s="true" lb="getPractice-subjectId为空(feature=5)" rc="500" rm="" tn="getPractice 9-1" dt="text" by="360" sby="316" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">&#xd;
+{&#xd;
+    &quot;feature&quot;: 5,&#xd;
+    &quot;subjectId&quot;:&quot;&quot; &#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="174" it="0" lt="174" ts="1528720292975" s="true" lb="getPractice正确性校验（feature=6）" rc="200" rm="" tn="getPractice 9-1" dt="" by="249" sby="318" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">&#xd;
+{&#xd;
+    &quot;feature&quot;: 6,&#xd;
+    &quot;practiceId&quot;:1539&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="172" it="0" lt="172" ts="1528720293151" s="true" lb="getPractice-practiceId为空（feature=6）" rc="500" rm="" tn="getPractice 9-1" dt="text" by="361" sby="316" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">&#xd;
+{&#xd;
+    &quot;feature&quot;: 6,&#xd;
+    &quot;practiceId&quot;:&quot;&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="165" it="0" lt="165" ts="1528720293325" s="true" lb="getPractice-practiceId为特殊符号（feature=6）" rc="500" rm="" tn="getPractice 9-1" dt="text" by="950" sby="317" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">&#xd;
+{&#xd;
+    &quot;feature&quot;: 6,&#xd;
+    &quot;practiceId&quot;:&quot;&amp;&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="173" it="0" lt="173" ts="1528720293493" s="true" lb="getPractice-practiceId为标点符号（feature=6）" rc="500" rm="" tn="getPractice 9-1" dt="text" by="950" sby="317" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">&#xd;
+{&#xd;
+    &quot;feature&quot;: 6,&#xd;
+    &quot;practiceId&quot;:&quot;？&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="162" it="0" lt="162" ts="1528720293669" s="true" lb="getPractice-practiceId为中文（feature=6）" rc="500" rm="" tn="getPractice 9-1" dt="text" by="950" sby="317" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">&#xd;
+{&#xd;
+    &quot;feature&quot;: 6,&#xd;
+    &quot;practiceId&quot;:&quot;李&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="170" it="0" lt="170" ts="1528720293832" s="true" lb="getPractice-practiceId为数学符号（feature=6）" rc="500" rm="" tn="getPractice 9-1" dt="text" by="950" sby="317" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">&#xd;
+{&#xd;
+    &quot;feature&quot;: 6,&#xd;
+    &quot;practiceId&quot;:&quot;+&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="161" it="0" lt="161" ts="1528720294005" s="true" lb="getPractice-practiceId为英文（feature=6）" rc="500" rm="" tn="getPractice 9-1" dt="text" by="950" sby="317" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">&#xd;
+{&#xd;
+    &quot;feature&quot;: 6,&#xd;
+    &quot;practiceId&quot;:&quot;c&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getPractice</java.net.URL>
+</httpSample>
+<httpSample t="554" it="0" lt="553" ts="1528720294199" s="true" lb="getToken" rc="200" rm="" tn="getErrorHomepageCount 10-1" dt="text" by="1778" sby="293" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1528720294753" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getErrorHomepageCount 10-1" dt="text" by="1414" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="199" it="0" lt="199" ts="1528720294754" s="true" lb="getErrorHomepageCount-subjectId正确性校验" rc="200" rm="" tn="getErrorHomepageCount 10-1" dt="text" by="364" sby="271" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorHomepageCount?subjectId=1</java.net.URL>
+</httpSample>
+<httpSample t="160" it="0" lt="160" ts="1528720294955" s="true" lb="getErrorHomepageCount-subjectId为英文" rc="500" rm="" tn="getErrorHomepageCount 10-1" dt="text" by="494" sby="272" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorHomepageCount?subjectId=as</java.net.URL>
+</httpSample>
+<httpSample t="183" it="0" lt="183" ts="1528720295117" s="true" lb="getErrorHomepageCount-subjectId为中文" rc="500" rm="" tn="getErrorHomepageCount 10-1" dt="text" by="495" sby="279" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorHomepageCount?subjectId=途</java.net.URL>
+</httpSample>
+<httpSample t="171" it="0" lt="171" ts="1528720295303" s="true" lb="getErrorHomepageCount-subjectId为特殊字符&amp;" rc="500" rm="" tn="getErrorHomepageCount 10-1" dt="text" by="351" sby="271" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorHomepageCount?subjectId=&amp;</java.net.URL>
+</httpSample>
+<httpSample t="162" it="0" lt="162" ts="1528720295476" s="true" lb="getErrorHomepageCount-subjectId为空" rc="500" rm="" tn="getErrorHomepageCount 10-1" dt="text" by="351" sby="270" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorHomepageCount?subjectId=</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1528720295640" s="true" lb="getErrorHomepageCount-subjectId为0" rc="Non HTTP response code: org.apache.http.client.ClientProtocolException" rm="Non HTTP response message: URI does not specify a valid host name: https:/api/emendbook/v1/sec/getErrorHomepageCount?subjectId=0" tn="getErrorHomepageCount 10-1" dt="text" by="1088" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https:/api/emendbook/v1/sec/getErrorHomepageCount?subjectId=0</java.net.URL>
+</httpSample>
+<httpSample t="0" it="0" lt="0" ts="1528720295642" s="true" lb="getErrorHomepageCount-subjectId为空格" rc="Non HTTP response code: java.net.URISyntaxException" rm="Non HTTP response message: Illegal character in query at index 83: https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorHomepageCount?subjectId=       " tn="getErrorHomepageCount 10-1" dt="text" by="1093" sby="0" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getErrorHomepageCount?subjectId=       </java.net.URL>
+</httpSample>
+<httpSample t="592" it="0" lt="591" ts="1528720295660" s="true" lb="getToken" rc="200" rm="" tn="getMicroVideoTest 11-1" dt="text" by="1775" sby="293" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1528720296252" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="getMicroVideoTest 11-1" dt="text" by="1411" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="318" it="0" lt="318" ts="1528720296253" s="true" lb="getMicroVideo正确性验证" rc="200" rm="" tn="getMicroVideoTest 11-1" dt="text" by="1723" sby="819" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">[&#xd;
+    {&#xd;
+        &quot;questionId&quot;: 133877,&#xd;
+        &quot;questId&quot;: 1&#xd;
+    },&#xd;
+    {&#xd;
+        &quot;questionId&quot;: 253980,&#xd;
+        &quot;questId&quot;: 2&#xd;
+    },&#xd;
+    {&#xd;
+        &quot;questionId&quot;: 94327,&#xd;
+        &quot;questId&quot;: 3&#xd;
+    },&#xd;
+    {&#xd;
+        &quot;questionId&quot;: 228660,&#xd;
+        &quot;questId&quot;: 4&#xd;
+    },&#xd;
+    {&#xd;
+        &quot;questionId&quot;: 143955,&#xd;
+        &quot;questId&quot;: 5&#xd;
+    },&#xd;
+    {&#xd;
+        &quot;questionId&quot;: 272350,&#xd;
+        &quot;questId&quot;: 6&#xd;
+    },&#xd;
+    {&#xd;
+        &quot;questionId&quot;: 137124,&#xd;
+        &quot;questId&quot;: 7&#xd;
+    },&#xd;
+    {&#xd;
+        &quot;questionId&quot;: 125046,&#xd;
+        &quot;questId&quot;: 8&#xd;
+    }&#xd;
+]</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getMicroVideo</java.net.URL>
+</httpSample>
+<httpSample t="191" it="0" lt="191" ts="1528720296573" s="true" lb="getMicroVideo-questionId为空" rc="200" rm="" tn="getMicroVideoTest 11-1" dt="text" by="302" sby="339" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">[&#xd;
+    {&#xd;
+        &quot;questionId&quot;: &quot;&quot;,&#xd;
+        &quot;questId&quot;: 1&#xd;
+    }&#xd;
+]</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getMicroVideo</java.net.URL>
+</httpSample>
+<httpSample t="195" it="0" lt="194" ts="1528720296766" s="true" lb="getMicroVideo-questionId为不存在的值" rc="200" rm="" tn="getMicroVideoTest 11-1" dt="text" by="302" sby="339" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">[&#xd;
+    {&#xd;
+        &quot;questionId&quot;: -1,&#xd;
+        &quot;questId&quot;: 1&#xd;
+    }&#xd;
+]</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getMicroVideo</java.net.URL>
+</httpSample>
+<httpSample t="184" it="0" lt="183" ts="1528720296965" s="true" lb="getMicroVideo-questionId为空格" rc="200" rm="" tn="getMicroVideoTest 11-1" dt="text" by="302" sby="340" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">[&#xd;
+    {&#xd;
+        &quot;questionId&quot;: &quot; &quot;,&#xd;
+        &quot;questId&quot;: 1&#xd;
+    }&#xd;
+]</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getMicroVideo</java.net.URL>
+</httpSample>
+<httpSample t="304" it="0" lt="304" ts="1528720297153" s="true" lb="getMicroVideo-questionId为a-z的字符串" rc="500" rm="" tn="getMicroVideoTest 11-1" dt="text" by="1016" sby="343" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">[&#xd;
+    {&#xd;
+        &quot;questionId&quot;: &quot;test&quot;,&#xd;
+        &quot;questId&quot;: 1&#xd;
+    }&#xd;
+]</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getMicroVideo</java.net.URL>
+</httpSample>
+<httpSample t="180" it="0" lt="180" ts="1528720297458" s="true" lb="getMicroVideo-questionId为中文" rc="500" rm="" tn="getMicroVideoTest 11-1" dt="text" by="1012" sby="341" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">[&#xd;
+    {&#xd;
+        &quot;questionId&quot;: &quot;测试&quot;,&#xd;
+        &quot;questId&quot;: 1&#xd;
+    }&#xd;
+]</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getMicroVideo</java.net.URL>
+</httpSample>
+<httpSample t="163" it="0" lt="163" ts="1528720297641" s="true" lb="getMicroVideo-questionId为特殊符号" rc="500" rm="" tn="getMicroVideoTest 11-1" dt="text" by="1010" sby="340" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">[&#xd;
+    {&#xd;
+        &quot;questionId&quot;: &quot;*&quot;,&#xd;
+        &quot;questId&quot;: 1&#xd;
+    }&#xd;
+]</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getMicroVideo</java.net.URL>
+</httpSample>
+<httpSample t="398" it="0" lt="398" ts="1528720297805" s="true" lb="getMicroVideo-questionId为标点符号" rc="500" rm="" tn="getMicroVideoTest 11-1" dt="text" by="1008" sby="340" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">[&#xd;
+    {&#xd;
+        &quot;questionId&quot;: &quot;。&quot;,&#xd;
+        &quot;questId&quot;: 1&#xd;
+    }&#xd;
+]</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getMicroVideo</java.net.URL>
+</httpSample>
+<httpSample t="164" it="0" lt="164" ts="1528720298205" s="true" lb="getMicroVideo-questionId为数学符号" rc="500" rm="" tn="getMicroVideoTest 11-1" dt="text" by="1010" sby="340" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">[&#xd;
+    {&#xd;
+        &quot;questionId&quot;: &quot;+&quot;,&#xd;
+        &quot;questId&quot;: 1&#xd;
+    }&#xd;
+]</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getMicroVideo</java.net.URL>
+</httpSample>
+<httpSample t="287" it="0" lt="287" ts="1528720298371" s="true" lb="getMicroVideo-questId为空" rc="200" rm="" tn="getMicroVideoTest 11-1" dt="text" by="302" sby="344" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">[&#xd;
+    {&#xd;
+        &quot;questionId&quot;: 253980,&#xd;
+        &quot;questId&quot;: &quot;&quot;&#xd;
+    }&#xd;
+]</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getMicroVideo</java.net.URL>
+</httpSample>
+<httpSample t="194" it="0" lt="193" ts="1528720298660" s="true" lb="getMicroVideo-questId为不存在的值" rc="200" rm="" tn="getMicroVideoTest 11-1" dt="text" by="302" sby="345" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">[&#xd;
+    {&#xd;
+        &quot;questionId&quot;: 253980,&#xd;
+        &quot;questId&quot;: &quot;0&quot;&#xd;
+    }&#xd;
+]</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getMicroVideo</java.net.URL>
+</httpSample>
+<httpSample t="188" it="0" lt="188" ts="1528720298859" s="true" lb="getMicroVideo-questId为空格" rc="200" rm="" tn="getMicroVideoTest 11-1" dt="text" by="302" sby="345" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">[&#xd;
+    {&#xd;
+        &quot;questionId&quot;: 253980,&#xd;
+        &quot;questId&quot;: &quot; &quot;&#xd;
+    }&#xd;
+]</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getMicroVideo</java.net.URL>
+</httpSample>
+<httpSample t="155" it="0" lt="155" ts="1528720299049" s="true" lb="getMicroVideo-questId为a-z的字符串" rc="500" rm="" tn="getMicroVideoTest 11-1" dt="text" by="1010" sby="348" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">[&#xd;
+    {&#xd;
+        &quot;questionId&quot;: 253980,&#xd;
+        &quot;questId&quot;: &quot;aaaa&quot;&#xd;
+    }&#xd;
+]</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getMicroVideo</java.net.URL>
+</httpSample>
+<httpSample t="173" it="0" lt="173" ts="1528720299206" s="true" lb="getMicroVideo-questId为中文" rc="500" rm="" tn="getMicroVideoTest 11-1" dt="text" by="1010" sby="348" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">[&#xd;
+    {&#xd;
+        &quot;questionId&quot;: 253980,&#xd;
+        &quot;questId&quot;: &quot;测试测试&quot;&#xd;
+    }&#xd;
+]</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getMicroVideo</java.net.URL>
+</httpSample>
+<httpSample t="150" it="0" lt="150" ts="1528720299381" s="true" lb="getMicroVideo-questId为特殊符号" rc="500" rm="" tn="getMicroVideoTest 11-1" dt="text" by="1004" sby="345" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">[&#xd;
+    {&#xd;
+        &quot;questionId&quot;: 253980,&#xd;
+        &quot;questId&quot;: &quot;&amp;&quot;&#xd;
+    }&#xd;
+]</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getMicroVideo</java.net.URL>
+</httpSample>
+<httpSample t="174" it="0" lt="174" ts="1528720299533" s="true" lb="getMicroVideo-questId为标点符号" rc="500" rm="" tn="getMicroVideoTest 11-1" dt="text" by="1004" sby="345" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">[&#xd;
+    {&#xd;
+        &quot;questionId&quot;: 253980,&#xd;
+        &quot;questId&quot;: &quot;！&quot;&#xd;
+    }&#xd;
+]</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getMicroVideo</java.net.URL>
+</httpSample>
+<httpSample t="156" it="0" lt="156" ts="1528720299710" s="true" lb="getMicroVideo-questId为数学符号" rc="500" rm="" tn="getMicroVideoTest 11-1" dt="text" by="1004" sby="345" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">[&#xd;
+    {&#xd;
+        &quot;questionId&quot;: 253980,&#xd;
+        &quot;questId&quot;: &quot;-&quot;&#xd;
+    }&#xd;
+]</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/getMicroVideo</java.net.URL>
+</httpSample>
+<httpSample t="571" it="0" lt="570" ts="1528720299899" s="true" lb="getToken" rc="200" rm="" tn="saveEmendbookTest 12-1" dt="text" by="1775" sby="293" ng="1" na="1">
+  <sample t="0" it="0" lt="0" ts="1528720300470" s="true" lb="Debug PostProcessor" rc="200" rm="OK" tn="saveEmendbookTest 12-1" dt="text" by="1411" sby="0" ng="0" na="0">
+    <samplerData class="java.lang.String">SamplerProperties
+JMeterVariables
+</samplerData>
+  </sample>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+	&quot;username&quot;: &quot;sh000124&quot;,&#xd;
+	&quot;password&quot;: &quot;welcome123&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/zauth/v1/token/access</java.net.URL>
+</httpSample>
+<httpSample t="383" it="0" lt="383" ts="1528720300471" s="true" lb="saveEmendbook-practiceId为空格" rc="500" rm="" tn="saveEmendbookTest 12-1" dt="text" by="383" sby="1473" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;PracticeId&quot;: &quot;&quot;,&#xd;
+    &quot;SubjectId&quot;: 1,&#xd;
+    &quot;UserId&quot;: 105724,&#xd;
+    &quot;IsAssessmentCompleted&quot;: false,&#xd;
+    &quot;CategoryIndex&quot;: 0,&#xd;
+    &quot;GroupIndex&quot;: 0,&#xd;
+    &quot;QuestionIndex&quot;: 0,&#xd;
+    &quot;ActiveIndex&quot;: 0,&#xd;
+    &quot;QuestionCategorys&quot;: [&#xd;
+        {&#xd;
+            &quot;CategoryId&quot;: 2,&#xd;
+            &quot;CategoryTitle&quot;: &quot;词汇语法&quot;,&#xd;
+            &quot;QuestionGroups&quot;: [&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 146268,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [&quot;&quot;],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                }&#xd;
+            ]&#xd;
+        }&#xd;
+    ]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</java.net.URL>
+</httpSample>
+<httpSample t="188" it="0" lt="188" ts="1528720300855" s="true" lb="saveEmendbook-practiceId为a-z的字符串" rc="500" rm="" tn="saveEmendbookTest 12-1" dt="text" by="383" sby="1481" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;PracticeId&quot;: &quot;testtest&quot;,&#xd;
+    &quot;SubjectId&quot;: 1,&#xd;
+    &quot;UserId&quot;: 105724,&#xd;
+    &quot;IsAssessmentCompleted&quot;: false,&#xd;
+    &quot;CategoryIndex&quot;: 0,&#xd;
+    &quot;GroupIndex&quot;: 0,&#xd;
+    &quot;QuestionIndex&quot;: 0,&#xd;
+    &quot;ActiveIndex&quot;: 0,&#xd;
+    &quot;QuestionCategorys&quot;: [&#xd;
+        {&#xd;
+            &quot;CategoryId&quot;: 2,&#xd;
+            &quot;CategoryTitle&quot;: &quot;词汇语法&quot;,&#xd;
+            &quot;QuestionGroups&quot;: [&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 146268,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [&quot;&quot;],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                }&#xd;
+            ]&#xd;
+        }&#xd;
+    ]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</java.net.URL>
+</httpSample>
+<httpSample t="174" it="0" lt="174" ts="1528720301045" s="true" lb="saveEmendbook-practiceId为中文" rc="500" rm="" tn="saveEmendbookTest 12-1" dt="text" by="383" sby="1477" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;PracticeId&quot;: &quot;测试测试&quot;,&#xd;
+    &quot;SubjectId&quot;: 1,&#xd;
+    &quot;UserId&quot;: 105724,&#xd;
+    &quot;IsAssessmentCompleted&quot;: false,&#xd;
+    &quot;CategoryIndex&quot;: 0,&#xd;
+    &quot;GroupIndex&quot;: 0,&#xd;
+    &quot;QuestionIndex&quot;: 0,&#xd;
+    &quot;ActiveIndex&quot;: 0,&#xd;
+    &quot;QuestionCategorys&quot;: [&#xd;
+        {&#xd;
+            &quot;CategoryId&quot;: 2,&#xd;
+            &quot;CategoryTitle&quot;: &quot;词汇语法&quot;,&#xd;
+            &quot;QuestionGroups&quot;: [&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 146268,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [&quot;&quot;],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                }&#xd;
+            ]&#xd;
+        }&#xd;
+    ]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</java.net.URL>
+</httpSample>
+<httpSample t="180" it="0" lt="180" ts="1528720301222" s="true" lb="saveEmendbook-practiceId为特殊字符" rc="500" rm="" tn="saveEmendbookTest 12-1" dt="text" by="383" sby="1474" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;PracticeId&quot;: &quot;&amp;&quot;,&#xd;
+    &quot;SubjectId&quot;: 1,&#xd;
+    &quot;UserId&quot;: 105724,&#xd;
+    &quot;IsAssessmentCompleted&quot;: false,&#xd;
+    &quot;CategoryIndex&quot;: 0,&#xd;
+    &quot;GroupIndex&quot;: 0,&#xd;
+    &quot;QuestionIndex&quot;: 0,&#xd;
+    &quot;ActiveIndex&quot;: 0,&#xd;
+    &quot;QuestionCategorys&quot;: [&#xd;
+        {&#xd;
+            &quot;CategoryId&quot;: 2,&#xd;
+            &quot;CategoryTitle&quot;: &quot;词汇语法&quot;,&#xd;
+            &quot;QuestionGroups&quot;: [&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 146268,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [&quot;&quot;],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                }&#xd;
+            ]&#xd;
+        }&#xd;
+    ]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</java.net.URL>
+</httpSample>
+<httpSample t="177" it="0" lt="177" ts="1528720301408" s="true" lb="saveEmendbook-practiceId为标点符号" rc="500" rm="" tn="saveEmendbookTest 12-1" dt="text" by="383" sby="1474" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;PracticeId&quot;: &quot;!&quot;,&#xd;
+    &quot;SubjectId&quot;: 1,&#xd;
+    &quot;UserId&quot;: 105724,&#xd;
+    &quot;IsAssessmentCompleted&quot;: false,&#xd;
+    &quot;CategoryIndex&quot;: 0,&#xd;
+    &quot;GroupIndex&quot;: 0,&#xd;
+    &quot;QuestionIndex&quot;: 0,&#xd;
+    &quot;ActiveIndex&quot;: 0,&#xd;
+    &quot;QuestionCategorys&quot;: [&#xd;
+        {&#xd;
+            &quot;CategoryId&quot;: 2,&#xd;
+            &quot;CategoryTitle&quot;: &quot;词汇语法&quot;,&#xd;
+            &quot;QuestionGroups&quot;: [&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 146268,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [&quot;&quot;],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                }&#xd;
+            ]&#xd;
+        }&#xd;
+    ]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</java.net.URL>
+</httpSample>
+<httpSample t="178" it="0" lt="178" ts="1528720301588" s="true" lb="saveEmendbook-practiceId为数学符号" rc="500" rm="" tn="saveEmendbookTest 12-1" dt="text" by="383" sby="1474" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;PracticeId&quot;: &quot;+&quot;,&#xd;
+    &quot;SubjectId&quot;: 1,&#xd;
+    &quot;UserId&quot;: 105724,&#xd;
+    &quot;IsAssessmentCompleted&quot;: false,&#xd;
+    &quot;CategoryIndex&quot;: 0,&#xd;
+    &quot;GroupIndex&quot;: 0,&#xd;
+    &quot;QuestionIndex&quot;: 0,&#xd;
+    &quot;ActiveIndex&quot;: 0,&#xd;
+    &quot;QuestionCategorys&quot;: [&#xd;
+        {&#xd;
+            &quot;CategoryId&quot;: 2,&#xd;
+            &quot;CategoryTitle&quot;: &quot;词汇语法&quot;,&#xd;
+            &quot;QuestionGroups&quot;: [&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 146268,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [&quot;&quot;],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                }&#xd;
+            ]&#xd;
+        }&#xd;
+    ]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</java.net.URL>
+</httpSample>
+<httpSample t="176" it="0" lt="176" ts="1528720301772" s="true" lb="saveEmendbook-subjectId为不存在的值" rc="500" rm="" tn="saveEmendbookTest 12-1" dt="text" by="383" sby="1477" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;PracticeId&quot;: &quot;1789&quot;,&#xd;
+    &quot;SubjectId&quot;: 0,&#xd;
+    &quot;UserId&quot;: 105724,&#xd;
+    &quot;IsAssessmentCompleted&quot;: false,&#xd;
+    &quot;CategoryIndex&quot;: 0,&#xd;
+    &quot;GroupIndex&quot;: 0,&#xd;
+    &quot;QuestionIndex&quot;: 0,&#xd;
+    &quot;ActiveIndex&quot;: 0,&#xd;
+    &quot;QuestionCategorys&quot;: [&#xd;
+        {&#xd;
+            &quot;CategoryId&quot;: 2,&#xd;
+            &quot;CategoryTitle&quot;: &quot;词汇语法&quot;,&#xd;
+            &quot;QuestionGroups&quot;: [&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 146268,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [&quot;&quot;],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                }&#xd;
+            ]&#xd;
+        }&#xd;
+    ]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</java.net.URL>
+</httpSample>
+<httpSample t="382" it="0" lt="382" ts="1528720301952" s="true" lb="saveEmendbook-subjectId为空格" rc="500" rm="" tn="saveEmendbookTest 12-1" dt="text" by="394" sby="1475" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;PracticeId&quot;: 5977,&#xd;
+    &quot;SubjectId&quot;: 2,&#xd;
+    &quot;UserId&quot;: 105724,&#xd;
+    &quot;IsAssessmentCompleted&quot;: false,&#xd;
+    &quot;CategoryIndex&quot;: 0,&#xd;
+    &quot;GroupIndex&quot;: 0,&#xd;
+    &quot;QuestionIndex&quot;: 0,&#xd;
+    &quot;ActiveIndex&quot;: 0,&#xd;
+    &quot;QuestionCategorys&quot;: [&#xd;
+        {&#xd;
+            &quot;CategoryId&quot;: 4,&#xd;
+            &quot;CategoryTitle&quot;: &quot;选择题&quot;,&#xd;
+            &quot;QuestionGroups&quot;: [&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 229250,&#xd;
+                            &quot;IsQuestionCorrect&quot;: -1,&#xd;
+                            &quot;UserResponse&quot;: [&quot;&quot;],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                }&#xd;
+            ]&#xd;
+        }&#xd;
+    ]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</java.net.URL>
+</httpSample>
+<httpSample t="204" it="0" lt="204" ts="1528720302337" s="true" lb="saveEmendbook-subjectId为a-z的字符串" rc="500" rm="" tn="saveEmendbookTest 12-1" dt="text" by="383" sby="1482" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;PracticeId&quot;: &quot;1789&quot;,&#xd;
+    &quot;SubjectId&quot;: &quot;test&quot;,&#xd;
+    &quot;UserId&quot;: 105724,&#xd;
+    &quot;IsAssessmentCompleted&quot;: false,&#xd;
+    &quot;CategoryIndex&quot;: 0,&#xd;
+    &quot;GroupIndex&quot;: 0,&#xd;
+    &quot;QuestionIndex&quot;: 0,&#xd;
+    &quot;ActiveIndex&quot;: 0,&#xd;
+    &quot;QuestionCategorys&quot;: [&#xd;
+        {&#xd;
+            &quot;CategoryId&quot;: 2,&#xd;
+            &quot;CategoryTitle&quot;: &quot;词汇语法&quot;,&#xd;
+            &quot;QuestionGroups&quot;: [&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 146268,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [&quot;&quot;],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                }&#xd;
+            ]&#xd;
+        }&#xd;
+    ]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</java.net.URL>
+</httpSample>
+<httpSample t="175" it="0" lt="175" ts="1528720302543" s="true" lb="saveEmendbook-subjectId为中文" rc="500" rm="" tn="saveEmendbookTest 12-1" dt="text" by="383" sby="1481" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;PracticeId&quot;: &quot;1789&quot;,&#xd;
+    &quot;SubjectId&quot;: &quot;测试呀&quot;,&#xd;
+    &quot;UserId&quot;: 105724,&#xd;
+    &quot;IsAssessmentCompleted&quot;: false,&#xd;
+    &quot;CategoryIndex&quot;: 0,&#xd;
+    &quot;GroupIndex&quot;: 0,&#xd;
+    &quot;QuestionIndex&quot;: 0,&#xd;
+    &quot;ActiveIndex&quot;: 0,&#xd;
+    &quot;QuestionCategorys&quot;: [&#xd;
+        {&#xd;
+            &quot;CategoryId&quot;: 2,&#xd;
+            &quot;CategoryTitle&quot;: &quot;词汇语法&quot;,&#xd;
+            &quot;QuestionGroups&quot;: [&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 146268,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [&quot;&quot;],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                }&#xd;
+            ]&#xd;
+        }&#xd;
+    ]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</java.net.URL>
+</httpSample>
+<httpSample t="170" it="0" lt="170" ts="1528720302722" s="true" lb="saveEmendbook-subjectId为特殊符号" rc="500" rm="" tn="saveEmendbookTest 12-1" dt="text" by="383" sby="1479" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;PracticeId&quot;: &quot;1789&quot;,&#xd;
+    &quot;SubjectId&quot;: &quot;*&quot;,&#xd;
+    &quot;UserId&quot;: 105724,&#xd;
+    &quot;IsAssessmentCompleted&quot;: false,&#xd;
+    &quot;CategoryIndex&quot;: 0,&#xd;
+    &quot;GroupIndex&quot;: 0,&#xd;
+    &quot;QuestionIndex&quot;: 0,&#xd;
+    &quot;ActiveIndex&quot;: 0,&#xd;
+    &quot;QuestionCategorys&quot;: [&#xd;
+        {&#xd;
+            &quot;CategoryId&quot;: 2,&#xd;
+            &quot;CategoryTitle&quot;: &quot;词汇语法&quot;,&#xd;
+            &quot;QuestionGroups&quot;: [&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 146268,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [&quot;&quot;],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                }&#xd;
+            ]&#xd;
+        }&#xd;
+    ]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</java.net.URL>
+</httpSample>
+<httpSample t="203" it="0" lt="203" ts="1528720302894" s="true" lb="saveEmendbook-subjectId为数学符号" rc="500" rm="" tn="saveEmendbookTest 12-1" dt="text" by="383" sby="1479" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;PracticeId&quot;: &quot;1789&quot;,&#xd;
+    &quot;SubjectId&quot;: &quot;+&quot;,&#xd;
+    &quot;UserId&quot;: 105724,&#xd;
+    &quot;IsAssessmentCompleted&quot;: false,&#xd;
+    &quot;CategoryIndex&quot;: 0,&#xd;
+    &quot;GroupIndex&quot;: 0,&#xd;
+    &quot;QuestionIndex&quot;: 0,&#xd;
+    &quot;ActiveIndex&quot;: 0,&#xd;
+    &quot;QuestionCategorys&quot;: [&#xd;
+        {&#xd;
+            &quot;CategoryId&quot;: 2,&#xd;
+            &quot;CategoryTitle&quot;: &quot;词汇语法&quot;,&#xd;
+            &quot;QuestionGroups&quot;: [&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 146268,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [&quot;&quot;],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                }&#xd;
+            ]&#xd;
+        }&#xd;
+    ]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</java.net.URL>
+</httpSample>
+<httpSample t="160" it="0" lt="160" ts="1528720303098" s="true" lb="saveEmendbook-subjectId为标点符号" rc="500" rm="" tn="saveEmendbookTest 12-1" dt="text" by="383" sby="1479" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;PracticeId&quot;: &quot;1789&quot;,&#xd;
+    &quot;SubjectId&quot;: &quot;?&quot;,&#xd;
+    &quot;UserId&quot;: 105724,&#xd;
+    &quot;IsAssessmentCompleted&quot;: false,&#xd;
+    &quot;CategoryIndex&quot;: 0,&#xd;
+    &quot;GroupIndex&quot;: 0,&#xd;
+    &quot;QuestionIndex&quot;: 0,&#xd;
+    &quot;ActiveIndex&quot;: 0,&#xd;
+    &quot;QuestionCategorys&quot;: [&#xd;
+        {&#xd;
+            &quot;CategoryId&quot;: 2,&#xd;
+            &quot;CategoryTitle&quot;: &quot;词汇语法&quot;,&#xd;
+            &quot;QuestionGroups&quot;: [&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 146268,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [&quot;&quot;],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                }&#xd;
+            ]&#xd;
+        }&#xd;
+    ]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</java.net.URL>
+</httpSample>
+<httpSample t="171" it="0" lt="171" ts="1528720303259" s="true" lb="saveEmendbook-UserId为不存在的值" rc="500" rm="" tn="saveEmendbookTest 12-1" dt="text" by="394" sby="1471" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;PracticeId&quot;: 1789,&#xd;
+    &quot;SubjectId&quot;: 1,&#xd;
+    &quot;UserId&quot;: -1,&#xd;
+    &quot;IsAssessmentCompleted&quot;: false,&#xd;
+    &quot;CategoryIndex&quot;: 0,&#xd;
+    &quot;GroupIndex&quot;: 0,&#xd;
+    &quot;QuestionIndex&quot;: 0,&#xd;
+    &quot;ActiveIndex&quot;: 0,&#xd;
+    &quot;QuestionCategorys&quot;: [&#xd;
+        {&#xd;
+            &quot;CategoryId&quot;: 2,&#xd;
+            &quot;CategoryTitle&quot;: &quot;词汇语法&quot;,&#xd;
+            &quot;QuestionGroups&quot;: [&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 146268,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [&quot;&quot;],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                }&#xd;
+            ]&#xd;
+        }&#xd;
+    ]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</java.net.URL>
+</httpSample>
+<httpSample t="184" it="0" lt="184" ts="1528720303431" s="true" lb="saveEmendbook-UserId为a-z的字符串" rc="500" rm="" tn="saveEmendbookTest 12-1" dt="text" by="383" sby="1475" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;PracticeId&quot;: 1789,&#xd;
+    &quot;SubjectId&quot;: 1,&#xd;
+    &quot;UserId&quot;: &quot;aaaa&quot;,&#xd;
+    &quot;IsAssessmentCompleted&quot;: false,&#xd;
+    &quot;CategoryIndex&quot;: 0,&#xd;
+    &quot;GroupIndex&quot;: 0,&#xd;
+    &quot;QuestionIndex&quot;: 0,&#xd;
+    &quot;ActiveIndex&quot;: 0,&#xd;
+    &quot;QuestionCategorys&quot;: [&#xd;
+        {&#xd;
+            &quot;CategoryId&quot;: 2,&#xd;
+            &quot;CategoryTitle&quot;: &quot;词汇语法&quot;,&#xd;
+            &quot;QuestionGroups&quot;: [&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 146268,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [&quot;&quot;],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                }&#xd;
+            ]&#xd;
+        }&#xd;
+    ]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</java.net.URL>
+</httpSample>
+<httpSample t="179" it="0" lt="179" ts="1528720303617" s="true" lb="saveEmendbook-UserId为中文" rc="500" rm="" tn="saveEmendbookTest 12-1" dt="text" by="383" sby="1475" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;PracticeId&quot;: 1789,&#xd;
+    &quot;SubjectId&quot;: 1,&#xd;
+    &quot;UserId&quot;: &quot;测试测试&quot;,&#xd;
+    &quot;IsAssessmentCompleted&quot;: false,&#xd;
+    &quot;CategoryIndex&quot;: 0,&#xd;
+    &quot;GroupIndex&quot;: 0,&#xd;
+    &quot;QuestionIndex&quot;: 0,&#xd;
+    &quot;ActiveIndex&quot;: 0,&#xd;
+    &quot;QuestionCategorys&quot;: [&#xd;
+        {&#xd;
+            &quot;CategoryId&quot;: 2,&#xd;
+            &quot;CategoryTitle&quot;: &quot;词汇语法&quot;,&#xd;
+            &quot;QuestionGroups&quot;: [&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 146268,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [&quot;&quot;],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                }&#xd;
+            ]&#xd;
+        }&#xd;
+    ]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</java.net.URL>
+</httpSample>
+<httpSample t="168" it="0" lt="168" ts="1528720303798" s="true" lb="saveEmendbook-UserId为特殊符号" rc="500" rm="" tn="saveEmendbookTest 12-1" dt="text" by="383" sby="1472" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;PracticeId&quot;: 1789,&#xd;
+    &quot;SubjectId&quot;: 1,&#xd;
+    &quot;UserId&quot;: &quot;&amp;&quot;,&#xd;
+    &quot;IsAssessmentCompleted&quot;: false,&#xd;
+    &quot;CategoryIndex&quot;: 0,&#xd;
+    &quot;GroupIndex&quot;: 0,&#xd;
+    &quot;QuestionIndex&quot;: 0,&#xd;
+    &quot;ActiveIndex&quot;: 0,&#xd;
+    &quot;QuestionCategorys&quot;: [&#xd;
+        {&#xd;
+            &quot;CategoryId&quot;: 2,&#xd;
+            &quot;CategoryTitle&quot;: &quot;词汇语法&quot;,&#xd;
+            &quot;QuestionGroups&quot;: [&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 146268,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [&quot;&quot;],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                }&#xd;
+            ]&#xd;
+        }&#xd;
+    ]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</java.net.URL>
+</httpSample>
+<httpSample t="366" it="0" lt="366" ts="1528720303969" s="true" lb="saveEmendbook-UserId为数学符号" rc="500" rm="" tn="saveEmendbookTest 12-1" dt="text" by="383" sby="1472" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;PracticeId&quot;: 1789,&#xd;
+    &quot;SubjectId&quot;: 1,&#xd;
+    &quot;UserId&quot;: &quot;+&quot;,&#xd;
+    &quot;IsAssessmentCompleted&quot;: false,&#xd;
+    &quot;CategoryIndex&quot;: 0,&#xd;
+    &quot;GroupIndex&quot;: 0,&#xd;
+    &quot;QuestionIndex&quot;: 0,&#xd;
+    &quot;ActiveIndex&quot;: 0,&#xd;
+    &quot;QuestionCategorys&quot;: [&#xd;
+        {&#xd;
+            &quot;CategoryId&quot;: 2,&#xd;
+            &quot;CategoryTitle&quot;: &quot;词汇语法&quot;,&#xd;
+            &quot;QuestionGroups&quot;: [&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 146268,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [&quot;&quot;],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                }&#xd;
+            ]&#xd;
+        }&#xd;
+    ]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</java.net.URL>
+</httpSample>
+<httpSample t="173" it="0" lt="173" ts="1528720304339" s="true" lb="saveEmendbook-UserId为标点符号" rc="500" rm="" tn="saveEmendbookTest 12-1" dt="text" by="383" sby="1472" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;PracticeId&quot;: 1789,&#xd;
+    &quot;SubjectId&quot;: 1,&#xd;
+    &quot;UserId&quot;: &quot;。&quot;,&#xd;
+    &quot;IsAssessmentCompleted&quot;: false,&#xd;
+    &quot;CategoryIndex&quot;: 0,&#xd;
+    &quot;GroupIndex&quot;: 0,&#xd;
+    &quot;QuestionIndex&quot;: 0,&#xd;
+    &quot;ActiveIndex&quot;: 0,&#xd;
+    &quot;QuestionCategorys&quot;: [&#xd;
+        {&#xd;
+            &quot;CategoryId&quot;: 2,&#xd;
+            &quot;CategoryTitle&quot;: &quot;词汇语法&quot;,&#xd;
+            &quot;QuestionGroups&quot;: [&#xd;
+                {&#xd;
+                    &quot;GroupType&quot;: 1,&#xd;
+                    &quot;UserTimeSpent&quot;: 0,&#xd;
+                    &quot;Questions&quot;: [&#xd;
+                        {&#xd;
+                            &quot;ArticleId&quot;: -1,&#xd;
+                            &quot;QuestionId&quot;: 146268,&#xd;
+                            &quot;IsQuestionCorrect&quot;: 0,&#xd;
+                            &quot;UserResponse&quot;: [&quot;&quot;],&#xd;
+                            &quot;InputTypes&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;BlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ],&#xd;
+                            &quot;traceBlankAnswers&quot;: [&#xd;
+                                &quot;&quot;&#xd;
+                            ]&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;FeedbackViewed&quot;: false&#xd;
+                }&#xd;
+            ]&#xd;
+        }&#xd;
+    ]&#xd;
+}</queryString>
+  <java.net.URL>https://staging.zhishinet.com/api/emendbook/v1/sec/saveEmendbook</java.net.URL>
+</httpSample>
+
+</testResults>
